@@ -1,0 +1,21 @@
+{
+ "id": "hum-female-008",
+ "name": "Tall Female 008",
+ "category": "human-players",
+ "kit": "baseFemale",
+ "prompt": "tall bold standing woman",
+ "seed": 40018,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "woman",
+  "female",
+  "casual",
+  "tall",
+  "bold",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

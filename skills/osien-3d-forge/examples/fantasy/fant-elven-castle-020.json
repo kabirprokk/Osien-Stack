@@ -1,0 +1,28 @@
+{
+ "id": "fant-elven-castle-020",
+ "name": "Enchanted Elven Castle 020",
+ "category": "fantasy",
+ "prompt": "crystal slender elven castle fortress with towers and gate stylized",
+ "kit": "castle",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "crystal",
+  "poly": 12157,
+  "parts": [
+   "towers",
+   "gate"
+  ]
+ },
+ "tags": [
+  "fantasy",
+  "castle",
+  "stylized",
+  "crystal",
+  "balanced",
+  "elven"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12157,
+ "seed": 41899
+}

@@ -1,0 +1,26 @@
+{
+ "id": "gun-scope-sight-060",
+ "name": "Rusty Scope Sight 060",
+ "category": "weapons-guns",
+ "prompt": "gold black scope sight ring torus realistic",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "gold",
+  "poly": 11004,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "torus",
+  "realistic",
+  "gold",
+  "balanced",
+  "gun",
+  "scope"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11004,
+ "seed": 41179
+}

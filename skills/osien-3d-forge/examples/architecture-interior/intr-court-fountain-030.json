@@ -1,0 +1,25 @@
+{
+ "id": "intr-court-fountain-030",
+ "name": "Warm Court Fountain 030",
+ "category": "architecture-interior",
+ "prompt": "worn stone marble court fountain realistic",
+ "kit": "fountain",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "stone",
+  "poly": 4026,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "fountain",
+  "realistic",
+  "stone",
+  "worn",
+  "court"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4026,
+ "seed": 41749
+}

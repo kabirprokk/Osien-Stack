@@ -1,0 +1,25 @@
+{
+ "id": "char-space-marine-021",
+ "name": "Wise Space Marine 021",
+ "category": "characters",
+ "prompt": "iron armored space marine soldier avatar sci-fi",
+ "kit": "soldierModern",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "iron",
+  "poly": 25963,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "scifi",
+  "iron",
+  "balanced",
+  "soldier"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25963,
+ "seed": 41480
+}

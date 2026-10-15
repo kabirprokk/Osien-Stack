@@ -1,0 +1,25 @@
+{
+ "id": "nat-mossy-stone-064",
+ "name": "Tall Mossy Stone 064",
+ "category": "natural",
+ "prompt": "stone mossy ancient stone rock low poly",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 11964,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "lowpoly",
+  "stone",
+  "balanced",
+  "moss"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11964,
+ "seed": 41303
+}

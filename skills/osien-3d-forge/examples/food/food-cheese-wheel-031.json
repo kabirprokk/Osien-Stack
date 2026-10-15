@@ -1,0 +1,25 @@
+{
+ "id": "food-cheese-wheel-031",
+ "name": "Ripe Cheese Wheel 031",
+ "category": "food",
+ "prompt": "ancient bone yellow cheese wheel cylinder realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 4041,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "cylinder",
+  "realistic",
+  "bone",
+  "ancient",
+  "cheese"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4041,
+ "seed": 41970
+}

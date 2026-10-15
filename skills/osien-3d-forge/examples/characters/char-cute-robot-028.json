@@ -1,0 +1,26 @@
+{
+ "id": "char-cute-robot-028",
+ "name": "Scarred Cute Robot 028",
+ "category": "characters",
+ "prompt": "polished gold cute little robot droid realistic",
+ "kit": "robot",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "gold",
+  "poly": 3872,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "realistic",
+  "gold",
+  "pristine",
+  "droid",
+  "cute"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3872,
+ "seed": 41487
+}

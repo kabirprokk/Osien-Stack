@@ -1,0 +1,26 @@
+{
+ "id": "furn-wardrobe-038",
+ "name": "Oaken Wardrobe 038",
+ "category": "furniture",
+ "prompt": "brass oak wardrobe cupboard with doors low poly",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 27948,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "lowpoly",
+  "brass",
+  "balanced",
+  "cabinet",
+  "wardrobe"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 27948,
+ "seed": 41657
+}

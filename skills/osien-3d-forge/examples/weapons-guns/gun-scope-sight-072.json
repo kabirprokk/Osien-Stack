@@ -1,0 +1,26 @@
+{
+ "id": "gun-scope-sight-072",
+ "name": "Ornate Scope Sight 072",
+ "category": "weapons-guns",
+ "prompt": "ancient chrome black scope sight ring torus fantasy",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "chrome",
+  "poly": 11509,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "torus",
+  "fantasy",
+  "chrome",
+  "ancient",
+  "gun",
+  "scope"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11509,
+ "seed": 41191
+}

@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-longsword-001",
+ "name": "Rusty Knight Longsword 001",
+ "category": "weapons-guns",
+ "prompt": "iron knight steel longsword blade stylized",
+ "kit": "sword",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 25603,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "stylized",
+  "iron",
+  "balanced",
+  "knight"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25603,
+ "seed": 41120
+}

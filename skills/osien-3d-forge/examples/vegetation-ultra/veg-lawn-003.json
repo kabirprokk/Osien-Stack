@@ -1,0 +1,21 @@
+{
+ "id": "veg-lawn-003",
+ "name": "Dense Lawn 003",
+ "category": "vegetation-ultra",
+ "kit": "lawnGrass",
+ "prompt": "dense fresh manicured lawn grass",
+ "seed": 30003,
+ "params": {
+  "quality": "draft",
+  "style": "realistic"
+ },
+ "tags": [
+  "lawn",
+  "turf",
+  "garden",
+  "dense",
+  "fresh",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

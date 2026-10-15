@@ -1,0 +1,25 @@
+{
+ "id": "nat-desert-rock-090",
+ "name": "Tall Desert Rock 090",
+ "category": "natural",
+ "prompt": "polished glass weathered sandstone desert rock realistic",
+ "kit": "rock",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 23095,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "realistic",
+  "glass",
+  "pristine",
+  "desert"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23095,
+ "seed": 41329
+}

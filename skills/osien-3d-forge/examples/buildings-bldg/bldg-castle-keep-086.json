@@ -1,0 +1,29 @@
+{
+ "id": "bldg-castle-keep-086",
+ "name": "Marble Castle Keep 086",
+ "category": "buildings-bldg",
+ "prompt": "weathered stone medieval castle fortress keep with towers and gate with towers and gate stylized",
+ "kit": "castle",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "stone",
+  "poly": 4112,
+  "parts": [
+   "towers",
+   "gate"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "castle",
+  "stylized",
+  "stone",
+  "worn",
+  "medieval",
+  "fortress"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4112,
+ "seed": 41085
+}

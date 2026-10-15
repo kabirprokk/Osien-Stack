@@ -1,0 +1,25 @@
+{
+ "id": "veh-pickup-truck-082",
+ "name": "Old Pickup Truck 082",
+ "category": "vehicles",
+ "prompt": "pristine glass blue pickup truck vehicle realistic",
+ "kit": "car",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 10821,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "realistic",
+  "glass",
+  "pristine",
+  "truck"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10821,
+ "seed": 41441
+}

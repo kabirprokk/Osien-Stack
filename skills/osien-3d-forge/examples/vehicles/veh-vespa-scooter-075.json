@@ -1,0 +1,25 @@
+{
+ "id": "veh-vespa-scooter-075",
+ "name": "Old Vespa Scooter 075",
+ "category": "vehicles",
+ "prompt": "polished steel mint vespa scooter bike sci-fi",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "steel",
+  "poly": 23554,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "scifi",
+  "steel",
+  "pristine",
+  "scooter"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23554,
+ "seed": 41434
+}

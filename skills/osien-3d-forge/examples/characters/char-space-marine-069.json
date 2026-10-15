@@ -1,0 +1,25 @@
+{
+ "id": "char-space-marine-069",
+ "name": "Wise Space Marine 069",
+ "category": "characters",
+ "prompt": "weathered chrome armored space marine soldier avatar stylized",
+ "kit": "soldierModern",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 10811,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "stylized",
+  "chrome",
+  "worn",
+  "soldier"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10811,
+ "seed": 41528
+}

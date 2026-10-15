@@ -1,0 +1,25 @@
+{
+ "id": "crea-alley-cat-072",
+ "name": "Young Alley Cat 072",
+ "category": "creatures",
+ "prompt": "marble small orange alley cat fantasy",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 25492,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "fantasy",
+  "marble",
+  "balanced",
+  "cat"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25492,
+ "seed": 41611
+}

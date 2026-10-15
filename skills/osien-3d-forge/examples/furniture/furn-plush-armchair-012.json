@@ -1,0 +1,25 @@
+{
+ "id": "furn-plush-armchair-012",
+ "name": "Grand Plush Armchair 012",
+ "category": "furniture",
+ "prompt": "glass plush fabric armchair seat low poly",
+ "kit": "chair",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 30017,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "chair",
+  "lowpoly",
+  "glass",
+  "balanced",
+  "armchair"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30017,
+ "seed": 41631
+}

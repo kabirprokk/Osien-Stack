@@ -1,0 +1,21 @@
+{
+ "id": "hum-astronaut-008",
+ "name": "Proud Astronaut 008",
+ "category": "human-players",
+ "kit": "astronaut",
+ "prompt": "proud wild brave astronaut",
+ "seed": 40108,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "astronaut",
+  "space",
+  "suit",
+  "proud",
+  "wild",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

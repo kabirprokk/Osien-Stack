@@ -1,0 +1,25 @@
+{
+ "id": "furn-canopy-bed-076",
+ "name": "Small Canopy Bed 076",
+ "category": "furniture",
+ "prompt": "marble wooden canopy bed mattress stylized",
+ "kit": "bed",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 12470,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bed",
+  "stylized",
+  "marble",
+  "balanced",
+  "mattress"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12470,
+ "seed": 41695
+}

@@ -1,0 +1,26 @@
+{
+ "id": "food-orange-fruit-010",
+ "name": "Ripe Orange Fruit 010",
+ "category": "food",
+ "prompt": "polished glass ripe orange sphere fruit realistic",
+ "kit": "sphere",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 11138,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "sphere",
+  "realistic",
+  "glass",
+  "pristine",
+  "orange",
+  "fruit"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11138,
+ "seed": 41949
+}

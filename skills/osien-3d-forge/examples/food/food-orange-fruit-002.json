@@ -1,0 +1,26 @@
+{
+ "id": "food-orange-fruit-002",
+ "name": "Small Orange Fruit 002",
+ "category": "food",
+ "prompt": "weathered wooden ripe orange sphere fruit realistic",
+ "kit": "sphere",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 25185,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "sphere",
+  "realistic",
+  "wood",
+  "worn",
+  "orange",
+  "fruit"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25185,
+ "seed": 41941
+}

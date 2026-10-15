@@ -1,0 +1,25 @@
+{
+ "id": "veh-chopper-bike-044",
+ "name": "Chrome Chopper Bike 044",
+ "category": "vehicles",
+ "prompt": "weathered chrome black chopper motorcycle bike sci-fi",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "chrome",
+  "poly": 24442,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "scifi",
+  "chrome",
+  "worn",
+  "chopper"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24442,
+ "seed": 41403
+}

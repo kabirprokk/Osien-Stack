@@ -1,0 +1,25 @@
+{
+ "id": "intr-four-poster-bed-059",
+ "name": "Grand Four-Poster Bed 059",
+ "category": "architecture-interior",
+ "prompt": "polished stone fabric four-poster bed fantasy",
+ "kit": "bed",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "stone",
+  "poly": 11321,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bed",
+  "fantasy",
+  "stone",
+  "pristine",
+  "bedroom"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11321,
+ "seed": 41778
+}

@@ -1,0 +1,24 @@
+{
+ "id": "sfx-airlock-door-021",
+ "name": "Rusty Airlock Door 021",
+ "category": "scifi",
+ "prompt": "polished obsidian steel airlock door box panel sci-fi",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "obsidian",
+  "poly": 12981,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "box",
+  "obsidian",
+  "pristine",
+  "airlock"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12981,
+ "seed": 41820
+}

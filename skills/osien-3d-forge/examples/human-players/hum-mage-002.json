@@ -1,0 +1,21 @@
+{
+ "id": "hum-mage-002",
+ "name": "Grand Mage 002",
+ "category": "human-players",
+ "kit": "mage",
+ "prompt": "grand calm wise mage with staff",
+ "seed": 40052,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "mage",
+  "wizard",
+  "staff",
+  "grand",
+  "calm",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

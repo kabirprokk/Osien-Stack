@@ -1,0 +1,25 @@
+{
+ "id": "intr-study-desk-015",
+ "name": "Antique Study Desk 015",
+ "category": "architecture-interior",
+ "prompt": "weathered stone oak study desk table low poly",
+ "kit": "table",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 3659,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "table",
+  "lowpoly",
+  "stone",
+  "worn",
+  "study"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3659,
+ "seed": 41734
+}

@@ -1,0 +1,21 @@
+{
+ "id": "veg-bramble-005",
+ "name": "Wild Bramble 005",
+ "category": "vegetation-ultra",
+ "kit": "wildBramble",
+ "prompt": "wild thorny wild bramble berry bush",
+ "seed": 30105,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "wild",
+  "berries",
+  "tangle",
+  "wild",
+  "thorny",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

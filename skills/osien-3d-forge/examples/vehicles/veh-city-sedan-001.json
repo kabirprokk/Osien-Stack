@@ -1,0 +1,28 @@
+{
+ "id": "veh-city-sedan-001",
+ "name": "Desert City Sedan 001",
+ "category": "vehicles",
+ "prompt": "chrome red city sedan car vehicle with doors low poly",
+ "kit": "car",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "chrome",
+  "poly": 22855,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "lowpoly",
+  "chrome",
+  "balanced",
+  "sedan",
+  "city"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22855,
+ "seed": 41360
+}

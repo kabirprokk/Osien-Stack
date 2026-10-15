@@ -1,0 +1,21 @@
+{
+ "id": "veg-boxwood-007",
+ "name": "Lush Boxwood 007",
+ "category": "vegetation-ultra",
+ "kit": "boxwoodTopiary",
+ "prompt": "lush round boxwood topiary ball sheared bush",
+ "seed": 30067,
+ "params": {
+  "quality": "cinema",
+  "style": "stylized"
+ },
+ "tags": [
+  "topiary",
+  "formal",
+  "garden",
+  "lush",
+  "round",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

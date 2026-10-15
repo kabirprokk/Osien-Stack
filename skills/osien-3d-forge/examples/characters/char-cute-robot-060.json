@@ -1,0 +1,26 @@
+{
+ "id": "char-cute-robot-060",
+ "name": "Young Cute Robot 060",
+ "category": "characters",
+ "prompt": "gold cute little robot droid stylized",
+ "kit": "robot",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "gold",
+  "poly": 11111,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "stylized",
+  "gold",
+  "balanced",
+  "droid",
+  "cute"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11111,
+ "seed": 41519
+}

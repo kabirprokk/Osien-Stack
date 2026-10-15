@@ -1,0 +1,25 @@
+{
+ "id": "fant-mana-crystal-005",
+ "name": "Dark Mana Crystal 005",
+ "category": "fantasy",
+ "prompt": "marble glowing blue mana crystal stylized",
+ "kit": "crystal",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 29663,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "crystal",
+  "stylized",
+  "marble",
+  "balanced",
+  "mana"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 29663,
+ "seed": 41884
+}

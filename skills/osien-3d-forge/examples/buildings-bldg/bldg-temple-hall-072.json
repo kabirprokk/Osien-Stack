@@ -1,0 +1,25 @@
+{
+ "id": "bldg-temple-hall-072",
+ "name": "Medieval Temple Hall 072",
+ "category": "buildings-bldg",
+ "prompt": "marble ancient marble temple hall with columns and steps realistic",
+ "kit": "building",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 4313,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "realistic",
+  "marble",
+  "balanced",
+  "temple"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4313,
+ "seed": 41071
+}

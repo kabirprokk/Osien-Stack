@@ -1,0 +1,25 @@
+{
+ "id": "food-sweet-potato-012",
+ "name": "Red Sweet Potato 012",
+ "category": "food",
+ "prompt": "polished marble orange sweet potato cone realistic",
+ "kit": "cone",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 11095,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "cone",
+  "realistic",
+  "marble",
+  "pristine",
+  "potato"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11095,
+ "seed": 41951
+}

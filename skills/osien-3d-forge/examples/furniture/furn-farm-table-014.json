@@ -1,0 +1,25 @@
+{
+ "id": "furn-farm-table-014",
+ "name": "Antique Farm Table 014",
+ "category": "furniture",
+ "prompt": "weathered wooden rustic wooden farm table realistic",
+ "kit": "table",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 22783,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "table",
+  "realistic",
+  "wood",
+  "worn",
+  "farm"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22783,
+ "seed": 41633
+}

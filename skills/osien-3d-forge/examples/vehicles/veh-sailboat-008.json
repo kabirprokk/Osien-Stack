@@ -1,0 +1,25 @@
+{
+ "id": "veh-sailboat-008",
+ "name": "Desert Sailboat 008",
+ "category": "vehicles",
+ "prompt": "ancient iron wooden sailboat yacht sci-fi",
+ "kit": "boat",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "iron",
+  "poly": 24901,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "scifi",
+  "iron",
+  "ancient",
+  "sailboat"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24901,
+ "seed": 41367
+}

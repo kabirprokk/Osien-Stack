@@ -1,0 +1,26 @@
+{
+ "id": "crea-alien-pet-079",
+ "name": "Young Alien Pet 079",
+ "category": "creatures",
+ "prompt": "polished bone small cute alien pet quadruped low poly",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "bone",
+  "poly": 25421,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "lowpoly",
+  "bone",
+  "pristine",
+  "alien",
+  "pet"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25421,
+ "seed": 41618
+}

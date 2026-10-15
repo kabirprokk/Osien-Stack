@@ -1,0 +1,26 @@
+{
+ "id": "char-village-knight-065",
+ "name": "Brave Village Knight 065",
+ "category": "characters",
+ "prompt": "ancient iron brave kingdom knight warrior in armor stylized",
+ "kit": "knight",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 3874,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "stylized",
+  "iron",
+  "ancient",
+  "knight",
+  "warrior"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3874,
+ "seed": 41524
+}

@@ -1,0 +1,26 @@
+{
+ "id": "furn-oak-chair-091",
+ "name": "Oaken Oak Chair 091",
+ "category": "furniture",
+ "prompt": "fabric wooden oak chair low poly",
+ "kit": "chair",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 23108,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "chair",
+  "lowpoly",
+  "fabric",
+  "balanced",
+  "oak",
+  "seat"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23108,
+ "seed": 41710
+}

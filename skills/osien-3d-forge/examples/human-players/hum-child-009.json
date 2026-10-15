@@ -1,0 +1,21 @@
+{
+ "id": "hum-child-009",
+ "name": "Tall Child 009",
+ "category": "human-players",
+ "kit": "baseChild",
+ "prompt": "tall silent young child",
+ "seed": 40029,
+ "params": {
+  "quality": "draft",
+  "style": "realistic"
+ },
+ "tags": [
+  "child",
+  "kid",
+  "young",
+  "tall",
+  "silent",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

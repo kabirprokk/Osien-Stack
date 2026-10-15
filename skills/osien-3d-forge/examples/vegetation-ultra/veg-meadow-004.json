@@ -1,0 +1,21 @@
+{
+ "id": "veg-meadow-004",
+ "name": "Natural Meadow 004",
+ "category": "vegetation-ultra",
+ "kit": "wildMeadow",
+ "prompt": "natural dense wild meadow tall grass with flowers",
+ "seed": 30014,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "meadow",
+  "wildflowers",
+  "prairie",
+  "natural",
+  "dense",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

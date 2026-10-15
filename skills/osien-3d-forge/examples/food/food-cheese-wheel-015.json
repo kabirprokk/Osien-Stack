@@ -1,0 +1,25 @@
+{
+ "id": "food-cheese-wheel-015",
+ "name": "Sweet Cheese Wheel 015",
+ "category": "food",
+ "prompt": "weathered marble yellow cheese wheel cylinder realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 24703,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "cylinder",
+  "realistic",
+  "marble",
+  "worn",
+  "cheese"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24703,
+ "seed": 41954
+}

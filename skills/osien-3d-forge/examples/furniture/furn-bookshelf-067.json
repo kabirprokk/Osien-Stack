@@ -1,0 +1,26 @@
+{
+ "id": "furn-bookshelf-067",
+ "name": "Leather Bookshelf 067",
+ "category": "furniture",
+ "prompt": "pristine glass tall wooden bookshelf shelf with books stylized",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 29073,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "stylized",
+  "glass",
+  "pristine",
+  "shelf",
+  "books"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 29073,
+ "seed": 41686
+}

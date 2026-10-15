@@ -1,0 +1,26 @@
+{
+ "id": "gun-ornate-excalibur-014",
+ "name": "Dark Ornate Excalibur 014",
+ "category": "weapons-guns",
+ "prompt": "mossy wooden ornate golden enchanted excalibur sword blade fantasy",
+ "kit": "swordV2",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "wood",
+  "poly": 12062,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "swordV2",
+  "fantasy",
+  "wood",
+  "ancient",
+  "sword",
+  "legendary"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12062,
+ "seed": 41133
+}

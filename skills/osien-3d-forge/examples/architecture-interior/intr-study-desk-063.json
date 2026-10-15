@@ -1,0 +1,25 @@
+{
+ "id": "intr-study-desk-063",
+ "name": "Cozy Study Desk 063",
+ "category": "architecture-interior",
+ "prompt": "weathered stone oak study desk table low poly",
+ "kit": "table",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 12560,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "table",
+  "lowpoly",
+  "stone",
+  "worn",
+  "study"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12560,
+ "seed": 41782
+}

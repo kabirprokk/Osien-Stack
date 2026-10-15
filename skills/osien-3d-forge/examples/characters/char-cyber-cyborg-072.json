@@ -1,0 +1,25 @@
+{
+ "id": "char-cyber-cyborg-072",
+ "name": "Scarred Cyber Cyborg 072",
+ "category": "characters",
+ "prompt": "weathered steel chrome cyber cyborg android low poly",
+ "kit": "cyborg",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 4301,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "lowpoly",
+  "steel",
+  "worn",
+  "cyborg"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4301,
+ "seed": 41531
+}

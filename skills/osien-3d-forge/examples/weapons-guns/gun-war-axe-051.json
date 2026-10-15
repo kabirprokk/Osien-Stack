@@ -1,0 +1,24 @@
+{
+ "id": "gun-war-axe-051",
+ "name": "Dark War Axe 051",
+ "category": "weapons-guns",
+ "prompt": "weathered obsidian steel war axe hatchet fantasy",
+ "kit": "axe",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "obsidian",
+  "poly": 13014,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "axe",
+  "fantasy",
+  "obsidian",
+  "worn"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13014,
+ "seed": 41170
+}

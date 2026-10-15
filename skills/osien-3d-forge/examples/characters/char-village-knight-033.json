@@ -1,0 +1,26 @@
+{
+ "id": "char-village-knight-033",
+ "name": "Wise Village Knight 033",
+ "category": "characters",
+ "prompt": "iron brave kingdom knight warrior in armor low poly",
+ "kit": "knight",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 31103,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "lowpoly",
+  "iron",
+  "balanced",
+  "knight",
+  "warrior"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31103,
+ "seed": 41492
+}

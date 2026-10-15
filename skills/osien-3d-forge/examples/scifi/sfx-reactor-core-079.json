@@ -1,0 +1,26 @@
+{
+ "id": "sfx-reactor-core-079",
+ "name": "Chrome Reactor Core 079",
+ "category": "scifi",
+ "prompt": "weathered glass glowing reactor core cylinder column with engine sci-fi",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "glass",
+  "poly": 26366,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "glass",
+  "worn",
+  "reactor"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26366,
+ "seed": 41878
+}

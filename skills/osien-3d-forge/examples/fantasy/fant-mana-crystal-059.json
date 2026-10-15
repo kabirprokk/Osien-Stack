@@ -1,0 +1,25 @@
+{
+ "id": "fant-mana-crystal-059",
+ "name": "Mystic Mana Crystal 059",
+ "category": "fantasy",
+ "prompt": "wooden glowing blue mana crystal stylized",
+ "kit": "crystal",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 23846,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "crystal",
+  "stylized",
+  "wood",
+  "balanced",
+  "mana"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23846,
+ "seed": 41938
+}

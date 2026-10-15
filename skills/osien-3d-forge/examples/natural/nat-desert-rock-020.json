@@ -1,0 +1,25 @@
+{
+ "id": "nat-desert-rock-020",
+ "name": "Wild Desert Rock 020",
+ "category": "natural",
+ "prompt": "ancient wooden weathered sandstone desert rock stylized",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 11159,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "stylized",
+  "wood",
+  "ancient",
+  "desert"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11159,
+ "seed": 41259
+}

@@ -1,0 +1,21 @@
+{
+ "id": "veg-rose-002",
+ "name": "Lush Rose 002",
+ "category": "vegetation-ultra",
+ "kit": "roseBush",
+ "prompt": "lush thorny rose bush with red blooms",
+ "seed": 30072,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "roses",
+  "flowering",
+  "garden",
+  "lush",
+  "thorny",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

@@ -1,0 +1,28 @@
+{
+ "id": "bldg-apartment-block-040",
+ "name": "Ruined Apartment Block 040",
+ "category": "buildings-bldg",
+ "prompt": "ancient brass brick apartment building block with windows and doors with windows fantasy",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "brass",
+  "poly": 11689,
+  "parts": [
+   "windows"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "fantasy",
+  "brass",
+  "ancient",
+  "city",
+  "housing"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11689,
+ "seed": 41039
+}

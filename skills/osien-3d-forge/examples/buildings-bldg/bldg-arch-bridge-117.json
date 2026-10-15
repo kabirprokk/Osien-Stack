@@ -1,0 +1,25 @@
+{
+ "id": "bldg-arch-bridge-117",
+ "name": "Towering Arch Bridge 117",
+ "category": "buildings-bldg",
+ "prompt": "glass stone arch bridge with pillars fantasy",
+ "kit": "bridge",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "glass",
+  "poly": 11987,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "fantasy",
+  "glass",
+  "balanced",
+  "river"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11987,
+ "seed": 41116
+}

@@ -1,0 +1,27 @@
+{
+ "id": "veh-chopper-bike-034",
+ "name": "Chrome Chopper Bike 034",
+ "category": "vehicles",
+ "prompt": "chrome black chopper motorcycle bike with engine stylized",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 11412,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "stylized",
+  "chrome",
+  "balanced",
+  "chopper"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11412,
+ "seed": 41393
+}

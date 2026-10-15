@@ -1,0 +1,27 @@
+{
+ "id": "fant-elven-castle-032",
+ "name": "Mystic Elven Castle 032",
+ "category": "fantasy",
+ "prompt": "wooden slender elven castle fortress with gate realistic",
+ "kit": "castle",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 4126,
+  "parts": [
+   "gate"
+  ]
+ },
+ "tags": [
+  "fantasy",
+  "castle",
+  "realistic",
+  "wood",
+  "balanced",
+  "elven"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4126,
+ "seed": 41911
+}

@@ -1,0 +1,28 @@
+{
+ "id": "bldg-temple-hall-060",
+ "name": "Ruined Temple Hall 060",
+ "category": "buildings-bldg",
+ "prompt": "polished brass ancient marble temple hall with columns and steps with windows and doors realistic",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "brass",
+  "poly": 11376,
+  "parts": [
+   "windows",
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "realistic",
+  "brass",
+  "pristine",
+  "temple"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11376,
+ "seed": 41059
+}

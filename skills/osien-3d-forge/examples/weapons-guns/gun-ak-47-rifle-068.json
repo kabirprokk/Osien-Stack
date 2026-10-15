@@ -1,0 +1,26 @@
+{
+ "id": "gun-ak-47-rifle-068",
+ "name": "Golden AK-47 Rifle 068",
+ "category": "weapons-guns",
+ "prompt": "weathered gold rusty ak-47 assault rifle tube barrel stylized",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "gold",
+  "poly": 11311,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "stylized",
+  "gold",
+  "worn",
+  "gun",
+  "rifle"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11311,
+ "seed": 41187
+}

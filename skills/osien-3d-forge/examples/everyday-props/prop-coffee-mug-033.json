@@ -1,0 +1,25 @@
+{
+ "id": "prop-coffee-mug-033",
+ "name": "Wooden Coffee Mug 033",
+ "category": "everyday-props",
+ "prompt": "ancient fabric white coffee mug cylinder cup realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 4173,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "cylinder",
+  "realistic",
+  "fabric",
+  "ancient",
+  "mug"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4173,
+ "seed": 42012
+}

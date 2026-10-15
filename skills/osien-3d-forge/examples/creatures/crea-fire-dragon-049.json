@@ -1,0 +1,26 @@
+{
+ "id": "crea-fire-dragon-049",
+ "name": "Fire Fire Dragon 049",
+ "category": "creatures",
+ "prompt": "ancient stone huge fire dragon drake stylized",
+ "kit": "dragon",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "stone",
+  "poly": 25079,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "stylized",
+  "stone",
+  "ancient",
+  "fire",
+  "drake"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25079,
+ "seed": 41588
+}

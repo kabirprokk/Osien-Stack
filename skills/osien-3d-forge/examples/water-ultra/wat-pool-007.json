@@ -1,0 +1,21 @@
+{
+ "id": "wat-pool-007",
+ "name": "Clean Pool 007",
+ "category": "water-ultra",
+ "kit": "poolWater",
+ "prompt": "clean clear swimming pool clear water",
+ "seed": 40047,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "pool",
+  "tiled",
+  "clean",
+  "clean",
+  "clear",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

@@ -1,0 +1,25 @@
+{
+ "id": "veh-sailboat-018",
+ "name": "Fast Sailboat 018",
+ "category": "vehicles",
+ "prompt": "polished iron wooden sailboat yacht sci-fi",
+ "kit": "boat",
+ "params": {
+  "quality": "print",
+  "style": "scifi",
+  "material": "iron",
+  "poly": 29708,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "scifi",
+  "iron",
+  "pristine",
+  "sailboat"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 29708,
+ "seed": 41377
+}

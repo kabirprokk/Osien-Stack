@@ -1,0 +1,27 @@
+{
+ "id": "intr-oak-dresser-080",
+ "name": "Marble Oak Dresser 080",
+ "category": "architecture-interior",
+ "prompt": "pristine fabric oak dresser cupboard drawers with doors stylized",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "fabric",
+  "poly": 11167,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "stylized",
+  "fabric",
+  "pristine",
+  "dresser"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11167,
+ "seed": 41799
+}

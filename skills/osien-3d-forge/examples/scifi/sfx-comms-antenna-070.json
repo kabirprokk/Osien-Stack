@@ -1,0 +1,25 @@
+{
+ "id": "sfx-comms-antenna-070",
+ "name": "Chrome Comms Antenna 070",
+ "category": "scifi",
+ "prompt": "mossy iron tall comms antenna tube mast realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 11834,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "realistic",
+  "iron",
+  "ancient",
+  "antenna"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11834,
+ "seed": 41869
+}

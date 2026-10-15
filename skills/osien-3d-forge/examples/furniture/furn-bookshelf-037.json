@@ -1,0 +1,26 @@
+{
+ "id": "furn-bookshelf-037",
+ "name": "Cozy Bookshelf 037",
+ "category": "furniture",
+ "prompt": "pristine iron tall wooden bookshelf shelf with books low poly",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 3750,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "lowpoly",
+  "iron",
+  "pristine",
+  "shelf",
+  "books"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3750,
+ "seed": 41656
+}

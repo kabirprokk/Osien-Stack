@@ -1,0 +1,26 @@
+{
+ "id": "furn-oak-chair-031",
+ "name": "Antique Oak Chair 031",
+ "category": "furniture",
+ "prompt": "marble wooden oak chair low poly",
+ "kit": "chair",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 30536,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "chair",
+  "lowpoly",
+  "marble",
+  "balanced",
+  "oak",
+  "seat"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30536,
+ "seed": 41650
+}

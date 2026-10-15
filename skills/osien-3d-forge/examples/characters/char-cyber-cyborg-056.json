@@ -1,0 +1,27 @@
+{
+ "id": "char-cyber-cyborg-056",
+ "name": "Dark Cyber Cyborg 056",
+ "category": "characters",
+ "prompt": "iron chrome cyber cyborg android with engine realistic",
+ "kit": "cyborg",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 4295,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "realistic",
+  "iron",
+  "balanced",
+  "cyborg"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4295,
+ "seed": 41515
+}

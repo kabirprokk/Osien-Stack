@@ -1,0 +1,26 @@
+{
+ "id": "gun-ak-47-rifle-116",
+ "name": "Ancient AK-47 Rifle 116",
+ "category": "weapons-guns",
+ "prompt": "steel rusty ak-47 assault rifle tube barrel realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "steel",
+  "poly": 3927,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "realistic",
+  "steel",
+  "balanced",
+  "gun",
+  "rifle"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3927,
+ "seed": 41235
+}

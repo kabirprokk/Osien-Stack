@@ -1,0 +1,26 @@
+{
+ "id": "bldg-wooden-cabin-030",
+ "name": "Medieval Wooden Cabin 030",
+ "category": "buildings-bldg",
+ "prompt": "mossy stone wooden cabin hut house with chimney realistic",
+ "kit": "house",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "stone",
+  "poly": 12161,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "realistic",
+  "stone",
+  "ancient",
+  "cabin",
+  "forest"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12161,
+ "seed": 41029
+}

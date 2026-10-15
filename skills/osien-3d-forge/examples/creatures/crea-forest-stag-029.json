@@ -1,0 +1,25 @@
+{
+ "id": "crea-forest-stag-029",
+ "name": "Dark Forest Stag 029",
+ "category": "creatures",
+ "prompt": "fabric brown forest stag animal low poly",
+ "kit": "creature",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 4086,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "lowpoly",
+  "fabric",
+  "balanced",
+  "deer"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4086,
+ "seed": 41568
+}

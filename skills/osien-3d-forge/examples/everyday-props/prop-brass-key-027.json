@@ -1,0 +1,25 @@
+{
+ "id": "prop-brass-key-027",
+ "name": "Small Brass Key 027",
+ "category": "everyday-props",
+ "prompt": "ancient leather small brass key box teeth stylized",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 11720,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "box",
+  "stylized",
+  "leather",
+  "ancient",
+  "key"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11720,
+ "seed": 42006
+}

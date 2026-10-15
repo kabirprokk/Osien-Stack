@@ -1,0 +1,25 @@
+{
+ "id": "veh-harbor-ferry-060",
+ "name": "Old Harbor Ferry 060",
+ "category": "vehicles",
+ "prompt": "mossy rusty yellow harbor ferry boat low poly",
+ "kit": "boat",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "rust",
+  "poly": 26102,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "lowpoly",
+  "rust",
+  "ancient",
+  "ferry"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26102,
+ "seed": 41419
+}

@@ -1,0 +1,25 @@
+{
+ "id": "intr-study-desk-071",
+ "name": "Antique Study Desk 071",
+ "category": "architecture-interior",
+ "prompt": "leather oak study desk table fantasy",
+ "kit": "table",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "leather",
+  "poly": 21893,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "table",
+  "fantasy",
+  "leather",
+  "balanced",
+  "study"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21893,
+ "seed": 41790
+}

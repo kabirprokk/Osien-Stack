@@ -1,0 +1,26 @@
+{
+ "id": "nat-pine-tree-051",
+ "name": "Mossy Pine Tree 051",
+ "category": "natural",
+ "prompt": "ancient fabric tall pine tree stylized",
+ "kit": "tree",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "fabric",
+  "poly": 4104,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "stylized",
+  "fabric",
+  "ancient",
+  "pine",
+  "forest"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4104,
+ "seed": 41290
+}

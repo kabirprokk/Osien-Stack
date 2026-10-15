@@ -1,0 +1,26 @@
+{
+ "id": "furn-office-desk-043",
+ "name": "Cozy Office Desk 043",
+ "category": "furniture",
+ "prompt": "fabric modern office desk table low poly",
+ "kit": "table",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 11453,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "table",
+  "lowpoly",
+  "fabric",
+  "balanced",
+  "desk",
+  "office"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11453,
+ "seed": 41662
+}

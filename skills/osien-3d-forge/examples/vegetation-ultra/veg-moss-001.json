@@ -1,0 +1,21 @@
+{
+ "id": "veg-moss-001",
+ "name": "Green Moss 001",
+ "category": "vegetation-ultra",
+ "kit": "mossCarpet",
+ "prompt": "green damp mossy ground moss carpet",
+ "seed": 30034,
+ "params": {
+  "quality": "cinema",
+  "style": "stylized"
+ },
+ "tags": [
+  "moss",
+  "forest-floor",
+  "damp",
+  "green",
+  "damp",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

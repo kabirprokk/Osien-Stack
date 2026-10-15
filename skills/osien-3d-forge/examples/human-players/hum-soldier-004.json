@@ -1,0 +1,21 @@
+{
+ "id": "hum-soldier-004",
+ "name": "Strong Soldier 004",
+ "category": "human-players",
+ "kit": "soldierModern",
+ "prompt": "strong proud modern soldier",
+ "seed": 40074,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "soldier",
+  "modern",
+  "tactical",
+  "strong",
+  "proud",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

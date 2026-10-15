@@ -1,0 +1,26 @@
+{
+ "id": "nat-alien-flora-037",
+ "name": "Tall Alien Flora 037",
+ "category": "natural",
+ "prompt": "bone glowing alien plant tentacle flower low poly",
+ "kit": "alienPlant",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "bone",
+  "poly": 12354,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "alienPlant",
+  "lowpoly",
+  "bone",
+  "balanced",
+  "alien",
+  "flora"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12354,
+ "seed": 41276
+}

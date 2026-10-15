@@ -1,0 +1,25 @@
+{
+ "id": "prop-truck-tire-035",
+ "name": "Wooden Truck Tire 035",
+ "category": "everyday-props",
+ "prompt": "ancient wooden black rubber tire torus ring stylized",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 12945,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "torus",
+  "stylized",
+  "wood",
+  "ancient",
+  "tire"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12945,
+ "seed": 42014
+}

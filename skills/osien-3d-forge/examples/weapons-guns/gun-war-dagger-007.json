@@ -1,0 +1,25 @@
+{
+ "id": "gun-war-dagger-007",
+ "name": "Steel War Dagger 007",
+ "category": "weapons-guns",
+ "prompt": "weathered steel iron war dagger knife low poly",
+ "kit": "sword",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 12494,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "lowpoly",
+  "steel",
+  "worn",
+  "dagger"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12494,
+ "seed": 41126
+}

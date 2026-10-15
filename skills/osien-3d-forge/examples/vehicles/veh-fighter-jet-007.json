@@ -1,0 +1,28 @@
+{
+ "id": "veh-fighter-jet-007",
+ "name": "Red Fighter Jet 007",
+ "category": "vehicles",
+ "prompt": "gold gray fighter jet aircraft with wings and engine sci-fi",
+ "kit": "airplane",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "gold",
+  "poly": 11285,
+  "parts": [
+   "wings",
+   "engine"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "scifi",
+  "gold",
+  "balanced",
+  "fighter"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11285,
+ "seed": 41366
+}

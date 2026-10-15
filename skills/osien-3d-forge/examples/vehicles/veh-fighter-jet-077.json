@@ -1,0 +1,25 @@
+{
+ "id": "veh-fighter-jet-077",
+ "name": "Old Fighter Jet 077",
+ "category": "vehicles",
+ "prompt": "steel gray fighter jet aircraft low poly",
+ "kit": "airplane",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 3676,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "lowpoly",
+  "steel",
+  "balanced",
+  "fighter"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3676,
+ "seed": 41436
+}

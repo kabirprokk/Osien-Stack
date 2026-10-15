@@ -1,0 +1,26 @@
+{
+ "id": "nat-amethyst-geode-009",
+ "name": "Grey Amethyst Geode 009",
+ "category": "natural",
+ "prompt": "stone purple amethyst crystal geode stylized",
+ "kit": "crystal",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "stone",
+  "poly": 12617,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "stylized",
+  "stone",
+  "balanced",
+  "amethyst",
+  "gem"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12617,
+ "seed": 41248
+}

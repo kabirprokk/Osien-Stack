@@ -1,0 +1,25 @@
+{
+ "id": "prop-rubber-ball-044",
+ "name": "Round Rubber Ball 044",
+ "category": "everyday-props",
+ "prompt": "ancient wooden red rubber ball sphere low poly",
+ "kit": "sphere",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 21978,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "sphere",
+  "lowpoly",
+  "wood",
+  "ancient",
+  "ball"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21978,
+ "seed": 42023
+}

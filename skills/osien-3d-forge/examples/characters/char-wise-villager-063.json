@@ -1,0 +1,25 @@
+{
+ "id": "char-wise-villager-063",
+ "name": "Brave Wise Villager 063",
+ "category": "characters",
+ "prompt": "weathered steel wise old townsfolk person stylized",
+ "kit": "baseMale",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 25429,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "stylized",
+  "steel",
+  "worn",
+  "villager"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25429,
+ "seed": 41522
+}

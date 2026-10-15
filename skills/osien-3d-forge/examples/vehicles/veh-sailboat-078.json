@@ -1,0 +1,28 @@
+{
+ "id": "veh-sailboat-078",
+ "name": "Midnight Sailboat 078",
+ "category": "vehicles",
+ "prompt": "polished glass wooden sailboat yacht with sails and mast realistic",
+ "kit": "boat",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 11231,
+  "parts": [
+   "sails",
+   "mast"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "realistic",
+  "glass",
+  "pristine",
+  "sailboat"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11231,
+ "seed": 41437
+}

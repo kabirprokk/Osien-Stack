@@ -1,0 +1,25 @@
+{
+ "id": "char-orc-brute-027",
+ "name": "Cute Orc Brute 027",
+ "category": "characters",
+ "prompt": "iron hulking orc warrior stylized",
+ "kit": "warrior",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 11256,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "stylized",
+  "iron",
+  "balanced",
+  "orc"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11256,
+ "seed": 41486
+}

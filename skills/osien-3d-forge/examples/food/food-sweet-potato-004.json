@@ -1,0 +1,25 @@
+{
+ "id": "food-sweet-potato-004",
+ "name": "Glazed Sweet Potato 004",
+ "category": "food",
+ "prompt": "fabric orange sweet potato cone realistic",
+ "kit": "cone",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 27491,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "cone",
+  "realistic",
+  "fabric",
+  "balanced",
+  "potato"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 27491,
+ "seed": 41943
+}

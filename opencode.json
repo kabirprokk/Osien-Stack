@@ -1,0 +1,453 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "username": "ai-manager",
+  "default_agent": "ai-manager",
+  "model": "openai/gpt-5.6-luna",
+  "small_model": "opencode/mimo-v2.6-flash-free",
+  "compaction": {
+    "auto": true,
+    "tail_turns": 6
+  },
+  "agent": {
+    "ai-manager": {
+      "description": "Lean orchestrator. Routes work to scout/builder/debugger/reviewer via an intent router, manages memory + token budget. Owns: read/edit/bash/search/verify/crew. Situational kits (game, deep-browse, forge) live inside their specialist agents.",
+      "mode": "primary",
+      "model": "opencode/muse-spark-1.3-contributor-free",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "webfetch": "deny",
+        "websearch": "deny"
+      },
+      "tools": {
+        "game_scaffold": false,
+        "game_audit": false,
+        "game_playtest": false,
+        "game_publish": false,
+        "game_add": false,
+        "game_deploy": false,
+        "game_bot": false,
+        "game_stats": false,
+        "music_maker": false,
+        "sfx_pack": false,
+        "sprite_maker": false,
+        "web_scaffold": false,
+        "web_audit": false,
+        "brand_kit": false,
+        "web_act": false,
+        "web_tree": false,
+        "web_research": false,
+        "web_learn": false,
+        "forge_skill": false,
+        "forge_tool": false,
+        "webfetch": false,
+        "websearch": false
+      }
+    },
+    "researcher": {
+      "description": "Fast web research: docs lookup via context7, web search via exa/tavily/brave, scrape via firecrawl, deep repo docs via deepwiki. Use for any research, docs, or debugging unknowns. Uses todowrite todos for multi-step work.",
+      "mode": "all",
+      "model": "opencode/muse-spark-1.3-contributor-free",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "webfetch": "deny",
+        "websearch": "deny"
+      },
+      "tools": {
+        "webfetch": false,
+        "websearch": false
+      }
+    },
+    "devops": {
+      "description": "Docker, kubernetes, railway, supabase, sentry, stripe, posthog, CI/CD. Use for deploys, infra, env, monitoring, payments. Uses todowrite todos for multi-step work.",
+      "mode": "all",
+      "model": "opencode/muse-spark-1.3-contributor-free",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "webfetch": "deny",
+        "websearch": "deny"
+      },
+      "tools": {
+        "webfetch": false,
+        "websearch": false
+      }
+    },
+    "data-wrangler": {
+      "description": "SQLite, postgres, supabase, mongodb, notion, slack, linear. Use for DB queries, migrations, schema inspection, tickets, docs. Uses todowrite todos for multi-step work.",
+      "mode": "all",
+      "model": "opencode/muse-spark-1.3-contributor-free",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "webfetch": "deny",
+        "websearch": "deny"
+      },
+      "tools": {
+        "webfetch": false,
+        "websearch": false
+      }
+    },
+    "game-builder": {
+      "description": "Ultra-fast perfect website games: scaffold, features, audit, playtest, publish. Use for any web/HTML5 game. Uses todowrite todos for multi-step work.",
+      "mode": "all",
+      "model": "opencode/muse-spark-1.3-contributor-free",
+      "permission": {
+        "edit": "allow",
+        "bash": "allow",
+        "webfetch": "deny",
+        "websearch": "deny"
+      },
+      "tools": {
+        "webfetch": false,
+        "websearch": false
+      }
+    }
+  },
+  "command": {
+    "delegate": {
+      "template": "Delegate this task to the appropriate AI agent. Parse the arguments to determine which agent to use (git-pusher, model-creator, physics-engine, monitor, researcher, devops, data-wrangler, game-builder) and what task to assign. Output the agent name, task description, priority level, and required context.",
+      "description": "Delegate work to a specific AI agent",
+      "agent": "ai-manager"
+    },
+    "context": {
+      "template": "Generate a comprehensive overview of the current project state. Read CONTEXT_SUMMARY.md if it exists. Check git status. Check for any pending model/physics work. Report usage level. Show what each agent has accomplished. Output a structured summary of everything needed to continue the project.",
+      "description": "Show current project context and all agent statuses",
+      "agent": "ai-manager"
+    },
+    "rotate": {
+      "template": "Force a context rotation. Gather all current state from each agent. Generate CONTEXT_SUMMARY.md with: current code state, model progress, physics state, known issues, next steps, what each agent accomplished. Output the summary so it can be pasted into a new session. Say 'Run /new in a fresh session and paste the context summary to continue'.",
+      "description": "Force context rotation - generate summary for new session",
+      "agent": "ai-manager"
+    },
+    "status": {
+      "template": "Report the current status of the project. List all agents and their last activity. Estimate current usage level (0-100%). Warn if approaching 80% limit. Show pending tasks. Show any flagged issues from the monitor agent.",
+      "description": "Show all agent statuses and current usage level",
+      "agent": "ai-manager"
+    },
+    "ide": {
+      "template": "Launch the AI Manager IDE DOVA v2.0.0: Start-Process 'F:\\osien\\desktop\\dist\\OSIEN 2.2.4.exe' (portable, no install) or run the installer at dist\\OSIEN Setup 2.2.4.exe. Dev mode: cd F:\\osien\\desktop & npm start. One window: resizable worker panes, KIN pilot, voices, team talk, in-app supervisor.",
+      "description": "Launch the AI Manager IDE desktop app",
+      "agent": "ai-manager"
+    },
+    "ship": {
+      "template": "Fast-lane ship: verify, commit, push, open PR for the given scope. Run checks first, then delegate git steps to git-pusher. Output one compact summary, never stall asking questions.",
+      "description": "Verify, commit, push and open a PR in one fast lane",
+      "agent": "ai-manager"
+    },
+    "fix": {
+      "template": "Diagnose-fix-verify loop for the reported symptom. Reproduce first, apply the smallest safe patch, re-verify. Max 3 attempts, then report findings instead of guessing further.",
+      "description": "Diagnose, patch and verify a bug in a tight loop",
+      "agent": "ai-manager"
+    },
+    "plan": {
+      "template": "Break the goal into an ordered execution plan with agent assignments. Each step names its agent, inputs, done-criteria and context. Output the plan only, then wait for approval.",
+      "description": "Break a goal into agent-assigned executable steps",
+      "agent": "ai-manager"
+    },
+    "standup": {
+      "template": "One-line status per agent plus blockers and next action. Fast scan, no deep dives: what moved, what is stuck, what is next.",
+      "description": "One-line status per agent, blockers, next action",
+      "agent": "ai-manager"
+    },
+    "handoff": {
+      "template": "Write CONTEXT_SUMMARY.md capturing everything needed to continue, estimate usage, and print the exact resume instruction for a fresh session.",
+      "description": "Save full context and print the resume instruction",
+      "agent": "ai-manager"
+    },
+    "commit": {
+      "template": "Create one smart conventional commit right now. Check git status, stage the scoped changes, write a message that explains WHY plus what, then commit. No push.",
+      "description": "Smart conventional commit of current changes, no push",
+      "agent": "git-pusher"
+    },
+    "sync": {
+      "template": "Sync with remote fast: pull with rebase, resolve only trivial conflicts, push, report. Stop on real conflicts with exact files and hunks.",
+      "description": "Pull-rebase, resolve trivialities, push, report",
+      "agent": "git-pusher"
+    },
+    "pr": {
+      "template": "Push the branch and open a pull request with a generated title, summary, test plan and risk section. Report the PR URL.",
+      "description": "Push and open a PR with generated body",
+      "agent": "git-pusher"
+    },
+    "undo": {
+      "template": "Safely undo the last LOCAL commit, keeping all work in the tree. Refuse if the commit is already pushed or if the request is ambiguous.",
+      "description": "Soft-undo last local commit, keep the work",
+      "agent": "git-pusher"
+    },
+    "gen": {
+      "template": "Generate a procedural 3D model from the description: mesh plus material, clearly named asset, organized placement, and a poly/material report.",
+      "description": "Generate a procedural 3D model from a description",
+      "agent": "model-creator"
+    },
+    "opt": {
+      "template": "Optimize the given 3D asset: cut polygons, add LOD chain, keep silhouette. Report before/after numbers, never destroy the source.",
+      "description": "Optimize a 3D asset with LODs and poly report",
+      "agent": "model-creator"
+    },
+    "tex": {
+      "template": "Texture the given asset: generate or assign albedo/roughness/metalness/normal maps, wire the material, report resolution and texel density.",
+      "description": "Texture an asset end to end with material setup",
+      "agent": "model-creator"
+    },
+    "sim": {
+      "template": "Sanity-run the physics simulation for the given scene and report tunneling, jitter, instability and frame cost. No gameplay changes.",
+      "description": "Sanity-run physics and report stability issues",
+      "agent": "physics-engine"
+    },
+    "collide": {
+      "template": "Audit every collider and collision layer/group in scope. List overlaps, misconfigured triggers, missing layers, and give the exact fix per item.",
+      "description": "Audit colliders, layers and groups with fixes",
+      "agent": "physics-engine"
+    },
+    "tune": {
+      "template": "Change exactly one physics constant to the given value, re-test the affected behavior, report the delta. One variable at a time, always revertable.",
+      "description": "Change one physics constant and report the effect",
+      "agent": "physics-engine"
+    },
+    "health": {
+      "template": "Full team health check: sessions alive, last activity per agent, usage estimate, error patterns, and the single most important next action.",
+      "description": "Team health, usage and next action in one scan",
+      "agent": "monitor"
+    },
+    "hire": {
+      "template": "Forge a complete new crew member from a name and role description: analyze the role, pick the best model, write a full personality file, register it in both configs, inject live project context, verify it loads, and sync it to the desktop app roster.",
+      "description": "Forge a complete new AI crew member from name + role",
+      "agent": "ai-manager"
+    },
+    "get": {
+      "template": "Find the best free resource for the stated need using the crew library (RESOURCES.md): match, verify license and format, download and vendor it into the project, log source and license.",
+      "description": "Find, verify and vendor the best free asset for a need",
+      "agent": "ai-manager"
+    },
+    "web": {
+      "template": "Fast web task for $ARGUMENTS: search with exa/tavily/brave, scrape with firecrawl/fetch, verify in browser with playwright if needed. Return answer + sources, no fluff.",
+      "description": "Search + scrape the web fast with sources",
+      "agent": "researcher"
+    },
+    "docs": {
+      "template": "Docs lookup for $ARGUMENTS: use context7 for library docs, deepwiki for GitHub repo docs, then summarize with version, API snippet, and gotchas. Prefer current docs over memory.",
+      "description": "Up-to-date library and repo docs lookup",
+      "agent": "researcher"
+    },
+    "browser": {
+      "template": "Browser-verify $ARGUMENTS with playwright/chrome-devtools: open page, screenshot, check console errors, report selectors and fixes. Headless by default.",
+      "description": "Open, screenshot and verify in a real browser",
+      "agent": "researcher"
+    },
+    "db": {
+      "template": "DB task for $ARGUMENTS: inspect schema via sqlite/postgres/supabase/mongodb MCP, run read-only query first, then propose migration. Never drop without explicit confirm.",
+      "description": "Inspect schema and query DB safely",
+      "agent": "data-wrangler"
+    },
+    "fast": {
+      "template": "Do $ARGUMENTS in the fastest safe way: parallelize reads, use repomix/codebase-index for big repos, sequential-thinking for plan, memory to persist decisions. Output result + next step only.",
+      "description": "Fastest safe execution with parallel tools",
+      "agent": "ai-manager"
+    },
+    "deep": {
+      "template": "Deep research on $ARGUMENTS: sequential-thinking plan, multi-source search (exa, tavily, firecrawl, deepwiki, arxiv), cross-check, save findings to memory. Return ranked findings with confidence.",
+      "description": "Multi-source deep research with ranked findings",
+      "agent": "researcher"
+    },
+    "visual": {
+      "template": "Visual task for $ARGUMENTS: use figma MCP for designs, playwright screenshot for verification, fal-ai for generated media if needed. Return assets + links.",
+      "description": "Design, screenshot and media generation",
+      "agent": "model-creator"
+    },
+    "game": {
+      "template": "Build a perfect website game ULTRA FAST for $ARGUMENTS: 1) game_scaffold vanilla (phaser only if physics-heavy, three only if 3D asked), 2) add features via game_add, 3) game_audit until 100, 4) game_playtest. Single index.html, 60fps, touch+keyboard, sound, score+best, pause, R restart. Output path + score + play URL.",
+      "description": "Scaffold a perfect website game ultra fast",
+      "agent": "game-builder"
+    },
+    "play": {
+      "template": "Playtest $ARGUMENTS: serve folder, screenshot with playwright/chrome-devtools, check console errors, 60fps feel, resize + mobile touch, report PASS/FAIL per item with exact fixes.",
+      "description": "Playtest a web game in a real browser",
+      "agent": "game-builder"
+    },
+    "sprite": {
+      "template": "Create game art for $ARGUMENTS: crisp canvas/SVG sprites via model-creator (player, enemy, tiles, particles), tiny files, no external assets unless asked. Output files + sizes.",
+      "description": "Generate crisp game sprites fast",
+      "agent": "model-creator"
+    },
+    "level": {
+      "template": "Add a level/feature to the game for $ARGUMENTS: new platforms/enemies/score curve via game_add snippets, keep 60fps + mobile working, re-run game_audit. Output what changed + new score.",
+      "description": "Add a level or feature to a web game",
+      "agent": "game-builder"
+    },
+    "perfect": {
+      "template": "Make $ARGUMENTS VERY PERFECT: run game_audit, fix every FAIL (dt clamp, DPR resize, touch, sound, pause, score/best, R restart, <200KB), re-audit to 100, then playtest. Output before/after scores.",
+      "description": "Audit + fix a web game to 100 perfect",
+      "agent": "game-builder"
+    },
+    "publish": {
+      "template": "Publish $ARGUMENTS: game_audit must be 100 first, then game_publish zip + itch.io checklist + git commit via git-pusher. Output zip path, size, upload steps.",
+      "description": "Zip + ship a web game to itch.io",
+      "agent": "game-builder"
+    },
+    "music": {
+      "template": "Make game music for $ARGUMENTS: use music_maker (mood adventure|boss|chill|arcade + bpm), paste snippet, start on first input. Output code + how it sounds.",
+      "description": "Generate chiptune music loop, zero assets",
+      "agent": "game-builder"
+    },
+    "deploy": {
+      "template": "Deploy the game in $ARGUMENTS: use game_deploy for gh-pages (free hosting URL) or itch.io upload. Run the exact commands, verify the live URL with browser screenshot.",
+      "description": "Deploy a game to GitHub Pages or itch.io",
+      "agent": "game-builder"
+    },
+    "doctor": {
+      "template": "Self-heal the toolset for $ARGUMENTS: run doctor_check, report BROKEN vs SLEEPING vs OK, apply doctor_fix for verified renames, brain_save the lesson. Output before/after counts + restart reminder.",
+      "description": "Diagnose + self-fix broken MCP tools",
+      "agent": "ai-manager"
+    },
+    "bot": {
+      "template": "Bot-playtest $ARGUMENTS with game_bot: real keyboard play for 20s+, HUD score sampling, console errors, screenshot, stuck verdict. If verdict is not PLAYABLE, fix and re-run.",
+      "description": "Bot actually plays the game, reports verdict",
+      "agent": "game-builder"
+    },
+    "site": {
+      "template": "Build a perfect website ultra fast for $ARGUMENTS: web_scaffold kind (landing/blog/dashboard/portfolio/api/resume/menu/invite/links/invoice/proposal), fill real content, web_audit to 100, game_deploy gh-pages for free URL. Output path + score + URL.",
+      "description": "Scaffold a perfect website ultra fast",
+      "agent": "game-builder"
+    },
+    "brand": {
+      "template": "Create a brand kit for $ARGUMENTS: brand_kit (name + style modern|playful|luxury|eco|retro) writes brand.css + logo.svg, then show palette + usage. Output files + preview.",
+      "description": "Logo + colors + fonts kit in 1 call",
+      "agent": "model-creator"
+    },
+    "start": {
+      "template": "Show a clickable menu using the question tool with these options: Make a game (/game), Business website (/site), Logo + brand (/brand), Invoice that prints to PDF, Menu for food business, Party invite, My resume, Put something online (/deploy), Fix something (/doctor). After they pick, run that flow end to end. Plain words only, never mention files or terminals unless asked.",
+      "description": "Clickable guided menu, zero knowledge needed",
+      "agent": "ai-manager"
+    },
+    "bakery": {
+      "template": "Full bakery pack for $ARGUMENTS: 1) if no business name given, ask with the question tool. 2) brand_kit (playful). 3) web_scaffold menu site with real dishes/prices. 4) web_scaffold invoice. 5) web_audit each to 100. Output: logo files, site path + score, invoice path. Plain words, no jargon.",
+      "description": "Bakery pack: logo + menu site + invoice",
+      "agent": "game-builder"
+    },
+    "restaurant": {
+      "template": "Full restaurant pack for $ARGUMENTS: 1) ask business name if missing. 2) brand_kit (luxury). 3) web_scaffold menu site with dishes/prices/hours/phone. 4) web_scaffold proposal with 3 packages. 5) web_audit each to 100. Output everything with paths. Plain words.",
+      "description": "Restaurant pack: brand + menu + proposal",
+      "agent": "game-builder"
+    },
+    "salon": {
+      "template": "Full salon pack for $ARGUMENTS: 1) ask business name if missing. 2) brand_kit (modern). 3) web_scaffold landing with services/prices/booking phone + WhatsApp. 4) web_scaffold proposal. 5) web_audit each to 100. Plain words, output paths.",
+      "description": "Salon pack: brand + landing + proposal",
+      "agent": "game-builder"
+    },
+    "shop": {
+      "template": "Full online-shop starter for $ARGUMENTS: 1) ask shop name if missing. 2) brand_kit (modern). 3) web_scaffold landing with products/prices/order button. 4) web_scaffold invoice. 5) web_audit each to 100. Plain words, output paths.",
+      "description": "Shop starter: brand + landing + invoice",
+      "agent": "game-builder"
+    },
+    "freelancer": {
+      "template": "Full freelancer pack for $ARGUMENTS: 1) ask name + skill if missing. 2) brand_kit (modern). 3) web_scaffold portfolio with 3 projects. 4) web_scaffold resume. 5) web_scaffold proposal. 6) web_audit each to 100. Plain words, output paths.",
+      "description": "Freelancer pack: brand + portfolio + resume + proposal",
+      "agent": "game-builder"
+    },
+    "brain": {
+      "template": "Brain recall for $ARGUMENTS: brain_recall first, apply matching lessons, then do the task, then brain_save what you learned. Never solve twice what the brain already knows.",
+      "description": "Recall lessons before work, save after",
+      "agent": "ai-manager"
+    },
+    "fanout": {
+      "template": "High-stakes question $ARGUMENTS: use fanout to ask 3 models in parallel and judge the winner. Output winner + why + full answer.",
+      "description": "Ask 3 models, judge picks the best",
+      "agent": "ai-manager"
+    }
+  },
+  "plugin": [
+    "./plugin/v3-registry.ts",
+    "./plugin/aimanager.ts",
+    "./plugin/mega-tools.ts",
+    "./plugin/soul-memory.ts",
+    "./plugin/forge.ts",
+    "./plugin/flow.ts",
+    "./plugin/machine.ts",
+    "./plugin/guard.ts",
+    "./plugin/cards.ts",
+    "./plugin/browse.ts",
+    "./plugin/computer-visible.ts",
+    "./plugin/crew.ts",
+    "./plugin/codex-harness.ts",
+    "./plugin/tool-router.ts",
+    "./plugin/code-search.ts",
+    "./plugin/context-manager.ts",
+    "./plugin/v2-state.ts",
+    "./plugin/v3-machine.ts",
+    "./plugin/v3-process.ts",
+    "./plugin/v3-immune.ts",
+    "./plugin/v3-intelligence.ts",
+    "./plugin/v3-recovery.ts",
+    "./plugin/v3-telemetry.ts"
+    ,"./plugin/v4-mission.ts"
+  ],
+  "skills": {
+    "paths": [
+      "/home/osien/.config/opencode/skills"
+    ]
+  },
+  "mcp": {
+    "context7-remote": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true
+    },
+    "deepwiki": {
+      "type": "remote",
+      "url": "https://mcp.deepwiki.com/mcp",
+      "enabled": true
+    },
+    "kts": {
+      "type": "local",
+      "command": [
+        "python3",
+        "/home/osien/.config/opencode/mcp/kts-mcp.py"
+      ],
+      "enabled": true
+    }
+  },
+  "permission": {
+    "edit": "allow",
+    "bash": "allow",
+    "webfetch": "allow",
+    "websearch": "allow",
+    "external_directory": {
+      "~/.config/opencode/memory/projects/**": "allow",
+      "~/.config/opencode/memory/**": "allow",
+      "*": "ask"
+    }
+  },
+  "formatter": false,
+  "lsp": true,
+  "experimental": {
+    "mcp_timeout": 10000
+  },
+  "tool_output": {
+    "max_lines": 200,
+    "max_bytes": 8192
+  },
+  "instructions": [
+    "SOUL: ONE file ~/.config/opencode/memory/OSIEN_SOUL.md. End every task with soul_write: - [HH:MM] [build|fix|research|clean|ship|ui|mcp|other] [project] did X \u2192 outcome Y (bump index, grow chains, never a 2nd file). /mind-map shows it; respect .soul-paused.",
+    "EFFICIENCY (hard rule): orient with repo_health/ctx_recall first; locate with smart_grep; read with read_slice (never whole files); one edit then verify; never re-read a file already read this task; delegate scout->builder->debugger->reviewer instead of working solo; ctx_save at the end of every task so the next session starts warm.",
+    "SPEED: lean core (read/write/edit/bash + forged tools), 2 remote MCPs only \u2014 connect others per-task via mcp_connect then mcp_drop. Changed-files-only reviews (/flow-review), compaction-friendly replies, output trimmer active. Repeating workflow 2x? forge_skill it.",
+    "SELF-BUILD: missing capability \u2192 forge it (forge_skill/forge_tool) instead of asking for installs. MCPs needing keys \u2192 mcp_connect (browser verify, user pastes key). Websites \u2192 SITE LAW (KeepTheStyle via site_new). Codegen \u2192 show_card. Login sites \u2192 site_login/site_pass, secrets never printed/logged.",
+    "LOGIC BEFORE SEARCH: never assume the referent. If a query is ambiguous (bare acronym like CJP/CJI/TMC, a name with multiple countries/entities, unclear scope), ask ONE short clarifying question BEFORE searching 'which one?'. User is based in INDIA \u2014 default geography is India unless they say otherwise; never default to another country for an ambiguous term. If they seem annoyed, stop guessing and ask, don't re-search.",
+    "POWER ROUTING (auto, no asking): pick the model by task class. CODE/debug/refactor/build -> opencode/muse-spark-1.3-contributor-free with web_tree/codemap/try_check before writing (LSP is on - read its diagnostics first). RESEARCH/facts/news/lookups -> web_search (visible browser) + web_research, reflex brain, never LLM-per-click. LONG reasoning/physics/math -> opencode/nemotron-3-ultra-free. BULK/mechanical/listing/summarizing many items -> crew_batch (cheap models, parallel, off-chat). SPEED-critical interaction -> opencode/space-bunny-free. Never spawn a model for something a script does.",
+    "INTERNET DEFAULT (absolute): the moment a question needs the internet, USE THE USER'S REAL BROWSER, VISIBLY. web_search(query) opens a real tab in front of them; web_research(question, urls) opens pages and reads them; web_tree/web_act for clicking. Never answer from memory when a lookup can be done, and never trust snippets alone. If output looks stale or uncertain, open the page instead of guessing. The user WANTS to watch it work.",
+    "BROWSE LAW: never screenshot to FIND things. Map with web_tree, act with web_act (reflex ~110ms, no LLM in the hot loop). After ~5 misses on a site, run web_learn and upgrade the matcher in webcore.py.",
+    "FOCUS (ADHD): short, visual, one action at a time, win first. Code/fix = caveman (terse). Prose = no AI tells. Persona file may refine tone. Voice 'done' on idle unless .no-voice.",
+    "TEAM: 5 agents (ai-manager/researcher/devops/data-wrangler/game-builder); more via 'add subagent for X'. TODOS LAW: 3+ steps \u2192 todowrite first, ONE in_progress, mark live. RALPH max 3 rounds. Overseer proposes (/flow-next), user approves \u2014 never auto-run loops. Session goal via /make-goal.",
+    "MACHINE: every chat boots its run dir under machines/<project>/runs. Heavy cmds wear systemd-run fence (150%/6G). Vault creds: AES, RAM-only, \u2705/\u274c only. Kill-proof: oo-bg on :4096 server. Postings: supervised YES, 1/day.",
+    "SITE LAW v3 (MCP-ONLY): websites exist ONLY through kts-* MCP tools (site_new/page_add/site_verify/site_note/tokens/features_check). Hand-written site code = violation, site_verify WILL fail it. Missing builder capability: features_check first, then implement in template dir (supervised) or delegate to fast muscle + integrate. Wins -> site_note inbox.",
+    "CARD RULE: after EVERY codegen, show_card (title=file, custom rows for preview/run). Clipboard auto-copies = the copy button.",
+    "TOOL-FIRST LAW: before writing >10 lines of procedural code, check tools/MCP first. Missing tool? FORGE it (forge_skill/forge_tool, or extend kts-mcp: TOOLS row + FUNCS + kts_pages kind \u2014 header comment shows how), then USE it. Hand-rolled one-off scripts are a violation. Template improvements: implement in template dir, site_note, publish via publish_patch only on explicit YES.",
+    "CURSOR: when visible (OSIEN_VISIBLE=1), mouse movement is bezier-glided in real time with micro-jitter and dwell before click (cursor.py). Applies to your own sites + QA. Never used to defeat CAPTCHAs or bot checks - if a site challenges us, the human does it once, the session cookie makes it a non-issue afterwards."
+  ],
+  "tools": {
+    "webfetch": false,
+    "websearch": false
+  },
+  "autoupdate": false
+}

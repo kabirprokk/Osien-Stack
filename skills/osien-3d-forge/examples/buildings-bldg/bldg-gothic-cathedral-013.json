@@ -1,0 +1,26 @@
+{
+ "id": "bldg-gothic-cathedral-013",
+ "name": "Gothic Gothic Cathedral 013",
+ "category": "buildings-bldg",
+ "prompt": "stone gothic stone castle cathedral with towers and gate realistic",
+ "kit": "castle",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "stone",
+  "poly": 23048,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "castle",
+  "realistic",
+  "stone",
+  "balanced",
+  "gothic",
+  "church"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23048,
+ "seed": 41012
+}

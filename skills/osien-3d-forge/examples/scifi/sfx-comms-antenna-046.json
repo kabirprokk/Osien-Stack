@@ -1,0 +1,25 @@
+{
+ "id": "sfx-comms-antenna-046",
+ "name": "Solar Comms Antenna 046",
+ "category": "scifi",
+ "prompt": "iron tall comms antenna tube mast realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 10830,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "realistic",
+  "iron",
+  "balanced",
+  "antenna"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10830,
+ "seed": 41845
+}

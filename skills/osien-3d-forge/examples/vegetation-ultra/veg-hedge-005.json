@@ -1,0 +1,21 @@
+{
+ "id": "veg-hedge-005",
+ "name": "Trimmed Hedge 005",
+ "category": "vegetation-ultra",
+ "kit": "hedgeRow",
+ "prompt": "trimmed long trimmed hedge row wall",
+ "seed": 30098,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "hedge",
+  "privacy",
+  "formal",
+  "trimmed",
+  "long",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

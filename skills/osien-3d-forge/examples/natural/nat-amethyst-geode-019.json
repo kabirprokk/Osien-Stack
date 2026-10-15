@@ -1,0 +1,25 @@
+{
+ "id": "nat-amethyst-geode-019",
+ "name": "Wild Amethyst Geode 019",
+ "category": "natural",
+ "prompt": "worn crystal purple amethyst crystal geode realistic",
+ "kit": "crystal",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "crystal",
+  "poly": 24080,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "realistic",
+  "worn",
+  "amethyst",
+  "gem"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24080,
+ "seed": 41258
+}

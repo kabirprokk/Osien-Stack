@@ -1,0 +1,25 @@
+{
+ "id": "fant-loot-chest-006",
+ "name": "Mystic Loot Chest 006",
+ "category": "fantasy",
+ "prompt": "weathered wooden old wooden loot treasure chest stylized",
+ "kit": "treasureChest",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 13061,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "treasureChest",
+  "stylized",
+  "wood",
+  "worn",
+  "loot"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13061,
+ "seed": 41885
+}

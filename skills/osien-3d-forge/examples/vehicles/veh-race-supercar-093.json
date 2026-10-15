@@ -1,0 +1,26 @@
+{
+ "id": "veh-race-supercar-093",
+ "name": "Blue Race Supercar 093",
+ "category": "vehicles",
+ "prompt": "weathered rusty red sports race car supercar sci-fi",
+ "kit": "carSportsV2",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "rust",
+  "poly": 22048,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "carSportsV2",
+  "scifi",
+  "rust",
+  "worn",
+  "sports",
+  "race"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22048,
+ "seed": 41452
+}

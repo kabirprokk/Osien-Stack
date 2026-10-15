@@ -1,0 +1,25 @@
+{
+ "id": "prop-treasure-chest-060",
+ "name": "Blue Treasure Chest 060",
+ "category": "everyday-props",
+ "prompt": "polished glass iron-bound treasure chest coffer stylized",
+ "kit": "treasureChest",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 11990,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "treasureChest",
+  "stylized",
+  "glass",
+  "pristine",
+  "treasure"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11990,
+ "seed": 42039
+}

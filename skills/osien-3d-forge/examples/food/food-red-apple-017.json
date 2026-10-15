@@ -1,0 +1,26 @@
+{
+ "id": "food-red-apple-017",
+ "name": "Fresh Red Apple 017",
+ "category": "food",
+ "prompt": "polished bone shiny red apple sphere fruit stylized",
+ "kit": "sphere",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "bone",
+  "poly": 22591,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "sphere",
+  "stylized",
+  "bone",
+  "pristine",
+  "apple",
+  "fruit"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22591,
+ "seed": 41956
+}

@@ -1,0 +1,27 @@
+{
+ "id": "veh-harbor-ferry-080",
+ "name": "Fast Harbor Ferry 080",
+ "category": "vehicles",
+ "prompt": "polished chrome yellow harbor ferry boat with mast sci-fi",
+ "kit": "boat",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "chrome",
+  "poly": 12938,
+  "parts": [
+   "mast"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "scifi",
+  "chrome",
+  "pristine",
+  "ferry"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12938,
+ "seed": 41439
+}

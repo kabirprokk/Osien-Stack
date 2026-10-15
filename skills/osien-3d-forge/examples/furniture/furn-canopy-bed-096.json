@@ -1,0 +1,25 @@
+{
+ "id": "furn-canopy-bed-096",
+ "name": "Grand Canopy Bed 096",
+ "category": "furniture",
+ "prompt": "pristine iron wooden canopy bed mattress realistic",
+ "kit": "bed",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 12055,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bed",
+  "realistic",
+  "iron",
+  "pristine",
+  "mattress"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12055,
+ "seed": 41715
+}

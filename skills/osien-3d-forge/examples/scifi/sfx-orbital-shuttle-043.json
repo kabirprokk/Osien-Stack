@@ -1,0 +1,24 @@
+{
+ "id": "sfx-orbital-shuttle-043",
+ "name": "Chrome Orbital Shuttle 043",
+ "category": "scifi",
+ "prompt": "polished chrome white orbital shuttle spacecraft sci-fi",
+ "kit": "spaceship",
+ "params": {
+  "quality": "draft",
+  "style": "scifi",
+  "material": "chrome",
+  "poly": 3762,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "chrome",
+  "pristine",
+  "shuttle"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3762,
+ "seed": 41842
+}

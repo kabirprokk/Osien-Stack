@@ -1,0 +1,25 @@
+{
+ "id": "food-soup-bowl-024",
+ "name": "Red Soup Bowl 024",
+ "category": "food",
+ "prompt": "weathered glass white soup bowl sphere dish low poly",
+ "kit": "sphere",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 3915,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "sphere",
+  "lowpoly",
+  "glass",
+  "worn",
+  "soup"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3915,
+ "seed": 41963
+}

@@ -1,0 +1,25 @@
+{
+ "id": "bldg-clock-tower-029",
+ "name": "Ancient Clock Tower 029",
+ "category": "buildings-bldg",
+ "prompt": "steel old clock tower building with windows fantasy",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "steel",
+  "poly": 11036,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "fantasy",
+  "steel",
+  "balanced",
+  "tower"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11036,
+ "seed": 41028
+}

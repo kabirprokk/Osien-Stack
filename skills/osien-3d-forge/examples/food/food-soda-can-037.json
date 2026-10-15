@@ -1,0 +1,25 @@
+{
+ "id": "food-soda-can-037",
+ "name": "Fresh Soda Can 037",
+ "category": "food",
+ "prompt": "weathered glass silver soda can cylinder tin low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 30761,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "cylinder",
+  "lowpoly",
+  "glass",
+  "worn",
+  "soda"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30761,
+ "seed": 41976
+}

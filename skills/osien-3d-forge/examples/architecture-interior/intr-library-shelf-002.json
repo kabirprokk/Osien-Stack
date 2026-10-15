@@ -1,0 +1,25 @@
+{
+ "id": "intr-library-shelf-002",
+ "name": "Antique Library Shelf 002",
+ "category": "architecture-interior",
+ "prompt": "stone dark library bookshelf wall low poly",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 31838,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "lowpoly",
+  "stone",
+  "balanced",
+  "library"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31838,
+ "seed": 41721
+}

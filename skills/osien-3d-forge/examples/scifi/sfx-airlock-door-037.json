@@ -1,0 +1,24 @@
+{
+ "id": "sfx-airlock-door-037",
+ "name": "Orbital Airlock Door 037",
+ "category": "scifi",
+ "prompt": "weathered iron steel airlock door box panel sci-fi",
+ "kit": "box",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "iron",
+  "poly": 24029,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "box",
+  "iron",
+  "worn",
+  "airlock"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24029,
+ "seed": 41836
+}

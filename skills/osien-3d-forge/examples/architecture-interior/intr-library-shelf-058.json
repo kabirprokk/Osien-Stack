@@ -1,0 +1,25 @@
+{
+ "id": "intr-library-shelf-058",
+ "name": "Warm Library Shelf 058",
+ "category": "architecture-interior",
+ "prompt": "ancient stone dark library bookshelf wall low poly",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 12150,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "lowpoly",
+  "stone",
+  "ancient",
+  "library"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12150,
+ "seed": 41777
+}

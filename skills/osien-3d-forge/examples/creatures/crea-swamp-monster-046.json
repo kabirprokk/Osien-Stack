@@ -1,0 +1,25 @@
+{
+ "id": "crea-swamp-monster-046",
+ "name": "Golden Swamp Monster 046",
+ "category": "creatures",
+ "prompt": "weathered glass lumpy swamp monster creature fantasy",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "glass",
+  "poly": 22130,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "fantasy",
+  "glass",
+  "worn",
+  "monster"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22130,
+ "seed": 41585
+}

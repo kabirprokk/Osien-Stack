@@ -1,0 +1,26 @@
+{
+ "id": "nat-alien-flora-007",
+ "name": "Red Alien Flora 007",
+ "category": "natural",
+ "prompt": "mossy wooden glowing alien plant tentacle flower low poly",
+ "kit": "alienPlant",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 25755,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "alienPlant",
+  "lowpoly",
+  "wood",
+  "ancient",
+  "alien",
+  "flora"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25755,
+ "seed": 41246
+}

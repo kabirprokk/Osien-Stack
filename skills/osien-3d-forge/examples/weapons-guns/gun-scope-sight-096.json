@@ -1,0 +1,26 @@
+{
+ "id": "gun-scope-sight-096",
+ "name": "Rusty Scope Sight 096",
+ "category": "weapons-guns",
+ "prompt": "polished gold black scope sight ring torus fantasy",
+ "kit": "torus",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "gold",
+  "poly": 25054,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "torus",
+  "fantasy",
+  "gold",
+  "pristine",
+  "gun",
+  "scope"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25054,
+ "seed": 41215
+}

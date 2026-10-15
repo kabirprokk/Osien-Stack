@@ -1,0 +1,25 @@
+{
+ "id": "veh-chopper-bike-064",
+ "name": "Old Chopper Bike 064",
+ "category": "vehicles",
+ "prompt": "polished rusty black chopper motorcycle bike low poly",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "rust",
+  "poly": 23837,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "lowpoly",
+  "rust",
+  "pristine",
+  "chopper"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23837,
+ "seed": 41423
+}

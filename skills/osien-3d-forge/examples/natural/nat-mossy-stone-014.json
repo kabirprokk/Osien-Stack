@@ -1,0 +1,25 @@
+{
+ "id": "nat-mossy-stone-014",
+ "name": "Glowing Mossy Stone 014",
+ "category": "natural",
+ "prompt": "pristine bone mossy ancient stone rock realistic",
+ "kit": "rock",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 22082,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "realistic",
+  "bone",
+  "pristine",
+  "moss"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22082,
+ "seed": 41253
+}

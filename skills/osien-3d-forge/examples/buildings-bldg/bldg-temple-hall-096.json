@@ -1,0 +1,25 @@
+{
+ "id": "bldg-temple-hall-096",
+ "name": "Medieval Temple Hall 096",
+ "category": "buildings-bldg",
+ "prompt": "polished brass ancient marble temple hall with columns and steps low poly",
+ "kit": "building",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 28457,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "lowpoly",
+  "brass",
+  "pristine",
+  "temple"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 28457,
+ "seed": 41095
+}

@@ -1,0 +1,21 @@
+{
+ "id": "hum-ninja-001",
+ "name": "Tall Ninja 001",
+ "category": "human-players",
+ "kit": "ninja",
+ "prompt": "tall strong silent ninja",
+ "seed": 40091,
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy"
+ },
+ "tags": [
+  "ninja",
+  "stealth",
+  "shadow",
+  "tall",
+  "strong",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

@@ -1,0 +1,21 @@
+{
+ "id": "hum-runner-009",
+ "name": "Grand Runner 009",
+ "category": "human-players",
+ "kit": "runner",
+ "prompt": "grand silent swift running athlete",
+ "seed": 40119,
+ "params": {
+  "quality": "draft",
+  "style": "realistic"
+ },
+ "tags": [
+  "runner",
+  "athlete",
+  "sport",
+  "grand",
+  "silent",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

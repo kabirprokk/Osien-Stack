@@ -1,0 +1,26 @@
+{
+ "id": "bldg-apartment-block-100",
+ "name": "Medieval Apartment Block 100",
+ "category": "buildings-bldg",
+ "prompt": "ancient glass brick apartment building block with windows and doors fantasy",
+ "kit": "building",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "glass",
+  "poly": 3831,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "fantasy",
+  "glass",
+  "ancient",
+  "city",
+  "housing"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3831,
+ "seed": 41099
+}

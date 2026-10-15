@@ -1,0 +1,25 @@
+{
+ "id": "char-space-marine-013",
+ "name": "Cute Space Marine 013",
+ "category": "characters",
+ "prompt": "ancient fabric armored space marine soldier avatar fantasy",
+ "kit": "soldierModern",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "fabric",
+  "poly": 12648,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "fantasy",
+  "fabric",
+  "ancient",
+  "soldier"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12648,
+ "seed": 41472
+}

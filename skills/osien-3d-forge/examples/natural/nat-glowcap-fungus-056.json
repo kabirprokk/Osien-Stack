@@ -1,0 +1,26 @@
+{
+ "id": "nat-glowcap-fungus-056",
+ "name": "Wild Glowcap Fungus 056",
+ "category": "natural",
+ "prompt": "ancient wooden glowing blue glowcap mushroom realistic",
+ "kit": "mushroom",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 13031,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "realistic",
+  "wood",
+  "ancient",
+  "glow",
+  "fungus"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13031,
+ "seed": 41295
+}

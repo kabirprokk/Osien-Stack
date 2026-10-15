@@ -1,0 +1,25 @@
+{
+ "id": "prop-life-buoy-046",
+ "name": "Wooden Life Buoy 046",
+ "category": "everyday-props",
+ "prompt": "wooden red life buoy ring torus realistic",
+ "kit": "torus",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 3860,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "torus",
+  "realistic",
+  "wood",
+  "balanced",
+  "buoy"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3860,
+ "seed": 42025
+}

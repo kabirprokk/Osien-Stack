@@ -1,0 +1,26 @@
+{
+ "id": "nat-oak-tree-102",
+ "name": "Tall Oak Tree 102",
+ "category": "natural",
+ "prompt": "stone broad oak tree realistic",
+ "kit": "tree",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "stone",
+  "poly": 25445,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "realistic",
+  "stone",
+  "balanced",
+  "oak",
+  "forest"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25445,
+ "seed": 41341
+}

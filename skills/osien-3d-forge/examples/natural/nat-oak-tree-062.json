@@ -1,0 +1,26 @@
+{
+ "id": "nat-oak-tree-062",
+ "name": "Red Oak Tree 062",
+ "category": "natural",
+ "prompt": "worn stone broad oak tree stylized",
+ "kit": "tree",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "stone",
+  "poly": 4116,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "stylized",
+  "stone",
+  "worn",
+  "oak",
+  "forest"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4116,
+ "seed": 41301
+}

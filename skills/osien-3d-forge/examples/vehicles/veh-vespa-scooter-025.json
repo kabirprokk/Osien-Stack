@@ -1,0 +1,27 @@
+{
+ "id": "veh-vespa-scooter-025",
+ "name": "Chrome Vespa Scooter 025",
+ "category": "vehicles",
+ "prompt": "gold mint vespa scooter bike with engine low poly",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "gold",
+  "poly": 10942,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "lowpoly",
+  "gold",
+  "balanced",
+  "scooter"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10942,
+ "seed": 41384
+}

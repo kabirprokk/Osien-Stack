@@ -1,0 +1,27 @@
+{
+ "id": "crea-dire-wolf-067",
+ "name": "Swamp Dire Wolf 067",
+ "category": "creatures",
+ "prompt": "weathered glass gray dire wolf beast with tail fantasy",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "glass",
+  "poly": 23615,
+  "parts": [
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "fantasy",
+  "glass",
+  "worn",
+  "wolf"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23615,
+ "seed": 41606
+}

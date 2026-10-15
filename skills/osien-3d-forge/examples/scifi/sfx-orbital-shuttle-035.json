@@ -1,0 +1,25 @@
+{
+ "id": "sfx-orbital-shuttle-035",
+ "name": "Orbital Orbital Shuttle 035",
+ "category": "scifi",
+ "prompt": "glass white orbital shuttle spacecraft stylized",
+ "kit": "spaceship",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 24553,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "stylized",
+  "glass",
+  "balanced",
+  "shuttle"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24553,
+ "seed": 41834
+}

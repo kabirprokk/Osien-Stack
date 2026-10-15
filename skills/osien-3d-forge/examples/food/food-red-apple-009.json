@@ -1,0 +1,26 @@
+{
+ "id": "food-red-apple-009",
+ "name": "Golden Red Apple 009",
+ "category": "food",
+ "prompt": "bone shiny red apple sphere fruit realistic",
+ "kit": "sphere",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 11801,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "sphere",
+  "realistic",
+  "bone",
+  "balanced",
+  "apple",
+  "fruit"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11801,
+ "seed": 41948
+}

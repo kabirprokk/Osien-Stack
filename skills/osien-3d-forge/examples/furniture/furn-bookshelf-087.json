@@ -1,0 +1,26 @@
+{
+ "id": "furn-bookshelf-087",
+ "name": "Antique Bookshelf 087",
+ "category": "furniture",
+ "prompt": "ancient iron tall wooden bookshelf shelf with books realistic",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 23929,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "realistic",
+  "iron",
+  "ancient",
+  "shelf",
+  "books"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23929,
+ "seed": 41706
+}

@@ -1,0 +1,20 @@
+{
+ "id": "veg-hydrangea-002",
+ "name": "Round Hydrangea 002",
+ "category": "vegetation-ultra",
+ "kit": "hydrangea",
+ "prompt": "round lush hydrangea flower bush",
+ "seed": 30081,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "flowering",
+  "shrub",
+  "round",
+  "lush",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

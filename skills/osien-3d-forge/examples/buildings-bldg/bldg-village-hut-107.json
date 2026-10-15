@@ -1,0 +1,26 @@
+{
+ "id": "bldg-village-hut-107",
+ "name": "Grand Village Hut 107",
+ "category": "buildings-bldg",
+ "prompt": "ancient wooden village straw hut house with doors low poly",
+ "kit": "house",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 12411,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "lowpoly",
+  "wood",
+  "ancient",
+  "hut",
+  "village"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12411,
+ "seed": 41106
+}

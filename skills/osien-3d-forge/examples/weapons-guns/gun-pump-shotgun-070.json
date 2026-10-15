@@ -1,0 +1,26 @@
+{
+ "id": "gun-pump-shotgun-070",
+ "name": "Oaken Pump Shotgun 070",
+ "category": "weapons-guns",
+ "prompt": "rusty wooden pump shotgun receiver box realistic",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "rust",
+  "poly": 12220,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "box",
+  "realistic",
+  "rust",
+  "balanced",
+  "gun",
+  "shotgun"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12220,
+ "seed": 41189
+}

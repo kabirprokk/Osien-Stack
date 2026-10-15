@@ -1,0 +1,21 @@
+{
+ "id": "veg-moss-002",
+ "name": "Damp Moss 002",
+ "category": "vegetation-ultra",
+ "kit": "mossCarpet",
+ "prompt": "damp lush mossy ground moss carpet",
+ "seed": 30035,
+ "params": {
+  "quality": "draft",
+  "style": "stylized"
+ },
+ "tags": [
+  "moss",
+  "forest-floor",
+  "damp",
+  "damp",
+  "lush",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

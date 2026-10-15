@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-helmet-089",
+ "name": "Dark Knight Helmet 089",
+ "category": "weapons-guns",
+ "prompt": "obsidian steel knight helmet helm stylized",
+ "kit": "helmet",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "obsidian",
+  "poly": 12698,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "helmet",
+  "stylized",
+  "obsidian",
+  "balanced",
+  "armor"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12698,
+ "seed": 41208
+}

@@ -1,0 +1,25 @@
+{
+ "id": "veh-chopper-bike-074",
+ "name": "Chrome Chopper Bike 074",
+ "category": "vehicles",
+ "prompt": "ancient iron black chopper motorcycle bike sci-fi",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "iron",
+  "poly": 23857,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "scifi",
+  "iron",
+  "ancient",
+  "chopper"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23857,
+ "seed": 41433
+}

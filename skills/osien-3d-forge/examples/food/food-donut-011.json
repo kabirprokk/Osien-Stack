@@ -1,0 +1,25 @@
+{
+ "id": "food-donut-011",
+ "name": "Glazed Donut 011",
+ "category": "food",
+ "prompt": "weathered fabric glazed pink donut torus ring low poly",
+ "kit": "torus",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 28144,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "torus",
+  "lowpoly",
+  "fabric",
+  "worn",
+  "donut"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 28144,
+ "seed": 41950
+}

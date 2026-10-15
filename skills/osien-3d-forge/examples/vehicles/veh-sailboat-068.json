@@ -1,0 +1,27 @@
+{
+ "id": "veh-sailboat-068",
+ "name": "Old Sailboat 068",
+ "category": "vehicles",
+ "prompt": "worn chrome wooden sailboat yacht with mast stylized",
+ "kit": "boat",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 12478,
+  "parts": [
+   "mast"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "stylized",
+  "chrome",
+  "worn",
+  "sailboat"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12478,
+ "seed": 41427
+}

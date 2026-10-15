@@ -1,0 +1,26 @@
+{
+ "id": "furn-oak-chair-011",
+ "name": "Cozy Oak Chair 011",
+ "category": "furniture",
+ "prompt": "polished brass wooden oak chair realistic",
+ "kit": "chair",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "brass",
+  "poly": 11434,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "chair",
+  "realistic",
+  "brass",
+  "pristine",
+  "oak",
+  "seat"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11434,
+ "seed": 41630
+}

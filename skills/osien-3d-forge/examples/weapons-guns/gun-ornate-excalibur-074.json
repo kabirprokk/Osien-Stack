@@ -1,0 +1,26 @@
+{
+ "id": "gun-ornate-excalibur-074",
+ "name": "Ancient Ornate Excalibur 074",
+ "category": "weapons-guns",
+ "prompt": "gold ornate golden enchanted excalibur sword blade fantasy",
+ "kit": "swordV2",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "gold",
+  "poly": 12530,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "swordV2",
+  "fantasy",
+  "gold",
+  "balanced",
+  "sword",
+  "legendary"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12530,
+ "seed": 41193
+}

@@ -1,0 +1,24 @@
+{
+ "id": "fant-aegis-shield-058",
+ "name": "Mystic Aegis Shield 058",
+ "category": "fantasy",
+ "prompt": "bronze golden aegis shield fantasy",
+ "kit": "shield",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "bronze",
+  "poly": 24468,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "shield",
+  "bronze",
+  "balanced",
+  "aegis"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24468,
+ "seed": 41937
+}

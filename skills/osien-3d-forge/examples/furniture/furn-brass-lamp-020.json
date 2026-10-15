@@ -1,0 +1,25 @@
+{
+ "id": "furn-brass-lamp-020",
+ "name": "Grand Brass Lamp 020",
+ "category": "furniture",
+ "prompt": "weathered iron brass desk lamp lantern realistic",
+ "kit": "lamp",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 23283,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "lamp",
+  "realistic",
+  "iron",
+  "worn",
+  "lantern"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23283,
+ "seed": 41639
+}

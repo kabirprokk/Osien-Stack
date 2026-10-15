@@ -1,0 +1,21 @@
+{
+ "id": "veg-hedge-001",
+ "name": "Dense Hedge 001",
+ "category": "vegetation-ultra",
+ "kit": "hedgeRow",
+ "prompt": "dense long trimmed hedge row wall",
+ "seed": 30094,
+ "params": {
+  "quality": "cinema",
+  "style": "stylized"
+ },
+ "tags": [
+  "hedge",
+  "privacy",
+  "formal",
+  "dense",
+  "long",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

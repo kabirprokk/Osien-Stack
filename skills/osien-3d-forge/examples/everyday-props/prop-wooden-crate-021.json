@@ -1,0 +1,25 @@
+{
+ "id": "prop-wooden-crate-021",
+ "name": "Old Wooden Crate 021",
+ "category": "everyday-props",
+ "prompt": "steel wooden storage crate box realistic",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "steel",
+  "poly": 11241,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "box",
+  "realistic",
+  "steel",
+  "balanced",
+  "crate"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11241,
+ "seed": 42000
+}

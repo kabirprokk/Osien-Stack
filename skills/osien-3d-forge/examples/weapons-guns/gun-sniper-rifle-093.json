@@ -1,0 +1,26 @@
+{
+ "id": "gun-sniper-rifle-093",
+ "name": "Dark Sniper Rifle 093",
+ "category": "weapons-guns",
+ "prompt": "ancient bronze long steel sniper rifle barrel tube fantasy",
+ "kit": "cylinder",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "bronze",
+  "poly": 3924,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "fantasy",
+  "bronze",
+  "ancient",
+  "gun",
+  "sniper"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3924,
+ "seed": 41212
+}

@@ -1,0 +1,25 @@
+{
+ "id": "crea-forest-stag-061",
+ "name": "Wild Forest Stag 061",
+ "category": "creatures",
+ "prompt": "pristine wooden brown forest stag animal fantasy",
+ "kit": "creature",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "wood",
+  "poly": 4267,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "fantasy",
+  "wood",
+  "pristine",
+  "deer"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4267,
+ "seed": 41600
+}

@@ -1,0 +1,25 @@
+{
+ "id": "intr-study-desk-039",
+ "name": "Modern Study Desk 039",
+ "category": "architecture-interior",
+ "prompt": "weathered glass oak study desk table stylized",
+ "kit": "table",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 30208,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "table",
+  "stylized",
+  "glass",
+  "worn",
+  "study"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30208,
+ "seed": 41758
+}

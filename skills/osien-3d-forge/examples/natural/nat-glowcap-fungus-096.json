@@ -1,0 +1,26 @@
+{
+ "id": "nat-glowcap-fungus-096",
+ "name": "Tall Glowcap Fungus 096",
+ "category": "natural",
+ "prompt": "stone glowing blue glowcap mushroom realistic",
+ "kit": "mushroom",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "stone",
+  "poly": 3888,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "realistic",
+  "stone",
+  "balanced",
+  "glow",
+  "fungus"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3888,
+ "seed": 41335
+}

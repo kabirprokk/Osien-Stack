@@ -1,0 +1,25 @@
+{
+ "id": "furn-chester-sofa-005",
+ "name": "Round Chester Sofa 005",
+ "category": "furniture",
+ "prompt": "polished glass leather chesterfield sofa couch stylized",
+ "kit": "sofa",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 11082,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "sofa",
+  "stylized",
+  "glass",
+  "pristine",
+  "couch"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11082,
+ "seed": 41624
+}

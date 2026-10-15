@@ -1,0 +1,28 @@
+{
+ "id": "veh-pickup-truck-022",
+ "name": "Midnight Pickup Truck 022",
+ "category": "vehicles",
+ "prompt": "pristine glass blue pickup truck vehicle with engine and doors sci-fi",
+ "kit": "car",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "glass",
+  "poly": 11925,
+  "parts": [
+   "engine",
+   "doors"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "scifi",
+  "glass",
+  "pristine",
+  "truck"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11925,
+ "seed": 41381
+}

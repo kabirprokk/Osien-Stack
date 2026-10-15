@@ -1,0 +1,25 @@
+{
+ "id": "nat-granite-boulder-033",
+ "name": "Amber Granite Boulder 033",
+ "category": "natural",
+ "prompt": "worn marble gray granite boulder rock low poly",
+ "kit": "rock",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 31755,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "lowpoly",
+  "marble",
+  "worn",
+  "boulder"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31755,
+ "seed": 41272
+}

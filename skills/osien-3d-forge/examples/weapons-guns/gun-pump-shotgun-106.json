@@ -1,0 +1,26 @@
+{
+ "id": "gun-pump-shotgun-106",
+ "name": "Oaken Pump Shotgun 106",
+ "category": "weapons-guns",
+ "prompt": "bronze wooden pump shotgun receiver box fantasy",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "bronze",
+  "poly": 12478,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "box",
+  "fantasy",
+  "bronze",
+  "balanced",
+  "gun",
+  "shotgun"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12478,
+ "seed": 41225
+}

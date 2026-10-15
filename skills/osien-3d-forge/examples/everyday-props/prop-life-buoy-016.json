@@ -1,0 +1,25 @@
+{
+ "id": "prop-life-buoy-016",
+ "name": "Round Life Buoy 016",
+ "category": "everyday-props",
+ "prompt": "ancient fabric red life buoy ring torus stylized",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "fabric",
+  "poly": 11716,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "torus",
+  "stylized",
+  "fabric",
+  "ancient",
+  "buoy"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11716,
+ "seed": 41995
+}

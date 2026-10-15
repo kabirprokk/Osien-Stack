@@ -1,0 +1,25 @@
+{
+ "id": "bldg-country-cottage-055",
+ "name": "Grand Country Cottage 055",
+ "category": "buildings-bldg",
+ "prompt": "mossy glass country stone cottage house with chimney and windows realistic",
+ "kit": "house",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 10803,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "realistic",
+  "glass",
+  "ancient",
+  "cottage"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10803,
+ "seed": 41054
+}

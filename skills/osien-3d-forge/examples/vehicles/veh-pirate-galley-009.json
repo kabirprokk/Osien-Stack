@@ -1,0 +1,26 @@
+{
+ "id": "veh-pirate-galley-009",
+ "name": "Fast Pirate Galley 009",
+ "category": "vehicles",
+ "prompt": "ancient chrome old pirate galley ship sci-fi",
+ "kit": "boat",
+ "params": {
+  "quality": "print",
+  "style": "scifi",
+  "material": "chrome",
+  "poly": 28432,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "scifi",
+  "chrome",
+  "ancient",
+  "pirate",
+  "ship"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 28432,
+ "seed": 41368
+}

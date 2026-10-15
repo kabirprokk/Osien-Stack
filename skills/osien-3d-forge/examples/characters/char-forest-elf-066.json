@@ -1,0 +1,26 @@
+{
+ "id": "char-forest-elf-066",
+ "name": "Dark Forest Elf 066",
+ "category": "characters",
+ "prompt": "leather slender forest elf mage stylized",
+ "kit": "mage",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 11144,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "stylized",
+  "leather",
+  "balanced",
+  "elf",
+  "mage"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11144,
+ "seed": 41525
+}

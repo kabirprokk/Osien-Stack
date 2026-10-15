@@ -1,0 +1,28 @@
+{
+ "id": "furn-wardrobe-008",
+ "name": "Oaken Wardrobe 008",
+ "category": "furniture",
+ "prompt": "polished glass oak wardrobe cupboard with doors with doors realistic",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 25357,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "realistic",
+  "glass",
+  "pristine",
+  "cabinet",
+  "wardrobe"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25357,
+ "seed": 41627
+}

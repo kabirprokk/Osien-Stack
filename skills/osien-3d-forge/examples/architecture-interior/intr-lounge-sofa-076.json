@@ -1,0 +1,25 @@
+{
+ "id": "intr-lounge-sofa-076",
+ "name": "Grand Lounge Sofa 076",
+ "category": "architecture-interior",
+ "prompt": "weathered brass modern lounge sofa fantasy",
+ "kit": "sofa",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "brass",
+  "poly": 25594,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "sofa",
+  "fantasy",
+  "brass",
+  "worn",
+  "lounge"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25594,
+ "seed": 41795
+}

@@ -1,0 +1,26 @@
+{
+ "id": "fant-elder-dragon-055",
+ "name": "Mystic Elder Dragon 055",
+ "category": "fantasy",
+ "prompt": "weathered marble ancient elder dragon with tail fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 27729,
+  "parts": [
+   "tail"
+  ]
+ },
+ "tags": [
+  "fantasy",
+  "dragon",
+  "marble",
+  "worn",
+  "elder"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 27729,
+ "seed": 41934
+}

@@ -1,0 +1,27 @@
+{
+ "id": "sfx-orbital-shuttle-059",
+ "name": "Quantum Orbital Shuttle 059",
+ "category": "scifi",
+ "prompt": "glass white orbital shuttle spacecraft with cockpit realistic",
+ "kit": "spaceship",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 11720,
+  "parts": [
+   "cockpit"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "realistic",
+  "glass",
+  "balanced",
+  "shuttle"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11720,
+ "seed": 41858
+}

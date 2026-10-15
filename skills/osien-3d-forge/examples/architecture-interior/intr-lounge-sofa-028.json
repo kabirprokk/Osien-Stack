@@ -1,0 +1,25 @@
+{
+ "id": "intr-lounge-sofa-028",
+ "name": "Antique Lounge Sofa 028",
+ "category": "architecture-interior",
+ "prompt": "worn stone modern lounge sofa realistic",
+ "kit": "sofa",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "stone",
+  "poly": 4279,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "sofa",
+  "realistic",
+  "stone",
+  "worn",
+  "lounge"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4279,
+ "seed": 41747
+}

@@ -1,0 +1,25 @@
+{
+ "id": "nat-granite-boulder-003",
+ "name": "Glowing Granite Boulder 003",
+ "category": "natural",
+ "prompt": "polished marble gray granite boulder rock low poly",
+ "kit": "rock",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 25971,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "lowpoly",
+  "marble",
+  "pristine",
+  "boulder"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25971,
+ "seed": 41242
+}

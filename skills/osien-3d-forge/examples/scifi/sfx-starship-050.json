@@ -1,0 +1,26 @@
+{
+ "id": "sfx-starship-050",
+ "name": "Quantum Starship 050",
+ "category": "scifi",
+ "prompt": "ancient steel sleek starship rocket with engine sci-fi",
+ "kit": "spaceship",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "steel",
+  "poly": 11225,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "steel",
+  "ancient",
+  "starship"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11225,
+ "seed": 41849
+}

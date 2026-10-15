@@ -1,0 +1,26 @@
+{
+ "id": "char-village-knight-025",
+ "name": "Wise Village Knight 025",
+ "category": "characters",
+ "prompt": "leather brave kingdom knight warrior in armor low poly",
+ "kit": "knight",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "leather",
+  "poly": 22664,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "lowpoly",
+  "leather",
+  "balanced",
+  "knight",
+  "warrior"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22664,
+ "seed": 41484
+}

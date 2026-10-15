@@ -1,0 +1,28 @@
+{
+ "id": "veh-race-supercar-043",
+ "name": "Desert Race Supercar 043",
+ "category": "vehicles",
+ "prompt": "polished chrome red sports race car supercar with wheels stylized",
+ "kit": "carSportsV2",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 23254,
+  "parts": [
+   "wheels"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "carSportsV2",
+  "stylized",
+  "chrome",
+  "pristine",
+  "sports",
+  "race"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23254,
+ "seed": 41402
+}

@@ -1,0 +1,28 @@
+{
+ "id": "sfx-starship-002",
+ "name": "Quantum Starship 002",
+ "category": "scifi",
+ "prompt": "polished chrome sleek starship rocket with engine and cockpit low poly",
+ "kit": "spaceship",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "chrome",
+  "poly": 13062,
+  "parts": [
+   "engine",
+   "cockpit"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "lowpoly",
+  "chrome",
+  "pristine",
+  "starship"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13062,
+ "seed": 41801
+}

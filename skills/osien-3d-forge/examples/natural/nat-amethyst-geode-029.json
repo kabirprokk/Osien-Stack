@@ -1,0 +1,25 @@
+{
+ "id": "nat-amethyst-geode-029",
+ "name": "Glowing Amethyst Geode 029",
+ "category": "natural",
+ "prompt": "crystal purple amethyst crystal geode stylized",
+ "kit": "crystal",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "crystal",
+  "poly": 30964,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "stylized",
+  "balanced",
+  "amethyst",
+  "gem"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30964,
+ "seed": 41268
+}

@@ -1,0 +1,20 @@
+{
+ "id": "veg-juniper-007",
+ "name": "Needle Juniper 007",
+ "category": "vegetation-ultra",
+ "kit": "juniperConifer",
+ "prompt": "needle tall juniper conifer evergreen bush",
+ "seed": 30093,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "evergreen",
+  "conifer",
+  "needle",
+  "tall",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

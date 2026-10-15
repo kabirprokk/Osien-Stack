@@ -1,0 +1,25 @@
+{
+ "id": "prop-wooden-crate-001",
+ "name": "Big Wooden Crate 001",
+ "category": "everyday-props",
+ "prompt": "pristine brass wooden storage crate box realistic",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "brass",
+  "poly": 12852,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "box",
+  "realistic",
+  "brass",
+  "pristine",
+  "crate"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12852,
+ "seed": 41980
+}

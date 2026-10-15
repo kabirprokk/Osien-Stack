@@ -1,0 +1,26 @@
+{
+ "id": "char-village-knight-073",
+ "name": "Dark Village Knight 073",
+ "category": "characters",
+ "prompt": "bone brave kingdom knight warrior in armor realistic",
+ "kit": "knight",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 11276,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "realistic",
+  "bone",
+  "balanced",
+  "knight",
+  "warrior"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11276,
+ "seed": 41532
+}

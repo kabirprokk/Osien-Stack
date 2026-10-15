@@ -1,0 +1,25 @@
+{
+ "id": "furn-chester-sofa-055",
+ "name": "Oaken Chester Sofa 055",
+ "category": "furniture",
+ "prompt": "worn wooden leather chesterfield sofa couch low poly",
+ "kit": "sofa",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 25423,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "sofa",
+  "lowpoly",
+  "wood",
+  "worn",
+  "couch"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25423,
+ "seed": 41674
+}

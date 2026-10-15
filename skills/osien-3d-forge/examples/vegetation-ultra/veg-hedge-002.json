@@ -1,0 +1,21 @@
+{
+ "id": "veg-hedge-002",
+ "name": "Long Hedge 002",
+ "category": "vegetation-ultra",
+ "kit": "hedgeRow",
+ "prompt": "long dense trimmed hedge row wall",
+ "seed": 30095,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "hedge",
+  "privacy",
+  "formal",
+  "long",
+  "dense",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

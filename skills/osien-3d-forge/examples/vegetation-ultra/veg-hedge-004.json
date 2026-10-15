@@ -1,0 +1,21 @@
+{
+ "id": "veg-hedge-004",
+ "name": "Long Hedge 004",
+ "category": "vegetation-ultra",
+ "kit": "hedgeRow",
+ "prompt": "long trimmed trimmed hedge row wall",
+ "seed": 30097,
+ "params": {
+  "quality": "cinema",
+  "style": "stylized"
+ },
+ "tags": [
+  "hedge",
+  "privacy",
+  "formal",
+  "long",
+  "trimmed",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

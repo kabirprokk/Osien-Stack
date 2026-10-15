@@ -1,0 +1,27 @@
+{
+ "id": "fant-elder-dragon-001",
+ "name": "Mystic Elder Dragon 001",
+ "category": "fantasy",
+ "prompt": "polished marble ancient elder dragon with horns and wings fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 12211,
+  "parts": [
+   "horns",
+   "wings"
+  ]
+ },
+ "tags": [
+  "fantasy",
+  "dragon",
+  "marble",
+  "pristine",
+  "elder"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12211,
+ "seed": 41880
+}

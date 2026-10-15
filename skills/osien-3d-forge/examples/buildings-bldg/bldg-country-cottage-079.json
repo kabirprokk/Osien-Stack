@@ -1,0 +1,27 @@
+{
+ "id": "bldg-country-cottage-079",
+ "name": "Gothic Country Cottage 079",
+ "category": "buildings-bldg",
+ "prompt": "pristine wooden country stone cottage house with chimney and windows with doors low poly",
+ "kit": "house",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 4060,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "lowpoly",
+  "wood",
+  "pristine",
+  "cottage"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4060,
+ "seed": 41078
+}

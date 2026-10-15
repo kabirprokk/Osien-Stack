@@ -1,0 +1,21 @@
+{
+ "id": "hum-ninja-008",
+ "name": "Calm Ninja 008",
+ "category": "human-players",
+ "kit": "ninja",
+ "prompt": "calm sturdy silent ninja",
+ "seed": 40098,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "ninja",
+  "stealth",
+  "shadow",
+  "calm",
+  "sturdy",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

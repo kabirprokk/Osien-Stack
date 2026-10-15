@@ -1,0 +1,25 @@
+{
+ "id": "gun-war-dagger-115",
+ "name": "Steel War Dagger 115",
+ "category": "weapons-guns",
+ "prompt": "rusty iron war dagger knife low poly",
+ "kit": "sword",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "rust",
+  "poly": 13099,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "lowpoly",
+  "rust",
+  "balanced",
+  "dagger"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13099,
+ "seed": 41234
+}

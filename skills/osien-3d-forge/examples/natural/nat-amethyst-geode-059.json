@@ -1,0 +1,26 @@
+{
+ "id": "nat-amethyst-geode-059",
+ "name": "Tall Amethyst Geode 059",
+ "category": "natural",
+ "prompt": "glass purple amethyst crystal geode realistic",
+ "kit": "crystal",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 10813,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "realistic",
+  "glass",
+  "balanced",
+  "amethyst",
+  "gem"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10813,
+ "seed": 41298
+}

@@ -1,0 +1,29 @@
+{
+ "id": "bldg-apartment-block-076",
+ "name": "Old Apartment Block 076",
+ "category": "buildings-bldg",
+ "prompt": "marble brick apartment building block with windows and doors with windows and doors low poly",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 11501,
+  "parts": [
+   "windows",
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "lowpoly",
+  "marble",
+  "balanced",
+  "city",
+  "housing"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11501,
+ "seed": 41075
+}

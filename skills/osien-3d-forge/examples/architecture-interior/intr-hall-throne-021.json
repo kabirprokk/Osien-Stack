@@ -1,0 +1,25 @@
+{
+ "id": "intr-hall-throne-021",
+ "name": "Cozy Hall Throne 021",
+ "category": "architecture-interior",
+ "prompt": "ancient glass marble hall throne stylized",
+ "kit": "throne",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 4225,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "throne",
+  "stylized",
+  "glass",
+  "ancient",
+  "hall"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4225,
+ "seed": 41740
+}

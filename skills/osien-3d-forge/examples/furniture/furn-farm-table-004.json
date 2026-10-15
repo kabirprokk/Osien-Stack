@@ -1,0 +1,25 @@
+{
+ "id": "furn-farm-table-004",
+ "name": "Cozy Farm Table 004",
+ "category": "furniture",
+ "prompt": "leather rustic wooden farm table realistic",
+ "kit": "table",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "leather",
+  "poly": 12032,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "table",
+  "realistic",
+  "leather",
+  "balanced",
+  "farm"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12032,
+ "seed": 41623
+}

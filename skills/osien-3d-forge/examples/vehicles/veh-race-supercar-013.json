@@ -1,0 +1,29 @@
+{
+ "id": "veh-race-supercar-013",
+ "name": "Red Race Supercar 013",
+ "category": "vehicles",
+ "prompt": "weathered gold red sports race car supercar with headlights and wheels stylized",
+ "kit": "carSportsV2",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "gold",
+  "poly": 11569,
+  "parts": [
+   "headlights",
+   "wheels"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "carSportsV2",
+  "stylized",
+  "gold",
+  "worn",
+  "sports",
+  "race"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11569,
+ "seed": 41372
+}

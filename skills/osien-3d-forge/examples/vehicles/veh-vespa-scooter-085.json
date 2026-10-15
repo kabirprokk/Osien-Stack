@@ -1,0 +1,25 @@
+{
+ "id": "veh-vespa-scooter-085",
+ "name": "Blue Vespa Scooter 085",
+ "category": "vehicles",
+ "prompt": "rusty mint vespa scooter bike realistic",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "rust",
+  "poly": 11986,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "realistic",
+  "rust",
+  "balanced",
+  "scooter"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11986,
+ "seed": 41444
+}

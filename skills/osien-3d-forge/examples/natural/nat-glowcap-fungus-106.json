@@ -1,0 +1,26 @@
+{
+ "id": "nat-glowcap-fungus-106",
+ "name": "Red Glowcap Fungus 106",
+ "category": "natural",
+ "prompt": "worn wooden glowing blue glowcap mushroom low poly",
+ "kit": "mushroom",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 21694,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "lowpoly",
+  "wood",
+  "worn",
+  "glow",
+  "fungus"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21694,
+ "seed": 41345
+}

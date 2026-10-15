@@ -1,0 +1,24 @@
+{
+ "id": "gun-round-shield-004",
+ "name": "Oaken Round Shield 004",
+ "category": "weapons-guns",
+ "prompt": "weathered rusty round iron shield buckler stylized",
+ "kit": "shield",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "rust",
+  "poly": 24288,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "shield",
+  "stylized",
+  "rust",
+  "worn"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24288,
+ "seed": 41123
+}

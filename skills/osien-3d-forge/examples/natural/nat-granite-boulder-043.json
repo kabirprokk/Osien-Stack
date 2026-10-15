@@ -1,0 +1,25 @@
+{
+ "id": "nat-granite-boulder-043",
+ "name": "Tall Granite Boulder 043",
+ "category": "natural",
+ "prompt": "glass gray granite boulder rock stylized",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 11974,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "stylized",
+  "glass",
+  "balanced",
+  "boulder"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11974,
+ "seed": 41282
+}

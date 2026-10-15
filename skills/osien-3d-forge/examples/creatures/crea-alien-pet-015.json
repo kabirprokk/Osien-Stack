@@ -1,0 +1,26 @@
+{
+ "id": "crea-alien-pet-015",
+ "name": "Young Alien Pet 015",
+ "category": "creatures",
+ "prompt": "polished fabric small cute alien pet quadruped fantasy",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "fabric",
+  "poly": 21674,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "fantasy",
+  "fabric",
+  "pristine",
+  "alien",
+  "pet"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21674,
+ "seed": 41554
+}

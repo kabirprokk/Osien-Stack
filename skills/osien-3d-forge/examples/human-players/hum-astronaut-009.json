@@ -1,0 +1,21 @@
+{
+ "id": "hum-astronaut-009",
+ "name": "Steady Astronaut 009",
+ "category": "human-players",
+ "kit": "astronaut",
+ "prompt": "steady silent brave astronaut",
+ "seed": 40109,
+ "params": {
+  "quality": "draft",
+  "style": "realistic"
+ },
+ "tags": [
+  "astronaut",
+  "space",
+  "suit",
+  "steady",
+  "silent",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

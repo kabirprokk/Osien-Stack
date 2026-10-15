@@ -1,0 +1,24 @@
+{
+ "id": "gun-war-axe-027",
+ "name": "Ancient War Axe 027",
+ "category": "weapons-guns",
+ "prompt": "steel steel war axe hatchet fantasy",
+ "kit": "axe",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "steel",
+  "poly": 25641,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "axe",
+  "fantasy",
+  "steel",
+  "balanced"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25641,
+ "seed": 41146
+}

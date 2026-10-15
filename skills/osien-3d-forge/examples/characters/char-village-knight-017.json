@@ -1,0 +1,26 @@
+{
+ "id": "char-village-knight-017",
+ "name": "Golden Village Knight 017",
+ "category": "characters",
+ "prompt": "pristine steel brave kingdom knight warrior in armor sci-fi",
+ "kit": "knight",
+ "params": {
+  "quality": "draft",
+  "style": "scifi",
+  "material": "steel",
+  "poly": 4145,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "scifi",
+  "steel",
+  "pristine",
+  "knight",
+  "warrior"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4145,
+ "seed": 41476
+}

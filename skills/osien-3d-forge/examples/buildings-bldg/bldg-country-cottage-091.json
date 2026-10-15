@@ -1,0 +1,25 @@
+{
+ "id": "bldg-country-cottage-091",
+ "name": "Grand Country Cottage 091",
+ "category": "buildings-bldg",
+ "prompt": "ancient marble country stone cottage house with chimney and windows fantasy",
+ "kit": "house",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 11772,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "fantasy",
+  "marble",
+  "ancient",
+  "cottage"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11772,
+ "seed": 41090
+}

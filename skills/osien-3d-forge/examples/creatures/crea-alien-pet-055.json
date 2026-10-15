@@ -1,0 +1,26 @@
+{
+ "id": "crea-alien-pet-055",
+ "name": "Swamp Alien Pet 055",
+ "category": "creatures",
+ "prompt": "marble small cute alien pet quadruped realistic",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 12455,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "realistic",
+  "marble",
+  "balanced",
+  "alien",
+  "pet"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12455,
+ "seed": 41594
+}

@@ -1,0 +1,29 @@
+{
+ "id": "bldg-skyscraper-075",
+ "name": "Medieval Skyscraper 075",
+ "category": "buildings-bldg",
+ "prompt": "weathered marble modern glass skyscraper tower with windows with windows and doors realistic",
+ "kit": "building",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 4063,
+  "parts": [
+   "windows",
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "realistic",
+  "marble",
+  "worn",
+  "modern",
+  "city"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4063,
+ "seed": 41074
+}

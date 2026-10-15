@@ -1,0 +1,25 @@
+{
+ "id": "fant-rune-blade-027",
+ "name": "Golden Rune Blade 027",
+ "category": "fantasy",
+ "prompt": "polished bronze ornate runed rune blade sword realistic",
+ "kit": "swordV2",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "bronze",
+  "poly": 23920,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "swordV2",
+  "realistic",
+  "bronze",
+  "pristine",
+  "rune"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23920,
+ "seed": 41906
+}

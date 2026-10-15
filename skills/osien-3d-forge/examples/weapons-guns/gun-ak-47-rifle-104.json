@@ -1,0 +1,26 @@
+{
+ "id": "gun-ak-47-rifle-104",
+ "name": "Oaken AK-47 Rifle 104",
+ "category": "weapons-guns",
+ "prompt": "wooden rusty ak-47 assault rifle tube barrel fantasy",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "wood",
+  "poly": 11305,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "fantasy",
+  "wood",
+  "balanced",
+  "gun",
+  "rifle"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11305,
+ "seed": 41223
+}

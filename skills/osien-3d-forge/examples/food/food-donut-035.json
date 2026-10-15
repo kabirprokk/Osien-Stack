@@ -1,0 +1,25 @@
+{
+ "id": "food-donut-035",
+ "name": "Fresh Donut 035",
+ "category": "food",
+ "prompt": "ancient fabric glazed pink donut torus ring low poly",
+ "kit": "torus",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 22747,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "torus",
+  "lowpoly",
+  "fabric",
+  "ancient",
+  "donut"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22747,
+ "seed": 41974
+}

@@ -1,0 +1,25 @@
+{
+ "id": "furn-brass-lamp-030",
+ "name": "Grand Brass Lamp 030",
+ "category": "furniture",
+ "prompt": "brass brass desk lamp lantern realistic",
+ "kit": "lamp",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "brass",
+  "poly": 32336,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "lamp",
+  "realistic",
+  "brass",
+  "balanced",
+  "lantern"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 32336,
+ "seed": 41649
+}

@@ -1,0 +1,26 @@
+{
+ "id": "veh-city-sedan-091",
+ "name": "Fast City Sedan 091",
+ "category": "vehicles",
+ "prompt": "weathered steel red city sedan car vehicle stylized",
+ "kit": "car",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 31933,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "stylized",
+  "steel",
+  "worn",
+  "sedan",
+  "city"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31933,
+ "seed": 41450
+}

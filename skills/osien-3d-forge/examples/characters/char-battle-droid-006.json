@@ -1,0 +1,25 @@
+{
+ "id": "char-battle-droid-006",
+ "name": "Old Battle Droid 006",
+ "category": "characters",
+ "prompt": "polished gold tall battle droid mech realistic",
+ "kit": "robot",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "gold",
+  "poly": 12069,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "realistic",
+  "gold",
+  "pristine",
+  "mech"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12069,
+ "seed": 41465
+}

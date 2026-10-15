@@ -1,0 +1,28 @@
+{
+ "id": "bldg-gothic-cathedral-109",
+ "name": "Old Gothic Cathedral 109",
+ "category": "buildings-bldg",
+ "prompt": "weathered steel gothic stone castle cathedral with towers and gate with towers stylized",
+ "kit": "castle",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 11412,
+  "parts": [
+   "towers"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "castle",
+  "stylized",
+  "steel",
+  "worn",
+  "gothic",
+  "church"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11412,
+ "seed": 41108
+}

@@ -1,0 +1,26 @@
+{
+ "id": "char-cute-robot-052",
+ "name": "Dark Cute Robot 052",
+ "category": "characters",
+ "prompt": "ancient bone cute little robot droid stylized",
+ "kit": "robot",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "bone",
+  "poly": 11917,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "stylized",
+  "bone",
+  "ancient",
+  "droid",
+  "cute"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11917,
+ "seed": 41511
+}

@@ -1,0 +1,25 @@
+{
+ "id": "intr-court-fountain-054",
+ "name": "Marble Court Fountain 054",
+ "category": "architecture-interior",
+ "prompt": "glass marble court fountain realistic",
+ "kit": "fountain",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 25154,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "fountain",
+  "realistic",
+  "glass",
+  "balanced",
+  "court"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25154,
+ "seed": 41773
+}

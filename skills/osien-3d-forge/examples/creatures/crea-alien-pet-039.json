@@ -1,0 +1,26 @@
+{
+ "id": "crea-alien-pet-039",
+ "name": "Horned Alien Pet 039",
+ "category": "creatures",
+ "prompt": "weathered fabric small cute alien pet quadruped realistic",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 12755,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "realistic",
+  "fabric",
+  "worn",
+  "alien",
+  "pet"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12755,
+ "seed": 41578
+}

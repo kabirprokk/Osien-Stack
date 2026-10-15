@@ -1,0 +1,26 @@
+{
+ "id": "char-forest-elf-074",
+ "name": "Young Forest Elf 074",
+ "category": "characters",
+ "prompt": "mossy leather slender forest elf mage realistic",
+ "kit": "mage",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "leather",
+  "poly": 3759,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "realistic",
+  "leather",
+  "ancient",
+  "elf",
+  "mage"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3759,
+ "seed": 41533
+}

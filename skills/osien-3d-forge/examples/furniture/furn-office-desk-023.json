@@ -1,0 +1,26 @@
+{
+ "id": "furn-office-desk-023",
+ "name": "Leather Office Desk 023",
+ "category": "furniture",
+ "prompt": "worn marble modern office desk table stylized",
+ "kit": "table",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 12835,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "table",
+  "stylized",
+  "marble",
+  "worn",
+  "desk",
+  "office"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12835,
+ "seed": 41642
+}

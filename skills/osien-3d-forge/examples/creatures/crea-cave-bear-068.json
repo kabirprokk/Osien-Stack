@@ -1,0 +1,25 @@
+{
+ "id": "crea-cave-bear-068",
+ "name": "Fire Cave Bear 068",
+ "category": "creatures",
+ "prompt": "fabric brown cave bear beast stylized",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "fabric",
+  "poly": 13128,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "stylized",
+  "fabric",
+  "balanced",
+  "bear"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13128,
+ "seed": 41607
+}

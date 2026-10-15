@@ -1,0 +1,25 @@
+{
+ "id": "char-wise-villager-015",
+ "name": "Scarred Wise Villager 015",
+ "category": "characters",
+ "prompt": "weathered bone wise old townsfolk person realistic",
+ "kit": "baseMale",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 22527,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "realistic",
+  "bone",
+  "worn",
+  "villager"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22527,
+ "seed": 41474
+}

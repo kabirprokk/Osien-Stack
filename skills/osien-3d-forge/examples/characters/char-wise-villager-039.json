@@ -1,0 +1,25 @@
+{
+ "id": "char-wise-villager-039",
+ "name": "Dark Wise Villager 039",
+ "category": "characters",
+ "prompt": "ancient gold wise old townsfolk person stylized",
+ "kit": "baseMale",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "gold",
+  "poly": 30702,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "stylized",
+  "gold",
+  "ancient",
+  "villager"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30702,
+ "seed": 41498
+}

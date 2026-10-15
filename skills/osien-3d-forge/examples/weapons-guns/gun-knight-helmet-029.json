@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-helmet-029",
+ "name": "Golden Knight Helmet 029",
+ "category": "weapons-guns",
+ "prompt": "ancient chrome steel knight helmet helm low poly",
+ "kit": "helmet",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "chrome",
+  "poly": 12640,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "helmet",
+  "lowpoly",
+  "chrome",
+  "ancient",
+  "armor"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12640,
+ "seed": 41148
+}

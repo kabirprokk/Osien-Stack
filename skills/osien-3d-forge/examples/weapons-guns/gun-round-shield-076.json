@@ -1,0 +1,24 @@
+{
+ "id": "gun-round-shield-076",
+ "name": "Ornate Round Shield 076",
+ "category": "weapons-guns",
+ "prompt": "steel round iron shield buckler fantasy",
+ "kit": "shield",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "steel",
+  "poly": 11734,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "shield",
+  "fantasy",
+  "steel",
+  "balanced"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11734,
+ "seed": 41195
+}

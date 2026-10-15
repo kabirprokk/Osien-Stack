@@ -1,0 +1,27 @@
+{
+ "id": "sfx-reactor-core-031",
+ "name": "Rusty Reactor Core 031",
+ "category": "scifi",
+ "prompt": "ancient copper glowing reactor core cylinder column with engine stylized",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "copper",
+  "poly": 24056,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "stylized",
+  "copper",
+  "ancient",
+  "reactor"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24056,
+ "seed": 41830
+}

@@ -1,0 +1,25 @@
+{
+ "id": "furn-plush-armchair-082",
+ "name": "Cozy Plush Armchair 082",
+ "category": "furniture",
+ "prompt": "weathered iron plush fabric armchair seat low poly",
+ "kit": "chair",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 12883,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "chair",
+  "lowpoly",
+  "iron",
+  "worn",
+  "armchair"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12883,
+ "seed": 41701
+}

@@ -1,0 +1,28 @@
+{
+ "id": "crea-swamp-monster-070",
+ "name": "Swamp Swamp Monster 070",
+ "category": "creatures",
+ "prompt": "fabric lumpy swamp monster creature with tail and spikes stylized",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "fabric",
+  "poly": 10880,
+  "parts": [
+   "tail",
+   "spikes"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "stylized",
+  "fabric",
+  "balanced",
+  "monster"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10880,
+ "seed": 41609
+}

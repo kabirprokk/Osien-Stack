@@ -1,0 +1,21 @@
+{
+ "id": "wat-rainpond-003",
+ "name": "Fresh Rainpond 003",
+ "category": "water-ultra",
+ "kit": "rainPond",
+ "prompt": "fresh rainy rain pond ripples water",
+ "seed": 40063,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "rain",
+  "pond",
+  "ripples",
+  "fresh",
+  "rainy",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

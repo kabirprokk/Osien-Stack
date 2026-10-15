@@ -1,0 +1,26 @@
+{
+ "id": "gun-ornate-excalibur-002",
+ "name": "Ornate Ornate Excalibur 002",
+ "category": "weapons-guns",
+ "prompt": "iron ornate golden enchanted excalibur sword blade low poly",
+ "kit": "swordV2",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 26077,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "swordV2",
+  "lowpoly",
+  "iron",
+  "balanced",
+  "sword",
+  "legendary"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26077,
+ "seed": 41121
+}

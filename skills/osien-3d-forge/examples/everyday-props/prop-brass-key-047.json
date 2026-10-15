@@ -1,0 +1,25 @@
+{
+ "id": "prop-brass-key-047",
+ "name": "Old Brass Key 047",
+ "category": "everyday-props",
+ "prompt": "weathered wooden small brass key box teeth realistic",
+ "kit": "box",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 26001,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "box",
+  "realistic",
+  "wood",
+  "worn",
+  "key"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26001,
+ "seed": 42026
+}

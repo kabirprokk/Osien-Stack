@@ -1,0 +1,26 @@
+{
+ "id": "nat-oak-tree-072",
+ "name": "Wild Oak Tree 072",
+ "category": "natural",
+ "prompt": "mossy stone broad oak tree low poly",
+ "kit": "tree",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 25416,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "lowpoly",
+  "stone",
+  "ancient",
+  "oak",
+  "forest"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25416,
+ "seed": 41311
+}

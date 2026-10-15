@@ -1,0 +1,24 @@
+{
+ "id": "fant-loot-chest-030",
+ "name": "Runic Loot Chest 030",
+ "category": "fantasy",
+ "prompt": "ancient gold old wooden loot treasure chest fantasy",
+ "kit": "treasureChest",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "gold",
+  "poly": 12701,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "treasureChest",
+  "gold",
+  "ancient",
+  "loot"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12701,
+ "seed": 41909
+}

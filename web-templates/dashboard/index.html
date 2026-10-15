@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__SITE_TITLE__ — Dashboard</title>
+<meta name="description" content="__SITE_TITLE__ dashboard: stats, activity and health at a glance.">
+<style>
+*{box-sizing:border-box}body{margin:0;background:#0b1020;color:#fff;font:14px/1.5 system-ui;display:flex;min-height:100vh}
+aside{width:200px;background:#101736;padding:20px;flex-shrink:0}
+aside a{display:block;color:#9aa3c7;text-decoration:none;padding:8px 0}
+main{flex:1;padding:24px;max-width:1000px}
+h1{margin-top:0}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:20px}
+.card{background:#141b33;border-radius:12px;padding:16px}.card b{font-size:1.6rem;display:block}
+table{width:100%;border-collapse:collapse;background:#141b33;border-radius:12px;overflow:hidden}
+th,td{text-align:left;padding:10px 14px}th{color:#9aa3c7;font-weight:600}tr+tr td{border-top:1px solid #232c52}
+.bars{display:flex;gap:6px;align-items:flex-end;height:90px;background:#141b33;border-radius:12px;padding:12px;margin-bottom:20px}
+.bars i{flex:1;background:#2dd4bf;border-radius:4px;min-height:6px}
+img{max-width:100%}
+@media(max-width:700px){aside{display:none}}
+</style>
+</head>
+<body>
+<aside><strong>__SITE_TITLE__</strong><a href="#">Overview</a><a href="#activity">Activity</a><a href="#health">Health</a></aside>
+<main>
+<h1>Overview</h1>
+<section class="cards">
+<div class="card"><span>Users</span><b>1,248</b></div>
+<div class="card"><span>Revenue</span><b>$8,430</b></div>
+<div class="card"><span>Uptime</span><b>99.98%</b></div>
+<div class="card"><span>Errors</span><b>3</b></div>
+</section>
+<section class="bars" aria-label="Weekly traffic"><i style="height:30%"></i><i style="height:55%"></i><i style="height:40%"></i><i style="height:70%"></i><i style="height:62%"></i><i style="height:90%"></i><i style="height:76%"></i></section>
+<section id="activity"><h2>Recent activity</h2><table><tr><th>Event</th><th>User</th><th>Time</th></tr><tr><td>Signup</td><td>ada@example.com</td><td>2m ago</td></tr><tr><td>Purchase</td><td>bob@example.com</td><td>19m ago</td></tr><tr><td>Deploy</td><td>ci-bot</td><td>1h ago</td></tr></table></section>
+</main>
+</body>
+</html>

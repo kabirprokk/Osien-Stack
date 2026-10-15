@@ -1,0 +1,25 @@
+{
+ "id": "crea-cave-bear-052",
+ "name": "Swamp Cave Bear 052",
+ "category": "creatures",
+ "prompt": "mossy marble brown cave bear beast low poly",
+ "kit": "creature",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 31655,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "lowpoly",
+  "marble",
+  "ancient",
+  "bear"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31655,
+ "seed": 41591
+}

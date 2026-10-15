@@ -1,0 +1,21 @@
+{
+ "id": "hum-ninja-004",
+ "name": "Grand Ninja 004",
+ "category": "human-players",
+ "kit": "ninja",
+ "prompt": "grand noble silent ninja",
+ "seed": 40094,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "ninja",
+  "stealth",
+  "shadow",
+  "grand",
+  "noble",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

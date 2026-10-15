@@ -1,0 +1,26 @@
+{
+ "id": "crea-fire-dragon-041",
+ "name": "Fire Fire Dragon 041",
+ "category": "creatures",
+ "prompt": "leather huge fire dragon drake stylized",
+ "kit": "dragon",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 3953,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "stylized",
+  "leather",
+  "balanced",
+  "fire",
+  "drake"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3953,
+ "seed": 41580
+}

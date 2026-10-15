@@ -1,0 +1,21 @@
+{
+ "id": "hum-knight-010",
+ "name": "Grand Knight 010",
+ "category": "human-players",
+ "kit": "knight",
+ "prompt": "grand silent noble knight in armor",
+ "seed": 40050,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "knight",
+  "armor",
+  "plate",
+  "grand",
+  "silent",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

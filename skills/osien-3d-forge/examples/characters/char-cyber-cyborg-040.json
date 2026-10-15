@@ -1,0 +1,27 @@
+{
+ "id": "char-cyber-cyborg-040",
+ "name": "Scarred Cyber Cyborg 040",
+ "category": "characters",
+ "prompt": "steel chrome cyber cyborg android with engine fantasy",
+ "kit": "cyborg",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "steel",
+  "poly": 12966,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "fantasy",
+  "steel",
+  "balanced",
+  "cyborg"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12966,
+ "seed": 41499
+}

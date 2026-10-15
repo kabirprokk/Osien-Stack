@@ -1,0 +1,21 @@
+{
+ "id": "hum-child-006",
+ "name": "Calm Child 006",
+ "category": "human-players",
+ "kit": "baseChild",
+ "prompt": "calm keen young child",
+ "seed": 40026,
+ "params": {
+  "quality": "draft",
+  "style": "realistic"
+ },
+ "tags": [
+  "child",
+  "kid",
+  "young",
+  "calm",
+  "keen",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

@@ -1,0 +1,28 @@
+{
+ "id": "crea-forest-stag-069",
+ "name": "Swamp Forest Stag 069",
+ "category": "creatures",
+ "prompt": "worn glass brown forest stag animal with tail and horns realistic",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 12440,
+  "parts": [
+   "tail",
+   "horns"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "realistic",
+  "glass",
+  "worn",
+  "deer"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12440,
+ "seed": 41608
+}

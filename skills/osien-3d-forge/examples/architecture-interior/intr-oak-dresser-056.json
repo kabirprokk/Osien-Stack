@@ -1,0 +1,25 @@
+{
+ "id": "intr-oak-dresser-056",
+ "name": "Cozy Oak Dresser 056",
+ "category": "architecture-interior",
+ "prompt": "polished glass oak dresser cupboard drawers stylized",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 23265,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "stylized",
+  "glass",
+  "pristine",
+  "dresser"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23265,
+ "seed": 41775
+}

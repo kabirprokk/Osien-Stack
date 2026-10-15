@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__GAME_TITLE__ (2P versus)</title>
+<style>html,body{margin:0;height:100%;background:#0b1020;color:#fff;font:14px/1.4 system-ui;overflow:hidden}#c{display:block;width:100vw;height:100vh}#hud{position:fixed;top:10px;left:12px;font-weight:700}#msg{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}#msg div{background:rgba(0,0,0,.55);padding:18px 26px;border-radius:14px;text-align:center}</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="hud">P1 0 · P2 0 — first to 5 tags wins</div>
+<div id="msg"><div><h1 style="margin:0">__GAME_TITLE__</h1><p>P1 (gold): WASD · P2 (red): ← → ↑ ↓<br>Chaser tags the other · P pause · R restart</p></div></div>
+<script>
+"use strict";
+// 2P TAG: same keyboard versus, zero deps, 60fps
+const cv=document.getElementById('c'),ctx=cv.getContext('2d'),hud=document.getElementById('hud'),msg=document.getElementById('msg');
+let W=0,H=0;function resize(){const d=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*d;cv.height=H*d;ctx.setTransform(d,0,0,d,0,0);}addEventListener('resize',resize);resize();
+const keys={};let paused=false,over=false;
+addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','ArrowUp','ArrowDown','Space'].includes(e.code))e.preventDefault();keys[e.code]=true;if(e.code==='KeyP'||e.code==='Escape')paused=!paused;if(e.code==='KeyR')reset();});
+addEventListener('keyup',e=>keys[e.code]=false);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)paused=true;});
+let AC=null;function sfx(f=440,d=.08){try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain();o.type='square';o.frequency.value=f;g.gain.value=.1;o.connect(g);g.connect(AC.destination);o.start();g.gain.exponentialRampToValueAtTime(.001,AC.currentTime+d);o.stop(AC.currentTime+d);}catch{}}
+const A={x:0,y:0,s:0},B={x:0,y:0,s:0};let chaser='A',freeze=0;
+let WINS={A:0,B:0};try{Object.assign(WINS,JSON.parse(localStorage.getItem('wgf-versus')||'{}'));}catch{}
+function reset(){A.x=W*0.25;A.y=H/2;A.s=0;B.x=W*0.75;B.y=H/2;B.s=0;chaser='A';over=false;paused=false;freeze=0;msg.style.display='none';}
+reset();
+function move(P,up,dn,lf,rt,dt){const sp=320;P.y+=((keys[dn]?1:0)-(keys[up]?1:0))*sp*dt;P.x+=((keys[rt]?1:0)-(keys[lf]?1:0))*sp*dt;P.x=Math.max(14,Math.min(W-14,P.x));P.y=Math.max(14,Math.min(H-14,P.y));}
+let last=performance.now();
+function loop(t){requestAnimationFrame(loop);let dt=Math.min((t-last)/1000,.05);last=t;if(paused||over)return;
+  if(freeze>0)freeze-=dt;else{move(A,'KeyW','KeyS','KeyA','KeyD',dt);move(B,'ArrowUp','ArrowDown','ArrowLeft','ArrowRight',dt);
+    const d=Math.hypot(A.x-B.x,A.y-B.y);
+    if(d<30){const C=chaser==='A'?A:B;C.s++;sfx(700,.12);chaser=chaser==='A'?'B':'A';freeze=1.2;
+      if(C.s>=5){over=true;const W=C===A?'A':'B';WINS[W]++;try{localStorage.setItem('wgf-versus',JSON.stringify(WINS));}catch{}msg.style.display='flex';msg.firstElementChild.innerHTML='<h1 style=margin:0>'+(C===A?'P1':'P2')+' WINS</h1><p>'+A.s+' – '+B.s+' · all-time P1 '+WINS.A+' – P2 '+WINS.B+'<br>press R to rematch</p>';return;}}}
+  ctx.fillStyle='#0b1020';ctx.fillRect(0,0,W,H);ctx.strokeStyle='#223';ctx.strokeRect(20,20,W-40,H-40);
+  const draw=(P,col,tag)=>{ctx.fillStyle=col;ctx.beginPath();ctx.arc(P.x,P.y,14,0,7);ctx.fill();if(tag){ctx.strokeStyle='#fff';ctx.lineWidth=3;ctx.beginPath();ctx.arc(P.x,P.y,20,0,7);ctx.stroke();}};
+  draw(A,'#ffd54a',chaser==='A');draw(B,'#ff5a5a',chaser==='B');
+  hud.textContent='P1 '+A.s+' · P2 '+B.s+' — '+(chaser==='A'?'P1 chases':'P2 chases')+' · first to 5 · 🏆 '+WINS.A+'-'+WINS.B;
+}
+addEventListener('keydown',()=>{msg.style.display=over?'flex':'none';},{once:true});
+requestAnimationFrame(t=>{last=t;requestAnimationFrame(loop);});
+</script>
+</body>
+</html>

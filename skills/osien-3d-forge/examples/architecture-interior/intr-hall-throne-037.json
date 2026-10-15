@@ -1,0 +1,25 @@
+{
+ "id": "intr-hall-throne-037",
+ "name": "Modern Hall Throne 037",
+ "category": "architecture-interior",
+ "prompt": "leather marble hall throne realistic",
+ "kit": "throne",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "leather",
+  "poly": 31530,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "throne",
+  "realistic",
+  "leather",
+  "balanced",
+  "hall"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31530,
+ "seed": 41756
+}

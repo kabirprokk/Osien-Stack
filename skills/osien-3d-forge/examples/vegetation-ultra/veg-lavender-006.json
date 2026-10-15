@@ -1,0 +1,21 @@
+{
+ "id": "veg-lavender-006",
+ "name": "Low Lavender 006",
+ "category": "vegetation-ultra",
+ "kit": "lavenderBush",
+ "prompt": "low fragrant lavender flower bush",
+ "seed": 30112,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "fragrant",
+  "purple",
+  "herb",
+  "low",
+  "fragrant",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

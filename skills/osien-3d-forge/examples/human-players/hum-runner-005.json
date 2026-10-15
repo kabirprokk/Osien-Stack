@@ -1,0 +1,21 @@
+{
+ "id": "hum-runner-005",
+ "name": "Grand Runner 005",
+ "category": "human-players",
+ "kit": "runner",
+ "prompt": "grand strong swift running athlete",
+ "seed": 40115,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "runner",
+  "athlete",
+  "sport",
+  "grand",
+  "strong",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

@@ -1,0 +1,26 @@
+{
+ "id": "nat-pine-tree-011",
+ "name": "Amber Pine Tree 011",
+ "category": "natural",
+ "prompt": "glass tall pine tree stylized",
+ "kit": "tree",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 25080,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "stylized",
+  "glass",
+  "balanced",
+  "pine",
+  "forest"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25080,
+ "seed": 41250
+}

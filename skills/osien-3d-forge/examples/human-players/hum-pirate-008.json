@@ -1,0 +1,21 @@
+{
+ "id": "hum-pirate-008",
+ "name": "Silent Pirate 008",
+ "category": "human-players",
+ "kit": "pirate",
+ "prompt": "silent proud rugged pirate captain",
+ "seed": 40088,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "pirate",
+  "captain",
+  "rogue",
+  "silent",
+  "proud",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

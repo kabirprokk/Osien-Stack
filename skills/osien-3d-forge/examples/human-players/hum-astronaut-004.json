@@ -1,0 +1,21 @@
+{
+ "id": "hum-astronaut-004",
+ "name": "Rugged Astronaut 004",
+ "category": "human-players",
+ "kit": "astronaut",
+ "prompt": "rugged noble brave astronaut",
+ "seed": 40104,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "astronaut",
+  "space",
+  "suit",
+  "rugged",
+  "noble",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

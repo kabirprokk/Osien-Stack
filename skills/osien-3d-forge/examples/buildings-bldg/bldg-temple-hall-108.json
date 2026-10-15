@@ -1,0 +1,27 @@
+{
+ "id": "bldg-temple-hall-108",
+ "name": "Medieval Temple Hall 108",
+ "category": "buildings-bldg",
+ "prompt": "pristine wooden ancient marble temple hall with columns and steps with doors stylized",
+ "kit": "building",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 30251,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "stylized",
+  "wood",
+  "pristine",
+  "temple"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30251,
+ "seed": 41107
+}

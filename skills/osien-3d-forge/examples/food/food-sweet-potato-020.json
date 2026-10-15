@@ -1,0 +1,25 @@
+{
+ "id": "food-sweet-potato-020",
+ "name": "Red Sweet Potato 020",
+ "category": "food",
+ "prompt": "weathered bone orange sweet potato cone stylized",
+ "kit": "cone",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "bone",
+  "poly": 24212,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "cone",
+  "stylized",
+  "bone",
+  "worn",
+  "potato"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24212,
+ "seed": 41959
+}

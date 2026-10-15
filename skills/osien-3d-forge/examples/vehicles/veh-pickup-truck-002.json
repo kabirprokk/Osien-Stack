@@ -1,0 +1,25 @@
+{
+ "id": "veh-pickup-truck-002",
+ "name": "Rusty Pickup Truck 002",
+ "category": "vehicles",
+ "prompt": "iron blue pickup truck vehicle low poly",
+ "kit": "car",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 4287,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "lowpoly",
+  "iron",
+  "balanced",
+  "truck"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4287,
+ "seed": 41361
+}

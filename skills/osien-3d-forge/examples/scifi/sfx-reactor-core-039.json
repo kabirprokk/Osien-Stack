@@ -1,0 +1,27 @@
+{
+ "id": "sfx-reactor-core-039",
+ "name": "Neon Reactor Core 039",
+ "category": "scifi",
+ "prompt": "weathered chrome glowing reactor core cylinder column with engine realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "chrome",
+  "poly": 21724,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "realistic",
+  "chrome",
+  "worn",
+  "reactor"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21724,
+ "seed": 41838
+}

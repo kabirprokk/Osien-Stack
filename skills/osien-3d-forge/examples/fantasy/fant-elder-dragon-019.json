@@ -1,0 +1,27 @@
+{
+ "id": "fant-elder-dragon-019",
+ "name": "Dark Elder Dragon 019",
+ "category": "fantasy",
+ "prompt": "ancient marble ancient elder dragon with tail realistic",
+ "kit": "dragon",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 4243,
+  "parts": [
+   "tail"
+  ]
+ },
+ "tags": [
+  "fantasy",
+  "dragon",
+  "realistic",
+  "marble",
+  "ancient",
+  "elder"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4243,
+ "seed": 41898
+}

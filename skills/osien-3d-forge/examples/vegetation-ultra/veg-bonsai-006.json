@@ -1,0 +1,21 @@
+{
+ "id": "veg-bonsai-006",
+ "name": "Gnarled Bonsai 006",
+ "category": "vegetation-ultra",
+ "kit": "bonsai",
+ "prompt": "gnarled artful bonsai miniature tree",
+ "seed": 30119,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "miniature",
+  "zen",
+  "pot",
+  "gnarled",
+  "artful",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

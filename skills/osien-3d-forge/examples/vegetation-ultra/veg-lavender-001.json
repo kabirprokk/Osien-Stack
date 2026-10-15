@@ -1,0 +1,21 @@
+{
+ "id": "veg-lavender-001",
+ "name": "Low Lavender 001",
+ "category": "vegetation-ultra",
+ "kit": "lavenderBush",
+ "prompt": "low purple lavender flower bush",
+ "seed": 30107,
+ "params": {
+  "quality": "draft",
+  "style": "stylized"
+ },
+ "tags": [
+  "fragrant",
+  "purple",
+  "herb",
+  "low",
+  "purple",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

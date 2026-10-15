@@ -1,0 +1,21 @@
+{
+ "id": "hum-soldier-010",
+ "name": "Tall Soldier 010",
+ "category": "human-players",
+ "kit": "soldierModern",
+ "prompt": "tall silent modern soldier",
+ "seed": 40080,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "soldier",
+  "modern",
+  "tactical",
+  "tall",
+  "silent",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

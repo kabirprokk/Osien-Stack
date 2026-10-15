@@ -1,0 +1,25 @@
+{
+ "id": "crea-swamp-wyvern-074",
+ "name": "Dark Swamp Wyvern 074",
+ "category": "creatures",
+ "prompt": "obsidian lean swamp wyvern drake fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "obsidian",
+  "poly": 31324,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "fantasy",
+  "obsidian",
+  "balanced",
+  "wyvern"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31324,
+ "seed": 41613
+}

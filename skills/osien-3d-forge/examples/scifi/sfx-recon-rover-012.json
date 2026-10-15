@@ -1,0 +1,25 @@
+{
+ "id": "sfx-recon-rover-012",
+ "name": "Orbital Recon Rover 012",
+ "category": "scifi",
+ "prompt": "weathered iron lunar recon rover car vehicle realistic",
+ "kit": "car",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 22069,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "car",
+  "realistic",
+  "iron",
+  "worn",
+  "rover"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22069,
+ "seed": 41811
+}

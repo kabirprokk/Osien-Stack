@@ -1,0 +1,21 @@
+{
+ "id": "hum-ninja-005",
+ "name": "Noble Ninja 005",
+ "category": "human-players",
+ "kit": "ninja",
+ "prompt": "noble silent silent ninja",
+ "seed": 40095,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "ninja",
+  "stealth",
+  "shadow",
+  "noble",
+  "silent",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

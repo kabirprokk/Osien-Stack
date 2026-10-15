@@ -1,0 +1,25 @@
+{
+ "id": "prop-game-dice-012",
+ "name": "Red Game Dice 012",
+ "category": "everyday-props",
+ "prompt": "glass white game dice cube low poly",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 11471,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "box",
+  "lowpoly",
+  "glass",
+  "balanced",
+  "dice"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11471,
+ "seed": 41991
+}

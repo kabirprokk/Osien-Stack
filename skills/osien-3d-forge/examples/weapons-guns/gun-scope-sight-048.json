@@ -1,0 +1,26 @@
+{
+ "id": "gun-scope-sight-048",
+ "name": "Oaken Scope Sight 048",
+ "category": "weapons-guns",
+ "prompt": "pristine rusty black scope sight ring torus stylized",
+ "kit": "torus",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "rust",
+  "poly": 23521,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "torus",
+  "stylized",
+  "rust",
+  "pristine",
+  "gun",
+  "scope"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23521,
+ "seed": 41167
+}

@@ -1,0 +1,25 @@
+{
+ "id": "sfx-reactor-core-023",
+ "name": "Lunar Reactor Core 023",
+ "category": "scifi",
+ "prompt": "iron glowing reactor core cylinder column low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 11431,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "lowpoly",
+  "iron",
+  "balanced",
+  "reactor"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11431,
+ "seed": 41822
+}

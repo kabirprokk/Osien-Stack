@@ -1,0 +1,25 @@
+{
+ "id": "char-orc-brute-043",
+ "name": "Young Orc Brute 043",
+ "category": "characters",
+ "prompt": "bone hulking orc warrior realistic",
+ "kit": "warrior",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 11812,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "realistic",
+  "bone",
+  "balanced",
+  "orc"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11812,
+ "seed": 41502
+}

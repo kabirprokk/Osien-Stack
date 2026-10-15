@@ -1,0 +1,25 @@
+{
+ "id": "sfx-recon-rover-068",
+ "name": "Chrome Recon Rover 068",
+ "category": "scifi",
+ "prompt": "obsidian lunar recon rover car vehicle stylized",
+ "kit": "car",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "obsidian",
+  "poly": 4253,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "car",
+  "stylized",
+  "obsidian",
+  "balanced",
+  "rover"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4253,
+ "seed": 41867
+}

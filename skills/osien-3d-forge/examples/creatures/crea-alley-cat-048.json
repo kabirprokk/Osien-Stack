@@ -1,0 +1,25 @@
+{
+ "id": "crea-alley-cat-048",
+ "name": "Wild Alley Cat 048",
+ "category": "creatures",
+ "prompt": "glass small orange alley cat fantasy",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "glass",
+  "poly": 22424,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "fantasy",
+  "glass",
+  "balanced",
+  "cat"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22424,
+ "seed": 41587
+}

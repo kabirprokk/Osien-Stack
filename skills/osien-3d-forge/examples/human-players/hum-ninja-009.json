@@ -1,0 +1,21 @@
+{
+ "id": "hum-ninja-009",
+ "name": "Strong Ninja 009",
+ "category": "human-players",
+ "kit": "ninja",
+ "prompt": "strong silent silent ninja",
+ "seed": 40099,
+ "params": {
+  "quality": "draft",
+  "style": "fantasy"
+ },
+ "tags": [
+  "ninja",
+  "stealth",
+  "shadow",
+  "strong",
+  "silent",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

@@ -1,0 +1,26 @@
+{
+ "id": "bldg-skyscraper-087",
+ "name": "Towering Skyscraper 087",
+ "category": "buildings-bldg",
+ "prompt": "glass modern glass skyscraper tower with windows stylized",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 12457,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "stylized",
+  "glass",
+  "balanced",
+  "modern",
+  "city"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12457,
+ "seed": 41086
+}

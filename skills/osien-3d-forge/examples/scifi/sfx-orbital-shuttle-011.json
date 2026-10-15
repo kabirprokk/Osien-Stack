@@ -1,0 +1,25 @@
+{
+ "id": "sfx-orbital-shuttle-011",
+ "name": "Quantum Orbital Shuttle 011",
+ "category": "scifi",
+ "prompt": "glass white orbital shuttle spacecraft stylized",
+ "kit": "spaceship",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 11762,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "stylized",
+  "glass",
+  "balanced",
+  "shuttle"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11762,
+ "seed": 41810
+}

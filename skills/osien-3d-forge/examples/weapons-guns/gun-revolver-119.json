@@ -1,0 +1,26 @@
+{
+ "id": "gun-revolver-119",
+ "name": "Ornate Revolver 119",
+ "category": "weapons-guns",
+ "prompt": "wooden iron revolver drum cylinder realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 23232,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "realistic",
+  "wood",
+  "balanced",
+  "gun",
+  "revolver"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23232,
+ "seed": 41238
+}

@@ -1,0 +1,27 @@
+{
+ "id": "char-cyber-cyborg-016",
+ "name": "Cute Cyber Cyborg 016",
+ "category": "characters",
+ "prompt": "leather chrome cyber cyborg android with engine stylized",
+ "kit": "cyborg",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 11771,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "stylized",
+  "leather",
+  "balanced",
+  "cyborg"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11771,
+ "seed": 41475
+}

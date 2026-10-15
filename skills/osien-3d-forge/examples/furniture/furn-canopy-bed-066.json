@@ -1,0 +1,25 @@
+{
+ "id": "furn-canopy-bed-066",
+ "name": "Leather Canopy Bed 066",
+ "category": "furniture",
+ "prompt": "ancient iron wooden canopy bed mattress low poly",
+ "kit": "bed",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 25690,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bed",
+  "lowpoly",
+  "iron",
+  "ancient",
+  "mattress"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25690,
+ "seed": 41685
+}

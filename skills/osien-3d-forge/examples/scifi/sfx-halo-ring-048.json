@@ -1,0 +1,25 @@
+{
+ "id": "sfx-halo-ring-048",
+ "name": "Deep Halo Ring 048",
+ "category": "scifi",
+ "prompt": "weathered iron spinning halo ring torus station low poly",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 12445,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "torus",
+  "lowpoly",
+  "iron",
+  "worn",
+  "station"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12445,
+ "seed": 41847
+}

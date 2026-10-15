@@ -1,0 +1,26 @@
+{
+ "id": "bldg-desert-villa-104",
+ "name": "Gothic Desert Villa 104",
+ "category": "buildings-bldg",
+ "prompt": "glass desert sandstone villa house with doors and windows stylized",
+ "kit": "house",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 12536,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "stylized",
+  "glass",
+  "balanced",
+  "villa",
+  "desert"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12536,
+ "seed": 41103
+}

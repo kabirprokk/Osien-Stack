@@ -1,0 +1,28 @@
+{
+ "id": "crea-swamp-wyvern-058",
+ "name": "Horned Swamp Wyvern 058",
+ "category": "creatures",
+ "prompt": "stone lean swamp wyvern drake with wings and tail fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "stone",
+  "poly": 11715,
+  "parts": [
+   "wings",
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "fantasy",
+  "stone",
+  "balanced",
+  "wyvern"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11715,
+ "seed": 41597
+}

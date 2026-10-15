@@ -1,0 +1,21 @@
+{
+ "id": "veg-moss-007",
+ "name": "Green Moss 007",
+ "category": "vegetation-ultra",
+ "kit": "mossCarpet",
+ "prompt": "green lush mossy ground moss carpet",
+ "seed": 30040,
+ "params": {
+  "quality": "draft",
+  "style": "stylized"
+ },
+ "tags": [
+  "moss",
+  "forest-floor",
+  "damp",
+  "green",
+  "lush",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

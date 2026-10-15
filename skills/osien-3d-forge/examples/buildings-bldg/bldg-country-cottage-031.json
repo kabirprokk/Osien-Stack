@@ -1,0 +1,25 @@
+{
+ "id": "bldg-country-cottage-031",
+ "name": "Ancient Country Cottage 031",
+ "category": "buildings-bldg",
+ "prompt": "pristine marble country stone cottage house with chimney and windows fantasy",
+ "kit": "house",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 3729,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "fantasy",
+  "marble",
+  "pristine",
+  "cottage"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3729,
+ "seed": 41030
+}

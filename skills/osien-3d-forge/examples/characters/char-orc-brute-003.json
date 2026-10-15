@@ -1,0 +1,25 @@
+{
+ "id": "char-orc-brute-003",
+ "name": "Golden Orc Brute 003",
+ "category": "characters",
+ "prompt": "fabric hulking orc warrior realistic",
+ "kit": "warrior",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 25576,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "realistic",
+  "fabric",
+  "balanced",
+  "orc"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25576,
+ "seed": 41462
+}

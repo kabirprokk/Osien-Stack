@@ -1,0 +1,21 @@
+{
+ "id": "veg-wheat-001",
+ "name": "Ripe Wheat 001",
+ "category": "vegetation-ultra",
+ "kit": "wheatField",
+ "prompt": "ripe golden wheat crop field",
+ "seed": 30047,
+ "params": {
+  "quality": "draft",
+  "style": "realistic"
+ },
+ "tags": [
+  "wheat",
+  "crop",
+  "farm",
+  "ripe",
+  "golden",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

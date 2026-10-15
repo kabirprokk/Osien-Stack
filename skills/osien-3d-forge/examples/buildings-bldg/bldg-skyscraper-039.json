@@ -1,0 +1,28 @@
+{
+ "id": "bldg-skyscraper-039",
+ "name": "Grand Skyscraper 039",
+ "category": "buildings-bldg",
+ "prompt": "polished marble modern glass skyscraper tower with windows with windows fantasy",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 12663,
+  "parts": [
+   "windows"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "fantasy",
+  "marble",
+  "pristine",
+  "modern",
+  "city"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12663,
+ "seed": 41038
+}

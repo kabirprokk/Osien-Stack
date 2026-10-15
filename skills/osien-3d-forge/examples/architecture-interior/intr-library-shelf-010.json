@@ -1,0 +1,25 @@
+{
+ "id": "intr-library-shelf-010",
+ "name": "Antique Library Shelf 010",
+ "category": "architecture-interior",
+ "prompt": "polished glass dark library bookshelf wall low poly",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 22013,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "lowpoly",
+  "glass",
+  "pristine",
+  "library"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22013,
+ "seed": 41729
+}

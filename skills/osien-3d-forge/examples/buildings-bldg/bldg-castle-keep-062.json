@@ -1,0 +1,26 @@
+{
+ "id": "bldg-castle-keep-062",
+ "name": "Ruined Castle Keep 062",
+ "category": "buildings-bldg",
+ "prompt": "mossy marble medieval castle fortress keep with towers and gate fantasy",
+ "kit": "castle",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 23614,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "castle",
+  "fantasy",
+  "marble",
+  "ancient",
+  "medieval",
+  "fortress"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23614,
+ "seed": 41061
+}

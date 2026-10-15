@@ -1,0 +1,25 @@
+{
+ "id": "sfx-recon-rover-052",
+ "name": "Rusty Recon Rover 052",
+ "category": "scifi",
+ "prompt": "weathered obsidian lunar recon rover car vehicle realistic",
+ "kit": "car",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "obsidian",
+  "poly": 11893,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "car",
+  "realistic",
+  "obsidian",
+  "worn",
+  "rover"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11893,
+ "seed": 41851
+}

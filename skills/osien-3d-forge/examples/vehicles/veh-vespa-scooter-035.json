@@ -1,0 +1,27 @@
+{
+ "id": "veh-vespa-scooter-035",
+ "name": "Rusty Vespa Scooter 035",
+ "category": "vehicles",
+ "prompt": "mossy chrome mint vespa scooter bike with wheels stylized",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 11948,
+  "parts": [
+   "wheels"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "stylized",
+  "chrome",
+  "ancient",
+  "scooter"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11948,
+ "seed": 41394
+}

@@ -1,0 +1,26 @@
+{
+ "id": "gun-katana-054",
+ "name": "Steel Katana 054",
+ "category": "weapons-guns",
+ "prompt": "chrome polished steel katana blade stylized",
+ "kit": "sword",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 12158,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "stylized",
+  "chrome",
+  "balanced",
+  "katana",
+  "samurai"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12158,
+ "seed": 41173
+}

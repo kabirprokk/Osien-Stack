@@ -1,0 +1,25 @@
+{
+ "id": "nat-amethyst-geode-049",
+ "name": "Tall Amethyst Geode 049",
+ "category": "natural",
+ "prompt": "weathered crystal purple amethyst crystal geode stylized",
+ "kit": "crystal",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "crystal",
+  "poly": 22882,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "stylized",
+  "worn",
+  "amethyst",
+  "gem"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22882,
+ "seed": 41288
+}

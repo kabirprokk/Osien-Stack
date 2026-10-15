@@ -1,0 +1,25 @@
+{
+ "id": "furn-brass-lamp-050",
+ "name": "Small Brass Lamp 050",
+ "category": "furniture",
+ "prompt": "wooden brass desk lamp lantern low poly",
+ "kit": "lamp",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 24399,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "lamp",
+  "lowpoly",
+  "wood",
+  "balanced",
+  "lantern"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24399,
+ "seed": 41669
+}

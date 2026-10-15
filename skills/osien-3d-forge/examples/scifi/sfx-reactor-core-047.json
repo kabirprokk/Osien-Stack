@@ -1,0 +1,27 @@
+{
+ "id": "sfx-reactor-core-047",
+ "name": "Neon Reactor Core 047",
+ "category": "scifi",
+ "prompt": "pristine obsidian glowing reactor core cylinder column with engine low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "obsidian",
+  "poly": 26001,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "lowpoly",
+  "obsidian",
+  "pristine",
+  "reactor"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26001,
+ "seed": 41846
+}

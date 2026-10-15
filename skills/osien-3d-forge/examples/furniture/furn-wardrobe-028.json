@@ -1,0 +1,26 @@
+{
+ "id": "furn-wardrobe-028",
+ "name": "Antique Wardrobe 028",
+ "category": "furniture",
+ "prompt": "worn brass oak wardrobe cupboard with doors realistic",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "brass",
+  "poly": 24586,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "realistic",
+  "brass",
+  "worn",
+  "cabinet",
+  "wardrobe"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24586,
+ "seed": 41647
+}

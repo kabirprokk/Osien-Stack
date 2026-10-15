@@ -1,0 +1,26 @@
+{
+ "id": "char-cute-robot-020",
+ "name": "Wise Cute Robot 020",
+ "category": "characters",
+ "prompt": "mossy steel cute little robot droid stylized",
+ "kit": "robot",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 25686,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "stylized",
+  "steel",
+  "ancient",
+  "droid",
+  "cute"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25686,
+ "seed": 41479
+}

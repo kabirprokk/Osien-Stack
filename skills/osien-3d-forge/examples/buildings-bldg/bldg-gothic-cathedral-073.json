@@ -1,0 +1,29 @@
+{
+ "id": "bldg-gothic-cathedral-073",
+ "name": "Grand Gothic Cathedral 073",
+ "category": "buildings-bldg",
+ "prompt": "weathered steel gothic stone castle cathedral with towers and gate with windows and gate stylized",
+ "kit": "castle",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 11637,
+  "parts": [
+   "windows",
+   "gate"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "castle",
+  "stylized",
+  "steel",
+  "worn",
+  "gothic",
+  "church"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11637,
+ "seed": 41072
+}

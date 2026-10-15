@@ -1,0 +1,25 @@
+{
+ "id": "bldg-steel-viaduct-058",
+ "name": "Ancient Steel Viaduct 058",
+ "category": "buildings-bldg",
+ "prompt": "weathered glass steel viaduct bridge with pillars low poly",
+ "kit": "bridge",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 22367,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "lowpoly",
+  "glass",
+  "worn",
+  "rail"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22367,
+ "seed": 41057
+}

@@ -1,0 +1,28 @@
+{
+ "id": "bldg-castle-keep-002",
+ "name": "Ancient Castle Keep 002",
+ "category": "buildings-bldg",
+ "prompt": "polished glass medieval castle fortress keep with towers and gate with towers realistic",
+ "kit": "castle",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 12436,
+  "parts": [
+   "towers"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "castle",
+  "realistic",
+  "glass",
+  "pristine",
+  "medieval",
+  "fortress"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12436,
+ "seed": 41001
+}

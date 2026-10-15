@@ -1,0 +1,25 @@
+{
+ "id": "nat-red-mushroom-025",
+ "name": "Amber Red Mushroom 025",
+ "category": "natural",
+ "prompt": "weathered stone red spotted mushroom toadstool realistic",
+ "kit": "mushroom",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "stone",
+  "poly": 11884,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "realistic",
+  "stone",
+  "worn",
+  "fungus"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11884,
+ "seed": 41264
+}

@@ -1,0 +1,24 @@
+{
+ "id": "gun-war-axe-039",
+ "name": "Steel War Axe 039",
+ "category": "weapons-guns",
+ "prompt": "ancient wooden steel war axe hatchet fantasy",
+ "kit": "axe",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "wood",
+  "poly": 31935,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "axe",
+  "fantasy",
+  "wood",
+  "ancient"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31935,
+ "seed": 41158
+}

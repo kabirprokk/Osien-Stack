@@ -1,0 +1,21 @@
+{
+ "id": "hum-ninja-002",
+ "name": "Brave Ninja 002",
+ "category": "human-players",
+ "kit": "ninja",
+ "prompt": "brave steady silent ninja",
+ "seed": 40092,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "ninja",
+  "stealth",
+  "shadow",
+  "brave",
+  "steady",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

@@ -1,0 +1,26 @@
+{
+ "id": "char-village-knight-009",
+ "name": "Cute Village Knight 009",
+ "category": "characters",
+ "prompt": "weathered bone brave kingdom knight warrior in armor realistic",
+ "kit": "knight",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 22925,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "realistic",
+  "bone",
+  "worn",
+  "knight",
+  "warrior"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22925,
+ "seed": 41468
+}

@@ -1,0 +1,26 @@
+{
+ "id": "gun-revolver-071",
+ "name": "Steel Revolver 071",
+ "category": "weapons-guns",
+ "prompt": "polished steel iron revolver drum cylinder stylized",
+ "kit": "cylinder",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 30291,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "stylized",
+  "steel",
+  "pristine",
+  "gun",
+  "revolver"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30291,
+ "seed": 41190
+}

@@ -1,0 +1,25 @@
+{
+ "id": "bldg-arch-bridge-033",
+ "name": "Towering Arch Bridge 033",
+ "category": "buildings-bldg",
+ "prompt": "iron stone arch bridge with pillars realistic",
+ "kit": "bridge",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 22118,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "realistic",
+  "iron",
+  "balanced",
+  "river"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22118,
+ "seed": 41032
+}

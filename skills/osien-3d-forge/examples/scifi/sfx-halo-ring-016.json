@@ -1,0 +1,24 @@
+{
+ "id": "sfx-halo-ring-016",
+ "name": "Neon Halo Ring 016",
+ "category": "scifi",
+ "prompt": "worn copper spinning halo ring torus station sci-fi",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "copper",
+  "poly": 12841,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "torus",
+  "copper",
+  "worn",
+  "station"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12841,
+ "seed": 41815
+}

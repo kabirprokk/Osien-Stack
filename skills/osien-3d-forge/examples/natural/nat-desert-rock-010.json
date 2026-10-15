@@ -1,0 +1,25 @@
+{
+ "id": "nat-desert-rock-010",
+ "name": "Mossy Desert Rock 010",
+ "category": "natural",
+ "prompt": "weathered wooden weathered sandstone desert rock realistic",
+ "kit": "rock",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 30582,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "realistic",
+  "wood",
+  "worn",
+  "desert"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30582,
+ "seed": 41249
+}

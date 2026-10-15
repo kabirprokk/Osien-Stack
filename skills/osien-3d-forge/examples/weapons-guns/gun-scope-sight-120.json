@@ -1,0 +1,26 @@
+{
+ "id": "gun-scope-sight-120",
+ "name": "Ancient Scope Sight 120",
+ "category": "weapons-guns",
+ "prompt": "ancient rusty black scope sight ring torus stylized",
+ "kit": "torus",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "rust",
+  "poly": 24841,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "torus",
+  "stylized",
+  "rust",
+  "ancient",
+  "gun",
+  "scope"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24841,
+ "seed": 41239
+}

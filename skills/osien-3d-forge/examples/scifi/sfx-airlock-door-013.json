@@ -1,0 +1,25 @@
+{
+ "id": "sfx-airlock-door-013",
+ "name": "Orbital Airlock Door 013",
+ "category": "scifi",
+ "prompt": "ancient chrome steel airlock door box panel realistic",
+ "kit": "box",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "chrome",
+  "poly": 25867,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "box",
+  "realistic",
+  "chrome",
+  "ancient",
+  "airlock"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25867,
+ "seed": 41812
+}

@@ -1,0 +1,27 @@
+{
+ "id": "sfx-comms-antenna-014",
+ "name": "Quantum Comms Antenna 014",
+ "category": "scifi",
+ "prompt": "weathered copper tall comms antenna tube mast with mast stylized",
+ "kit": "cylinder",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "copper",
+  "poly": 4132,
+  "parts": [
+   "mast"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "stylized",
+  "copper",
+  "worn",
+  "antenna"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4132,
+ "seed": 41813
+}

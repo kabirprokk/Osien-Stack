@@ -1,0 +1,25 @@
+{
+ "id": "intr-four-poster-bed-075",
+ "name": "Antique Four-Poster Bed 075",
+ "category": "architecture-interior",
+ "prompt": "mossy leather fabric four-poster bed stylized",
+ "kit": "bed",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 12658,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bed",
+  "stylized",
+  "leather",
+  "ancient",
+  "bedroom"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12658,
+ "seed": 41794
+}

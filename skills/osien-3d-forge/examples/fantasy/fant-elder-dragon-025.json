@@ -1,0 +1,24 @@
+{
+ "id": "fant-elder-dragon-025",
+ "name": "Golden Elder Dragon 025",
+ "category": "fantasy",
+ "prompt": "ancient marble ancient elder dragon fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 12368,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "dragon",
+  "marble",
+  "ancient",
+  "elder"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12368,
+ "seed": 41904
+}

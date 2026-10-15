@@ -1,0 +1,25 @@
+{
+ "id": "intr-library-shelf-034",
+ "name": "Modern Library Shelf 034",
+ "category": "architecture-interior",
+ "prompt": "mossy brass dark library bookshelf wall low poly",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 11574,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "lowpoly",
+  "brass",
+  "ancient",
+  "library"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11574,
+ "seed": 41753
+}

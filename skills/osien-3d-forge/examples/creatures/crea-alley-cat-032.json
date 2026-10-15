@@ -1,0 +1,25 @@
+{
+ "id": "crea-alley-cat-032",
+ "name": "Swamp Alley Cat 032",
+ "category": "creatures",
+ "prompt": "weathered marble small orange alley cat low poly",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 12936,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "lowpoly",
+  "marble",
+  "worn",
+  "cat"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12936,
+ "seed": 41571
+}

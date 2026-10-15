@@ -1,0 +1,25 @@
+{
+ "id": "fant-rune-blade-021",
+ "name": "Ancient Rune Blade 021",
+ "category": "fantasy",
+ "prompt": "polished wooden ornate runed rune blade sword realistic",
+ "kit": "swordV2",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 12302,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "swordV2",
+  "realistic",
+  "wood",
+  "pristine",
+  "rune"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12302,
+ "seed": 41900
+}

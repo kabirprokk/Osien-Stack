@@ -1,0 +1,25 @@
+{
+ "id": "sfx-orbital-shuttle-019",
+ "name": "Chrome Orbital Shuttle 019",
+ "category": "scifi",
+ "prompt": "weathered iron white orbital shuttle spacecraft stylized",
+ "kit": "spaceship",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 12335,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "stylized",
+  "iron",
+  "worn",
+  "shuttle"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12335,
+ "seed": 41818
+}

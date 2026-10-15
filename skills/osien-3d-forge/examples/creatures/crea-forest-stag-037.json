@@ -1,0 +1,28 @@
+{
+ "id": "crea-forest-stag-037",
+ "name": "Horned Forest Stag 037",
+ "category": "creatures",
+ "prompt": "worn bone brown forest stag animal with horns and tail stylized",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "bone",
+  "poly": 11835,
+  "parts": [
+   "horns",
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "stylized",
+  "bone",
+  "worn",
+  "deer"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11835,
+ "seed": 41576
+}

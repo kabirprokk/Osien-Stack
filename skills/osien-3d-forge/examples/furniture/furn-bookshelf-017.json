@@ -1,0 +1,26 @@
+{
+ "id": "furn-bookshelf-017",
+ "name": "Small Bookshelf 017",
+ "category": "furniture",
+ "prompt": "brass tall wooden bookshelf shelf with books low poly",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 4234,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "lowpoly",
+  "brass",
+  "balanced",
+  "shelf",
+  "books"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4234,
+ "seed": 41636
+}

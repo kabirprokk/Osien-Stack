@@ -1,0 +1,26 @@
+{
+ "id": "gun-revolver-023",
+ "name": "Ancient Revolver 023",
+ "category": "weapons-guns",
+ "prompt": "steel iron revolver drum cylinder stylized",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 24423,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "stylized",
+  "steel",
+  "balanced",
+  "gun",
+  "revolver"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24423,
+ "seed": 41142
+}

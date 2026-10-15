@@ -1,0 +1,25 @@
+{
+ "id": "furn-plush-armchair-052",
+ "name": "Oaken Plush Armchair 052",
+ "category": "furniture",
+ "prompt": "pristine iron plush fabric armchair seat low poly",
+ "kit": "chair",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 24010,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "chair",
+  "lowpoly",
+  "iron",
+  "pristine",
+  "armchair"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24010,
+ "seed": 41671
+}

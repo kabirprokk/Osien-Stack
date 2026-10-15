@@ -1,0 +1,27 @@
+{
+ "id": "char-battle-droid-070",
+ "name": "Scarred Battle Droid 070",
+ "category": "characters",
+ "prompt": "gold tall battle droid mech with engine low poly",
+ "kit": "robot",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "gold",
+  "poly": 22608,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "lowpoly",
+  "gold",
+  "balanced",
+  "mech"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22608,
+ "seed": 41529
+}

@@ -1,0 +1,24 @@
+{
+ "id": "fant-mana-crystal-011",
+ "name": "Dark Mana Crystal 011",
+ "category": "fantasy",
+ "prompt": "crystal glowing blue mana crystal realistic",
+ "kit": "crystal",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "crystal",
+  "poly": 3964,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "crystal",
+  "realistic",
+  "balanced",
+  "mana"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3964,
+ "seed": 41890
+}

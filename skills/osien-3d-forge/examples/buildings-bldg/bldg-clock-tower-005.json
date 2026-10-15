@@ -1,0 +1,27 @@
+{
+ "id": "bldg-clock-tower-005",
+ "name": "Medieval Clock Tower 005",
+ "category": "buildings-bldg",
+ "prompt": "glass old clock tower building with windows with doors low poly",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 11369,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "lowpoly",
+  "glass",
+  "balanced",
+  "tower"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11369,
+ "seed": 41004
+}

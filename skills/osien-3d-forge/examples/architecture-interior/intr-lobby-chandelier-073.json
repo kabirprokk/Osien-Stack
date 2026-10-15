@@ -1,0 +1,26 @@
+{
+ "id": "intr-lobby-chandelier-073",
+ "name": "Dim Lobby Chandelier 073",
+ "category": "architecture-interior",
+ "prompt": "weathered glass grand lobby chandelier lamp realistic",
+ "kit": "lamp",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 11410,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "lamp",
+  "realistic",
+  "glass",
+  "worn",
+  "chandelier",
+  "lobby"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11410,
+ "seed": 41792
+}

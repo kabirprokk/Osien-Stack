@@ -1,0 +1,21 @@
+{
+ "id": "hum-female-007",
+ "name": "Calm Female 007",
+ "category": "human-players",
+ "kit": "baseFemale",
+ "prompt": "calm swift standing woman",
+ "seed": 40017,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "woman",
+  "female",
+  "casual",
+  "calm",
+  "swift",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

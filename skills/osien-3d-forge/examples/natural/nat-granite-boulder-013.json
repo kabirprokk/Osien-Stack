@@ -1,0 +1,25 @@
+{
+ "id": "nat-granite-boulder-013",
+ "name": "Glowing Granite Boulder 013",
+ "category": "natural",
+ "prompt": "marble gray granite boulder rock low poly",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 10818,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "lowpoly",
+  "marble",
+  "balanced",
+  "boulder"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10818,
+ "seed": 41252
+}

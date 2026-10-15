@@ -1,0 +1,27 @@
+{
+ "id": "char-battle-droid-046",
+ "name": "Cute Battle Droid 046",
+ "category": "characters",
+ "prompt": "leather tall battle droid mech with engine low poly",
+ "kit": "robot",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "leather",
+  "poly": 12234,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "lowpoly",
+  "leather",
+  "balanced",
+  "mech"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12234,
+ "seed": 41505
+}

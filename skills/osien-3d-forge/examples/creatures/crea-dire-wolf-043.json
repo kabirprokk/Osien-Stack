@@ -1,0 +1,25 @@
+{
+ "id": "crea-dire-wolf-043",
+ "name": "Fire Dire Wolf 043",
+ "category": "creatures",
+ "prompt": "worn glass gray dire wolf beast fantasy",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "glass",
+  "poly": 12175,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "fantasy",
+  "glass",
+  "worn",
+  "wolf"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12175,
+ "seed": 41582
+}

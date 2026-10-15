@@ -1,0 +1,25 @@
+{
+ "id": "food-soda-can-013",
+ "name": "Sweet Soda Can 013",
+ "category": "food",
+ "prompt": "worn marble silver soda can cylinder tin low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 3764,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "cylinder",
+  "lowpoly",
+  "marble",
+  "worn",
+  "soda"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3764,
+ "seed": 41952
+}

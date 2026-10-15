@@ -1,0 +1,25 @@
+{
+ "id": "veh-chopper-bike-014",
+ "name": "Blue Chopper Bike 014",
+ "category": "vehicles",
+ "prompt": "iron black chopper motorcycle bike low poly",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 11744,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "lowpoly",
+  "iron",
+  "balanced",
+  "chopper"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11744,
+ "seed": 41373
+}

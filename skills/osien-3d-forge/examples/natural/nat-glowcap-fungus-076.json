@@ -1,0 +1,26 @@
+{
+ "id": "nat-glowcap-fungus-076",
+ "name": "Tall Glowcap Fungus 076",
+ "category": "natural",
+ "prompt": "mossy glass glowing blue glowcap mushroom realistic",
+ "kit": "mushroom",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 27678,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "realistic",
+  "glass",
+  "ancient",
+  "glow",
+  "fungus"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 27678,
+ "seed": 41315
+}

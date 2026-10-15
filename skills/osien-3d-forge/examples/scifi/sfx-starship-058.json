@@ -1,0 +1,27 @@
+{
+ "id": "sfx-starship-058",
+ "name": "Rusty Starship 058",
+ "category": "scifi",
+ "prompt": "weathered obsidian sleek starship rocket with engine and cockpit sci-fi",
+ "kit": "spaceship",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "obsidian",
+  "poly": 12857,
+  "parts": [
+   "engine",
+   "cockpit"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "obsidian",
+  "worn",
+  "starship"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12857,
+ "seed": 41857
+}

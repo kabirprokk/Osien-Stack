@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__GAME_TITLE__ (Three.js)</title>
+<style>html,body{margin:0;height:100%;background:#05070f;color:#fff;font:14px system-ui;overflow:hidden}#hud{position:fixed;top:10px;left:12px;font-weight:700}#c{display:block}</style>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+</head>
+<body>
+<div id="hud">WASD fly · mouse-drag orbit · SCORE 0</div>
+<canvas id="c"></canvas>
+<script type="module">
+import * as THREE from 'three';
+const cv=document.getElementById('c'),hud=document.getElementById('hud');
+const renderer=new THREE.WebGLRenderer({canvas:cv,antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x05070f);scene.fog=new THREE.Fog(0x05070f,20,90);
+const cam=new THREE.PerspectiveCamera(60,1,0.1,200);cam.position.set(0,6,12);
+function resize(){renderer.setSize(innerWidth,innerHeight);cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();}
+addEventListener('resize',resize);resize();
+// arena + player cube + coins
+scene.add(new THREE.HemisphereLight(0x9db4ff,0x1a1030,1.1));
+const sun=new THREE.DirectionalLight(0xffffff,1.4);sun.position.set(6,10,4);scene.add(sun);
+const grid=new THREE.GridHelper(60,30,0x2dd4bf,0x223);scene.add(grid);
+const player=new THREE.Mesh(new THREE.BoxGeometry(1,1,1),new THREE.MeshStandardMaterial({color:0xffd54a,roughness:.4}));player.position.y=1;scene.add(player);
+const coins=[];const cg=new THREE.OctahedronGeometry(.4);
+for(let i=0;i<12;i++){const m=new THREE.Mesh(cg,new THREE.MeshStandardMaterial({color:0x7cf7ff,emissive:0x0e7490}));m.position.set((Math.random()-.5)*36,.8,(Math.random()-.5)*36);scene.add(m);coins.push(m);}
+const keys={};addEventListener('keydown',e=>keys[e.code]=true);addEventListener('keyup',e=>keys[e.code]=false);
+let yaw=0,pitch=.5,drag=false,px=0;addEventListener('pointerdown',e=>{drag=true;px=e.clientX;});addEventListener('pointerup',()=>drag=false);addEventListener('pointermove',e=>{if(drag)yaw+=(e.clientX-px)*.005,px=e.clientX;});
+let score=0,last=performance.now(),paused=false;
+addEventListener('keydown',e=>{if(e.code==='KeyP')paused=!paused;});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)paused=true;});
+function loop(t){requestAnimationFrame(loop);let dt=Math.min((t-last)/1000,.05);last=t;if(paused)return;
+  const sp=10;const f=(keys.KeyW?1:0)-(keys.KeyS?1:0),s=(keys.KeyD?1:0)-(keys.KeyA?1:0);
+  player.position.x+= (Math.sin(yaw)*f+Math.cos(yaw)*s)*sp*dt;player.position.z+=(Math.cos(yaw)*f-Math.sin(yaw)*s)*sp*dt;
+  player.rotation.y+=dt*2;
+  for(const c of coins){c.rotation.y+=dt*3;if(c.visible&&c.position.distanceTo(player.position)<1.2){c.visible=false;score+=100;}}
+  cam.position.set(player.position.x+Math.sin(yaw)*10,6,player.position.z+Math.cos(yaw)*10);cam.lookAt(player.position);
+  hud.textContent='WASD fly · drag orbit · P pause · SCORE '+score+' / '+(coins.length*100);
+  renderer.render(scene,cam);
+}
+requestAnimationFrame(t=>{last=t;requestAnimationFrame(loop);});
+</script>
+</body>
+</html>

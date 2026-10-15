@@ -1,0 +1,24 @@
+{
+ "id": "gun-war-axe-063",
+ "name": "Dark War Axe 063",
+ "category": "weapons-guns",
+ "prompt": "wooden steel war axe hatchet stylized",
+ "kit": "axe",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 12288,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "axe",
+  "stylized",
+  "wood",
+  "balanced"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12288,
+ "seed": 41182
+}

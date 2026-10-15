@@ -1,0 +1,25 @@
+{
+ "id": "intr-court-fountain-022",
+ "name": "Warm Court Fountain 022",
+ "category": "architecture-interior",
+ "prompt": "leather marble court fountain fantasy",
+ "kit": "fountain",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "leather",
+  "poly": 12866,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "fountain",
+  "fantasy",
+  "leather",
+  "balanced",
+  "court"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12866,
+ "seed": 41741
+}

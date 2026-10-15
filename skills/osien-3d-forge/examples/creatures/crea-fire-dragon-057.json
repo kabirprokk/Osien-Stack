@@ -1,0 +1,26 @@
+{
+ "id": "crea-fire-dragon-057",
+ "name": "Golden Fire Dragon 057",
+ "category": "creatures",
+ "prompt": "stone huge fire dragon drake low poly",
+ "kit": "dragon",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 13136,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "lowpoly",
+  "stone",
+  "balanced",
+  "fire",
+  "drake"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13136,
+ "seed": 41596
+}

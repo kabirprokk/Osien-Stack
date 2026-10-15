@@ -1,0 +1,27 @@
+{
+ "id": "sfx-comms-antenna-006",
+ "name": "Deep Comms Antenna 006",
+ "category": "scifi",
+ "prompt": "glass tall comms antenna tube mast with mast realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 12333,
+  "parts": [
+   "mast"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "realistic",
+  "glass",
+  "balanced",
+  "antenna"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12333,
+ "seed": 41805
+}

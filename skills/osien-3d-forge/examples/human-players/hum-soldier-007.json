@@ -1,0 +1,21 @@
+{
+ "id": "hum-soldier-007",
+ "name": "Rugged Soldier 007",
+ "category": "human-players",
+ "kit": "soldierModern",
+ "prompt": "rugged tall modern soldier",
+ "seed": 40077,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "soldier",
+  "modern",
+  "tactical",
+  "rugged",
+  "tall",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

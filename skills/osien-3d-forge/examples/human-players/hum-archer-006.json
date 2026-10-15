@@ -1,0 +1,21 @@
+{
+ "id": "hum-archer-006",
+ "name": "Proud Archer 006",
+ "category": "human-players",
+ "kit": "archer",
+ "prompt": "proud keen swift archer with bow",
+ "seed": 40066,
+ "params": {
+  "quality": "draft",
+  "style": "fantasy"
+ },
+ "tags": [
+  "archer",
+  "bow",
+  "ranger",
+  "proud",
+  "keen",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

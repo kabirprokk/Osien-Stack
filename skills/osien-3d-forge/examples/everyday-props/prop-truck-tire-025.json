@@ -1,0 +1,25 @@
+{
+ "id": "prop-truck-tire-025",
+ "name": "Round Truck Tire 025",
+ "category": "everyday-props",
+ "prompt": "mossy brass black rubber tire torus ring low poly",
+ "kit": "torus",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 22810,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "torus",
+  "lowpoly",
+  "brass",
+  "ancient",
+  "tire"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22810,
+ "seed": 42004
+}

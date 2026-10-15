@@ -1,0 +1,21 @@
+{
+ "id": "veg-pampas-004",
+ "name": "Feathery Pampas 004",
+ "category": "vegetation-ultra",
+ "kit": "pampasPlume",
+ "prompt": "feathery dense pampas plume ornamental grass",
+ "seed": 30031,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "ornamental",
+  "plume",
+  "garden",
+  "feathery",
+  "dense",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

@@ -1,0 +1,26 @@
+{
+ "id": "veh-city-sedan-011",
+ "name": "Red City Sedan 011",
+ "category": "vehicles",
+ "prompt": "worn gold red city sedan car vehicle sci-fi",
+ "kit": "car",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "gold",
+  "poly": 22196,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "scifi",
+  "gold",
+  "worn",
+  "sedan",
+  "city"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22196,
+ "seed": 41370
+}

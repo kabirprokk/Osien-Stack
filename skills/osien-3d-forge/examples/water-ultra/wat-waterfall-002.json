@@ -1,0 +1,21 @@
+{
+ "id": "wat-waterfall-002",
+ "name": "Powerful Waterfall 002",
+ "category": "water-ultra",
+ "kit": "waterfall",
+ "prompt": "powerful misty tall waterfall cascade falls",
+ "seed": 40032,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "waterfall",
+  "cascade",
+  "mist",
+  "powerful",
+  "misty",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

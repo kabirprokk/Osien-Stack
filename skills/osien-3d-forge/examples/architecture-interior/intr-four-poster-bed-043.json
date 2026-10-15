@@ -1,0 +1,25 @@
+{
+ "id": "intr-four-poster-bed-043",
+ "name": "Warm Four-Poster Bed 043",
+ "category": "architecture-interior",
+ "prompt": "leather fabric four-poster bed low poly",
+ "kit": "bed",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "leather",
+  "poly": 29723,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bed",
+  "lowpoly",
+  "leather",
+  "balanced",
+  "bedroom"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 29723,
+ "seed": 41762
+}

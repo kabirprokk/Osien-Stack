@@ -1,0 +1,25 @@
+{
+ "id": "furn-chester-sofa-045",
+ "name": "Oaken Chester Sofa 045",
+ "category": "furniture",
+ "prompt": "ancient iron leather chesterfield sofa couch low poly",
+ "kit": "sofa",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 23068,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "sofa",
+  "lowpoly",
+  "iron",
+  "ancient",
+  "couch"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23068,
+ "seed": 41664
+}

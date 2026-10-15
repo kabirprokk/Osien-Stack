@@ -1,0 +1,25 @@
+{
+ "id": "furn-chester-sofa-015",
+ "name": "Small Chester Sofa 015",
+ "category": "furniture",
+ "prompt": "weathered leather leather chesterfield sofa couch stylized",
+ "kit": "sofa",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 12581,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "sofa",
+  "stylized",
+  "leather",
+  "worn",
+  "couch"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12581,
+ "seed": 41634
+}

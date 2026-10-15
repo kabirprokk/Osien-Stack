@@ -1,0 +1,25 @@
+{
+ "id": "food-soup-bowl-016",
+ "name": "Red Soup Bowl 016",
+ "category": "food",
+ "prompt": "weathered glass white soup bowl sphere dish stylized",
+ "kit": "sphere",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 13105,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "sphere",
+  "stylized",
+  "glass",
+  "worn",
+  "soup"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13105,
+ "seed": 41955
+}

@@ -1,0 +1,21 @@
+{
+ "id": "veg-bramble-001",
+ "name": "Tangled Bramble 001",
+ "category": "vegetation-ultra",
+ "kit": "wildBramble",
+ "prompt": "tangled thorny wild bramble berry bush",
+ "seed": 30101,
+ "params": {
+  "quality": "cinema",
+  "style": "stylized"
+ },
+ "tags": [
+  "wild",
+  "berries",
+  "tangle",
+  "tangled",
+  "thorny",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

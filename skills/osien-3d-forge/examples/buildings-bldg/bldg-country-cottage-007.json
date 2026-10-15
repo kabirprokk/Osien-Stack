@@ -1,0 +1,25 @@
+{
+ "id": "bldg-country-cottage-007",
+ "name": "Old Country Cottage 007",
+ "category": "buildings-bldg",
+ "prompt": "weathered wooden country stone cottage house with chimney and windows realistic",
+ "kit": "house",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 25993,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "realistic",
+  "wood",
+  "worn",
+  "cottage"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25993,
+ "seed": 41006
+}

@@ -1,0 +1,26 @@
+{
+ "id": "gun-scope-sight-108",
+ "name": "Golden Scope Sight 108",
+ "category": "weapons-guns",
+ "prompt": "ancient gold black scope sight ring torus fantasy",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "gold",
+  "poly": 12767,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "torus",
+  "fantasy",
+  "gold",
+  "ancient",
+  "gun",
+  "scope"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12767,
+ "seed": 41227
+}

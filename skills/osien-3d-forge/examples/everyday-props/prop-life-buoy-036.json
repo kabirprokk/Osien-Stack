@@ -1,0 +1,25 @@
+{
+ "id": "prop-life-buoy-036",
+ "name": "Small Life Buoy 036",
+ "category": "everyday-props",
+ "prompt": "fabric red life buoy ring torus low poly",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 11470,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "torus",
+  "lowpoly",
+  "fabric",
+  "balanced",
+  "buoy"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11470,
+ "seed": 42015
+}

@@ -1,0 +1,28 @@
+{
+ "id": "veh-pickup-truck-032",
+ "name": "Fast Pickup Truck 032",
+ "category": "vehicles",
+ "prompt": "weathered rusty blue pickup truck vehicle with wheels and doors sci-fi",
+ "kit": "car",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "rust",
+  "poly": 12367,
+  "parts": [
+   "wheels",
+   "doors"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "scifi",
+  "rust",
+  "worn",
+  "truck"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12367,
+ "seed": 41391
+}

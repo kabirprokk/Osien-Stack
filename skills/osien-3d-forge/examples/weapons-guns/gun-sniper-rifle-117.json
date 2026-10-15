@@ -1,0 +1,26 @@
+{
+ "id": "gun-sniper-rifle-117",
+ "name": "Dark Sniper Rifle 117",
+ "category": "weapons-guns",
+ "prompt": "steel long steel sniper rifle barrel tube low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 12272,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "lowpoly",
+  "steel",
+  "balanced",
+  "gun",
+  "sniper"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12272,
+ "seed": 41236
+}

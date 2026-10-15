@@ -1,0 +1,25 @@
+{
+ "id": "veh-harbor-ferry-020",
+ "name": "Blue Harbor Ferry 020",
+ "category": "vehicles",
+ "prompt": "pristine glass yellow harbor ferry boat sci-fi",
+ "kit": "boat",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "glass",
+  "poly": 25422,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "scifi",
+  "glass",
+  "pristine",
+  "ferry"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25422,
+ "seed": 41379
+}

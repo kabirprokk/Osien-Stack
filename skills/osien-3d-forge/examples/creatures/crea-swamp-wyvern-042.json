@@ -1,0 +1,25 @@
+{
+ "id": "crea-swamp-wyvern-042",
+ "name": "Fire Swamp Wyvern 042",
+ "category": "creatures",
+ "prompt": "obsidian lean swamp wyvern drake fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "obsidian",
+  "poly": 10887,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "fantasy",
+  "obsidian",
+  "balanced",
+  "wyvern"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10887,
+ "seed": 41581
+}

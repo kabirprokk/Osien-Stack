@@ -1,0 +1,26 @@
+{
+ "id": "furn-oak-chair-051",
+ "name": "Round Oak Chair 051",
+ "category": "furniture",
+ "prompt": "ancient leather wooden oak chair low poly",
+ "kit": "chair",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "leather",
+  "poly": 11867,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "chair",
+  "lowpoly",
+  "leather",
+  "ancient",
+  "oak",
+  "seat"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11867,
+ "seed": 41670
+}

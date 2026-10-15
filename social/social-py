@@ -1,0 +1,3 @@
+#!/bin/bash
+# social venv runner: social-py <script> [args...]
+exec ~/.config/opencode/.venvs/social/bin/python ~/.config/opencode/social/"$@"

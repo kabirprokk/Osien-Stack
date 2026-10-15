@@ -1,0 +1,26 @@
+{
+ "id": "gun-katana-030",
+ "name": "Polished Katana 030",
+ "category": "weapons-guns",
+ "prompt": "rusty polished steel katana blade stylized",
+ "kit": "sword",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "rust",
+  "poly": 11690,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "stylized",
+  "rust",
+  "balanced",
+  "katana",
+  "samurai"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11690,
+ "seed": 41149
+}

@@ -1,0 +1,25 @@
+{
+ "id": "char-orc-brute-059",
+ "name": "Golden Orc Brute 059",
+ "category": "characters",
+ "prompt": "polished leather hulking orc warrior stylized",
+ "kit": "warrior",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 11765,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "stylized",
+  "leather",
+  "pristine",
+  "orc"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11765,
+ "seed": 41518
+}

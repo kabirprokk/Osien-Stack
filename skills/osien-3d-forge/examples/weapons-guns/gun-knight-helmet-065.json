@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-helmet-065",
+ "name": "Golden Knight Helmet 065",
+ "category": "weapons-guns",
+ "prompt": "weathered bronze steel knight helmet helm realistic",
+ "kit": "helmet",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "bronze",
+  "poly": 3602,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "helmet",
+  "realistic",
+  "bronze",
+  "worn",
+  "armor"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3602,
+ "seed": 41184
+}

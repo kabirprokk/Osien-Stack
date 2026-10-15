@@ -1,0 +1,25 @@
+{
+ "id": "furn-plush-armchair-002",
+ "name": "Grand Plush Armchair 002",
+ "category": "furniture",
+ "prompt": "weathered brass plush fabric armchair seat low poly",
+ "kit": "chair",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 3909,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "chair",
+  "lowpoly",
+  "brass",
+  "worn",
+  "armchair"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3909,
+ "seed": 41621
+}

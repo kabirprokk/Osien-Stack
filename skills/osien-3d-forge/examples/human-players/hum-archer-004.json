@@ -1,0 +1,21 @@
+{
+ "id": "hum-archer-004",
+ "name": "Grand Archer 004",
+ "category": "human-players",
+ "kit": "archer",
+ "prompt": "grand silent swift archer with bow",
+ "seed": 40064,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "archer",
+  "bow",
+  "ranger",
+  "grand",
+  "silent",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

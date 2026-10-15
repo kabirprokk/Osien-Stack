@@ -1,0 +1,25 @@
+{
+ "id": "intr-court-fountain-078",
+ "name": "Grand Court Fountain 078",
+ "category": "architecture-interior",
+ "prompt": "polished stone marble court fountain stylized",
+ "kit": "fountain",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "stone",
+  "poly": 12407,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "fountain",
+  "stylized",
+  "stone",
+  "pristine",
+  "court"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12407,
+ "seed": 41797
+}

@@ -1,0 +1,25 @@
+{
+ "id": "bldg-arch-bridge-081",
+ "name": "Marble Arch Bridge 081",
+ "category": "buildings-bldg",
+ "prompt": "polished glass stone arch bridge with pillars fantasy",
+ "kit": "bridge",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "glass",
+  "poly": 22441,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "fantasy",
+  "glass",
+  "pristine",
+  "river"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22441,
+ "seed": 41080
+}

@@ -1,0 +1,21 @@
+{
+ "id": "wat-ocean-007",
+ "name": "Foamy Ocean 007",
+ "category": "water-ultra",
+ "kit": "oceanWave",
+ "prompt": "foamy stormy stormy ocean waves surf",
+ "seed": 40007,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "ocean",
+  "surf",
+  "swell",
+  "foamy",
+  "stormy",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

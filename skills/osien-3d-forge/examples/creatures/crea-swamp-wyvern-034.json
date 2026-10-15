@@ -1,0 +1,28 @@
+{
+ "id": "crea-swamp-wyvern-034",
+ "name": "Ancient Swamp Wyvern 034",
+ "category": "creatures",
+ "prompt": "stone lean swamp wyvern drake with horns and tail fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "stone",
+  "poly": 11397,
+  "parts": [
+   "horns",
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "fantasy",
+  "stone",
+  "balanced",
+  "wyvern"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11397,
+ "seed": 41573
+}

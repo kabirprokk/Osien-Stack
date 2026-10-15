@@ -1,0 +1,26 @@
+{
+ "id": "crea-alien-pet-007",
+ "name": "Fire Alien Pet 007",
+ "category": "creatures",
+ "prompt": "wooden small cute alien pet quadruped realistic",
+ "kit": "creature",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 3675,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "realistic",
+  "wood",
+  "balanced",
+  "alien",
+  "pet"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3675,
+ "seed": 41546
+}

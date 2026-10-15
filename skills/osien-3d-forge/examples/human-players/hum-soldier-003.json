@@ -1,0 +1,21 @@
+{
+ "id": "hum-soldier-003",
+ "name": "Silent Soldier 003",
+ "category": "human-players",
+ "kit": "soldierModern",
+ "prompt": "silent steady modern soldier",
+ "seed": 40073,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "soldier",
+  "modern",
+  "tactical",
+  "silent",
+  "steady",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

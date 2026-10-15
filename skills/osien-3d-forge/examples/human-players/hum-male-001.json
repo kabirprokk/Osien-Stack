@@ -1,0 +1,21 @@
+{
+ "id": "hum-male-001",
+ "name": "Wild Male 001",
+ "category": "human-players",
+ "kit": "baseMale",
+ "prompt": "wild calm standing man",
+ "seed": 40001,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "man",
+  "male",
+  "casual",
+  "wild",
+  "calm",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

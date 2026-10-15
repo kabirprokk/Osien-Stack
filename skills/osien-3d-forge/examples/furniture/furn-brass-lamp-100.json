@@ -1,0 +1,25 @@
+{
+ "id": "furn-brass-lamp-100",
+ "name": "Leather Brass Lamp 100",
+ "category": "furniture",
+ "prompt": "ancient wooden brass desk lamp lantern low poly",
+ "kit": "lamp",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 23998,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "lamp",
+  "lowpoly",
+  "wood",
+  "ancient",
+  "lantern"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23998,
+ "seed": 41719
+}

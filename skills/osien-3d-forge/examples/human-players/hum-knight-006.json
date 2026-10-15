@@ -1,0 +1,21 @@
+{
+ "id": "hum-knight-006",
+ "name": "Strong Knight 006",
+ "category": "human-players",
+ "kit": "knight",
+ "prompt": "strong steady noble knight in armor",
+ "seed": 40046,
+ "params": {
+  "quality": "draft",
+  "style": "fantasy"
+ },
+ "tags": [
+  "knight",
+  "armor",
+  "plate",
+  "strong",
+  "steady",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

@@ -1,0 +1,27 @@
+{
+ "id": "fant-elven-castle-026",
+ "name": "Golden Elven Castle 026",
+ "category": "fantasy",
+ "prompt": "gold slender elven castle fortress with gate stylized",
+ "kit": "castle",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "gold",
+  "poly": 12229,
+  "parts": [
+   "gate"
+  ]
+ },
+ "tags": [
+  "fantasy",
+  "castle",
+  "stylized",
+  "gold",
+  "balanced",
+  "elven"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12229,
+ "seed": 41905
+}

@@ -1,0 +1,21 @@
+{
+ "id": "wat-ocean-008",
+ "name": "Stormy Ocean 008",
+ "category": "water-ultra",
+ "kit": "oceanWave",
+ "prompt": "stormy big stormy ocean waves surf",
+ "seed": 40008,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "ocean",
+  "surf",
+  "swell",
+  "stormy",
+  "big",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

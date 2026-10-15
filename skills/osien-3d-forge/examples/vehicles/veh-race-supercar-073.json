@@ -1,0 +1,28 @@
+{
+ "id": "veh-race-supercar-073",
+ "name": "Chrome Race Supercar 073",
+ "category": "vehicles",
+ "prompt": "mossy rusty red sports race car supercar with spoiler low poly",
+ "kit": "carSportsV2",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "rust",
+  "poly": 12002,
+  "parts": [
+   "spoiler"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "carSportsV2",
+  "lowpoly",
+  "rust",
+  "ancient",
+  "sports",
+  "race"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12002,
+ "seed": 41432
+}

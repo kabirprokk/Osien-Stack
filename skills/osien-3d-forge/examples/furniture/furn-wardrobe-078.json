@@ -1,0 +1,28 @@
+{
+ "id": "furn-wardrobe-078",
+ "name": "Cozy Wardrobe 078",
+ "category": "furniture",
+ "prompt": "weathered wooden oak wardrobe cupboard with doors with doors stylized",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 12301,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "stylized",
+  "wood",
+  "worn",
+  "cabinet",
+  "wardrobe"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12301,
+ "seed": 41697
+}

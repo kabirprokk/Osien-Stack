@@ -1,0 +1,21 @@
+{
+ "id": "hum-astronaut-001",
+ "name": "Tall Astronaut 001",
+ "category": "human-players",
+ "kit": "astronaut",
+ "prompt": "tall steady brave astronaut",
+ "seed": 40101,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "astronaut",
+  "space",
+  "suit",
+  "tall",
+  "steady",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

@@ -1,0 +1,24 @@
+{
+ "id": "gun-round-shield-088",
+ "name": "Dark Round Shield 088",
+ "category": "weapons-guns",
+ "prompt": "ancient iron round iron shield buckler realistic",
+ "kit": "shield",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 25845,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "shield",
+  "realistic",
+  "iron",
+  "ancient"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25845,
+ "seed": 41207
+}

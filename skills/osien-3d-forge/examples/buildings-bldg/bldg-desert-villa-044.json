@@ -1,0 +1,29 @@
+{
+ "id": "bldg-desert-villa-044",
+ "name": "Old Desert Villa 044",
+ "category": "buildings-bldg",
+ "prompt": "ancient wooden desert sandstone villa house with doors and windows with windows and doors realistic",
+ "kit": "house",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 12523,
+  "parts": [
+   "windows",
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "realistic",
+  "wood",
+  "ancient",
+  "villa",
+  "desert"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12523,
+ "seed": 41043
+}

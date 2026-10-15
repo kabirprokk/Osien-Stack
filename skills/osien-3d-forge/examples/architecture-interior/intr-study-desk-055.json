@@ -1,0 +1,25 @@
+{
+ "id": "intr-study-desk-055",
+ "name": "Antique Study Desk 055",
+ "category": "architecture-interior",
+ "prompt": "ancient glass oak study desk table stylized",
+ "kit": "table",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 12446,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "table",
+  "stylized",
+  "glass",
+  "ancient",
+  "study"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12446,
+ "seed": 41774
+}

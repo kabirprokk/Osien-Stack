@@ -1,0 +1,25 @@
+{
+ "id": "sfx-recon-rover-044",
+ "name": "Chrome Recon Rover 044",
+ "category": "scifi",
+ "prompt": "chrome lunar recon rover car vehicle stylized",
+ "kit": "car",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 25987,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "car",
+  "stylized",
+  "chrome",
+  "balanced",
+  "rover"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25987,
+ "seed": 41843
+}

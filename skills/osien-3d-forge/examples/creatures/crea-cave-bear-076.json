@@ -1,0 +1,25 @@
+{
+ "id": "crea-cave-bear-076",
+ "name": "Ancient Cave Bear 076",
+ "category": "creatures",
+ "prompt": "pristine bone brown cave bear beast realistic",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 12180,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "realistic",
+  "bone",
+  "pristine",
+  "bear"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12180,
+ "seed": 41615
+}

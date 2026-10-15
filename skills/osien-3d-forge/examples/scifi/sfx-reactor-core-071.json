@@ -1,0 +1,26 @@
+{
+ "id": "sfx-reactor-core-071",
+ "name": "Orbital Reactor Core 071",
+ "category": "scifi",
+ "prompt": "ancient chrome glowing reactor core cylinder column with engine sci-fi",
+ "kit": "cylinder",
+ "params": {
+  "quality": "draft",
+  "style": "scifi",
+  "material": "chrome",
+  "poly": 3951,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "chrome",
+  "ancient",
+  "reactor"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3951,
+ "seed": 41870
+}

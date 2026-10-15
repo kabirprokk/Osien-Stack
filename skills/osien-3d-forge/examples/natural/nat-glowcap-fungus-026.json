@@ -1,0 +1,26 @@
+{
+ "id": "nat-glowcap-fungus-026",
+ "name": "Wild Glowcap Fungus 026",
+ "category": "natural",
+ "prompt": "glass glowing blue glowcap mushroom realistic",
+ "kit": "mushroom",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 27435,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "realistic",
+  "glass",
+  "balanced",
+  "glow",
+  "fungus"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 27435,
+ "seed": 41265
+}

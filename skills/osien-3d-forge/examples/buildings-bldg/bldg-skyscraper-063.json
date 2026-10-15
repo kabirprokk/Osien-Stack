@@ -1,0 +1,26 @@
+{
+ "id": "bldg-skyscraper-063",
+ "name": "Medieval Skyscraper 063",
+ "category": "buildings-bldg",
+ "prompt": "wooden modern glass skyscraper tower with windows low poly",
+ "kit": "building",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 4325,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "lowpoly",
+  "wood",
+  "balanced",
+  "modern",
+  "city"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4325,
+ "seed": 41062
+}

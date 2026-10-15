@@ -1,0 +1,27 @@
+{
+ "id": "sfx-starship-034",
+ "name": "Rusty Starship 034",
+ "category": "scifi",
+ "prompt": "mossy iron sleek starship rocket with engine low poly",
+ "kit": "spaceship",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 24045,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "lowpoly",
+  "iron",
+  "ancient",
+  "starship"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24045,
+ "seed": 41833
+}

@@ -1,0 +1,27 @@
+{
+ "id": "fant-elder-dragon-031",
+ "name": "Runic Elder Dragon 031",
+ "category": "fantasy",
+ "prompt": "mossy bronze ancient elder dragon with tail and wings fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "bronze",
+  "poly": 11038,
+  "parts": [
+   "tail",
+   "wings"
+  ]
+ },
+ "tags": [
+  "fantasy",
+  "dragon",
+  "bronze",
+  "ancient",
+  "elder"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11038,
+ "seed": 41910
+}

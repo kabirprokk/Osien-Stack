@@ -1,0 +1,25 @@
+{
+ "id": "char-battle-droid-030",
+ "name": "Scarred Battle Droid 030",
+ "category": "characters",
+ "prompt": "weathered bone tall battle droid mech realistic",
+ "kit": "robot",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 4136,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "realistic",
+  "bone",
+  "worn",
+  "mech"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4136,
+ "seed": 41489
+}

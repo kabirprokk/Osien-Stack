@@ -1,0 +1,25 @@
+{
+ "id": "nat-granite-boulder-093",
+ "name": "Mossy Granite Boulder 093",
+ "category": "natural",
+ "prompt": "polished bone gray granite boulder rock low poly",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "bone",
+  "poly": 12398,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "lowpoly",
+  "bone",
+  "pristine",
+  "boulder"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12398,
+ "seed": 41332
+}

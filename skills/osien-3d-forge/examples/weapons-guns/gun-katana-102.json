@@ -1,0 +1,26 @@
+{
+ "id": "gun-katana-102",
+ "name": "Polished Katana 102",
+ "category": "weapons-guns",
+ "prompt": "weathered steel polished steel katana blade realistic",
+ "kit": "sword",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "steel",
+  "poly": 25807,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "realistic",
+  "steel",
+  "worn",
+  "katana",
+  "samurai"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25807,
+ "seed": 41221
+}

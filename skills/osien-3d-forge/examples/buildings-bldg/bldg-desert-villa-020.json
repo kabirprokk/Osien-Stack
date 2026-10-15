@@ -1,0 +1,26 @@
+{
+ "id": "bldg-desert-villa-020",
+ "name": "Grand Desert Villa 020",
+ "category": "buildings-bldg",
+ "prompt": "polished iron desert sandstone villa house with doors and windows fantasy",
+ "kit": "house",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "iron",
+  "poly": 23965,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "fantasy",
+  "iron",
+  "pristine",
+  "villa",
+  "desert"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23965,
+ "seed": 41019
+}

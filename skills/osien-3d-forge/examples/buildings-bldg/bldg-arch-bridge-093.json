@@ -1,0 +1,25 @@
+{
+ "id": "bldg-arch-bridge-093",
+ "name": "Towering Arch Bridge 093",
+ "category": "buildings-bldg",
+ "prompt": "weathered marble stone arch bridge with pillars fantasy",
+ "kit": "bridge",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 11893,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "fantasy",
+  "marble",
+  "worn",
+  "river"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11893,
+ "seed": 41092
+}

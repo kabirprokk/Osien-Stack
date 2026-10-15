@@ -1,0 +1,25 @@
+{
+ "id": "nat-quartz-crystal-028",
+ "name": "Grey Quartz Crystal 028",
+ "category": "natural",
+ "prompt": "pristine crystal clear quartz crystal cluster gem realistic",
+ "kit": "crystal",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "crystal",
+  "poly": 3875,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "realistic",
+  "pristine",
+  "quartz",
+  "gem"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3875,
+ "seed": 41267
+}

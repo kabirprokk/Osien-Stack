@@ -1,0 +1,28 @@
+{
+ "id": "veh-harbor-ferry-040",
+ "name": "Fast Harbor Ferry 040",
+ "category": "vehicles",
+ "prompt": "chrome yellow harbor ferry boat with mast and engine stylized",
+ "kit": "boat",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 12990,
+  "parts": [
+   "mast",
+   "engine"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "stylized",
+  "chrome",
+  "balanced",
+  "ferry"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12990,
+ "seed": 41399
+}

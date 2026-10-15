@@ -1,0 +1,21 @@
+{
+ "id": "hum-mage-005",
+ "name": "Noble Mage 005",
+ "category": "human-players",
+ "kit": "mage",
+ "prompt": "noble keen wise mage with staff",
+ "seed": 40055,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "mage",
+  "wizard",
+  "staff",
+  "noble",
+  "keen",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

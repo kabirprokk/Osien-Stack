@@ -1,0 +1,26 @@
+{
+ "id": "gun-katana-114",
+ "name": "Ancient Katana 114",
+ "category": "weapons-guns",
+ "prompt": "ancient chrome polished steel katana blade low poly",
+ "kit": "sword",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "chrome",
+  "poly": 4065,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "lowpoly",
+  "chrome",
+  "ancient",
+  "katana",
+  "samurai"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4065,
+ "seed": 41233
+}

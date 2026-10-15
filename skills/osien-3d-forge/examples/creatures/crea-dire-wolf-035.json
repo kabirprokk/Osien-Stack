@@ -1,0 +1,25 @@
+{
+ "id": "crea-dire-wolf-035",
+ "name": "Dark Dire Wolf 035",
+ "category": "creatures",
+ "prompt": "fabric gray dire wolf beast stylized",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "fabric",
+  "poly": 12383,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "stylized",
+  "fabric",
+  "balanced",
+  "wolf"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12383,
+ "seed": 41574
+}

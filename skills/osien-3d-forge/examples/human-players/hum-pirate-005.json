@@ -1,0 +1,21 @@
+{
+ "id": "hum-pirate-005",
+ "name": "Sturdy Pirate 005",
+ "category": "human-players",
+ "kit": "pirate",
+ "prompt": "sturdy rugged rugged pirate captain",
+ "seed": 40085,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "pirate",
+  "captain",
+  "rogue",
+  "sturdy",
+  "rugged",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

@@ -1,0 +1,21 @@
+{
+ "id": "veg-wheat-006",
+ "name": "Tall Wheat 006",
+ "category": "vegetation-ultra",
+ "kit": "wheatField",
+ "prompt": "tall dense wheat crop field",
+ "seed": 30052,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "wheat",
+  "crop",
+  "farm",
+  "tall",
+  "dense",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

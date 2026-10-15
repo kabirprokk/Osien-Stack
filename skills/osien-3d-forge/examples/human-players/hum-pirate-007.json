@@ -1,0 +1,21 @@
+{
+ "id": "hum-pirate-007",
+ "name": "Grand Pirate 007",
+ "category": "human-players",
+ "kit": "pirate",
+ "prompt": "grand steady rugged pirate captain",
+ "seed": 40087,
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy"
+ },
+ "tags": [
+  "pirate",
+  "captain",
+  "rogue",
+  "grand",
+  "steady",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

@@ -1,0 +1,25 @@
+{
+ "id": "crea-dire-wolf-059",
+ "name": "Young Dire Wolf 059",
+ "category": "creatures",
+ "prompt": "fabric gray dire wolf beast realistic",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 12395,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "realistic",
+  "fabric",
+  "balanced",
+  "wolf"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12395,
+ "seed": 41598
+}

@@ -1,0 +1,25 @@
+{
+ "id": "char-space-marine-029",
+ "name": "Old Space Marine 029",
+ "category": "characters",
+ "prompt": "mossy bone armored space marine soldier avatar stylized",
+ "kit": "soldierModern",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "bone",
+  "poly": 11270,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "stylized",
+  "bone",
+  "ancient",
+  "soldier"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11270,
+ "seed": 41488
+}

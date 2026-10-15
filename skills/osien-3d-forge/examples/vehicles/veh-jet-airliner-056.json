@@ -1,0 +1,25 @@
+{
+ "id": "veh-jet-airliner-056",
+ "name": "Midnight Jet Airliner 056",
+ "category": "vehicles",
+ "prompt": "polished chrome white jet airliner airplane low poly",
+ "kit": "airplane",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "chrome",
+  "poly": 13119,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "lowpoly",
+  "chrome",
+  "pristine",
+  "airliner"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13119,
+ "seed": 41415
+}

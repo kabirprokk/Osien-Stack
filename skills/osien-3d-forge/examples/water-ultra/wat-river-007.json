@@ -1,0 +1,21 @@
+{
+ "id": "wat-river-007",
+ "name": "Rushing River 007",
+ "category": "water-ultra",
+ "kit": "riverRapids",
+ "prompt": "rushing foamy rushing river rapids stream",
+ "seed": 40027,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "river",
+  "rapids",
+  "whitewater",
+  "rushing",
+  "foamy",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

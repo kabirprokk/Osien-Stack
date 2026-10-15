@@ -1,0 +1,25 @@
+{
+ "id": "nat-granite-boulder-103",
+ "name": "Red Granite Boulder 103",
+ "category": "natural",
+ "prompt": "pristine glass gray granite boulder rock low poly",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 12644,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "lowpoly",
+  "glass",
+  "pristine",
+  "boulder"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12644,
+ "seed": 41342
+}

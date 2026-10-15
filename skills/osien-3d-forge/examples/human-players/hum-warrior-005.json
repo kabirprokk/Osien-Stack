@@ -1,0 +1,21 @@
+{
+ "id": "hum-warrior-005",
+ "name": "Brave Warrior 005",
+ "category": "human-players",
+ "kit": "warrior",
+ "prompt": "brave keen fierce warrior",
+ "seed": 40035,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "warrior",
+  "fighter",
+  "tribal",
+  "brave",
+  "keen",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

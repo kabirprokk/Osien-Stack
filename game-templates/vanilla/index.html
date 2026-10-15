@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>__GAME_TITLE__</title>
+<style>
+  html,body{margin:0;height:100%;background:#0b1020;color:#fff;font:14px/1.4 system-ui;overflow:hidden}
+  #c{display:block;width:100vw;height:100vh}
+  #hud{position:fixed;top:10px;left:12px;font-weight:700;letter-spacing:.5px;text-shadow:0 2px 6px #000}
+  #msg{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;pointer-events:none}
+  #msg div{background:rgba(0,0,0,.55);padding:18px 26px;border-radius:14px}
+  #touch{position:fixed;inset:auto 0 12px 0;display:flex;justify-content:space-between;padding:0 14px;touch-action:none}
+  #touch button{font-size:28px;padding:14px 22px;border-radius:14px;border:0;background:rgba(255,255,255,.14);color:#fff}
+  small{opacity:.7}
+</style>
+</head>
+<body>
+<canvas id="c"></canvas>
+<div id="hud">SCORE 0 · BEST 0</div>
+<div id="msg"><div><h1 style="margin:0">__GAME_TITLE__</h1><p>← → move · Space jump · P pause · R restart<br><small>touch buttons below on mobile</small></p></div></div>
+<div id="touch"><button data-k="ArrowLeft">◀</button><button data-k="Space">⤒</button><button data-k="ArrowRight">▶</button></div>
+<script>
+"use strict";
+// PERFECT vanilla loop: rAF + dt clamp + DPR resize + pause + WebAudio + score/best
+const cv=document.getElementById('c'),ctx=cv.getContext('2d'),hud=document.getElementById('hud'),msg=document.getElementById('msg');
+let W=0,H=0,DPR=1;
+function resize(){DPR=Math.min(devicePixelRatio||1,2);W=innerWidth;H=innerHeight;cv.width=W*DPR;cv.height=H*DPR;ctx.setTransform(DPR,0,0,DPR,0,0);}
+addEventListener('resize',resize);resize();
+const keys={};let paused=false,over=false,score=0,best=+(localStorage.getItem('wgf-best')||0);
+// audio (no assets)
+let AC=null;function sfx(f=440,d=.08,t='square',v=.12){try{AC=AC||new(window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain();o.type=t;o.frequency.value=f;g.gain.value=v;o.connect(g);g.connect(AC.destination);o.start();g.gain.exponentialRampToValueAtTime(.001,AC.currentTime+d);o.stop(AC.currentTime+d);}catch{}}
+addEventListener('keydown',e=>{if(['ArrowLeft','ArrowRight','Space','KeyA','KeyD','KeyW'].includes(e.code))e.preventDefault();keys[e.code]=true;if(e.code==='Space'||e.code==='KeyW')P.buf=.12;if(e.code==='KeyP'||e.code==='Escape')paused=!paused;if(e.code==='KeyR')reset();});
+addEventListener('keyup',e=>keys[e.code]=false);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)paused=true;});
+document.querySelectorAll('#touch button').forEach(b=>{const k=b.dataset.k;const on=e=>{e.preventDefault();keys[k]=true;if(k==='Space')P.buf=.12;};const off=e=>{e.preventDefault();keys[k]=false;};b.addEventListener('pointerdown',on);b.addEventListener('pointerup',off);b.addEventListener('pointercancel',off);});
+cv.addEventListener('pointerdown',()=>{if(over)reset();});
+// world
+const P={x:60,y:0,w:28,h:34,vy:0,ground:false,coyote:0,buf:0};
+let plats=[],foes=[],parts=[];for(let i=0;i<120;i++)parts.push({on:false});
+function burst(x,y,n=14,c='#ffd54a'){let k=0;for(const p of parts){if(p.on)continue;Object.assign(p,{on:true,x,y,vx:(Math.random()-.5)*420,vy:-Math.random()*380,life:.6,c});if(++k>=n)break;}}
+function reset(){score=0;over=false;paused=false;P.x=60;P.y=H-160;P.vy=0;plats=[{x:0,y:H-40,w:W,h:40}];for(let i=0;i<6;i++)plats.push({x:120+i*190,y:H-120-(i%3)*90,w:120,h:16});foes=[{x:W-140,y:H-100,vx:0,on:true}];msg.style.display='none';}
+function gameOver(){if(over)return;over=true;best=Math.max(best,score);localStorage.setItem('wgf-best',best);sfx(160,.3,'sawtooth');msg.style.display='flex';msg.firstElementChild.innerHTML='<h1 style=margin:0>GAME OVER</h1><p>Score '+score+' · Best '+best+'<br>press R or tap to restart</p>';}
+reset();
+let last=performance.now();
+function loop(t){requestAnimationFrame(loop);let dt=Math.min((t-last)/1000,.05);last=t;if(paused){ctx.fillStyle='rgba(0,0,0,.5)';ctx.fillRect(0,0,W,H);ctx.fillStyle='#fff';ctx.font='bold 28px system-ui';ctx.fillText('PAUSED (P)',W/2-90,H/2);return;}if(over){draw();return;}
+  // player
+  P.buf-=dt;P.coyote=P.ground?.1:P.coyote-dt;const L=keys.ArrowLeft||keys.KeyA,R=keys.ArrowRight||keys.KeyD;
+  if(P.buf>0&&P.coyote>0){P.vy=-540;P.buf=0;P.coyote=0;sfx(660);burst(P.x+14,P.y+34,8,'#9f7bff');}
+  P.vy+=1500*dt;P.x+=(R?1:0-(L?1:0))*280*dt;P.x=Math.max(0,Math.min(W-P.w,P.x));P.y+=P.vy*dt;P.ground=false;
+  for(const g of plats){if(P.x<g.x+g.w&&P.x+P.w>g.x&&P.y<g.y+g.h&&P.y+P.h>g.y&&P.vy>=0){P.y=g.y-P.h;P.vy=0;P.ground=true;}}
+  if(P.y>H){gameOver();}
+  // foe chases
+  for(const f of foes){if(!f.on)continue;const dx=P.x-f.x,dy=P.y-f.y,d=Math.hypot(dx,dy)||1;f.vx+=(dx/d*700-f.vx)*Math.min(1,3*dt);f.x+=f.vx*dt;f.y+=dy/d*120*dt;if(d<28){burst(P.x,P.y,20,'#ff5a5a');gameOver();}}
+  score+=dt*10;if(score>best){best=Math.floor(score);localStorage.setItem('wgf-best',best);}
+  for(const p of parts){if(!p.on)continue;p.life-=dt;p.vy+=900*dt;p.x+=p.vx*dt;p.y+=p.vy*dt;if(p.life<=0)p.on=false;}
+  draw();
+}
+function draw(){ctx.fillStyle='#0b1020';ctx.fillRect(0,0,W,H);ctx.fillStyle='#16224d';for(let i=0;i<5;i++)ctx.fillRect((i*260-((performance.now()/20)%(W+260)))%(W+260),H-200-i*40,180,10);
+  for(const g of plats){ctx.fillStyle='#2dd4bf';ctx.fillRect(g.x,g.y,g.w,g.h);}
+  ctx.fillStyle='#ffd54a';ctx.fillRect(P.x,P.y,P.w,P.h);ctx.fillStyle='#000';ctx.fillRect(P.x+6,P.y+8,5,5);ctx.fillRect(P.x+17,P.y+8,5,5);
+  for(const f of foes){if(!f.on)continue;ctx.fillStyle='#ff5a5a';ctx.beginPath();ctx.arc(f.x,f.y,14,0,7);ctx.fill();}
+  for(const p of parts){if(!p.on)continue;ctx.globalAlpha=Math.max(0,p.life*2);ctx.fillStyle=p.c;ctx.fillRect(p.x,p.y,4,4);ctx.globalAlpha=1;}
+  hud.textContent='SCORE '+Math.floor(score)+' · BEST '+Math.floor(best);}
+// hide intro after first input
+addEventListener('pointerdown',()=>{msg.style.display='none';},{once:true});
+addEventListener('keydown',()=>{msg.style.display='none';},{once:true});
+requestAnimationFrame(t=>{last=t;requestAnimationFrame(loop);});
+</script>
+</body>
+</html>

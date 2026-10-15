@@ -1,0 +1,25 @@
+{
+ "id": "prop-treasure-chest-050",
+ "name": "Big Treasure Chest 050",
+ "category": "everyday-props",
+ "prompt": "leather iron-bound treasure chest coffer stylized",
+ "kit": "treasureChest",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 30976,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "treasureChest",
+  "stylized",
+  "leather",
+  "balanced",
+  "treasure"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30976,
+ "seed": 42029
+}

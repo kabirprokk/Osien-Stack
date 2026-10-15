@@ -1,0 +1,25 @@
+{
+ "id": "food-soup-bowl-008",
+ "name": "Small Soup Bowl 008",
+ "category": "food",
+ "prompt": "ancient glass white soup bowl sphere dish low poly",
+ "kit": "sphere",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 25212,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "sphere",
+  "lowpoly",
+  "glass",
+  "ancient",
+  "soup"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25212,
+ "seed": 41947
+}

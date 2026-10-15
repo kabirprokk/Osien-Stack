@@ -1,0 +1,28 @@
+{
+ "id": "veh-city-sedan-061",
+ "name": "Desert City Sedan 061",
+ "category": "vehicles",
+ "prompt": "ancient rusty red city sedan car vehicle with windows low poly",
+ "kit": "car",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "rust",
+  "poly": 27620,
+  "parts": [
+   "windows"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "lowpoly",
+  "rust",
+  "ancient",
+  "sedan",
+  "city"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 27620,
+ "seed": 41420
+}

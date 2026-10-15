@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__SITE_TITLE__ — You're invited!</title>
+<meta name="description" content="__SITE_TITLE__: join the celebration. Date, venue and RSVP inside.">
+<style>
+body{margin:0;background:linear-gradient(160deg,#1a1030,#0b1020);color:#fff;font:16px/1.6 system-ui;text-align:center}
+main{max-width:600px;margin:auto;padding:56px 24px}
+h1{font-size:clamp(2.2rem,6vw,3.4rem);margin:.2em 0}
+#cd{display:flex;gap:10px;justify-content:center;margin:24px 0}
+#cd div{background:rgba(255,255,255,.1);border-radius:12px;padding:12px 16px;min-width:70px}
+#cd b{font-size:1.8rem;display:block}
+.btn{display:inline-block;background:#f5b942;color:#241a08;font-weight:700;padding:12px 30px;border-radius:12px;text-decoration:none;margin:6px}
+img{max-width:100%;border-radius:14px}
+</style>
+</head>
+<body>
+<main data-date="2026-12-31T18:00:00">
+<p>🎉 YOU'RE INVITED 🎉</p>
+<h1>__SITE_TITLE__</h1>
+<p>New Year's Eve Party · Sarit Rooftop, Nairobi · 6 PM till late</p>
+<div id="cd"><div><b id="d">–</b>days</div><div><b id="h">–</b>hrs</div><div><b id="m">–</b>min</div><div><b id="s">–</b>sec</div></div>
+<a class="btn" href="mailto:host@example.com?subject=RSVP%20YES%20-%20__SITE_TITLE__">✅ RSVP Yes</a>
+<a class="btn" style="background:rgba(255,255,255,.15);color:#fff" href="mailto:host@example.com?subject=RSVP%20NO%20-%20__SITE_TITLE__">Sorry, can't</a>
+<p style="opacity:.7">Dress code: gold &amp; black · +1 welcome</p>
+</main>
+<script>
+const T=new Date(document.querySelector('main').dataset.date).getTime();
+const P={d:document.getElementById('d'),h:document.getElementById('h'),m:document.getElementById('m'),s:document.getElementById('s')};
+setInterval(()=>{let x=Math.max(0,T-Date.now());P.d.textContent=Math.floor(x/864e5);P.h.textContent=Math.floor(x/36e5)%24;P.m.textContent=Math.floor(x/6e4)%60;P.s.textContent=Math.floor(x/1e3)%60;},500);
+</script>
+</body>
+</html>

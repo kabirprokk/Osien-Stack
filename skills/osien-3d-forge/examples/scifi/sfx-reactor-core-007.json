@@ -1,0 +1,26 @@
+{
+ "id": "sfx-reactor-core-007",
+ "name": "Neon Reactor Core 007",
+ "category": "scifi",
+ "prompt": "ancient obsidian glowing reactor core cylinder column with engine sci-fi",
+ "kit": "cylinder",
+ "params": {
+  "quality": "draft",
+  "style": "scifi",
+  "material": "obsidian",
+  "poly": 3669,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "obsidian",
+  "ancient",
+  "reactor"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3669,
+ "seed": 41806
+}

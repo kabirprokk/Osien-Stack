@@ -1,0 +1,25 @@
+{
+ "id": "food-donut-027",
+ "name": "Ripe Donut 027",
+ "category": "food",
+ "prompt": "bone glazed pink donut torus ring realistic",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 12107,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "torus",
+  "realistic",
+  "bone",
+  "balanced",
+  "donut"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12107,
+ "seed": 41966
+}

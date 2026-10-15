@@ -1,0 +1,21 @@
+{
+ "id": "hum-warrior-001",
+ "name": "Noble Warrior 001",
+ "category": "human-players",
+ "kit": "warrior",
+ "prompt": "noble wild fierce warrior",
+ "seed": 40031,
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy"
+ },
+ "tags": [
+  "warrior",
+  "fighter",
+  "tribal",
+  "noble",
+  "wild",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

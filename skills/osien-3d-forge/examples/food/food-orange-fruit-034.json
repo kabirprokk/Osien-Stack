@@ -1,0 +1,26 @@
+{
+ "id": "food-orange-fruit-034",
+ "name": "Golden Orange Fruit 034",
+ "category": "food",
+ "prompt": "pristine fabric ripe orange sphere fruit realistic",
+ "kit": "sphere",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 21909,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "sphere",
+  "realistic",
+  "fabric",
+  "pristine",
+  "orange",
+  "fruit"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21909,
+ "seed": 41973
+}

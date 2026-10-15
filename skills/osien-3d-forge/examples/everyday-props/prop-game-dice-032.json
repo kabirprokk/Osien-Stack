@@ -1,0 +1,25 @@
+{
+ "id": "prop-game-dice-032",
+ "name": "Heavy Game Dice 032",
+ "category": "everyday-props",
+ "prompt": "weathered glass white game dice cube realistic",
+ "kit": "box",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 4361,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "box",
+  "realistic",
+  "glass",
+  "worn",
+  "dice"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4361,
+ "seed": 42011
+}

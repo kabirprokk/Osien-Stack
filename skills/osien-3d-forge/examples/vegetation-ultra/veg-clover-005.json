@@ -1,0 +1,21 @@
+{
+ "id": "veg-clover-005",
+ "name": "Lush Clover 005",
+ "category": "vegetation-ultra",
+ "kit": "cloverPatch",
+ "prompt": "lush green clover patch ground",
+ "seed": 30045,
+ "params": {
+  "quality": "draft",
+  "style": "stylized"
+ },
+ "tags": [
+  "clover",
+  "lawn-alt",
+  "low",
+  "lush",
+  "green",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

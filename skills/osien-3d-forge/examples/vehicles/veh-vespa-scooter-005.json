@@ -1,0 +1,27 @@
+{
+ "id": "veh-vespa-scooter-005",
+ "name": "Fast Vespa Scooter 005",
+ "category": "vehicles",
+ "prompt": "iron mint vespa scooter bike with engine sci-fi",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "iron",
+  "poly": 11223,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "scifi",
+  "iron",
+  "balanced",
+  "scooter"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11223,
+ "seed": 41364
+}

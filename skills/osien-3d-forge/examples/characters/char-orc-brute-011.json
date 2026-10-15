@@ -1,0 +1,25 @@
+{
+ "id": "char-orc-brute-011",
+ "name": "Scarred Orc Brute 011",
+ "category": "characters",
+ "prompt": "mossy steel hulking orc warrior fantasy",
+ "kit": "warrior",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "steel",
+  "poly": 13034,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "fantasy",
+  "steel",
+  "ancient",
+  "orc"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13034,
+ "seed": 41470
+}

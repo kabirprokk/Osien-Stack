@@ -1,0 +1,25 @@
+{
+ "id": "gun-war-dagger-043",
+ "name": "Dark War Dagger 043",
+ "category": "weapons-guns",
+ "prompt": "polished iron iron war dagger knife stylized",
+ "kit": "sword",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 27346,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "stylized",
+  "iron",
+  "pristine",
+  "dagger"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 27346,
+ "seed": 41162
+}

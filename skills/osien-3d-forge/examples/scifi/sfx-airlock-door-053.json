@@ -1,0 +1,25 @@
+{
+ "id": "sfx-airlock-door-053",
+ "name": "Rusty Airlock Door 053",
+ "category": "scifi",
+ "prompt": "ancient iron steel airlock door box panel low poly",
+ "kit": "box",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 4143,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "box",
+  "lowpoly",
+  "iron",
+  "ancient",
+  "airlock"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4143,
+ "seed": 41852
+}

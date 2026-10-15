@@ -1,0 +1,25 @@
+{
+ "id": "intr-lounge-sofa-036",
+ "name": "Grand Lounge Sofa 036",
+ "category": "architecture-interior",
+ "prompt": "ancient wooden modern lounge sofa low poly",
+ "kit": "sofa",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 11925,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "sofa",
+  "lowpoly",
+  "wood",
+  "ancient",
+  "lounge"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11925,
+ "seed": 41755
+}

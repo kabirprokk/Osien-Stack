@@ -1,0 +1,27 @@
+{
+ "id": "crea-alley-cat-064",
+ "name": "Wild Alley Cat 064",
+ "category": "creatures",
+ "prompt": "weathered marble small orange alley cat with tail fantasy",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 25779,
+  "parts": [
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "fantasy",
+  "marble",
+  "worn",
+  "cat"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25779,
+ "seed": 41603
+}

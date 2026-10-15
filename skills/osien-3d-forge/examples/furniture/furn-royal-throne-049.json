@@ -1,0 +1,26 @@
+{
+ "id": "furn-royal-throne-049",
+ "name": "Cozy Royal Throne 049",
+ "category": "furniture",
+ "prompt": "worn leather golden royal throne seat low poly",
+ "kit": "throne",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "leather",
+  "poly": 25334,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "throne",
+  "lowpoly",
+  "leather",
+  "worn",
+  "royal",
+  "gold"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25334,
+ "seed": 41668
+}

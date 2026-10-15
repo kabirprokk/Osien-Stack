@@ -1,0 +1,26 @@
+{
+ "id": "char-village-knight-001",
+ "name": "Old Village Knight 001",
+ "category": "characters",
+ "prompt": "mossy bone brave kingdom knight warrior in armor sci-fi",
+ "kit": "knight",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "bone",
+  "poly": 12980,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "scifi",
+  "bone",
+  "ancient",
+  "knight",
+  "warrior"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12980,
+ "seed": 41460
+}

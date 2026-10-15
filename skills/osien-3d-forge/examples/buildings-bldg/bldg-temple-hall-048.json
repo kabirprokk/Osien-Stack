@@ -1,0 +1,25 @@
+{
+ "id": "bldg-temple-hall-048",
+ "name": "Ruined Temple Hall 048",
+ "category": "buildings-bldg",
+ "prompt": "weathered steel ancient marble temple hall with columns and steps fantasy",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "steel",
+  "poly": 11337,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "fantasy",
+  "steel",
+  "worn",
+  "temple"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11337,
+ "seed": 41047
+}

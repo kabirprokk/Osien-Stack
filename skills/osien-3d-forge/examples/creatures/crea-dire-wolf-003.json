@@ -1,0 +1,27 @@
+{
+ "id": "crea-dire-wolf-003",
+ "name": "Golden Dire Wolf 003",
+ "category": "creatures",
+ "prompt": "bone gray dire wolf beast with tail low poly",
+ "kit": "creature",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "bone",
+  "poly": 30353,
+  "parts": [
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "lowpoly",
+  "bone",
+  "balanced",
+  "wolf"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30353,
+ "seed": 41542
+}

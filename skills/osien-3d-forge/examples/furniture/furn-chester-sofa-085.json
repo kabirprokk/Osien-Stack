@@ -1,0 +1,25 @@
+{
+ "id": "furn-chester-sofa-085",
+ "name": "Oaken Chester Sofa 085",
+ "category": "furniture",
+ "prompt": "ancient leather leather chesterfield sofa couch stylized",
+ "kit": "sofa",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 12941,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "sofa",
+  "stylized",
+  "leather",
+  "ancient",
+  "couch"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12941,
+ "seed": 41704
+}

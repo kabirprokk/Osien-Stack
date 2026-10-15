@@ -1,0 +1,26 @@
+{
+ "id": "gun-sniper-rifle-009",
+ "name": "Ornate Sniper Rifle 009",
+ "category": "weapons-guns",
+ "prompt": "polished chrome long steel sniper rifle barrel tube stylized",
+ "kit": "cylinder",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 27830,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "stylized",
+  "chrome",
+  "pristine",
+  "gun",
+  "sniper"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 27830,
+ "seed": 41128
+}

@@ -1,0 +1,25 @@
+{
+ "id": "furn-canopy-bed-026",
+ "name": "Grand Canopy Bed 026",
+ "category": "furniture",
+ "prompt": "fabric wooden canopy bed mattress stylized",
+ "kit": "bed",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "fabric",
+  "poly": 4018,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bed",
+  "stylized",
+  "fabric",
+  "balanced",
+  "mattress"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4018,
+ "seed": 41645
+}

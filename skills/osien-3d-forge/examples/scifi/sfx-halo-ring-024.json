@@ -1,0 +1,24 @@
+{
+ "id": "sfx-halo-ring-024",
+ "name": "Lunar Halo Ring 024",
+ "category": "scifi",
+ "prompt": "polished steel spinning halo ring torus station sci-fi",
+ "kit": "torus",
+ "params": {
+  "quality": "print",
+  "style": "scifi",
+  "material": "steel",
+  "poly": 30600,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "torus",
+  "steel",
+  "pristine",
+  "station"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30600,
+ "seed": 41823
+}

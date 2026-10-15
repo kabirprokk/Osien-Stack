@@ -1,0 +1,21 @@
+{
+ "id": "veg-rose-007",
+ "name": "Thorny Rose 007",
+ "category": "vegetation-ultra",
+ "kit": "roseBush",
+ "prompt": "thorny blooming rose bush with red blooms",
+ "seed": 30077,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "roses",
+  "flowering",
+  "garden",
+  "thorny",
+  "blooming",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

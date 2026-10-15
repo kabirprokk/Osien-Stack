@@ -1,0 +1,26 @@
+{
+ "id": "furn-office-desk-053",
+ "name": "Grand Office Desk 053",
+ "category": "furniture",
+ "prompt": "mossy fabric modern office desk table stylized",
+ "kit": "table",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "fabric",
+  "poly": 25719,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "table",
+  "stylized",
+  "fabric",
+  "ancient",
+  "desk",
+  "office"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25719,
+ "seed": 41672
+}

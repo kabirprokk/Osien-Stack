@@ -1,0 +1,25 @@
+{
+ "id": "veh-pickup-truck-092",
+ "name": "Chrome Pickup Truck 092",
+ "category": "vehicles",
+ "prompt": "worn chrome blue pickup truck vehicle realistic",
+ "kit": "car",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "chrome",
+  "poly": 22647,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "realistic",
+  "chrome",
+  "worn",
+  "truck"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22647,
+ "seed": 41451
+}

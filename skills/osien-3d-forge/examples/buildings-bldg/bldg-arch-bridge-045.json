@@ -1,0 +1,25 @@
+{
+ "id": "bldg-arch-bridge-045",
+ "name": "Gothic Arch Bridge 045",
+ "category": "buildings-bldg",
+ "prompt": "iron stone arch bridge with pillars stylized",
+ "kit": "bridge",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 11931,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "stylized",
+  "iron",
+  "balanced",
+  "river"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11931,
+ "seed": 41044
+}

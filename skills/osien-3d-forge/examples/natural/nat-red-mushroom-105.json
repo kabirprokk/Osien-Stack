@@ -1,0 +1,25 @@
+{
+ "id": "nat-red-mushroom-105",
+ "name": "Old Red Mushroom 105",
+ "category": "natural",
+ "prompt": "crystal red spotted mushroom toadstool stylized",
+ "kit": "mushroom",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "crystal",
+  "poly": 24053,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "stylized",
+  "crystal",
+  "balanced",
+  "fungus"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24053,
+ "seed": 41344
+}

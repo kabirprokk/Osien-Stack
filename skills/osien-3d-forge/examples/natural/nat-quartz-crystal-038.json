@@ -1,0 +1,25 @@
+{
+ "id": "nat-quartz-crystal-038",
+ "name": "Amber Quartz Crystal 038",
+ "category": "natural",
+ "prompt": "crystal clear quartz crystal cluster gem realistic",
+ "kit": "crystal",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "crystal",
+  "poly": 25893,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "realistic",
+  "balanced",
+  "quartz",
+  "gem"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25893,
+ "seed": 41277
+}

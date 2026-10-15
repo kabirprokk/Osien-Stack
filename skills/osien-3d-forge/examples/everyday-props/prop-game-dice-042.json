@@ -1,0 +1,25 @@
+{
+ "id": "prop-game-dice-042",
+ "name": "Round Game Dice 042",
+ "category": "everyday-props",
+ "prompt": "iron white game dice cube realistic",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 10999,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "box",
+  "realistic",
+  "iron",
+  "balanced",
+  "dice"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10999,
+ "seed": 42021
+}

@@ -1,0 +1,21 @@
+{
+ "id": "hum-knight-008",
+ "name": "Wild Knight 008",
+ "category": "human-players",
+ "kit": "knight",
+ "prompt": "wild grand noble knight in armor",
+ "seed": 40048,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "knight",
+  "armor",
+  "plate",
+  "wild",
+  "grand",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

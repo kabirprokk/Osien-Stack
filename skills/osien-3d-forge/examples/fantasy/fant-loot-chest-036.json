@@ -1,0 +1,25 @@
+{
+ "id": "fant-loot-chest-036",
+ "name": "Ancient Loot Chest 036",
+ "category": "fantasy",
+ "prompt": "ancient iron old wooden loot treasure chest stylized",
+ "kit": "treasureChest",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 11759,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "treasureChest",
+  "stylized",
+  "iron",
+  "ancient",
+  "loot"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11759,
+ "seed": 41915
+}

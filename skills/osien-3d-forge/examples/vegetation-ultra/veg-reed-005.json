@@ -1,0 +1,21 @@
+{
+ "id": "veg-reed-005",
+ "name": "Lush Reed 005",
+ "category": "vegetation-ultra",
+ "kit": "reedMarsh",
+ "prompt": "lush wet reed marsh pond grass",
+ "seed": 30058,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "marsh",
+  "pond",
+  "wetland",
+  "lush",
+  "wet",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

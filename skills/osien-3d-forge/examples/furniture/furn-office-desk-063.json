@@ -1,0 +1,26 @@
+{
+ "id": "furn-office-desk-063",
+ "name": "Round Office Desk 063",
+ "category": "furniture",
+ "prompt": "iron modern office desk table stylized",
+ "kit": "table",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 13195,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "table",
+  "stylized",
+  "iron",
+  "balanced",
+  "desk",
+  "office"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13195,
+ "seed": 41682
+}

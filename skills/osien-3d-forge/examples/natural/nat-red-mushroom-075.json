@@ -1,0 +1,25 @@
+{
+ "id": "nat-red-mushroom-075",
+ "name": "Glowing Red Mushroom 075",
+ "category": "natural",
+ "prompt": "mossy wooden red spotted mushroom toadstool realistic",
+ "kit": "mushroom",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 11069,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "realistic",
+  "wood",
+  "ancient",
+  "fungus"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11069,
+ "seed": 41314
+}

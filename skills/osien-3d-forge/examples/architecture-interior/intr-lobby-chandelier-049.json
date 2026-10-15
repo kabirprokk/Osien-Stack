@@ -1,0 +1,26 @@
+{
+ "id": "intr-lobby-chandelier-049",
+ "name": "Marble Lobby Chandelier 049",
+ "category": "architecture-interior",
+ "prompt": "pristine stone grand lobby chandelier lamp low poly",
+ "kit": "lamp",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 11127,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "lamp",
+  "lowpoly",
+  "stone",
+  "pristine",
+  "chandelier",
+  "lobby"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11127,
+ "seed": 41768
+}

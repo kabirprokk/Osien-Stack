@@ -1,0 +1,27 @@
+{
+ "id": "fant-elven-castle-014",
+ "name": "Runic Elven Castle 014",
+ "category": "fantasy",
+ "prompt": "mossy obsidian slender elven castle fortress with gate and towers fantasy",
+ "kit": "castle",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "obsidian",
+  "poly": 3972,
+  "parts": [
+   "gate",
+   "towers"
+  ]
+ },
+ "tags": [
+  "fantasy",
+  "castle",
+  "obsidian",
+  "ancient",
+  "elven"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3972,
+ "seed": 41893
+}

@@ -1,0 +1,25 @@
+{
+ "id": "fant-rune-blade-003",
+ "name": "Runic Rune Blade 003",
+ "category": "fantasy",
+ "prompt": "weathered gold ornate runed rune blade sword stylized",
+ "kit": "swordV2",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "gold",
+  "poly": 11804,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "swordV2",
+  "stylized",
+  "gold",
+  "worn",
+  "rune"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11804,
+ "seed": 41882
+}

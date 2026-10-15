@@ -1,0 +1,26 @@
+{
+ "id": "nat-alien-flora-107",
+ "name": "Old Alien Flora 107",
+ "category": "natural",
+ "prompt": "mossy crystal glowing alien plant tentacle flower stylized",
+ "kit": "alienPlant",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "crystal",
+  "poly": 3662,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "alienPlant",
+  "stylized",
+  "crystal",
+  "ancient",
+  "alien",
+  "flora"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3662,
+ "seed": 41346
+}

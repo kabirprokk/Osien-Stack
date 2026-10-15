@@ -1,0 +1,26 @@
+{
+ "id": "sfx-patrol-droid-065",
+ "name": "Lunar Patrol Droid 065",
+ "category": "scifi",
+ "prompt": "iron chrome patrol robot droid with engine sci-fi",
+ "kit": "robot",
+ "params": {
+  "quality": "print",
+  "style": "scifi",
+  "material": "iron",
+  "poly": 31238,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "robot",
+  "iron",
+  "balanced",
+  "patrol"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31238,
+ "seed": 41864
+}

@@ -1,0 +1,25 @@
+{
+ "id": "intr-court-fountain-046",
+ "name": "Grand Court Fountain 046",
+ "category": "architecture-interior",
+ "prompt": "stone marble court fountain low poly",
+ "kit": "fountain",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 13003,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "fountain",
+  "lowpoly",
+  "stone",
+  "balanced",
+  "court"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13003,
+ "seed": 41765
+}

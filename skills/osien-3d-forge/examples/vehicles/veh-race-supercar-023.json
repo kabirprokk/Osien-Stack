@@ -1,0 +1,28 @@
+{
+ "id": "veh-race-supercar-023",
+ "name": "Chrome Race Supercar 023",
+ "category": "vehicles",
+ "prompt": "polished steel red sports race car supercar with spoiler sci-fi",
+ "kit": "carSportsV2",
+ "params": {
+  "quality": "draft",
+  "style": "scifi",
+  "material": "steel",
+  "poly": 3680,
+  "parts": [
+   "spoiler"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "carSportsV2",
+  "scifi",
+  "steel",
+  "pristine",
+  "sports",
+  "race"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3680,
+ "seed": 41382
+}

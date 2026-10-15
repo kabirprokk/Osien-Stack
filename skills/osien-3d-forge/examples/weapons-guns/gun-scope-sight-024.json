@@ -1,0 +1,26 @@
+{
+ "id": "gun-scope-sight-024",
+ "name": "Golden Scope Sight 024",
+ "category": "weapons-guns",
+ "prompt": "weathered chrome black scope sight ring torus low poly",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "chrome",
+  "poly": 12961,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "torus",
+  "lowpoly",
+  "chrome",
+  "worn",
+  "gun",
+  "scope"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12961,
+ "seed": 41143
+}

@@ -1,0 +1,27 @@
+{
+ "id": "sfx-comms-antenna-022",
+ "name": "Neon Comms Antenna 022",
+ "category": "scifi",
+ "prompt": "steel tall comms antenna tube mast with mast realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "steel",
+  "poly": 4385,
+  "parts": [
+   "mast"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "realistic",
+  "steel",
+  "balanced",
+  "antenna"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4385,
+ "seed": 41821
+}

@@ -1,0 +1,26 @@
+{
+ "id": "char-village-knight-057",
+ "name": "Cute Village Knight 057",
+ "category": "characters",
+ "prompt": "steel brave kingdom knight warrior in armor fantasy",
+ "kit": "knight",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "steel",
+  "poly": 4292,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "fantasy",
+  "steel",
+  "balanced",
+  "knight",
+  "warrior"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4292,
+ "seed": 41516
+}

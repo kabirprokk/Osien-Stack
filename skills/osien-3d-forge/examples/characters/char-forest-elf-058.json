@@ -1,0 +1,26 @@
+{
+ "id": "char-forest-elf-058",
+ "name": "Old Forest Elf 058",
+ "category": "characters",
+ "prompt": "chrome slender forest elf mage sci-fi",
+ "kit": "mage",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "chrome",
+  "poly": 11388,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "scifi",
+  "chrome",
+  "balanced",
+  "elf",
+  "mage"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11388,
+ "seed": 41517
+}

@@ -1,0 +1,21 @@
+{
+ "id": "wat-lake-010",
+ "name": "Clear Lake 010",
+ "category": "water-ultra",
+ "kit": "calmLake",
+ "prompt": "clear calm calm mountain lake water",
+ "seed": 40020,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "lake",
+  "still",
+  "mirror",
+  "clear",
+  "calm",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

@@ -1,0 +1,21 @@
+{
+ "id": "wat-river-004",
+ "name": "Foamy River 004",
+ "category": "water-ultra",
+ "kit": "riverRapids",
+ "prompt": "foamy rocky rushing river rapids stream",
+ "seed": 40024,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "river",
+  "rapids",
+  "whitewater",
+  "foamy",
+  "rocky",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

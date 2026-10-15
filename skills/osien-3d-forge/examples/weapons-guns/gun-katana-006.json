@@ -1,0 +1,26 @@
+{
+ "id": "gun-katana-006",
+ "name": "Steel Katana 006",
+ "category": "weapons-guns",
+ "prompt": "wooden polished steel katana blade fantasy",
+ "kit": "sword",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "wood",
+  "poly": 12971,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "fantasy",
+  "wood",
+  "balanced",
+  "katana",
+  "samurai"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12971,
+ "seed": 41125
+}

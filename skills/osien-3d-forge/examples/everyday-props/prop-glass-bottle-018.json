@@ -1,0 +1,25 @@
+{
+ "id": "prop-glass-bottle-018",
+ "name": "Round Glass Bottle 018",
+ "category": "everyday-props",
+ "prompt": "polished fabric green glass bottle capsule realistic",
+ "kit": "capsule",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 23032,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "capsule",
+  "realistic",
+  "fabric",
+  "pristine",
+  "bottle"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23032,
+ "seed": 41997
+}

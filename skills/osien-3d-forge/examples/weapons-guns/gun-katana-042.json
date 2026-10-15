@@ -1,0 +1,26 @@
+{
+ "id": "gun-katana-042",
+ "name": "Ancient Katana 042",
+ "category": "weapons-guns",
+ "prompt": "steel polished steel katana blade low poly",
+ "kit": "sword",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 11312,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "lowpoly",
+  "steel",
+  "balanced",
+  "katana",
+  "samurai"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11312,
+ "seed": 41161
+}

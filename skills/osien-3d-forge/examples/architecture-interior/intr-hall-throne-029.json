@@ -1,0 +1,25 @@
+{
+ "id": "intr-hall-throne-029",
+ "name": "Antique Hall Throne 029",
+ "category": "architecture-interior",
+ "prompt": "weathered fabric marble hall throne realistic",
+ "kit": "throne",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 12811,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "throne",
+  "realistic",
+  "fabric",
+  "worn",
+  "hall"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12811,
+ "seed": 41748
+}

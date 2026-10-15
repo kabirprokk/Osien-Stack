@@ -1,0 +1,25 @@
+{
+ "id": "veh-pickup-truck-062",
+ "name": "Old Pickup Truck 062",
+ "category": "vehicles",
+ "prompt": "chrome blue pickup truck vehicle stylized",
+ "kit": "car",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 12719,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "stylized",
+  "chrome",
+  "balanced",
+  "truck"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12719,
+ "seed": 41421
+}

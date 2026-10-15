@@ -1,0 +1,21 @@
+{
+ "id": "veg-clover-003",
+ "name": "Low Clover 003",
+ "category": "vegetation-ultra",
+ "kit": "cloverPatch",
+ "prompt": "low lush clover patch ground",
+ "seed": 30043,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "clover",
+  "lawn-alt",
+  "low",
+  "low",
+  "lush",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

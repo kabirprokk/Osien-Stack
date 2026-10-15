@@ -1,0 +1,24 @@
+{
+ "id": "gun-round-shield-100",
+ "name": "Polished Round Shield 100",
+ "category": "weapons-guns",
+ "prompt": "ancient steel round iron shield buckler low poly",
+ "kit": "shield",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 22339,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "shield",
+  "lowpoly",
+  "steel",
+  "ancient"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22339,
+ "seed": 41219
+}

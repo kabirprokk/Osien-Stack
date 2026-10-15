@@ -1,0 +1,25 @@
+{
+ "id": "intr-lounge-sofa-004",
+ "name": "Marble Lounge Sofa 004",
+ "category": "architecture-interior",
+ "prompt": "marble modern lounge sofa low poly",
+ "kit": "sofa",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 29452,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "sofa",
+  "lowpoly",
+  "marble",
+  "balanced",
+  "lounge"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 29452,
+ "seed": 41723
+}

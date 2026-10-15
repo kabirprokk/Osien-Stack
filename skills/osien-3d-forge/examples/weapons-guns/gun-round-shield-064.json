@@ -1,0 +1,24 @@
+{
+ "id": "gun-round-shield-064",
+ "name": "Steel Round Shield 064",
+ "category": "weapons-guns",
+ "prompt": "weathered steel round iron shield buckler low poly",
+ "kit": "shield",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 12717,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "shield",
+  "lowpoly",
+  "steel",
+  "worn"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12717,
+ "seed": 41183
+}

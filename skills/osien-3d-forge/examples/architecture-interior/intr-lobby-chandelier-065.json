@@ -1,0 +1,26 @@
+{
+ "id": "intr-lobby-chandelier-065",
+ "name": "Modern Lobby Chandelier 065",
+ "category": "architecture-interior",
+ "prompt": "mossy stone grand lobby chandelier lamp low poly",
+ "kit": "lamp",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 31964,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "lamp",
+  "lowpoly",
+  "stone",
+  "ancient",
+  "chandelier",
+  "lobby"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31964,
+ "seed": 41784
+}

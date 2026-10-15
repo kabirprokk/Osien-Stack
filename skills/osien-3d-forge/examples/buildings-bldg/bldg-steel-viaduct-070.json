@@ -1,0 +1,25 @@
+{
+ "id": "bldg-steel-viaduct-070",
+ "name": "Gothic Steel Viaduct 070",
+ "category": "buildings-bldg",
+ "prompt": "wooden steel viaduct bridge with pillars fantasy",
+ "kit": "bridge",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "wood",
+  "poly": 3636,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "fantasy",
+  "wood",
+  "balanced",
+  "rail"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3636,
+ "seed": 41069
+}

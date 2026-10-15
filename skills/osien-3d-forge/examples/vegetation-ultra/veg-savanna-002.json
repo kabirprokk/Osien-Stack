@@ -1,0 +1,21 @@
+{
+ "id": "veg-savanna-002",
+ "name": "Tall Savanna 002",
+ "category": "vegetation-ultra",
+ "kit": "savannaTuft",
+ "prompt": "tall withered savanna dry grass tuft",
+ "seed": 30022,
+ "params": {
+  "quality": "draft",
+  "style": "stylized"
+ },
+ "tags": [
+  "savanna",
+  "dry",
+  "field",
+  "tall",
+  "withered",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

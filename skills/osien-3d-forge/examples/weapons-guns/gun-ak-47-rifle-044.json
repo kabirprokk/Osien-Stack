@@ -1,0 +1,26 @@
+{
+ "id": "gun-ak-47-rifle-044",
+ "name": "Ornate AK-47 Rifle 044",
+ "category": "weapons-guns",
+ "prompt": "worn wooden rusty ak-47 assault rifle tube barrel realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 25048,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "realistic",
+  "wood",
+  "worn",
+  "gun",
+  "rifle"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25048,
+ "seed": 41163
+}

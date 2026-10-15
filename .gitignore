@@ -1,0 +1,42 @@
+# Runtime data — never commit
+.v3/
+.state/
+.tui-stash/
+brain.jsonl
+notes.md
+opencode.json.bak-*
+memory/
+vault.sh
+vault.json
+.env
+.env.*
+machines/**/runs/
+machines/**/work/
+machines/**/profile/
+machines/**/profile-*/
+machines/**/data/
+machines/**/logs/
+machines/*.json
+machines/*.log
+logs/
+checkpoints/
+telemetry/
+browser-profiles/
+cursor-tracks.jsonl
+*.tmp
+*.lock
+
+# Local/editor/build noise
+node_modules/
+dist/
+coverage/
+.cache/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Keep source and tests visible even when adjacent runtime directories exist
+!machines/doctor.py
+!machines/bench.py
+!machines/test_v4.py
+!machines/cursor_tracker.py

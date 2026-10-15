@@ -1,0 +1,25 @@
+{
+ "id": "crea-forest-stag-013",
+ "name": "Wild Forest Stag 013",
+ "category": "creatures",
+ "prompt": "weathered wooden brown forest stag animal stylized",
+ "kit": "creature",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 32918,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "stylized",
+  "wood",
+  "worn",
+  "deer"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 32918,
+ "seed": 41552
+}

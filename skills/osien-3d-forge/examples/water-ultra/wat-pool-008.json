@@ -1,0 +1,21 @@
+{
+ "id": "wat-pool-008",
+ "name": "Clean Pool 008",
+ "category": "water-ultra",
+ "kit": "poolWater",
+ "prompt": "clean blue swimming pool clear water",
+ "seed": 40048,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "pool",
+  "tiled",
+  "clean",
+  "clean",
+  "blue",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

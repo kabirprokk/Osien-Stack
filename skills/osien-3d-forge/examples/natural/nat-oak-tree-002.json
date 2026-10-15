@@ -1,0 +1,26 @@
+{
+ "id": "nat-oak-tree-002",
+ "name": "Old Oak Tree 002",
+ "category": "natural",
+ "prompt": "pristine glass broad oak tree low poly",
+ "kit": "tree",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 4041,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "lowpoly",
+  "glass",
+  "pristine",
+  "oak",
+  "forest"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4041,
+ "seed": 41241
+}

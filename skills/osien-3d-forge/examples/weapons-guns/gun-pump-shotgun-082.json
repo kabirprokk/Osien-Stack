@@ -1,0 +1,26 @@
+{
+ "id": "gun-pump-shotgun-082",
+ "name": "Rusty Pump Shotgun 082",
+ "category": "weapons-guns",
+ "prompt": "ancient obsidian wooden pump shotgun receiver box realistic",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "obsidian",
+  "poly": 12530,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "box",
+  "realistic",
+  "obsidian",
+  "ancient",
+  "gun",
+  "shotgun"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12530,
+ "seed": 41201
+}

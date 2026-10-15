@@ -1,0 +1,26 @@
+{
+ "id": "nat-amethyst-geode-089",
+ "name": "Old Amethyst Geode 089",
+ "category": "natural",
+ "prompt": "stone purple amethyst crystal geode realistic",
+ "kit": "crystal",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "stone",
+  "poly": 12184,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "realistic",
+  "stone",
+  "balanced",
+  "amethyst",
+  "gem"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12184,
+ "seed": 41328
+}

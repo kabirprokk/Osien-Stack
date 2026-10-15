@@ -1,0 +1,25 @@
+{
+ "id": "gun-war-dagger-091",
+ "name": "Rusty War Dagger 091",
+ "category": "weapons-guns",
+ "prompt": "mossy chrome iron war dagger knife low poly",
+ "kit": "sword",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "chrome",
+  "poly": 11151,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "lowpoly",
+  "chrome",
+  "ancient",
+  "dagger"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11151,
+ "seed": 41210
+}

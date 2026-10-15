@@ -1,0 +1,21 @@
+{
+ "id": "hum-astronaut-003",
+ "name": "Brave Astronaut 003",
+ "category": "human-players",
+ "kit": "astronaut",
+ "prompt": "brave bold brave astronaut",
+ "seed": 40103,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "astronaut",
+  "space",
+  "suit",
+  "brave",
+  "bold",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

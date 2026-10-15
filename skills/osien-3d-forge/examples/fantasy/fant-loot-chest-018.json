@@ -1,0 +1,24 @@
+{
+ "id": "fant-loot-chest-018",
+ "name": "Runic Loot Chest 018",
+ "category": "fantasy",
+ "prompt": "polished marble old wooden loot treasure chest fantasy",
+ "kit": "treasureChest",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 4118,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "treasureChest",
+  "marble",
+  "pristine",
+  "loot"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4118,
+ "seed": 41897
+}

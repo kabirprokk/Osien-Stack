@@ -1,0 +1,26 @@
+{
+ "id": "nat-glowcap-fungus-016",
+ "name": "Wild Glowcap Fungus 016",
+ "category": "natural",
+ "prompt": "wooden glowing blue glowcap mushroom low poly",
+ "kit": "mushroom",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 30326,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "lowpoly",
+  "wood",
+  "balanced",
+  "glow",
+  "fungus"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30326,
+ "seed": 41255
+}

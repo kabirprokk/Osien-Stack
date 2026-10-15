@@ -1,0 +1,25 @@
+{
+ "id": "char-battle-droid-078",
+ "name": "Old Battle Droid 078",
+ "category": "characters",
+ "prompt": "fabric tall battle droid mech realistic",
+ "kit": "robot",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 12013,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "realistic",
+  "fabric",
+  "balanced",
+  "mech"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12013,
+ "seed": 41537
+}

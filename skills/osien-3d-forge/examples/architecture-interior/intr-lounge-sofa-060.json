@@ -1,0 +1,25 @@
+{
+ "id": "intr-lounge-sofa-060",
+ "name": "Small Lounge Sofa 060",
+ "category": "architecture-interior",
+ "prompt": "pristine marble modern lounge sofa stylized",
+ "kit": "sofa",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 24641,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "sofa",
+  "stylized",
+  "marble",
+  "pristine",
+  "lounge"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24641,
+ "seed": 41779
+}

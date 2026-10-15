@@ -1,0 +1,26 @@
+{
+ "id": "intr-lobby-chandelier-041",
+ "name": "Marble Lobby Chandelier 041",
+ "category": "architecture-interior",
+ "prompt": "stone grand lobby chandelier lamp low poly",
+ "kit": "lamp",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 32140,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "lamp",
+  "lowpoly",
+  "stone",
+  "balanced",
+  "chandelier",
+  "lobby"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 32140,
+ "seed": 41760
+}

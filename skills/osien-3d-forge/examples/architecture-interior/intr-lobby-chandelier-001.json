@@ -1,0 +1,26 @@
+{
+ "id": "intr-lobby-chandelier-001",
+ "name": "Small Lobby Chandelier 001",
+ "category": "architecture-interior",
+ "prompt": "weathered glass grand lobby chandelier lamp stylized",
+ "kit": "lamp",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 4050,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "lamp",
+  "stylized",
+  "glass",
+  "worn",
+  "chandelier",
+  "lobby"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4050,
+ "seed": 41720
+}

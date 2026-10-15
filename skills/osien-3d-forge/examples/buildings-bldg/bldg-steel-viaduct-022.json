@@ -1,0 +1,25 @@
+{
+ "id": "bldg-steel-viaduct-022",
+ "name": "Ruined Steel Viaduct 022",
+ "category": "buildings-bldg",
+ "prompt": "polished glass steel viaduct bridge with pillars stylized",
+ "kit": "bridge",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 11793,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "stylized",
+  "glass",
+  "pristine",
+  "rail"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11793,
+ "seed": 41021
+}

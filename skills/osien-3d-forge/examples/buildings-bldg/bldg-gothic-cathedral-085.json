@@ -1,0 +1,26 @@
+{
+ "id": "bldg-gothic-cathedral-085",
+ "name": "Old Gothic Cathedral 085",
+ "category": "buildings-bldg",
+ "prompt": "stone gothic stone castle cathedral with towers and gate stylized",
+ "kit": "castle",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "stone",
+  "poly": 4180,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "castle",
+  "stylized",
+  "stone",
+  "balanced",
+  "gothic",
+  "church"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4180,
+ "seed": 41084
+}

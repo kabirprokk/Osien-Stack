@@ -1,0 +1,26 @@
+{
+ "id": "gun-ornate-excalibur-050",
+ "name": "Steel Ornate Excalibur 050",
+ "category": "weapons-guns",
+ "prompt": "weathered bronze ornate golden enchanted excalibur sword blade stylized",
+ "kit": "swordV2",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "bronze",
+  "poly": 11264,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "swordV2",
+  "stylized",
+  "bronze",
+  "worn",
+  "sword",
+  "legendary"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11264,
+ "seed": 41169
+}

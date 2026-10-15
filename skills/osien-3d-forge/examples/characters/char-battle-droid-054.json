@@ -1,0 +1,25 @@
+{
+ "id": "char-battle-droid-054",
+ "name": "Golden Battle Droid 054",
+ "category": "characters",
+ "prompt": "fabric tall battle droid mech fantasy",
+ "kit": "robot",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "fabric",
+  "poly": 3880,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "fantasy",
+  "fabric",
+  "balanced",
+  "mech"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3880,
+ "seed": 41513
+}

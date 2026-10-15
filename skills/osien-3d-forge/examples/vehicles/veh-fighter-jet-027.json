@@ -1,0 +1,28 @@
+{
+ "id": "veh-fighter-jet-027",
+ "name": "Fast Fighter Jet 027",
+ "category": "vehicles",
+ "prompt": "steel gray fighter jet aircraft with wings and engine sci-fi",
+ "kit": "airplane",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "steel",
+  "poly": 24555,
+  "parts": [
+   "wings",
+   "engine"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "scifi",
+  "steel",
+  "balanced",
+  "fighter"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24555,
+ "seed": 41386
+}

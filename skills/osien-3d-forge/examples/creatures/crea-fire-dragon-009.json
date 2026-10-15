@@ -1,0 +1,29 @@
+{
+ "id": "crea-fire-dragon-009",
+ "name": "Young Fire Dragon 009",
+ "category": "creatures",
+ "prompt": "crystal huge fire dragon drake with horns and wings fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "crystal",
+  "poly": 10941,
+  "parts": [
+   "horns",
+   "wings"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "fantasy",
+  "crystal",
+  "balanced",
+  "fire",
+  "drake"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10941,
+ "seed": 41548
+}

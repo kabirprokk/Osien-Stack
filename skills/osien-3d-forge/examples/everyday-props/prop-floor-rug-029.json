@@ -1,0 +1,25 @@
+{
+ "id": "prop-floor-rug-029",
+ "name": "Red Floor Rug 029",
+ "category": "everyday-props",
+ "prompt": "mossy steel patterned floor rug plane stylized",
+ "kit": "plane",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 11833,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "plane",
+  "stylized",
+  "steel",
+  "ancient",
+  "rug"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11833,
+ "seed": 42008
+}

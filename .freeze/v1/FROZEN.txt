@@ -1,0 +1,2 @@
+FROZEN AT: 2026-10-15T15:16:42+05:30
+v1 = benchmark B control. DO NOT MODIFY. v2 lives in plugin/v2-*.ts

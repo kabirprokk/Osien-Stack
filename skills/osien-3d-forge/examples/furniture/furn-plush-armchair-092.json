@@ -1,0 +1,25 @@
+{
+ "id": "furn-plush-armchair-092",
+ "name": "Cozy Plush Armchair 092",
+ "category": "furniture",
+ "prompt": "leather plush fabric armchair seat stylized",
+ "kit": "chair",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 24029,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "chair",
+  "stylized",
+  "leather",
+  "balanced",
+  "armchair"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24029,
+ "seed": 41711
+}

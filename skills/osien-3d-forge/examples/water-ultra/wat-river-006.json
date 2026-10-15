@@ -1,0 +1,21 @@
+{
+ "id": "wat-river-006",
+ "name": "Rushing River 006",
+ "category": "water-ultra",
+ "kit": "riverRapids",
+ "prompt": "rushing rocky rushing river rapids stream",
+ "seed": 40026,
+ "params": {
+  "quality": "draft",
+  "style": "realistic"
+ },
+ "tags": [
+  "river",
+  "rapids",
+  "whitewater",
+  "rushing",
+  "rocky",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

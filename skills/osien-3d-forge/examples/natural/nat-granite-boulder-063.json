@@ -1,0 +1,25 @@
+{
+ "id": "nat-granite-boulder-063",
+ "name": "Amber Granite Boulder 063",
+ "category": "natural",
+ "prompt": "polished bone gray granite boulder rock low poly",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "bone",
+  "poly": 12062,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "lowpoly",
+  "bone",
+  "pristine",
+  "boulder"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12062,
+ "seed": 41302
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__GAME_TITLE__ (Phaser)</title>
+<style>html,body{margin:0;background:#0b1020;color:#fff;font:14px system-ui}#hud{position:fixed;top:10px;left:12px;font-weight:700}</style>
+<script src="https://cdn.jsdelivr.net/npm/phaser@3.80.1/dist/phaser.min.js"></script>
+</head>
+<body>
+<div id="hud">SCORE 0 · BEST 0 — ← → move · Space jump · R restart</div>
+<script>
+let score=0,best=+(localStorage.getItem('wgf-best')||0);
+const config={type:Phaser.AUTO,width:960,height:540,backgroundColor:'#0b1020',scale:{mode:Phaser.Scale.FIT,autoCenter:Phaser.Scale.CENTER_BOTH},physics:{default:'arcade',arcade:{gravity:{y:1200},debug:false}},scene:{preload,create,update}};
+new Phaser.Game(config);
+let P,cursors,foe,plats,over=false,hud;
+function preload(){}
+function create(){const s=this;plats=s.physics.add.staticGroup();plats.create(480,520,'__').setDisplaySize(960,40).refreshBody();[[200,420],[420,330],[640,250],[840,330]].forEach(([x,y])=>plats.create(x,y,'__').setDisplaySize(140,18).refreshBody());
+  P=s.physics.add.sprite(80,400,null).setDisplaySize(28,34);P.setTint(0xffd54a);P.setCollideWorldBounds(true);P.body.setSize(28,34);
+  foe=s.physics.add.sprite(880,400,null).setDisplaySize(28,28);foe.setTint(0xff5a5a);
+  s.physics.add.collider(P,plats);s.physics.add.collider(foe,plats);
+  s.physics.add.overlap(P,foe,()=>{if(!over){over=true;best=Math.max(best,Math.floor(score));localStorage.setItem('wgf-best',best);s.scene.restart();score=0;over=false;}});
+  cursors=s.input.keyboard.createCursorKeys();s.input.keyboard.on('keydown-R',()=>s.scene.restart());
+  hud=document.getElementById('hud');s.scale.on('resize',()=>s.scale.refresh());
+}
+function update(_,dtMs){if(over)return;const dt=Math.min(dtMs/1000,.05);const L=cursors.left.isDown,R=cursors.right.isDown;
+  P.setVelocityX((R?1:0-(L?1:0))*300);if((cursors.space.isDown||cursors.up.isDown)&&P.body.touching.down)P.setVelocityY(-620);
+  this.physics.moveToObject(foe,P,160);score+=dt*10;hud.textContent='SCORE '+Math.floor(score)+' · BEST '+Math.floor(Math.max(best,score));
+}
+addEventListener('resize',()=>{});
+</script>
+</body>
+</html>

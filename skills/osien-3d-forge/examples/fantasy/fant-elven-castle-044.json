@@ -1,0 +1,27 @@
+{
+ "id": "fant-elven-castle-044",
+ "name": "Dark Elven Castle 044",
+ "category": "fantasy",
+ "prompt": "obsidian slender elven castle fortress with towers and gate fantasy",
+ "kit": "castle",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "obsidian",
+  "poly": 3730,
+  "parts": [
+   "towers",
+   "gate"
+  ]
+ },
+ "tags": [
+  "fantasy",
+  "castle",
+  "obsidian",
+  "balanced",
+  "elven"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3730,
+ "seed": 41923
+}

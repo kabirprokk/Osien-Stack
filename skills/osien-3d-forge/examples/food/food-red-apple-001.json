@@ -1,0 +1,26 @@
+{
+ "id": "food-red-apple-001",
+ "name": "Sweet Red Apple 001",
+ "category": "food",
+ "prompt": "glass shiny red apple sphere fruit realistic",
+ "kit": "sphere",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 21666,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "sphere",
+  "realistic",
+  "glass",
+  "balanced",
+  "apple",
+  "fruit"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21666,
+ "seed": 41940
+}

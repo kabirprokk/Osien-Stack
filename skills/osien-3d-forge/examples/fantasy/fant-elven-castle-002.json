@@ -1,0 +1,25 @@
+{
+ "id": "fant-elven-castle-002",
+ "name": "Golden Elven Castle 002",
+ "category": "fantasy",
+ "prompt": "wooden slender elven castle fortress realistic",
+ "kit": "castle",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 11934,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "castle",
+  "realistic",
+  "wood",
+  "balanced",
+  "elven"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11934,
+ "seed": 41881
+}

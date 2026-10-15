@@ -1,0 +1,21 @@
+{
+ "id": "veg-rose-008",
+ "name": "Lush Rose 008",
+ "category": "vegetation-ultra",
+ "kit": "roseBush",
+ "prompt": "lush thorny rose bush with red blooms",
+ "seed": 30078,
+ "params": {
+  "quality": "cinema",
+  "style": "stylized"
+ },
+ "tags": [
+  "roses",
+  "flowering",
+  "garden",
+  "lush",
+  "thorny",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

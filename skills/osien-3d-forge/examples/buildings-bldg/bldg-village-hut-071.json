@@ -1,0 +1,28 @@
+{
+ "id": "bldg-village-hut-071",
+ "name": "Medieval Village Hut 071",
+ "category": "buildings-bldg",
+ "prompt": "weathered marble village straw hut house with doors with doors stylized",
+ "kit": "house",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 24094,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "stylized",
+  "marble",
+  "worn",
+  "hut",
+  "village"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24094,
+ "seed": 41070
+}

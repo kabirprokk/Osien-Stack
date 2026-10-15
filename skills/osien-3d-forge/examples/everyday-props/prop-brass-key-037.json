@@ -1,0 +1,25 @@
+{
+ "id": "prop-brass-key-037",
+ "name": "Small Brass Key 037",
+ "category": "everyday-props",
+ "prompt": "pristine wooden small brass key box teeth low poly",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 11280,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "box",
+  "lowpoly",
+  "wood",
+  "pristine",
+  "key"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11280,
+ "seed": 42016
+}

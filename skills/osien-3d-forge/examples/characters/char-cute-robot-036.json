@@ -1,0 +1,26 @@
+{
+ "id": "char-cute-robot-036",
+ "name": "Brave Cute Robot 036",
+ "category": "characters",
+ "prompt": "ancient chrome cute little robot droid low poly",
+ "kit": "robot",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "chrome",
+  "poly": 3626,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "lowpoly",
+  "chrome",
+  "ancient",
+  "droid",
+  "cute"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3626,
+ "seed": 41495
+}

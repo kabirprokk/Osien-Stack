@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Invoice — __SITE_TITLE__</title>
+<meta name="description" content="Invoice from __SITE_TITLE__. Edit in browser, print to PDF.">
+<style>
+body{margin:0;background:#e8e8e8;color:#111;font:15px/1.5 system-ui}
+main{max-width:720px;margin:24px auto;background:#fff;border-radius:14px;padding:36px}
+h1{margin:0}.top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+table{width:100%;border-collapse:collapse;margin:20px 0}
+th,td{border:1px solid #ddd;padding:8px 10px;text-align:left}
+th{background:#0b1020;color:#fff}
+td[contenteditable]{background:#fffde7}
+.tot{text-align:right;font-size:1.1rem}.tot b{font-size:1.4rem}
+#printbtn{position:fixed;bottom:16px;right:16px;font-size:16px;padding:12px 22px;border-radius:12px;border:0;background:#0b1020;color:#fff;cursor:pointer}
+[contenteditable]:hover{outline:2px dashed #2dd4bf}
+img{max-width:100%}
+@media print{body{background:#fff}#printbtn,.hint{display:none}main{margin:0;border-radius:0}}
+</style>
+</head>
+<body>
+<main>
+<div class="top"><div><h1 contenteditable>__SITE_TITLE__</h1><p contenteditable>Koinange St, Nairobi<br>hello@example.com · +254 700 000 000</p></div><div style="text-align:right"><h2>INVOICE <span id="no" contenteditable>#001</span></h2><p>Date: <span contenteditable>2026-10-01</span><br>Due: <span contenteditable>2026-10-15</span></p></div></div>
+<p>Bill to: <strong contenteditable>Client Name, Company</strong></p>
+<table id="items"><tr><th>Description (click to edit)</th><th>Qty</th><th>Price</th><th>Total</th></tr>
+<tr><td contenteditable>Logo design</td><td contenteditable>1</td><td contenteditable>15000</td><td class="row-tot">15000</td></tr>
+<tr><td contenteditable>Landing page</td><td contenteditable>1</td><td contenteditable>25000</td><td class="row-tot">25000</td></tr>
+</table>
+<button class="hint" onclick="addRow()" style="padding:8px 16px;border-radius:8px">+ Add row</button>
+<p class="tot">Subtotal: <span id="sub">40000</span><br>Tax (16%): <span id="tax">6400</span><br><b>Balance due: KES <span id="grand">46400</span></b></p>
+<p class="hint" style="color:#666">Tip: click any yellow cell to edit, then Print → Save as PDF.</p>
+<p>M-Pesa Till: <strong contenteditable>555777</strong> · Thank you for your business!</p>
+</main>
+<button id="printbtn" onclick="window.print()">⎙ Save as PDF</button>
+<script>
+function recalc(){let s=0;document.querySelectorAll('#items tr').forEach((r,i)=>{if(!i)return;const q=+r.cells[1].textContent||0,p=+r.cells[2].textContent||0;r.cells[3].textContent=q*p;s+=q*p;});document.getElementById('sub').textContent=s;const t=Math.round(s*0.16);document.getElementById('tax').textContent=t;document.getElementById('grand').textContent=s+t;}
+function addRow(){const r=document.getElementById('items').insertRow();['New item','1','0'].forEach((t,i)=>{const c=r.insertCell();c.contentEditable=true;c.textContent=t;});const c=r.insertCell();c.className='row-tot';c.textContent='0';recalc();}
+document.getElementById('items').addEventListener('input',recalc);recalc();
+</script>
+</body>
+</html>

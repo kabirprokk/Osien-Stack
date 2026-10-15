@@ -1,0 +1,21 @@
+{
+ "id": "hum-warrior-009",
+ "name": "Sturdy Warrior 009",
+ "category": "human-players",
+ "kit": "warrior",
+ "prompt": "sturdy wild fierce warrior",
+ "seed": 40039,
+ "params": {
+  "quality": "draft",
+  "style": "fantasy"
+ },
+ "tags": [
+  "warrior",
+  "fighter",
+  "tribal",
+  "sturdy",
+  "wild",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

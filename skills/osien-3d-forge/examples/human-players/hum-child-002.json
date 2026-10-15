@@ -1,0 +1,21 @@
+{
+ "id": "hum-child-002",
+ "name": "Grand Child 002",
+ "category": "human-players",
+ "kit": "baseChild",
+ "prompt": "grand rugged young child",
+ "seed": 40022,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "child",
+  "kid",
+  "young",
+  "grand",
+  "rugged",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

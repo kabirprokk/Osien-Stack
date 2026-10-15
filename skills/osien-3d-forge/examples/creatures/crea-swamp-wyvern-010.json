@@ -1,0 +1,28 @@
+{
+ "id": "crea-swamp-wyvern-010",
+ "name": "Fire Swamp Wyvern 010",
+ "category": "creatures",
+ "prompt": "worn leather lean swamp wyvern drake with tail and horns fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "leather",
+  "poly": 4380,
+  "parts": [
+   "tail",
+   "horns"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "fantasy",
+  "leather",
+  "worn",
+  "wyvern"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4380,
+ "seed": 41549
+}

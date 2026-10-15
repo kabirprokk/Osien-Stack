@@ -1,0 +1,25 @@
+{
+ "id": "sfx-recon-rover-060",
+ "name": "Quantum Recon Rover 060",
+ "category": "scifi",
+ "prompt": "weathered glass lunar recon rover car vehicle stylized",
+ "kit": "car",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 12935,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "car",
+  "stylized",
+  "glass",
+  "worn",
+  "rover"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12935,
+ "seed": 41859
+}

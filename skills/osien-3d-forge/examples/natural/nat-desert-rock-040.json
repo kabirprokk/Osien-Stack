@@ -1,0 +1,25 @@
+{
+ "id": "nat-desert-rock-040",
+ "name": "Old Desert Rock 040",
+ "category": "natural",
+ "prompt": "glass weathered sandstone desert rock stylized",
+ "kit": "rock",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 30048,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "stylized",
+  "glass",
+  "balanced",
+  "desert"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30048,
+ "seed": 41279
+}

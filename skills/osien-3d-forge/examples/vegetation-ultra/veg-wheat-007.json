@@ -1,0 +1,21 @@
+{
+ "id": "veg-wheat-007",
+ "name": "Dense Wheat 007",
+ "category": "vegetation-ultra",
+ "kit": "wheatField",
+ "prompt": "dense ripe wheat crop field",
+ "seed": 30053,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "wheat",
+  "crop",
+  "farm",
+  "dense",
+  "ripe",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

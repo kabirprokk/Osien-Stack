@@ -1,0 +1,21 @@
+{
+ "id": "hum-ninja-010",
+ "name": "Silent Ninja 010",
+ "category": "human-players",
+ "kit": "ninja",
+ "prompt": "silent bold silent ninja",
+ "seed": 40100,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "ninja",
+  "stealth",
+  "shadow",
+  "silent",
+  "bold",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

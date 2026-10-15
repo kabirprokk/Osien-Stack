@@ -1,0 +1,21 @@
+{
+ "id": "veg-rose-001",
+ "name": "Lush Rose 001",
+ "category": "vegetation-ultra",
+ "kit": "roseBush",
+ "prompt": "lush blooming rose bush with red blooms",
+ "seed": 30071,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "roses",
+  "flowering",
+  "garden",
+  "lush",
+  "blooming",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

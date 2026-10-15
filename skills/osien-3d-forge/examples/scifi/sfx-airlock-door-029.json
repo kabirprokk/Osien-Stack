@@ -1,0 +1,25 @@
+{
+ "id": "sfx-airlock-door-029",
+ "name": "Rusty Airlock Door 029",
+ "category": "scifi",
+ "prompt": "weathered chrome steel airlock door box panel realistic",
+ "kit": "box",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "chrome",
+  "poly": 3965,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "box",
+  "realistic",
+  "chrome",
+  "worn",
+  "airlock"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3965,
+ "seed": 41828
+}

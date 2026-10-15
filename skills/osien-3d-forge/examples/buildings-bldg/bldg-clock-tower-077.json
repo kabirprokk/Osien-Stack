@@ -1,0 +1,25 @@
+{
+ "id": "bldg-clock-tower-077",
+ "name": "Gothic Clock Tower 077",
+ "category": "buildings-bldg",
+ "prompt": "glass old clock tower building with windows stylized",
+ "kit": "building",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 22797,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "stylized",
+  "glass",
+  "balanced",
+  "tower"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22797,
+ "seed": 41076
+}

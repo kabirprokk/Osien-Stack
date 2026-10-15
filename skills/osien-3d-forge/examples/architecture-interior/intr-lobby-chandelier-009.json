@@ -1,0 +1,26 @@
+{
+ "id": "intr-lobby-chandelier-009",
+ "name": "Small Lobby Chandelier 009",
+ "category": "architecture-interior",
+ "prompt": "weathered stone grand lobby chandelier lamp realistic",
+ "kit": "lamp",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "stone",
+  "poly": 22563,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "lamp",
+  "realistic",
+  "stone",
+  "worn",
+  "chandelier",
+  "lobby"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22563,
+ "seed": 41728
+}

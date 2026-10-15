@@ -1,0 +1,21 @@
+{
+ "id": "veg-moss-003",
+ "name": "Damp Moss 003",
+ "category": "vegetation-ultra",
+ "kit": "mossCarpet",
+ "prompt": "damp soft mossy ground moss carpet",
+ "seed": 30036,
+ "params": {
+  "quality": "cinema",
+  "style": "stylized"
+ },
+ "tags": [
+  "moss",
+  "forest-floor",
+  "damp",
+  "damp",
+  "soft",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

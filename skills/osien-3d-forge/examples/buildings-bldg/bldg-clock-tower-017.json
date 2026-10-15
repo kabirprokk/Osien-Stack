@@ -1,0 +1,27 @@
+{
+ "id": "bldg-clock-tower-017",
+ "name": "Gothic Clock Tower 017",
+ "category": "buildings-bldg",
+ "prompt": "wooden old clock tower building with windows with doors fantasy",
+ "kit": "building",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "wood",
+  "poly": 3656,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "fantasy",
+  "wood",
+  "balanced",
+  "tower"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3656,
+ "seed": 41016
+}

@@ -1,0 +1,25 @@
+{
+ "id": "sfx-airlock-door-069",
+ "name": "Quantum Airlock Door 069",
+ "category": "scifi",
+ "prompt": "mossy glass steel airlock door box panel realistic",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 12754,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "box",
+  "realistic",
+  "glass",
+  "ancient",
+  "airlock"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12754,
+ "seed": 41868
+}

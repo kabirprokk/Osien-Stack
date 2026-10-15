@@ -1,0 +1,21 @@
+{
+ "id": "veg-rose-004",
+ "name": "Thorny Rose 004",
+ "category": "vegetation-ultra",
+ "kit": "roseBush",
+ "prompt": "thorny lush rose bush with red blooms",
+ "seed": 30074,
+ "params": {
+  "quality": "draft",
+  "style": "stylized"
+ },
+ "tags": [
+  "roses",
+  "flowering",
+  "garden",
+  "thorny",
+  "lush",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

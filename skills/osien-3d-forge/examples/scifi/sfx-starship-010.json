@@ -1,0 +1,25 @@
+{
+ "id": "sfx-starship-010",
+ "name": "Chrome Starship 010",
+ "category": "scifi",
+ "prompt": "ancient steel sleek starship rocket realistic",
+ "kit": "spaceship",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "steel",
+  "poly": 4313,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "realistic",
+  "steel",
+  "ancient",
+  "starship"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4313,
+ "seed": 41809
+}

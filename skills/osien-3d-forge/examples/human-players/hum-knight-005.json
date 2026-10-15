@@ -1,0 +1,21 @@
+{
+ "id": "hum-knight-005",
+ "name": "Swift Knight 005",
+ "category": "human-players",
+ "kit": "knight",
+ "prompt": "swift bold noble knight in armor",
+ "seed": 40045,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "knight",
+  "armor",
+  "plate",
+  "swift",
+  "bold",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

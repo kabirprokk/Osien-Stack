@@ -1,0 +1,26 @@
+{
+ "id": "bldg-wooden-cabin-066",
+ "name": "Gothic Wooden Cabin 066",
+ "category": "buildings-bldg",
+ "prompt": "wooden wooden cabin hut house with chimney realistic",
+ "kit": "house",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 11209,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "realistic",
+  "wood",
+  "balanced",
+  "cabin",
+  "forest"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11209,
+ "seed": 41065
+}

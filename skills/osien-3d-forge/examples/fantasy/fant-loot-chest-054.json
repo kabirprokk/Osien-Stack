@@ -1,0 +1,25 @@
+{
+ "id": "fant-loot-chest-054",
+ "name": "Golden Loot Chest 054",
+ "category": "fantasy",
+ "prompt": "ancient iron old wooden loot treasure chest realistic",
+ "kit": "treasureChest",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 26237,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "treasureChest",
+  "realistic",
+  "iron",
+  "ancient",
+  "loot"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26237,
+ "seed": 41933
+}

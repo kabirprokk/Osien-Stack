@@ -1,0 +1,21 @@
+{
+ "id": "veg-reed-001",
+ "name": "Wet Reed 001",
+ "category": "vegetation-ultra",
+ "kit": "reedMarsh",
+ "prompt": "wet tall reed marsh pond grass",
+ "seed": 30054,
+ "params": {
+  "quality": "draft",
+  "style": "stylized"
+ },
+ "tags": [
+  "marsh",
+  "pond",
+  "wetland",
+  "wet",
+  "tall",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

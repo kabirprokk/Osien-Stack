@@ -1,0 +1,21 @@
+{
+ "id": "hum-female-004",
+ "name": "Proud Female 004",
+ "category": "human-players",
+ "kit": "baseFemale",
+ "prompt": "proud wild standing woman",
+ "seed": 40014,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "woman",
+  "female",
+  "casual",
+  "proud",
+  "wild",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

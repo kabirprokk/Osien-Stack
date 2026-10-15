@@ -1,0 +1,25 @@
+{
+ "id": "food-sweet-potato-028",
+ "name": "Fresh Sweet Potato 028",
+ "category": "food",
+ "prompt": "ancient bone orange sweet potato cone realistic",
+ "kit": "cone",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 4166,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "cone",
+  "realistic",
+  "bone",
+  "ancient",
+  "potato"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4166,
+ "seed": 41967
+}

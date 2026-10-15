@@ -1,0 +1,21 @@
+{
+ "id": "wat-puddle-007",
+ "name": "Shallow Puddle 007",
+ "category": "water-ultra",
+ "kit": "puddle",
+ "prompt": "shallow rainy rainy street puddle water",
+ "seed": 40057,
+ "params": {
+  "quality": "draft",
+  "style": "realistic"
+ },
+ "tags": [
+  "puddle",
+  "rain",
+  "street",
+  "shallow",
+  "rainy",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

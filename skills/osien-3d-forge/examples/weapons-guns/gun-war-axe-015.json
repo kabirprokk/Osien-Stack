@@ -1,0 +1,24 @@
+{
+ "id": "gun-war-axe-015",
+ "name": "Golden War Axe 015",
+ "category": "weapons-guns",
+ "prompt": "weathered iron steel war axe hatchet realistic",
+ "kit": "axe",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 11943,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "axe",
+  "realistic",
+  "iron",
+  "worn"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11943,
+ "seed": 41134
+}

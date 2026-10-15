@@ -1,0 +1,26 @@
+{
+ "id": "bldg-apartment-block-016",
+ "name": "Old Apartment Block 016",
+ "category": "buildings-bldg",
+ "prompt": "brass brick apartment building block with windows and doors stylized",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "brass",
+  "poly": 11311,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "stylized",
+  "brass",
+  "balanced",
+  "city",
+  "housing"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11311,
+ "seed": 41015
+}

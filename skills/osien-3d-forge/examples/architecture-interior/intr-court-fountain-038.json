@@ -1,0 +1,25 @@
+{
+ "id": "intr-court-fountain-038",
+ "name": "Warm Court Fountain 038",
+ "category": "architecture-interior",
+ "prompt": "stone marble court fountain low poly",
+ "kit": "fountain",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 11021,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "fountain",
+  "lowpoly",
+  "stone",
+  "balanced",
+  "court"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11021,
+ "seed": 41757
+}

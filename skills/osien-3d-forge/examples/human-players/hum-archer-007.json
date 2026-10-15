@@ -1,0 +1,21 @@
+{
+ "id": "hum-archer-007",
+ "name": "Keen Archer 007",
+ "category": "human-players",
+ "kit": "archer",
+ "prompt": "keen tall swift archer with bow",
+ "seed": 40067,
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy"
+ },
+ "tags": [
+  "archer",
+  "bow",
+  "ranger",
+  "keen",
+  "tall",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

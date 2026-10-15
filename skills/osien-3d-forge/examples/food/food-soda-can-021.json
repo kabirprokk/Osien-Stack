@@ -1,0 +1,25 @@
+{
+ "id": "food-soda-can-021",
+ "name": "Big Soda Can 021",
+ "category": "food",
+ "prompt": "ancient glass silver soda can cylinder tin low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 22922,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "cylinder",
+  "lowpoly",
+  "glass",
+  "ancient",
+  "soda"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22922,
+ "seed": 41960
+}

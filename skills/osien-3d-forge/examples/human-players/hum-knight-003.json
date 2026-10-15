@@ -1,0 +1,21 @@
+{
+ "id": "hum-knight-003",
+ "name": "Grand Knight 003",
+ "category": "human-players",
+ "kit": "knight",
+ "prompt": "grand bold noble knight in armor",
+ "seed": 40043,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "knight",
+  "armor",
+  "plate",
+  "grand",
+  "bold",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

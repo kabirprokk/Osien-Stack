@@ -1,0 +1,26 @@
+{
+ "id": "gun-pump-shotgun-058",
+ "name": "Ancient Pump Shotgun 058",
+ "category": "weapons-guns",
+ "prompt": "pristine chrome wooden pump shotgun receiver box stylized",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 12799,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "box",
+  "stylized",
+  "chrome",
+  "pristine",
+  "gun",
+  "shotgun"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12799,
+ "seed": 41177
+}

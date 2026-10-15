@@ -1,0 +1,29 @@
+{
+ "id": "veh-pirate-galley-089",
+ "name": "Midnight Pirate Galley 089",
+ "category": "vehicles",
+ "prompt": "weathered gold old pirate galley ship with mast and sails realistic",
+ "kit": "boat",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "gold",
+  "poly": 28371,
+  "parts": [
+   "mast",
+   "sails"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "realistic",
+  "gold",
+  "worn",
+  "pirate",
+  "ship"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 28371,
+ "seed": 41448
+}

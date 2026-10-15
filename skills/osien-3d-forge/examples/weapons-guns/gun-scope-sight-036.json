@@ -1,0 +1,26 @@
+{
+ "id": "gun-scope-sight-036",
+ "name": "Ornate Scope Sight 036",
+ "category": "weapons-guns",
+ "prompt": "polished obsidian black scope sight ring torus low poly",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "obsidian",
+  "poly": 13122,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "torus",
+  "lowpoly",
+  "obsidian",
+  "pristine",
+  "gun",
+  "scope"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13122,
+ "seed": 41155
+}

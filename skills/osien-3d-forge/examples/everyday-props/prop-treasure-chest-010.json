@@ -1,0 +1,25 @@
+{
+ "id": "prop-treasure-chest-010",
+ "name": "Round Treasure Chest 010",
+ "category": "everyday-props",
+ "prompt": "polished fabric iron-bound treasure chest coffer low poly",
+ "kit": "treasureChest",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 24229,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "treasureChest",
+  "lowpoly",
+  "fabric",
+  "pristine",
+  "treasure"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24229,
+ "seed": 41989
+}

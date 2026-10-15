@@ -1,0 +1,27 @@
+{
+ "id": "fant-elder-dragon-037",
+ "name": "Mystic Elder Dragon 037",
+ "category": "fantasy",
+ "prompt": "marble ancient elder dragon with wings and tail fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 32123,
+  "parts": [
+   "wings",
+   "tail"
+  ]
+ },
+ "tags": [
+  "fantasy",
+  "dragon",
+  "marble",
+  "balanced",
+  "elder"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 32123,
+ "seed": 41916
+}

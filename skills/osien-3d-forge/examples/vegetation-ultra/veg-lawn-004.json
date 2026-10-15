@@ -1,0 +1,21 @@
+{
+ "id": "veg-lawn-004",
+ "name": "Manicured Lawn 004",
+ "category": "vegetation-ultra",
+ "kit": "lawnGrass",
+ "prompt": "manicured green manicured lawn grass",
+ "seed": 30004,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "lawn",
+  "turf",
+  "garden",
+  "manicured",
+  "green",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

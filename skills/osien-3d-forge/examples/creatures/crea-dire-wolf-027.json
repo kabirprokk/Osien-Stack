@@ -1,0 +1,25 @@
+{
+ "id": "crea-dire-wolf-027",
+ "name": "Wild Dire Wolf 027",
+ "category": "creatures",
+ "prompt": "pristine glass gray dire wolf beast low poly",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 25398,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "lowpoly",
+  "glass",
+  "pristine",
+  "wolf"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25398,
+ "seed": 41566
+}

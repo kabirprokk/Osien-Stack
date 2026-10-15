@@ -1,0 +1,26 @@
+{
+ "id": "char-forest-elf-042",
+ "name": "Young Forest Elf 042",
+ "category": "characters",
+ "prompt": "weathered fabric slender forest elf mage stylized",
+ "kit": "mage",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "fabric",
+  "poly": 12117,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "stylized",
+  "fabric",
+  "worn",
+  "elf",
+  "mage"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12117,
+ "seed": 41501
+}

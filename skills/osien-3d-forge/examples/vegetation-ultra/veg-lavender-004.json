@@ -1,0 +1,21 @@
+{
+ "id": "veg-lavender-004",
+ "name": "Low Lavender 004",
+ "category": "vegetation-ultra",
+ "kit": "lavenderBush",
+ "prompt": "low fragrant lavender flower bush",
+ "seed": 30110,
+ "params": {
+  "quality": "cinema",
+  "style": "stylized"
+ },
+ "tags": [
+  "fragrant",
+  "purple",
+  "herb",
+  "low",
+  "fragrant",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

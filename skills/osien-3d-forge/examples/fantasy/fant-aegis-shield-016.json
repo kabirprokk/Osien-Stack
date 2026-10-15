@@ -1,0 +1,24 @@
+{
+ "id": "fant-aegis-shield-016",
+ "name": "Mystic Aegis Shield 016",
+ "category": "fantasy",
+ "prompt": "mossy marble golden aegis shield fantasy",
+ "kit": "shield",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 25546,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "shield",
+  "marble",
+  "ancient",
+  "aegis"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25546,
+ "seed": 41895
+}

@@ -1,0 +1,21 @@
+{
+ "id": "hum-archer-003",
+ "name": "Proud Archer 003",
+ "category": "human-players",
+ "kit": "archer",
+ "prompt": "proud bold swift archer with bow",
+ "seed": 40063,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "archer",
+  "bow",
+  "ranger",
+  "proud",
+  "bold",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

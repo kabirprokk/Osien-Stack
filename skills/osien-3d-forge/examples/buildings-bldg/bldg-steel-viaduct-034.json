@@ -1,0 +1,25 @@
+{
+ "id": "bldg-steel-viaduct-034",
+ "name": "Grand Steel Viaduct 034",
+ "category": "buildings-bldg",
+ "prompt": "worn wooden steel viaduct bridge with pillars stylized",
+ "kit": "bridge",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 24280,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "stylized",
+  "wood",
+  "worn",
+  "rail"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24280,
+ "seed": 41033
+}

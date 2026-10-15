@@ -1,0 +1,25 @@
+{
+ "id": "fant-mana-crystal-047",
+ "name": "Mystic Mana Crystal 047",
+ "category": "fantasy",
+ "prompt": "bronze glowing blue mana crystal stylized",
+ "kit": "crystal",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "bronze",
+  "poly": 24893,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "crystal",
+  "stylized",
+  "bronze",
+  "balanced",
+  "mana"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24893,
+ "seed": 41926
+}

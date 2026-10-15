@@ -1,0 +1,29 @@
+{
+ "id": "crea-fire-dragon-073",
+ "name": "Wild Fire Dragon 073",
+ "category": "creatures",
+ "prompt": "worn obsidian huge fire dragon drake with horns and tail fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "obsidian",
+  "poly": 11761,
+  "parts": [
+   "horns",
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "fantasy",
+  "obsidian",
+  "worn",
+  "fire",
+  "drake"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11761,
+ "seed": 41612
+}

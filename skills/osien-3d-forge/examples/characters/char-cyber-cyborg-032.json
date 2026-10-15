@@ -1,0 +1,25 @@
+{
+ "id": "char-cyber-cyborg-032",
+ "name": "Cute Cyber Cyborg 032",
+ "category": "characters",
+ "prompt": "worn bone chrome cyber cyborg android fantasy",
+ "kit": "cyborg",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "bone",
+  "poly": 27648,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "fantasy",
+  "bone",
+  "worn",
+  "cyborg"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 27648,
+ "seed": 41491
+}

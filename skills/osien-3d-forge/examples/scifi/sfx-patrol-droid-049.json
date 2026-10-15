@@ -1,0 +1,27 @@
+{
+ "id": "sfx-patrol-droid-049",
+ "name": "Orbital Patrol Droid 049",
+ "category": "scifi",
+ "prompt": "polished chrome chrome patrol robot droid with engine realistic",
+ "kit": "robot",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "chrome",
+  "poly": 11249,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "robot",
+  "realistic",
+  "chrome",
+  "pristine",
+  "patrol"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11249,
+ "seed": 41848
+}

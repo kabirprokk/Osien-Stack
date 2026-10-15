@@ -1,0 +1,26 @@
+{
+ "id": "gun-sniper-rifle-081",
+ "name": "Steel Sniper Rifle 081",
+ "category": "weapons-guns",
+ "prompt": "weathered wooden long steel sniper rifle barrel tube stylized",
+ "kit": "cylinder",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 32379,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "stylized",
+  "wood",
+  "worn",
+  "gun",
+  "sniper"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 32379,
+ "seed": 41200
+}

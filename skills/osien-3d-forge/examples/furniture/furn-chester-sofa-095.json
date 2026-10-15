@@ -1,0 +1,25 @@
+{
+ "id": "furn-chester-sofa-095",
+ "name": "Oaken Chester Sofa 095",
+ "category": "furniture",
+ "prompt": "marble leather chesterfield sofa couch low poly",
+ "kit": "sofa",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 28561,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "sofa",
+  "lowpoly",
+  "marble",
+  "balanced",
+  "couch"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 28561,
+ "seed": 41714
+}

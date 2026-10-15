@@ -1,0 +1,25 @@
+{
+ "id": "food-cheese-wheel-023",
+ "name": "Small Cheese Wheel 023",
+ "category": "food",
+ "prompt": "bone yellow cheese wheel cylinder low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "bone",
+  "poly": 25857,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "cylinder",
+  "lowpoly",
+  "bone",
+  "balanced",
+  "cheese"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25857,
+ "seed": 41962
+}

@@ -1,0 +1,27 @@
+{
+ "id": "sfx-recon-rover-036",
+ "name": "Solar Recon Rover 036",
+ "category": "scifi",
+ "prompt": "polished glass lunar recon rover car vehicle with engine stylized",
+ "kit": "car",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 28832,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "car",
+  "stylized",
+  "glass",
+  "pristine",
+  "rover"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 28832,
+ "seed": 41835
+}

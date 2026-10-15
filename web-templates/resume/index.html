@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>__SITE_TITLE__ — Resume</title>
+<meta name="description" content="Resume of __SITE_TITLE__: experience, skills, contact.">
+<style>
+body{margin:0;background:#f4f4f2;color:#1c1917;font:16px/1.6 system-ui}
+header,main{max-width:720px;margin:auto;padding:24px}
+header{background:#0b1020;color:#fff;border-radius:0 0 18px 18px}
+header h1{margin:.2em 0;font-size:clamp(1.8rem,4vw,2.6rem)}
+header a{color:#2dd4bf}
+h2{border-bottom:2px solid #0b1020;padding-bottom:4px}
+.job{margin-bottom:16px}.job span{color:#57534e;font-size:.9rem}
+.bar{background:#e5e5e5;border-radius:8px;height:10px;margin:4px 0 10px}.bar i{display:block;height:100%;background:#0b1020;border-radius:8px}
+#printbtn{position:fixed;bottom:16px;right:16px;font-size:16px;padding:12px 22px;border-radius:12px;border:0;background:#0b1020;color:#fff;cursor:pointer}
+img{max-width:100%}
+@media print{#printbtn{display:none}body{background:#fff}}
+</style>
+</head>
+<body>
+<header><h1 contenteditable>Your Name</h1><p contenteditable>Product Designer · Nairobi / Remote · <a href="mailto:you@example.com">you@example.com</a> · +254 700 000 000</p></header>
+<main>
+<h2>Experience</h2>
+<div class="job"><strong contenteditable>Senior Designer — Acme Studio</strong> <span>2023–now</span><p contenteditable>Shipped 12 client sites. Revenue per project up 30%. Click any text to edit, then Print → Save as PDF.</p></div>
+<div class="job"><strong contenteditable>Designer — Bright Agency</strong> <span>2020–2023</span><p contenteditable>Brand kits and landing pages for 20+ small businesses.</p></div>
+<h2>Skills</h2>
+<p>Web design</p><div class="bar"><i style="width:90%"></i></div>
+<p>Branding</p><div class="bar"><i style="width:80%"></i></div>
+<p>HTML/CSS</p><div class="bar"><i style="width:70%"></i></div>
+<h2>Education</h2><p contenteditable>B.A. Design — 2016–2020</p>
+</main>
+<button id="printbtn" onclick="window.print()">⎙ Save as PDF</button>
+</body>
+</html>

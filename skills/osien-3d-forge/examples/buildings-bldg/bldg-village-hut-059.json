@@ -1,0 +1,26 @@
+{
+ "id": "bldg-village-hut-059",
+ "name": "Towering Village Hut 059",
+ "category": "buildings-bldg",
+ "prompt": "weathered stone village straw hut house with doors stylized",
+ "kit": "house",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "stone",
+  "poly": 29863,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "stylized",
+  "stone",
+  "worn",
+  "hut",
+  "village"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 29863,
+ "seed": 41058
+}

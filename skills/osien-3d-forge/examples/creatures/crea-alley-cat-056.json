@@ -1,0 +1,27 @@
+{
+ "id": "crea-alley-cat-056",
+ "name": "Dark Alley Cat 056",
+ "category": "creatures",
+ "prompt": "marble small orange alley cat with tail low poly",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 23221,
+  "parts": [
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "lowpoly",
+  "marble",
+  "balanced",
+  "cat"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23221,
+ "seed": 41595
+}

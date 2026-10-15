@@ -1,0 +1,26 @@
+{
+ "id": "nat-alien-flora-117",
+ "name": "Old Alien Flora 117",
+ "category": "natural",
+ "prompt": "weathered bone glowing alien plant tentacle flower realistic",
+ "kit": "alienPlant",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 4099,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "alienPlant",
+  "realistic",
+  "bone",
+  "worn",
+  "alien",
+  "flora"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4099,
+ "seed": 41356
+}

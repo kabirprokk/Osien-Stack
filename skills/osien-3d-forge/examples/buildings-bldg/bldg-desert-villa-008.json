@@ -1,0 +1,28 @@
+{
+ "id": "bldg-desert-villa-008",
+ "name": "Ancient Desert Villa 008",
+ "category": "buildings-bldg",
+ "prompt": "polished glass desert sandstone villa house with doors and windows with doors realistic",
+ "kit": "house",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 4375,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "realistic",
+  "glass",
+  "pristine",
+  "villa",
+  "desert"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4375,
+ "seed": 41007
+}

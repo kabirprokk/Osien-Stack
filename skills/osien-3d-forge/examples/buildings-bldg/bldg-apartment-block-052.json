@@ -1,0 +1,26 @@
+{
+ "id": "bldg-apartment-block-052",
+ "name": "Grand Apartment Block 052",
+ "category": "buildings-bldg",
+ "prompt": "ancient steel brick apartment building block with windows and doors low poly",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 12017,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "lowpoly",
+  "steel",
+  "ancient",
+  "city",
+  "housing"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12017,
+ "seed": 41051
+}

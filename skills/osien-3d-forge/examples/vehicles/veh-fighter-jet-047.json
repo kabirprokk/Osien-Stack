@@ -1,0 +1,25 @@
+{
+ "id": "veh-fighter-jet-047",
+ "name": "Red Fighter Jet 047",
+ "category": "vehicles",
+ "prompt": "gold gray fighter jet aircraft realistic",
+ "kit": "airplane",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "gold",
+  "poly": 32732,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "realistic",
+  "gold",
+  "balanced",
+  "fighter"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 32732,
+ "seed": 41406
+}

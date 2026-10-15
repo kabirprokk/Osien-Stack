@@ -1,0 +1,26 @@
+{
+ "id": "bldg-gothic-cathedral-037",
+ "name": "Grand Gothic Cathedral 037",
+ "category": "buildings-bldg",
+ "prompt": "steel gothic stone castle cathedral with towers and gate stylized",
+ "kit": "castle",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 24259,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "castle",
+  "stylized",
+  "steel",
+  "balanced",
+  "gothic",
+  "church"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24259,
+ "seed": 41036
+}

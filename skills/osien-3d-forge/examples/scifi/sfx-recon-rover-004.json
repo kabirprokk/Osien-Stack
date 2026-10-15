@@ -1,0 +1,25 @@
+{
+ "id": "sfx-recon-rover-004",
+ "name": "Neon Recon Rover 004",
+ "category": "scifi",
+ "prompt": "pristine obsidian lunar recon rover car vehicle low poly",
+ "kit": "car",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "obsidian",
+  "poly": 32930,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "car",
+  "lowpoly",
+  "obsidian",
+  "pristine",
+  "rover"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 32930,
+ "seed": 41803
+}

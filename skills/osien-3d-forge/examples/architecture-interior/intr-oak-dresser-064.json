@@ -1,0 +1,27 @@
+{
+ "id": "intr-oak-dresser-064",
+ "name": "Warm Oak Dresser 064",
+ "category": "architecture-interior",
+ "prompt": "weathered stone oak dresser cupboard drawers with doors fantasy",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "stone",
+  "poly": 11930,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "fantasy",
+  "stone",
+  "worn",
+  "dresser"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11930,
+ "seed": 41783
+}

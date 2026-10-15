@@ -1,0 +1,28 @@
+{
+ "id": "furn-wardrobe-098",
+ "name": "Grand Wardrobe 098",
+ "category": "furniture",
+ "prompt": "ancient brass oak wardrobe cupboard with doors with doors realistic",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "brass",
+  "poly": 12038,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "realistic",
+  "brass",
+  "ancient",
+  "cabinet",
+  "wardrobe"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12038,
+ "seed": 41717
+}

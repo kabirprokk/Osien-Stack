@@ -1,0 +1,25 @@
+{
+ "id": "prop-floor-rug-039",
+ "name": "Small Floor Rug 039",
+ "category": "everyday-props",
+ "prompt": "pristine iron patterned floor rug plane low poly",
+ "kit": "plane",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 12697,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "plane",
+  "lowpoly",
+  "iron",
+  "pristine",
+  "rug"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12697,
+ "seed": 42018
+}

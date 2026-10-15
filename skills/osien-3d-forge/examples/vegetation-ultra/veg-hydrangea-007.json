@@ -1,0 +1,20 @@
+{
+ "id": "veg-hydrangea-007",
+ "name": "Round Hydrangea 007",
+ "category": "vegetation-ultra",
+ "kit": "hydrangea",
+ "prompt": "round blooming hydrangea flower bush",
+ "seed": 30086,
+ "params": {
+  "quality": "draft",
+  "style": "stylized"
+ },
+ "tags": [
+  "flowering",
+  "shrub",
+  "round",
+  "blooming",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

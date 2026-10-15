@@ -1,0 +1,26 @@
+{
+ "id": "nat-pine-tree-111",
+ "name": "Tall Pine Tree 111",
+ "category": "natural",
+ "prompt": "fabric tall pine tree low poly",
+ "kit": "tree",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 12718,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "lowpoly",
+  "fabric",
+  "balanced",
+  "pine",
+  "forest"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12718,
+ "seed": 41350
+}

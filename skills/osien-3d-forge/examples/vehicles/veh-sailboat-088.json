@@ -1,0 +1,27 @@
+{
+ "id": "veh-sailboat-088",
+ "name": "Old Sailboat 088",
+ "category": "vehicles",
+ "prompt": "worn iron wooden sailboat yacht with sails sci-fi",
+ "kit": "boat",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "iron",
+  "poly": 21677,
+  "parts": [
+   "sails"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "scifi",
+  "iron",
+  "worn",
+  "sailboat"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21677,
+ "seed": 41447
+}

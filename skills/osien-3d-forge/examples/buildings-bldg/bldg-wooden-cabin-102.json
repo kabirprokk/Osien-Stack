@@ -1,0 +1,26 @@
+{
+ "id": "bldg-wooden-cabin-102",
+ "name": "Grand Wooden Cabin 102",
+ "category": "buildings-bldg",
+ "prompt": "marble wooden cabin hut house with chimney fantasy",
+ "kit": "house",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 31880,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "fantasy",
+  "marble",
+  "balanced",
+  "cabin",
+  "forest"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31880,
+ "seed": 41101
+}

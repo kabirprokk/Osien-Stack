@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-helmet-113",
+ "name": "Rusty Knight Helmet 113",
+ "category": "weapons-guns",
+ "prompt": "gold steel knight helmet helm stylized",
+ "kit": "helmet",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "gold",
+  "poly": 12440,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "helmet",
+  "stylized",
+  "gold",
+  "balanced",
+  "armor"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12440,
+ "seed": 41232
+}

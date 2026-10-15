@@ -1,0 +1,25 @@
+{
+ "id": "bldg-arch-bridge-057",
+ "name": "Ruined Arch Bridge 057",
+ "category": "buildings-bldg",
+ "prompt": "wooden stone arch bridge with pillars realistic",
+ "kit": "bridge",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 23395,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "realistic",
+  "wood",
+  "balanced",
+  "river"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23395,
+ "seed": 41056
+}

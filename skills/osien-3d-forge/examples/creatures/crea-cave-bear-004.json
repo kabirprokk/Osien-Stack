@@ -1,0 +1,25 @@
+{
+ "id": "crea-cave-bear-004",
+ "name": "Wild Cave Bear 004",
+ "category": "creatures",
+ "prompt": "fabric brown cave bear beast realistic",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 12846,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "realistic",
+  "fabric",
+  "balanced",
+  "bear"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12846,
+ "seed": 41543
+}

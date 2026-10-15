@@ -1,0 +1,26 @@
+{
+ "id": "sfx-patrol-droid-057",
+ "name": "Solar Patrol Droid 057",
+ "category": "scifi",
+ "prompt": "mossy copper chrome patrol robot droid with engine sci-fi",
+ "kit": "robot",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "copper",
+  "poly": 12029,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "robot",
+  "copper",
+  "ancient",
+  "patrol"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12029,
+ "seed": 41856
+}

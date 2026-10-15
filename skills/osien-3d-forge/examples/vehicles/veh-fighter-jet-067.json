@@ -1,0 +1,25 @@
+{
+ "id": "veh-fighter-jet-067",
+ "name": "Blue Fighter Jet 067",
+ "category": "vehicles",
+ "prompt": "weathered chrome gray fighter jet aircraft stylized",
+ "kit": "airplane",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 25500,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "stylized",
+  "chrome",
+  "worn",
+  "fighter"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25500,
+ "seed": 41426
+}

@@ -1,0 +1,26 @@
+{
+ "id": "crea-alien-pet-031",
+ "name": "Dark Alien Pet 031",
+ "category": "creatures",
+ "prompt": "fabric small cute alien pet quadruped realistic",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 24453,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "realistic",
+  "fabric",
+  "balanced",
+  "alien",
+  "pet"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24453,
+ "seed": 41570
+}

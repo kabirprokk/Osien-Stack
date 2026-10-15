@@ -1,0 +1,26 @@
+{
+ "id": "gun-revolver-059",
+ "name": "Steel Revolver 059",
+ "category": "weapons-guns",
+ "prompt": "bronze iron revolver drum cylinder realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "bronze",
+  "poly": 11168,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "realistic",
+  "bronze",
+  "balanced",
+  "gun",
+  "revolver"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11168,
+ "seed": 41178
+}

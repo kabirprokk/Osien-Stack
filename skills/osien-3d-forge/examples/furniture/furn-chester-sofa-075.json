@@ -1,0 +1,25 @@
+{
+ "id": "furn-chester-sofa-075",
+ "name": "Modern Chester Sofa 075",
+ "category": "furniture",
+ "prompt": "fabric leather chesterfield sofa couch stylized",
+ "kit": "sofa",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "fabric",
+  "poly": 4095,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "sofa",
+  "stylized",
+  "fabric",
+  "balanced",
+  "couch"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4095,
+ "seed": 41694
+}

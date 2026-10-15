@@ -1,0 +1,26 @@
+{
+ "id": "gun-ak-47-rifle-008",
+ "name": "Steel AK-47 Rifle 008",
+ "category": "weapons-guns",
+ "prompt": "pristine obsidian rusty ak-47 assault rifle tube barrel fantasy",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "obsidian",
+  "poly": 13013,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "fantasy",
+  "obsidian",
+  "pristine",
+  "gun",
+  "rifle"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13013,
+ "seed": 41127
+}

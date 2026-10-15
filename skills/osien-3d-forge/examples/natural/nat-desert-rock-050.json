@@ -1,0 +1,25 @@
+{
+ "id": "nat-desert-rock-050",
+ "name": "Glowing Desert Rock 050",
+ "category": "natural",
+ "prompt": "stone weathered sandstone desert rock stylized",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "stone",
+  "poly": 11386,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "stylized",
+  "stone",
+  "balanced",
+  "desert"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11386,
+ "seed": 41289
+}

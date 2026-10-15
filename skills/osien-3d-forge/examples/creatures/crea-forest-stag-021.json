@@ -1,0 +1,28 @@
+{
+ "id": "crea-forest-stag-021",
+ "name": "Ancient Forest Stag 021",
+ "category": "creatures",
+ "prompt": "worn wooden brown forest stag animal with tail and horns realistic",
+ "kit": "creature",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 4208,
+  "parts": [
+   "tail",
+   "horns"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "realistic",
+  "wood",
+  "worn",
+  "deer"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4208,
+ "seed": 41560
+}

@@ -1,0 +1,24 @@
+{
+ "id": "gun-round-shield-040",
+ "name": "Ancient Round Shield 040",
+ "category": "weapons-guns",
+ "prompt": "polished chrome round iron shield buckler stylized",
+ "kit": "shield",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 11956,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "shield",
+  "stylized",
+  "chrome",
+  "pristine"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11956,
+ "seed": 41159
+}

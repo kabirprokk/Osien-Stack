@@ -1,0 +1,29 @@
+{
+ "id": "bldg-desert-villa-116",
+ "name": "Marble Desert Villa 116",
+ "category": "buildings-bldg",
+ "prompt": "wooden desert sandstone villa house with doors and windows with windows and doors low poly",
+ "kit": "house",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 27620,
+  "parts": [
+   "windows",
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "lowpoly",
+  "wood",
+  "balanced",
+  "villa",
+  "desert"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 27620,
+ "seed": 41115
+}

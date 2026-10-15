@@ -1,0 +1,26 @@
+{
+ "id": "char-forest-elf-050",
+ "name": "Young Forest Elf 050",
+ "category": "characters",
+ "prompt": "bone slender forest elf mage low poly",
+ "kit": "mage",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "bone",
+  "poly": 10882,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "lowpoly",
+  "bone",
+  "balanced",
+  "elf",
+  "mage"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10882,
+ "seed": 41509
+}

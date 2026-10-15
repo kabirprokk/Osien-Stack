@@ -1,0 +1,21 @@
+{
+ "id": "wat-pool-003",
+ "name": "Still Pool 003",
+ "category": "water-ultra",
+ "kit": "poolWater",
+ "prompt": "still clear swimming pool clear water",
+ "seed": 40043,
+ "params": {
+  "quality": "draft",
+  "style": "realistic"
+ },
+ "tags": [
+  "pool",
+  "tiled",
+  "clean",
+  "still",
+  "clear",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

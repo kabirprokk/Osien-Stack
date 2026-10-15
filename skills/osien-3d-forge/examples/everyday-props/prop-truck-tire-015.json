@@ -1,0 +1,25 @@
+{
+ "id": "prop-truck-tire-015",
+ "name": "Heavy Truck Tire 015",
+ "category": "everyday-props",
+ "prompt": "wooden black rubber tire torus ring realistic",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 11650,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "torus",
+  "realistic",
+  "wood",
+  "balanced",
+  "tire"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11650,
+ "seed": 41994
+}

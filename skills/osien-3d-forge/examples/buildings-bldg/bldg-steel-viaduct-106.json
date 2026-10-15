@@ -1,0 +1,25 @@
+{
+ "id": "bldg-steel-viaduct-106",
+ "name": "Grand Steel Viaduct 106",
+ "category": "buildings-bldg",
+ "prompt": "worn stone steel viaduct bridge with pillars stylized",
+ "kit": "bridge",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "stone",
+  "poly": 10965,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "stylized",
+  "stone",
+  "worn",
+  "rail"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10965,
+ "seed": 41105
+}

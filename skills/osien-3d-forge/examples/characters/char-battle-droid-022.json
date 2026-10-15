@@ -1,0 +1,27 @@
+{
+ "id": "char-battle-droid-022",
+ "name": "Cute Battle Droid 022",
+ "category": "characters",
+ "prompt": "pristine chrome tall battle droid mech with engine sci-fi",
+ "kit": "robot",
+ "params": {
+  "quality": "draft",
+  "style": "scifi",
+  "material": "chrome",
+  "poly": 3611,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "scifi",
+  "chrome",
+  "pristine",
+  "mech"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3611,
+ "seed": 41481
+}

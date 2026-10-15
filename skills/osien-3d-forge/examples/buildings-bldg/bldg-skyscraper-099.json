@@ -1,0 +1,26 @@
+{
+ "id": "bldg-skyscraper-099",
+ "name": "Old Skyscraper 099",
+ "category": "buildings-bldg",
+ "prompt": "iron modern glass skyscraper tower with windows realistic",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 11832,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "realistic",
+  "iron",
+  "balanced",
+  "modern",
+  "city"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11832,
+ "seed": 41098
+}

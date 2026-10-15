@@ -1,0 +1,25 @@
+{
+ "id": "fant-loot-chest-048",
+ "name": "Dark Loot Chest 048",
+ "category": "fantasy",
+ "prompt": "mossy iron old wooden loot treasure chest realistic",
+ "kit": "treasureChest",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 24946,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "treasureChest",
+  "realistic",
+  "iron",
+  "ancient",
+  "loot"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24946,
+ "seed": 41927
+}

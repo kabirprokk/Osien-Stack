@@ -1,0 +1,25 @@
+{
+ "id": "char-space-marine-061",
+ "name": "Golden Space Marine 061",
+ "category": "characters",
+ "prompt": "ancient gold armored space marine soldier avatar fantasy",
+ "kit": "soldierModern",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "gold",
+  "poly": 12777,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "fantasy",
+  "gold",
+  "ancient",
+  "soldier"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12777,
+ "seed": 41520
+}

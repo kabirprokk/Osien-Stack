@@ -1,0 +1,26 @@
+{
+ "id": "gun-revolver-095",
+ "name": "Ornate Revolver 095",
+ "category": "weapons-guns",
+ "prompt": "polished gold iron revolver drum cylinder low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "gold",
+  "poly": 11957,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "lowpoly",
+  "gold",
+  "pristine",
+  "gun",
+  "revolver"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11957,
+ "seed": 41214
+}

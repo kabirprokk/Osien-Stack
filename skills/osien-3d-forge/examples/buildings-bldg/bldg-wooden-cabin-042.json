@@ -1,0 +1,26 @@
+{
+ "id": "bldg-wooden-cabin-042",
+ "name": "Towering Wooden Cabin 042",
+ "category": "buildings-bldg",
+ "prompt": "polished iron wooden cabin hut house with chimney realistic",
+ "kit": "house",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 12842,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "realistic",
+  "iron",
+  "pristine",
+  "cabin",
+  "forest"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12842,
+ "seed": 41041
+}

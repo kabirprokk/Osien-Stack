@@ -1,0 +1,26 @@
+{
+ "id": "nat-oak-tree-092",
+ "name": "Red Oak Tree 092",
+ "category": "natural",
+ "prompt": "pristine stone broad oak tree low poly",
+ "kit": "tree",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 11211,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "lowpoly",
+  "stone",
+  "pristine",
+  "oak",
+  "forest"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11211,
+ "seed": 41331
+}

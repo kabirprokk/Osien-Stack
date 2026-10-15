@@ -1,0 +1,26 @@
+{
+ "id": "furn-oak-chair-081",
+ "name": "Round Oak Chair 081",
+ "category": "furniture",
+ "prompt": "polished marble wooden oak chair realistic",
+ "kit": "chair",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 11949,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "chair",
+  "realistic",
+  "marble",
+  "pristine",
+  "oak",
+  "seat"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11949,
+ "seed": 41700
+}

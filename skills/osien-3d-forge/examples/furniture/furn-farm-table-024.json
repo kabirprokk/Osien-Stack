@@ -1,0 +1,25 @@
+{
+ "id": "furn-farm-table-024",
+ "name": "Small Farm Table 024",
+ "category": "furniture",
+ "prompt": "mossy brass rustic wooden farm table low poly",
+ "kit": "table",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 11342,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "table",
+  "lowpoly",
+  "brass",
+  "ancient",
+  "farm"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11342,
+ "seed": 41643
+}

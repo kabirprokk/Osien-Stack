@@ -1,0 +1,26 @@
+{
+ "id": "veh-city-sedan-031",
+ "name": "Rusty City Sedan 031",
+ "category": "vehicles",
+ "prompt": "steel red city sedan car vehicle realistic",
+ "kit": "car",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "steel",
+  "poly": 13135,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "realistic",
+  "steel",
+  "balanced",
+  "sedan",
+  "city"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13135,
+ "seed": 41390
+}

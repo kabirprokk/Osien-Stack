@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-helmet-041",
+ "name": "Ancient Knight Helmet 041",
+ "category": "weapons-guns",
+ "prompt": "obsidian steel knight helmet helm low poly",
+ "kit": "helmet",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "obsidian",
+  "poly": 24080,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "helmet",
+  "lowpoly",
+  "obsidian",
+  "balanced",
+  "armor"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24080,
+ "seed": 41160
+}

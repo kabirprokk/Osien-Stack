@@ -1,0 +1,25 @@
+{
+ "id": "intr-court-fountain-062",
+ "name": "Antique Court Fountain 062",
+ "category": "architecture-interior",
+ "prompt": "polished marble marble court fountain realistic",
+ "kit": "fountain",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 12454,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "fountain",
+  "realistic",
+  "marble",
+  "pristine",
+  "court"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12454,
+ "seed": 41781
+}

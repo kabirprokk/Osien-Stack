@@ -1,0 +1,26 @@
+{
+ "id": "gun-sniper-rifle-057",
+ "name": "Oaken Sniper Rifle 057",
+ "category": "weapons-guns",
+ "prompt": "obsidian long steel sniper rifle barrel tube fantasy",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "obsidian",
+  "poly": 21981,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "fantasy",
+  "obsidian",
+  "balanced",
+  "gun",
+  "sniper"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21981,
+ "seed": 41176
+}

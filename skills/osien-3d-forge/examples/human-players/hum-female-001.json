@@ -1,0 +1,21 @@
+{
+ "id": "hum-female-001",
+ "name": "Silent Female 001",
+ "category": "human-players",
+ "kit": "baseFemale",
+ "prompt": "silent strong standing woman",
+ "seed": 40011,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "woman",
+  "female",
+  "casual",
+  "silent",
+  "strong",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}
