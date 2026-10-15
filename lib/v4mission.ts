@@ -4,8 +4,9 @@ import crypto from "crypto"
 import os from "os"
 import { unwrapArgs } from "./v3core"
 
-export const V4_ROOT = path.join(os.homedir(), ".config/opencode/memory/missions")
-export const CAP_ROOT = path.join(os.homedir(), ".config/opencode/memory/harness")
+const TEST_ROOT = process.env.V4_TEST_MODE === "true" && process.env.V4_TEST_ROOT ? path.resolve(process.env.V4_TEST_ROOT) : ""
+export const V4_ROOT = TEST_ROOT ? path.join(TEST_ROOT, "missions") : path.join(os.homedir(), ".config/opencode/memory/missions")
+export const CAP_ROOT = TEST_ROOT ? path.join(TEST_ROOT, "harness") : path.join(os.homedir(), ".config/opencode/memory/harness")
 const now = () => new Date().toISOString()
 const id = (p: string) => p + "_" + Date.now().toString(36) + "_" + crypto.randomBytes(3).toString("hex")
 const ensure = (p: string) => { fs.mkdirSync(p, { recursive: true }); return p }
