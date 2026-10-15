@@ -43,7 +43,7 @@ class RecoveryRun:
         self.results.append({'name':name,'result':result,'duration':round(time.time()-started,3),'evidence':evidence})
 
 def mission_id(text):
-    m=re.search(r'mission_[a-z0-9_]+', text); assert m, text[-1000:]; return m.group(0)
+    found=re.findall(r'mission_[a-z0-9]{6,}_[a-z0-9]{6,}', text); assert found, text[-1000:]; return found[-1]
 
 def run_suite():
     r=RecoveryRun(); r.run.mkdir(parents=True, exist_ok=True); r.start()
@@ -53,7 +53,8 @@ def run_suite():
         mid=mission_id(out); out2=r.call(f"Load mission {mid} from persisted files. Call mission_status and mission_next. Do not rely on prior conversation.")
         r.record('context_death','PASS' if 'ACTIVE' in out2 and 'M1' in out2 and 'prepare' in out2 else 'FAIL', {'mission_id':mid,'fresh_worker_output':out2[-1000:]},t)
         # Real completion guard and double-completion idempotency.
-        t=time.time(); r.call(f"For mission {mid}, append verified FACT evidence criterion='prepared' subject='prepared', append verified FACT evidence criterion='verified' subject='verified', then call mission_complete twice. Return raw outputs.")
+        t=time.time(); r.call(f"Call mission_evidence mission_id='{mid}' kind='FACT' subject='prepared' criterion='prepared' verified=true source='test'. Then call mission_evidence mission_id='{mid}' kind='FACT' subject='verified' criterion='verified' verified=true source='test'. Return raw outputs.")
+        r.call(f"Call mission_complete mission_id='{mid}' twice. Return both raw outputs.")
         status=r.call(f"Call mission_status for {mid}.")
         r.record('double_completion','PASS' if 'COMPLETED' in status else 'FAIL', {'status':status[-1000:]},t)
         # Isolated corruption test: corrupt only the disposable copy and require strict rejection.
