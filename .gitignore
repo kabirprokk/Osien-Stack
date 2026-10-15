@@ -1,5 +1,6 @@
 # Runtime data — never commit
 .v3/
+.v4-test-runs/
 .state/
 .tui-stash/
 brain.jsonl
