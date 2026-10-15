@@ -16,6 +16,7 @@ machines/**/profile/
 machines/**/profile-*/
 machines/**/data/
 machines/**/logs/
+machines/**/.last-run
 machines/*.json
 machines/*.log
 logs/
