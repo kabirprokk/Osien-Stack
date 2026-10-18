@@ -104,7 +104,7 @@
   }
   .card.in { opacity: 1; transform: translateY(0); }
   .card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px var(--glow); border-color: var(--accent); }
-  .card .icon { font-size: 2rem; margin-bottom: 14px; }
+  .card .icon { width: 40px; height: 40px; margin-bottom: 14px; color: var(--accent); } .card .icon svg { width: 100%; height: 100%; }
   .card h3 { font-size: 1.15rem; margin-bottom: 8px; }
   .card p { color: var(--muted); font-size: .95rem; }
 
@@ -175,12 +175,12 @@
     <h2 class="reveal">Why use Osien-Stack?</h2>
     <p class="lead reveal">Because your AI is only as good as the tools it can reach. Osien-Stack gives every AI the same unfair advantage — memory, verification, parallel work, and context discipline — without you lifting a finger.</p>
     <div class="grid">
-      <div class="card"><div class="icon">🧠</div><h3>Remembers everything</h3><p>ctx_recall / ctx_save split memory into 5 parts (architecture, decisions, failures, state, performance). Your AI never starts cold again.</p></div>
-      <div class="card"><div class="icon">⚡</div><h3>Blazing fast</h3><p>File cache (0.49ms/read), exec cache, trimmed prompts (−50% tokens), parallel batch ops. Answers land before you blink.</p></div>
-      <div class="card"><div class="icon">🎯</div><h3>93% fewer tokens</h3><p>read_slice, smart_grep and ctx_recall feed the model only what matters. Stop paying for whole-file reads.</p></div>
-      <div class="card"><div class="icon">🛡️</div><h3>Verifies before done</h3><p>verify_chain, security_scan, test_gap, repro_capsule. No more "trust me, it works." Evidence or it didn't happen.</p></div>
-      <div class="card"><div class="icon">🏙️</div><h3>City Mode</h3><p>14 AI agents with personalities (Mayor, Hammer, Detective, …) debate and review your work in parallel.</p></div>
-      <div class="card"><div class="icon">🔌</div><h3>Works everywhere</h3><p>opencode, Claude Code, Cursor, Cline, Windsurf — any MCP client. Degrades gracefully elsewhere.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg></div><h3>Remembers everything</h3><p>ctx_recall / ctx_save split memory into 5 parts (architecture, decisions, failures, state, performance). Your AI never starts cold again.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><h3>Blazing fast</h3><p>File cache (0.49ms/read), exec cache, trimmed prompts (−50% tokens), parallel batch ops. Answers land before you blink.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><h3>93% fewer tokens</h3><p>read_slice, smart_grep and ctx_recall feed the model only what matters. Stop paying for whole-file reads.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><h3>Verifies before done</h3><p>verify_chain, security_scan, test_gap, repro_capsule. No more "trust me, it works." Evidence or it didn't happen.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg></div><h3>City Mode</h3><p>14 AI agents with personalities (Mayor, Hammer, Detective, …) debate and review your work in parallel.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22v-5"/><path d="M9 7V2"/><path d="M15 7V2"/><path d="M6 7h12v6a6 6 0 0 1-12 0V7Z"/></svg></div><h3>Works everywhere</h3><p>opencode, Claude Code, Cursor, Cline, Windsurf — any MCP client. Degrades gracefully elsewhere.</p></div>
     </div>
   </section>
 
@@ -188,13 +188,13 @@
     <h2 class="reveal">What it does</h2>
     <p class="lead reveal">45 forged tools, grouped so your AI always picks the right one. Short names, sharp descriptions — the model spends tokens on work, not on choosing.</p>
     <div class="grid">
-      <div class="card"><div class="icon">💾</div><h3>Memory (7)</h3><p>ctx_recall, ctx_save, soul_read, soul_write, fast_note, task_state, state_reset.</p></div>
-      <div class="card"><div class="icon">🔍</div><h3>Search & Read (3)</h3><p>smart_grep, read_slice, impact_analyze — locations and lines, never whole files.</p></div>
-      <div class="card"><div class="icon">✅</div><h3>Verify (7)</h3><p>verify_chain, security_scan, test_gap, repro_capsule, context_budget, consensus, auto_heal.</p></div>
-      <div class="card"><div class="icon">🧰</div><h3>State (5)</h3><p>machine_state, repo_health, project_map, loop_status, checkpoint_create.</p></div>
-      <div class="card"><div class="icon">🚀</div><h3>Quality (14)</h3><p>rollback, perf_regression, test_synthesizer, memory_compactor, dead_code, dep_graph, changelog, token_budget, arch_drift, session_replay, auto_doc, feature_flags, license, schema.</p></div>
-      <div class="card"><div class="icon">🏙️</div><h3>City Mode (6)</h3><p>city_status, city_post, city_read, city_broadcast, city_mode, city_clear.</p></div>
-      <div class="card"><div class="icon">📦</div><h3>Plus (3)</h3><p>cost_estimator, self_critique_loop, batch — the parallel powerhouse.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/></svg></div><h3>Memory (7)</h3><p>ctx_recall, ctx_save, soul_read, soul_write, fast_note, task_state, state_reset.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></div><h3>Search & Read (3)</h3><p>smart_grep, read_slice, impact_analyze — locations and lines, never whole files.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><h3>Verify (7)</h3><p>verify_chain, security_scan, test_gap, repro_capsule, context_budget, consensus, auto_heal.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><h3>State (5)</h3><p>machine_state, repo_health, project_map, loop_status, checkpoint_create.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div><h3>Quality (14)</h3><p>rollback, perf_regression, test_synthesizer, memory_compactor, dead_code, dep_graph, changelog, token_budget, arch_drift, session_replay, auto_doc, feature_flags, license, schema.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M8 10h.01M12 10h.01M16 10h.01M8 14h.01M12 14h.01M16 14h.01"/></svg></div><h3>City Mode (6)</h3><p>city_status, city_post, city_read, city_broadcast, city_mode, city_clear.</p></div>
+      <div class="card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div><h3>Plus (3)</h3><p>cost_estimator, self_critique_loop, batch — the parallel powerhouse.</p></div>
     </div>
   </section>
 
