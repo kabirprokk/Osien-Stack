@@ -5,16 +5,21 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Osien-Stack · Tool Explorer</title>
 <meta name="description" content="Browse all 45 osien-stack MCP tools with descriptions, categories and search.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
   :root { --hue: 200; --sat: 75%; --light: 55%; --bg: hsl(var(--hue), 28%, 7%); --fg: hsl(var(--hue), 10%, 92%); --muted: hsl(var(--hue), 15%, 62%); --accent: hsl(var(--hue), var(--sat), var(--light)); --accent2: hsl(calc(var(--hue)+50), var(--sat), 60%); --card: hsla(var(--hue), 25%, 13%, .55); --border: hsla(var(--hue), 40%, 50%, .22); --glow: hsla(var(--hue), 80%, 60%, .3); }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body { cursor: none; font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--fg); min-height: 100vh; }
-  body::before { content:""; position:fixed; inset:0; z-index:-2; background: radial-gradient(1000px 500px at 15% 10%, hsla(var(--hue),80%,50%,.22), transparent 60%), radial-gradient(900px 500px at 85% 40%, hsla(calc(var(--hue)+60),80%,50%,.18), transparent 60%); transition: background 1s ease; }
-  canvas#field { position: fixed; inset: 0; z-index: -2; } canvas#field { position: fixed; inset: 0; z-index: -2; } nav { position: sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:16px 28px; backdrop-filter: blur(14px); background: hsla(var(--hue),25%,8%,.55); border-bottom:1px solid var(--border); }
-  nav .logo { font-weight:800; font-size:1.2rem; } nav .logo span { color: var(--accent); }
+  html { scroll-behavior: auto; }
+  body { font-family: 'Space Grotesk', system-ui, sans-serif; background: var(--bg); color: var(--fg); min-height: 100vh; cursor: none; }
+  canvas#field { position: fixed; inset: 0; z-index: -2; }
+  .cursor { position: fixed; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--accent); pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); mix-blend-mode: difference; }
+  .glow { position: fixed; width: 400px; height: 400px; border-radius: 50%; pointer-events: none; z-index: -1; background: radial-gradient(circle, var(--glow), transparent 70%); transform: translate(-50%,-50%); opacity: .6; mix-blend-mode: screen; }
+  nav { position: sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:16px 28px; backdrop-filter: blur(14px); background: hsla(var(--hue),25%,8%,.55); border-bottom:1px solid var(--border); }
+  nav .logo { font-weight:800; font-size:1.2rem; font-family:'JetBrains Mono',monospace; } nav .logo span { color: var(--accent); }
   nav a { color: var(--fg); text-decoration:none; margin-left:20px; opacity:.8; font-size:.9rem; } nav a:hover { opacity:1; color: var(--accent); }
-  .cursor { position: fixed; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--accent); pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); mix-blend-mode: difference; } .glow { position: fixed; width: 400px; height: 400px; border-radius: 50%; pointer-events: none; z-index: -1; background: radial-gradient(circle, var(--glow), transparent 70%); transform: translate(-50%,-50%); opacity: .6; mix-blend-mode: screen; } .cursor { position: fixed; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--accent); pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); mix-blend-mode: difference; } .glow { position: fixed; width: 400px; height: 400px; border-radius: 50%; pointer-events: none; z-index: -1; background: radial-gradient(circle, var(--glow), transparent 70%); transform: translate(-50%,-50%); opacity: .6; mix-blend-mode: screen; } .wrap { max-width: 1280px; margin: 0 auto; padding: 40px 24px 80px; }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 40px 24px 80px; }
   h1 { font-size: clamp(2rem,5vw,3.4rem); font-weight:900; letter-spacing:-1.5px; margin-bottom: 8px; background: linear-gradient(120deg, var(--fg), var(--accent), var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
   .sub { color: var(--muted); margin-bottom: 28px; font-size:1.05rem; }
   .toolbar { display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-bottom: 24px; }
@@ -40,13 +45,10 @@
   .back:hover { text-decoration:underline; }
   footer { text-align:center; padding:40px 24px; color: var(--muted); border-top:1px solid var(--border); font-size:.85rem; }
   footer a { color: var(--accent); text-decoration:none; }
-  @media (max-width:600px){ .grid { grid-template-columns:1fr; } }
+  @media (max-width:600px){ .grid { grid-template-columns:1fr; } body { cursor: auto; } .cursor, .glow { display:none; } }
 </style>
 </head>
 <body>
-  <canvas id="field"></canvas>
-  <div class="cursor" id="cursor"></div>
-  <div class="glow" id="glow"></div>
   <canvas id="field"></canvas>
   <div class="cursor" id="cursor"></div>
   <div class="glow" id="glow"></div>
@@ -72,7 +74,6 @@
   <footer>Osien-Stack · MIT licensed · <a href="https://github.com/kabirprokk/Osien-Stack">GitHub</a></footer>
 
 <script>
-  // tool data (embedded)
   const tools = [
     {"name":"ctx_recall","desc":"Load project memory by role/part/grep.","cat":"Memory"},
     {"name":"ctx_save","desc":"Persist memory: architecture/decisions/failures/state/performance.","cat":"Memory"},
@@ -120,7 +121,6 @@
     {"name":"city_clear","desc":"Clear city mailbox.","cat":"City"},
     {"name":"batch","desc":"Run multiple ops in parallel in ONE call.","cat":"Parallel"}
   ];
-
   const cats = ["All", ...Array.from(new Set(tools.map(t=>t.cat)))];
   const filters = document.getElementById('filters');
   let activeCat = "All";
@@ -131,12 +131,10 @@
     ch.onclick = () => { activeCat = c; document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active')); ch.classList.add('active'); render(); };
     filters.appendChild(ch);
   });
-
   const grid = document.getElementById('grid');
   const search = document.getElementById('search');
   const meta = document.getElementById('meta');
   const empty = document.getElementById('empty');
-
   function render() {
     const q = search.value.trim().toLowerCase();
     const filtered = tools.filter(t => (activeCat==='All' || t.cat===activeCat) && (q==='' || t.name.toLowerCase().includes(q) || t.desc.toLowerCase().includes(q)));
@@ -144,12 +142,12 @@
     filtered.forEach((t, i) => {
       const card = document.createElement('div');
       card.className = 'tool';
-      card.innerHTML = `<div class="cat">${t.cat}</div><div class="name">${t.name}<button class="copy" data-name="${t.name}">copy</button></div><div class="desc">${t.desc}</div>`;
+      card.innerHTML = '<div class="cat">' + t.cat + '</div><div class="name">' + t.name + '<button class="copy" data-name="' + t.name + '">copy</button></div><div class="desc">' + t.desc + '</div>';
       grid.appendChild(card);
       setTimeout(() => card.classList.add('in'), 30 + i*25);
     });
     empty.style.display = filtered.length ? 'none' : 'block';
-    meta.innerHTML = `Showing <strong>${filtered.length}</strong> of ${tools.length} tools`;
+    meta.innerHTML = 'Showing <strong>' + filtered.length + '</strong> of ' + tools.length + ' tools';
     grid.querySelectorAll('.copy').forEach(b => b.onclick = (e) => {
       e.stopPropagation();
       navigator.clipboard.writeText(b.dataset.name);
@@ -159,34 +157,22 @@
   }
   search.addEventListener('input', render);
   render();
-
-  // scroll color change
+  // flow field
+  const canvas = document.getElementById('field'); const ctx = canvas.getContext('2d'); let W,H; function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;} resize(); window.addEventListener('resize',resize);
+  const parts=[]; for(let i=0;i<80;i++) parts.push({x:Math.random()*W,y:Math.random()*H,vx:0,vy:0});
+  let t=0; function noise(x,y,tt){return Math.sin(x*.003+tt)*Math.cos(y*.003+tt*.7)+Math.sin((x+y)*.002+tt*1.3)*.5;}
+  function tick(){t+=.008; const hue=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue'))||200; ctx.fillStyle='rgba(0,0,0,0.05)'; ctx.fillRect(0,0,W,H); for(const p of parts){const n=noise(p.x,p.y,t);const a=n*Math.PI*2;p.vx=p.vx*.9+Math.cos(a)*.5;p.vy=p.vy*.9+Math.sin(a)*.5;p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;ctx.beginPath();ctx.arc(p.x,p.y,1.3,0,Math.PI*2);ctx.fillStyle='hsla('+hue+',80%,65%,0.5)';ctx.fill();}requestAnimationFrame(tick);} tick();
+  // cursor
+  const cursor=document.getElementById('cursor');const glow=document.getElementById('glow');let cx=0,cy=0,gx=0,gy=0;window.addEventListener('mousemove',e=>{cx=e.clientX;cy=e.clientY;},{passive:true});(function loop(){gx+=(cx-gx)*.14;gy+=(cy-gy)*.14;glow.style.left=gx+'px';glow.style.top=gy+'px';cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(loop);})();
+  // scroll color
   const hues = [200, 260, 320, 140, 35, 200];
   window.addEventListener('scroll', () => requestAnimationFrame(() => {
     const y = window.scrollY; const max = document.body.scrollHeight - window.innerHeight;
-    const progress = Math.min(1, Math.max(0, y/max));
+    const progress = Math.min(1, Math.max(0, y/Math.max(1,max)));
     const idx = Math.min(hues.length-2, Math.floor(progress*(hues.length-1)));
     const local = progress*(hues.length-1) - idx;
     document.documentElement.style.setProperty('--hue', hues[idx] + (hues[idx+1]-hues[idx])*local);
   }), { passive:true });
-
-  // flow field
-  const canvas = document.getElementById('field'); const ctx = canvas.getContext('2d'); let W,H; function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;} resize(); window.addEventListener('resize',resize);
-  const parts=[]; for(let i=0;i<80;i++) parts.push({x:Math.random()*W,y:Math.random()*H,vx:0,vy:0});
-  let t=0; function noise(x,y,tt){return Math.sin(x*.003+tt)*Math.cos(y*.003+tt*.7)+Math.sin((x+y)*.002+tt*1.3)*.5;}
-  function tick(){t+=.008; const hue=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue'))||200; ctx.fillStyle='rgba(0,0,0,0.05)'; ctx.fillRect(0,0,W,H); for(const p of parts){const n=noise(p.x,p.y,t);const a=n*Math.PI*2;p.vx=p.vx*.9+Math.cos(a)*.5;p.vy=p.vy*.9+Math.sin(a)*.5;p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;ctx.beginPath();ctx.arc(p.x,p.y,1.3,0,Math.PI*2);ctx.fillStyle='hsla('+hue+',80%,65%,0.5)';ctx.fill();}requestAnimationFrame(tick);} tick();
-  // cursor
-  const cursor=document.getElementById('cursor');const glow=document.getElementById('glow');let cx=0,cy=0,gx=0,gy=0;window.addEventListener('mousemove',e=>{cx=e.clientX;cy=e.clientY;},{passive:true});(function loop(){gx+=(cx-gx)*.14;gy+=(cy-gy)*.14;glow.style.left=gx+'px';glow.style.top=gy+'px';cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(loop);})();
-
-
-  // flow field
-  const canvas = document.getElementById('field'); const ctx = canvas.getContext('2d'); let W,H; function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;} resize(); window.addEventListener('resize',resize);
-  const parts=[]; for(let i=0;i<80;i++) parts.push({x:Math.random()*W,y:Math.random()*H,vx:0,vy:0});
-  let t=0; function noise(x,y,tt){return Math.sin(x*.003+tt)*Math.cos(y*.003+tt*.7)+Math.sin((x+y)*.002+tt*1.3)*.5;}
-  function tick(){t+=.008; const hue=parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue'))||200; ctx.fillStyle='rgba(0,0,0,0.05)'; ctx.fillRect(0,0,W,H); for(const p of parts){const n=noise(p.x,p.y,t);const a=n*Math.PI*2;p.vx=p.vx*.9+Math.cos(a)*.5;p.vy=p.vy*.9+Math.sin(a)*.5;p.x+=p.vx;p.y+=p.vy;if(p.x<0)p.x=W;if(p.x>W)p.x=0;if(p.y<0)p.y=H;if(p.y>H)p.y=0;ctx.beginPath();ctx.arc(p.x,p.y,1.3,0,Math.PI*2);ctx.fillStyle='hsla('+hue+',80%,65%,0.5)';ctx.fill();}requestAnimationFrame(tick);} tick();
-  // cursor
-  const cursor=document.getElementById('cursor');const glow=document.getElementById('glow');let cx=0,cy=0,gx=0,gy=0;window.addEventListener('mousemove',e=>{cx=e.clientX;cy=e.clientY;},{passive:true});(function loop(){gx+=(cx-gx)*.14;gy+=(cy-gy)*.14;glow.style.left=gx+'px';glow.style.top=gy+'px';cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(loop);})();
-
 </script>
 </body>
 </html>
