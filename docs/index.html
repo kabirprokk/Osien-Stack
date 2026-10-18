@@ -150,17 +150,6 @@
   .logo-cyb { display: none; }
   html[data-theme="cyber"] .logo-play { display: none; }
   html[data-theme="cyber"] .logo-cyb { display: block; }
-  .hero-mark { position: absolute; right: -3%; top: 50%; width: min(440px, 44vw);
-    transform: translateY(-50%); opacity: 0; pointer-events: none; z-index: 0;
-    filter: drop-shadow(0 0 30px hsla(330,100%,60%,.5)); }
-  html[data-theme="cyber"] .hero-mark { opacity: .9; animation: markFloat 9s ease-in-out infinite; }
-  @keyframes markFloat {
-    0%,100% { transform: translateY(-50%) scale(1); }
-    50%     { transform: translateY(calc(-50% - 14px)) scale(1.03); }
-  }
-  @media (max-width: 900px) { .hero-mark { display: none; } }
-  @media (prefers-reduced-motion: reduce) { .hero-mark { animation: none; } }
-
   /* gate watermark logos */
   .gcard .prev .watermark { position: absolute; right: -4%; top: 50%; transform: translateY(-50%);
     width: 56%; opacity: .55; pointer-events: none; }
@@ -497,7 +486,6 @@
 </div>
 
 <section class="stage">
-  <img src="logo-cyber.png" width="512" height="512" fetchpriority="high" alt="" class="hero-mark" aria-hidden="true">
   <div class="eyebrow" id="eyebrow"></div>
   <h1>Your AI just <em>leveled up.</em></h1>
   <p class="sub">A portable toolchain that installs itself into any AI. Memory, verification, parallel work and context discipline, wired in one prompt. Big model or small, known or unknown: it works.</p>
