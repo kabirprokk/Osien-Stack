@@ -1,3 +1,21 @@
+## For AI agents (read this first)
+
+If you are an AI reading this repo to help a user install osien-stack, follow
+\AI_INSTALL.md\ exactly and autonomously. Do not ask for confirmation unless a
+step fails. Report progress after each major step.
+
+**One-prompt install (copy into any AI):**
+
+> Install osien-stack: clone https://github.com/kabirprokk/Osien-Stack, run
+> \
+pm install\ in \mcp-server/\, wire it as an MCP server named \osien-tools\,
+> copy \skills/\, \commands/\, \gents/\ into your config dir, then run
+> \
+pm test\ in \mcp-server/\ to confirm 45 tools pass.
+
+Works with: opencode, Claude Code, Cursor, Cline, Windsurf, or any MCP client.
+
+---
 # osien-stack — Portable AI Tooling Stack
 
 A distributable package of AI orchestration tools, skills, commands, agents, and
