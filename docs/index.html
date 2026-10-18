@@ -4,1057 +4,711 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Osien-Stack - A Living Toolchain for Any AI</title>
-<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js" defer></script>
-<link rel="icon" type="image/png" href="logo.png">
 <meta name="description" content="45 MCP tools that install themselves into any AI. Memory, verification, parallel work, context discipline. One prompt.">
+<link rel="icon" type="image/png" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js" defer></script>
 <style>
   :root {
-    --hue: 250; --sat: 78%; --light: 60%;
-    --bg: hsl(var(--hue), 35%, 6%);
+    --hue: 250; --sat: 70%; --light: 62%;
+    --bg: hsl(var(--hue), 34%, 7%);
     --fg: hsl(var(--hue), 12%, 94%);
-    --muted: hsl(var(--hue), 16%, 60%);
+    --muted: hsl(var(--hue), 14%, 64%);
     --accent: hsl(var(--hue), var(--sat), var(--light));
-    --accent2: hsl(calc(var(--hue) + 50), var(--sat), 62%);
-    --accent3: hsl(calc(var(--hue) + 110), 70%, 55%);
-    --card: hsla(var(--hue), 30%, 12%, .5);
-    --border: hsla(var(--hue), 50%, 60%, .18);
-    --glow: hsla(var(--hue), 90%, 65%, .4);
+    --accent2: hsl(calc(var(--hue) + 45), var(--sat), 64%);
+    --card: hsla(var(--hue), 28%, 13%, .72);
+    --card2: hsla(var(--hue), 28%, 17%, .78);
+    --border: hsla(var(--hue), 45%, 60%, .22);
+    --glow: hsla(var(--hue), 85%, 62%, .35);
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: auto; } /* we control scroll via JS */
-  body { font-family: 'Space Grotesk', system-ui, sans-serif; background: var(--bg); color: var(--fg); overflow-x: hidden; transition: background 1.4s ease; }
-  canvas#field { position: fixed; inset: 0; z-index: -2; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Space Grotesk', system-ui, sans-serif;
+    background: var(--bg); color: var(--fg);
+    overflow-x: hidden; line-height: 1.6;
+    transition: background .8s linear;
+  }
+  /* static, cheap depth: two soft radial washes, no filters, no blend modes */
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: -3; pointer-events: none;
+    background:
+      radial-gradient(1100px 700px at 12% 0%,   hsla(var(--hue), 80%, 46%, .20), transparent 62%),
+      radial-gradient(1000px 700px at 100% 100%, hsla(calc(var(--hue) + 70), 75%, 46%, .16), transparent 62%);
+  }
+  /* the ONE canvas */
+  canvas#three3d { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .85; }
 
-  /* magnetic cursor */
-  .cursor { position: fixed; position-anchor: none; width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--accent); pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: width .25s, height .25s, background .25s, border-color .3s; mix-blend-mode: difference; }
-  .cursor.hover { width: 54px; height: 54px; background: var(--glow); border-color: var(--accent); opacity: .95; }
-  .cursor.hover::after { content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 1px solid var(--accent); opacity: .6; }
-  .cursor.text { width: 6px; height: 30px; border-radius: 3px; background: var(--accent); border-color: transparent; }
-  .cursor.link { width: 30px; height: 30px; background: transparent; border-width: 2px; border-color: var(--accent2); }
-  .cursor.click { width: 12px; height: 12px; }
+  /* custom cursor - no blend mode */
+  .cursor {
+    position: fixed; top: 0; left: 0; width: 16px; height: 16px; border-radius: 50%;
+    border: 2px solid var(--accent); pointer-events: none; z-index: 9999;
+    transform: translate(-50%, -50%); transition: width .18s, height .18s, background .18s, border-color .18s;
+    will-change: transform;
+  }
+  .cursor.is-hover { width: 46px; height: 46px; background: hsla(var(--hue), 85%, 62%, .18); }
+  .cursor.is-text  { width: 4px; height: 26px; border-radius: 3px; background: var(--accent); border-color: transparent; }
+  .cursor.is-link  { width: 28px; height: 28px; background: transparent; border-color: var(--accent2); }
 
-  /* top bar */
-  .topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 60; display: flex; align-items: center; justify-content: space-between; padding: 14px 28px; backdrop-filter: blur(18px); background: hsla(var(--hue), 30%, 6%, .55); border-bottom: 1px solid var(--border); }
-  .topbar .logo { font-weight: 700; font-size: 1.1rem; letter-spacing: -0.5px; font-family: 'JetBrains Mono', monospace; display: flex; align-items: center; gap: 10px; }
-  .topbar .logo-img { height: 32px; width: auto; border-radius: 6px; }
-  .topbar .logo span { color: var(--accent); }
-  .topbar nav { display: flex; gap: 4px; }
-  .topbar nav a, .topbar nav button { color: var(--fg); text-decoration: none; padding: 8px 14px; border-radius: 8px; font-size: .88rem; opacity: .75; background: transparent; border: none; cursor: pointer; transition: all .2s; font-family: inherit; }
-  .topbar nav a:hover, .topbar nav button:hover { opacity: 1; color: var(--accent); background: hsla(var(--hue), 40%, 20%, .4); }
-  .kbd { font-family: 'JetBrains Mono', monospace; font-size: .7rem; padding: 2px 6px; border-radius: 4px; background: hsla(var(--hue), 30%, 20%, .6); border: 1px solid var(--border); color: var(--muted); }
+  .scrollbar { position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 100;
+    background: linear-gradient(90deg, var(--accent), var(--accent2)); box-shadow: 0 0 10px var(--glow); }
 
-  /* command palette */
-  .palette { position: fixed; inset: 0; z-index: 100; display: none; align-items: flex-start; justify-content: center; padding-top: 18vh; background: rgba(0,0,0,.55); backdrop-filter: blur(8px); }
+  .topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 60;
+    display: flex; align-items: center; justify-content: space-between; padding: 14px 26px;
+    background: hsla(var(--hue), 30%, 8%, .82); border-bottom: 1px solid var(--border);
+  }
+  .topbar .logo { display: flex; align-items: center; gap: 10px; font-family: 'JetBrains Mono', monospace;
+    font-weight: 700; font-size: 1.05rem; }
+  .topbar .logo-img { height: 30px; width: auto; border-radius: 6px; }
+  .topbar nav { display: flex; gap: 2px; align-items: center; }
+  .topbar nav a, .topbar nav button { color: var(--fg); text-decoration: none; padding: 8px 13px;
+    border-radius: 8px; font-size: .88rem; opacity: .78; background: none; border: 0; cursor: pointer;
+    font-family: inherit; transition: opacity .18s, color .18s, background .18s; }
+  .topbar nav a:hover, .topbar nav button:hover { opacity: 1; color: var(--accent); background: var(--card2); }
+  .kbd { font-family: 'JetBrains Mono', monospace; font-size: .68rem; padding: 2px 6px;
+    border-radius: 4px; background: var(--card2); border: 1px solid var(--border); color: var(--muted); }
+
+  .palette { position: fixed; inset: 0; z-index: 100; display: none; align-items: flex-start;
+    justify-content: center; padding-top: 16vh; background: rgba(4,4,10,.72); }
   .palette.open { display: flex; }
-  .palette-box { width: min(640px, 90vw); background: hsla(var(--hue), 25%, 10%, .95); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; box-shadow: 0 40px 100px rgba(0,0,0,.6); }
-  .palette-input { width: 100%; padding: 18px 20px; background: transparent; border: none; border-bottom: 1px solid var(--border); color: var(--fg); font-size: 1.05rem; font-family: 'JetBrains Mono', monospace; outline: none; }
-  .palette-list { max-height: 360px; overflow-y: auto; padding: 8px; }
-  .palette-item { padding: 10px 14px; border-radius: 8px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: .9rem; }
-  .palette-item:hover, .palette-item.active { background: hsla(var(--hue), 40%, 22%, .6); }
-  .palette-item .key { font-family: 'JetBrains Mono', monospace; font-size: .75rem; color: var(--muted); }
+  .palette-box { width: min(620px, 90vw); background: hsl(var(--hue), 26%, 10%); border: 1px solid var(--border);
+    border-radius: 14px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,.6); }
+  .palette-input { width: 100%; padding: 16px 18px; background: transparent; border: 0;
+    border-bottom: 1px solid var(--border); color: var(--fg); font-size: 1rem;
+    font-family: 'JetBrains Mono', monospace; outline: none; }
+  .palette-list { max-height: 340px; overflow-y: auto; padding: 8px; }
+  .palette-item { padding: 10px 14px; border-radius: 8px; cursor: pointer; display: flex;
+    justify-content: space-between; font-size: .9rem; }
+  .palette-item:hover, .palette-item.active { background: var(--card2); }
+  .palette-item .key { font-family: 'JetBrains Mono', monospace; font-size: .74rem; color: var(--muted); }
 
-  /* hero */
-  .stage { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 6vw; position: relative; perspective: 1200px; }
-  .stage .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: .85rem; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 24px; opacity: 0; transform: translateY(20px); animation: up .8s .2s ease forwards; }
-  .stage h1 { font-size: clamp(3rem, 9vw, 7rem); font-weight: 700; line-height: .95; letter-spacing: -3px; max-width: 900px; }
-  .stage h1 .word { display: inline-block; opacity: 0; transform: translateY(60px) rotateX(40deg); animation: wordUp .9s ease forwards; }
-  .stage h1 .word:nth-child(1) { animation-delay: .3s; }
-  .stage h1 .word:nth-child(2) { animation-delay: .45s; }
-  .stage h1 .word:nth-child(3) { animation-delay: .6s; color: var(--accent); }
-  .stage h1 .word:nth-child(4) { animation-delay: .75s; }
-  @keyframes wordUp { to { opacity: 1; transform: translateY(0) rotateX(0); } }
-  @keyframes up { to { opacity: 1; transform: translateY(0); } }
-  .stage .sub { font-size: 1.2rem; color: var(--muted); max-width: 560px; margin: 32px 0 40px; opacity: 0; animation: up .8s .9s ease forwards; }
-  .stage .actions { display: flex; gap: 12px; flex-wrap: wrap; opacity: 0; animation: up .8s 1.1s ease forwards; }
-  .btn { padding: 14px 26px; border-radius: 10px; font-weight: 600; font-size: .95rem; border: 1px solid var(--border); cursor: pointer; text-decoration: none; transition: transform .2s, box-shadow .3s, background .3s; font-family: inherit; display: inline-flex; align-items: center; gap: 8px; }
-  .btn.primary { background: var(--accent); color: #0a0a0f; border-color: transparent; box-shadow: 0 10px 40px var(--glow); }
-  .btn.primary:hover { transform: translateY(-3px); box-shadow: 0 16px 50px var(--glow); }
-  .btn.ghost { background: hsla(var(--hue), 30%, 12%, .6); color: var(--fg); }
-  .btn.ghost:hover { transform: translateY(-3px); background: hsla(var(--hue), 30%, 18%, .8); }
-  .stage .hint { position: absolute; bottom: 40px; left: 6vw; font-family: 'JetBrains Mono', monospace; font-size: .75rem; color: var(--muted); display: flex; align-items: center; gap: 10px; }
-  .stage .hint .scroll { width: 20px; height: 32px; border: 1.5px solid var(--muted); border-radius: 10px; position: relative; }
-  .stage .hint .scroll::after { content: ""; position: absolute; top: 6px; left: 50%; transform: translateX(-50%); width: 3px; height: 6px; background: var(--accent); border-radius: 2px; animation: scrollDot 1.6s ease-in-out infinite; }
-  @keyframes scrollDot { 0% { top: 6px; opacity: 1;} 100% { top: 20px; opacity: 0;} }
-
-  /* sections */
-  .block { padding: 14vh 6vw; position: relative; transform-style: preserve-3d; }
-  .block h2 { font-size: clamp(2.2rem, 5vw, 4rem); font-weight: 700; letter-spacing: -2px; margin-bottom: 20px; line-height: 1.05; }
-  .block .lead { color: var(--muted); font-size: 1.15rem; max-width: 620px; margin-bottom: 60px; }
-  .block .lead strong { color: var(--fg); font-weight: 500; }
-
-  /* bento grid (unique layout) */
-  .bento { display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: 160px; gap: 14px; }
-  .bento .cell { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 22px; backdrop-filter: blur(10px); overflow: hidden; position: relative; transition: transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s, border-color .3s; opacity: 0; transform: translateY(40px) scale(.96); }
-  .bento .cell.in { opacity: 1; transform: translateY(0) scale(1); }
-  .bento .cell:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 30px 60px var(--glow); border-color: var(--accent); }
-  .bento .cell.span2 { grid-column: span 2; }
-  .bento .cell.span3 { grid-column: span 3; }
-  .bento .cell.row2 { grid-row: span 2; }
-  .bento .cell .tag { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; }
-  .bento .cell h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 8px; letter-spacing: -0.5px; }
-  .bento .cell p { color: var(--muted); font-size: .9rem; line-height: 1.5; }
-  .bento .cell .big { font-size: 3.2rem; font-weight: 700; color: var(--accent); line-height: 1; margin-bottom: 6px; font-family: 'JetBrains Mono', monospace; }
-  .bento .cell .viz { position: absolute; bottom: 0; right: 0; width: 60%; height: 60%; opacity: .15; pointer-events: none; }
-  @media (max-width: 900px) { .bento { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; } .bento .cell.span3 { grid-column: span 2; } }
-
-  /* pipeline builder */
-  .pipe { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 32px; backdrop-filter: blur(10px); }
-  .pipe .slots { display: flex; gap: 10px; flex-wrap: wrap; margin: 20px 0; min-height: 60px; padding: 14px; border: 1.5px dashed var(--border); border-radius: 12px; }
-  .pipe .slot { padding: 8px 14px; border-radius: 8px; background: hsla(var(--hue), 40%, 22%, .6); border: 1px solid var(--accent); font-family: 'JetBrains Mono', monospace; font-size: .85rem; color: var(--accent); display: flex; align-items: center; gap: 6px; animation: pop .3s ease; }
-  @keyframes pop { from { transform: scale(.6); opacity: 0;} to { transform: scale(1); opacity: 1;} }
-  .pipe .slot button { background: none; border: none; color: var(--muted); cursor: pointer; font-size: .9rem; padding: 0 2px; }
-  .pipe .slot button:hover { color: #ff5f57; }
-  .pipe .tools { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 14px; }
-  .pipe .toolchip { padding: 7px 12px; border-radius: 8px; border: 1px solid var(--border); background: hsla(var(--hue), 25%, 12%, .5); color: var(--fg); font-size: .82rem; cursor: pointer; font-family: 'JetBrains Mono', monospace; transition: all .2s; }
-  .pipe .toolchip:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
-  .pipe .result { margin-top: 18px; padding: 14px; border-radius: 10px; background: #0a0a12; border: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: .85rem; color: #86efac; min-height: 40px; }
-
-  /* install */
-  .install { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 40px; backdrop-filter: blur(10px); }
-  .prompt { background: #0a0a12; border: 1px solid var(--border); border-radius: 12px; padding: 20px 22px; font-family: 'JetBrains Mono', monospace; font-size: .9rem; color: #cfd3e0; position: relative; overflow: hidden; }
-  .prompt::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3)); }
-  .prompt .tag { color: var(--accent); } .prompt .str { color: #a5f3b0; }
-
-  .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(100px); background: var(--accent); color: #0a0a0f; padding: 12px 24px; border-radius: 10px; font-weight: 600; font-size: .9rem; z-index: 200; transition: transform .4s cubic-bezier(.2,.8,.2,1); box-shadow: 0 10px 40px var(--glow); }
-  .toast.show { transform: translateX(-50%) translateY(0); }
-  footer { padding: 60px 6vw; text-align: center; color: var(--muted); border-top: 1px solid var(--border); font-size: .85rem; }
-  footer a { color: var(--accent); text-decoration: none; }
-
-
-  canvas#rain { position: fixed; inset: 0; z-index: -3; opacity: .18; }
-  .marquee { overflow: hidden; white-space: nowrap; padding: 14px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: hsla(var(--hue), 30%, 6%, .4); margin: 60px 0; }
-  .marquee-track { display: inline-block; animation: marquee 40s linear infinite; font-family: 'JetBrains Mono', monospace; font-size: .85rem; color: var(--muted); }
-  .marquee-track span { margin: 0 28px; }
-  .marquee-track span b { color: var(--accent); font-weight: 500; }
-  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  .top-orb { position: fixed; bottom: 28px; right: 28px; width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: #0a0a0f; border: none; cursor: pointer; font-size: 1.2rem; font-weight: 700; box-shadow: 0 8px 30px var(--glow); opacity: 0; transform: translateY(20px) scale(.8); transition: all .4s cubic-bezier(.2,.8,.2,1); z-index: 70; display: flex; align-items: center; justify-content: center; }
-  .top-orb.show { opacity: 1; transform: translateY(0) scale(1); }
-  .top-orb:hover { transform: translateY(-4px) scale(1.08); }
-  .spotlight { position: relative; padding: 32px; border-radius: 20px; background: var(--card); border: 1px solid var(--border); backdrop-filter: blur(10px); overflow: hidden; min-height: 140px; }
-  .spotlight .tag { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; }
-  .spotlight h3 { font-size: 1.6rem; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.5px; transition: opacity .4s, transform .4s; }
-  .spotlight p { color: var(--muted); font-size: .9rem; transition: opacity .4s, transform .4s; }
-  .spotlight .counter { position: absolute; top: 16px; right: 20px; font-family: 'JetBrains Mono', monospace; font-size: .75rem; color: var(--muted); }
-
-
-  .kbdhelp { position: fixed; inset: 0; z-index: 150; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,.7); backdrop-filter: blur(8px); }
+  .kbdhelp { position: fixed; inset: 0; z-index: 150; display: none; align-items: center;
+    justify-content: center; background: rgba(4,4,10,.74); }
   .kbdhelp.open { display: flex; }
-  .kbdhelp-box { background: hsla(var(--hue), 25%, 10%, .95); border: 1px solid var(--border); border-radius: 16px; padding: 28px 32px; max-width: 420px; width: 90vw; }
-  .kbdhelp-box h3 { margin-bottom: 16px; font-size: 1.2rem; }
-  .kbdhelp-box .row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: .9rem; }
-  .kbdhelp-box .row:last-child { border-bottom: none; }
-  .kbdhelp-box .key { font-family: 'JetBrains Mono', monospace; color: var(--accent); background: hsla(var(--hue), 30%, 18%, .6); padding: 2px 8px; border-radius: 4px; font-size: .8rem; }
-  .kbdhelp-box .desc { color: var(--muted); }
-  .live-type { font-family: 'JetBrains Mono', monospace; font-size: .95rem; color: #cfd3e0; background: #0a0a12; border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; min-height: 80px; position: relative; overflow: hidden; }
-  .live-type::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
-  .live-type .cursor-blink { display: inline-block; width: 8px; height: 14px; background: var(--accent); vertical-align: middle; animation: blink 1s step-end infinite; }
-  @keyframes blink { 0%,50% { opacity: 1; } 51%,100% { opacity: 0; } }
-  .live-type .prompt { color: var(--accent); }
+  .kbdhelp-box { background: hsl(var(--hue), 26%, 10%); border: 1px solid var(--border);
+    border-radius: 14px; padding: 26px 28px; max-width: 400px; width: 90vw; }
+  .kbdhelp-box h3 { margin-bottom: 14px; font-size: 1.15rem; }
+  .kbdhelp-box .row { display: flex; justify-content: space-between; padding: 6px 0;
+    border-bottom: 1px solid var(--border); font-size: .9rem; }
+  .kbdhelp-box .row:last-child { border-bottom: 0; }
+  .kbdhelp-box .k { font-family: 'JetBrains Mono', monospace; color: var(--accent); }
+  .kbdhelp-box .d { color: var(--muted); }
 
+  .section-indicator { position: fixed; right: 22px; top: 50%; transform: translateY(-50%); z-index: 55;
+    display: flex; flex-direction: column; gap: 11px; }
+  .section-indicator i { width: 7px; height: 7px; border-radius: 50%; background: var(--border);
+    border: 1px solid var(--border); cursor: pointer; transition: background .2s, transform .2s; }
+  .section-indicator i.on { background: var(--accent); transform: scale(1.7); box-shadow: 0 0 10px var(--glow); }
 
-  .section-indicator { position: fixed; right: 24px; top: 50%; transform: translateY(-50%); z-index: 55; display: flex; flex-direction: column; gap: 12px; }
-  .section-indicator .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); transition: all .3s; cursor: pointer; border: 1px solid var(--border); }
-  .section-indicator .dot.active { background: var(--accent); transform: scale(1.6); box-shadow: 0 0 12px var(--glow); }
-  .section-indicator .dot:hover { background: var(--accent); transform: scale(1.3); }
-  @media (max-width: 900px) { .section-indicator { display: none; } }
-  .word-reveal span { display: inline-block; opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
-  .word-reveal span.in { opacity: 1; transform: translateY(0); }
-
-
-  .top-orb { position: relative; overflow: visible; }
-  .top-orb .ring { position: absolute; inset: -4px; border-radius: 50%; border: 2px solid transparent; border-top-color: var(--accent); border-right-color: var(--accent2); transform: rotate(-90deg); transition: transform .1s linear; pointer-events: none; }
-  .confetti { position: fixed; pointer-events: none; z-index: 9999; }
-  .confetti span { position: absolute; width: 8px; height: 8px; border-radius: 2px; animation: confettiFall 1.2s ease-out forwards; }
-  @keyframes confettiFall { 0% { transform: translate(0,0) rotate(0deg); opacity: 1; } 100% { transform: translate(var(--dx), var(--dy)) rotate(720deg); opacity: 0; } }
-
-
-  .scramble { cursor: default; }
-  .visitor-counter { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 999px; background: var(--card); border: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: .8rem; color: var(--muted); margin-top: 20px; }
-  .visitor-counter .dot { width: 8px; height: 8px; border-radius: 50%; background: #28c840; box-shadow: 0 0 8px #28c840; animation: pulse 2s ease-in-out infinite; }
-  @keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .5; transform: scale(1.3); } }
+  section { max-width: 1160px; margin: 0 auto; padding: 108px 24px; }
+  .stage { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; position: relative; }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: .82rem; color: var(--accent);
+    letter-spacing: 2px; text-transform: uppercase; margin-bottom: 22px; min-height: 1.2em; }
+  .stage h1 { font-size: clamp(2.8rem, 8.5vw, 6.6rem); font-weight: 700; line-height: .96; letter-spacing: -3px; }
+  .stage h1 em { font-style: normal; color: var(--accent); }
+  .stage .sub { font-size: 1.18rem; color: var(--muted); max-width: 560px; margin: 26px 0 36px; }
+  .actions { display: flex; gap: 12px; flex-wrap: wrap; }
+  .btn { padding: 13px 24px; border-radius: 10px; font-weight: 600; font-size: .94rem;
+    border: 1px solid var(--border); cursor: pointer; text-decoration: none; font-family: inherit;
+    background: var(--card); color: var(--fg); transition: transform .18s, box-shadow .25s, background .2s; }
+  .btn.primary { background: var(--accent); color: #08080e; border-color: transparent; box-shadow: 0 8px 30px var(--glow); }
+  .btn:hover { transform: translateY(-2px); }
+  .stats { display: flex; gap: 34px; flex-wrap: wrap; margin-top: 30px; }
+  .stat .n { font-size: 2.1rem; font-weight: 700; color: var(--accent); font-family: 'JetBrains Mono', monospace; }
+  .stat .l { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: 1px; }
+  .visitor-counter { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px;
+    border-radius: 999px; background: var(--card); border: 1px solid var(--border);
+    font-family: 'JetBrains Mono', monospace; font-size: .78rem; color: var(--muted); }
+  .visitor-counter .d { width: 7px; height: 7px; border-radius: 50%; background: #2fbf4f; }
   .visitor-counter strong { color: var(--accent); }
 
+  h2 { font-size: clamp(1.9rem, 4.6vw, 3.4rem); font-weight: 700; letter-spacing: -2px; margin-bottom: 14px; line-height: 1.06; }
+  .lead { color: var(--muted); font-size: 1.08rem; max-width: 640px; margin-bottom: 42px; }
+  .lead strong { color: var(--fg); font-weight: 500; }
 
-  .mesh-layer { position: fixed; inset: 0; z-index: -4; filter: blur(80px); opacity: .55; pointer-events: none; }
-  .mesh-layer .blob { position: absolute; border-radius: 50%; mix-blend-mode: screen; }
-  .expand-card { cursor: pointer; }
-  .expand-card .more { max-height: 0; overflow: hidden; transition: max-height .45s ease, opacity .3s; opacity: 0; color: var(--muted); font-size: .85rem; margin-top: 10px; }
-  .expand-card.expanded .more { max-height: 200px; opacity: 1; }
-  .expand-card .more code { font-family: 'JetBrains Mono', monospace; font-size: .78rem; color: var(--accent); background: hsla(var(--hue), 30%, 14%, .8); padding: 2px 6px; border-radius: 4px; }
-  .eyebrow { font-family: 'JetBrains Mono', monospace; }
-  .eyebrow .caret { display: inline-block; width: 8px; height: 14px; background: var(--accent); vertical-align: middle; animation: blink 1s step-end infinite; }
+  /* bento */
+  .bento { display: grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: 158px; gap: 14px; }
+  .bento .cell { grid-column: span 2; background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 20px; overflow: hidden; transition: border-color .2s, background .2s, transform .2s; }
+  .bento .cell.span3 { grid-column: span 3; }
+  .bento .cell.row2 { grid-row: span 2; }
+  .bento .cell:hover { border-color: var(--accent); background: var(--card2); }
+  .bento .cell .tag { font-family: 'JetBrains Mono', monospace; font-size: .68rem; color: var(--accent);
+    text-transform: uppercase; letter-spacing: 1.4px; margin-bottom: 9px; }
+  .bento .cell h3 { font-size: 1.12rem; font-weight: 600; margin-bottom: 7px; letter-spacing: -.4px; }
+  .bento .cell p { color: var(--muted); font-size: .89rem; }
+  .bento .cell .big { font-size: 2.9rem; font-weight: 700; color: var(--accent);
+    font-family: 'JetBrains Mono', monospace; line-height: 1; margin-bottom: 5px; }
+  .bento .cell.span6 { grid-column: span 6; }
+  @media (max-width: 900px) { .bento { grid-template-columns: repeat(2, 1fr); } .bento .cell, .bento .cell.span3, .bento .cell.span6 { grid-column: span 2; } }
 
+  /* reveal: JS adds .in -- but a CSS-only fallback keeps content visible if JS dies */
+  .reveal, .bento .cell { opacity: 1; }
+  html.js .reveal, html.js .bento .cell { opacity: 0; transform: translateY(18px); transition: opacity .5s ease, transform .5s ease; }
+  html.js .reveal.in, html.js .bento .cell.in { opacity: 1; transform: none; }
 
-  canvas#three3d { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
-  .stage { z-index: 2; }
-  .block { z-index: 2; }
-  .marquee { z-index: 2; }
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .compare .col { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 22px; }
+  .compare .col h3 { font-size: 1.05rem; margin-bottom: 10px; }
+  .compare .col.before h3 { color: #f2777a; }
+  .compare .col.after h3 { color: #6ee7a0; }
+  .compare .col li { list-style: none; padding: 5px 0; color: var(--muted); font-size: .9rem; }
+  .compare .col li::before { content: "\00d7"; color: #f2777a; font-weight: 700; margin-right: 8px; }
+  .compare .col.after li::before { content: "\2713"; color: #6ee7a0; }
+  @media (max-width: 720px) { .compare { grid-template-columns: 1fr; } }
 
-  .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
-  .reveal.in { opacity: 1; transform: translateY(0); }
+  .spotlight { padding: 26px; border-radius: 16px; background: var(--card); border: 1px solid var(--border); }
+  .spotlight .tag { font-family: 'JetBrains Mono', monospace; font-size: .68rem; color: var(--accent);
+    text-transform: uppercase; letter-spacing: 1.4px; margin-bottom: 8px; }
+  .spotlight h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 5px; font-family: 'JetBrains Mono', monospace; }
+  .spotlight p { color: var(--muted); font-size: .92rem; }
+  .spotlight .counter { float: right; font-family: 'JetBrains Mono', monospace; font-size: .72rem; color: var(--muted); }
 
-  @media (max-width: 720px) { .topbar nav { display: none; } body { cursor: auto; } .cursor, .glow { display: none; } }
+  .pipe { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 26px; }
+  .pipe .slots { display: flex; gap: 8px; flex-wrap: wrap; min-height: 56px; padding: 12px;
+    border: 1.5px dashed var(--border); border-radius: 10px; margin: 16px 0; }
+  .pipe .slot { padding: 7px 12px; border-radius: 7px; background: var(--card2); border: 1px solid var(--accent);
+    font-family: 'JetBrains Mono', monospace; font-size: .83rem; color: var(--accent); display: flex; gap: 6px; align-items: center; }
+  .pipe .slot button { background: none; border: 0; color: var(--muted); cursor: pointer; font-size: .9rem; }
+  .pipe .slot button:hover { color: #f2777a; }
+  .pipe .tools { display: flex; gap: 7px; flex-wrap: wrap; }
+  .pipe .toolchip { padding: 6px 11px; border-radius: 7px; border: 1px solid var(--border);
+    background: var(--card); color: var(--fg); font-size: .8rem; cursor: pointer;
+    font-family: 'JetBrains Mono', monospace; transition: border-color .18s, color .18s; }
+  .pipe .toolchip:hover { border-color: var(--accent); color: var(--accent); }
+  .pipe .result { margin-top: 14px; padding: 12px; border-radius: 9px; background: #09090f;
+    border: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: .83rem; color: #86efac; }
 
+  .install { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 32px; }
+  .prompt { background: #09090f; border: 1px solid var(--border); border-radius: 11px; padding: 18px;
+    font-family: 'JetBrains Mono', monospace; font-size: .88rem; color: #cfd3e0; overflow-x: auto; }
+  .prompt .tag { color: var(--accent); } .prompt .str { color: #a5f3b0; }
+  .live-type { background: #09090f; border: 1px solid var(--border); border-radius: 11px; padding: 16px;
+    font-family: 'JetBrains Mono', monospace; font-size: .9rem; color: #cfd3e0; min-height: 70px; overflow-x: auto; }
+  .live-type .p { color: var(--accent); }
+  .caret { display: inline-block; width: 7px; height: 13px; background: var(--accent); vertical-align: middle; }
+
+  .faq-item { border: 1px solid var(--border); border-radius: 11px; margin-bottom: 9px; overflow: hidden; background: var(--card); }
+  .faq-q { padding: 14px 18px; cursor: pointer; display: flex; justify-content: space-between;
+    align-items: center; font-weight: 600; font-size: .96rem; }
+  .faq-q:hover { background: var(--card2); }
+  .faq-q .plus { color: var(--accent); font-size: 1.3rem; }
+  .faq-item.open .faq-q .plus { transform: rotate(45deg); }
+  .faq-a { padding: 0 18px; max-height: 0; overflow: hidden; transition: max-height .35s ease, padding .35s;
+    color: var(--muted); font-size: .91rem; }
+  .faq-item.open .faq-a { max-height: 260px; padding: 0 18px 14px; }
+
+  .marquee { overflow: hidden; white-space: nowrap; padding: 12px 0; border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border); background: hsla(var(--hue), 28%, 8%, .5); }
+  .marquee-track { display: inline-block; animation: slide 46s linear infinite; font-family: 'JetBrains Mono', monospace;
+    font-size: .82rem; color: var(--muted); }
+  .marquee-track span { margin: 0 26px; }
+  .marquee-track b { color: var(--accent); font-weight: 500; }
+  @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  .top-orb { position: fixed; bottom: 24px; right: 24px; width: 44px; height: 44px; border-radius: 50%;
+    background: var(--accent); color: #08080e; border: 0; cursor: pointer; font-size: 1.1rem; font-weight: 700;
+    box-shadow: 0 6px 24px var(--glow); opacity: 0; transform: translateY(14px); transition: opacity .3s, transform .3s; z-index: 70; }
+  .top-orb.show { opacity: 1; transform: none; }
+
+  .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(90px);
+    background: var(--accent); color: #08080e; padding: 11px 22px; border-radius: 9px; font-weight: 600;
+    font-size: .88rem; z-index: 200; transition: transform .35s ease; }
+  .toast.show { transform: translateX(-50%) translateY(0); }
+
+  footer { padding: 54px 24px; text-align: center; color: var(--muted); border-top: 1px solid var(--border); font-size: .85rem; }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 720px) {
+    .topbar nav { display: none; }
+    .section-indicator { display: none; }
+  }
   @media (prefers-reduced-motion: reduce) {
     * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-    .card, .cell, .reveal, .step { opacity: 1 !important; transform: none !important; }
-    .cursor, .glow, canvas#field, canvas#rain, .mesh-layer { display: none !important; }
+    canvas#three3d, .cursor { display: none !important; }
   }
-
 </style>
 </head>
 <body>
-  <div class="scrollbar" id="scrollbar"></div>
-  <canvas id="field"></canvas>
-  <canvas id="rain"></canvas>
-  <canvas id="three3d"></canvas>
-  <div class="kbdhelp" id="kbdhelp">
-    <div class="kbdhelp-box">
-      <h3>Keyboard shortcuts</h3>
-      <div class="row"><span class="key">1-5</span><span class="desc">Jump to section</span></div>
-      <div class="row"><span class="key">?</span><span class="desc">Show this help</span></div>
-      <div class="row"><span class="key">Esc</span><span class="desc">Close overlays</span></div>
-      <div class="row"><span class="key">⌘K</span><span class="desc">Command palette</span></div>
-      <div class="row"><span class="key">T</span><span class="desc">Back to top</span></div>
+<script>document.documentElement.className = 'js';</script>
+
+<canvas id="three3d"></canvas>
+<div class="cursor" id="cursor"></div>
+<div class="scrollbar" id="scrollbar"></div>
+<button class="top-orb" id="topOrb" aria-label="Back to top">&uarr;</button>
+
+<div class="kbdhelp" id="kbdhelp">
+  <div class="kbdhelp-box">
+    <h3>Keyboard shortcuts</h3>
+    <div class="row"><span class="k">1-6</span><span class="d">Jump to section</span></div>
+    <div class="row"><span class="k">?</span><span class="d">This help</span></div>
+    <div class="row"><span class="k">T</span><span class="d">Back to top</span></div>
+    <div class="row"><span class="k">Esc</span><span class="d">Close overlays</span></div>
+    <div class="row"><span class="k">Ctrl K</span><span class="d">Command palette</span></div>
+  </div>
+</div>
+
+<div class="section-indicator" id="sectionIndicator">
+  <i data-i="0" title="home"></i><i data-i="1" title="why"></i><i data-i="2" title="what"></i>
+  <i data-i="3" title="pipeline"></i><i data-i="4" title="how"></i><i data-i="5" title="install"></i>
+</div>
+
+<nav class="topbar">
+  <div class="logo"><img src="logo.png" alt="Osien-Stack" class="logo-img"><span>osien_stack</span></div>
+  <nav>
+    <a href="#why">why</a><a href="#what">what</a><a href="#pipeline">pipeline</a>
+    <a href="#how">how</a><a href="#install">install</a><a href="tools.html">tools</a>
+    <button id="paletteBtn">search <span class="kbd">Ctrl K</span></button>
+    <a href="https://github.com/kabirprokk/Osien-Stack" target="_blank" rel="noopener">github</a>
+  </nav>
+</nav>
+
+<div class="palette" id="palette">
+  <div class="palette-box">
+    <input class="palette-input" id="paletteInput" placeholder="jump to section or tool...">
+    <div class="palette-list" id="paletteList"></div>
+  </div>
+</div>
+
+<section class="stage">
+  <div class="eyebrow" id="eyebrow"></div>
+  <h1>Your AI just <em>leveled up.</em></h1>
+  <p class="sub">A portable toolchain that installs itself into any AI. Memory, verification, parallel work and context discipline, wired in one prompt. Big model or small, known or unknown: it works.</p>
+  <div class="actions">
+    <a class="btn primary" href="#install">Get the one-liner</a>
+    <a class="btn" href="tools.html">Browse 45 tools</a>
+    <a class="btn" href="https://github.com/kabirprokk/Osien-Stack" target="_blank" rel="noopener">GitHub</a>
+  </div>
+  <div class="stats">
+    <div class="visitor-counter"><span class="d"></span><strong id="visitorCount">1,247</strong> builders online</div>
+    <div class="stat"><div class="n" data-count="45">45</div><div class="l">MCP tools</div></div>
+    <div class="stat"><div class="n" data-count="93">93%</div><div class="l">fewer tokens</div></div>
+    <div class="stat"><div class="n">0.49ms</div><div class="l">cache read</div></div>
+  </div>
+</section>
+
+<section id="why">
+  <h2 class="reveal">Why Osien-Stack?</h2>
+  <p class="lead reveal">Your AI is only as good as the tools it can reach. Osien-Stack gives <strong>every</strong> AI the same unfair advantage, without you lifting a finger.</p>
+  <div class="bento">
+    <div class="cell span3 row2"><div class="tag">memory</div><div class="big">5</div><h3>Memory parts</h3><p>architecture, decisions, failures, state, performance. ctx_recall loads only what the role needs, so your AI never starts cold.</p></div>
+    <div class="cell span3"><div class="tag">speed</div><h3>0.49ms reads</h3><p>mtime-keyed file cache. 50 reads in 24ms. Tools return before you blink.</p></div>
+    <div class="cell span3"><div class="tag">tokens</div><h3>-93%</h3><p>read_slice, smart_grep and ctx_recall feed the model only what matters. Stop paying for whole files.</p></div>
+    <div class="cell"><div class="tag">verify</div><h3>Evidence</h3><p>verify_chain, security_scan, test_gap. No "trust me".</p></div>
+    <div class="cell"><div class="tag">city</div><h3>14 agents</h3><p>Mayor, Hammer, Detective debate in parallel.</p></div>
+    <div class="cell"><div class="tag">anywhere</div><h3>Any MCP client</h3><p>opencode, Claude Code, Cursor, Cline, Windsurf.</p></div>
+  </div>
+</section>
+
+<section id="spotlight" style="padding-top:0;padding-bottom:40px">
+  <div class="spotlight reveal" id="spotBox" role="button" tabindex="0" title="Click for another tool">
+    <span class="counter" id="spotCount">1 / 5</span>
+    <div class="tag">tool of the moment &middot; click to cycle</div>
+    <h3 id="spotName">ctx_recall</h3>
+    <p id="spotDesc">Load project memory by role/part/grep.</p>
+  </div>
+</section>
+
+<section id="compare">
+  <h2 class="reveal">Before vs. After</h2>
+  <p class="lead reveal">Same AI. Same model. Different toolchain.</p>
+  <div class="compare">
+    <div class="col before"><h3>Without Osien-Stack</h3><ul>
+      <li>Re-reads entire files every task</li><li>Hand-rolls one-off scripts</li>
+      <li>No memory between sessions</li><li>Ships unverified code</li>
+      <li>Context balloons past 80% before rotating</li><li>One tool call at a time</li></ul></div>
+    <div class="col after"><h3>With Osien-Stack</h3><ul>
+      <li>read_slice feeds 5 lines, not 500</li><li>Forge once, reuse forever</li>
+      <li>ctx_recall loads prior decisions</li><li>verify_chain before "done"</li>
+      <li>Rotate at 30% and stay fast</li><li>batch runs ops in parallel</li></ul></div>
+  </div>
+</section>
+
+<section id="what">
+  <h2 class="reveal">What it does</h2>
+  <p class="lead reveal">45 forged tools, short names, sharp descriptions. The model spends tokens on work, not on choosing. <a href="tools.html" style="color:var(--accent)">Browse all 45 &rarr;</a></p>
+  <div class="bento">
+    <div class="cell"><div class="tag">memory &middot; 7</div><h3>ctx_recall, ctx_save</h3><p>soul_read, soul_write, fast_note, task_state, state_reset.</p></div>
+    <div class="cell"><div class="tag">search &middot; 3</div><h3>smart_grep, read_slice</h3><p>impact_analyze. Locations and lines, never whole files.</p></div>
+    <div class="cell"><div class="tag">verify &middot; 7</div><h3>verify_chain</h3><p>security_scan, test_gap, repro_capsule, context_budget, consensus, auto_heal.</p></div>
+    <div class="cell"><div class="tag">state &middot; 5</div><h3>machine_state</h3><p>repo_health, project_map, loop_status, checkpoint_create.</p></div>
+    <div class="cell"><div class="tag">quality &middot; 14</div><h3>perf_regression</h3><p>rollback, test_synthesizer, dead_code, dep_graph, changelog, token_budget and more.</p></div>
+    <div class="cell"><div class="tag">city &middot; 6</div><h3>city_mode</h3><p>city_status, city_post, city_read, city_broadcast, city_clear.</p></div>
+    <div class="cell span3"><div class="tag">parallel &middot; 1</div><h3>batch</h3><p>Run multiple read / grep / ctx ops in one call, in parallel. The powerhouse.</p></div>
+    <div class="cell span3"><div class="tag">quality &middot; 2</div><h3>cost_estimator, self_critique_loop</h3><p>Token cost estimates and self-review loops before you ship.</p></div>
+  </div>
+</section>
+
+<section id="pipeline">
+  <h2 class="reveal">Build a pipeline</h2>
+  <p class="lead reveal">Click tools to chain them. Your AI does this automatically, but here you can feel it.</p>
+  <div class="pipe">
+    <div class="slots" id="slots"><span style="color:var(--muted);font-size:.85rem">drop tools here...</span></div>
+    <div class="tools" id="toolChips"></div>
+    <div class="result" id="pipeResult">&rarr; result appears here</div>
+  </div>
+</section>
+
+<section id="how">
+  <h2 class="reveal">How it works</h2>
+  <p class="lead reveal">One MCP server over stdio. Any AI talks to it like a native tool. Your AI keeps its brain; Osien-Stack gives it hands.</p>
+  <div class="bento">
+    <div class="cell row2"><div class="tag">step 1</div><div class="big">01</div><h3>AI fetches the repo</h3><p>One prompt: "install osien-stack". Clones, npm installs, wires the MCP server, copies the skills. Done.</p></div>
+    <div class="cell row2"><div class="tag">step 2</div><div class="big">02</div><h3>Tools come online</h3><p>45 tools register over stdio. Memory, verify, search, state, city mode, all callable by name.</p></div>
+    <div class="cell row2"><div class="tag">step 3</div><div class="big">03</div><h3>AI uses them</h3><p>SITE LAW, TOOL-FIRST and PARALLELISM are auto-loaded. It stops hand-rolling and starts forging.</p></div>
+    <div class="cell span6"><div class="tag">step 4</div><div class="big">04</div><h3>You ship faster</h3><p>93% fewer tokens, 0.49ms cached reads, parallel batch ops. Same model, ten times the throughput.</p></div>
+  </div>
+</section>
+
+<section id="live">
+  <h2 class="reveal">Watch it install</h2>
+  <p class="lead reveal">Your AI types the install command. You watch. That is the whole setup.</p>
+  <div class="live-type" id="liveType"></div>
+</section>
+
+<section id="faq">
+  <h2 class="reveal">FAQ</h2>
+  <p class="lead reveal">The questions every AI asks before installing.</p>
+  <div class="faq" id="faq">
+    <div class="faq-item"><div class="faq-q">Does it work with my AI?<span class="plus">+</span></div><div class="faq-a">Yes. Any MCP-compatible client: opencode, Claude Code, Cursor, Cline, Windsurf. It degrades gracefully elsewhere.</div></div>
+    <div class="faq-item"><div class="faq-q">Is it free?<span class="plus">+</span></div><div class="faq-a">MIT licensed, free forever. No API keys required for the core 45 tools.</div></div>
+    <div class="faq-item"><div class="faq-q">How long to install?<span class="plus">+</span></div><div class="faq-a">One prompt. The AI clones, installs, wires and runs the smoke test. About 60 seconds.</div></div>
+    <div class="faq-item"><div class="faq-q">Does it slow my AI down?<span class="plus">+</span></div><div class="faq-a">No. Cached reads are 0.49ms and prompts are 50% shorter. It makes your AI faster.</div></div>
+    <div class="faq-item"><div class="faq-q">Can I use just some tools?<span class="plus">+</span></div><div class="faq-a">Yes. All 45 are exposed, but your AI only calls what it needs. Unused tools cost nothing.</div></div>
+  </div>
+</section>
+
+<section id="install">
+  <h2 class="reveal">Install in one prompt</h2>
+  <p class="lead reveal">Paste this into any AI. It does the rest. <strong>Any</strong> AI.</p>
+  <div class="install">
+    <div class="prompt"><span class="tag">You:</span> <span class="str">"Install osien-stack: clone https://github.com/kabirprokk/Osien-Stack, run npm install in mcp-server, wire it as an MCP server named osien-tools, copy skills/commands/agents into your config, then confirm with the smoke test (npm test)."</span></div>
+    <div style="margin-top:14px"><button class="btn primary" id="copyInstall">Copy install prompt</button></div>
+    <div style="margin-top:22px;display:flex;gap:10px;flex-wrap:wrap">
+      <span class="btn">opencode</span><span class="btn">Claude Code</span><span class="btn">Cursor</span><span class="btn">Cline</span><span class="btn">Windsurf</span>
     </div>
   </div>
-  <div class="section-indicator" id="sectionIndicator">
-    <div class="dot" data-target="" title="hero"></div>
-    <div class="dot" data-target="why" title="why"></div>
-    <div class="dot" data-target="what" title="what"></div>
-    <div class="dot" data-target="pipeline" title="pipeline"></div>
-    <div class="dot" data-target="how" title="how"></div>
-    <div class="dot" data-target="install" title="install"></div>
-  </div>
-  <button class="top-orb" id="topOrb" aria-label="back to top">↑<svg class="ring" viewBox="0 0 56 56"><circle cx="28" cy="28" r="26" fill="none" stroke="var(--border)" stroke-width="2"/></svg></button>
-  <div id="webglFallback" style="display:none;position:fixed;inset:0;z-index:-4;background:radial-gradient(circle at 50% 50%, hsla(var(--hue),80%,30%,.35), transparent 60%)"></div>
-  <div class="mesh-layer" id="mesh"><div class="blob" id="b1"></div><div class="blob" id="b2"></div><div class="blob" id="b3"></div><div class="blob" id="b4"></div></div>
-  <div class="cursor" id="cursor"></div>
-  <div class="glow" id="glow"></div>
+</section>
 
-  <div class="topbar">
-    <div class="logo"><img src="logo.png" alt="Osien-Stack" class="logo-img"><span>osien_stack</span></div>
-    <nav>
-      <a href="#why">why</a>
-      <a href="#what">what</a>
-      <a href="#pipeline">pipeline</a>
-      <a href="#install">install</a>
-      <a href="tools.html">tools</a>
-      <button id="paletteBtn">search <span class="kbd">⌘K</span></button>
-      <a href="https://github.com/kabirprokk/Osien-Stack" target="_blank">github</a>
-    </nav>
-  </div>
+<div class="marquee"><div class="marquee-track" id="marqueeTrack"></div></div>
 
-  <div class="palette" id="palette">
-    <div class="palette-box">
-      <input class="palette-input" id="paletteInput" placeholder="jump to section or tool…" />
-      <div class="palette-list" id="paletteList"></div>
-    </div>
-  </div>
+<footer>
+  <p>Osien-Stack &middot; MIT licensed &middot; <a href="https://github.com/kabirprokk/Osien-Stack" target="_blank" rel="noopener">GitHub</a> &middot; <a href="tools.html">Tool Explorer</a></p>
+</footer>
 
-  <section class="stage">
-    <div class="eyebrow">// v1.1.0 - 45 tools - mit licensed</div>
-    <h1>
-      <span class="word">Your</span> <span class="word">AI</span><br>
-      <span class="word">just</span> <span class="word">leveled up.</span>
-    </h1>
-    <p class="sub">A portable toolchain that installs itself into any AI. Memory, verification, parallel work, context discipline — wired in one prompt. Big model or small, known or unknown: it works.</p>
-    <div class="actions">
-      <a class="btn primary" href="#install">Get the one-liner →</a>
-      <a class="btn ghost" href="tools.html">Browse 45 tools</a>
-      <a class="btn ghost" href="https://github.com/kabirprokk/Osien-Stack" target="_blank">GitHub</a>
-    </div>
-    <div class="hint"><div class="scroll"></div> scroll to morph</div>
-  </section>
-
-
-  <section class="block" id="spotlight" style="padding-top: 60px; padding-bottom: 60px;">
-    <div class="spotlight" id="spotlightBox">
-      <div class="tag">tool of the moment</div>
-      <div class="counter" id="spotCounter">1 / 45</div>
-      <h3 id="spotName">ctx_recall</h3>
-      <p id="spotDesc">Load project memory by role/part/grep.</p>
-    </div>
-  </section>
-
-  <section class="block" id="why">
-    <h2>Why Osien-Stack?</h2>
-    <p class="lead">Your AI is only as good as the tools it can reach. Osien-Stack gives <strong>every</strong> AI the same unfair advantage — without you lifting a finger.</p>
-    <div class="bento">
-      <div class="cell span3 row2">
-        <div class="tag">memory</div>
-        <div class="big">5</div>
-        <h3>Memory parts</h3>
-        <p>architecture, decisions, failures, state, performance. ctx_recall loads only what the role needs. Your AI never starts cold.</p>
-      </div>
-      <div class="cell span3">
-        <div class="tag">speed</div>
-        <h3>0.49ms reads</h3>
-        <p>mtime-keyed file cache. 50 reads in 24ms. Tools return before you blink.</p>
-      </div>
-      <div class="cell span3">
-        <div class="tag">tokens</div>
-        <h3>−93%</h3>
-        <p>read_slice, smart_grep, ctx_recall feed the model only what matters. Stop paying for whole files.</p>
-      </div>
-      <div class="cell span2">
-        <div class="tag">verify</div>
-        <h3>Evidence</h3>
-        <p>verify_chain, security_scan, test_gap. No "trust me."</p>
-      </div>
-      <div class="cell span2">
-        <div class="tag">city</div>
-        <h3>14 agents</h3>
-        <p>Mayor, Hammer, Detective… debate in parallel.</p>
-      </div>
-      <div class="cell span2">
-        <div class="tag">anywhere</div>
-        <h3>Any MCP client</h3>
-        <p>opencode, Claude Code, Cursor, Cline, Windsurf.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <section class="block" id="compare">
-    <h2>Before vs. After</h2>
-    <p class="lead">Same AI. Same model. Different toolchain.</p>
-    <div class="compare">
-      <div class="col before">
-        <h3>Without Osien-Stack</h3>
-        <ul>
-          <li>Re-reads entire files every task</li>
-          <li>Hand-rolls one-off scripts</li>
-          <li>No memory between sessions</li>
-          <li>Ships unverified code</li>
-          <li>Context balloons to 80%+ before rotating</li>
-          <li>One tool call at a time</li>
-        </ul>
-      </div>
-      <div class="col after">
-        <h3>With Osien-Stack</h3>
-        <ul>
-          <li>read_slice feeds 5 lines, not 500</li>
-          <li>Forge once, reuse forever</li>
-          <li>ctx_recall loads prior decisions</li>
-          <li>verify_chain before "done"</li>
-          <li>Rotate at 30%, stay fast</li>
-          <li>batch runs ops in parallel</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="what">
-    <h2>What it does</h2>
-    <p class="lead">45 forged tools. Short names, sharp descriptions — the model spends tokens on work, not on choosing. <a href="tools.html" style="color:var(--accent)">Browse all 45 →</a></p>
-    <div class="bento">
-      <div class="cell span2"><div class="tag">memory - 7</div><h3>ctx_recall …</h3><p>ctx_save, soul_read, soul_write, fast_note, task_state, state_reset.</p></div>
-      <div class="cell span2"><div class="tag">search - 3</div><h3>smart_grep …</h3><p>read_slice, impact_analyze — locations, never whole files.</p></div>
-      <div class="cell span2"><div class="tag">verify - 7</div><h3>verify_chain …</h3><p>security_scan, test_gap, repro_capsule, context_budget, consensus, auto_heal.</p></div>
-      <div class="cell span2"><div class="tag">state - 5</div><h3>machine_state …</h3><p>repo_health, project_map, loop_status, checkpoint_create.</p></div>
-      <div class="cell span2"><div class="tag">quality - 14</div><h3>perf_regression …</h3><p>rollback, test_synthesizer, dead_code, dep_graph, changelog, token_budget…</p></div>
-      <div class="cell span2"><div class="tag">city - 6</div><h3>city_mode …</h3><p>city_status, city_post, city_read, city_broadcast, city_clear.</p></div>
-      <div class="cell span3"><div class="tag">parallel - 1</div><h3>batch</h3><p>Run multiple ops in one call, in parallel. The powerhouse.</p></div>
-      <div class="cell span3"><div class="tag">quality - 2</div><h3>cost_estimator - self_critique</h3><p>Token cost estimates and self-review loops.</p></div>
-    </div>
-  </section>
-
-  <section class="block" id="pipeline">
-    <h2>Build a pipeline</h2>
-    <p class="lead">Click tools to chain them. Your AI does this automatically — but here you can feel it.</p>
-    <div class="pipe">
-      <div class="slots" id="slots"><span style="color:var(--muted);font-size:.85rem;">drop tools here…</span></div>
-      <div class="tools" id="toolChips"></div>
-      <div class="result" id="pipeResult">→ result appears here</div>
-    </div>
-  </section>
-
-  <section class="block" id="how">
-    <h2>How it works</h2>
-    <p class="lead">One MCP server over stdio. Any AI talks to it like a native tool. Your AI keeps its brain; Osien-Stack gives it hands.</p>
-    <div class="bento">
-      <div class="cell span2 row2"><div class="tag">step 1</div><div class="big">01</div><h3>AI fetches the repo</h3><p>One prompt: "install osien-stack". Clones, npm installs, wires MCP, copies skills. Done.</p></div>
-      <div class="cell span2 row2"><div class="tag">step 2</div><div class="big">02</div><h3>Tools come online</h3><p>45 tools register over stdio. Memory, verify, search, state, city — callable by name.</p></div>
-      <div class="cell span2 row2"><div class="tag">step 3</div><div class="big">03</div><h3>AI uses them</h3><p>SITE LAW, TOOL-FIRST, PARALLELISM auto-loaded. Stops hand-rolling, starts forging.</p></div>
-      <div class="cell span6"><div class="tag">step 4</div><div class="big">04</div><h3>You ship faster</h3><p>93% fewer tokens. 0.49ms cached reads. Parallel batch ops. Same model, ten times the throughput.</p></div>
-    </div>
-  </section>
-
-
-  <section class="block" id="faq">
-    <h2>FAQ</h2>
-    <p class="lead">The questions every AI asks before installing.</p>
-    <div class="faq">
-      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Does it work with my AI? <span class="plus">+</span></div><div class="faq-a">Yes. Any MCP-compatible client: opencode, Claude Code, Cursor, Cline, Windsurf. It degrades gracefully elsewhere.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is it free? <span class="plus">+</span></div><div class="faq-a">MIT licensed. Free forever. No API keys required for the core 45 tools.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long to install? <span class="plus">+</span></div><div class="faq-a">One prompt. The AI clones, installs, wires, and runs the smoke test. About 60 seconds.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Does it slow my AI down? <span class="plus">+</span></div><div class="faq-a">No. Cached reads are 0.49ms. Prompts are 50% shorter. It makes your AI faster, not slower.</div></div>
-      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I use just some tools? <span class="plus">+</span></div><div class="faq-a">Yes. The MCP server exposes all 45, but your AI picks what it needs. Unused tools cost nothing.</div></div>
-    </div>
-  </section>
-
-
-  <section class="block" id="live">
-    <h2>Watch it install</h2>
-    <p class="lead">Your AI types the install command. You watch. That is the whole setup.</p>
-    <div class="live-type" id="liveType"></div>
-  </section>
-
-  <section class="block" id="install">
-    <h2>Install in one prompt</h2>
-    <p class="lead">Paste this into any AI. It does the rest. <strong>Any</strong> AI.</p>
-    <div class="install">
-      <div class="prompt">
-        <div><span class="tag">You:</span> <span class="str">"Install osien-stack: clone https://github.com/kabirprokk/Osien-Stack, run npm install in mcp-server, wire it as an MCP server named osien-tools, copy skills/commands/agents into your config, then confirm with the smoke test (npm test)."</span></div>
-      </div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;">
-        <button class="btn primary" id="copyInstall">Copy install prompt</button>
-      </div>
-      <div class="toast" id="toast">Copied to clipboard</div>
-      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;">
-        <div class="btn ghost">opencode</div><div class="btn ghost">Claude Code</div><div class="btn ghost">Cursor</div><div class="btn ghost">Cline</div><div class="btn ghost">Windsurf</div>
-      </div>
-    </div>
-  </section>
-
-
-  <div class="marquee"><div class="marquee-track" id="marqueeTrack"><span><b>ctx_recall</b></span><span><b>ctx_save</b></span><span><b>smart_grep</b></span><span><b>read_slice</b></span><span><b>verify_chain</b></span><span><b>batch</b></span><span><b>city_mode</b></span><span><b>security_scan</b></span><span><b>impact_analyze</b></span><span><b>machine_state</b></span><span><b>repo_health</b></span><span><b>project_map</b></span><span><b>checkpoint_create</b></span><span><b>auto_heal</b></span><span><b>perf_regression</b></span><span><b>memory_compactor</b></span><span><b>dead_code_detector</b></span><span><b>dependency_graph</b></span><span><b>changelog_generator</b></span><span><b>token_budget_enforcer</b></span><span><b>architecture_drift</b></span><span><b>session_replay</b></span><span><b>auto_document</b></span><span><b>feature_flag_manager</b></span><span><b>license_checker</b></span><span><b>schema_validator</b></span><span><b>cost_estimator</b></span><span><b>self_critique_loop</b></span><span><b>city_status</b></span><span><b>city_post</b></span><span><b>city_read</b></span><span><b>city_broadcast</b></span><span><b>city_clear</b></span><span><b>soul_read</b></span><span><b>soul_write</b></span><span><b>fast_note</b></span><span><b>task_state</b></span><span><b>state_reset</b></span><span><b>loop_status</b></span><span><b>test_gap</b></span><span><b>repro_capsule</b></span><span><b>context_budget</b></span><span><b>consensus</b></span><span><b>rollback_on_failure</b></span><span><b>test_synthesizer</b></span><span><b>ctx_recall</b></span><span><b>ctx_save</b></span><span><b>smart_grep</b></span><span><b>read_slice</b></span><span><b>verify_chain</b></span><span><b>batch</b></span><span><b>city_mode</b></span><span><b>security_scan</b></span><span><b>impact_analyze</b></span><span><b>machine_state</b></span><span><b>repo_health</b></span><span><b>project_map</b></span><span><b>checkpoint_create</b></span><span><b>auto_heal</b></span><span><b>perf_regression</b></span><span><b>memory_compactor</b></span><span><b>dead_code_detector</b></span><span><b>dependency_graph</b></span><span><b>changelog_generator</b></span><span><b>token_budget_enforcer</b></span><span><b>architecture_drift</b></span><span><b>session_replay</b></span><span><b>auto_document</b></span><span><b>feature_flag_manager</b></span><span><b>license_checker</b></span><span><b>schema_validator</b></span><span><b>cost_estimator</b></span><span><b>self_critique_loop</b></span><span><b>city_status</b></span><span><b>city_post</b></span><span><b>city_read</b></span><span><b>city_broadcast</b></span><span><b>city_clear</b></span><span><b>soul_read</b></span><span><b>soul_write</b></span><span><b>fast_note</b></span><span><b>task_state</b></span><span><b>state_reset</b></span><span><b>loop_status</b></span><span><b>test_gap</b></span><span><b>repro_capsule</b></span><span><b>context_budget</b></span><span><b>consensus</b></span><span><b>rollback_on_failure</b></span><span><b>test_synthesizer</b></span></div></div>
-
-  <footer>
-    <p>Osien-Stack - MIT licensed - <a href="https://github.com/kabirprokk/Osien-Stack">GitHub</a> - <a href="tools.html">Tool Explorer</a></p>
-    <p style="margin-top:8px;font-size:.85rem;">Built for the AI era. One prompt. Zero friction.</p>
-  </footer>
+<div class="toast" id="toast">Copied to clipboard</div>
 
 <script>
+(function () {
+  'use strict';
+  var $ = function (s) { return document.querySelector(s); };
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  // ================= 3D SCENE (Three.js) =================
-  function __init3D() {
-    const canvas = document.getElementById('three3d');
-    const fallback = document.getElementById('webglFallback');
-    function bail() { if (fallback) fallback.style.display = 'block'; if (canvas) canvas.style.display = 'none'; }
-    if (typeof THREE === 'undefined') return bail();          // CDN blocked
-    let renderer;
-    try {
-      renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
-    } catch (e) { return bail(); }                            // no WebGL
-    if (!renderer || !renderer.getContext()) return bail();
+  /* ---------- scroll hue: one cached value, one rAF (NOT per-scroll-listener) ---------- */
+  var hues = [250, 190, 35, 140, 320, 250];
+  var hue = 250, scrollPct = 0, scrollY = 0;
+  var docH = 1, winH = 1;
+  function measure() { docH = document.body.scrollHeight; winH = window.innerHeight; }
+  function readScroll() {
+    scrollY = window.scrollY || document.documentElement.scrollTop || 0;
+    var max = Math.max(1, docH - winH);
+    scrollPct = Math.min(1, Math.max(0, scrollY / max));
+    var i = Math.min(hues.length - 2, Math.floor(scrollPct * (hues.length - 1)));
+    var local = scrollPct * (hues.length - 1) - i;
+    hue = hues[i] + (hues[i + 1] - hues[i]) * local;
+    var bar = $('#scrollbar'); if (bar) bar.style.width = (scrollPct * 100).toFixed(2) + '%';
+    var orb = $('#topOrb'); if (orb) orb.classList.toggle('show', scrollY > 600);
+  }
+  var scrollDirty = true;
+  window.addEventListener('scroll', function () { scrollDirty = true; }, { passive: true });
+  window.addEventListener('resize', function () { measure(); scrollDirty = true; });
 
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
-    renderer.setSize(window.innerWidth, window.innerHeight);
+  /* ---------- cursor (no blend mode, transform only) ---------- */
+  var cursor = $('#cursor'), cx = innerWidth / 2, cy = innerHeight / 2, tx = cx, ty = cy;
+  if (cursor && !reduce) {
+    document.body.style.cursor = 'none';
+    window.addEventListener('mousemove', function (e) { tx = e.clientX; ty = e.clientY; }, { passive: true });
+    var sel = 'a,button,.btn,.cell,.toolchip,.chip,.slot,.palette-item,.faq-q,.pipe .toolchip,input';
+    document.querySelectorAll(sel).forEach(function (el) {
+      el.addEventListener('mouseenter', function () { cursor.classList.add('is-hover'); });
+      el.addEventListener('mouseleave', function () { cursor.classList.remove('is-hover'); });
+    });
+    document.querySelectorAll('input').forEach(function (el) {
+      el.addEventListener('mouseenter', function () { cursor.classList.add('is-text'); });
+      el.addEventListener('mouseleave', function () { cursor.classList.remove('is-text'); });
+    });
+  }
 
-    const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 1000);
-    camera.position.set(0, 0, 9);
+  /* ---------- reveal on scroll (robust + fails open) ---------- */
+  var revealEls = document.querySelectorAll('.reveal, .bento .cell');
+  if ('IntersectionObserver' in window && !reduce) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
+    revealEls.forEach(function (el) { io.observe(el); });
+    // failsafe: never leave content invisible
+    setTimeout(function () { revealEls.forEach(function (el) { el.classList.add('in'); }); }, 2500);
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('in'); });
+  }
 
-    // ---- core object: solid icosahedron + wireframe shell ----
-    const group = new THREE.Group();
+  /* ---------- keyboard + palette ---------- */
+  var kbd = $('#kbdhelp'), pal = $('#palette'), palInput = $('#paletteInput'), palList = $('#paletteList');
+  var sections = ['', 'why', 'what', 'pipeline', 'how', 'install'];
+  var items = [
+    { n: 'home', k: '#', go: function () { scrollTo({ top: 0, behavior: 'smooth' }); } },
+    { n: 'why', k: '#why', go: function () { go(1); } },
+    { n: 'what', k: '#what', go: function () { go(2); } },
+    { n: 'pipeline', k: '#pipeline', go: function () { go(3); } },
+    { n: 'how', k: '#how', go: function () { go(4); } },
+    { n: 'install', k: '#install', go: function () { go(5); } },
+    { n: 'tools explorer', k: 'tools.html', go: function () { location.href = 'tools.html'; } },
+    { n: 'github', k: 'github.com', go: function () { window.open('https://github.com/kabirprokk/Osien-Stack', '_blank', 'noopener'); } }
+  ];
+  function go(i) { var id = sections[i]; var el = id && document.getElementById(id); if (el) el.scrollIntoView({ behavior: 'smooth' }); else scrollTo({ top: 0, behavior: 'smooth' }); }
+  function renderPal(q) {
+    q = (q || '').toLowerCase();
+    palList.innerHTML = '';
+    items.filter(function (it) { return it.n.indexOf(q) > -1; }).forEach(function (it, i) {
+      var el = document.createElement('div');
+      el.className = 'palette-item' + (i === 0 ? ' active' : '');
+      el.innerHTML = '<span>' + it.n + '</span><span class="key">' + it.k + '</span>';
+      el.onclick = function () { it.go(); closePal(); };
+      palList.appendChild(el);
+    });
+  }
+  function openPal() { pal.classList.add('open'); palInput.value = ''; renderPal(''); palInput.focus(); }
+  function closePal() { pal.classList.remove('open'); }
+  var pb = $('#paletteBtn'); if (pb) pb.onclick = openPal;
+  palInput.addEventListener('input', function (e) { renderPal(e.target.value); });
+  pal.addEventListener('click', function (e) { if (e.target === pal) closePal(); });
+
+  window.addEventListener('keydown', function (e) {
+    var t = e.target.tagName;
+    if (t === 'INPUT' || t === 'TEXTAREA') { if (e.key === 'Escape') e.target.blur(); return; }
+    if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); pal.classList.contains('open') ? closePal() : openPal(); return; }
+    if (e.key === '?') { kbd.classList.toggle('open'); }
+    else if (e.key === 'Escape') { kbd.classList.remove('open'); closePal(); }
+    else if (e.key === 't' || e.key === 'T') { scrollTo({ top: 0, behavior: 'smooth' }); }
+    else if (/^[1-6]$/.test(e.key)) { go(parseInt(e.key, 10) - 1); }
+  });
+  kbd.addEventListener('click', function (e) { if (e.target === kbd) kbd.classList.remove('open'); });
+
+  /* section dots */
+  var dots = document.querySelectorAll('.section-indicator i');
+  dots.forEach(function (d) { d.onclick = function () { go(parseInt(d.dataset.i, 10)); }; });
+
+  /* ---------- spotlight (static list, click to cycle - no auto-timer) ---------- */
+  var spot = [
+    { n: 'ctx_recall', d: 'Load project memory by role/part/grep.' },
+    { n: 'batch', d: 'Run multiple ops in parallel in ONE call.' },
+    { n: 'verify_chain', d: 'Run format/typecheck/test/build.' },
+    { n: 'read_slice', d: 'Read file lines [start,end].' },
+    { n: 'city_mode', d: 'Activate city mode (14 agents).' }
+  ];
+  var si = 0;
+  function paintSpot() {
+    $('#spotName').textContent = spot[si].n;
+    $('#spotDesc').textContent = spot[si].d;
+    $('#spotCount').textContent = (si + 1) + ' / ' + spot.length;
+    si = (si + 1) % spot.length;
+  }
+  var sb = $('#spotBox'); if (sb) { sb.onclick = paintSpot; paintSpot(); }
+
+  /* ---------- pipeline builder ---------- */
+  var pipeTools = ['ctx_recall', 'ctx_save', 'smart_grep', 'read_slice', 'verify_chain', 'batch', 'city_mode', 'security_scan'];
+  var chips = $('#toolChips'), slots = $('#slots'), result = $('#pipeResult'), pipe = [];
+  pipeTools.forEach(function (t) {
+    var c = document.createElement('div'); c.className = 'toolchip'; c.textContent = t;
+    c.onclick = function () { if (pipe.length < 6) { pipe.push(t); drawPipe(); } };
+    chips.appendChild(c);
+  });
+  function drawPipe() {
+    slots.innerHTML = pipe.length ? '' : '<span style="color:var(--muted);font-size:.85rem">drop tools here...</span>';
+    pipe.forEach(function (t, i) {
+      var s = document.createElement('div'); s.className = 'slot';
+      s.innerHTML = t + ' <button>x</button>';
+      s.querySelector('button').onclick = function () { pipe.splice(i, 1); drawPipe(); };
+      slots.appendChild(s);
+    });
+    result.textContent = pipe.length
+      ? '→ ' + pipe.join(' → ') + '   (' + (pipe.length * 12 + 40) + 'ms, ~' + (pipe.length * 30 + 100) + ' tokens)'
+      : '→ result appears here';
+  }
+
+  /* ---------- faq ---------- */
+  document.querySelectorAll('.faq-q').forEach(function (q) {
+    q.onclick = function () { q.parentElement.classList.toggle('open'); };
+  });
+
+  /* ---------- marquee (built once, plain CSS animation) ---------- */
+  var names = ['ctx_recall','ctx_save','smart_grep','read_slice','verify_chain','batch','city_mode','security_scan','impact_analyze','machine_state','repo_health','project_map','checkpoint_create','auto_heal','perf_regression','memory_compactor','dead_code_detector','dependency_graph','changelog_generator','token_budget_enforcer','architecture_drift','session_replay','auto_document','feature_flag_manager','license_checker','schema_validator','cost_estimator','self_critique_loop','city_status','city_post','city_read','city_broadcast','city_clear','soul_read','soul_write','fast_note','task_state','state_reset','loop_status','test_gap','repro_capsule','context_budget','consensus','rollback_on_failure','test_synthesizer'];
+  var track = $('#marqueeTrack');
+  var html = ''; for (var r = 0; r < 2; r++) names.forEach(function (n) { html += '<span><b>' + n + '</b></span>'; });
+  track.innerHTML = html;
+
+  /* ---------- eyebrow typed once ---------- */
+  var eb = $('#eyebrow'), ebText = '// v1.1.0 · 45 tools · MIT · any AI', ei = 0;
+  if (eb && !reduce) {
+    (function type() {
+      if (ei <= ebText.length) { eb.textContent = ebText.slice(0, ei++); setTimeout(type, 42); }
+      else { eb.textContent = ebText; }
+    })();
+  } else if (eb) { eb.textContent = ebText; }
+
+  /* ---------- install typing (once, when visible) ---------- */
+  var liveEl = $('#liveType');
+  var liveCmd = 'git clone github.com/kabirprokk/Osien-Stack && cd Osien-Stack/mcp-server && npm install && npm test';
+  if (liveEl && !reduce && 'IntersectionObserver' in window) {
+    var liveIO = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        liveIO.unobserve(e.target);
+        var i = 0;
+        liveEl.innerHTML = '<span class="p">$ </span>';
+        var span = document.createElement('span'); liveEl.appendChild(span);
+        var car = document.createElement('span'); car.className = 'caret'; liveEl.appendChild(car);
+        (function step() {
+          if (i < liveCmd.length) { span.textContent += liveCmd[i++]; setTimeout(step, 30); }
+          else { car.remove(); liveEl.insertAdjacentHTML('beforeend', ' <span style="color:#86efac">done</span>'); }
+        })();
+      });
+    }, { threshold: 0.4 });
+    liveIO.observe(liveEl);
+  } else if (liveEl) { liveEl.innerHTML = '<span class="p">$ </span>' + liveCmd; }
+
+  /* ---------- copy + toast ---------- */
+  var INSTALL_PROMPT = 'Install osien-stack: clone https://github.com/kabirprokk/Osien-Stack, run npm install in mcp-server, wire it as an MCP server named osien-tools, copy skills/commands/agents into your config, then confirm with the smoke test (npm test).';
+  var ci = $('#copyInstall');
+  if (ci) ci.onclick = function () {
+    if (navigator.clipboard) navigator.clipboard.writeText(INSTALL_PROMPT).catch(function () {});
+    var t = $('#toast'); t.classList.add('show'); setTimeout(function () { t.classList.remove('show'); }, 1900);
+  };
+
+  /* ---------- counters ---------- */
+  document.querySelectorAll('[data-count]').forEach(function (el) {
+    var target = parseInt(el.dataset.count, 10);
+    if (reduce) return;
+    if (!('IntersectionObserver' in window)) return;
+    var co = new IntersectionObserver(function (es) {
+      es.forEach(function (e) {
+        if (!e.isIntersecting) return;
+        co.unobserve(e.target);
+        var t0 = performance.now(), dur = 1200;
+        (function step(now) {
+          var p = Math.min(1, (now - t0) / dur);
+          e.target.textContent = Math.round(target * (1 - Math.pow(1 - p, 3)));
+          if (p < 1) requestAnimationFrame(step);
+        })(t0);
+      });
+    }, { threshold: 0.5 });
+    co.observe(el);
+  });
+
+  /* ---------- 3D (single canvas, single shared loop, no per-frame allocs) ---------- */
+  var scene3d = null;
+  function init3D() {
+    var canvas = document.getElementById('three3d');
+    if (!canvas || typeof THREE === 'undefined') { canvas.style.display = 'none'; return; }
+    var renderer;
+    try { renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true }); }
+    catch (err) { canvas.style.display = 'none'; return; }
+    if (!renderer || !renderer.getContext()) { canvas.style.display = 'none'; return; }
+
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+    renderer.setSize(innerWidth, innerHeight);
+
+    var scene = new THREE.Scene();
+    var camera = new THREE.PerspectiveCamera(55, innerWidth / innerHeight, 0.1, 500);
+    camera.position.z = 9;
+
+    var group = new THREE.Group();
     scene.add(group);
 
-    const geo = new THREE.IcosahedronGeometry(2.15, 1);
-    const mat = new THREE.MeshStandardMaterial({
-      color: 0x3355ff, roughness: 0.28, metalness: 0.75,
-      transparent: true, opacity: 0.32, flatShading: true
-    });
-    const core = new THREE.Mesh(geo, mat);
+    var coreMat = new THREE.MeshStandardMaterial({ color: 0x4466ff, roughness: 0.3, metalness: 0.7, transparent: true, opacity: 0.35, flatShading: true });
+    var core = new THREE.Mesh(new THREE.IcosahedronGeometry(2.1, 1), coreMat);
     group.add(core);
 
-    const wire = new THREE.Mesh(
-      new THREE.IcosahedronGeometry(2.6, 1),
-      new THREE.MeshBasicMaterial({ color: 0x88aaff, wireframe: true, transparent: true, opacity: 0.34 })
-    );
-    group.add(wire);
+    var wireMat = new THREE.MeshBasicMaterial({ color: 0x88aaff, wireframe: true, transparent: true, opacity: 0.3 });
+    group.add(new THREE.Mesh(new THREE.IcosahedronGeometry(2.55, 1), wireMat));
 
-    // orbiting ring
-    const ring = new THREE.Mesh(
-      new THREE.TorusGeometry(3.4, 0.035, 12, 120),
-      new THREE.MeshBasicMaterial({ color: 0x66ddff, transparent: true, opacity: 0.55 })
-    );
+    var ringMat = new THREE.MeshBasicMaterial({ color: 0x66ddff, transparent: true, opacity: 0.5 });
+    var ring = new THREE.Mesh(new THREE.TorusGeometry(3.3, 0.03, 8, 90), ringMat);
     ring.rotation.x = Math.PI / 2.6;
     group.add(ring);
 
-    const ring2 = new THREE.Mesh(
-      new THREE.TorusGeometry(4.1, 0.02, 10, 110),
-      new THREE.MeshBasicMaterial({ color: 0xff77dd, transparent: true, opacity: 0.4 })
-    );
-    ring2.rotation.y = Math.PI / 3.1;
-    group.add(ring2);
-
-    // ---- starfield ----
-    const STARS = window.innerWidth < 700 ? 500 : 1400;
-    const starPos = new Float32Array(STARS * 3);
-    for (let i = 0; i < STARS; i++) {
-      starPos[i * 3] = (Math.random() - 0.5) * 90;
-      starPos[i * 3 + 1] = (Math.random() - 0.5) * 90;
-      starPos[i * 3 + 2] = (Math.random() - 0.5) * 90 - 12;
+    var starCount = innerWidth < 700 ? 260 : 700;
+    var sp = new Float32Array(starCount * 3);
+    for (var i = 0; i < starCount; i++) {
+      sp[i * 3] = (Math.random() - 0.5) * 80;
+      sp[i * 3 + 1] = (Math.random() - 0.5) * 80;
+      sp[i * 3 + 2] = (Math.random() - 0.5) * 80 - 10;
     }
-    const starGeo = new THREE.BufferGeometry();
-    starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
-    const stars = new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0xaaccff, size: 0.11, transparent: true, opacity: 0.75 }));
+    var sg = new THREE.BufferGeometry();
+    sg.setAttribute('position', new THREE.BufferAttribute(sp, 3));
+    var starMat = new THREE.PointsMaterial({ color: 0xaaccff, size: 0.12, transparent: true, opacity: 0.7 });
+    var stars = new THREE.Points(sg, starMat);
     scene.add(stars);
 
-    // lights
-    scene.add(new THREE.AmbientLight(0x4466aa, 0.75));
-    const key = new THREE.DirectionalLight(0xffffff, 1.5); key.position.set(5, 6, 7); scene.add(key);
-    const rim = new THREE.PointLight(0x66ddff, 1.6, 40); rim.position.set(-6, -3, 5); scene.add(rim);
-    const fill = new THREE.PointLight(0xff66dd, 1.1, 40); fill.position.set(5, -5, -4); scene.add(fill);
+    scene.add(new THREE.AmbientLight(0x4466aa, 0.9));
+    var key = new THREE.DirectionalLight(0xffffff, 1.4); key.position.set(5, 6, 7); scene.add(key);
+    var rim = new THREE.PointLight(0x66ddff, 1.4, 40); rim.position.set(-6, -3, 5); scene.add(rim);
 
-    // ---- mouse parallax ----
-    let px = 0, py = 0, tx = 0, ty = 0;
-    window.addEventListener('mousemove', e => {
-      tx = (e.clientX / window.innerWidth - 0.5) * 2;
-      ty = (e.clientY / window.innerHeight - 0.5) * 2;
+    var px = 0, py = 0;
+    window.addEventListener('mousemove', function (e) {
+      px = (e.clientX / innerWidth - 0.5) * 2;
+      py = (e.clientY / innerHeight - 0.5) * 2;
     }, { passive: true });
 
-    // ---- raycast click on the 3D object ----
-    const ray = new THREE.Raycaster();
-    const ndc = new THREE.Vector2();
-    let punch = 0;
-    window.addEventListener('click', e => {
-      ndc.x = (e.clientX / window.innerWidth) * 2 - 1;
-      ndc.y = -(e.clientY / window.innerHeight) * 2 + 1;
-      ray.setFromCamera(ndc, camera);
-      if (ray.intersectObjects([core, wire], false).length > 0) {
-        punch = 1;                       // "hit" the 3D core -> pulse
-      }
+    var tmpColor = new THREE.Color();      // reused - no per-frame allocation
+    var t0 = performance.now();
+    var paused = false;
+    document.addEventListener('visibilitychange', function () {
+      paused = document.hidden;
+      if (!paused && !scene3d.raf) render();
+    });
+    window.addEventListener('resize', function () {
+      camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix();
+      renderer.setSize(innerWidth, innerHeight);
     });
 
-    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    let paused = false, raf = null, t0 = performance.now();
-    document.addEventListener('visibilitychange', () => { paused = document.hidden; if (!paused && !raf) loop(); });
+    function render() {
+      if (paused || reduce) { scene3d.raf = null; return; }
+      scene3d.raf = requestAnimationFrame(render);
+      var t = (performance.now() - t0) / 1000;
 
-    window.addEventListener('resize', () => {
-      camera.aspect = window.innerWidth / window.innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(window.innerWidth, window.innerHeight);
-    });
+      coreMat.color.setHSL((hue % 360) / 360, 0.8, 0.6);
+      wireMat.color.setHSL(((hue + 40) % 360) / 360, 0.75, 0.72);
 
-    function loop() {
-      if (paused || reduce) { raf = null; return; }
-      raf = requestAnimationFrame(loop);
-      const t = (performance.now() - t0) / 1000;
+      group.rotation.y = t * 0.2;
+      group.rotation.x = Math.sin(t * 0.3) * 0.22;
+      ring.rotation.z = t * 0.45;
+      stars.rotation.y = t * 0.012;
 
-      // hue-reactive colours from the scroll palette
-      const hue = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue')) || 260;
-      mat.color.setHSL(((hue % 360) + 360) % 360 / 360, 0.85, 0.6);
-      wire.material.color.setHSL((((hue + 40) % 360) + 360) % 360 / 360, 0.8, 0.72);
-      stars.material.color.setHSL((((hue + 200) % 360) + 360) % 360 / 360, 0.6, 0.8);
-
-      // rotation
-      group.rotation.y = t * 0.22;
-      group.rotation.x = Math.sin(t * 0.32) * 0.24;
-      ring.rotation.z = t * 0.5;
-      ring2.rotation.z = -t * 0.36;
-      stars.rotation.y = t * 0.014;
-
-      // smooth scale pulse when clicked
-      if (punch > 0) punch *= 0.93;
-      const base = 1 + Math.sin(t * 1.6) * 0.02 + punch * 0.16;
-      group.scale.lerp(new THREE.Vector3(base, base, base), 0.12);
-
-      // camera parallax
-      px += (tx - px) * 0.05; py += (ty - py) * 0.05;
-      camera.position.x = px * 2.1;
-      camera.position.y = -py * 1.5;
+      camera.position.x += (px * 1.9 - camera.position.x) * 0.05;
+      camera.position.y += (-py * 1.4 - camera.position.y) * 0.05;
       camera.lookAt(0, 0, 0);
 
       renderer.render(scene, camera);
     }
-    loop();
-
-    // expose a tiny hook so the rest of the page can nudge it
-    window.__osien3d = { scene, group, camera, renderer };
+    scene3d = { raf: null, render: render };
+    render();
   }
+  if (!reduce) { init3D(); }
 
-  // THREE is loaded via a deferred CDN script, so it may not exist yet.
-  // Wait for it (poll with a hard timeout) before booting, else fall back cleanly.
-  (function boot3D() {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-    if (typeof THREE !== 'undefined') return __init3D();
-    let tries = 0;
-    const t = setInterval(() => {
-      tries++;
-      if (typeof THREE !== 'undefined') { clearInterval(t); __init3D(); }
-      else if (tries > 60) { clearInterval(t); const fb = document.getElementById('webglFallback'); if (fb) fb.style.display = 'block'; }
-    }, 100);
+  /* ---------- THE single rAF loop: cursor + hue + 3D ---------- */
+  measure(); readScroll();
+  (function loop() {
+    requestAnimationFrame(loop);
+    if (scrollDirty) { scrollDirty = false; readScroll(); document.documentElement.style.setProperty('--hue', hue.toFixed(1)); }
+    if (cursor && !reduce) {
+      cx += (tx - cx) * 0.22; cy += (ty - cy) * 0.22;
+      cursor.style.transform = 'translate3d(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px,0) translate(-50%,-50%)';
+    }
   })();
-
-  // ---------- flow field canvas ----------
-  const canvas = document.getElementById('field');
-  const ctx = canvas.getContext('2d');
-  let W, H;
-  function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
-  resize(); window.addEventListener('resize', resize);
-  const scrollbar = document.getElementById('scrollbar');
-  window.addEventListener('scroll', () => { const max = document.body.scrollHeight - window.innerHeight; scrollbar.style.width = (window.scrollY / Math.max(1,max) * 100) + '%'; }, { passive: true });
-  const copyBtn = document.getElementById('copyInstall');
-  if (copyBtn) copyBtn.onclick = () => {
-    navigator.clipboard.writeText('Install osien-stack: clone https://github.com/kabirprokk/Osien-Stack, run npm install in mcp-server, wire it as an MCP server named osien-tools, copy skills/commands/agents into your config, then confirm with the smoke test (npm test).');
-    const t = document.getElementById('toast'); t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 2000);
-    // confetti burst
-    const conf = document.createElement('div'); conf.className = 'confetti'; conf.style.left = '50%'; conf.style.top = '50%';
-    document.body.appendChild(conf);
-    const hue = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue')) || 260;
-    for (let i = 0; i < 30; i++) {
-      const sp = document.createElement('span');
-      const dx = (Math.random() - 0.5) * 300; const dy = (Math.random() - 0.5) * 300 - 100;
-      sp.style.setProperty('--dx', dx + 'px'); sp.style.setProperty('--dy', dy + 'px');
-      sp.style.background = 'hsl(' + (hue + Math.random()*60 - 30) + ', 90%, 60%)';
-      sp.style.left = '0px'; sp.style.top = '0px';
-      conf.appendChild(sp);
-    }
-    setTimeout(() => conf.remove(), 1300);
-  };
-
-  // ---------- code rain ----------
-  const rain = document.getElementById('rain'); const rctx = rain.getContext('2d'); let rW, rH;
-  function rResize() { rW = rain.width = window.innerWidth; rH = rain.height = window.innerHeight; }
-  rResize(); window.addEventListener('resize', rResize);
-  const drops = [];
-  const rainChars = 'ctx_recall ctx_save smart_grep read_slice verify_chain batch city_mode security_scan impact_analyze machine_state repo_health project_map checkpoint_create auto_heal perf_regression memory_compactor dead_code_detector dependency_graph changelog_generator token_budget_enforcer architecture_drift session_replay auto_document feature_flag_manager license_checker schema_validator cost_estimator self_critique_loop city_status city_post city_read city_broadcast city_clear soul_read soul_write fast_note task_state state_reset loop_status test_gap repro_capsule context_budget consensus rollback_on_failure test_synthesizer'.split(' ');
-  const lowPower = (navigator.hardwareConcurrency || 8) <= 4 || window.innerWidth < 700;
-  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  for (let i = 0; i < (lowPower ? 12 : 30); i++) drops.push({ x: Math.random()*rW, y: Math.random()*rH, speed: 0.5 + Math.random()*1.5, text: rainChars[Math.floor(Math.random()*rainChars.length)], size: 11 + Math.random()*4 });
-  let rainPaused = false;
-  document.addEventListener('visibilitychange', () => { rainPaused = document.hidden; });
-  function rainTick() {
-    if (rainPaused || reduceMotion) { requestAnimationFrame(rainTick); return; }
-    rctx.fillStyle = 'rgba(0,0,0,0.08)'; rctx.fillRect(0,0,rW,rH);
-    const hue = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue')) || 260;
-    for (const d of drops) {
-      rctx.font = d.size + 'px JetBrains Mono, monospace';
-      rctx.fillStyle = 'hsla(' + hue + ', 80%, 65%, 0.5)';
-      rctx.fillText(d.text, d.x, d.y);
-      d.y += d.speed;
-      if (d.y > rH + 20) { d.y = -20; d.x = Math.random()*rW; d.text = rainChars[Math.floor(Math.random()*rainChars.length)]; }
-    }
-    requestAnimationFrame(rainTick);
-  }
-  rainTick();
-
-  // ---------- spotlight rotation ----------
-  const spotTools = [
-    {n:'ctx_recall', d:'Load project memory by role/part/grep.'},
-    {n:'batch', d:'Run multiple ops in parallel in ONE call.'},
-    {n:'verify_chain', d:'Run format/typecheck/test/build.'},
-    {n:'smart_grep', d:'Grep with file:line output, bounded.'},
-    {n:'read_slice', d:'Read file lines [start,end].'},
-    {n:'city_mode', d:'Activate city mode (14 agents).'},
-    {n:'security_scan', d:'Scan for secrets/vulns.'},
-    {n:'impact_analyze', d:'Find references to a symbol.'},
-    {n:'auto_heal', d:'Self-heal loop: detect/fix/verify.'},
-    {n:'memory_compactor', d:'Compress memory files.'},
-  ];
-  let si = 0;
-  const spotName = document.getElementById('spotName');
-  const spotDesc = document.getElementById('spotDesc');
-  const spotCounter = document.getElementById('spotCounter');
-  const spotBox = document.getElementById('spotlightBox');
-  function rotateSpot() {
-    spotName.style.opacity = '0'; spotName.style.transform = 'translateY(-10px)';
-    spotDesc.style.opacity = '0'; spotDesc.style.transform = 'translateY(-10px)';
-    setTimeout(() => {
-      const t = spotTools[si % spotTools.length];
-      spotName.textContent = t.n; spotDesc.textContent = t.d;
-      spotCounter.textContent = (si % spotTools.length + 1) + ' / ' + spotTools.length;
-      spotName.style.opacity = '1'; spotName.style.transform = 'translateY(0)';
-      spotDesc.style.opacity = '1'; spotDesc.style.transform = 'translateY(0)';
-      si++;
-    }, 300);
-  }
-  rotateSpot(); setInterval(rotateSpot, 2600);
-  spotBox.addEventListener('mouseenter', () => { spotBox.style.borderColor = 'var(--accent)'; });
-  spotBox.addEventListener('mouseleave', () => { spotBox.style.borderColor = 'var(--border)'; });
-
-  // ---------- back to top ----------
-  const topOrb = document.getElementById('topOrb');
-  if (topOrb) {
-  const topRing = topOrb.querySelector('.ring');
-  window.addEventListener('scroll', () => {
-    const max = document.body.scrollHeight - window.innerHeight;
-    const progress = Math.min(1, window.scrollY / Math.max(1, max));
-    if (window.scrollY > 600) topOrb.classList.add('show'); else topOrb.classList.remove('show');
-    if (topRing) topRing.style.transform = 'rotate(' + (-90 + progress * 360) + 'deg)';
-  }, { passive: true });
-  topOrb.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-
-  // ---------- animated counters ----------
-  function animateCounter(el, target, suffix) {
-    let start = 0; const dur = 1400; const t0 = performance.now();
-    function step(now) {
-      const p = Math.min(1, (now - t0) / dur);
-      const eased = 1 - Math.pow(1 - p, 3);
-      el.textContent = Math.round(start + (target - start) * eased) + suffix;
-      if (p < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-  const counterIO = new IntersectionObserver((es) => {
-    es.forEach(e => {
-      if (e.isIntersecting) {
-        const el = e.target;
-        const target = parseInt(el.dataset.target, 10);
-        const suffix = el.dataset.suffix || '';
-        animateCounter(el, target, suffix);
-        counterIO.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
-  document.querySelectorAll('[data-counter]').forEach(el => counterIO.observe(el));
-
-
-  // ---------- keyboard shortcuts ----------
-  const kbdhelp = document.getElementById('kbdhelp');
-  if (kbdhelp) kbdhelp.addEventListener('click', e => { if (e.target === kbdhelp) kbdhelp.classList.remove('open'); });
-  const sectionIds = ['', 'why', 'what', 'pipeline', 'how'];
-  window.addEventListener('keydown', e => {
-    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-    if (e.key === '?' && kbdhelp) { kbdhelp.classList.toggle('open'); }
-    if (e.key === 'Escape') { if (kbdhelp) kbdhelp.classList.remove('open'); const pal = document.getElementById('palette'); if (pal) pal.classList.remove('open'); }
-    if (e.key === 't' || e.key === 'T') { window.scrollTo({ top: 0, behavior: 'smooth' }); }
-    if (/^[1-5]$/.test(e.key)) {
-      const idx = parseInt(e.key, 10) - 1;
-      const id = sectionIds[idx];
-      const target = id && document.getElementById(id);
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
-      else window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
-  });
-
-  // ---------- live typing install command ----------
-  const liveCmd = 'npx -y osien-tools  # or: git clone https://github.com/kabirprokk/Osien-Stack && cd Osien-Stack/mcp-server && npm install && npm test';
-  const liveEl = document.getElementById('liveType');
-  let li = 0, typing = false;
-  function typeLive() {
-    if (typing) return; typing = true;
-    liveEl.innerHTML = '<span class="prompt">$ </span>';
-    const span = document.createElement('span');
-    liveEl.appendChild(span);
-    const cursor = document.createElement('span'); cursor.className = 'cursor-blink'; liveEl.appendChild(cursor);
-    let i = 0;
-    function step() {
-      if (i < liveCmd.length) { span.textContent += liveCmd[i++]; setTimeout(step, 28 + Math.random()*40); }
-      else { setTimeout(() => { liveEl.innerHTML = '<span class="prompt">$ </span><span style="color:#86efac;">✓ installed · 45 tools ready</span>'; typing = false; setTimeout(typeLive, 3000); }, 1200); }
-    }
-    step();
-  }
-  const liveIO = new IntersectionObserver((es) => { es.forEach(e => { if (e.isIntersecting) { typeLive(); liveIO.unobserve(e.target); } }); }, { threshold: .3 });
-  liveIO.observe(document.getElementById('live'));
-
-
-  // ---------- particle explosion on click ----------
-  const explCanvas = document.createElement('canvas');
-  explCanvas.style.cssText = 'position:fixed;inset:0;z-index:9998;pointer-events:none;';
-  document.body.appendChild(explCanvas);
-  const ectx = explCanvas.getContext('2d');
-  function eResize() { explCanvas.width = window.innerWidth; explCanvas.height = window.innerHeight; }
-  eResize(); window.addEventListener('resize', eResize);
-  const bursts = [];
-  window.addEventListener('click', e => {
-    const hue = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue')) || 260;
-    const burst = [];
-    for (let i = 0; i < 24; i++) {
-      const a = (Math.PI * 2 * i) / 24;
-      const speed = 2 + Math.random() * 4;
-      burst.push({ x: e.clientX, y: e.clientY, vx: Math.cos(a)*speed, vy: Math.sin(a)*speed, life: 1, color: 'hsla(' + (hue + Math.random()*40 - 20) + ', 90%, 65%, ' });
-    }
-    bursts.push(burst);
-  });
-  function burstTick() {
-    ectx.clearRect(0, 0, explCanvas.width, explCanvas.height);
-    for (let b = bursts.length - 1; b >= 0; b--) {
-      const burst = bursts[b];
-      let alive = false;
-      for (const p of burst) {
-        if (p.life <= 0) continue;
-        alive = true;
-        p.x += p.vx; p.y += p.vy; p.vy += 0.15; p.vx *= 0.96; p.life -= 0.025;
-        ectx.beginPath(); ectx.arc(p.x, p.y, 2.5 * p.life + 0.5, 0, Math.PI*2);
-        ectx.fillStyle = p.color + p.life + ')'; ectx.fill();
-      }
-      if (!alive) bursts.splice(b, 1);
-    }
-    requestAnimationFrame(burstTick);
-  }
-  burstTick();
-
-  // ---------- sticky section indicator ----------
-  const sections = ['', 'why', 'what', 'pipeline', 'how', 'install'];
-  const dots = document.querySelectorAll('.section-indicator .dot');
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-      const id = sections[i];
-      const target = id && document.getElementById(id);
-      if (target) target.scrollIntoView({ behavior: 'smooth' });
-      else window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  });
-  function updateIndicator() {
-    const mid = window.scrollY + window.innerHeight / 2;
-    let active = 0;
-    for (let i = 0; i < sections.length; i++) {
-      const id = sections[i];
-      const el = id ? document.getElementById(id) : document.body;
-      if (el && el.offsetTop <= mid) active = i;
-    }
-    dots.forEach((d, i) => d.classList.toggle('active', i === active));
-  }
-  window.addEventListener('scroll', () => requestAnimationFrame(updateIndicator), { passive: true });
-  updateIndicator();
-
-  // ---------- word-by-word reveal for hero sub ----------
-  const sub = document.querySelector('.stage .sub');
-  if (sub) {
-    const words = sub.textContent.split(' ');
-    sub.innerHTML = words.map(w => '<span>' + w + '</span>').join(' ');
-    sub.classList.add('word-reveal');
-    const wordIO = new IntersectionObserver((es) => {
-      es.forEach(e => {
-        if (e.isIntersecting) {
-          const spans = e.target.querySelectorAll('span');
-          spans.forEach((sp, i) => setTimeout(() => sp.classList.add('in'), i * 60));
-          wordIO.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.3 });
-    wordIO.observe(sub);
-  }
-
-
-  const marqueeTrack = document.getElementById('marqueeTrack');
-  if (marqueeTrack) {
-    window.addEventListener('scroll', () => {
-      const speed = 40 - Math.min(30, window.scrollY / 100);
-      marqueeTrack.style.animationDuration = Math.max(10, speed) + 's';
-    }, { passive: true });
-  }
-
-
-  // ---------- text scramble on heading hover ----------
-  const scrambleChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&';
-  function scramble(el) {
-    const original = el.dataset.text || el.textContent;
-    el.dataset.text = original;
-    let iter = 0;
-    const interval = setInterval(() => {
-      el.textContent = original.split('').map((ch, i) => {
-        if (ch === ' ') return ' ';
-        if (i < iter) return original[i];
-        return scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
-      }).join('');
-      iter += 1 / 2;
-      if (iter >= original.length) { clearInterval(interval); el.textContent = original; }
-    }, 30);
-  }
-  document.querySelectorAll('h1, h2').forEach(h => {
-    h.classList.add('scramble');
-    h.addEventListener('mouseenter', () => scramble(h));
-  });
-
-  // ---------- parallax on hero orb ----------
-  const orb = document.querySelector('.orb');
-  if (orb) {
-    window.addEventListener('scroll', () => {
-      const y = window.scrollY;
-      orb.style.transform = 'translateY(calc(-50% + ' + (y * 0.3) + 'px)) rotate(' + (y * 0.05) + 'deg)';
-    }, { passive: true });
-  }
-
-  // ---------- live visitor counter (simulated) ----------
-  const vc = document.getElementById('visitorCount');
-  if (vc) {
-    let count = 1247;
-    setInterval(() => {
-      count += Math.random() > 0.5 ? 1 : -1;
-      if (count < 1100) count = 1100;
-      if (count > 1400) count = 1400;
-      vc.textContent = count.toLocaleString();
-    }, 2500);
-  }
-
-
-  // ---------- mouse-reactive gradient mesh ----------
-  const mesh = document.getElementById('mesh');
-  const blobs = [document.getElementById('b1'), document.getElementById('b2'), document.getElementById('b3'), document.getElementById('b4')];
-  let mx = window.innerWidth / 2, my = window.innerHeight / 2, tx = mx, ty = my;
-  window.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; }, { passive: true });
-  const meshReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  let meshPaused = false;
-  document.addEventListener('visibilitychange', () => { meshPaused = document.hidden; });
-  (function meshLoop() {
-    if (meshReduced) return;
-    if (meshPaused) { requestAnimationFrame(meshLoop); return; }
-    mx += (tx - mx) * 0.06; my += (ty - my) * 0.06;
-    const hue = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue')) || 260;
-    const cfg = [[0.12, 0.18, 520], [0.85, 0.30, 460], [0.30, 0.85, 500], [0.75, 0.78, 440]];
-    blobs.forEach((b, i) => {
-      const [fx, fy, size] = cfg[i];
-      const ox = mx * 0.18 * (i % 2 === 0 ? 1 : -1);
-      const oy = my * 0.18 * (i < 2 ? 1 : -1);
-      const x = fx * window.innerWidth + ox - size / 2;
-      const y = fy * window.innerHeight + oy - size / 2;
-      b.style.width = size + 'px'; b.style.height = size + 'px';
-      b.style.left = x + 'px'; b.style.top = y + 'px';
-      b.style.background = 'radial-gradient(circle, hsla(' + (hue + i * 45) + ', 90%, 58%, .55), transparent 70%)';
-    });
-    requestAnimationFrame(meshLoop);
-  })();
-
-  // ---------- expandable tool cards ----------
-  document.querySelectorAll('.expand-card').forEach(card => {
-    card.addEventListener('click', e => {
-      if (e.target.tagName === 'A') return;
-      card.classList.toggle('expanded');
-    });
-  });
-
-  // ---------- typewriter eyebrow ----------
-  const eyebrowText = '// v1.1.0 · 45 tools · MIT licensed · any AI';
-  const eyebrowEl = document.getElementById('eyebrow');
-  if (eyebrowEl) {
-    let ei = 0;
-    (function typeEyebrow() {
-      if (ei <= eyebrowText.length) {
-        eyebrowEl.innerHTML = eyebrowText.slice(0, ei) + '<span class="caret"></span>';
-        ei++;
-        setTimeout(typeEyebrow, 45);
-      } else {
-        setTimeout(() => { eyebrowEl.innerHTML = eyebrowText; }, 1200);
-      }
-    })();
-  }
-
-  const particles = [];
-  const N = 120;
-  for (let i = 0; i < N; i++) particles.push({ x: Math.random()*W, y: Math.random()*H, vx: 0, vy: 0, life: Math.random() });
-  function noise(x, y, t) { return Math.sin(x*0.003 + t) * Math.cos(y*0.003 + t*0.7) + Math.sin((x+y)*0.002 + t*1.3)*0.5; }
-  let t = 0;
-  function getHue() { return parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue')) || 260; }
-  let fieldPaused = false;
-  document.addEventListener('visibilitychange', () => { fieldPaused = document.hidden; });
-  function tick() {
-    if (fieldPaused) { requestAnimationFrame(tick); return; }
-    t += 0.008;
-    const hue = getHue();
-    ctx.fillStyle = 'rgba(0,0,0,0.06)';
-    ctx.fillRect(0,0,W,H);
-    for (const p of particles) {
-      const n = noise(p.x, p.y, t);
-      const a = n * Math.PI * 2;
-      p.vx = p.vx*0.9 + Math.cos(a)*0.6;
-      p.vy = p.vy*0.9 + Math.sin(a)*0.6;
-      p.x += p.vx; p.y += p.vy;
-      if (p.x < 0) p.x = W; if (p.x > W) p.x = 0; if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
-      ctx.beginPath(); ctx.arc(p.x, p.y, 1.4, 0, Math.PI*2);
-      ctx.fillStyle = `hsla(${hue}, 80%, 65%, 0.55)`; ctx.fill();
-    }
-    requestAnimationFrame(tick);
-  }
-  tick();
-
-  // ---------- scroll-driven hue ----------
-  const hues = [260, 190, 35, 140, 320, 260];
-  function onScroll() {
-    const y = window.scrollY; const max = document.body.scrollHeight - window.innerHeight;
-    const progress = Math.min(1, Math.max(0, y / Math.max(1, max)));
-    const idx = Math.min(hues.length - 2, Math.floor(progress * (hues.length - 1)));
-    const local = progress * (hues.length - 1) - idx;
-    document.documentElement.style.setProperty('--hue', hues[idx] + (hues[idx+1] - hues[idx]) * local);
-  }
-  window.addEventListener('scroll', () => requestAnimationFrame(onScroll), { passive: true }); onScroll();
-
-  // ---------- cursor ----------
-  const cursor = document.getElementById('cursor'); const glow = document.getElementById('glow');
-  if (cursor && glow) document.body.style.cursor = 'none';
-  let cx=0, cy=0, gx=0, gy=0;
-  window.addEventListener('mousemove', e => { cx=e.clientX; cy=e.clientY; }, { passive: true });
-  (function loop(){ gx += (cx-gx)*.14; gy += (cy-gy)*.14; glow.style.left = gx+'px'; glow.style.top = gy+'px'; cursor.style.left = cx+'px'; cursor.style.top = cy+'px'; requestAnimationFrame(loop); })();
-  // cursor hover states (class toggle only - no layout/transform thrash)
-  const hoverables = 'a, button, .btn, .cell, .toolchip, .chip, .slot, .palette-item, .faq-q, .expand-card, .spotlight, .tool, input, .kbdhelp-box .row';
-  document.querySelectorAll(hoverables).forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-  });
-  document.querySelectorAll('input, textarea').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('text'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('text'));
-  });
-  document.querySelectorAll('a, button').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor.classList.add('link'));
-    el.addEventListener('mouseleave', () => cursor.classList.remove('link'));
-  });
-  window.addEventListener('mousedown', () => cursor.classList.add('click'));
-  window.addEventListener('mouseup', () => cursor.classList.remove('click'));
-
-  // ---------- reveal ----------
-  const io = new IntersectionObserver((es) => { es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal, .cell, .step').forEach(el => io.observe(el));
-
-  // (3D tilt removed - caused layout jitter on hover)
-
-  // ---------- pipeline builder ----------
-  const tools = ['ctx_recall','ctx_save','smart_grep','read_slice','verify_chain','batch','city_mode','security_scan'];
-  const chips = document.getElementById('toolChips');
-  const slots = document.getElementById('slots');
-  const result = document.getElementById('pipeResult');
-  let pipe = [];
-  tools.forEach(t => {
-    const c = document.createElement('div'); c.className = 'toolchip'; c.textContent = t;
-    c.onclick = () => { if (pipe.length < 6) { pipe.push(t); renderPipe(); } };
-    chips.appendChild(c);
-  });
-  function renderPipe() {
-    slots.innerHTML = pipe.length ? '' : '<span style="color:var(--muted);font-size:.85rem;">drop tools here…</span>';
-    pipe.forEach((t, i) => {
-      const s = document.createElement('div'); s.className = 'slot';
-      s.innerHTML = t + ' <button data-i="' + i + '">×</button>';
-      s.querySelector('button').onclick = () => { pipe.splice(i, 1); renderPipe(); };
-      slots.appendChild(s);
-    });
-    if (pipe.length) result.textContent = '→ ' + pipe.join(' → ') + '  (simulated: ' + (pipe.length*12 + 40) + 'ms, ~' + (pipe.length*30 + 100) + ' tokens)';
-    else result.textContent = '→ result appears here';
-  }
-
-  // ---------- command palette ----------
-  const palette = document.getElementById('palette');
-  const paletteInput = document.getElementById('paletteInput');
-  const paletteList = document.getElementById('paletteList');
-  const paletteItems = [
-    { name: 'home', key: '#', go: () => location.hash = '' },
-    { name: 'why', key: '#why', go: () => location.hash = '#why' },
-    { name: 'what', key: '#what', go: () => location.hash = '#what' },
-    { name: 'pipeline', key: '#pipeline', go: () => location.hash = '#pipeline' },
-    { name: 'how', key: '#how', go: () => location.hash = '#how' },
-    { name: 'install', key: '#install', go: () => location.hash = '#install' },
-    { name: 'tools', key: 'tools.html', go: () => location.href = 'tools.html' },
-    { name: 'github', key: 'github.com', go: () => window.open('https://github.com/kabirprokk/Osien-Stack','_blank') },
-  ];
-  function openPalette() { palette.classList.add('open'); paletteInput.value = ''; renderPalette(''); paletteInput.focus(); }
-  function closePalette() { palette.classList.remove('open'); }
-  function renderPalette(q) {
-    const f = paletteItems.filter(i => i.name.includes(q.toLowerCase()));
-    paletteList.innerHTML = '';
-    f.forEach((i, idx) => {
-      const el = document.createElement('div'); el.className = 'palette-item' + (idx===0?' active':'');
-      el.innerHTML = '<span>' + i.name + '</span><span class="key">' + i.key + '</span>';
-      el.onclick = () => { i.go(); closePalette(); };
-      paletteList.appendChild(el);
-    });
-  }
-  document.getElementById('paletteBtn').onclick = openPalette;
-  paletteInput.addEventListener('input', e => renderPalette(e.target.value));
-  palette.addEventListener('click', e => { if (e.target === palette) closePalette(); });
-  window.addEventListener('keydown', e => {
-    if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openPalette(); }
-    if (e.key === 'Escape') closePalette();
-    if (e.key === 'Enter' && palette.classList.contains('open')) { const a = paletteList.querySelector('.palette-item.active'); if (a) a.click(); }
-  });
+})();
 </script>
-
-
 </body>
 </html>
