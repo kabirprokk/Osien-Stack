@@ -37,15 +37,17 @@
     --shadow-sm: 0 12px 30px -20px hsla(240, 40%, 3%, .80);
     --ease: cubic-bezier(.2,.9,.2,1);
     --bgimg:
-      radial-gradient(1100px 700px at 50% -10%, hsla(320,90%,55%,.13), transparent 60%),
-      radial-gradient(900px 700px at 100% 110%, hsla(185,85%,50%,.07), transparent 60%);
-    --bg-size: 100% 100%, 100% 100%;
+      radial-gradient(1200px 820px at 50% -18%, hsla(320,90%,56%,.10), transparent 62%);
+    --bg-size: 100% 100%;
     --disp: 'Space Grotesk', system-ui, sans-serif;
     --mono: 'JetBrains Mono', monospace;
     --display: 'Space Grotesk', system-ui, sans-serif;
     --tag-case: none;
     --tag-track: 0px;
-    --scan: 0;
+    /* film grain: the scanline slot is dead at 0, so it is reused as texture.
+       Flat dark backgrounds read as premium with grain and as empty without. */
+    --scan: .035;
+    --scan-img: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
   }
 
   /* ============ PLAYFUL : claymorphism, pastel, soft ============ */
@@ -85,6 +87,15 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
+
+  /* Anchor targets must clear the fixed topbar. Without this, every nav jump
+     (and every go() scrollIntoView) parks the section heading underneath it. */
+  section { scroll-margin-top: 80px; }
+
+  /* Minimal focus affordance. The site is keyboard-driven (Ctrl+K, 1-7, Esc),
+     so a real ring matters - the default one looks broken on dark ground. */
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  ::selection { background: hsla(320, 92%, 62%, .30); color: var(--fg); }
   body {
     font-family: var(--disp);
     background: var(--bg); color: var(--fg);
@@ -96,10 +107,10 @@
     content: ""; position: fixed; inset: 0; z-index: -3; pointer-events: none;
     background: var(--bgimg); background-size: var(--bg-size);
   }
-  /* cyber scanlines - only visible in cyber */
+  /* cyber grain layer (was scanlines - same slot, theme decides the texture) */
   body::after {
     content: ""; position: fixed; inset: 0; z-index: 90; pointer-events: none; opacity: var(--scan);
-    background: repeating-linear-gradient(180deg, rgba(0,0,0,.22) 0 1px, transparent 1px 3px);
+    background-image: var(--scan-img, none);
   }
 /* the signal field: pure CSS/DOM 2D motion. no canvas, no GPU, no library. */
   .field { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; opacity: .92; }
@@ -195,7 +206,15 @@
   html[data-theme="cyber"] .stage h1 { letter-spacing: -1.5px; }
   html[data-theme="cyber"] .bento .cell .tag, html[data-theme="cyber"] .eyebrow { text-shadow: none; opacity: .78; }
   html[data-theme="cyber"] .topbar { box-shadow: none; }
-  html[data-theme="cyber"] .scrollbar { box-shadow: none; }
+  /* a hairline, not a neon strip */
+  html[data-theme="cyber"] .scrollbar { height: 1px; box-shadow: none;
+    background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+  /* the signal field drops to a whisper: motion you notice only if you look
+     for it. orbiting rings go entirely - they were the loudest thing left. */
+  html[data-theme="cyber"] .field { opacity: .34; }
+  html[data-theme="cyber"] .field-grid { opacity: .40; }
+  html[data-theme="cyber"] .field-glow { opacity: .34; }
+  html[data-theme="cyber"] .orbit { display: none; }
 
 
 
