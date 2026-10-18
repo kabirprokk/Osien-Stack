@@ -9,7 +9,7 @@
 <link id="appleIcon" rel="apple-touch-icon" href="apple-play.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Nunito:wght@400;600;700;800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
   :root, html[data-theme="cyber"] {
     /* CYBER, minimal: near-black, ONE accent, cyan used sparingly.
@@ -260,14 +260,13 @@
     background: repeating-linear-gradient(180deg, rgba(0,0,0,.3) 0 1px, transparent 1px 3px); }
   .g-cyber .mock { position: absolute; inset: 26px 22px; display: grid; gap: 7px;
     grid-template-columns: 1fr 1fr; align-content: center; }
-  .g-cyber .mock i { display: block; height: 24px; border-radius: 0;
-    background: hsla(258,60%,14%,.9); border: 1px solid hsla(185,90%,60%,.5);
-    clip-path: polygon(0 0, calc(100% - 8px) 0, 100% 8px, 100% 100%, 8px 100%, 0 calc(100% - 8px)); }
-  .g-cyber .mock i:nth-child(1) { grid-column: span 2; height: 30px; background: hsl(330,100%,60%);
-    border-color: hsl(330,100%,70%); box-shadow: 0 0 16px hsla(330,100%,60%,.7); }
-  .g-cyber .name { font-family: 'Orbitron', sans-serif; color: #f2f4ff; letter-spacing: 0; }
-  .g-cyber .go { color: hsl(185,100%,52%); }
-  .g-cyber:hover { box-shadow: 0 22px 48px hsla(330,100%,60%,.35); }
+  .g-cyber .mock i { display: block; height: 24px; border-radius: var(--radius-sm);
+    background: var(--card2); border: 1px solid var(--border); }
+  .g-cyber .mock i:nth-child(1) { grid-column: span 2; height: 30px;
+    background: var(--accent); border-color: var(--accent); }
+  .g-cyber .name { font-family: var(--display); color: var(--fg); letter-spacing: -0.5px; }
+  .g-cyber .go { color: var(--accent2); }
+  .g-cyber:hover { box-shadow: var(--shadow); }
 
   .gate-foot { margin-top: 24px; font-size: .8rem; color: #6d7286; }
   .gate-foot button { background: none; border: 1px solid #2c3040; color: #9aa0b6; border-radius: 8px;
