@@ -1186,6 +1186,60 @@ server.tool("city_clear", "Clear city mailbox.", {}, async () => {
   return { content: [{ type: "text", text: "City mailbox cleared. All agents reset to idle." }] };
 });
 
+// --- batch: run multiple ops in PARALLEL, one call, combined results ---
+server.tool("batch", "Run multiple ops in parallel in ONE call: read (file,start,end), grep (pattern,path), ctx (role). Returns combined results. Fastest way to do parallel tool work.", {
+  ops: z.array(z.object({
+    op: z.enum(["read", "grep", "ctx"]),
+    file: z.string().optional(),
+    start: z.number().optional(),
+    end: z.number().optional(),
+    pattern: z.string().optional(),
+    path: z.string().optional(),
+    role: z.string().optional(),
+  })),
+}, async ({ ops }) => {
+  const tasks = (ops || []).map((o) => (async () => {
+    try {
+      if (o.op === "read") {
+        const lines = (cachedReadFile(o.file) || "").split("\n");
+        const s = Math.max(1, o.start || 1);
+        const e = Math.min(lines.length, o.end || lines.length);
+        return { op: "read", file: o.file, text: lines.slice(s - 1, e).map((l, i) => (s + i) + ": " + l).join("\n") };
+      }
+      if (o.op === "grep") {
+        const root = o.path || process.cwd();
+        const re = new RegExp(o.pattern, "i");
+        const out = [];
+        function walk(dir) {
+          try {
+            for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+              if (e.name === "node_modules" || e.name === ".git" || e.name === "dist") continue;
+              const full = path.join(dir, e.name);
+              if (e.isDirectory()) walk(full);
+              else if (/\.(ts|tsx|js|jsx|py|md|json|go|rs|java)$/i.test(e.name)) {
+                const txt = cachedReadFile(full);
+                if (!txt) return;
+                txt.split("\n").forEach((l, i) => { if (re.test(l)) out.push(full + ":" + (i + 1) + ": " + l.trim().slice(0, 200)); });
+              }
+            }
+          } catch {}
+        }
+        walk(root);
+        return { op: "grep", pattern: o.pattern, matches: out.slice(0, 100) };
+      }
+      if (o.op === "ctx") {
+        const md = readFor(o.path || process.cwd(), o.role || "all");
+        return { op: "ctx", role: o.role, text: md.slice(0, 4000) };
+      }
+      return { op: o.op, error: "unknown op" };
+    } catch (e) {
+      return { op: o.op, error: String(e && e.message) };
+    }
+  })());
+  const results = await Promise.all(tasks);
+  return { content: [{ type: "text", text: JSON.stringify(results, null, 2).slice(0, 15000) }] };
+});
+
 const transport = new StdioServerTransport();
 server.connect(transport).then(() => {
   process.stderr.write("osien-tools MCP server running\n");
