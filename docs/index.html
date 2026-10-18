@@ -159,6 +159,13 @@
   .word-reveal span { display: inline-block; opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
   .word-reveal span.in { opacity: 1; transform: translateY(0); }
 
+
+  .top-orb { position: relative; overflow: visible; }
+  .top-orb .ring { position: absolute; inset: -4px; border-radius: 50%; border: 2px solid transparent; border-top-color: var(--accent); border-right-color: var(--accent2); transform: rotate(-90deg); transition: transform .1s linear; pointer-events: none; }
+  .confetti { position: fixed; pointer-events: none; z-index: 9999; }
+  .confetti span { position: absolute; width: 8px; height: 8px; border-radius: 2px; animation: confettiFall 1.2s ease-out forwards; }
+  @keyframes confettiFall { 0% { transform: translate(0,0) rotate(0deg); opacity: 1; } 100% { transform: translate(var(--dx), var(--dy)) rotate(720deg); opacity: 0; } }
+
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
   .reveal.in { opacity: 1; transform: translateY(0); }
 
@@ -376,7 +383,23 @@
   const scrollbar = document.getElementById('scrollbar');
   window.addEventListener('scroll', () => { const max = document.body.scrollHeight - window.innerHeight; scrollbar.style.width = (window.scrollY / Math.max(1,max) * 100) + '%'; }, { passive: true });
   const copyBtn = document.getElementById('copyInstall');
-  if (copyBtn) copyBtn.onclick = () => { navigator.clipboard.writeText('Install osien-stack: clone https://github.com/kabirprokk/Osien-Stack, run npm install in mcp-server, wire it as an MCP server named osien-tools, copy skills/commands/agents into your config, then confirm with the smoke test (npm test).'); const t = document.getElementById('toast'); t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 2000); };
+  if (copyBtn) copyBtn.onclick = () => {
+    navigator.clipboard.writeText('Install osien-stack: clone https://github.com/kabirprokk/Osien-Stack, run npm install in mcp-server, wire it as an MCP server named osien-tools, copy skills/commands/agents into your config, then confirm with the smoke test (npm test).');
+    const t = document.getElementById('toast'); t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 2000);
+    // confetti burst
+    const conf = document.createElement('div'); conf.className = 'confetti'; conf.style.left = '50%'; conf.style.top = '50%';
+    document.body.appendChild(conf);
+    const hue = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue')) || 260;
+    for (let i = 0; i < 30; i++) {
+      const sp = document.createElement('span');
+      const dx = (Math.random() - 0.5) * 300; const dy = (Math.random() - 0.5) * 300 - 100;
+      sp.style.setProperty('--dx', dx + 'px'); sp.style.setProperty('--dy', dy + 'px');
+      sp.style.background = 'hsl(' + (hue + Math.random()*60 - 30) + ', 90%, 60%)';
+      sp.style.left = '0px'; sp.style.top = '0px';
+      conf.appendChild(sp);
+    }
+    setTimeout(() => conf.remove(), 1300);
+  };
 
   // ---------- code rain ----------
   const rain = document.getElementById('rain'); const rctx = rain.getContext('2d'); let rW, rH;
@@ -435,7 +458,13 @@
 
   // ---------- back to top ----------
   const topOrb = document.getElementById('topOrb');
-  window.addEventListener('scroll', () => { if (window.scrollY > 600) topOrb.classList.add('show'); else topOrb.classList.remove('show'); }, { passive: true });
+  const topRing = topOrb.querySelector('.ring');
+  window.addEventListener('scroll', () => {
+    const max = document.body.scrollHeight - window.innerHeight;
+    const progress = Math.min(1, window.scrollY / Math.max(1, max));
+    if (window.scrollY > 600) topOrb.classList.add('show'); else topOrb.classList.remove('show');
+    if (topRing) topRing.style.transform = 'rotate(' + (-90 + progress * 360) + 'deg)';
+  }, { passive: true });
   topOrb.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   // ---------- animated counters ----------
@@ -578,6 +607,15 @@
     wordIO.observe(sub);
   }
 
+
+  const marqueeTrack = document.getElementById('marqueeTrack');
+  if (marqueeTrack) {
+    window.addEventListener('scroll', () => {
+      const speed = 40 - Math.min(30, window.scrollY / 100);
+      marqueeTrack.style.animationDuration = Math.max(10, speed) + 's';
+    }, { passive: true });
+  }
+
   const particles = [];
   const N = 120;
   for (let i = 0; i < N; i++) particles.push({ x: Math.random()*W, y: Math.random()*H, vx: 0, vy: 0, life: Math.random() });
@@ -688,7 +726,7 @@
     if (e.key === 'Enter' && palette.classList.contains('open')) { const a = paletteList.querySelector('.palette-item.active'); if (a) a.click(); }
   });
 </script>
-  <button class="top-orb" id="topOrb" aria-label="back to top">↑</button>
+  <button class="top-orb" id="topOrb" aria-label="back to top">↑<svg class="ring" viewBox="0 0 56 56"><circle cx="28" cy="28" r="26" fill="none" stroke="var(--border)" stroke-width="2"/></svg></button>
 
   <div class="kbdhelp" id="kbdhelp">
     <div class="kbdhelp-box">
