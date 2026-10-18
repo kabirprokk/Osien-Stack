@@ -135,6 +135,21 @@
   .spotlight p { color: var(--muted); font-size: .9rem; transition: opacity .4s, transform .4s; }
   .spotlight .counter { position: absolute; top: 16px; right: 20px; font-family: 'JetBrains Mono', monospace; font-size: .75rem; color: var(--muted); }
 
+
+  .kbdhelp { position: fixed; inset: 0; z-index: 150; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,.7); backdrop-filter: blur(8px); }
+  .kbdhelp.open { display: flex; }
+  .kbdhelp-box { background: hsla(var(--hue), 25%, 10%, .95); border: 1px solid var(--border); border-radius: 16px; padding: 28px 32px; max-width: 420px; width: 90vw; }
+  .kbdhelp-box h3 { margin-bottom: 16px; font-size: 1.2rem; }
+  .kbdhelp-box .row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: .9rem; }
+  .kbdhelp-box .row:last-child { border-bottom: none; }
+  .kbdhelp-box .key { font-family: 'JetBrains Mono', monospace; color: var(--accent); background: hsla(var(--hue), 30%, 18%, .6); padding: 2px 8px; border-radius: 4px; font-size: .8rem; }
+  .kbdhelp-box .desc { color: var(--muted); }
+  .live-type { font-family: 'JetBrains Mono', monospace; font-size: .95rem; color: #cfd3e0; background: #0a0a12; border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; min-height: 80px; position: relative; overflow: hidden; }
+  .live-type::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2)); }
+  .live-type .cursor-blink { display: inline-block; width: 8px; height: 14px; background: var(--accent); vertical-align: middle; animation: blink 1s step-end infinite; }
+  @keyframes blink { 0%,50% { opacity: 1; } 51%,100% { opacity: 0; } }
+  .live-type .prompt { color: var(--accent); }
+
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
   .reveal.in { opacity: 1; transform: translateY(0); }
 
@@ -310,6 +325,13 @@
     </div>
   </section>
 
+
+  <section class="block" id="live">
+    <h2>Watch it install</h2>
+    <p class="lead">Your AI types the install command. You watch. That is the whole setup.</p>
+    <div class="live-type" id="liveType"></div>
+  </section>
+
   <section class="block" id="install">
     <h2>Install in one prompt</h2>
     <p class="lead">Paste this into any AI. It does the rest. <strong>Any</strong> AI.</p>
@@ -431,6 +453,44 @@
   }, { threshold: 0.5 });
   document.querySelectorAll('[data-counter]').forEach(el => counterIO.observe(el));
 
+
+  // ---------- keyboard shortcuts ----------
+  const kbdhelp = document.getElementById('kbdhelp');
+  const sectionIds = ['', 'why', 'what', 'pipeline', 'how'];
+  window.addEventListener('keydown', e => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+    if (e.key === '?') { kbdhelp.classList.toggle('open'); }
+    if (e.key === 'Escape') { kbdhelp.classList.remove('open'); document.getElementById('palette').classList.remove('open'); }
+    if (e.key === 't' || e.key === 'T') { window.scrollTo({ top: 0, behavior: 'smooth' }); }
+    if (/^[1-5]$/.test(e.key)) {
+      const idx = parseInt(e.key, 10) - 1;
+      const id = sectionIds[idx];
+      if (id) document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+      else window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+  kbdhelp.addEventListener('click', e => { if (e.target === kbdhelp) kbdhelp.classList.remove('open'); });
+
+  // ---------- live typing install command ----------
+  const liveCmd = 'npx -y osien-tools  # or: git clone https://github.com/kabirprokk/Osien-Stack && cd Osien-Stack/mcp-server && npm install && npm test';
+  const liveEl = document.getElementById('liveType');
+  let li = 0, typing = false;
+  function typeLive() {
+    if (typing) return; typing = true;
+    liveEl.innerHTML = '<span class="prompt">$ </span>';
+    const span = document.createElement('span');
+    liveEl.appendChild(span);
+    const cursor = document.createElement('span'); cursor.className = 'cursor-blink'; liveEl.appendChild(cursor);
+    let i = 0;
+    function step() {
+      if (i < liveCmd.length) { span.textContent += liveCmd[i++]; setTimeout(step, 28 + Math.random()*40); }
+      else { setTimeout(() => { liveEl.innerHTML = '<span class="prompt">$ </span><span style="color:#86efac;">✓ installed · 45 tools ready</span>'; typing = false; setTimeout(typeLive, 3000); }, 1200); }
+    }
+    step();
+  }
+  const liveIO = new IntersectionObserver((es) => { es.forEach(e => { if (e.isIntersecting) { typeLive(); liveIO.unobserve(e.target); } }); }, { threshold: .3 });
+  liveIO.observe(document.getElementById('live'));
+
   const particles = [];
   const N = 120;
   for (let i = 0; i < N; i++) particles.push({ x: Math.random()*W, y: Math.random()*H, vx: 0, vy: 0, life: Math.random() });
@@ -542,5 +602,16 @@
   });
 </script>
   <button class="top-orb" id="topOrb" aria-label="back to top">↑</button>
+
+  <div class="kbdhelp" id="kbdhelp">
+    <div class="kbdhelp-box">
+      <h3>Keyboard shortcuts</h3>
+      <div class="row"><span class="key">1-5</span><span class="desc">Jump to section</span></div>
+      <div class="row"><span class="key">?</span><span class="desc">Show this help</span></div>
+      <div class="row"><span class="key">Esc</span><span class="desc">Close overlays</span></div>
+      <div class="row"><span class="key">⌘K</span><span class="desc">Command palette</span></div>
+      <div class="row"><span class="key">T</span><span class="desc">Back to top</span></div>
+    </div>
+  </div>
 </body>
 </html>
