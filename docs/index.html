@@ -173,6 +173,16 @@
   @keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .5; transform: scale(1.3); } }
   .visitor-counter strong { color: var(--accent); }
 
+
+  .mesh-layer { position: fixed; inset: 0; z-index: -4; filter: blur(80px); opacity: .55; pointer-events: none; }
+  .mesh-layer .blob { position: absolute; border-radius: 50%; mix-blend-mode: screen; }
+  .expand-card { cursor: pointer; }
+  .expand-card .more { max-height: 0; overflow: hidden; transition: max-height .45s ease, opacity .3s; opacity: 0; color: var(--muted); font-size: .85rem; margin-top: 10px; }
+  .expand-card.expanded .more { max-height: 200px; opacity: 1; }
+  .expand-card .more code { font-family: 'JetBrains Mono', monospace; font-size: .78rem; color: var(--accent); background: hsla(var(--hue), 30%, 14%, .8); padding: 2px 6px; border-radius: 4px; }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; }
+  .eyebrow .caret { display: inline-block; width: 8px; height: 14px; background: var(--accent); vertical-align: middle; animation: blink 1s step-end infinite; }
+
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
   .reveal.in { opacity: 1; transform: translateY(0); }
 
@@ -183,6 +193,7 @@
   <div class="scrollbar" id="scrollbar"></div>
   <canvas id="field"></canvas>
   <canvas id="rain"></canvas>
+  <div class="mesh-layer" id="mesh"><div class="blob" id="b1"></div><div class="blob" id="b2"></div><div class="blob" id="b3"></div><div class="blob" id="b4"></div></div>
   <div class="cursor" id="cursor"></div>
   <div class="glow" id="glow"></div>
 
@@ -664,6 +675,53 @@
       if (count > 1400) count = 1400;
       vc.textContent = count.toLocaleString();
     }, 2500);
+  }
+
+
+  // ---------- mouse-reactive gradient mesh ----------
+  const mesh = document.getElementById('mesh');
+  const blobs = [document.getElementById('b1'), document.getElementById('b2'), document.getElementById('b3'), document.getElementById('b4')];
+  let mx = window.innerWidth / 2, my = window.innerHeight / 2, tx = mx, ty = my;
+  window.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; }, { passive: true });
+  (function meshLoop() {
+    mx += (tx - mx) * 0.06; my += (ty - my) * 0.06;
+    const hue = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue')) || 260;
+    const cfg = [[0.12, 0.18, 520], [0.85, 0.30, 460], [0.30, 0.85, 500], [0.75, 0.78, 440]];
+    blobs.forEach((b, i) => {
+      const [fx, fy, size] = cfg[i];
+      const ox = mx * 0.18 * (i % 2 === 0 ? 1 : -1);
+      const oy = my * 0.18 * (i < 2 ? 1 : -1);
+      const x = fx * window.innerWidth + ox - size / 2;
+      const y = fy * window.innerHeight + oy - size / 2;
+      b.style.width = size + 'px'; b.style.height = size + 'px';
+      b.style.left = x + 'px'; b.style.top = y + 'px';
+      b.style.background = 'radial-gradient(circle, hsla(' + (hue + i * 45) + ', 90%, 58%, .55), transparent 70%)';
+    });
+    requestAnimationFrame(meshLoop);
+  })();
+
+  // ---------- expandable tool cards ----------
+  document.querySelectorAll('.expand-card').forEach(card => {
+    card.addEventListener('click', e => {
+      if (e.target.tagName === 'A') return;
+      card.classList.toggle('expanded');
+    });
+  });
+
+  // ---------- typewriter eyebrow ----------
+  const eyebrowText = '// v1.1.0 · 45 tools · MIT licensed · any AI';
+  const eyebrowEl = document.getElementById('eyebrow');
+  if (eyebrowEl) {
+    let ei = 0;
+    (function typeEyebrow() {
+      if (ei <= eyebrowText.length) {
+        eyebrowEl.innerHTML = eyebrowText.slice(0, ei) + '<span class="caret"></span>';
+        ei++;
+        setTimeout(typeEyebrow, 45);
+      } else {
+        setTimeout(() => { eyebrowEl.innerHTML = eyebrowText; }, 1200);
+      }
+    })();
   }
 
   const particles = [];
