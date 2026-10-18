@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Osien-Stack">
+  <defs>
+    <linearGradient id="sea" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0"    stop-color="#6FC3F2"/>
+      <stop offset="0.55" stop-color="#4A86E8"/>
+      <stop offset="1"    stop-color="#2240DC"/>
+    </linearGradient>
+    <clipPath id="round"><rect x="0" y="0" width="512" height="512" rx="104"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <rect width="512" height="512" fill="url(#sea)"/>
+
+    <!-- deep swell -->
+    <path d="M-40 330 C 90 250 150 370 262 280 C 362 200 402 280 552 180"
+          fill="none" stroke="#FDF7EC" stroke-width="70" stroke-linecap="round"/>
+    <!-- foam edge -->
+    <path d="M-40 300 C 90 220 150 340 262 250 C 362 170 402 250 552 150"
+          fill="none" stroke="#86E5D5" stroke-width="24" stroke-linecap="round" opacity=".92"/>
+
+    <!-- starfish -->
+    <polygon points="150,92 170,142.5 224.2,145.9 202.3,180.5 195.8,233.1 150,204 130,197.5 75.8,194.1 117.7,159.5 104.2,106.9"
+             fill="#74DC74" stroke="#2447C8" stroke-width="9" stroke-linejoin="round"/>
+    <!-- speckles -->
+    <g fill="#2447C8" opacity=".55">
+      <circle cx="163" cy="150" r="7"/><circle cx="132" cy="176" r="7"/><circle cx="168" cy="186" r="7"/>
+    </g>
+
+    <!-- fish shoal -->
+    <g fill="#2447C8" opacity=".38">
+      <ellipse cx="360" cy="330" rx="30" ry="17"/><polygon points="330,330 306,313 306,347"/>
+      <ellipse cx="286" cy="392" rx="24" ry="14"/><polygon points="262,392 242,378 242,406"/>
+      <ellipse cx="430" cy="404" rx="27" ry="15"/><polygon points="403,404 383,391 383,417"/>
+      <ellipse cx="200" cy="440" rx="21" ry="12"/><polygon points="179,440 162,430 162,450"/>
+      <ellipse cx="352" cy="466" rx="19" ry="11"/><polygon points="333,466 318,457 318,475"/>
+    </g>
+
+    <!-- ripple marks -->
+    <g fill="none" stroke="#D9A63F" stroke-width="6" stroke-linecap="round" opacity=".9">
+      <path d="M330 96 q12 12 24 0 q12 -12 24 0"/>
+      <path d="M392 150 q12 12 24 0 q12 -12 24 0"/>
+      <path d="M232 300 q12 12 24 0 q12 -12 24 0"/>
+      <path d="M76 236 q12 12 24 0 q12 -12 24 0"/>
+      <path d="M420 236 q12 12 24 0 q12 -12 24 0"/>
+    </g>
+  </g>
+</svg>

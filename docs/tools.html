@@ -1,17 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="cyber">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Osien-Stack - Tool Explorer</title>
-<link rel="icon" type="image/png" href="favicon-cyber.png">
-<link rel="apple-touch-icon" href="apple-cyber.png">
+<link rel="icon" type="image/png" href="logo.svg">
+<link rel="apple-touch-icon" href="logo.svg">
 <meta name="description" content="Browse all 45 osien-stack MCP tools with descriptions, categories and search.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
-  :root { --hue: 200; --sat: 75%; --light: 55%; --bg: hsl(var(--hue), 28%, 7%); --fg: hsl(var(--hue), 10%, 92%); --muted: hsl(var(--hue), 15%, 62%); --accent: hsl(var(--hue), var(--sat), var(--light)); --accent2: hsl(calc(var(--hue)+50), var(--sat), 60%); --card: hsla(var(--hue), 25%, 13%, .55); --border: hsla(var(--hue), 40%, 50%, .22); --glow: hsla(var(--hue), 80%, 60%, .3); }
+    :root {
+    /* ocean palette - shared with index.html */
+    --hue: 216; --sat: 88%; --light: 50%;
+    --bg: #EDF4FD;
+    --fg: #16234B;
+    --muted: #5B6E93;
+    --accent: #2240DC;
+    --accent2: #2FAFD0;
+    --card: rgba(255,255,255,.94);
+    --card2: #F5FAFE;
+    --border: hsla(224, 72%, 52%, .16);
+    --glow: hsla(190, 78%, 55%, .30);
+    --code-bg: #16234B;
+    --code-fg: #E6EFFC;
+    --radius: 14px;
+    --radius-sm: 9px;
+    --shadow: 0 18px 44px -26px hsla(224, 70%, 40%, .40);
+    --shadow-sm: 0 10px 26px -18px hsla(224, 60%, 35%, .30);
+    --on-accent: #FFFFFF;
+  }
+
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: auto; }
   body { font-family: 'Space Grotesk', system-ui, sans-serif; background: var(--bg); color: var(--fg); min-height: 100vh; }
@@ -33,7 +53,7 @@
   .filters { display:flex; gap:8px; flex-wrap:wrap; }
   .chip { padding: 8px 14px; border-radius:999px; border:1px solid var(--border); background: var(--card); color: var(--muted); font-size:.85rem; cursor:pointer; transition: all .2s; user-select:none; }
   .chip:hover { color: var(--fg); border-color: var(--accent); }
-  .chip.active { background: var(--accent); color:#0a0a0f; border-color:transparent; font-weight:600; }
+  .chip.active { background: var(--accent); color:var(--on-accent); border-color:transparent; font-weight:600; }
   .meta { display:flex; gap:16px; margin-bottom: 20px; color: var(--muted); font-size:.9rem; }
   .meta strong { color: var(--accent); }
   .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
@@ -65,25 +85,6 @@
     .cursor, .glow { display: none !important; }
     nav::after, nav a::after, .tool::before, .tool::after, .chip::after, .modal.open .modal-box::after { display: none !important; }
   }
-  /* OSIEN World tool explorer: same sharp cyber language as the home page. */
-  html[data-theme="cyber"] { --hue: 318; --sat: 100%; --light: 60%; }
-  html[data-theme="cyber"] body { background: #07030e; position: relative; isolation: isolate; }
-  html[data-theme="cyber"] body::before { content: ""; position: fixed; inset: 0; z-index: -2; pointer-events: none;
-    background: linear-gradient(hsla(185,90%,55%,.045) 1px, transparent 1px), linear-gradient(90deg, hsla(185,90%,55%,.045) 1px, transparent 1px),
-      radial-gradient(900px 600px at 8% 0%, hsla(330,100%,52%,.18), transparent 65%), radial-gradient(800px 600px at 100% 100%, hsla(185,100%,48%,.14), transparent 65%);
-    background-size: 46px 46px, 46px 46px, 100% 100%, 100% 100%; }
-  html[data-theme="cyber"] body::after { content: ""; position: fixed; inset: 0; z-index: 8; pointer-events: none; opacity: .28;
-    background: repeating-linear-gradient(180deg, rgba(0,0,0,.25) 0 1px, transparent 1px 3px); }
-  html[data-theme="cyber"] nav { background: rgba(7,3,14,.82); border-bottom-color: hsla(185,100%,55%,.28); box-shadow: 0 8px 30px rgba(0,0,0,.25); }
-  html[data-theme="cyber"] nav .logo span, html[data-theme="cyber"] h1, html[data-theme="cyber"] .tool .name { font-family: 'Orbitron', 'Space Grotesk', sans-serif; }
-  html[data-theme="cyber"] .wrap { padding-top: 56px; }
-  html[data-theme="cyber"] h1 { text-transform: uppercase; letter-spacing: -2px; }
-  html[data-theme="cyber"] .search, html[data-theme="cyber"] .chip, html[data-theme="cyber"] .tool, html[data-theme="cyber"] .modal-box { border-radius: 3px; }
-  html[data-theme="cyber"] .tool { background: linear-gradient(145deg, rgba(20,8,32,.86), rgba(4,18,28,.76)); clip-path: polygon(0 0, calc(100% - 12px) 0, 100% 12px, 100% 100%, 0 100%); }
-  html[data-theme="cyber"] .tool:hover { box-shadow: 0 0 28px hsla(330,100%,60%,.22), inset 0 0 24px hsla(185,100%,55%,.05); }
-  html[data-theme="cyber"] .chip.active { color: #07030e; box-shadow: 0 0 18px hsla(330,100%,60%,.35); }
-  html[data-theme="cyber"] .back { text-transform: uppercase; letter-spacing: 1px; font-family: 'JetBrains Mono', monospace; font-size: .75rem; }
-html[data-theme="cyber"] .modal-box { background: rgba(10,4,20,.97); box-shadow: 0 0 70px hsla(330,100%,60%,.18); }
 
   /* ===== minimalist high-motion layer: CSS only, no canvas / no deps ===== */
   @keyframes os-drift { from { transform: translate3d(0,0,0); } to { transform: translate3d(46px,46px,0); } }
@@ -94,12 +95,8 @@ html[data-theme="cyber"] .modal-box { background: rgba(10,4,20,.97); box-shadow:
   @keyframes os-scan { from { transform: translateY(-110%); } to { transform: translateY(320%); } }
   @keyframes os-rise { from { opacity: 0; transform: translateY(20px) scale(.97); } to { opacity: 1; transform: none; } }
   @keyframes os-fade { from { opacity: 0; } to { opacity: 1; } }
-  @keyframes os-pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); } 50% { box-shadow: 0 0 18px 2px hsla(330,100%,60%,.28); } }
-  @keyframes os-focus { 0%,100% { box-shadow: 0 0 0 3px hsla(185,100%,55%,.16); } 50% { box-shadow: 0 0 0 6px hsla(330,100%,60%,.26); } }
-
-  /* background: slow grid drift + breathing glow (transform/opacity only -> cheap) */
-  html[data-theme="cyber"] body::before { inset: -60px; animation: os-drift 26s ease-in-out infinite alternate, os-breathe 11s ease-in-out infinite; }
-  html[data-theme="cyber"] body::after { animation: os-flicker 8s ease-in-out infinite; }
+  @keyframes os-pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); } 50% { box-shadow: 0 0 18px 2px hsla(224,72%,52%,.22); } }
+  @keyframes os-focus { 0%,100% { box-shadow: 0 0 0 3px hsla(224,72%,52%,.14); } 50% { box-shadow: 0 0 0 6px hsla(224,72%,52%,.20); } }
   .glow { animation: os-breathe 6s ease-in-out infinite; }
 
   /* nav shimmer */
@@ -113,7 +110,7 @@ html[data-theme="cyber"] .modal-box { background: rgba(10,4,20,.97); box-shadow:
 
   /* card: animated sheen accent + hover edge, per-card stagger via nth-child */
   .tool::after { content: ""; position: absolute; inset: 0; pointer-events: none;
-    background: linear-gradient(112deg, transparent 38%, hsla(185,100%,55%,.10) 46%, hsla(330,100%,60%,.16) 50%, hsla(185,100%,55%,.10) 54%, transparent 62%);
+    background: linear-gradient(112deg, transparent 38%, hsla(190,78%,55%,.12) 46%, hsla(224,72%,52%,.14) 50%, hsla(190,78%,55%,.12) 54%, transparent 62%);
     background-size: 260% 100%; background-position: 230% 0; animation: os-sheen 11s ease-in-out infinite; }
   .tool:nth-child(3n+1)::after { animation-delay: -2.5s; }
   .tool:nth-child(3n+2)::after { animation-delay: -6s; }
@@ -128,7 +125,7 @@ html[data-theme="cyber"] .modal-box { background: rgba(10,4,20,.97); box-shadow:
   /* chips + search microinteractions */
   .chip { position: relative; overflow: hidden; }
   .chip::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .25s;
-    background: linear-gradient(100deg, transparent 40%, hsla(330,100%,70%,.22) 50%, transparent 60%);
+    background: linear-gradient(100deg, transparent 40%, hsla(224,72%,52%,.16) 50%, transparent 60%);
     background-size: 250% 100%; background-position: 230% 0; }
   .chip:hover::after { opacity: 1; animation: os-sheen 1.4s ease-out forwards; }
   .chip:hover { transform: translateY(-1px); }
@@ -141,7 +138,7 @@ html[data-theme="cyber"] .modal-box { background: rgba(10,4,20,.97); box-shadow:
   .modal.open { animation: os-fade .22s ease-out both; }
   .modal.open .modal-box { animation: os-rise .38s cubic-bezier(.22,1,.36,1) both; }
   .modal.open .modal-box::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 40%; pointer-events: none;
-    background: linear-gradient(180deg, transparent, hsla(185,100%,55%,.10), transparent);
+    background: linear-gradient(180deg, transparent, hsla(190,78%,55%,.12), transparent);
     animation: os-scan .7s cubic-bezier(.4,0,.2,1) both; }
 </style>
 </head>
@@ -149,18 +146,18 @@ html[data-theme="cyber"] .modal-box { background: rgba(10,4,20,.97); box-shadow:
   <div class="cursor" id="cursor"></div>
   <div class="glow" id="glow"></div>
   <nav>
-    <div class="logo"><img src="logo-cyber.png" width="512" height="512" alt="Osien-Stack" class="logo-img"><span>osien_stack / tools</span></div>
+    <div class="logo"><img src="logo.svg" width="512" height="512" alt="Osien-Stack" class="logo-img"><span>osien_stack / tools</span></div>
     <div>
       <a href="index.html">World</a>
       <a href="https://github.com/kabirprokk/Osien-Stack" target="_blank">GitHub</a>
     </div>
   </nav>
   <div class="wrap">
-    <a class="back" href="index.html">← Back to home</a>
+    <a class="back" href="index.html">Ã¢â€ Â Back to home</a>
     <h1>Tool Explorer</h1>
     <p class="sub">All 45 osien-stack MCP tools. Search, filter, copy the name. Your AI calls them by name.</p>
     <div class="toolbar">
-      <input class="search" id="search" type="search" placeholder="Search tools or descriptions…" autocomplete="off">
+      <input class="search" id="search" type="search" placeholder="Search tools or descriptionsÃ¢â‚¬Â¦" autocomplete="off">
       <div class="filters" id="filters"></div>
     </div>
     <div class="meta" id="meta"></div>
