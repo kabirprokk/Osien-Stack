@@ -100,8 +100,9 @@
     content: ""; position: fixed; inset: 0; z-index: 90; pointer-events: none; opacity: var(--scan);
     background: repeating-linear-gradient(180deg, rgba(0,0,0,.22) 0 1px, transparent 1px 3px);
   }
-  /* the ONE canvas */
-  canvas#three3d { position: fixed; inset: 0; z-index: -1; pointer-events: none; opacity: .85; }
+  /* the ONE canvas: a real interactive OSIEN World instrument, not a spinner */
+  canvas#three3d { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .92; }
+  .topbar, .stage, section, .marquee, .section-indicator, .top-orb { position: relative; z-index: 1; }
 
 
   /* ===== theme character ===== */
@@ -898,17 +899,40 @@
     var group = new THREE.Group();
     scene.add(group);
 
-    var coreMat = new THREE.MeshStandardMaterial({ color: 0x4466ff, roughness: 0.3, metalness: 0.7, transparent: true, opacity: 0.35, flatShading: true });
-    var core = new THREE.Mesh(new THREE.IcosahedronGeometry(2.1, 1), coreMat);
+    var coreMat = new THREE.MeshStandardMaterial({ color: 0x4466ff, roughness: 0.24, metalness: 0.78, transparent: true, opacity: 0.5, flatShading: true });
+    var core = new THREE.Mesh(new THREE.IcosahedronGeometry(1.65, 2), coreMat);
     group.add(core);
 
-    var wireMat = new THREE.MeshBasicMaterial({ color: 0x88aaff, wireframe: true, transparent: true, opacity: 0.3 });
-    group.add(new THREE.Mesh(new THREE.IcosahedronGeometry(2.55, 1), wireMat));
+    var wireMat = new THREE.MeshStandardMaterial({ color: 0x88aaff, wireframe: true, transparent: true, opacity: 0.42, roughness: 0.2, metalness: 0.8 });
+    group.add(new THREE.Mesh(new THREE.IcosahedronGeometry(2.15, 2), wireMat));
 
-    var ringMat = new THREE.MeshBasicMaterial({ color: 0x66ddff, transparent: true, opacity: 0.5 });
-    var ring = new THREE.Mesh(new THREE.TorusGeometry(3.3, 0.03, 8, 90), ringMat);
-    ring.rotation.x = Math.PI / 2.6;
-    group.add(ring);
+    /* Three counter-rotating rings represent recall -> verify -> ship. */
+    var ringMats = [
+      new THREE.MeshStandardMaterial({ color: 0xff2b9a, emissive: 0x4a0732, emissiveIntensity: 1.3, metalness: 0.8, roughness: 0.22 }),
+      new THREE.MeshStandardMaterial({ color: 0x55eaff, emissive: 0x063d4a, emissiveIntensity: 1.4, metalness: 0.8, roughness: 0.2 }),
+      new THREE.MeshStandardMaterial({ color: 0xb880ff, emissive: 0x26064a, emissiveIntensity: 1.2, metalness: 0.75, roughness: 0.25 })
+    ];
+    var rings = [];
+    [2.55, 3.2, 3.82].forEach(function (radius, ri) {
+      var r = new THREE.Mesh(new THREE.TorusGeometry(radius, ri === 1 ? 0.055 : 0.04, 12, 96), ringMats[ri]);
+      r.rotation.set(ri * 0.42 + 0.25, ri * 0.34, ri * 0.7);
+      rings.push(r); group.add(r);
+    });
+
+    /* 45 tools become 45 usable nodes on the instrument. One draw call. */
+    var nodeMat = new THREE.MeshStandardMaterial({ color: 0xff4db5, emissive: 0x6d0b46, emissiveIntensity: 1.1, metalness: 0.65, roughness: 0.28 });
+    var nodeMesh = new THREE.InstancedMesh(new THREE.BoxGeometry(0.16, 0.16, 0.16), nodeMat, names.length);
+    var nodeDummy = new THREE.Object3D(), nodePositions = [], nodeBase = [];
+    for (var ni = 0; ni < names.length; ni++) {
+      var na = (ni / names.length) * Math.PI * 2;
+      var nr = 3.18 + ((ni % 3) - 1) * 0.12;
+      nodePositions.push(new THREE.Vector3(Math.cos(na) * nr, Math.sin(na) * nr, (ni % 5 - 2) * 0.07));
+      nodeBase.push(nr);
+      nodeDummy.position.copy(nodePositions[ni]); nodeDummy.rotation.set(na, na * 0.7, na * 0.3); nodeDummy.updateMatrix();
+      nodeMesh.setMatrixAt(ni, nodeDummy.matrix);
+    }
+    nodeMesh.instanceMatrix.needsUpdate = true;
+    group.add(nodeMesh);
 
     var starCount = innerWidth < 700 ? 260 : 700;
     var sp = new Float32Array(starCount * 3);
@@ -927,11 +951,15 @@
     var key = new THREE.DirectionalLight(0xffffff, 1.4); key.position.set(5, 6, 7); scene.add(key);
     var rim = new THREE.PointLight(0x66ddff, 1.4, 40); rim.position.set(-6, -3, 5); scene.add(rim);
 
-    var px = 0, py = 0;
+    var px = 0, py = 0, pointer = new THREE.Vector2(9, 9), ray = new THREE.Raycaster(), hovered = -1;
     window.addEventListener('mousemove', function (e) {
       px = (e.clientX / innerWidth - 0.5) * 2;
       py = (e.clientY / innerHeight - 0.5) * 2;
+      pointer.x = (e.clientX / innerWidth) * 2 - 1; pointer.y = -(e.clientY / innerHeight) * 2 + 1;
     }, { passive: true });
+    window.addEventListener('click', function () {
+      if (hovered >= 0 && root.dataset.theme === 'cyber') window.location.href = 'tools.html?tool=' + encodeURIComponent(names[hovered]);
+    });
 
     var tmpColor = new THREE.Color();      // reused - no per-frame allocation
     var t0 = performance.now();
@@ -953,14 +981,33 @@
       coreMat.color.setHSL((hue % 360) / 360, 0.8, 0.6);
       wireMat.color.setHSL(((hue + 40) % 360) / 360, 0.75, 0.72);
 
-      group.rotation.y = t * 0.2;
-      group.rotation.x = Math.sin(t * 0.3) * 0.22;
-      ring.rotation.z = t * 0.45;
+      group.position.x += ((innerWidth > 900 ? 3.25 : 0) - group.position.x) * 0.06;
+      group.rotation.y = t * 0.11;
+      group.rotation.x = Math.sin(t * 0.3) * 0.16;
+      var orbit = 0.7 + scrollPct * 0.7;
+      rings[0].rotation.z = t * 0.34 + orbit;
+      rings[1].rotation.x = t * -0.22 - orbit * 0.6;
+      rings[2].rotation.y = t * 0.28 + orbit * 0.35;
       stars.rotation.y = t * 0.012;
+
+      ray.setFromCamera(pointer, camera);
+      var hit = ray.intersectObject(nodeMesh, false), nextHover = hit.length ? hit[0].instanceId : -1;
+      if (nextHover !== hovered) {
+        hovered = nextHover;
+        nodeMesh.material.emissiveIntensity = hovered >= 0 ? 2.1 : 1.1;
+        var sn = document.getElementById('spotName'), sd = document.getElementById('spotDesc');
+        if (hovered >= 0 && sn) { sn.textContent = names[hovered]; if (sd) sd.textContent = '45-tool node — click to explore this capability.'; }
+      }
+      for (var ni2 = 0; ni2 < nodePositions.length; ni2++) {
+        var np = nodePositions[ni2], lift = ni2 === hovered ? 0.18 : 0;
+        nodeDummy.position.set(np.x * (1 + lift), np.y * (1 + lift), np.z + lift);
+        nodeDummy.rotation.set(t * 0.8 + ni2, t * 0.6, ni2 * 0.2); nodeDummy.updateMatrix(); nodeMesh.setMatrixAt(ni2, nodeDummy.matrix);
+      }
+      nodeMesh.instanceMatrix.needsUpdate = true;
 
       camera.position.x += (px * 1.9 - camera.position.x) * 0.05;
       camera.position.y += (-py * 1.4 - camera.position.y) * 0.05;
-      camera.lookAt(0, 0, 0);
+      camera.lookAt(group.position.x * 0.55, 0, 0);
 
       renderer.render(scene, camera);
     }
