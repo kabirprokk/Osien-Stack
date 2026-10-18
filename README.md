@@ -91,6 +91,37 @@ python runner/auto-perfect.py -t "your task" --max 5
 ```
 Each iteration = fresh process => tokens reset to ~0.
 
+### 5b. Batch runner — 100+ tasks in one shot
+```bash
+# plan only, spawns nothing
+python runner/batch.py --manifest tasks.json --dry-run
+
+# verify the orchestration end-to-end without spawning any AI
+python runner/batch.py --manifest tasks.json --mock --workers 16
+
+# real run — the binary is explicit, never auto-guessed
+python runner/batch.py --manifest tasks.json --bin /path/to/cli \
+  --workers 16 --retries 2 --state batch-state.json --out report.md
+```
+
+Manifest accepts a JSON array, `{"tasks":[...]}`, or one-task-per-line text.
+Each entry: `{"id":"12","task":"audit the auth module","agent":"debugger"}`
+(`agent` is optional — it round-robins across the 14 crew agents).
+
+What it gives you at scale:
+
+| capability | why it matters |
+|---|---|
+| `--workers` ceiling (max 64) | 100+ tasks never become 100+ live AI processes |
+| auto-dedupe | identical task text runs once, repeats reported as skipped |
+| `--state` resume | a crashed batch continues instead of restarting |
+| `--retries` + backoff | transient failures recover without manual triage |
+| `--only 1,2,3` | re-run a slice after a fix |
+| `--mock` / `--dry-run` | prove the plan at full scale for zero tokens |
+| md + json report | machine-readable pass/fail per task |
+
+Exit code is `0` only when every task passed.
+
 ### 6. Instructions / methodology
 Read `instructions/` and paste into your CLI's system prompt / CLAUDE.md / .cursorrules.
 
