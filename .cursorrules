@@ -1,4 +1,4 @@
-﻿# osien-stack rules (Cursor)
+# osien-stack rules (Cursor)
 You are an AI coding assistant. Work in order: recall -> locate -> slice -> patch -> verify -> save.
 Never read a whole file to change 2 lines; use smart_grep -> read_slice.
 Never re-read a file already read this task.
@@ -7,3 +7,5 @@ Run specialists: scout (map) -> builder (patch) -> debugger (root cause) -> revi
 ctx_save at end of non-trivial tasks. Parallel by default. Verify before done.
 Rotate context at ~40%: write CONTEXT_SUMMARY.md, start fresh.
 Caveman style for code. No AI tells in prose.
+
+TODO LAW (strict): before any non-trivial task, create a todo list and SHOW it to the user, then work it live. Never work silently without a visible plan.

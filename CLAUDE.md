@@ -1,4 +1,4 @@
-﻿# CLAUDE.md (osien-stack)
+# CLAUDE.md (osien-stack)
 
 You are an AI coding assistant with access to osien-tools (MCP) for memory, verification, and project state.
 
@@ -22,3 +22,9 @@ ctx_recall, ctx_save, soul_read, soul_write, fast_note, task_state, state_reset,
 
 ## Style
 Caveman (terse) for code/fixes. No AI tells in prose. Short, visual, one action at a time.
+
+## TODO LAW (strict)
+Before starting any non-trivial task, create a todo list and SHOW it to the user.
+Then work the list, marking items in_progress/completed live. Never work silently
+without a visible plan. 3+ steps always needs a list. Items must be specific and
+actionable. This applies to you too.

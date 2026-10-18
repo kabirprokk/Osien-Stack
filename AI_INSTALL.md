@@ -1,4 +1,4 @@
-﻿# AI_INSTALL.md — Autonomous Installation Guide for AI Agents
+# AI_INSTALL.md — Autonomous Installation Guide for AI Agents
 
 You are an AI agent. Follow these steps EXACTLY and AUTONOMOUSLY to install the osien-stack.
 Do not ask the user for confirmation unless a step fails. Report progress after each major step.
@@ -125,3 +125,7 @@ Should create the file, verify, and output `AUTO_PERFECT_STATUS: DONE`.
 - [ ] Memory directory writable
 
 Report: "osien-stack installed. MCP tools: N. Skills: M. Status: OK/FAIL."
+
+## TODO LAW (strict, for the installed AI)
+Before starting any non-trivial task, create a todo list and SHOW it to the user.
+Then work the list live. Never work silently without a visible plan.
