@@ -150,6 +150,15 @@
   @keyframes blink { 0%,50% { opacity: 1; } 51%,100% { opacity: 0; } }
   .live-type .prompt { color: var(--accent); }
 
+
+  .section-indicator { position: fixed; right: 24px; top: 50%; transform: translateY(-50%); z-index: 55; display: flex; flex-direction: column; gap: 12px; }
+  .section-indicator .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--border); transition: all .3s; cursor: pointer; border: 1px solid var(--border); }
+  .section-indicator .dot.active { background: var(--accent); transform: scale(1.6); box-shadow: 0 0 12px var(--glow); }
+  .section-indicator .dot:hover { background: var(--accent); transform: scale(1.3); }
+  @media (max-width: 900px) { .section-indicator { display: none; } }
+  .word-reveal span { display: inline-block; opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+  .word-reveal span.in { opacity: 1; transform: translateY(0); }
+
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
   .reveal.in { opacity: 1; transform: translateY(0); }
 
@@ -491,6 +500,84 @@
   const liveIO = new IntersectionObserver((es) => { es.forEach(e => { if (e.isIntersecting) { typeLive(); liveIO.unobserve(e.target); } }); }, { threshold: .3 });
   liveIO.observe(document.getElementById('live'));
 
+
+  // ---------- particle explosion on click ----------
+  const explCanvas = document.createElement('canvas');
+  explCanvas.style.cssText = 'position:fixed;inset:0;z-index:9998;pointer-events:none;';
+  document.body.appendChild(explCanvas);
+  const ectx = explCanvas.getContext('2d');
+  function eResize() { explCanvas.width = window.innerWidth; explCanvas.height = window.innerHeight; }
+  eResize(); window.addEventListener('resize', eResize);
+  const bursts = [];
+  window.addEventListener('click', e => {
+    const hue = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue')) || 260;
+    const burst = [];
+    for (let i = 0; i < 24; i++) {
+      const a = (Math.PI * 2 * i) / 24;
+      const speed = 2 + Math.random() * 4;
+      burst.push({ x: e.clientX, y: e.clientY, vx: Math.cos(a)*speed, vy: Math.sin(a)*speed, life: 1, color: 'hsla(' + (hue + Math.random()*40 - 20) + ', 90%, 65%, ' });
+    }
+    bursts.push(burst);
+  });
+  function burstTick() {
+    ectx.clearRect(0, 0, explCanvas.width, explCanvas.height);
+    for (let b = bursts.length - 1; b >= 0; b--) {
+      const burst = bursts[b];
+      let alive = false;
+      for (const p of burst) {
+        if (p.life <= 0) continue;
+        alive = true;
+        p.x += p.vx; p.y += p.vy; p.vy += 0.15; p.vx *= 0.96; p.life -= 0.025;
+        ectx.beginPath(); ectx.arc(p.x, p.y, 2.5 * p.life + 0.5, 0, Math.PI*2);
+        ectx.fillStyle = p.color + p.life + ')'; ectx.fill();
+      }
+      if (!alive) bursts.splice(b, 1);
+    }
+    requestAnimationFrame(burstTick);
+  }
+  burstTick();
+
+  // ---------- sticky section indicator ----------
+  const sections = ['', 'why', 'what', 'pipeline', 'how', 'install'];
+  const dots = document.querySelectorAll('.section-indicator .dot');
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      const id = sections[i];
+      if (id) document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+      else window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  });
+  function updateIndicator() {
+    const mid = window.scrollY + window.innerHeight / 2;
+    let active = 0;
+    for (let i = 0; i < sections.length; i++) {
+      const id = sections[i];
+      const el = id ? document.getElementById(id) : document.body;
+      if (el && el.offsetTop <= mid) active = i;
+    }
+    dots.forEach((d, i) => d.classList.toggle('active', i === active));
+  }
+  window.addEventListener('scroll', () => requestAnimationFrame(updateIndicator), { passive: true });
+  updateIndicator();
+
+  // ---------- word-by-word reveal for hero sub ----------
+  const sub = document.querySelector('.stage .sub');
+  if (sub) {
+    const words = sub.textContent.split(' ');
+    sub.innerHTML = words.map(w => '<span>' + w + '</span>').join(' ');
+    sub.classList.add('word-reveal');
+    const wordIO = new IntersectionObserver((es) => {
+      es.forEach(e => {
+        if (e.isIntersecting) {
+          const spans = e.target.querySelectorAll('span');
+          spans.forEach((sp, i) => setTimeout(() => sp.classList.add('in'), i * 60));
+          wordIO.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    wordIO.observe(sub);
+  }
+
   const particles = [];
   const N = 120;
   for (let i = 0; i < N; i++) particles.push({ x: Math.random()*W, y: Math.random()*H, vx: 0, vy: 0, life: Math.random() });
@@ -612,6 +699,15 @@
       <div class="row"><span class="key">⌘K</span><span class="desc">Command palette</span></div>
       <div class="row"><span class="key">T</span><span class="desc">Back to top</span></div>
     </div>
+  </div>
+
+  <div class="section-indicator" id="sectionIndicator">
+    <div class="dot" data-target="" title="hero"></div>
+    <div class="dot" data-target="why" title="why"></div>
+    <div class="dot" data-target="what" title="what"></div>
+    <div class="dot" data-target="pipeline" title="pipeline"></div>
+    <div class="dot" data-target="how" title="how"></div>
+    <div class="dot" data-target="install" title="install"></div>
   </div>
 </body>
 </html>
