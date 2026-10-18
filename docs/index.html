@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Osien-Stack - A Living Toolchain for Any AI</title>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js" defer></script>
 <link rel="icon" type="image/png" href="logo.png">
 <meta name="description" content="45 MCP tools that install themselves into any AI. Memory, verification, parallel work, context discipline. One prompt.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,8 +29,11 @@
   canvas#field { position: fixed; inset: 0; z-index: -2; }
 
   /* magnetic cursor */
-  .cursor { position: fixed; width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--accent); pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: width .25s, height .25s, background .25s, border-color .3s; mix-blend-mode: difference; }
-  .cursor.hover { width: 52px; height: 52px; background: var(--glow); border-color: transparent; }
+  .cursor { position: fixed; position-anchor: none; width: 18px; height: 18px; border-radius: 50%; border: 1.5px solid var(--accent); pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); transition: width .25s, height .25s, background .25s, border-color .3s; mix-blend-mode: difference; }
+  .cursor.hover { width: 54px; height: 54px; background: var(--glow); border-color: var(--accent); opacity: .95; }
+  .cursor.hover::after { content: ""; position: absolute; inset: -6px; border-radius: 50%; border: 1px solid var(--accent); opacity: .6; }
+  .cursor.text { width: 6px; height: 30px; border-radius: 3px; background: var(--accent); border-color: transparent; }
+  .cursor.link { width: 30px; height: 30px; background: transparent; border-width: 2px; border-color: var(--accent2); }
   .cursor.click { width: 12px; height: 12px; }
 
   /* top bar */
@@ -183,6 +187,12 @@
   .eyebrow { font-family: 'JetBrains Mono', monospace; }
   .eyebrow .caret { display: inline-block; width: 8px; height: 14px; background: var(--accent); vertical-align: middle; animation: blink 1s step-end infinite; }
 
+
+  canvas#three3d { position: fixed; inset: 0; z-index: -1; pointer-events: none; }
+  .stage { z-index: 2; }
+  .block { z-index: 2; }
+  .marquee { z-index: 2; }
+
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
   .reveal.in { opacity: 1; transform: translateY(0); }
 
@@ -200,6 +210,27 @@
   <div class="scrollbar" id="scrollbar"></div>
   <canvas id="field"></canvas>
   <canvas id="rain"></canvas>
+  <canvas id="three3d"></canvas>
+  <div class="kbdhelp" id="kbdhelp">
+    <div class="kbdhelp-box">
+      <h3>Keyboard shortcuts</h3>
+      <div class="row"><span class="key">1-5</span><span class="desc">Jump to section</span></div>
+      <div class="row"><span class="key">?</span><span class="desc">Show this help</span></div>
+      <div class="row"><span class="key">Esc</span><span class="desc">Close overlays</span></div>
+      <div class="row"><span class="key">⌘K</span><span class="desc">Command palette</span></div>
+      <div class="row"><span class="key">T</span><span class="desc">Back to top</span></div>
+    </div>
+  </div>
+  <div class="section-indicator" id="sectionIndicator">
+    <div class="dot" data-target="" title="hero"></div>
+    <div class="dot" data-target="why" title="why"></div>
+    <div class="dot" data-target="what" title="what"></div>
+    <div class="dot" data-target="pipeline" title="pipeline"></div>
+    <div class="dot" data-target="how" title="how"></div>
+    <div class="dot" data-target="install" title="install"></div>
+  </div>
+  <button class="top-orb" id="topOrb" aria-label="back to top">↑<svg class="ring" viewBox="0 0 56 56"><circle cx="28" cy="28" r="26" fill="none" stroke="var(--border)" stroke-width="2"/></svg></button>
+  <div id="webglFallback" style="display:none;position:fixed;inset:0;z-index:-4;background:radial-gradient(circle at 50% 50%, hsla(var(--hue),80%,30%,.35), transparent 60%)"></div>
   <div class="mesh-layer" id="mesh"><div class="blob" id="b1"></div><div class="blob" id="b2"></div><div class="blob" id="b3"></div><div class="blob" id="b4"></div></div>
   <div class="cursor" id="cursor"></div>
   <div class="glow" id="glow"></div>
@@ -399,6 +430,158 @@
   </footer>
 
 <script>
+
+  // ================= 3D SCENE (Three.js) =================
+  function __init3D() {
+    const canvas = document.getElementById('three3d');
+    const fallback = document.getElementById('webglFallback');
+    function bail() { if (fallback) fallback.style.display = 'block'; if (canvas) canvas.style.display = 'none'; }
+    if (typeof THREE === 'undefined') return bail();          // CDN blocked
+    let renderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true, powerPreference: 'high-performance' });
+    } catch (e) { return bail(); }                            // no WebGL
+    if (!renderer || !renderer.getContext()) return bail();
+
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.75));
+    renderer.setSize(window.innerWidth, window.innerHeight);
+
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.set(0, 0, 9);
+
+    // ---- core object: solid icosahedron + wireframe shell ----
+    const group = new THREE.Group();
+    scene.add(group);
+
+    const geo = new THREE.IcosahedronGeometry(2.15, 1);
+    const mat = new THREE.MeshStandardMaterial({
+      color: 0x3355ff, roughness: 0.28, metalness: 0.75,
+      transparent: true, opacity: 0.32, flatShading: true
+    });
+    const core = new THREE.Mesh(geo, mat);
+    group.add(core);
+
+    const wire = new THREE.Mesh(
+      new THREE.IcosahedronGeometry(2.6, 1),
+      new THREE.MeshBasicMaterial({ color: 0x88aaff, wireframe: true, transparent: true, opacity: 0.34 })
+    );
+    group.add(wire);
+
+    // orbiting ring
+    const ring = new THREE.Mesh(
+      new THREE.TorusGeometry(3.4, 0.035, 12, 120),
+      new THREE.MeshBasicMaterial({ color: 0x66ddff, transparent: true, opacity: 0.55 })
+    );
+    ring.rotation.x = Math.PI / 2.6;
+    group.add(ring);
+
+    const ring2 = new THREE.Mesh(
+      new THREE.TorusGeometry(4.1, 0.02, 10, 110),
+      new THREE.MeshBasicMaterial({ color: 0xff77dd, transparent: true, opacity: 0.4 })
+    );
+    ring2.rotation.y = Math.PI / 3.1;
+    group.add(ring2);
+
+    // ---- starfield ----
+    const STARS = window.innerWidth < 700 ? 500 : 1400;
+    const starPos = new Float32Array(STARS * 3);
+    for (let i = 0; i < STARS; i++) {
+      starPos[i * 3] = (Math.random() - 0.5) * 90;
+      starPos[i * 3 + 1] = (Math.random() - 0.5) * 90;
+      starPos[i * 3 + 2] = (Math.random() - 0.5) * 90 - 12;
+    }
+    const starGeo = new THREE.BufferGeometry();
+    starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+    const stars = new THREE.Points(starGeo, new THREE.PointsMaterial({ color: 0xaaccff, size: 0.11, transparent: true, opacity: 0.75 }));
+    scene.add(stars);
+
+    // lights
+    scene.add(new THREE.AmbientLight(0x4466aa, 0.75));
+    const key = new THREE.DirectionalLight(0xffffff, 1.5); key.position.set(5, 6, 7); scene.add(key);
+    const rim = new THREE.PointLight(0x66ddff, 1.6, 40); rim.position.set(-6, -3, 5); scene.add(rim);
+    const fill = new THREE.PointLight(0xff66dd, 1.1, 40); fill.position.set(5, -5, -4); scene.add(fill);
+
+    // ---- mouse parallax ----
+    let px = 0, py = 0, tx = 0, ty = 0;
+    window.addEventListener('mousemove', e => {
+      tx = (e.clientX / window.innerWidth - 0.5) * 2;
+      ty = (e.clientY / window.innerHeight - 0.5) * 2;
+    }, { passive: true });
+
+    // ---- raycast click on the 3D object ----
+    const ray = new THREE.Raycaster();
+    const ndc = new THREE.Vector2();
+    let punch = 0;
+    window.addEventListener('click', e => {
+      ndc.x = (e.clientX / window.innerWidth) * 2 - 1;
+      ndc.y = -(e.clientY / window.innerHeight) * 2 + 1;
+      ray.setFromCamera(ndc, camera);
+      if (ray.intersectObjects([core, wire], false).length > 0) {
+        punch = 1;                       // "hit" the 3D core -> pulse
+      }
+    });
+
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let paused = false, raf = null, t0 = performance.now();
+    document.addEventListener('visibilitychange', () => { paused = document.hidden; if (!paused && !raf) loop(); });
+
+    window.addEventListener('resize', () => {
+      camera.aspect = window.innerWidth / window.innerHeight;
+      camera.updateProjectionMatrix();
+      renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+    function loop() {
+      if (paused || reduce) { raf = null; return; }
+      raf = requestAnimationFrame(loop);
+      const t = (performance.now() - t0) / 1000;
+
+      // hue-reactive colours from the scroll palette
+      const hue = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue')) || 260;
+      mat.color.setHSL(((hue % 360) + 360) % 360 / 360, 0.85, 0.6);
+      wire.material.color.setHSL((((hue + 40) % 360) + 360) % 360 / 360, 0.8, 0.72);
+      stars.material.color.setHSL((((hue + 200) % 360) + 360) % 360 / 360, 0.6, 0.8);
+
+      // rotation
+      group.rotation.y = t * 0.22;
+      group.rotation.x = Math.sin(t * 0.32) * 0.24;
+      ring.rotation.z = t * 0.5;
+      ring2.rotation.z = -t * 0.36;
+      stars.rotation.y = t * 0.014;
+
+      // smooth scale pulse when clicked
+      if (punch > 0) punch *= 0.93;
+      const base = 1 + Math.sin(t * 1.6) * 0.02 + punch * 0.16;
+      group.scale.lerp(new THREE.Vector3(base, base, base), 0.12);
+
+      // camera parallax
+      px += (tx - px) * 0.05; py += (ty - py) * 0.05;
+      camera.position.x = px * 2.1;
+      camera.position.y = -py * 1.5;
+      camera.lookAt(0, 0, 0);
+
+      renderer.render(scene, camera);
+    }
+    loop();
+
+    // expose a tiny hook so the rest of the page can nudge it
+    window.__osien3d = { scene, group, camera, renderer };
+  }
+
+  // THREE is loaded via a deferred CDN script, so it may not exist yet.
+  // Wait for it (poll with a hard timeout) before booting, else fall back cleanly.
+  (function boot3D() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (typeof THREE !== 'undefined') return __init3D();
+    let tries = 0;
+    const t = setInterval(() => {
+      tries++;
+      if (typeof THREE !== 'undefined') { clearInterval(t); __init3D(); }
+      else if (tries > 60) { clearInterval(t); const fb = document.getElementById('webglFallback'); if (fb) fb.style.display = 'block'; }
+    }, 100);
+  })();
+
   // ---------- flow field canvas ----------
   const canvas = document.getElementById('field');
   const ctx = canvas.getContext('2d');
@@ -488,6 +671,7 @@
 
   // ---------- back to top ----------
   const topOrb = document.getElementById('topOrb');
+  if (topOrb) {
   const topRing = topOrb.querySelector('.ring');
   window.addEventListener('scroll', () => {
     const max = document.body.scrollHeight - window.innerHeight;
@@ -496,6 +680,7 @@
     if (topRing) topRing.style.transform = 'rotate(' + (-90 + progress * 360) + 'deg)';
   }, { passive: true });
   topOrb.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   // ---------- animated counters ----------
   function animateCounter(el, target, suffix) {
@@ -524,20 +709,21 @@
 
   // ---------- keyboard shortcuts ----------
   const kbdhelp = document.getElementById('kbdhelp');
+  if (kbdhelp) kbdhelp.addEventListener('click', e => { if (e.target === kbdhelp) kbdhelp.classList.remove('open'); });
   const sectionIds = ['', 'why', 'what', 'pipeline', 'how'];
   window.addEventListener('keydown', e => {
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-    if (e.key === '?') { kbdhelp.classList.toggle('open'); }
-    if (e.key === 'Escape') { kbdhelp.classList.remove('open'); document.getElementById('palette').classList.remove('open'); }
+    if (e.key === '?' && kbdhelp) { kbdhelp.classList.toggle('open'); }
+    if (e.key === 'Escape') { if (kbdhelp) kbdhelp.classList.remove('open'); const pal = document.getElementById('palette'); if (pal) pal.classList.remove('open'); }
     if (e.key === 't' || e.key === 'T') { window.scrollTo({ top: 0, behavior: 'smooth' }); }
     if (/^[1-5]$/.test(e.key)) {
       const idx = parseInt(e.key, 10) - 1;
       const id = sectionIds[idx];
-      if (id) document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+      const target = id && document.getElementById(id);
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
       else window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   });
-  kbdhelp.addEventListener('click', e => { if (e.target === kbdhelp) kbdhelp.classList.remove('open'); });
 
   // ---------- live typing install command ----------
   const liveCmd = 'npx -y osien-tools  # or: git clone https://github.com/kabirprokk/Osien-Stack && cd Osien-Stack/mcp-server && npm install && npm test';
@@ -602,7 +788,8 @@
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => {
       const id = sections[i];
-      if (id) document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+      const target = id && document.getElementById(id);
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
       else window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
@@ -786,7 +973,20 @@
   let cx=0, cy=0, gx=0, gy=0;
   window.addEventListener('mousemove', e => { cx=e.clientX; cy=e.clientY; }, { passive: true });
   (function loop(){ gx += (cx-gx)*.14; gy += (cy-gy)*.14; glow.style.left = gx+'px'; glow.style.top = gy+'px'; cursor.style.left = cx+'px'; cursor.style.top = cy+'px'; requestAnimationFrame(loop); })();
-  // cursor stays stable (no hover expansion to avoid jitter)
+  // cursor hover states (class toggle only - no layout/transform thrash)
+  const hoverables = 'a, button, .btn, .cell, .toolchip, .chip, .slot, .palette-item, .faq-q, .expand-card, .spotlight, .tool, input, .kbdhelp-box .row';
+  document.querySelectorAll(hoverables).forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+  });
+  document.querySelectorAll('input, textarea').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('text'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('text'));
+  });
+  document.querySelectorAll('a, button').forEach(el => {
+    el.addEventListener('mouseenter', () => cursor.classList.add('link'));
+    el.addEventListener('mouseleave', () => cursor.classList.remove('link'));
+  });
   window.addEventListener('mousedown', () => cursor.classList.add('click'));
   window.addEventListener('mouseup', () => cursor.classList.remove('click'));
 
@@ -854,26 +1054,7 @@
     if (e.key === 'Enter' && palette.classList.contains('open')) { const a = paletteList.querySelector('.palette-item.active'); if (a) a.click(); }
   });
 </script>
-  <button class="top-orb" id="topOrb" aria-label="back to top">↑<svg class="ring" viewBox="0 0 56 56"><circle cx="28" cy="28" r="26" fill="none" stroke="var(--border)" stroke-width="2"/></svg></button>
 
-  <div class="kbdhelp" id="kbdhelp">
-    <div class="kbdhelp-box">
-      <h3>Keyboard shortcuts</h3>
-      <div class="row"><span class="key">1-5</span><span class="desc">Jump to section</span></div>
-      <div class="row"><span class="key">?</span><span class="desc">Show this help</span></div>
-      <div class="row"><span class="key">Esc</span><span class="desc">Close overlays</span></div>
-      <div class="row"><span class="key">⌘K</span><span class="desc">Command palette</span></div>
-      <div class="row"><span class="key">T</span><span class="desc">Back to top</span></div>
-    </div>
-  </div>
 
-  <div class="section-indicator" id="sectionIndicator">
-    <div class="dot" data-target="" title="hero"></div>
-    <div class="dot" data-target="why" title="why"></div>
-    <div class="dot" data-target="what" title="what"></div>
-    <div class="dot" data-target="pipeline" title="pipeline"></div>
-    <div class="dot" data-target="how" title="how"></div>
-    <div class="dot" data-target="install" title="install"></div>
-  </div>
 </body>
 </html>
