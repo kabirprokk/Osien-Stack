@@ -5,7 +5,7 @@ an MCP server. Works with any MCP-compatible CLI (opencode, Claude Code, Cursor,
 Cline, Windsurf) and degrades gracefully elsewhere.
 
 ## Contents
-- `mcp-server/` - Node MCP server exposing 44 forged tools via stdio. Any MCP client can use these:
+- `mcp-server/` - Node MCP server exposing 45 forged tools via stdio. Any MCP client can use these:
   - Memory: ctx_recall, ctx_save, soul_read, soul_write, fast_note, task_state, state_reset
   - Search/Read: smart_grep, read_slice, impact_analyze
   - Verify: verify_chain, security_scan, test_gap, repro_capsule, context_budget, consensus
