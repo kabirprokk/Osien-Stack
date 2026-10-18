@@ -187,6 +187,13 @@
   .reveal.in { opacity: 1; transform: translateY(0); }
 
   @media (max-width: 720px) { .topbar nav { display: none; } body { cursor: auto; } .cursor, .glow { display: none; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+    .card, .cell, .reveal, .step { opacity: 1 !important; transform: none !important; }
+    .cursor, .glow, canvas#field, canvas#rain, .mesh-layer { display: none !important; }
+  }
+
 </style>
 </head>
 <body>
@@ -425,8 +432,13 @@
   rResize(); window.addEventListener('resize', rResize);
   const drops = [];
   const rainChars = 'ctx_recall ctx_save smart_grep read_slice verify_chain batch city_mode security_scan impact_analyze machine_state repo_health project_map checkpoint_create auto_heal perf_regression memory_compactor dead_code_detector dependency_graph changelog_generator token_budget_enforcer architecture_drift session_replay auto_document feature_flag_manager license_checker schema_validator cost_estimator self_critique_loop city_status city_post city_read city_broadcast city_clear soul_read soul_write fast_note task_state state_reset loop_status test_gap repro_capsule context_budget consensus rollback_on_failure test_synthesizer'.split(' ');
-  for (let i = 0; i < 30; i++) drops.push({ x: Math.random()*rW, y: Math.random()*rH, speed: 0.5 + Math.random()*1.5, text: rainChars[Math.floor(Math.random()*rainChars.length)], size: 11 + Math.random()*4 });
+  const lowPower = (navigator.hardwareConcurrency || 8) <= 4 || window.innerWidth < 700;
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  for (let i = 0; i < (lowPower ? 12 : 30); i++) drops.push({ x: Math.random()*rW, y: Math.random()*rH, speed: 0.5 + Math.random()*1.5, text: rainChars[Math.floor(Math.random()*rainChars.length)], size: 11 + Math.random()*4 });
+  let rainPaused = false;
+  document.addEventListener('visibilitychange', () => { rainPaused = document.hidden; });
   function rainTick() {
+    if (rainPaused || reduceMotion) { requestAnimationFrame(rainTick); return; }
     rctx.fillStyle = 'rgba(0,0,0,0.08)'; rctx.fillRect(0,0,rW,rH);
     const hue = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue')) || 260;
     for (const d of drops) {
@@ -683,7 +695,12 @@
   const blobs = [document.getElementById('b1'), document.getElementById('b2'), document.getElementById('b3'), document.getElementById('b4')];
   let mx = window.innerWidth / 2, my = window.innerHeight / 2, tx = mx, ty = my;
   window.addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; }, { passive: true });
+  const meshReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let meshPaused = false;
+  document.addEventListener('visibilitychange', () => { meshPaused = document.hidden; });
   (function meshLoop() {
+    if (meshReduced) return;
+    if (meshPaused) { requestAnimationFrame(meshLoop); return; }
     mx += (tx - mx) * 0.06; my += (ty - my) * 0.06;
     const hue = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue')) || 260;
     const cfg = [[0.12, 0.18, 520], [0.85, 0.30, 460], [0.30, 0.85, 500], [0.75, 0.78, 440]];
@@ -730,7 +747,10 @@
   function noise(x, y, t) { return Math.sin(x*0.003 + t) * Math.cos(y*0.003 + t*0.7) + Math.sin((x+y)*0.002 + t*1.3)*0.5; }
   let t = 0;
   function getHue() { return parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue')) || 260; }
+  let fieldPaused = false;
+  document.addEventListener('visibilitychange', () => { fieldPaused = document.hidden; });
   function tick() {
+    if (fieldPaused) { requestAnimationFrame(tick); return; }
     t += 0.008;
     const hue = getHue();
     ctx.fillStyle = 'rgba(0,0,0,0.06)';
