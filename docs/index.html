@@ -403,12 +403,6 @@
 <body>
 <script>
   document.documentElement.className = 'js';
-  (function () {
-    try {
-      var t = localStorage.getItem('osien-world');
-      if (t === 'playful' || t === 'cyber') document.documentElement.dataset.theme = t;
-    } catch (e) {}
-  })();
 </script>
 
 
@@ -416,7 +410,7 @@
   <div class="gate-box">
     <div class="gate-kicker">osien-stack</div>
     <div class="gate-q">Choose your world</div>
-    <p class="gate-sub">Same 45 tools. Two completely different feels. Pick one &mdash; you can switch anytime.</p>
+    <p class="gate-sub">Same 45 tools. Two completely different feels. Pick one. You can switch any time with the <b>world</b> button.</p>
     <div class="gate-cards">
       <button class="gcard g-play" data-world="playful">
         <div class="prev"><div class="mock"><i></i><i></i><i></i><i></i><i></i></div></div>
@@ -635,7 +629,6 @@
 
   function setWorld(w) {
     root.dataset.theme = w;
-    try { localStorage.setItem('osien-world', w); } catch (e) {}
     // the 3D scene belongs to OSIEN World only
     if (w === 'cyber') { ensure3D(); }
     else { var c2 = document.getElementById('three3d'); if (c2) c2.style.display = 'none'; }
@@ -645,14 +638,8 @@
   function closeGate() { if (gate) gate.classList.add('gone'); }
 
   if (gate) {
-    var saved = null;
-    try { saved = localStorage.getItem('osien-world'); } catch (e) {}
-    if (saved === 'playful' || saved === 'cyber') {
-      setWorld(saved); closeGate();
-    } else {
-      // no saved choice -> gate stays up, neutral dark until they pick
-      var cv0 = document.getElementById('three3d'); if (cv0) cv0.style.display = 'none';
-    }
+    // always ask - the gate shows on every load
+    var cv0 = document.getElementById('three3d'); if (cv0) cv0.style.display = 'none';
     gate.querySelectorAll('[data-world]').forEach(function (card) {
       card.addEventListener('click', function () {
         setWorld(card.dataset.world);
