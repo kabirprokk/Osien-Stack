@@ -114,6 +114,8 @@
   .prompt::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent), var(--accent2), var(--accent3)); }
   .prompt .tag { color: var(--accent); } .prompt .str { color: #a5f3b0; }
 
+  .toast { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(100px); background: var(--accent); color: #0a0a0f; padding: 12px 24px; border-radius: 10px; font-weight: 600; font-size: .9rem; z-index: 200; transition: transform .4s cubic-bezier(.2,.8,.2,1); box-shadow: 0 10px 40px var(--glow); }
+  .toast.show { transform: translateX(-50%) translateY(0); }
   footer { padding: 60px 6vw; text-align: center; color: var(--muted); border-top: 1px solid var(--border); font-size: .85rem; }
   footer a { color: var(--accent); text-decoration: none; }
 
@@ -288,6 +290,10 @@
       <div class="prompt">
         <div><span class="tag">You:</span> <span class="str">"Install osien-stack: clone https://github.com/kabirprokk/Osien-Stack, run npm install in mcp-server, wire it as an MCP server named osien-tools, copy skills/commands/agents into your config, then confirm with the smoke test (npm test)."</span></div>
       </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;">
+        <button class="btn primary" id="copyInstall">Copy install prompt</button>
+      </div>
+      <div class="toast" id="toast">Copied to clipboard</div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px;">
         <div class="btn ghost">opencode</div><div class="btn ghost">Claude Code</div><div class="btn ghost">Cursor</div><div class="btn ghost">Cline</div><div class="btn ghost">Windsurf</div>
       </div>
