@@ -1,0 +1,41 @@
+{
+  "messages": [
+    {
+      "id": "city_1792219107097",
+      "from": "mayor",
+      "to": "all",
+      "message": "CITY MODE activated. Task: build a login page",
+      "mood": "activated",
+      "timestamp": "2026-10-17T06:38:27.097Z",
+      "read": true
+    },
+    {
+      "id": "msg_1792219112198",
+      "from": "builder",
+      "to": "reviewer",
+      "message": "I shipped the login form. Check it out.",
+      "mood": "neutral",
+      "timestamp": "2026-10-17T06:38:32.198Z",
+      "read": false
+    },
+    {
+      "id": "msg_1792219112200",
+      "from": "reviewer",
+      "to": "builder",
+      "message": "Found 3 issues: missing validation, no error handling, hardcoded colors.",
+      "mood": "neutral",
+      "timestamp": "2026-10-17T06:38:32.200Z",
+      "read": true
+    }
+  ],
+  "agents": {
+    "builder": {
+      "mood": "has message",
+      "lastSeen": "2026-10-17T06:38:32.198Z"
+    },
+    "reviewer": {
+      "mood": "neutral",
+      "lastSeen": "2026-10-17T06:38:32.200Z"
+    }
+  }
+}

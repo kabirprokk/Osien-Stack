@@ -4,7 +4,7 @@ const { z } = require("zod");
 const fs = require("fs");
 const path = require("path");
 const os = require("os");
-const { execSync } = require("child_process");
+const { execSync, execFileSync } = require("child_process");
 
 const HOME = os.homedir();
 const MEM_ROOT = process.env.OSIEN_MEMORY_ROOT || path.join(HOME, ".config", "opencode", "memory");
@@ -808,12 +808,16 @@ server.tool("changelog_generator", "Generate changelog.", {
   directory: z.string().optional(),
 }, async ({ since, directory }) => {
   const d = directory || process.cwd();
-  const range = since ? since + "..HEAD" : "-20";
+  // execFileSync (no shell) + a strict allowlist: `since` is never interpolated
+  // into a shell string, so metacharacters cannot escape the git argument.
+  const SINCE_RE = /^[A-Za-z0-9][A-Za-z0-9._\/~-]{0,127}$/;
+  const sinceOk = since == null || since === "" || SINCE_RE.test(String(since));
+  const range = sinceOk && since ? String(since) + "..HEAD" : "-20";
   let log = "";
   try {
-    log = execSync("git log " + range + " --pretty=format:%s", { cwd: d, encoding: "utf8", timeout: 10000 });
+    log = execFileSync("git", ["log", range, "--pretty=format:%s"], { cwd: d, encoding: "utf8", timeout: 10000 });
   } catch (e) {
-    try { log = execSync("git log --oneline -20", { cwd: d, encoding: "utf8", timeout: 10000 }); } catch {}
+    try { log = execFileSync("git", ["log", "--oneline", "-20"], { cwd: d, encoding: "utf8", timeout: 10000 }); } catch {}
   }
   const commits = log.trim().split("\n").filter(Boolean);
   const groups = { feat: [], fix: [], docs: [], refactor: [], test: [], chore: [], other: [] };

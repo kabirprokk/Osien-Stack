@@ -10,3 +10,6 @@ backups/
 .env.local
 coverage/
 dist/
+__pycache__/
+*.pyc
+.smoke-mem/

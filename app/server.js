@@ -27,6 +27,26 @@ const AGENTS = {
 
 const MIME = { ".html": "text/html", ".css": "text/css", ".js": "application/javascript", ".json": "application/json", ".png": "image/png", ".svg": "image/svg+xml" };
 
+const BODY_LIMIT_BYTES = 1024 * 1024; // 1 MiB request body cap (DoS guard)
+const MODEL_RE = /^[A-Za-z0-9][A-Za-z0-9._\/-]{0,127}$/;
+const MAX_TASK_CHARS = 8000;
+
+// Quote an argument so a shell cannot interpret metacharacters inside it.
+// Windows: cmd.exe inside double quotes, escaping " and stripping shell ops.
+// POSIX:   single quotes with the '\'' idiom.
+function shQuote(s) {
+  s = String(s);
+  if (process.platform === "win32") {
+    return '"' + s.replace(/"/g, '""').replace(/[&|<>^!%]/g, "") + '"';
+  }
+  return "'" + s.replace(/'/g, "'\\''") + "'";
+}
+
+function fail(res, code, msg) {
+  res.writeHead(code, { "Content-Type": "application/json" });
+  res.end(JSON.stringify({ error: msg }));
+}
+
 // Windows: `opencode` on PATH is opencode.cmd/.ps1 and Node cannot exec those
 // without a shell. Resolve the real binary so stdio can stay redirected to a file.
 function resolveOpencode() {
@@ -44,10 +64,17 @@ function resolveOpencode() {
 const OPENCODE_BIN = resolveOpencode();
 
 function serveStatic(req, res) {
-  let url = req.url.split("?")[0];
+  let url;
+  try { url = decodeURIComponent(req.url.split("?")[0]); }
+  catch { res.writeHead(400); res.end("bad request"); return; }
+  if (url.includes("\0")) { res.writeHead(400); res.end("bad request"); return; }
   if (url === "/") url = "/index.html";
-  const fp = path.join(PUBLIC, url);
-  if (!fp.startsWith(PUBLIC)) { res.writeHead(403); res.end("forbidden"); return; }
+  // resolve() collapses ".."; relative() then proves containment with a
+  // separator-aware check, so a sibling dir like "public-secret" cannot slip
+  // past a naive string-prefix test.
+  const fp = path.resolve(PUBLIC, "." + path.sep + url.replace(/^[/\\]+/, ""));
+  const rel = path.relative(PUBLIC, fp);
+  if (rel.startsWith("..") || path.isAbsolute(rel)) { res.writeHead(403); res.end("forbidden"); return; }
   fs.readFile(fp, (err, data) => {
     if (err) { res.writeHead(404); res.end("not found"); return; }
     res.writeHead(200, { "Content-Type": MIME[path.extname(fp)] || "text/plain" });
@@ -56,10 +83,22 @@ function serveStatic(req, res) {
 }
 
 const server = http.createServer((req, res) => {
-  // CORS
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  // CORS: this server can EXECUTE commands, so a wildcard origin would let any
+  // website drive the host. Only same-origin / explicitly allowed origins.
+  const origin = req.headers.origin;
+  const allowed = process.env.ALLOWED_ORIGINS;
+  const originOk = !origin || origin === "http://localhost:" + PORT || origin === "http://127.0.0.1:" + PORT ||
+    (allowed && allowed.split(",").map(s => s.trim()).includes(origin));
+  if (originOk) {
+    res.setHeader("Access-Control-Allow-Origin", origin || "http://localhost:" + PORT);
+    res.setHeader("Vary", "Origin");
+    res.setHeader("Access-Control-Allow-Methods", "GET, POST, OPTIONS");
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  } else {
+    res.writeHead(403, { "Content-Type": "application/json" });
+    res.end(JSON.stringify({ error: "origin not allowed" }));
+    return;
+  }
   if (req.method === "OPTIONS") { res.writeHead(204); res.end(); return; }
 
   if (req.url === "/api/agents" && req.method === "GET") {
@@ -70,11 +109,23 @@ const server = http.createServer((req, res) => {
 
   if (req.url === "/api/run" && req.method === "POST") {
     let body = "";
-    req.on("data", c => body += c);
+    let aborted = false;
+    req.on("data", c => {
+      if (aborted) return;
+      body += c;
+      if (body.length > BODY_LIMIT_BYTES) {
+        aborted = true;
+        fail(res, 413, "request body too large");
+      }
+    });
     req.on("end", () => {
+      if (aborted) return;
       let task = "", model = "opencode/space-bunny-free";
       try { const j = JSON.parse(body); task = j.task || ""; model = j.model || model; } catch {}
       if (!task) { res.writeHead(400); res.end(JSON.stringify({ error: "no task" })); return; }
+      task = String(task);
+      if (task.length > MAX_TASK_CHARS) { fail(res, 413, "task too long"); return; }
+      if (!MODEL_RE.test(String(model))) { fail(res, 400, "invalid model id"); return; }
 res.writeHead(200, { "Content-Type": "text/event-stream", "Cache-Control": "no-cache", "Connection": "keep-alive" });
       res.write("data: " + JSON.stringify({ type: "start", model, bin: OPENCODE_BIN || "opencode@PATH" }) + "\n\n");
       // opencode.exe block-buffers stdout when it is a PIPE (0 bytes, never exits).
@@ -102,8 +153,10 @@ res.writeHead(200, { "Content-Type": "text/event-stream", "Cache-Control": "no-c
         fd = fs.openSync(outFile, "w");
         const runArgs = ["run", "-m", model, task];
         const proc = OPENCODE_BIN
-          ? spawn(OPENCODE_BIN, runArgs, { cwd: os.homedir(), stdio: ["ignore", fd, fd] })
-          : spawn("opencode", runArgs, { cwd: os.homedir(), stdio: ["ignore", fd, fd], shell: true });
+          ? spawn(OPENCODE_BIN, runArgs, { cwd: os.homedir(), stdio: ["ignore", fd, fd], shell: false })
+          // shell:true is required to run opencode.cmd on Windows, so every
+          // interpolated argument is shell-quoted to block injection.
+          : spawn("opencode " + runArgs.map(shQuote).join(" "), { cwd: os.homedir(), stdio: ["ignore", fd, fd], shell: true, windowsHide: true });
         const ticker = setInterval(push, 300);
         const killer = setTimeout(() => { try { proc.kill(); } catch (e) {} }, RUN_TIMEOUT_MS);
         proc.on("error", e => { clearInterval(ticker); clearTimeout(killer); res.write("data: " + JSON.stringify({ type: "err", text: e.message }) + "\n\n"); finish(1); });
@@ -157,10 +210,17 @@ res.writeHead(200, { "Content-Type": "text/event-stream", "Cache-Control": "no-c
     const memFile = path.join(os.homedir(), ".config", "opencode", "memory", "projects");
     let content = "No memory yet.";
     try {
-      const dirs = fs.readdirSync(memFile);
+      const dirs = fs.readdirSync(memFile, { withFileTypes: true })
+        .filter(e => e.isDirectory()).map(e => e.name).sort();
       if (dirs.length) {
-        const files = fs.readdirSync(path.join(memFile, dirs[0]));
-        content = files.map(f => "=== " + f + " ===\n" + fs.readFileSync(path.join(memFile, dirs[0], f), "utf8").slice(0, 500)).join("\n\n");
+        const files = fs.readdirSync(path.join(memFile, dirs[0]), { withFileTypes: true })
+          .filter(e => e.isFile()).map(e => e.name).sort();
+        const chunks = [];
+        for (const f of files) {
+          try { chunks.push("=== " + f + " ===\n" + fs.readFileSync(path.join(memFile, dirs[0], f), "utf8").slice(0, 500)); }
+          catch (e) {}
+        }
+        if (chunks.length) content = chunks.join("\n\n");
       }
     } catch {}
     res.writeHead(200, { "Content-Type": "application/json" });
@@ -175,3 +235,6 @@ server.listen(PORT, () => {
   console.log("osien-app running at http://localhost:" + PORT);
   console.log("Open this URL in your browser. No terminal needed.");
 });
+
+// Exported so tests can start/stop the instance instead of leaking a listener.
+module.exports = server;
