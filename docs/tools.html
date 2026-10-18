@@ -47,10 +47,25 @@
   footer { text-align:center; padding:40px 24px; color: var(--muted); border-top:1px solid var(--border); font-size:.85rem; }
   footer a { color: var(--accent); text-decoration:none; }
   @media (max-width:600px){ .grid { grid-template-columns:1fr; } body { cursor: auto; } .cursor, .glow { display:none; } }
+
+  .mesh-layer { position: fixed; inset: 0; z-index: -4; filter: blur(80px); opacity: .5; pointer-events: none; }
+  .mesh-layer .blob { position: absolute; border-radius: 50%; mix-blend-mode: screen; }
+  .modal { position: fixed; inset: 0; z-index: 120; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,.6); backdrop-filter: blur(8px); }
+  .modal.open { display: flex; }
+  .modal-box { width: min(520px, 92vw); background: hsla(var(--hue), 25%, 10%, .97); border: 1px solid var(--border); border-radius: 16px; padding: 28px; box-shadow: 0 40px 100px rgba(0,0,0,.6); }
+  .modal-box .mname { font-family: 'JetBrains Mono', monospace; font-size: 1.2rem; color: var(--accent); margin-bottom: 10px; }
+  .modal-box .mdesc { color: var(--muted); margin-bottom: 16px; font-size: .95rem; }
+  .modal-box .mclose { float: right; background: none; border: 1px solid var(--border); color: var(--muted); border-radius: 8px; padding: 4px 10px; cursor: pointer; }
+  .modal-box .mclose:hover { color: var(--fg); border-color: var(--accent); }
+  .modal-box .mcat { display: inline-block; font-size: .68rem; padding: 3px 9px; border-radius: 999px; background: hsla(var(--hue),40%,25%,.5); color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 12px; }
+  @media (prefers-reduced-motion: reduce) { * { animation-duration: .01ms !important; transition-duration: .01ms !important; } canvas#field, canvas#rain, .mesh-layer, .cursor, .glow { display: none !important; } }
+
 </style>
 </head>
 <body>
   <canvas id="field"></canvas>
+  <canvas id="rain" style="position:fixed;inset:0;z-index:-3;opacity:.18"></canvas>
+  <div class="mesh-layer"><div class="blob" id="b1"></div><div class="blob" id="b2"></div><div class="blob" id="b3"></div><div class="blob" id="b4"></div></div>
   <div class="cursor" id="cursor"></div>
   <div class="glow" id="glow"></div>
   <nav>
@@ -71,6 +86,16 @@
     <div class="meta" id="meta"></div>
     <div class="grid" id="grid"></div>
     <div class="empty" id="empty" style="display:none">No tools match your search.</div>
+  </div>
+
+  <div class="modal" id="modal">
+    <div class="modal-box">
+      <button class="mclose" id="mClose">close</button>
+      <div class="mcat" id="mCat"></div>
+      <div class="mname" id="mName"></div>
+      <div class="mdesc" id="mDesc"></div>
+      <button class="btn primary" id="mCopy" style="padding:10px 18px;font-size:.85rem">Copy tool name</button>
+    </div>
   </div>
   <footer>Osien-Stack - MIT licensed - <a href="https://github.com/kabirprokk/Osien-Stack">GitHub</a></footer>
 
@@ -144,6 +169,7 @@
       const card = document.createElement('div');
       card.className = 'tool';
       card.innerHTML = '<div class="cat">' + t.cat + '</div><div class="name">' + t.name + '<button class="copy" data-name="' + t.name + '">copy</button></div><div class="desc">' + t.desc + '</div>';
+      card.addEventListener('click', e => { if (e.target.classList.contains('copy')) return; openModal(t); });
       grid.appendChild(card);
       setTimeout(() => card.classList.add('in'), 30 + i*25);
     });
@@ -158,6 +184,38 @@
   }
   search.addEventListener('input', render);
   render();
+
+  // ---------- tool modal ----------
+  const modal = document.getElementById('modal');
+  function openModal(t) {
+    document.getElementById('mCat').textContent = t.cat;
+    document.getElementById('mName').textContent = t.name;
+    document.getElementById('mDesc').textContent = t.desc;
+    document.getElementById('mCopy').onclick = () => { navigator.clipboard.writeText(t.name); document.getElementById('mCopy').textContent = 'Copied!'; setTimeout(() => document.getElementById('mCopy').textContent = 'Copy tool name', 1400); };
+    modal.classList.add('open');
+  }
+  document.getElementById('mClose').onclick = () => modal.classList.remove('open');
+  modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
+  window.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); if (e.key === '/') { e.preventDefault(); document.getElementById('search').focus(); } });
+
+  // ---------- gradient mesh ----------
+  const blobs = [document.getElementById('b1'),document.getElementById('b2'),document.getElementById('b3'),document.getElementById('b4')];
+  let mx = innerWidth/2, my = innerHeight/2, tx = mx, ty = my;
+  addEventListener('mousemove', e => { tx = e.clientX; ty = e.clientY; }, { passive: true });
+  (function meshLoop(){ 
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    mx += (tx-mx)*.06; my += (ty-my)*.06;
+    const hue = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue'))||200;
+    const cfg=[[.12,.18,520],[.85,.30,460],[.30,.85,500],[.75,.78,440]];
+    blobs.forEach((b,i)=>{ const [fx,fy,size]=cfg[i];
+      b.style.width=size+'px'; b.style.height=size+'px';
+      b.style.left=(fx*innerWidth + mx*.18*(i%2===0?1:-1) - size/2)+'px';
+      b.style.top=(fy*innerHeight + my*.18*(i<2?1:-1) - size/2)+'px';
+      b.style.background='radial-gradient(circle, hsla('+(hue+i*45)+',90%,58%,.55), transparent 70%)';
+    });
+    requestAnimationFrame(meshLoop);
+  })();
+
   // flow field
   const canvas = document.getElementById('field'); const ctx = canvas.getContext('2d'); let W,H; function resize(){W=canvas.width=window.innerWidth;H=canvas.height=window.innerHeight;} resize(); window.addEventListener('resize',resize);
   const parts=[]; for(let i=0;i<80;i++) parts.push({x:Math.random()*W,y:Math.random()*H,vx:0,vy:0});
