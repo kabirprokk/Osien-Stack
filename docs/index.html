@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="cyber">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Osien-Stack - A Living Toolchain for Any AI</title>
 <meta name="description" content="45 MCP tools that install themselves into any AI. Memory, verification, parallel work, context discipline. One prompt.">
-<link rel="icon" type="image/png" href="logo.png">
+<link id="favicon" rel="icon" type="image/png" href="favicon-play.png">
+<link id="appleIcon" rel="apple-touch-icon" href="apple-play.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Nunito:wght@400;600;700;800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js" defer></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Nunito:wght@400;600;700;800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
 <style>
   :root, html[data-theme="cyber"] {
     --hue: 318; --sat: 100%; --light: 60%;
@@ -144,6 +144,28 @@
   html[data-theme="cyber"] .topbar { box-shadow: 0 6px 24px hsla(330,100%,60%,.14); }
   html[data-theme="cyber"] .scrollbar { box-shadow: 0 0 14px var(--glow); }
 
+
+
+  /* per-world logos */
+  .logo-cyb { display: none; }
+  html[data-theme="cyber"] .logo-play { display: none; }
+  html[data-theme="cyber"] .logo-cyb { display: block; }
+  .hero-mark { position: absolute; right: -3%; top: 50%; width: min(440px, 44vw);
+    transform: translateY(-50%); opacity: 0; pointer-events: none; z-index: 0;
+    filter: drop-shadow(0 0 30px hsla(330,100%,60%,.5)); }
+  html[data-theme="cyber"] .hero-mark { opacity: .9; animation: markFloat 9s ease-in-out infinite; }
+  @keyframes markFloat {
+    0%,100% { transform: translateY(-50%) scale(1); }
+    50%     { transform: translateY(calc(-50% - 14px)) scale(1.03); }
+  }
+  @media (max-width: 900px) { .hero-mark { display: none; } }
+  @media (prefers-reduced-motion: reduce) { .hero-mark { animation: none; } }
+
+  /* gate watermark logos */
+  .gcard .prev .watermark { position: absolute; right: -4%; top: 50%; transform: translateY(-50%);
+    width: 56%; opacity: .55; pointer-events: none; }
+  .g-cyber .prev .watermark { opacity: .62; filter: drop-shadow(0 0 16px hsla(185,100%,55%,.5)); }
+  .g-play .prev .watermark { opacity: .7; border-radius: 20px; }
 
   /* ================= ENTRY GATE ================= */
   #gate { position: fixed; inset: 0; z-index: 300; display: grid; place-items: center;
@@ -371,7 +393,7 @@
 
   .marquee { overflow: hidden; white-space: nowrap; padding: 12px 0; border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border); background: var(--wash3); }
-  .marquee-track { display: inline-block; animation: slide 46s linear infinite; font-family: var(--mono);
+  .marquee-track { display: inline-block; min-height: 1.2em; animation: slide 46s linear infinite; font-family: var(--mono);
     font-size: .82rem; color: var(--muted); }
   .marquee-track span { margin: 0 26px; }
   .marquee-track b { color: var(--accent); font-weight: 500; }
@@ -413,7 +435,7 @@
     <p class="gate-sub">Same 45 tools. Two completely different feels. Pick one. You can switch any time with the <b>world</b> button.</p>
     <div class="gate-cards">
       <button class="gcard g-play" data-world="playful">
-        <div class="prev"><div class="mock"><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="prev"><img src="logo-play.png" width="512" height="512" class="watermark" alt=""><div class="mock"><i></i><i></i><i></i><i></i><i></i></div></div>
         <div class="body">
           <div class="name">Playful</div>
           <div class="tag2">Soft claymorphism. Pastel light, big round shapes, gentle springs. Calm and easy to read.</div>
@@ -421,7 +443,7 @@
         </div>
       </button>
       <button class="gcard g-cyber" data-world="cyber">
-        <div class="prev"><div class="mock"><i></i><i></i><i></i><i></i><i></i></div></div>
+        <div class="prev"><img src="logo-cyber.png" width="512" height="512" class="watermark" alt=""><div class="mock"><i></i><i></i><i></i><i></i><i></i></div></div>
         <div class="body">
           <div class="name">OSIEN World</div>
           <div class="tag2">Cyberpunk. Neon magenta on black, clipped corners, scanlines, live 3D. Sharp and electric.</div>
@@ -457,7 +479,7 @@
 </div>
 
 <nav class="topbar">
-  <div class="logo"><img src="logo.png" alt="Osien-Stack" class="logo-img"><span>osien_stack</span></div>
+  <div class="logo"><img src="logo-play.png" width="512" height="512" alt="Osien-Stack" class="logo-img logo-play"><img src="logo-cyber.png" width="512" height="512" alt="Osien-Stack" class="logo-img logo-cyb"><span>osien_stack</span></div>
   <nav>
     <a href="#why">why</a><a href="#what">what</a><a href="#pipeline">pipeline</a>
     <a href="#how">how</a><a href="#install">install</a><a href="tools.html">tools</a>
@@ -475,6 +497,7 @@
 </div>
 
 <section class="stage">
+  <img src="logo-cyber.png" width="512" height="512" fetchpriority="high" alt="" class="hero-mark" aria-hidden="true">
   <div class="eyebrow" id="eyebrow"></div>
   <h1>Your AI just <em>leveled up.</em></h1>
   <p class="sub">A portable toolchain that installs itself into any AI. Memory, verification, parallel work and context discipline, wired in one prompt. Big model or small, known or unknown: it works.</p>
@@ -617,18 +640,21 @@
     if (cv) cv.style.display = '';                 // always un-hide for cyber
     if (threeDone || threeWaiting) return;
     if (typeof THREE !== 'undefined') { threeDone = true; init3D(); return; }
-    // THREE arrives from a deferred CDN script - poll briefly, then give up quietly
+    // Load the 3D library only after the visitor chooses OSIEN World.
     threeWaiting = true;
-    var tries = 0;
-    var iv = setInterval(function () {
-      tries++;
-      if (typeof THREE !== 'undefined') { clearInterval(iv); threeWaiting = false; threeDone = true; init3D(); }
-      else if (tries > 60) { clearInterval(iv); threeWaiting = false; }
-    }, 100);
+    var tag = document.createElement('script');
+    tag.src = 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js';
+    tag.onload = function () { threeWaiting = false; threeDone = true; init3D(); };
+    tag.onerror = function () { threeWaiting = false; };
+    document.head.appendChild(tag);
   }
 
   function setWorld(w) {
     root.dataset.theme = w;
+    var fav = document.getElementById('favicon');
+    var apl = document.getElementById('appleIcon');
+    if (fav) fav.href = (w === 'cyber') ? 'favicon-cyber.png' : 'favicon-play.png';
+    if (apl) apl.href = (w === 'cyber') ? 'apple-cyber.png' : 'apple-play.png';
     // the 3D scene belongs to OSIEN World only
     if (w === 'cyber') { ensure3D(); }
     else { var c2 = document.getElementById('three3d'); if (c2) c2.style.display = 'none'; }
