@@ -166,6 +166,13 @@
   .confetti span { position: absolute; width: 8px; height: 8px; border-radius: 2px; animation: confettiFall 1.2s ease-out forwards; }
   @keyframes confettiFall { 0% { transform: translate(0,0) rotate(0deg); opacity: 1; } 100% { transform: translate(var(--dx), var(--dy)) rotate(720deg); opacity: 0; } }
 
+
+  .scramble { cursor: default; }
+  .visitor-counter { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; border-radius: 999px; background: var(--card); border: 1px solid var(--border); font-family: 'JetBrains Mono', monospace; font-size: .8rem; color: var(--muted); margin-top: 20px; }
+  .visitor-counter .dot { width: 8px; height: 8px; border-radius: 50%; background: #28c840; box-shadow: 0 0 8px #28c840; animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%,100% { opacity: 1; transform: scale(1); } 50% { opacity: .5; transform: scale(1.3); } }
+  .visitor-counter strong { color: var(--accent); }
+
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
   .reveal.in { opacity: 1; transform: translateY(0); }
 
@@ -614,6 +621,49 @@
       const speed = 40 - Math.min(30, window.scrollY / 100);
       marqueeTrack.style.animationDuration = Math.max(10, speed) + 's';
     }, { passive: true });
+  }
+
+
+  // ---------- text scramble on heading hover ----------
+  const scrambleChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%&';
+  function scramble(el) {
+    const original = el.dataset.text || el.textContent;
+    el.dataset.text = original;
+    let iter = 0;
+    const interval = setInterval(() => {
+      el.textContent = original.split('').map((ch, i) => {
+        if (ch === ' ') return ' ';
+        if (i < iter) return original[i];
+        return scrambleChars[Math.floor(Math.random() * scrambleChars.length)];
+      }).join('');
+      iter += 1 / 2;
+      if (iter >= original.length) { clearInterval(interval); el.textContent = original; }
+    }, 30);
+  }
+  document.querySelectorAll('h1, h2').forEach(h => {
+    h.classList.add('scramble');
+    h.addEventListener('mouseenter', () => scramble(h));
+  });
+
+  // ---------- parallax on hero orb ----------
+  const orb = document.querySelector('.orb');
+  if (orb) {
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      orb.style.transform = 'translateY(calc(-50% + ' + (y * 0.3) + 'px)) rotate(' + (y * 0.05) + 'deg)';
+    }, { passive: true });
+  }
+
+  // ---------- live visitor counter (simulated) ----------
+  const vc = document.getElementById('visitorCount');
+  if (vc) {
+    let count = 1247;
+    setInterval(() => {
+      count += Math.random() > 0.5 ? 1 : -1;
+      if (count < 1100) count = 1100;
+      if (count > 1400) count = 1400;
+      vc.textContent = count.toLocaleString();
+    }, 2500);
   }
 
   const particles = [];
