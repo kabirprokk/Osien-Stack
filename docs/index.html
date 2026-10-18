@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Osien-Stack - A Living Toolchain for Any AI</title>
 <meta name="description" content="45 MCP tools that install themselves into any AI. Memory, verification, parallel work, context discipline. One prompt.">
-<link id="favicon" rel="icon" type="image/png" href="logo.svg">
+<link id="favicon" rel="icon" type="image/svg+xml" href="logo.svg">
 <link id="appleIcon" rel="apple-touch-icon" href="logo.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,58 +74,53 @@
     content: ""; position: fixed; inset: 0; z-index: 90; pointer-events: none; opacity: var(--scan);
     background-image: var(--scan-img, none);
   }
-/* the signal field: pure CSS/DOM 2D motion. no canvas, no GPU, no library. */
-  .field { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; opacity: .92; }
-  .field-grid { position: absolute; inset: -80px; will-change: transform;
-    background-image:
-      linear-gradient(hsla(185,90%,55%,.055) 1px, transparent 1px),
-      linear-gradient(90deg, hsla(185,90%,55%,.055) 1px, transparent 1px);
-    background-size: 58px 58px;
-    animation: fieldDrift 26s linear infinite; }
-  @keyframes fieldDrift { from { transform: translate3d(0,0,0); } to { transform: translate3d(58px,58px,0); } }
-  .field-glow { position: absolute; inset: -25%; will-change: transform;
-    background:
-      radial-gradient(520px 380px at 30% 28%, hsla(200,88%,60%,.22), transparent 60%),
-      radial-gradient(600px 420px at 72% 70%, hsla(185,100%,50%,.16), transparent 62%);
-    animation: fieldFloat 24s ease-in-out infinite alternate; }
-  @keyframes fieldFloat {
-    from { transform: translate3d(-3%,-2%,0) scale(1); }
-    to   { transform: translate3d(4%,3%,0) scale(1.12); }
+/* ============ OCEAN: layered 2D waves. Pure CSS, no canvas, no library. ============
+   Each band tiles its background every 1200px and is translated by exactly
+   -1200px, so the loop is seamless at ANY viewport width. Only `transform`
+   animates, which keeps every band on the compositor: no paint, no layout,
+   no main-thread work per frame. */
+  .ocean {
+    position: fixed; left: 0; right: 0; bottom: 0; height: 52vh; z-index: 0;
+    pointer-events: none; overflow: hidden; contain: strict;
   }
-  .field-core { position: absolute; inset: 0; --cx: 72%; --cy: 42%; --fx: 0px; --fy: 0px;
-    transform: translate3d(var(--fx), var(--fy), 0); }
-
-  /* orbiting rings - the ring spins, the dot rides the rim. transform only. */
-  .orbit { position: absolute; left: var(--cx); top: var(--cy); border-radius: 50%;
-    border: 1px solid hsla(185,90%,60%,.15);
-    animation: fieldSpin var(--dur) linear infinite; will-change: transform; }
-  .orbit > i { position: absolute; top: 50%; left: 0; width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px;
-    border-radius: 50%; background: var(--dot); box-shadow: 0 0 14px var(--dot); }
-  .orbit > i::after { content: ""; position: absolute; inset: -4px; border-radius: 50%;
-    border: 1px solid var(--dot); opacity: .3; }
-  .orbit.o1 { width: 320px; height: 320px; --dur: 26s; --a: 0deg;   --dot: hsl(185,100%,58%); }
-  .orbit.o2 { width: 510px; height: 510px; --dur: 38s; --a: 140deg; --dot: hsl(330,100%,64%); }
-  .orbit.o3 { width: 700px; height: 700px; --dur: 52s; --a: 250deg; --dot: hsl(276,90%,72%); }
-  @keyframes fieldSpin {
-    from { transform: translate(-50%,-50%) rotate(var(--a)); }
-    to   { transform: translate(-50%,-50%) rotate(calc(var(--a) + 360deg)); }
+  .ocean .wv {
+    position: absolute; left: 0; bottom: 0;
+    width: max(200%, 1400px); height: 100%;
+    background-repeat: repeat-x; background-position: 0 bottom;
+    will-change: transform; backface-visibility: hidden;
+    animation-name: os-drift; animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  @keyframes os-drift {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(-1200px, 0, 0); }
   }
 
-  /* signal lines sweeping across the field */
-  .signal { position: absolute; left: 0; right: 0; height: 1px;
-    top: calc(6% + var(--i) * 15%);
-    background: linear-gradient(90deg, transparent, hsla(224,72%,52%,.45) 18%, hsla(190,78%,55%,.50) 52%, transparent);
-    animation: signalSweep calc(9s + var(--i) * 1.6s) calc(var(--i) * -2.4s) linear infinite;
-    will-change: transform, opacity; }
-  @keyframes signalSweep {
-    0%   { transform: translate3d(-30%,0,0); opacity: 0; }
-    12%  { opacity: 1; }
-    88%  { opacity: 1; }
-    100% { transform: translate3d(30%,0,0); opacity: 0; }
+  /* back to front: pale and slow at the horizon, deep and quick up close */
+  .ocean .wv1 {
+    height: 88%; opacity: .40; animation-duration: 46s;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'%3E%3Cpath d='M0,130 C150,84 300,176 450,130 C600,84 750,176 900,130 C1050,84 1200,176 1200,130 L1200,200 L0,200 Z' fill='%236FC3F2'/%3E%3C/svg%3E");
+  }
+  .ocean .wv2 {
+    height: 74%; opacity: .46; animation-duration: 34s;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'%3E%3Cpath d='M0,140 C170,92 280,188 430,140 C580,92 740,188 890,140 C1040,92 1140,170 1200,140 L1200,200 L0,200 Z' fill='%234A86E8'/%3E%3C/svg%3E");
+  }
+  .ocean .wv3 {
+    height: 58%; opacity: .50; animation-duration: 25s;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'%3E%3Cpath d='M0,150 C140,110 320,196 470,150 C620,110 700,180 850,150 C1000,120 1120,186 1200,150 L1200,200 L0,200 Z' fill='%232F6BE0'/%3E%3C/svg%3E");
+  }
+  .ocean .wv4 {
+    height: 40%; opacity: .55; animation-duration: 18s;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'%3E%3Cpath d='M0,162 C180,132 300,192 460,162 C620,132 760,196 920,162 C1060,132 1150,180 1200,162 L1200,200 L0,200 Z' fill='%232240DC'/%3E%3C/svg%3E");
+  }
+
+  /* calm for people who asked for calm */
+  @media (prefers-reduced-motion: reduce) {
+    .ocean { display: none; }
   }
 
   /* hover glow: opacity/box-shadow on ONE element at a time, never a full-page pass */
-  \.btn.magnet, .bento .cell.magnet, .spotlight.magnet {
+  .btn.magnet, .bento .cell.magnet, .spotlight.magnet {
     box-shadow: 0 0 0 1px var(--glow), var(--shadow); }
   .marquee:hover .marquee-track { animation-play-state: paused; }
 
@@ -143,7 +138,6 @@
 
 
   /* per-world logos */
-  .logo-cyb { display: none; }
   /* custom cursor - no blend mode */
   .cursor {
     position: fixed; top: 0; left: 0; width: 16px; height: 16px; border-radius: 50%;
@@ -153,7 +147,6 @@
   }
   .cursor.is-hover { width: 46px; height: 46px; background: hsla(var(--hue), 85%, 62%, .18); }
   .cursor.is-text  { width: 4px; height: 26px; border-radius: 3px; background: var(--accent); border-color: transparent; }
-  .cursor.is-link  { width: 28px; height: 28px; background: transparent; border-color: var(--accent2); }
 
   .scrollbar { position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 100;
     background: linear-gradient(90deg, var(--accent), var(--accent2)); box-shadow: 0 0 10px var(--glow); }
@@ -221,11 +214,6 @@
   .stats { display: flex; gap: 34px; flex-wrap: wrap; margin-top: 30px; }
   .stat .n { font-size: 2.1rem; font-weight: 700; color: var(--accent); font-family: var(--mono); }
   .stat .l { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: 1px; }
-  .visitor-counter { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px;
-    border-radius: 999px; background: var(--card); border: 1px solid var(--border);
-    font-family: var(--mono); font-size: .78rem; color: var(--muted); }
-  .visitor-counter .d { width: 7px; height: 7px; border-radius: 50%; background: #2fbf4f; }
-  .visitor-counter strong { color: var(--accent); }
 
   h2 { font-size: clamp(1.9rem, 4.6vw, 3.4rem); font-weight: 700; letter-spacing: -2px; margin-bottom: 14px; line-height: 1.06; }
   .lead { color: var(--muted); font-size: 1.08rem; max-width: 640px; margin-bottom: 42px; }
@@ -328,13 +316,9 @@
     .topbar nav { display: none; }
     .section-indicator { display: none; }
   }
-  @media (max-width: 900px) {
-    .field-core { --cx: 50%; --cy: 32%; }
-    .orbit.o3 { display: none; }
-  }
   @media (prefers-reduced-motion: reduce) {
     * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-    .field, .cursor { display: none !important; }
+    .ocean, .cursor { display: none !important; }
   }
 </style>
 </head>
@@ -344,21 +328,13 @@
 </script>
 
 
-<div class="field" id="field" aria-hidden="true">
-  <div class="field-grid"></div>
-  <div class="field-glow"></div>
-  <div class="field-core" id="fieldCore">
-    <div class="orbit o1"><i></i></div>
-    <div class="orbit o2"><i></i></div>
-    <div class="orbit o3"><i></i></div>
-    <div class="signal" style="--i:0"></div>
-    <div class="signal" style="--i:1"></div>
-    <div class="signal" style="--i:2"></div>
-    <div class="signal" style="--i:3"></div>
-    <div class="signal" style="--i:4"></div>
-    <div class="signal" style="--i:5"></div>
-  </div>
+<div class="ocean" aria-hidden="true">
+  <div class="wv wv1"></div>
+  <div class="wv wv2"></div>
+  <div class="wv wv3"></div>
+  <div class="wv wv4"></div>
 </div>
+
 <div class="cursor" id="cursor"></div>
 <div class="scrollbar" id="scrollbar"></div>
 <button class="top-orb" id="topOrb" aria-label="Back to top">&uarr;</button>
@@ -398,18 +374,18 @@
 
 <section class="stage">
   <div class="eyebrow" id="eyebrow"></div>
-  <h1>Your AI just <em>leveled up.</em></h1>
-  <p class="sub">A portable toolchain that installs itself into any AI. Memory, verification, parallel work and context discipline, wired in one prompt. Big model or small, known or unknown: it works.</p>
+  <h1>Give your AI <em>the whole ocean.</em></h1>
+  <p class="sub"><strong>osien</strong> is a portable toolchain that installs itself into any AI. Forty-five tools for memory, verification, parallel work and context discipline &mdash; wired in one prompt. Small model or big, known or unknown: it works.</p>
   <div class="actions">
     <a class="btn primary" href="#install">Get the one-liner</a>
     <a class="btn" href="tools.html">Browse 45 tools</a>
     <a class="btn" href="https://github.com/kabirprokk/Osien-Stack" target="_blank" rel="noopener">GitHub</a>
   </div>
   <div class="stats">
-    <div class="visitor-counter"><span class="d"></span><strong id="visitorCount">1,247</strong> builders online</div>
     <div class="stat"><div class="n" data-count="45">45</div><div class="l">MCP tools</div></div>
-    <div class="stat"><div class="n" data-count="93">93%</div><div class="l">fewer tokens</div></div>
-    <div class="stat"><div class="n">0.49ms</div><div class="l">cache read</div></div>
+    <div class="stat"><div class="n" data-count="14">14</div><div class="l">crew agents</div></div>
+    <div class="stat"><div class="n">MIT</div><div class="l">licensed</div></div>
+    <div class="stat"><div class="n">1</div><div class="l">prompt to install</div></div>
   </div>
 </section>
 
@@ -677,8 +653,8 @@
       slots.appendChild(s);
     });
     result.textContent = pipe.length
-      ? 'Ã¢â€ â€™ ' + pipe.join(' Ã¢â€ â€™ ') + '   (' + (pipe.length * 12 + 40) + 'ms, ~' + (pipe.length * 30 + 100) + ' tokens)'
-      : 'Ã¢â€ â€™ result appears here';
+      ? 'ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ ' + pipe.join(' ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ ') + '   (' + (pipe.length * 12 + 40) + 'ms, ~' + (pipe.length * 30 + 100) + ' tokens)'
+      : 'ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ result appears here';
   }
 
   /* ---------- faq ---------- */
@@ -693,7 +669,7 @@
   track.innerHTML = html;
 
   /* ---------- eyebrow typed once ---------- */
-  var eb = $('#eyebrow'), ebText = '// v1.1.0 Ã‚Â· 45 tools Ã‚Â· MIT Ã‚Â· any AI', ei = 0;
+  var eb = $('#eyebrow'), ebText = '// v1.1.0 ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· 45 tools ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· MIT ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· any AI', ei = 0;
   if (eb && !reduce) {
     (function type() {
       if (ei <= ebText.length) { eb.textContent = ebText.slice(0, ei++); setTimeout(type, 42); }
@@ -751,20 +727,14 @@
   });
 
 
-  /* ---------- 2D motion system: field parallax + magnetic + tilt ----------
-     Everything here is transform/opacity only and is driven by the ONE rAF
-     at the bottom of this file. No library, no canvas, no per-frame allocs. */
-  var fieldCore = $('#fieldCore');
-  var fx = 0, fy = 0, ftx = 0, fty = 0;
+  /* ---------- 2D motion system: magnetic + tilt ----------
+     The ocean is pure CSS keyframes on the compositor, so JS only handles
+     magnetic hover. Everything here is transform/opacity only and is driven
+     by the ONE rAF at the bottom of this file. No library, no per-frame
+     allocations. */
   var mags = [];
 
   if (!reduce) {
-    /* field parallax: pointer only. scroll offset is added in the loop. */
-    window.addEventListener('pointermove', function (e) {
-      ftx = (e.clientX / innerWidth - .5) * -26;
-      fty = (e.clientY / innerHeight - .5) * -18;
-    }, { passive: true });
-
     /* magnetic buttons + cards.
        The rect is cached on enter and invalidated on scroll/resize, so the
        pointer handler never forces a synchronous reflow mid-gesture. */
@@ -794,12 +764,12 @@
     window.addEventListener('resize', dropRects, { passive: true });
   }
 
-  /* ---------- THE single rAF loop: hue + cursor + magnetic + field ----------
+  /* ---------- THE single rAF loop: hue + cursor + magnetic ----------
      Every DOM write below is change-gated. An idle page - someone reading,
      not scrolling, not hovering - performs ZERO writes per frame instead of
      three. That is the difference between a hot loop and a still one. */
   measure(); readScroll();
-  var lastCx = 1e9, lastCy = 1e9, lastFx = 1e9, lastFy = 1e9, lastHue = NaN;
+  var lastCx = 1e9, lastCy = 1e9, lastHue = NaN;
   (function loop() {
     requestAnimationFrame(loop);
     if (document.hidden) return; /* background tab: skip the whole frame */
@@ -826,17 +796,6 @@
       }
     }
     if (reduce) return;
-
-    /* field parallax: pointer + scroll, eased, two custom-prop writes only */
-    fx += (ftx - fx) * 0.06; fy += (fty - fy) * 0.06;
-    if (fieldCore) {
-      var nfx = fx - scrollPct * 70, nfy = fy - scrollPct * 40;
-      if (Math.abs(nfx - lastFx) > .05 || Math.abs(nfy - lastFy) > .05) {
-        lastFx = nfx; lastFy = nfy;
-        fieldCore.style.setProperty('--fx', nfx.toFixed(2) + 'px');
-        fieldCore.style.setProperty('--fy', nfy.toFixed(2) + 'px');
-      }
-    }
 
     /* magnetic + tilt. settled elements are skipped, so an idle page does
        zero DOM writes and the loop stays a single composited pass. */
