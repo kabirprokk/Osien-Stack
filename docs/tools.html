@@ -16,8 +16,11 @@
   html { scroll-behavior: auto; }
   body { font-family: 'Space Grotesk', system-ui, sans-serif; background: var(--bg); color: var(--fg); min-height: 100vh; }
   
-  .cursor { position: fixed; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--accent); pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); mix-blend-mode: difference; }
-  .glow { position: fixed; width: 400px; height: 400px; border-radius: 50%; pointer-events: none; z-index: -1; background: radial-gradient(circle, var(--glow), transparent 70%); transform: translate(-50%,-50%); opacity: .6; mix-blend-mode: screen; }
+  .cursor { position: fixed; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--accent); pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); }
+  /* mix-blend-mode removed: a blend on a per-frame-transformed element forces
+     the compositor to re-blend every frame. A solid accent ring reads the same
+     here and costs nothing. */
+  .glow { position: fixed; width: 400px; height: 400px; border-radius: 50%; pointer-events: none; z-index: -1; background: radial-gradient(circle, var(--glow), transparent 70%); transform: translate(-50%,-50%); opacity: .5; }
   nav { position: sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:16px 28px;  background: hsla(var(--hue),25%,8%,.55); border-bottom:1px solid var(--border); }
   nav .logo { font-weight:800; font-size:1.2rem; font-family:'JetBrains Mono',monospace; display:flex; align-items:center; gap:8px; } nav .logo span { color: var(--accent); } nav .logo-img { height:28px; width:auto; border-radius:6px; }
   nav a { color: var(--fg); text-decoration:none; margin-left:20px; opacity:.8; font-size:.9rem; } nav a:hover { opacity:1; color: var(--accent); }
@@ -282,7 +285,7 @@ html[data-theme="cyber"] .modal-box { background: rgba(10,4,20,.97); box-shadow:
 
 
   // cursor
-  const cursor=document.getElementById('cursor');const glow=document.getElementById('glow'); if(cursor&&glow) document.body.style.cursor='none';let cx=0,cy=0,gx=0,gy=0,lcx=1e9,lcy=1e9,lgx=1e9,lgy=1e9;window.addEventListener('mousemove',e=>{cx=e.clientX;cy=e.clientY;},{passive:true});(function loop(){requestAnimationFrame(loop);if(document.hidden)return;gx+=(cx-gx)*.14;gy+=(cy-gy)*.14;if(Math.abs(cx-lcx)>.05||Math.abs(cy-lcy)>.05){lcx=cx;lcy=cy;cursor.style.transform='translate3d('+cx.toFixed(1)+'px,'+cy.toFixed(1)+'px,0) translate(-50%,-50%)';}if(Math.abs(gx-lgx)>.05||Math.abs(gy-lgy)>.05){lgx=gx;lgy=gy;glow.style.transform='translate3d('+gx.toFixed(1)+'px,'+gy.toFixed(1)+'px,0) translate(-50%,-50%)';}})();
+  const cursor=document.getElementById('cursor');const glow=document.getElementById('glow'); if(cursor&&glow) document.body.style.cursor='none';let cx=0,cy=0,gx=0,gy=0,lcx=1e9,lcy=1e9,lgx=1e9,lgy=1e9;window.addEventListener('pointermove',e=>{cx=e.clientX;cy=e.clientY;},{passive:true});(function loop(){requestAnimationFrame(loop);if(document.hidden)return;gx+=(cx-gx)*.25;gy+=(cy-gy)*.25;if(cx!==lcx||cy!==lcy){lcx=cx;lcy=cy;cursor.style.transform='translate3d('+cx+'px,'+cy+'px,0) translate(-50%,-50%)';}if(Math.abs(gx-lgx)>.05||Math.abs(gy-lgy)>.05){lgx=gx;lgy=gy;glow.style.transform='translate3d('+gx.toFixed(1)+'px,'+gy.toFixed(1)+'px,0) translate(-50%,-50%)';}})();
   // scroll color
   const hues = [200, 260, 320, 140, 35, 200];
   window.addEventListener('scroll', () => requestAnimationFrame(() => {

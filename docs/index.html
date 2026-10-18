@@ -783,7 +783,7 @@
   var cursor = $('#cursor'), cx = innerWidth / 2, cy = innerHeight / 2, tx = cx, ty = cy;
   if (cursor && !reduce) {
     document.body.style.cursor = 'none';
-    window.addEventListener('mousemove', function (e) { tx = e.clientX; ty = e.clientY; }, { passive: true });
+    window.addEventListener('pointermove', function (e) { tx = e.clientX; ty = e.clientY; }, { passive: true });
     var sel = 'a,button,.btn,.cell,.toolchip,.chip,.slot,.palette-item,.faq-q,.pipe .toolchip,input';
     document.querySelectorAll(sel).forEach(function (el) {
       el.addEventListener('mouseenter', function () { cursor.classList.add('is-hover'); });
@@ -978,7 +978,7 @@
 
   if (!reduce) {
     /* field parallax: pointer only. scroll offset is added in the loop. */
-    window.addEventListener('mousemove', function (e) {
+    window.addEventListener('pointermove', function (e) {
       ftx = (e.clientX / innerWidth - .5) * -26;
       fty = (e.clientY / innerHeight - .5) * -18;
     }, { passive: true });
@@ -1032,10 +1032,15 @@
       }
     }
     if (cursor && !reduce) {
-      cx += (tx - cx) * 0.22; cy += (ty - cy) * 0.22;
-      if (Math.abs(cx - lastCx) > .05 || Math.abs(cy - lastCy) > .05) {
-        lastCx = cx; lastCy = cy;
-        cursor.style.transform = 'translate3d(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px,0) translate(-50%,-50%)';
+      /* 1:1 tracking, no easing.
+         The lerp that used to be here (cx += (tx-cx)*0.22) trailed the real
+         pointer by ~250ms and, being frame-rate dependent, felt different on
+         a 144Hz display than a 60Hz one. Reading the latest event inside the
+         rAF is the correct pattern: a 1000Hz mouse reports ~16 events per
+         frame and we still write exactly once, always at the true position. */
+      if (Math.abs(tx - lastCx) > .01 || Math.abs(ty - lastCy) > .01) {
+        lastCx = tx; lastCy = ty;
+        cursor.style.transform = 'translate3d(' + tx.toFixed(1) + 'px,' + ty.toFixed(1) + 'px,0) translate(-50%,-50%)';
       }
     }
     if (reduce) return;
