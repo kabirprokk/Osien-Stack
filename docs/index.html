@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Osien-Stack - A Living Toolchain for Any AI</title>
+<link rel="icon" type="image/png" href="logo.png">
 <meta name="description" content="45 MCP tools that install themselves into any AI. Memory, verification, parallel work, context discipline. One prompt.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,7 +34,8 @@
 
   /* top bar */
   .topbar { position: fixed; top: 0; left: 0; right: 0; z-index: 60; display: flex; align-items: center; justify-content: space-between; padding: 14px 28px; backdrop-filter: blur(18px); background: hsla(var(--hue), 30%, 6%, .55); border-bottom: 1px solid var(--border); }
-  .topbar .logo { font-weight: 700; font-size: 1.1rem; letter-spacing: -0.5px; font-family: 'JetBrains Mono', monospace; }
+  .topbar .logo { font-weight: 700; font-size: 1.1rem; letter-spacing: -0.5px; font-family: 'JetBrains Mono', monospace; display: flex; align-items: center; gap: 10px; }
+  .topbar .logo-img { height: 32px; width: auto; border-radius: 6px; }
   .topbar .logo span { color: var(--accent); }
   .topbar nav { display: flex; gap: 4px; }
   .topbar nav a, .topbar nav button { color: var(--fg); text-decoration: none; padding: 8px 14px; border-radius: 8px; font-size: .88rem; opacity: .75; background: transparent; border: none; cursor: pointer; transition: all .2s; font-family: inherit; }
@@ -127,7 +129,7 @@
   <div class="glow" id="glow"></div>
 
   <div class="topbar">
-    <div class="logo">osien<span>_</span>stack</div>
+    <div class="logo"><img src="logo.png" alt="Osien-Stack" class="logo-img"><span>osien_stack</span></div>
     <nav>
       <a href="#why">why</a>
       <a href="#what">what</a>
@@ -147,7 +149,7 @@
   </div>
 
   <section class="stage">
-    <div class="eyebrow">// v1.1.0 · 45 tools · mit licensed</div>
+    <div class="eyebrow">// v1.1.0 - 45 tools - mit licensed</div>
     <h1>
       <span class="word">Your</span> <span class="word">AI</span><br>
       <span class="word">just</span> <span class="word">leveled up.</span>
@@ -203,14 +205,14 @@
     <h2>What it does</h2>
     <p class="lead">45 forged tools. Short names, sharp descriptions — the model spends tokens on work, not on choosing. <a href="tools.html" style="color:var(--accent)">Browse all 45 →</a></p>
     <div class="bento">
-      <div class="cell span2"><div class="tag">memory · 7</div><h3>ctx_recall …</h3><p>ctx_save, soul_read, soul_write, fast_note, task_state, state_reset.</p></div>
-      <div class="cell span2"><div class="tag">search · 3</div><h3>smart_grep …</h3><p>read_slice, impact_analyze — locations, never whole files.</p></div>
-      <div class="cell span2"><div class="tag">verify · 7</div><h3>verify_chain …</h3><p>security_scan, test_gap, repro_capsule, context_budget, consensus, auto_heal.</p></div>
-      <div class="cell span2"><div class="tag">state · 5</div><h3>machine_state …</h3><p>repo_health, project_map, loop_status, checkpoint_create.</p></div>
-      <div class="cell span2"><div class="tag">quality · 14</div><h3>perf_regression …</h3><p>rollback, test_synthesizer, dead_code, dep_graph, changelog, token_budget…</p></div>
-      <div class="cell span2"><div class="tag">city · 6</div><h3>city_mode …</h3><p>city_status, city_post, city_read, city_broadcast, city_clear.</p></div>
-      <div class="cell span3"><div class="tag">parallel · 1</div><h3>batch</h3><p>Run multiple ops in one call, in parallel. The powerhouse.</p></div>
-      <div class="cell span3"><div class="tag">quality · 2</div><h3>cost_estimator · self_critique</h3><p>Token cost estimates and self-review loops.</p></div>
+      <div class="cell span2"><div class="tag">memory - 7</div><h3>ctx_recall …</h3><p>ctx_save, soul_read, soul_write, fast_note, task_state, state_reset.</p></div>
+      <div class="cell span2"><div class="tag">search - 3</div><h3>smart_grep …</h3><p>read_slice, impact_analyze — locations, never whole files.</p></div>
+      <div class="cell span2"><div class="tag">verify - 7</div><h3>verify_chain …</h3><p>security_scan, test_gap, repro_capsule, context_budget, consensus, auto_heal.</p></div>
+      <div class="cell span2"><div class="tag">state - 5</div><h3>machine_state …</h3><p>repo_health, project_map, loop_status, checkpoint_create.</p></div>
+      <div class="cell span2"><div class="tag">quality - 14</div><h3>perf_regression …</h3><p>rollback, test_synthesizer, dead_code, dep_graph, changelog, token_budget…</p></div>
+      <div class="cell span2"><div class="tag">city - 6</div><h3>city_mode …</h3><p>city_status, city_post, city_read, city_broadcast, city_clear.</p></div>
+      <div class="cell span3"><div class="tag">parallel - 1</div><h3>batch</h3><p>Run multiple ops in one call, in parallel. The powerhouse.</p></div>
+      <div class="cell span3"><div class="tag">quality - 2</div><h3>cost_estimator - self_critique</h3><p>Token cost estimates and self-review loops.</p></div>
     </div>
   </section>
 
@@ -249,7 +251,7 @@
   </section>
 
   <footer>
-    <p>Osien-Stack · MIT licensed · <a href="https://github.com/kabirprokk/Osien-Stack">GitHub</a> · <a href="tools.html">Tool Explorer</a></p>
+    <p>Osien-Stack - MIT licensed - <a href="https://github.com/kabirprokk/Osien-Stack">GitHub</a> - <a href="tools.html">Tool Explorer</a></p>
     <p style="margin-top:8px;font-size:.85rem;">Built for the AI era. One prompt. Zero friction.</p>
   </footer>
 

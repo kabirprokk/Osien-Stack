@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Osien-Stack - Tool Explorer</title>
+<link rel="icon" type="image/png" href="logo.png">
 <meta name="description" content="Browse all 45 osien-stack MCP tools with descriptions, categories and search.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +18,7 @@
   .cursor { position: fixed; width: 14px; height: 14px; border-radius: 50%; border: 2px solid var(--accent); pointer-events: none; z-index: 9999; transform: translate(-50%,-50%); mix-blend-mode: difference; }
   .glow { position: fixed; width: 400px; height: 400px; border-radius: 50%; pointer-events: none; z-index: -1; background: radial-gradient(circle, var(--glow), transparent 70%); transform: translate(-50%,-50%); opacity: .6; mix-blend-mode: screen; }
   nav { position: sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:16px 28px; backdrop-filter: blur(14px); background: hsla(var(--hue),25%,8%,.55); border-bottom:1px solid var(--border); }
-  nav .logo { font-weight:800; font-size:1.2rem; font-family:'JetBrains Mono',monospace; } nav .logo span { color: var(--accent); }
+  nav .logo { font-weight:800; font-size:1.2rem; font-family:'JetBrains Mono',monospace; display:flex; align-items:center; gap:8px; } nav .logo span { color: var(--accent); } nav .logo-img { height:28px; width:auto; border-radius:6px; }
   nav a { color: var(--fg); text-decoration:none; margin-left:20px; opacity:.8; font-size:.9rem; } nav a:hover { opacity:1; color: var(--accent); }
   .wrap { max-width: 1280px; margin: 0 auto; padding: 40px 24px 80px; }
   h1 { font-size: clamp(2rem,5vw,3.4rem); font-weight:900; letter-spacing:-1.5px; margin-bottom: 8px; background: linear-gradient(120deg, var(--fg), var(--accent), var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
@@ -53,7 +54,7 @@
   <div class="cursor" id="cursor"></div>
   <div class="glow" id="glow"></div>
   <nav>
-    <div class="logo">osien<span>-stack</span> · tools</div>
+    <div class="logo"><img src="logo.png" alt="Osien-Stack" class="logo-img"><span>osien_stack - tools</span></div>
     <div>
       <a href="index.html">Home</a>
       <a href="https://github.com/kabirprokk/Osien-Stack" target="_blank">GitHub</a>
@@ -71,7 +72,7 @@
     <div class="grid" id="grid"></div>
     <div class="empty" id="empty" style="display:none">No tools match your search.</div>
   </div>
-  <footer>Osien-Stack · MIT licensed · <a href="https://github.com/kabirprokk/Osien-Stack">GitHub</a></footer>
+  <footer>Osien-Stack - MIT licensed - <a href="https://github.com/kabirprokk/Osien-Stack">GitHub</a></footer>
 
 <script>
   const tools = [
