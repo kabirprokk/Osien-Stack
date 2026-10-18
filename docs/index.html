@@ -119,6 +119,22 @@
   footer { padding: 60px 6vw; text-align: center; color: var(--muted); border-top: 1px solid var(--border); font-size: .85rem; }
   footer a { color: var(--accent); text-decoration: none; }
 
+
+  canvas#rain { position: fixed; inset: 0; z-index: -3; opacity: .18; }
+  .marquee { overflow: hidden; white-space: nowrap; padding: 14px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: hsla(var(--hue), 30%, 6%, .4); margin: 60px 0; }
+  .marquee-track { display: inline-block; animation: marquee 40s linear infinite; font-family: 'JetBrains Mono', monospace; font-size: .85rem; color: var(--muted); }
+  .marquee-track span { margin: 0 28px; }
+  .marquee-track span b { color: var(--accent); font-weight: 500; }
+  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .top-orb { position: fixed; bottom: 28px; right: 28px; width: 48px; height: 48px; border-radius: 50%; background: var(--accent); color: #0a0a0f; border: none; cursor: pointer; font-size: 1.2rem; font-weight: 700; box-shadow: 0 8px 30px var(--glow); opacity: 0; transform: translateY(20px) scale(.8); transition: all .4s cubic-bezier(.2,.8,.2,1); z-index: 70; display: flex; align-items: center; justify-content: center; }
+  .top-orb.show { opacity: 1; transform: translateY(0) scale(1); }
+  .top-orb:hover { transform: translateY(-4px) scale(1.08); }
+  .spotlight { position: relative; padding: 32px; border-radius: 20px; background: var(--card); border: 1px solid var(--border); backdrop-filter: blur(10px); overflow: hidden; min-height: 140px; }
+  .spotlight .tag { font-family: 'JetBrains Mono', monospace; font-size: .7rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 10px; }
+  .spotlight h3 { font-size: 1.6rem; font-weight: 700; margin-bottom: 6px; letter-spacing: -0.5px; transition: opacity .4s, transform .4s; }
+  .spotlight p { color: var(--muted); font-size: .9rem; transition: opacity .4s, transform .4s; }
+  .spotlight .counter { position: absolute; top: 16px; right: 20px; font-family: 'JetBrains Mono', monospace; font-size: .75rem; color: var(--muted); }
+
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity .8s ease, transform .8s cubic-bezier(.2,.8,.2,1); }
   .reveal.in { opacity: 1; transform: translateY(0); }
 
@@ -128,6 +144,7 @@
 <body>
   <div class="scrollbar" id="scrollbar"></div>
   <canvas id="field"></canvas>
+  <canvas id="rain"></canvas>
   <div class="cursor" id="cursor"></div>
   <div class="glow" id="glow"></div>
 
@@ -164,6 +181,16 @@
       <a class="btn ghost" href="https://github.com/kabirprokk/Osien-Stack" target="_blank">GitHub</a>
     </div>
     <div class="hint"><div class="scroll"></div> scroll to morph</div>
+  </section>
+
+
+  <section class="block" id="spotlight" style="padding-top: 60px; padding-bottom: 60px;">
+    <div class="spotlight" id="spotlightBox">
+      <div class="tag">tool of the moment</div>
+      <div class="counter" id="spotCounter">1 / 45</div>
+      <h3 id="spotName">ctx_recall</h3>
+      <p id="spotDesc">Load project memory by role/part/grep.</p>
+    </div>
   </section>
 
   <section class="block" id="why">
@@ -300,6 +327,9 @@
     </div>
   </section>
 
+
+  <div class="marquee"><div class="marquee-track" id="marqueeTrack"><span><b>ctx_recall</b></span><span><b>ctx_save</b></span><span><b>smart_grep</b></span><span><b>read_slice</b></span><span><b>verify_chain</b></span><span><b>batch</b></span><span><b>city_mode</b></span><span><b>security_scan</b></span><span><b>impact_analyze</b></span><span><b>machine_state</b></span><span><b>repo_health</b></span><span><b>project_map</b></span><span><b>checkpoint_create</b></span><span><b>auto_heal</b></span><span><b>perf_regression</b></span><span><b>memory_compactor</b></span><span><b>dead_code_detector</b></span><span><b>dependency_graph</b></span><span><b>changelog_generator</b></span><span><b>token_budget_enforcer</b></span><span><b>architecture_drift</b></span><span><b>session_replay</b></span><span><b>auto_document</b></span><span><b>feature_flag_manager</b></span><span><b>license_checker</b></span><span><b>schema_validator</b></span><span><b>cost_estimator</b></span><span><b>self_critique_loop</b></span><span><b>city_status</b></span><span><b>city_post</b></span><span><b>city_read</b></span><span><b>city_broadcast</b></span><span><b>city_clear</b></span><span><b>soul_read</b></span><span><b>soul_write</b></span><span><b>fast_note</b></span><span><b>task_state</b></span><span><b>state_reset</b></span><span><b>loop_status</b></span><span><b>test_gap</b></span><span><b>repro_capsule</b></span><span><b>context_budget</b></span><span><b>consensus</b></span><span><b>rollback_on_failure</b></span><span><b>test_synthesizer</b></span><span><b>ctx_recall</b></span><span><b>ctx_save</b></span><span><b>smart_grep</b></span><span><b>read_slice</b></span><span><b>verify_chain</b></span><span><b>batch</b></span><span><b>city_mode</b></span><span><b>security_scan</b></span><span><b>impact_analyze</b></span><span><b>machine_state</b></span><span><b>repo_health</b></span><span><b>project_map</b></span><span><b>checkpoint_create</b></span><span><b>auto_heal</b></span><span><b>perf_regression</b></span><span><b>memory_compactor</b></span><span><b>dead_code_detector</b></span><span><b>dependency_graph</b></span><span><b>changelog_generator</b></span><span><b>token_budget_enforcer</b></span><span><b>architecture_drift</b></span><span><b>session_replay</b></span><span><b>auto_document</b></span><span><b>feature_flag_manager</b></span><span><b>license_checker</b></span><span><b>schema_validator</b></span><span><b>cost_estimator</b></span><span><b>self_critique_loop</b></span><span><b>city_status</b></span><span><b>city_post</b></span><span><b>city_read</b></span><span><b>city_broadcast</b></span><span><b>city_clear</b></span><span><b>soul_read</b></span><span><b>soul_write</b></span><span><b>fast_note</b></span><span><b>task_state</b></span><span><b>state_reset</b></span><span><b>loop_status</b></span><span><b>test_gap</b></span><span><b>repro_capsule</b></span><span><b>context_budget</b></span><span><b>consensus</b></span><span><b>rollback_on_failure</b></span><span><b>test_synthesizer</b></span></div></div>
+
   <footer>
     <p>Osien-Stack - MIT licensed - <a href="https://github.com/kabirprokk/Osien-Stack">GitHub</a> - <a href="tools.html">Tool Explorer</a></p>
     <p style="margin-top:8px;font-size:.85rem;">Built for the AI era. One prompt. Zero friction.</p>
@@ -316,6 +346,91 @@
   window.addEventListener('scroll', () => { const max = document.body.scrollHeight - window.innerHeight; scrollbar.style.width = (window.scrollY / Math.max(1,max) * 100) + '%'; }, { passive: true });
   const copyBtn = document.getElementById('copyInstall');
   if (copyBtn) copyBtn.onclick = () => { navigator.clipboard.writeText('Install osien-stack: clone https://github.com/kabirprokk/Osien-Stack, run npm install in mcp-server, wire it as an MCP server named osien-tools, copy skills/commands/agents into your config, then confirm with the smoke test (npm test).'); const t = document.getElementById('toast'); t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 2000); };
+
+  // ---------- code rain ----------
+  const rain = document.getElementById('rain'); const rctx = rain.getContext('2d'); let rW, rH;
+  function rResize() { rW = rain.width = window.innerWidth; rH = rain.height = window.innerHeight; }
+  rResize(); window.addEventListener('resize', rResize);
+  const drops = [];
+  const rainChars = 'ctx_recall ctx_save smart_grep read_slice verify_chain batch city_mode security_scan impact_analyze machine_state repo_health project_map checkpoint_create auto_heal perf_regression memory_compactor dead_code_detector dependency_graph changelog_generator token_budget_enforcer architecture_drift session_replay auto_document feature_flag_manager license_checker schema_validator cost_estimator self_critique_loop city_status city_post city_read city_broadcast city_clear soul_read soul_write fast_note task_state state_reset loop_status test_gap repro_capsule context_budget consensus rollback_on_failure test_synthesizer'.split(' ');
+  for (let i = 0; i < 30; i++) drops.push({ x: Math.random()*rW, y: Math.random()*rH, speed: 0.5 + Math.random()*1.5, text: rainChars[Math.floor(Math.random()*rainChars.length)], size: 11 + Math.random()*4 });
+  function rainTick() {
+    rctx.fillStyle = 'rgba(0,0,0,0.08)'; rctx.fillRect(0,0,rW,rH);
+    const hue = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--hue')) || 260;
+    for (const d of drops) {
+      rctx.font = d.size + 'px JetBrains Mono, monospace';
+      rctx.fillStyle = 'hsla(' + hue + ', 80%, 65%, 0.5)';
+      rctx.fillText(d.text, d.x, d.y);
+      d.y += d.speed;
+      if (d.y > rH + 20) { d.y = -20; d.x = Math.random()*rW; d.text = rainChars[Math.floor(Math.random()*rainChars.length)]; }
+    }
+    requestAnimationFrame(rainTick);
+  }
+  rainTick();
+
+  // ---------- spotlight rotation ----------
+  const spotTools = [
+    {n:'ctx_recall', d:'Load project memory by role/part/grep.'},
+    {n:'batch', d:'Run multiple ops in parallel in ONE call.'},
+    {n:'verify_chain', d:'Run format/typecheck/test/build.'},
+    {n:'smart_grep', d:'Grep with file:line output, bounded.'},
+    {n:'read_slice', d:'Read file lines [start,end].'},
+    {n:'city_mode', d:'Activate city mode (14 agents).'},
+    {n:'security_scan', d:'Scan for secrets/vulns.'},
+    {n:'impact_analyze', d:'Find references to a symbol.'},
+    {n:'auto_heal', d:'Self-heal loop: detect/fix/verify.'},
+    {n:'memory_compactor', d:'Compress memory files.'},
+  ];
+  let si = 0;
+  const spotName = document.getElementById('spotName');
+  const spotDesc = document.getElementById('spotDesc');
+  const spotCounter = document.getElementById('spotCounter');
+  const spotBox = document.getElementById('spotlightBox');
+  function rotateSpot() {
+    spotName.style.opacity = '0'; spotName.style.transform = 'translateY(-10px)';
+    spotDesc.style.opacity = '0'; spotDesc.style.transform = 'translateY(-10px)';
+    setTimeout(() => {
+      const t = spotTools[si % spotTools.length];
+      spotName.textContent = t.n; spotDesc.textContent = t.d;
+      spotCounter.textContent = (si % spotTools.length + 1) + ' / ' + spotTools.length;
+      spotName.style.opacity = '1'; spotName.style.transform = 'translateY(0)';
+      spotDesc.style.opacity = '1'; spotDesc.style.transform = 'translateY(0)';
+      si++;
+    }, 300);
+  }
+  rotateSpot(); setInterval(rotateSpot, 2600);
+  spotBox.addEventListener('mouseenter', () => { spotBox.style.borderColor = 'var(--accent)'; });
+  spotBox.addEventListener('mouseleave', () => { spotBox.style.borderColor = 'var(--border)'; });
+
+  // ---------- back to top ----------
+  const topOrb = document.getElementById('topOrb');
+  window.addEventListener('scroll', () => { if (window.scrollY > 600) topOrb.classList.add('show'); else topOrb.classList.remove('show'); }, { passive: true });
+  topOrb.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  // ---------- animated counters ----------
+  function animateCounter(el, target, suffix) {
+    let start = 0; const dur = 1400; const t0 = performance.now();
+    function step(now) {
+      const p = Math.min(1, (now - t0) / dur);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = Math.round(start + (target - start) * eased) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  const counterIO = new IntersectionObserver((es) => {
+    es.forEach(e => {
+      if (e.isIntersecting) {
+        const el = e.target;
+        const target = parseInt(el.dataset.target, 10);
+        const suffix = el.dataset.suffix || '';
+        animateCounter(el, target, suffix);
+        counterIO.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-counter]').forEach(el => counterIO.observe(el));
+
   const particles = [];
   const N = 120;
   for (let i = 0; i < N; i++) particles.push({ x: Math.random()*W, y: Math.random()*H, vx: 0, vy: 0, life: Math.random() });
@@ -426,5 +541,6 @@
     if (e.key === 'Enter' && palette.classList.contains('open')) { const a = paletteList.querySelector('.palette-item.active'); if (a) a.click(); }
   });
 </script>
+  <button class="top-orb" id="topOrb" aria-label="back to top">↑</button>
 </body>
 </html>
