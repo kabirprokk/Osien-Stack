@@ -1,5 +1,5 @@
 ---
-description: AUTO-PERFECT — AI runs tools, produces best result, human approves/rejects, iterates (context resets each cycle)
+description: AUTO-PERFECT â€” AI runs tools, produces best result, human approves/rejects, iterates (context resets each cycle)
 agent: ai-manager
 ---
 AUTO-PERFECT LOOP (human-in-the-loop, max 5 cycles, then STOP + report):

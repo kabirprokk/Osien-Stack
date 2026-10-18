@@ -1,5 +1,5 @@
 ---
-description: Fully automated AUTO-PERFECT runner — fresh process per iteration, tokens reset to ~0, no manual /new
+description: Fully automated AUTO-PERFECT runner â€” fresh process per iteration, tokens reset to ~0, no manual /new
 agent: ai-manager
 ---
 AUTO-PERFECT FULLY AUTOMATED RUNNER (no manual /new needed):

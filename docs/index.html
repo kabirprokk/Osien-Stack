@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Osien-Stack - A Living Toolchain for Any AI</title>
 <meta name="description" content="45 MCP tools that install themselves into any AI. Memory, verification, parallel work, context discipline. One prompt.">
-<link id="favicon" rel="icon" type="image/svg+xml" href="logo.svg">
-<link id="appleIcon" rel="apple-touch-icon" href="logo.svg">
+<link id="favicon" rel="icon" type="image/png" href="favicon.png">
+<link id="appleIcon" rel="apple-touch-icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -356,7 +356,7 @@
 </div>
 
 <nav class="topbar">
-  <div class="logo"><img src="logo.svg" width="512" height="512" alt="Osien-Stack" class="logo-img"><span>osien_stack</span></div>
+  <div class="logo"><img src="logo.png" width="512" height="512" alt="Osien-Stack" class="logo-img"><span>osien_stack</span></div>
   <nav>
     <a href="#why">why</a><a href="#what">what</a><a href="#scale">scale</a><a href="#pipeline">pipeline</a>
     <a href="#how">how</a><a href="#install">install</a><a href="tools.html">tools</a>
@@ -653,8 +653,8 @@
       slots.appendChild(s);
     });
     result.textContent = pipe.length
-      ? 'ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ ' + pipe.join(' ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ ') + '   (' + (pipe.length * 12 + 40) + 'ms, ~' + (pipe.length * 30 + 100) + ' tokens)'
-      : 'ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ result appears here';
+      ? '→ ' + pipe.join(' → ') + '   (' + (pipe.length * 12 + 40) + 'ms, ~' + (pipe.length * 30 + 100) + ' tokens)'
+      : '→ result appears here';
   }
 
   /* ---------- faq ---------- */
@@ -669,7 +669,7 @@
   track.innerHTML = html;
 
   /* ---------- eyebrow typed once ---------- */
-  var eb = $('#eyebrow'), ebText = '// v1.1.0 ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· 45 tools ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· MIT ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â· any AI', ei = 0;
+  var eb = $('#eyebrow'), ebText = '// v1.1.0 · 45 tools · MIT · any AI', ei = 0;
   if (eb && !reduce) {
     (function type() {
       if (ei <= ebText.length) { eb.textContent = ebText.slice(0, ei++); setTimeout(type, 42); }

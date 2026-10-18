@@ -1,10 +1,10 @@
 ---
-description: PERFECT 3D pipeline — AI base -> sculpt -> retopo -> UV -> bake -> texture -> rig -> animate -> export (human checkpoints)
+description: PERFECT 3D pipeline â€” AI base -> sculpt -> retopo -> UV -> bake -> texture -> rig -> animate -> export (human checkpoints)
 agent: model-creator
 ---
-PERFECT 3D PIPELINE (human checkpoints required — AI assists, human polishes):
+PERFECT 3D PIPELINE (human checkpoints required â€” AI assists, human polishes):
 1. BASE MESH: osien-3d-forge (primitives/vegetation/kits) OR AI generator (Meshy/Tripo/Rodin for props; MakeHuman/Character Creator/MetaHuman for humans). Export GLB/OBJ.
-2. SCULPT (human): ZBrush or Blender sculpt — high-poly detail (muscles, pores, cloth). AI can't do final sculpt; human polishes.
+2. SCULPT (human): ZBrush or Blender sculpt â€” high-poly detail (muscles, pores, cloth). AI can't do final sculpt; human polishes.
 3. RETOPO (human/AI-assist): Auto-Rig Pro / Blender retopo tools -> low-poly game mesh; keep silhouette.
 4. UV UNWRAP: Blender Smart UV / UDIM; auto-UV from forge for simple assets.
 5. BAKE: normals/ao/curvature from high to low (Substance/Marmoset/Blender).

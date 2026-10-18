@@ -3,11 +3,11 @@ name: logic
 description: Anti-self-sabotage + parallelism doctrine. Prevents killing own terminals, interrupted processes, redundant sequential tool calls. Auto-applied to every task.
 ---
 
-# LOGIC SKILL — read before acting
+# LOGIC SKILL â€” read before acting
 
 ## 1. Never kill your own terminal / process
 - Do NOT call Stop-Process, taskkill, or Ctrl+C on a process you just launched unless it is hung (>120s with no output).
-- If a command is still running, WAIT and poll output — do not abort and re-launch.
+- If a command is still running, WAIT and poll output â€” do not abort and re-launch.
 - Never run two commands that both touch the same resource in parallel.
 - Before killing anything, check `Get-Process` / `proc_status`. If unsure, leave it.
 
