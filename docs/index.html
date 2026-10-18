@@ -24,7 +24,7 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: auto; } /* we control scroll via JS */
-  body { font-family: 'Space Grotesk', system-ui, sans-serif; background: var(--bg); color: var(--fg); overflow-x: hidden; cursor: none; transition: background 1.4s ease; }
+  body { font-family: 'Space Grotesk', system-ui, sans-serif; background: var(--bg); color: var(--fg); overflow-x: hidden; transition: background 1.4s ease; }
   canvas#field { position: fixed; inset: 0; z-index: -2; }
 
   /* magnetic cursor */
@@ -354,10 +354,11 @@
 
   // ---------- cursor ----------
   const cursor = document.getElementById('cursor'); const glow = document.getElementById('glow');
+  if (cursor && glow) document.body.style.cursor = 'none';
   let cx=0, cy=0, gx=0, gy=0;
   window.addEventListener('mousemove', e => { cx=e.clientX; cy=e.clientY; }, { passive: true });
   (function loop(){ gx += (cx-gx)*.14; gy += (cy-gy)*.14; glow.style.left = gx+'px'; glow.style.top = gy+'px'; cursor.style.left = cx+'px'; cursor.style.top = cy+'px'; requestAnimationFrame(loop); })();
-  document.querySelectorAll('a, button, .btn, .cell, .toolchip, .slot').forEach(el => { el.addEventListener('mouseenter', () => cursor.classList.add('hover')); el.addEventListener('mouseleave', () => cursor.classList.remove('hover')); });
+  // cursor stays stable (no hover expansion to avoid jitter)
   window.addEventListener('mousedown', () => cursor.classList.add('click'));
   window.addEventListener('mouseup', () => cursor.classList.remove('click'));
 
@@ -365,11 +366,7 @@
   const io = new IntersectionObserver((es) => { es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.12 });
   document.querySelectorAll('.reveal, .cell, .step').forEach(el => io.observe(el));
 
-  // ---------- 3D tilt on bento cells ----------
-  document.querySelectorAll('.cell').forEach(card => {
-    card.addEventListener('mousemove', e => { const r = card.getBoundingClientRect(); const x = (e.clientX - r.left)/r.width - .5; const y = (e.clientY - r.top)/r.height - .5; card.style.transform = 'perspective(700px) rotateY(' + (x*14) + 'deg) rotateX(' + (-y*14) + 'deg) translateY(-6px) scale(1.02)'; });
-    card.addEventListener('mouseleave', () => { card.style.transform = ''; });
-  });
+  // (3D tilt removed - caused layout jitter on hover)
 
   // ---------- pipeline builder ----------
   const tools = ['ctx_recall','ctx_save','smart_grep','read_slice','verify_chain','batch','city_mode','security_scan'];
