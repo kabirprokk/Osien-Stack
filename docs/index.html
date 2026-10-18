@@ -12,39 +12,40 @@
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&family=Nunito:wght@400;600;700;800&family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
 <style>
   :root, html[data-theme="cyber"] {
-    --hue: 318; --sat: 100%; --light: 60%;
-    --bg: hsl(258, 62%, 4%);
-    --fg: hsl(190, 45%, 96%);
-    --muted: hsl(200, 16%, 62%);
-    --accent: hsl(330, 100%, 60%);
-    --accent2: hsl(185, 100%, 52%);
-    --card: hsla(258, 50%, 9%, .74);
-    --card2: hsla(258, 50%, 14%, .82);
-    --border: hsla(185, 90%, 55%, .26);
-    --glow: hsla(330, 100%, 60%, .45);
-    --on-accent: #0a0a12;
-    --panel: hsl(258, 50%, 7%);
-    --nav: hsla(258, 60%, 5%, .86);
-    --wash3: hsla(258, 50%, 6%, .6);
-    --code-bg: hsl(258, 62%, 5%);
-    --code-fg: hsl(185, 55%, 88%);
-    --radius: 3px;
-    --radius-sm: 2px;
-    --shadow: 0 0 24px hsla(330, 100%, 60%, .28);
-    --shadow-sm: 0 0 14px hsla(185, 100%, 55%, .18);
+    /* CYBER, minimal: near-black, ONE accent, cyan used sparingly.
+       Glow halos, the grid overlay and scanlines are gone - they were the
+       loud parts AND they were repainting the whole page every frame. */
+    --hue: 320; --sat: 90%; --light: 62%;
+    --bg: hsl(240, 24%, 5%);
+    --fg: hsl(220, 30%, 96%);
+    --muted: hsl(220, 12%, 58%);
+    --accent: hsl(320, 92%, 62%);
+    --accent2: hsl(185, 85%, 55%);
+    --card: hsla(240, 20%, 9%, .70);
+    --card2: hsla(240, 20%, 13%, .80);
+    --border: hsla(320, 40%, 55%, .16);
+    --glow: hsla(320, 92%, 62%, .28);
+    --on-accent: hsl(240, 30%, 6%);
+    --panel: hsl(240, 22%, 7%);
+    --nav: hsla(240, 26%, 5%, .85);
+    --wash3: hsla(240, 22%, 6%, .55);
+    --code-bg: hsl(240, 26%, 6%);
+    --code-fg: hsl(220, 25%, 88%);
+    --radius: 12px;
+    --radius-sm: 8px;
+    --shadow: 0 18px 50px -24px hsla(320, 80%, 40%, .55);
+    --shadow-sm: 0 12px 30px -20px hsla(240, 40%, 3%, .80);
     --ease: cubic-bezier(.2,.9,.2,1);
     --bgimg:
-      linear-gradient(hsla(185,90%,55%,.05) 1px, transparent 1px),
-      linear-gradient(90deg, hsla(185,90%,55%,.05) 1px, transparent 1px),
-      radial-gradient(1000px 620px at 10% 0%,   hsla(330,100%,52%,.22), transparent 62%),
-      radial-gradient(900px 620px at 100% 100%, hsla(185,100%,48%,.18), transparent 62%);
-    --bg-size: 46px 46px, 46px 46px, 100% 100%, 100% 100%;
+      radial-gradient(1100px 700px at 50% -10%, hsla(320,90%,55%,.13), transparent 60%),
+      radial-gradient(900px 700px at 100% 110%, hsla(185,85%,50%,.07), transparent 60%);
+    --bg-size: 100% 100%, 100% 100%;
     --disp: 'Space Grotesk', system-ui, sans-serif;
     --mono: 'JetBrains Mono', monospace;
-    --display: 'Orbitron', 'Space Grotesk', sans-serif;
-    --tag-case: uppercase;
-    --tag-track: 1.6px;
-    --scan: .5;
+    --display: 'Space Grotesk', system-ui, sans-serif;
+    --tag-case: none;
+    --tag-track: 0px;
+    --scan: 0;
   }
 
   /* ============ PLAYFUL : claymorphism, pastel, soft ============ */
@@ -185,22 +186,16 @@
   html[data-theme="playful"] .cursor { border-width: 3px; }
   html[data-theme="playful"] .cursor.is-hover { background: hsla(332,90%,72%,.28); }
 
-  /* CYBER: clipped corners + neon edges */
-  html[data-theme="cyber"] .bento .cell,
-  html[data-theme="cyber"] .pipe,
-  html[data-theme="cyber"] .install,
-  html[data-theme="cyber"] .spotlight,
-  html[data-theme="cyber"] .faq-item,
-  html[data-theme="cyber"] .compare .col {
-    clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100% - 14px));
-  }
-  html[data-theme="cyber"] .bento .cell:hover { box-shadow: 0 0 26px hsla(330,100%,60%,.4); }
-  html[data-theme="cyber"] .btn { letter-spacing: .06em; text-transform: uppercase; font-size: .8rem; }
-  html[data-theme="cyber"] .btn.primary { box-shadow: 0 0 22px hsla(330,100%,60%,.5); }
-  html[data-theme="cyber"] .stage h1 { letter-spacing: -1px; }
-  html[data-theme="cyber"] .bento .cell .tag, html[data-theme="cyber"] .eyebrow { text-shadow: 0 0 12px currentColor; }
-  html[data-theme="cyber"] .topbar { box-shadow: 0 6px 24px hsla(330,100%,60%,.14); }
-  html[data-theme="cyber"] .scrollbar { box-shadow: 0 0 14px var(--glow); }
+  /* CYBER minimal: no clipped corners, no neon edges, no shouty caps.
+     Hover reads as a border shift, not a light show. */
+  html[data-theme="cyber"] .bento .cell:hover { border-color: hsla(320, 80%, 62%, .38); }
+  html[data-theme="cyber"] .btn { letter-spacing: 0; text-transform: none; font-size: .92rem; }
+  html[data-theme="cyber"] .btn.primary { box-shadow: none; }
+  html[data-theme="cyber"] .btn.primary:hover { box-shadow: 0 10px 30px -14px hsla(320,90%,55%,.6); }
+  html[data-theme="cyber"] .stage h1 { letter-spacing: -1.5px; }
+  html[data-theme="cyber"] .bento .cell .tag, html[data-theme="cyber"] .eyebrow { text-shadow: none; opacity: .78; }
+  html[data-theme="cyber"] .topbar { box-shadow: none; }
+  html[data-theme="cyber"] .scrollbar { box-shadow: none; }
 
 
 
@@ -999,22 +994,43 @@
     window.addEventListener('resize', dropRects, { passive: true });
   }
 
-  /* ---------- THE single rAF loop: hue + cursor + magnetic + field ---------- */
+  /* ---------- THE single rAF loop: hue + cursor + magnetic + field ----------
+     Every DOM write below is change-gated. An idle page - someone reading,
+     not scrolling, not hovering - performs ZERO writes per frame instead of
+     three. That is the difference between a hot loop and a still one. */
   measure(); readScroll();
+  var lastCx = 1e9, lastCy = 1e9, lastFx = 1e9, lastFy = 1e9, lastHue = NaN;
   (function loop() {
     requestAnimationFrame(loop);
-    if (scrollDirty) { scrollDirty = false; readScroll(); document.documentElement.style.setProperty('--hue', hue.toFixed(1)); }
+    if (document.hidden) return; /* background tab: skip the whole frame */
+
+    if (scrollDirty) {
+      scrollDirty = false; readScroll();
+      var h = Math.round(hue * 2) / 2; /* quantise: --hue on :root invalidates
+                                          document-wide style, so write rarely */
+      if (h !== lastHue) {
+        lastHue = h;
+        document.documentElement.style.setProperty('--hue', h.toFixed(1));
+      }
+    }
     if (cursor && !reduce) {
       cx += (tx - cx) * 0.22; cy += (ty - cy) * 0.22;
-      cursor.style.transform = 'translate3d(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px,0) translate(-50%,-50%)';
+      if (Math.abs(cx - lastCx) > .05 || Math.abs(cy - lastCy) > .05) {
+        lastCx = cx; lastCy = cy;
+        cursor.style.transform = 'translate3d(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px,0) translate(-50%,-50%)';
+      }
     }
     if (reduce) return;
 
     /* field parallax: pointer + scroll, eased, two custom-prop writes only */
     fx += (ftx - fx) * 0.06; fy += (fty - fy) * 0.06;
     if (fieldCore) {
-      fieldCore.style.setProperty('--fx', (fx - scrollPct * 70).toFixed(2) + 'px');
-      fieldCore.style.setProperty('--fy', (fy - scrollPct * 40).toFixed(2) + 'px');
+      var nfx = fx - scrollPct * 70, nfy = fy - scrollPct * 40;
+      if (Math.abs(nfx - lastFx) > .05 || Math.abs(nfy - lastFy) > .05) {
+        lastFx = nfx; lastFy = nfy;
+        fieldCore.style.setProperty('--fx', nfx.toFixed(2) + 'px');
+        fieldCore.style.setProperty('--fy', nfy.toFixed(2) + 'px');
+      }
     }
 
     /* magnetic + tilt. settled elements are skipped, so an idle page does

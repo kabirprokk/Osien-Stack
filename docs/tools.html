@@ -282,7 +282,7 @@ html[data-theme="cyber"] .modal-box { background: rgba(10,4,20,.97); box-shadow:
 
 
   // cursor
-  const cursor=document.getElementById('cursor');const glow=document.getElementById('glow'); if(cursor&&glow) document.body.style.cursor='none';let cx=0,cy=0,gx=0,gy=0;window.addEventListener('mousemove',e=>{cx=e.clientX;cy=e.clientY;},{passive:true});(function loop(){gx+=(cx-gx)*.14;gy+=(cy-gy)*.14;glow.style.left=gx+'px';glow.style.top=gy+'px';cursor.style.left=cx+'px';cursor.style.top=cy+'px';requestAnimationFrame(loop);})();
+  const cursor=document.getElementById('cursor');const glow=document.getElementById('glow'); if(cursor&&glow) document.body.style.cursor='none';let cx=0,cy=0,gx=0,gy=0,lcx=1e9,lcy=1e9,lgx=1e9,lgy=1e9;window.addEventListener('mousemove',e=>{cx=e.clientX;cy=e.clientY;},{passive:true});(function loop(){requestAnimationFrame(loop);if(document.hidden)return;gx+=(cx-gx)*.14;gy+=(cy-gy)*.14;if(Math.abs(cx-lcx)>.05||Math.abs(cy-lcy)>.05){lcx=cx;lcy=cy;cursor.style.transform='translate3d('+cx.toFixed(1)+'px,'+cy.toFixed(1)+'px,0) translate(-50%,-50%)';}if(Math.abs(gx-lgx)>.05||Math.abs(gy-lgy)>.05){lgx=gx;lgy=gy;glow.style.transform='translate3d('+gx.toFixed(1)+'px,'+gy.toFixed(1)+'px,0) translate(-50%,-50%)';}})();
   // scroll color
   const hues = [200, 260, 320, 140, 35, 200];
   window.addEventListener('scroll', () => requestAnimationFrame(() => {
