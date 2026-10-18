@@ -1,0 +1,25 @@
+{
+ "id": "veh-jet-airliner-096",
+ "name": "Desert Jet Airliner 096",
+ "category": "vehicles",
+ "prompt": "iron white jet airliner airplane realistic",
+ "kit": "airplane",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 11654,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "realistic",
+  "iron",
+  "balanced",
+  "airliner"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11654,
+ "seed": 41455
+}

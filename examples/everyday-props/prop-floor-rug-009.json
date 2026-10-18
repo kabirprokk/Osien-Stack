@@ -1,0 +1,25 @@
+{
+ "id": "prop-floor-rug-009",
+ "name": "Blue Floor Rug 009",
+ "category": "everyday-props",
+ "prompt": "weathered steel patterned floor rug plane realistic",
+ "kit": "plane",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "steel",
+  "poly": 11736,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "plane",
+  "realistic",
+  "steel",
+  "worn",
+  "rug"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11736,
+ "seed": 41988
+}

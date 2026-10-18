@@ -1,0 +1,25 @@
+{
+ "id": "fant-mana-crystal-017",
+ "name": "Mystic Mana Crystal 017",
+ "category": "fantasy",
+ "prompt": "ancient marble glowing blue mana crystal stylized",
+ "kit": "crystal",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 4085,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "crystal",
+  "stylized",
+  "marble",
+  "ancient",
+  "mana"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4085,
+ "seed": 41896
+}

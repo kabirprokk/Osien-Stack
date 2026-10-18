@@ -1,0 +1,25 @@
+{
+ "id": "veh-pickup-truck-052",
+ "name": "Old Pickup Truck 052",
+ "category": "vehicles",
+ "prompt": "weathered gold blue pickup truck vehicle realistic",
+ "kit": "car",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "gold",
+  "poly": 12584,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "realistic",
+  "gold",
+  "worn",
+  "truck"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12584,
+ "seed": 41411
+}

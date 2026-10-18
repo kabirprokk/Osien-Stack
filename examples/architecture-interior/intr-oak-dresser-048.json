@@ -1,0 +1,25 @@
+{
+ "id": "intr-oak-dresser-048",
+ "name": "Cozy Oak Dresser 048",
+ "category": "architecture-interior",
+ "prompt": "ancient stone oak dresser cupboard drawers fantasy",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "stone",
+  "poly": 12561,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "fantasy",
+  "stone",
+  "ancient",
+  "dresser"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12561,
+ "seed": 41767
+}

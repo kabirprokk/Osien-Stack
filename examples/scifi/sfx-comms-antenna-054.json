@@ -1,0 +1,27 @@
+{
+ "id": "sfx-comms-antenna-054",
+ "name": "Chrome Comms Antenna 054",
+ "category": "scifi",
+ "prompt": "worn iron tall comms antenna tube mast with mast low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 26283,
+  "parts": [
+   "mast"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "lowpoly",
+  "iron",
+  "worn",
+  "antenna"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26283,
+ "seed": 41853
+}

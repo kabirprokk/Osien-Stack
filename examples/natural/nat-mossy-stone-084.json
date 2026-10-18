@@ -1,0 +1,25 @@
+{
+ "id": "nat-mossy-stone-084",
+ "name": "Wild Mossy Stone 084",
+ "category": "natural",
+ "prompt": "marble mossy ancient stone rock realistic",
+ "kit": "rock",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 31518,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "realistic",
+  "marble",
+  "balanced",
+  "moss"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31518,
+ "seed": 41323
+}

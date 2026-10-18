@@ -1,0 +1,21 @@
+{
+ "id": "veg-lawn-008",
+ "name": "Lush Lawn 008",
+ "category": "vegetation-ultra",
+ "kit": "lawnGrass",
+ "prompt": "lush dense manicured lawn grass",
+ "seed": 30008,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "lawn",
+  "turf",
+  "garden",
+  "lush",
+  "dense",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

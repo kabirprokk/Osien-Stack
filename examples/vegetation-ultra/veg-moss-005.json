@@ -1,0 +1,21 @@
+{
+ "id": "veg-moss-005",
+ "name": "Soft Moss 005",
+ "category": "vegetation-ultra",
+ "kit": "mossCarpet",
+ "prompt": "soft green mossy ground moss carpet",
+ "seed": 30038,
+ "params": {
+  "quality": "cinema",
+  "style": "stylized"
+ },
+ "tags": [
+  "moss",
+  "forest-floor",
+  "damp",
+  "soft",
+  "green",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

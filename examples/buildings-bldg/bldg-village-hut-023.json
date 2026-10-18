@@ -1,0 +1,28 @@
+{
+ "id": "bldg-village-hut-023",
+ "name": "Ruined Village Hut 023",
+ "category": "buildings-bldg",
+ "prompt": "iron village straw hut house with doors with doors realistic",
+ "kit": "house",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 12712,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "realistic",
+  "iron",
+  "balanced",
+  "hut",
+  "village"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12712,
+ "seed": 41022
+}

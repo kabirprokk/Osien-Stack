@@ -1,0 +1,26 @@
+{
+ "id": "veh-pirate-galley-039",
+ "name": "Old Pirate Galley 039",
+ "category": "vehicles",
+ "prompt": "rusty old pirate galley ship low poly",
+ "kit": "boat",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "rust",
+  "poly": 12729,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "lowpoly",
+  "rust",
+  "balanced",
+  "pirate",
+  "ship"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12729,
+ "seed": 41398
+}

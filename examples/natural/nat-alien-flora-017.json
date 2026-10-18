@@ -1,0 +1,26 @@
+{
+ "id": "nat-alien-flora-017",
+ "name": "Mossy Alien Flora 017",
+ "category": "natural",
+ "prompt": "crystal glowing alien plant tentacle flower stylized",
+ "kit": "alienPlant",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "crystal",
+  "poly": 11565,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "alienPlant",
+  "stylized",
+  "crystal",
+  "balanced",
+  "alien",
+  "flora"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11565,
+ "seed": 41256
+}

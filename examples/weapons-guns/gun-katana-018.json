@@ -1,0 +1,26 @@
+{
+ "id": "gun-katana-018",
+ "name": "Dark Katana 018",
+ "category": "weapons-guns",
+ "prompt": "weathered bronze polished steel katana blade fantasy",
+ "kit": "sword",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "bronze",
+  "poly": 3670,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "fantasy",
+  "bronze",
+  "worn",
+  "katana",
+  "samurai"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3670,
+ "seed": 41137
+}

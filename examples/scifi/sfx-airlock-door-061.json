@@ -1,0 +1,25 @@
+{
+ "id": "sfx-airlock-door-061",
+ "name": "Neon Airlock Door 061",
+ "category": "scifi",
+ "prompt": "weathered chrome steel airlock door box panel stylized",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 13096,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "box",
+  "stylized",
+  "chrome",
+  "worn",
+  "airlock"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13096,
+ "seed": 41860
+}

@@ -1,0 +1,25 @@
+{
+ "id": "char-wise-villager-047",
+ "name": "Wise Wise Villager 047",
+ "category": "characters",
+ "prompt": "ancient gold wise old townsfolk person stylized",
+ "kit": "baseMale",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "gold",
+  "poly": 10964,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "stylized",
+  "gold",
+  "ancient",
+  "villager"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10964,
+ "seed": 41506
+}

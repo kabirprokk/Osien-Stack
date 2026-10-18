@@ -1,0 +1,26 @@
+{
+ "id": "furn-royal-throne-009",
+ "name": "Round Royal Throne 009",
+ "category": "furniture",
+ "prompt": "ancient brass golden royal throne seat low poly",
+ "kit": "throne",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 23796,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "throne",
+  "lowpoly",
+  "brass",
+  "ancient",
+  "royal",
+  "gold"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23796,
+ "seed": 41628
+}

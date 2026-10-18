@@ -1,0 +1,21 @@
+{
+ "id": "hum-female-010",
+ "name": "Calm Female 010",
+ "category": "human-players",
+ "kit": "baseFemale",
+ "prompt": "calm bold standing woman",
+ "seed": 40020,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "woman",
+  "female",
+  "casual",
+  "calm",
+  "bold",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

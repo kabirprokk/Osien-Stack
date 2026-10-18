@@ -1,0 +1,26 @@
+{
+ "id": "furn-oak-chair-041",
+ "name": "Oaken Oak Chair 041",
+ "category": "furniture",
+ "prompt": "leather wooden oak chair stylized",
+ "kit": "chair",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 10902,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "chair",
+  "stylized",
+  "leather",
+  "balanced",
+  "oak",
+  "seat"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10902,
+ "seed": 41660
+}

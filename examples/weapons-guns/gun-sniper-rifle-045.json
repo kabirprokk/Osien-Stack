@@ -1,0 +1,26 @@
+{
+ "id": "gun-sniper-rifle-045",
+ "name": "Oaken Sniper Rifle 045",
+ "category": "weapons-guns",
+ "prompt": "gold long steel sniper rifle barrel tube fantasy",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "gold",
+  "poly": 11814,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "fantasy",
+  "gold",
+  "balanced",
+  "gun",
+  "sniper"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11814,
+ "seed": 41164
+}

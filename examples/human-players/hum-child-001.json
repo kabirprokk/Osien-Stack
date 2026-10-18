@@ -1,0 +1,21 @@
+{
+ "id": "hum-child-001",
+ "name": "Strong Child 001",
+ "category": "human-players",
+ "kit": "baseChild",
+ "prompt": "strong keen young child",
+ "seed": 40021,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "child",
+  "kid",
+  "young",
+  "strong",
+  "keen",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

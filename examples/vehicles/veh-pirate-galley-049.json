@@ -1,0 +1,29 @@
+{
+ "id": "veh-pirate-galley-049",
+ "name": "Desert Pirate Galley 049",
+ "category": "vehicles",
+ "prompt": "glass old pirate galley ship with sails and mast low poly",
+ "kit": "boat",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 23617,
+  "parts": [
+   "sails",
+   "mast"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "lowpoly",
+  "glass",
+  "balanced",
+  "pirate",
+  "ship"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23617,
+ "seed": 41408
+}

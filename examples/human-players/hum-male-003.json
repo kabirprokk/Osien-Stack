@@ -1,0 +1,21 @@
+{
+ "id": "hum-male-003",
+ "name": "Sturdy Male 003",
+ "category": "human-players",
+ "kit": "baseMale",
+ "prompt": "sturdy strong standing man",
+ "seed": 40003,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "man",
+  "male",
+  "casual",
+  "sturdy",
+  "strong",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

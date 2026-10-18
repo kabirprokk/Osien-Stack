@@ -1,0 +1,24 @@
+{
+ "id": "fant-loot-chest-042",
+ "name": "Enchanted Loot Chest 042",
+ "category": "fantasy",
+ "prompt": "polished iron old wooden loot treasure chest fantasy",
+ "kit": "treasureChest",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "iron",
+  "poly": 27890,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "treasureChest",
+  "iron",
+  "pristine",
+  "loot"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 27890,
+ "seed": 41921
+}

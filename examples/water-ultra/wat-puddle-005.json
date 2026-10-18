@@ -1,0 +1,21 @@
+{
+ "id": "wat-puddle-005",
+ "name": "Shallow Puddle 005",
+ "category": "water-ultra",
+ "kit": "puddle",
+ "prompt": "shallow reflective rainy street puddle water",
+ "seed": 40055,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "puddle",
+  "rain",
+  "street",
+  "shallow",
+  "reflective",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

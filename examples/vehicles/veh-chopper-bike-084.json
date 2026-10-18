@@ -1,0 +1,28 @@
+{
+ "id": "veh-chopper-bike-084",
+ "name": "Old Chopper Bike 084",
+ "category": "vehicles",
+ "prompt": "iron black chopper motorcycle bike with wheels and engine stylized",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 12559,
+  "parts": [
+   "wheels",
+   "engine"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "stylized",
+  "iron",
+  "balanced",
+  "chopper"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12559,
+ "seed": 41443
+}

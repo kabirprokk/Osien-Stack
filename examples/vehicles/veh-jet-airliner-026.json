@@ -1,0 +1,28 @@
+{
+ "id": "veh-jet-airliner-026",
+ "name": "Blue Jet Airliner 026",
+ "category": "vehicles",
+ "prompt": "chrome white jet airliner airplane with wings and cockpit low poly",
+ "kit": "airplane",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "chrome",
+  "poly": 12757,
+  "parts": [
+   "wings",
+   "cockpit"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "lowpoly",
+  "chrome",
+  "balanced",
+  "airliner"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12757,
+ "seed": 41385
+}

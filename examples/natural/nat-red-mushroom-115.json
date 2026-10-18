@@ -1,0 +1,25 @@
+{
+ "id": "nat-red-mushroom-115",
+ "name": "Glowing Red Mushroom 115",
+ "category": "natural",
+ "prompt": "bone red spotted mushroom toadstool low poly",
+ "kit": "mushroom",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "bone",
+  "poly": 3715,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "lowpoly",
+  "bone",
+  "balanced",
+  "fungus"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3715,
+ "seed": 41354
+}

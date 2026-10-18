@@ -1,0 +1,21 @@
+{
+ "id": "hum-mage-009",
+ "name": "Keen Mage 009",
+ "category": "human-players",
+ "kit": "mage",
+ "prompt": "keen brave wise mage with staff",
+ "seed": 40059,
+ "params": {
+  "quality": "draft",
+  "style": "fantasy"
+ },
+ "tags": [
+  "mage",
+  "wizard",
+  "staff",
+  "keen",
+  "brave",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

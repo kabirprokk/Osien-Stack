@@ -1,0 +1,26 @@
+{
+ "id": "char-cute-robot-076",
+ "name": "Brave Cute Robot 076",
+ "category": "characters",
+ "prompt": "worn gold cute little robot droid fantasy",
+ "kit": "robot",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "gold",
+  "poly": 11112,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "fantasy",
+  "gold",
+  "worn",
+  "droid",
+  "cute"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11112,
+ "seed": 41535
+}

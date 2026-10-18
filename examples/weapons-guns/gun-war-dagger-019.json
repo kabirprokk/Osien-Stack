@@ -1,0 +1,25 @@
+{
+ "id": "gun-war-dagger-019",
+ "name": "Dark War Dagger 019",
+ "category": "weapons-guns",
+ "prompt": "ancient rusty iron war dagger knife low poly",
+ "kit": "sword",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "rust",
+  "poly": 12245,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "lowpoly",
+  "rust",
+  "ancient",
+  "dagger"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12245,
+ "seed": 41138
+}

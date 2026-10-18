@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-longsword-073",
+ "name": "Ancient Knight Longsword 073",
+ "category": "weapons-guns",
+ "prompt": "ancient bronze knight steel longsword blade stylized",
+ "kit": "sword",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "bronze",
+  "poly": 10961,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "stylized",
+  "bronze",
+  "ancient",
+  "knight"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10961,
+ "seed": 41192
+}

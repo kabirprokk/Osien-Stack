@@ -1,0 +1,21 @@
+{
+ "id": "veg-bonsai-005",
+ "name": "Miniature Bonsai 005",
+ "category": "vegetation-ultra",
+ "kit": "bonsai",
+ "prompt": "miniature artful bonsai miniature tree",
+ "seed": 30118,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "miniature",
+  "zen",
+  "pot",
+  "miniature",
+  "artful",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

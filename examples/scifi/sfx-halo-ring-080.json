@@ -1,0 +1,25 @@
+{
+ "id": "sfx-halo-ring-080",
+ "name": "Lunar Halo Ring 080",
+ "category": "scifi",
+ "prompt": "steel spinning halo ring torus station low poly",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 12176,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "torus",
+  "lowpoly",
+  "steel",
+  "balanced",
+  "station"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12176,
+ "seed": 41879
+}

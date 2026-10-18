@@ -1,0 +1,25 @@
+{
+ "id": "prop-rubber-ball-024",
+ "name": "Old Rubber Ball 024",
+ "category": "everyday-props",
+ "prompt": "pristine iron red rubber ball sphere realistic",
+ "kit": "sphere",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 10856,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "sphere",
+  "realistic",
+  "iron",
+  "pristine",
+  "ball"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10856,
+ "seed": 42003
+}

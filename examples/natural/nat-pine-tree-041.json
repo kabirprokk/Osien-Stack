@@ -1,0 +1,26 @@
+{
+ "id": "nat-pine-tree-041",
+ "name": "Grey Pine Tree 041",
+ "category": "natural",
+ "prompt": "mossy bone tall pine tree low poly",
+ "kit": "tree",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "bone",
+  "poly": 12060,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "lowpoly",
+  "bone",
+  "ancient",
+  "pine",
+  "forest"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12060,
+ "seed": 41280
+}

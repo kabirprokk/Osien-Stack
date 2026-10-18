@@ -1,0 +1,21 @@
+{
+ "id": "hum-runner-004",
+ "name": "Strong Runner 004",
+ "category": "human-players",
+ "kit": "runner",
+ "prompt": "strong noble swift running athlete",
+ "seed": 40114,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "runner",
+  "athlete",
+  "sport",
+  "strong",
+  "noble",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

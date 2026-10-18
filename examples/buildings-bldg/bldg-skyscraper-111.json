@@ -1,0 +1,26 @@
+{
+ "id": "bldg-skyscraper-111",
+ "name": "Ancient Skyscraper 111",
+ "category": "buildings-bldg",
+ "prompt": "steel modern glass skyscraper tower with windows realistic",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "steel",
+  "poly": 11279,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "realistic",
+  "steel",
+  "balanced",
+  "modern",
+  "city"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11279,
+ "seed": 41110
+}

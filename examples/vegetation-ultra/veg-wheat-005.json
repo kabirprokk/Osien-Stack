@@ -1,0 +1,21 @@
+{
+ "id": "veg-wheat-005",
+ "name": "Golden Wheat 005",
+ "category": "vegetation-ultra",
+ "kit": "wheatField",
+ "prompt": "golden tall wheat crop field",
+ "seed": 30051,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "wheat",
+  "crop",
+  "farm",
+  "golden",
+  "tall",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

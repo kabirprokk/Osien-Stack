@@ -1,0 +1,28 @@
+{
+ "id": "veh-vespa-scooter-045",
+ "name": "Chrome Vespa Scooter 045",
+ "category": "vehicles",
+ "prompt": "worn gold mint vespa scooter bike with engine and wheels realistic",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "gold",
+  "poly": 22657,
+  "parts": [
+   "engine",
+   "wheels"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "realistic",
+  "gold",
+  "worn",
+  "scooter"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22657,
+ "seed": 41404
+}

@@ -1,0 +1,25 @@
+{
+ "id": "prop-wooden-crate-011",
+ "name": "Red Wooden Crate 011",
+ "category": "everyday-props",
+ "prompt": "ancient iron wooden storage crate box low poly",
+ "kit": "box",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 4331,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "box",
+  "lowpoly",
+  "iron",
+  "ancient",
+  "crate"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4331,
+ "seed": 41990
+}

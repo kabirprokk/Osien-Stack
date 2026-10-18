@@ -1,0 +1,21 @@
+{
+ "id": "hum-child-007",
+ "name": "Grand Child 007",
+ "category": "human-players",
+ "kit": "baseChild",
+ "prompt": "grand swift young child",
+ "seed": 40027,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "child",
+  "kid",
+  "young",
+  "grand",
+  "swift",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

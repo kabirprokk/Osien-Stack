@@ -1,0 +1,27 @@
+{
+ "id": "veh-harbor-ferry-030",
+ "name": "Blue Harbor Ferry 030",
+ "category": "vehicles",
+ "prompt": "steel yellow harbor ferry boat with engine realistic",
+ "kit": "boat",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "steel",
+  "poly": 24626,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "realistic",
+  "steel",
+  "balanced",
+  "ferry"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24626,
+ "seed": 41389
+}

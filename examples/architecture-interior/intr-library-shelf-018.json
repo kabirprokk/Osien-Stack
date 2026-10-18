@@ -1,0 +1,25 @@
+{
+ "id": "intr-library-shelf-018",
+ "name": "Marble Library Shelf 018",
+ "category": "architecture-interior",
+ "prompt": "mossy leather dark library bookshelf wall fantasy",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "leather",
+  "poly": 12654,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "fantasy",
+  "leather",
+  "ancient",
+  "library"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12654,
+ "seed": 41737
+}

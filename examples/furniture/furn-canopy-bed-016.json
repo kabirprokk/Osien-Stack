@@ -1,0 +1,25 @@
+{
+ "id": "furn-canopy-bed-016",
+ "name": "Small Canopy Bed 016",
+ "category": "furniture",
+ "prompt": "wooden wooden canopy bed mattress low poly",
+ "kit": "bed",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 22183,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bed",
+  "lowpoly",
+  "wood",
+  "balanced",
+  "mattress"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22183,
+ "seed": 41635
+}

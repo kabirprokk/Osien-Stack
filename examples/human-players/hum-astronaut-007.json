@@ -1,0 +1,21 @@
+{
+ "id": "hum-astronaut-007",
+ "name": "Strong Astronaut 007",
+ "category": "human-players",
+ "kit": "astronaut",
+ "prompt": "strong brave brave astronaut",
+ "seed": 40107,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "astronaut",
+  "space",
+  "suit",
+  "strong",
+  "brave",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

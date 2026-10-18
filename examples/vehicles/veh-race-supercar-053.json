@@ -1,0 +1,26 @@
+{
+ "id": "veh-race-supercar-053",
+ "name": "Desert Race Supercar 053",
+ "category": "vehicles",
+ "prompt": "iron red sports race car supercar realistic",
+ "kit": "carSportsV2",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 10822,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "carSportsV2",
+  "realistic",
+  "iron",
+  "balanced",
+  "sports",
+  "race"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10822,
+ "seed": 41412
+}

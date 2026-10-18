@@ -1,0 +1,26 @@
+{
+ "id": "char-forest-elf-002",
+ "name": "Dark Forest Elf 002",
+ "category": "characters",
+ "prompt": "polished fabric slender forest elf mage sci-fi",
+ "kit": "mage",
+ "params": {
+  "quality": "draft",
+  "style": "scifi",
+  "material": "fabric",
+  "poly": 3640,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "scifi",
+  "fabric",
+  "pristine",
+  "elf",
+  "mage"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3640,
+ "seed": 41461
+}

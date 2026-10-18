@@ -1,0 +1,25 @@
+{
+ "id": "intr-library-shelf-066",
+ "name": "Small Library Shelf 066",
+ "category": "architecture-interior",
+ "prompt": "ancient marble dark library bookshelf wall realistic",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 13149,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "realistic",
+  "marble",
+  "ancient",
+  "library"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13149,
+ "seed": 41785
+}

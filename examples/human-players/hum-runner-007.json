@@ -1,0 +1,21 @@
+{
+ "id": "hum-runner-007",
+ "name": "Strong Runner 007",
+ "category": "human-players",
+ "kit": "runner",
+ "prompt": "strong bold swift running athlete",
+ "seed": 40117,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "runner",
+  "athlete",
+  "sport",
+  "strong",
+  "bold",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

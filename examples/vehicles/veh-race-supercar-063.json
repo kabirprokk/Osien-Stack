@@ -1,0 +1,28 @@
+{
+ "id": "veh-race-supercar-063",
+ "name": "Old Race Supercar 063",
+ "category": "vehicles",
+ "prompt": "rusty red sports race car supercar with spoiler realistic",
+ "kit": "carSportsV2",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "rust",
+  "poly": 12179,
+  "parts": [
+   "spoiler"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "carSportsV2",
+  "realistic",
+  "rust",
+  "balanced",
+  "sports",
+  "race"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12179,
+ "seed": 41422
+}

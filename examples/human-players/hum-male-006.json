@@ -1,0 +1,21 @@
+{
+ "id": "hum-male-006",
+ "name": "Steady Male 006",
+ "category": "human-players",
+ "kit": "baseMale",
+ "prompt": "steady bold standing man",
+ "seed": 40006,
+ "params": {
+  "quality": "draft",
+  "style": "realistic"
+ },
+ "tags": [
+  "man",
+  "male",
+  "casual",
+  "steady",
+  "bold",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

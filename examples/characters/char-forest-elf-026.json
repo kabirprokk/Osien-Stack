@@ -1,0 +1,26 @@
+{
+ "id": "char-forest-elf-026",
+ "name": "Brave Forest Elf 026",
+ "category": "characters",
+ "prompt": "gold slender forest elf mage realistic",
+ "kit": "mage",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "gold",
+  "poly": 27245,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "realistic",
+  "gold",
+  "balanced",
+  "elf",
+  "mage"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 27245,
+ "seed": 41485
+}

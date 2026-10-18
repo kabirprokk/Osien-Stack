@@ -1,0 +1,25 @@
+{
+ "id": "intr-hall-throne-005",
+ "name": "Warm Hall Throne 005",
+ "category": "architecture-interior",
+ "prompt": "weathered leather marble hall throne fantasy",
+ "kit": "throne",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "leather",
+  "poly": 10851,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "throne",
+  "fantasy",
+  "leather",
+  "worn",
+  "hall"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10851,
+ "seed": 41724
+}

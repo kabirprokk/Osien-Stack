@@ -1,0 +1,27 @@
+{
+ "id": "fant-elven-castle-056",
+ "name": "Mystic Elven Castle 056",
+ "category": "fantasy",
+ "prompt": "weathered bronze slender elven castle fortress with towers and gate fantasy",
+ "kit": "castle",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "bronze",
+  "poly": 12689,
+  "parts": [
+   "towers",
+   "gate"
+  ]
+ },
+ "tags": [
+  "fantasy",
+  "castle",
+  "bronze",
+  "worn",
+  "elven"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12689,
+ "seed": 41935
+}

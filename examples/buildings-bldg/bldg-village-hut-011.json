@@ -1,0 +1,28 @@
+{
+ "id": "bldg-village-hut-011",
+ "name": "Marble Village Hut 011",
+ "category": "buildings-bldg",
+ "prompt": "mossy glass village straw hut house with doors with doors stylized",
+ "kit": "house",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 30723,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "stylized",
+  "glass",
+  "ancient",
+  "hut",
+  "village"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30723,
+ "seed": 41010
+}

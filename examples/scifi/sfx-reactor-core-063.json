@@ -1,0 +1,25 @@
+{
+ "id": "sfx-reactor-core-063",
+ "name": "Lunar Reactor Core 063",
+ "category": "scifi",
+ "prompt": "ancient obsidian glowing reactor core cylinder column low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "obsidian",
+  "poly": 13142,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "lowpoly",
+  "obsidian",
+  "ancient",
+  "reactor"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13142,
+ "seed": 41862
+}

@@ -1,0 +1,26 @@
+{
+ "id": "nat-alien-flora-047",
+ "name": "Grey Alien Flora 047",
+ "category": "natural",
+ "prompt": "glass glowing alien plant tentacle flower stylized",
+ "kit": "alienPlant",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 21924,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "alienPlant",
+  "stylized",
+  "glass",
+  "balanced",
+  "alien",
+  "flora"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21924,
+ "seed": 41286
+}

@@ -1,0 +1,21 @@
+{
+ "id": "hum-mage-010",
+ "name": "Bold Mage 010",
+ "category": "human-players",
+ "kit": "mage",
+ "prompt": "bold calm wise mage with staff",
+ "seed": 40060,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "mage",
+  "wizard",
+  "staff",
+  "bold",
+  "calm",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

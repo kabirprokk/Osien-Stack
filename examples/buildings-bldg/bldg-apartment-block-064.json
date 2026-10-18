@@ -1,0 +1,28 @@
+{
+ "id": "bldg-apartment-block-064",
+ "name": "Medieval Apartment Block 064",
+ "category": "buildings-bldg",
+ "prompt": "marble brick apartment building block with windows and doors with windows realistic",
+ "kit": "building",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 28615,
+  "parts": [
+   "windows"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "realistic",
+  "marble",
+  "balanced",
+  "city",
+  "housing"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 28615,
+ "seed": 41063
+}

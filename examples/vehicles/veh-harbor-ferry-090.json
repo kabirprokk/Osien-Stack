@@ -1,0 +1,28 @@
+{
+ "id": "veh-harbor-ferry-090",
+ "name": "Midnight Harbor Ferry 090",
+ "category": "vehicles",
+ "prompt": "iron yellow harbor ferry boat with engine and mast sci-fi",
+ "kit": "boat",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "iron",
+  "poly": 13114,
+  "parts": [
+   "engine",
+   "mast"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "scifi",
+  "iron",
+  "balanced",
+  "ferry"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13114,
+ "seed": 41449
+}

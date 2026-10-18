@@ -1,0 +1,25 @@
+{
+ "id": "sfx-halo-ring-032",
+ "name": "Neon Halo Ring 032",
+ "category": "scifi",
+ "prompt": "chrome spinning halo ring torus station low poly",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "chrome",
+  "poly": 11653,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "torus",
+  "lowpoly",
+  "chrome",
+  "balanced",
+  "station"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11653,
+ "seed": 41831
+}

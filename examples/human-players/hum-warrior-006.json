@@ -1,0 +1,21 @@
+{
+ "id": "hum-warrior-006",
+ "name": "Wild Warrior 006",
+ "category": "human-players",
+ "kit": "warrior",
+ "prompt": "wild calm fierce warrior",
+ "seed": 40036,
+ "params": {
+  "quality": "draft",
+  "style": "fantasy"
+ },
+ "tags": [
+  "warrior",
+  "fighter",
+  "tribal",
+  "wild",
+  "calm",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

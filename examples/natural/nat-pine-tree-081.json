@@ -1,0 +1,26 @@
+{
+ "id": "nat-pine-tree-081",
+ "name": "Red Pine Tree 081",
+ "category": "natural",
+ "prompt": "pristine bone tall pine tree low poly",
+ "kit": "tree",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "bone",
+  "poly": 12509,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "lowpoly",
+  "bone",
+  "pristine",
+  "pine",
+  "forest"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12509,
+ "seed": 41320
+}

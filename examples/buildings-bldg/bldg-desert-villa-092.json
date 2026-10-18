@@ -1,0 +1,28 @@
+{
+ "id": "bldg-desert-villa-092",
+ "name": "Medieval Desert Villa 092",
+ "category": "buildings-bldg",
+ "prompt": "worn steel desert sandstone villa house with doors and windows with doors stylized",
+ "kit": "house",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 21804,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "stylized",
+  "steel",
+  "worn",
+  "villa",
+  "desert"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21804,
+ "seed": 41091
+}

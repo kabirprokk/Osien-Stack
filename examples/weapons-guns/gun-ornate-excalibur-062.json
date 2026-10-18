@@ -1,0 +1,26 @@
+{
+ "id": "gun-ornate-excalibur-062",
+ "name": "Oaken Ornate Excalibur 062",
+ "category": "weapons-guns",
+ "prompt": "steel ornate golden enchanted excalibur sword blade low poly",
+ "kit": "swordV2",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 11718,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "swordV2",
+  "lowpoly",
+  "steel",
+  "balanced",
+  "sword",
+  "legendary"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11718,
+ "seed": 41181
+}

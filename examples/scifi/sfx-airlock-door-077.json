@@ -1,0 +1,24 @@
+{
+ "id": "sfx-airlock-door-077",
+ "name": "Rusty Airlock Door 077",
+ "category": "scifi",
+ "prompt": "ancient glass steel airlock door box panel sci-fi",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "glass",
+  "poly": 12576,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "box",
+  "glass",
+  "ancient",
+  "airlock"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12576,
+ "seed": 41876
+}

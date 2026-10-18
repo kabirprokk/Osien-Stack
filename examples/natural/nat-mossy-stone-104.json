@@ -1,0 +1,25 @@
+{
+ "id": "nat-mossy-stone-104",
+ "name": "Glowing Mossy Stone 104",
+ "category": "natural",
+ "prompt": "mossy wooden mossy ancient stone rock low poly",
+ "kit": "rock",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 22171,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "lowpoly",
+  "wood",
+  "ancient",
+  "moss"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22171,
+ "seed": 41343
+}

@@ -1,0 +1,25 @@
+{
+ "id": "food-baguette-038",
+ "name": "Red Baguette 038",
+ "category": "food",
+ "prompt": "weathered wooden golden baguette capsule loaf low poly",
+ "kit": "capsule",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 23253,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "capsule",
+  "lowpoly",
+  "wood",
+  "worn",
+  "bread"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23253,
+ "seed": 41977
+}

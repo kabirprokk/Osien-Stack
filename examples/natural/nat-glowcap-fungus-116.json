@@ -1,0 +1,26 @@
+{
+ "id": "nat-glowcap-fungus-116",
+ "name": "Red Glowcap Fungus 116",
+ "category": "natural",
+ "prompt": "weathered glass glowing blue glowcap mushroom stylized",
+ "kit": "mushroom",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 11495,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "stylized",
+  "glass",
+  "worn",
+  "glow",
+  "fungus"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11495,
+ "seed": 41355
+}

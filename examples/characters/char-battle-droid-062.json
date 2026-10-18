@@ -1,0 +1,27 @@
+{
+ "id": "char-battle-droid-062",
+ "name": "Dark Battle Droid 062",
+ "category": "characters",
+ "prompt": "steel tall battle droid mech with engine low poly",
+ "kit": "robot",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 24471,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "lowpoly",
+  "steel",
+  "balanced",
+  "mech"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24471,
+ "seed": 41521
+}

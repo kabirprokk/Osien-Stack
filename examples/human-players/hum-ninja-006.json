@@ -1,0 +1,21 @@
+{
+ "id": "hum-ninja-006",
+ "name": "Grand Ninja 006",
+ "category": "human-players",
+ "kit": "ninja",
+ "prompt": "grand tall silent ninja",
+ "seed": 40096,
+ "params": {
+  "quality": "draft",
+  "style": "fantasy"
+ },
+ "tags": [
+  "ninja",
+  "stealth",
+  "shadow",
+  "grand",
+  "tall",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

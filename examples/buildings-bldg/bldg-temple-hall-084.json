@@ -1,0 +1,28 @@
+{
+ "id": "bldg-temple-hall-084",
+ "name": "Ruined Temple Hall 084",
+ "category": "buildings-bldg",
+ "prompt": "weathered steel ancient marble temple hall with columns and steps with doors and windows low poly",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 10920,
+  "parts": [
+   "doors",
+   "windows"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "lowpoly",
+  "steel",
+  "worn",
+  "temple"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10920,
+ "seed": 41083
+}

@@ -1,0 +1,26 @@
+{
+ "id": "furn-bookshelf-077",
+ "name": "Round Bookshelf 077",
+ "category": "furniture",
+ "prompt": "iron tall wooden bookshelf shelf with books low poly",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 23435,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "lowpoly",
+  "iron",
+  "balanced",
+  "shelf",
+  "books"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23435,
+ "seed": 41696
+}

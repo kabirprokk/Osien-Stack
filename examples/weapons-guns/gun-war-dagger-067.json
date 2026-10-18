@@ -1,0 +1,25 @@
+{
+ "id": "gun-war-dagger-067",
+ "name": "Ancient War Dagger 067",
+ "category": "weapons-guns",
+ "prompt": "pristine wooden iron war dagger knife stylized",
+ "kit": "sword",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 11281,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "stylized",
+  "wood",
+  "pristine",
+  "dagger"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11281,
+ "seed": 41186
+}

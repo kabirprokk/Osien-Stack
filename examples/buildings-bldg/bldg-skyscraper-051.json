@@ -1,0 +1,26 @@
+{
+ "id": "bldg-skyscraper-051",
+ "name": "Ruined Skyscraper 051",
+ "category": "buildings-bldg",
+ "prompt": "glass modern glass skyscraper tower with windows stylized",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 11993,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "stylized",
+  "glass",
+  "balanced",
+  "modern",
+  "city"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11993,
+ "seed": 41050
+}

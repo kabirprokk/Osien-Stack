@@ -1,0 +1,25 @@
+{
+ "id": "fant-rune-blade-015",
+ "name": "Golden Rune Blade 015",
+ "category": "fantasy",
+ "prompt": "marble ornate runed rune blade sword realistic",
+ "kit": "swordV2",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 12524,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "swordV2",
+  "realistic",
+  "marble",
+  "balanced",
+  "rune"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12524,
+ "seed": 41894
+}

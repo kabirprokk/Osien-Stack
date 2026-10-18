@@ -1,0 +1,25 @@
+{
+ "id": "crea-cave-bear-028",
+ "name": "Fire Cave Bear 028",
+ "category": "creatures",
+ "prompt": "worn glass brown cave bear beast fantasy",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "glass",
+  "poly": 10963,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "fantasy",
+  "glass",
+  "worn",
+  "bear"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10963,
+ "seed": 41567
+}

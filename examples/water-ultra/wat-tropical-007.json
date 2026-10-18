@@ -1,0 +1,21 @@
+{
+ "id": "wat-tropical-007",
+ "name": "Clear Tropical 007",
+ "category": "water-ultra",
+ "kit": "tropicalShallows",
+ "prompt": "clear turquoise tropical turquoise shallows lagoon",
+ "seed": 40077,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "tropical",
+  "lagoon",
+  "sand",
+  "clear",
+  "turquoise",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

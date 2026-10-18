@@ -1,0 +1,25 @@
+{
+ "id": "fant-aegis-shield-040",
+ "name": "Runic Aegis Shield 040",
+ "category": "fantasy",
+ "prompt": "obsidian golden aegis shield stylized",
+ "kit": "shield",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "obsidian",
+  "poly": 11405,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "shield",
+  "stylized",
+  "obsidian",
+  "balanced",
+  "aegis"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11405,
+ "seed": 41919
+}

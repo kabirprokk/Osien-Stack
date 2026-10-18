@@ -1,0 +1,28 @@
+{
+ "id": "veh-chopper-bike-024",
+ "name": "Midnight Chopper Bike 024",
+ "category": "vehicles",
+ "prompt": "gold black chopper motorcycle bike with wheels and engine realistic",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "gold",
+  "poly": 23524,
+  "parts": [
+   "wheels",
+   "engine"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "realistic",
+  "gold",
+  "balanced",
+  "chopper"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23524,
+ "seed": 41383
+}

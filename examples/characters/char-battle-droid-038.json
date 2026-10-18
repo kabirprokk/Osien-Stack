@@ -1,0 +1,25 @@
+{
+ "id": "char-battle-droid-038",
+ "name": "Wise Battle Droid 038",
+ "category": "characters",
+ "prompt": "weathered bone tall battle droid mech fantasy",
+ "kit": "robot",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "bone",
+  "poly": 24780,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "fantasy",
+  "bone",
+  "worn",
+  "mech"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24780,
+ "seed": 41497
+}

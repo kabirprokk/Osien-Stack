@@ -1,0 +1,26 @@
+{
+ "id": "char-cute-robot-012",
+ "name": "Brave Cute Robot 012",
+ "category": "characters",
+ "prompt": "polished chrome cute little robot droid low poly",
+ "kit": "robot",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "chrome",
+  "poly": 11128,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "lowpoly",
+  "chrome",
+  "pristine",
+  "droid",
+  "cute"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11128,
+ "seed": 41471
+}

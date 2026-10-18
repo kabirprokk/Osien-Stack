@@ -1,0 +1,27 @@
+{
+ "id": "veh-pickup-truck-072",
+ "name": "Rusty Pickup Truck 072",
+ "category": "vehicles",
+ "prompt": "weathered steel blue pickup truck vehicle with engine realistic",
+ "kit": "car",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "steel",
+  "poly": 11467,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "realistic",
+  "steel",
+  "worn",
+  "truck"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11467,
+ "seed": 41431
+}

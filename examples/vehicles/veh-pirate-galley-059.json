@@ -1,0 +1,26 @@
+{
+ "id": "veh-pirate-galley-059",
+ "name": "Midnight Pirate Galley 059",
+ "category": "vehicles",
+ "prompt": "polished iron old pirate galley ship sci-fi",
+ "kit": "boat",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "iron",
+  "poly": 12930,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "scifi",
+  "iron",
+  "pristine",
+  "pirate",
+  "ship"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12930,
+ "seed": 41418
+}

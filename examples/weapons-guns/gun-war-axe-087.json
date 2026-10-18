@@ -1,0 +1,24 @@
+{
+ "id": "gun-war-axe-087",
+ "name": "Ornate War Axe 087",
+ "category": "weapons-guns",
+ "prompt": "ancient steel steel war axe hatchet fantasy",
+ "kit": "axe",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "steel",
+  "poly": 4398,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "axe",
+  "fantasy",
+  "steel",
+  "ancient"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4398,
+ "seed": 41206
+}

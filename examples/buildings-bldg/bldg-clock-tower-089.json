@@ -1,0 +1,25 @@
+{
+ "id": "bldg-clock-tower-089",
+ "name": "Medieval Clock Tower 089",
+ "category": "buildings-bldg",
+ "prompt": "wooden old clock tower building with windows fantasy",
+ "kit": "building",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "wood",
+  "poly": 29359,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "fantasy",
+  "wood",
+  "balanced",
+  "tower"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 29359,
+ "seed": 41088
+}

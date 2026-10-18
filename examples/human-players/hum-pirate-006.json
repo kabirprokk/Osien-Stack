@@ -1,0 +1,21 @@
+{
+ "id": "hum-pirate-006",
+ "name": "Steady Pirate 006",
+ "category": "human-players",
+ "kit": "pirate",
+ "prompt": "steady grand rugged pirate captain",
+ "seed": 40086,
+ "params": {
+  "quality": "draft",
+  "style": "fantasy"
+ },
+ "tags": [
+  "pirate",
+  "captain",
+  "rogue",
+  "steady",
+  "grand",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

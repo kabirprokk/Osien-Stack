@@ -1,0 +1,26 @@
+{
+ "id": "gun-katana-066",
+ "name": "Ancient Katana 066",
+ "category": "weapons-guns",
+ "prompt": "weathered chrome polished steel katana blade realistic",
+ "kit": "sword",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "chrome",
+  "poly": 32889,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "realistic",
+  "chrome",
+  "worn",
+  "katana",
+  "samurai"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 32889,
+ "seed": 41185
+}

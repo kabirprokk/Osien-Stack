@@ -1,0 +1,21 @@
+{
+ "id": "hum-pirate-010",
+ "name": "Proud Pirate 010",
+ "category": "human-players",
+ "kit": "pirate",
+ "prompt": "proud wild rugged pirate captain",
+ "seed": 40090,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "pirate",
+  "captain",
+  "rogue",
+  "proud",
+  "wild",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

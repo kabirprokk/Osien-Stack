@@ -1,0 +1,21 @@
+{
+ "id": "veg-rose-009",
+ "name": "Blooming Rose 009",
+ "category": "vegetation-ultra",
+ "kit": "roseBush",
+ "prompt": "blooming thorny rose bush with red blooms",
+ "seed": 30079,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "roses",
+  "flowering",
+  "garden",
+  "blooming",
+  "thorny",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

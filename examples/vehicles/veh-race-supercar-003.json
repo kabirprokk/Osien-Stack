@@ -1,0 +1,26 @@
+{
+ "id": "veh-race-supercar-003",
+ "name": "Midnight Race Supercar 003",
+ "category": "vehicles",
+ "prompt": "ancient rusty red sports race car supercar low poly",
+ "kit": "carSportsV2",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "rust",
+  "poly": 11370,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "carSportsV2",
+  "lowpoly",
+  "rust",
+  "ancient",
+  "sports",
+  "race"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11370,
+ "seed": 41362
+}

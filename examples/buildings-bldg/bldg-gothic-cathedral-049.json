@@ -1,0 +1,29 @@
+{
+ "id": "bldg-gothic-cathedral-049",
+ "name": "Old Gothic Cathedral 049",
+ "category": "buildings-bldg",
+ "prompt": "stone gothic stone castle cathedral with towers and gate with towers and gate fantasy",
+ "kit": "castle",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "stone",
+  "poly": 12989,
+  "parts": [
+   "towers",
+   "gate"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "castle",
+  "fantasy",
+  "stone",
+  "balanced",
+  "gothic",
+  "church"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12989,
+ "seed": 41048
+}

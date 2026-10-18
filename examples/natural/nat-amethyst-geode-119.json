@@ -1,0 +1,26 @@
+{
+ "id": "nat-amethyst-geode-119",
+ "name": "Red Amethyst Geode 119",
+ "category": "natural",
+ "prompt": "glass purple amethyst crystal geode realistic",
+ "kit": "crystal",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 12578,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "realistic",
+  "glass",
+  "balanced",
+  "amethyst",
+  "gem"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12578,
+ "seed": 41358
+}

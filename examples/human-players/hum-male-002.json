@@ -1,0 +1,21 @@
+{
+ "id": "hum-male-002",
+ "name": "Calm Male 002",
+ "category": "human-players",
+ "kit": "baseMale",
+ "prompt": "calm bold standing man",
+ "seed": 40002,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "man",
+  "male",
+  "casual",
+  "calm",
+  "bold",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

@@ -1,0 +1,25 @@
+{
+ "id": "furn-farm-table-044",
+ "name": "Antique Farm Table 044",
+ "category": "furniture",
+ "prompt": "weathered marble rustic wooden farm table realistic",
+ "kit": "table",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 11659,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "table",
+  "realistic",
+  "marble",
+  "worn",
+  "farm"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11659,
+ "seed": 41663
+}

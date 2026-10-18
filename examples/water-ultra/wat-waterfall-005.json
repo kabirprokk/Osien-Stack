@@ -1,0 +1,21 @@
+{
+ "id": "wat-waterfall-005",
+ "name": "Powerful Waterfall 005",
+ "category": "water-ultra",
+ "kit": "waterfall",
+ "prompt": "powerful misty tall waterfall cascade falls",
+ "seed": 40035,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "waterfall",
+  "cascade",
+  "mist",
+  "powerful",
+  "misty",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

@@ -1,0 +1,27 @@
+{
+ "id": "sfx-orbital-shuttle-051",
+ "name": "Lunar Orbital Shuttle 051",
+ "category": "scifi",
+ "prompt": "polished glass white orbital shuttle spacecraft with cockpit stylized",
+ "kit": "spaceship",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 11054,
+  "parts": [
+   "cockpit"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "stylized",
+  "glass",
+  "pristine",
+  "shuttle"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11054,
+ "seed": 41850
+}

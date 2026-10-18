@@ -1,0 +1,25 @@
+{
+ "id": "sfx-reactor-core-015",
+ "name": "Orbital Reactor Core 015",
+ "category": "scifi",
+ "prompt": "pristine obsidian glowing reactor core cylinder column stylized",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "obsidian",
+  "poly": 11480,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "stylized",
+  "obsidian",
+  "pristine",
+  "reactor"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11480,
+ "seed": 41814
+}

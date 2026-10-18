@@ -1,0 +1,29 @@
+{
+ "id": "bldg-castle-keep-098",
+ "name": "Medieval Castle Keep 098",
+ "category": "buildings-bldg",
+ "prompt": "polished steel medieval castle fortress keep with towers and gate with towers and gate fantasy",
+ "kit": "castle",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "steel",
+  "poly": 22629,
+  "parts": [
+   "towers",
+   "gate"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "castle",
+  "fantasy",
+  "steel",
+  "pristine",
+  "medieval",
+  "fortress"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22629,
+ "seed": 41097
+}

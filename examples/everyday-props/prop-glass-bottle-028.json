@@ -1,0 +1,25 @@
+{
+ "id": "prop-glass-bottle-028",
+ "name": "Old Glass Bottle 028",
+ "category": "everyday-props",
+ "prompt": "pristine steel green glass bottle capsule realistic",
+ "kit": "capsule",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "steel",
+  "poly": 21722,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "capsule",
+  "realistic",
+  "steel",
+  "pristine",
+  "bottle"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21722,
+ "seed": 42007
+}

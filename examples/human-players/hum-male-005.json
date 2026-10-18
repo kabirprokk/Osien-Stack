@@ -1,0 +1,21 @@
+{
+ "id": "hum-male-005",
+ "name": "Strong Male 005",
+ "category": "human-players",
+ "kit": "baseMale",
+ "prompt": "strong noble standing man",
+ "seed": 40005,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "man",
+  "male",
+  "casual",
+  "strong",
+  "noble",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

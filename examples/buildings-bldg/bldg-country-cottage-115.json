@@ -1,0 +1,25 @@
+{
+ "id": "bldg-country-cottage-115",
+ "name": "Ruined Country Cottage 115",
+ "category": "buildings-bldg",
+ "prompt": "weathered glass country stone cottage house with chimney and windows stylized",
+ "kit": "house",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 12717,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "stylized",
+  "glass",
+  "worn",
+  "cottage"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12717,
+ "seed": 41114
+}

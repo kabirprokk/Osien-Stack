@@ -1,0 +1,26 @@
+{
+ "id": "char-cute-robot-068",
+ "name": "Young Cute Robot 068",
+ "category": "characters",
+ "prompt": "weathered leather cute little robot droid stylized",
+ "kit": "robot",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 10821,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "stylized",
+  "leather",
+  "worn",
+  "droid",
+  "cute"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10821,
+ "seed": 41527
+}

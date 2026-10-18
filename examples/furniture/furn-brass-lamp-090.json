@@ -1,0 +1,25 @@
+{
+ "id": "furn-brass-lamp-090",
+ "name": "Grand Brass Lamp 090",
+ "category": "furniture",
+ "prompt": "weathered leather brass desk lamp lantern stylized",
+ "kit": "lamp",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 12140,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "lamp",
+  "stylized",
+  "leather",
+  "worn",
+  "lantern"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12140,
+ "seed": 41709
+}

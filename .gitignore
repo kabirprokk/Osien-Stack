@@ -1,0 +1,12 @@
+# osien-stack
+node_modules/
+.smoke-mem/
+*.log
+.DS_Store
+Thumbs.db
+backups/
+*.bak
+.env
+.env.local
+coverage/
+dist/

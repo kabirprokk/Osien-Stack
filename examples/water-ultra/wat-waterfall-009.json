@@ -1,0 +1,21 @@
+{
+ "id": "wat-waterfall-009",
+ "name": "Misty Waterfall 009",
+ "category": "water-ultra",
+ "kit": "waterfall",
+ "prompt": "misty tall tall waterfall cascade falls",
+ "seed": 40039,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "waterfall",
+  "cascade",
+  "mist",
+  "misty",
+  "tall",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

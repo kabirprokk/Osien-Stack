@@ -1,0 +1,25 @@
+{
+ "id": "nat-mossy-stone-114",
+ "name": "Wild Mossy Stone 114",
+ "category": "natural",
+ "prompt": "weathered wooden mossy ancient stone rock realistic",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 12939,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "realistic",
+  "wood",
+  "worn",
+  "moss"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12939,
+ "seed": 41353
+}

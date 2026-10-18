@@ -1,0 +1,25 @@
+{
+ "id": "prop-coffee-mug-043",
+ "name": "Old Coffee Mug 043",
+ "category": "everyday-props",
+ "prompt": "steel white coffee mug cylinder cup stylized",
+ "kit": "cylinder",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 4224,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "cylinder",
+  "stylized",
+  "steel",
+  "balanced",
+  "mug"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4224,
+ "seed": 42022
+}

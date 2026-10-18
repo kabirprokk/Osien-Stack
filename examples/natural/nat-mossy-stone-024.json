@@ -1,0 +1,25 @@
+{
+ "id": "nat-mossy-stone-024",
+ "name": "Wild Mossy Stone 024",
+ "category": "natural",
+ "prompt": "glass mossy ancient stone rock realistic",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 12904,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "realistic",
+  "glass",
+  "balanced",
+  "moss"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12904,
+ "seed": 41263
+}

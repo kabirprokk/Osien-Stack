@@ -1,0 +1,27 @@
+{
+ "id": "intr-oak-dresser-024",
+ "name": "Cozy Oak Dresser 024",
+ "category": "architecture-interior",
+ "prompt": "worn brass oak dresser cupboard drawers with doors low poly",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 12583,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "lowpoly",
+  "brass",
+  "worn",
+  "dresser"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12583,
+ "seed": 41743
+}

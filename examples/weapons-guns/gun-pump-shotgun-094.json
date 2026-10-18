@@ -1,0 +1,26 @@
+{
+ "id": "gun-pump-shotgun-094",
+ "name": "Ornate Pump Shotgun 094",
+ "category": "weapons-guns",
+ "prompt": "gold wooden pump shotgun receiver box fantasy",
+ "kit": "box",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "gold",
+  "poly": 22853,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "box",
+  "fantasy",
+  "gold",
+  "balanced",
+  "gun",
+  "shotgun"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22853,
+ "seed": 41213
+}

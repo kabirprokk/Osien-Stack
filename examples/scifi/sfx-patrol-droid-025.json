@@ -1,0 +1,26 @@
+{
+ "id": "sfx-patrol-droid-025",
+ "name": "Solar Patrol Droid 025",
+ "category": "scifi",
+ "prompt": "worn steel chrome patrol robot droid with engine sci-fi",
+ "kit": "robot",
+ "params": {
+  "quality": "draft",
+  "style": "scifi",
+  "material": "steel",
+  "poly": 3875,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "robot",
+  "steel",
+  "worn",
+  "patrol"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3875,
+ "seed": 41824
+}

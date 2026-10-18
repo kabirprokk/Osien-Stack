@@ -1,0 +1,25 @@
+{
+ "id": "intr-study-desk-023",
+ "name": "Cozy Study Desk 023",
+ "category": "architecture-interior",
+ "prompt": "glass oak study desk table stylized",
+ "kit": "table",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 23493,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "table",
+  "stylized",
+  "glass",
+  "balanced",
+  "study"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23493,
+ "seed": 41742
+}

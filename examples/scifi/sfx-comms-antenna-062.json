@@ -1,0 +1,27 @@
+{
+ "id": "sfx-comms-antenna-062",
+ "name": "Neon Comms Antenna 062",
+ "category": "scifi",
+ "prompt": "obsidian tall comms antenna tube mast with mast realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "obsidian",
+  "poly": 25640,
+  "parts": [
+   "mast"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "realistic",
+  "obsidian",
+  "balanced",
+  "antenna"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25640,
+ "seed": 41861
+}

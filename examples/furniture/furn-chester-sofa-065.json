@@ -1,0 +1,25 @@
+{
+ "id": "furn-chester-sofa-065",
+ "name": "Round Chester Sofa 065",
+ "category": "furniture",
+ "prompt": "wooden leather chesterfield sofa couch realistic",
+ "kit": "sofa",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 29454,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "sofa",
+  "realistic",
+  "wood",
+  "balanced",
+  "couch"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 29454,
+ "seed": 41684
+}

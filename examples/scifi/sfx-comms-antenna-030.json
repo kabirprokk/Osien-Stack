@@ -1,0 +1,25 @@
+{
+ "id": "sfx-comms-antenna-030",
+ "name": "Deep Comms Antenna 030",
+ "category": "scifi",
+ "prompt": "polished obsidian tall comms antenna tube mast realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "obsidian",
+  "poly": 3981,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "realistic",
+  "obsidian",
+  "pristine",
+  "antenna"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3981,
+ "seed": 41829
+}

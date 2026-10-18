@@ -1,0 +1,21 @@
+{
+ "id": "wat-lake-003",
+ "name": "Still Lake 003",
+ "category": "water-ultra",
+ "kit": "calmLake",
+ "prompt": "still serene calm mountain lake water",
+ "seed": 40013,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "lake",
+  "still",
+  "mirror",
+  "still",
+  "serene",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

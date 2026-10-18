@@ -1,0 +1,25 @@
+{
+ "id": "nat-mossy-stone-034",
+ "name": "Tall Mossy Stone 034",
+ "category": "natural",
+ "prompt": "wooden mossy ancient stone rock realistic",
+ "kit": "rock",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 31548,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "realistic",
+  "wood",
+  "balanced",
+  "moss"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31548,
+ "seed": 41273
+}

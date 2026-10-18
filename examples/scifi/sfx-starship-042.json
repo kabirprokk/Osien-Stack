@@ -1,0 +1,25 @@
+{
+ "id": "sfx-starship-042",
+ "name": "Neon Starship 042",
+ "category": "scifi",
+ "prompt": "ancient iron sleek starship rocket realistic",
+ "kit": "spaceship",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 25917,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "realistic",
+  "iron",
+  "ancient",
+  "starship"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25917,
+ "seed": 41841
+}

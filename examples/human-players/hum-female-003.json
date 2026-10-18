@@ -1,0 +1,21 @@
+{
+ "id": "hum-female-003",
+ "name": "Swift Female 003",
+ "category": "human-players",
+ "kit": "baseFemale",
+ "prompt": "swift steady standing woman",
+ "seed": 40013,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "woman",
+  "female",
+  "casual",
+  "swift",
+  "steady",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

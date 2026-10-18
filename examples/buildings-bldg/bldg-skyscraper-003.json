@@ -1,0 +1,29 @@
+{
+ "id": "bldg-skyscraper-003",
+ "name": "Medieval Skyscraper 003",
+ "category": "buildings-bldg",
+ "prompt": "ancient iron modern glass skyscraper tower with windows with doors and windows fantasy",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "iron",
+  "poly": 12889,
+  "parts": [
+   "doors",
+   "windows"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "fantasy",
+  "iron",
+  "ancient",
+  "modern",
+  "city"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12889,
+ "seed": 41002
+}

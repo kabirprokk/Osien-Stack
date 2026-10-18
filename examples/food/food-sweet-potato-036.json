@@ -1,0 +1,25 @@
+{
+ "id": "food-sweet-potato-036",
+ "name": "Glazed Sweet Potato 036",
+ "category": "food",
+ "prompt": "polished bone orange sweet potato cone realistic",
+ "kit": "cone",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 11817,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "cone",
+  "realistic",
+  "bone",
+  "pristine",
+  "potato"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11817,
+ "seed": 41975
+}

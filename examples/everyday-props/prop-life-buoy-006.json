@@ -1,0 +1,25 @@
+{
+ "id": "prop-life-buoy-006",
+ "name": "Small Life Buoy 006",
+ "category": "everyday-props",
+ "prompt": "leather red life buoy ring torus realistic",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "leather",
+  "poly": 11413,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "torus",
+  "realistic",
+  "leather",
+  "balanced",
+  "buoy"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11413,
+ "seed": 41985
+}

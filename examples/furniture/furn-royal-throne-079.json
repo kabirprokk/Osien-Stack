@@ -1,0 +1,26 @@
+{
+ "id": "furn-royal-throne-079",
+ "name": "Round Royal Throne 079",
+ "category": "furniture",
+ "prompt": "mossy wooden golden royal throne seat stylized",
+ "kit": "throne",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 11710,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "throne",
+  "stylized",
+  "wood",
+  "ancient",
+  "royal",
+  "gold"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11710,
+ "seed": 41698
+}

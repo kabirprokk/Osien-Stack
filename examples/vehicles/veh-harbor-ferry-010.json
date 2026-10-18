@@ -1,0 +1,27 @@
+{
+ "id": "veh-harbor-ferry-010",
+ "name": "Rusty Harbor Ferry 010",
+ "category": "vehicles",
+ "prompt": "iron yellow harbor ferry boat with engine realistic",
+ "kit": "boat",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 29574,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "realistic",
+  "iron",
+  "balanced",
+  "ferry"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 29574,
+ "seed": 41369
+}

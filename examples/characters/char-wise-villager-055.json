@@ -1,0 +1,25 @@
+{
+ "id": "char-wise-villager-055",
+ "name": "Scarred Wise Villager 055",
+ "category": "characters",
+ "prompt": "polished steel wise old townsfolk person realistic",
+ "kit": "baseMale",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "steel",
+  "poly": 12378,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "realistic",
+  "steel",
+  "pristine",
+  "villager"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12378,
+ "seed": 41514
+}

@@ -1,0 +1,25 @@
+{
+ "id": "nat-mossy-stone-004",
+ "name": "Tall Mossy Stone 004",
+ "category": "natural",
+ "prompt": "weathered glass mossy ancient stone rock realistic",
+ "kit": "rock",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 28987,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "realistic",
+  "glass",
+  "worn",
+  "moss"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 28987,
+ "seed": 41243
+}

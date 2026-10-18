@@ -1,0 +1,25 @@
+{
+ "id": "sfx-halo-ring-064",
+ "name": "Neon Halo Ring 064",
+ "category": "scifi",
+ "prompt": "glass spinning halo ring torus station low poly",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 12568,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "torus",
+  "lowpoly",
+  "glass",
+  "balanced",
+  "station"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12568,
+ "seed": 41863
+}

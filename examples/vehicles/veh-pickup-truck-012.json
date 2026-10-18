@@ -1,0 +1,27 @@
+{
+ "id": "veh-pickup-truck-012",
+ "name": "Midnight Pickup Truck 012",
+ "category": "vehicles",
+ "prompt": "polished steel blue pickup truck vehicle with wheels sci-fi",
+ "kit": "car",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "steel",
+  "poly": 12828,
+  "parts": [
+   "wheels"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "scifi",
+  "steel",
+  "pristine",
+  "truck"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12828,
+ "seed": 41371
+}

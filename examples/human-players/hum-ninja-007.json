@@ -1,0 +1,21 @@
+{
+ "id": "hum-ninja-007",
+ "name": "Swift Ninja 007",
+ "category": "human-players",
+ "kit": "ninja",
+ "prompt": "swift strong silent ninja",
+ "seed": 40097,
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy"
+ },
+ "tags": [
+  "ninja",
+  "stealth",
+  "shadow",
+  "swift",
+  "strong",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

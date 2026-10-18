@@ -1,0 +1,25 @@
+{
+ "id": "gun-war-dagger-055",
+ "name": "Oaken War Dagger 055",
+ "category": "weapons-guns",
+ "prompt": "ancient rusty iron war dagger knife low poly",
+ "kit": "sword",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "rust",
+  "poly": 11236,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "lowpoly",
+  "rust",
+  "ancient",
+  "dagger"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11236,
+ "seed": 41174
+}

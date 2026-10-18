@@ -1,0 +1,21 @@
+{
+ "id": "veg-savanna-007",
+ "name": "Tall Savanna 007",
+ "category": "vegetation-ultra",
+ "kit": "savannaTuft",
+ "prompt": "tall dry savanna dry grass tuft",
+ "seed": 30027,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "savanna",
+  "dry",
+  "field",
+  "tall",
+  "dry",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

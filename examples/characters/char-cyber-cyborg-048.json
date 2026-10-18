@@ -1,0 +1,27 @@
+{
+ "id": "char-cyber-cyborg-048",
+ "name": "Dark Cyber Cyborg 048",
+ "category": "characters",
+ "prompt": "mossy iron chrome cyber cyborg android with engine fantasy",
+ "kit": "cyborg",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "iron",
+  "poly": 21869,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "fantasy",
+  "iron",
+  "ancient",
+  "cyborg"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21869,
+ "seed": 41507
+}

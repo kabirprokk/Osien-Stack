@@ -1,0 +1,27 @@
+{
+ "id": "char-cyber-cyborg-080",
+ "name": "Dark Cyber Cyborg 080",
+ "category": "characters",
+ "prompt": "iron chrome cyber cyborg android with engine sci-fi",
+ "kit": "cyborg",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "iron",
+  "poly": 23805,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "scifi",
+  "iron",
+  "balanced",
+  "cyborg"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23805,
+ "seed": 41539
+}

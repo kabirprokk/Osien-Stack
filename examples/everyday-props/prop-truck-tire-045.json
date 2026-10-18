@@ -1,0 +1,25 @@
+{
+ "id": "prop-truck-tire-045",
+ "name": "Red Truck Tire 045",
+ "category": "everyday-props",
+ "prompt": "steel black rubber tire torus ring stylized",
+ "kit": "torus",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 24145,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "torus",
+  "stylized",
+  "steel",
+  "balanced",
+  "tire"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24145,
+ "seed": 42024
+}

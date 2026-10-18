@@ -1,0 +1,26 @@
+{
+ "id": "nat-quartz-crystal-018",
+ "name": "Grey Quartz Crystal 018",
+ "category": "natural",
+ "prompt": "weathered glass clear quartz crystal cluster gem stylized",
+ "kit": "crystal",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 11012,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "stylized",
+  "glass",
+  "worn",
+  "quartz",
+  "gem"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11012,
+ "seed": 41257
+}

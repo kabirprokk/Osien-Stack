@@ -1,0 +1,26 @@
+{
+ "id": "nat-quartz-crystal-118",
+ "name": "Amber Quartz Crystal 118",
+ "category": "natural",
+ "prompt": "weathered glass clear quartz crystal cluster gem low poly",
+ "kit": "crystal",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 22831,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "lowpoly",
+  "glass",
+  "worn",
+  "quartz",
+  "gem"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22831,
+ "seed": 41357
+}

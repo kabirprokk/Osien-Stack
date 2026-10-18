@@ -1,0 +1,25 @@
+{
+ "id": "sfx-orbital-shuttle-075",
+ "name": "Orbital Orbital Shuttle 075",
+ "category": "scifi",
+ "prompt": "obsidian white orbital shuttle spacecraft stylized",
+ "kit": "spaceship",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "obsidian",
+  "poly": 24313,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "stylized",
+  "obsidian",
+  "balanced",
+  "shuttle"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24313,
+ "seed": 41874
+}

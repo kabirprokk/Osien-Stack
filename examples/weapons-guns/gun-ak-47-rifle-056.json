@@ -1,0 +1,26 @@
+{
+ "id": "gun-ak-47-rifle-056",
+ "name": "Rusty AK-47 Rifle 056",
+ "category": "weapons-guns",
+ "prompt": "steel rusty ak-47 assault rifle tube barrel low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 21779,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "lowpoly",
+  "steel",
+  "balanced",
+  "gun",
+  "rifle"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21779,
+ "seed": 41175
+}

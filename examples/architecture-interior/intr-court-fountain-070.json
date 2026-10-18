@@ -1,0 +1,25 @@
+{
+ "id": "intr-court-fountain-070",
+ "name": "Marble Court Fountain 070",
+ "category": "architecture-interior",
+ "prompt": "weathered brass marble court fountain low poly",
+ "kit": "fountain",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 4168,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "fountain",
+  "lowpoly",
+  "brass",
+  "worn",
+  "court"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4168,
+ "seed": 41789
+}

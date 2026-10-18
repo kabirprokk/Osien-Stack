@@ -1,0 +1,24 @@
+{
+ "id": "fant-mana-crystal-053",
+ "name": "Golden Mana Crystal 053",
+ "category": "fantasy",
+ "prompt": "bronze glowing blue mana crystal fantasy",
+ "kit": "crystal",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "bronze",
+  "poly": 12460,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "crystal",
+  "bronze",
+  "balanced",
+  "mana"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12460,
+ "seed": 41932
+}

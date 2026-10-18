@@ -1,0 +1,26 @@
+{
+ "id": "furn-oak-chair-001",
+ "name": "Small Oak Chair 001",
+ "category": "furniture",
+ "prompt": "polished iron wooden oak chair stylized",
+ "kit": "chair",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 12532,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "chair",
+  "stylized",
+  "iron",
+  "pristine",
+  "oak",
+  "seat"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12532,
+ "seed": 41620
+}

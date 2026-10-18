@@ -1,0 +1,21 @@
+{
+ "id": "hum-mage-003",
+ "name": "Keen Mage 003",
+ "category": "human-players",
+ "kit": "mage",
+ "prompt": "keen silent wise mage with staff",
+ "seed": 40053,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "mage",
+  "wizard",
+  "staff",
+  "keen",
+  "silent",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

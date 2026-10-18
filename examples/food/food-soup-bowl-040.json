@@ -1,0 +1,25 @@
+{
+ "id": "food-soup-bowl-040",
+ "name": "Fresh Soup Bowl 040",
+ "category": "food",
+ "prompt": "mossy marble white soup bowl sphere dish low poly",
+ "kit": "sphere",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 13108,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "sphere",
+  "lowpoly",
+  "marble",
+  "ancient",
+  "soup"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13108,
+ "seed": 41979
+}

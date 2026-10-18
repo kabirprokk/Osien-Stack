@@ -1,0 +1,25 @@
+{
+ "id": "nat-red-mushroom-045",
+ "name": "Old Red Mushroom 045",
+ "category": "natural",
+ "prompt": "glass red spotted mushroom toadstool realistic",
+ "kit": "mushroom",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 4340,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "realistic",
+  "glass",
+  "balanced",
+  "fungus"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4340,
+ "seed": 41284
+}

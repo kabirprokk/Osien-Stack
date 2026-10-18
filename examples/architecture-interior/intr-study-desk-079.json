@@ -1,0 +1,25 @@
+{
+ "id": "intr-study-desk-079",
+ "name": "Cozy Study Desk 079",
+ "category": "architecture-interior",
+ "prompt": "ancient fabric oak study desk table low poly",
+ "kit": "table",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 11862,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "table",
+  "lowpoly",
+  "fabric",
+  "ancient",
+  "study"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11862,
+ "seed": 41798
+}

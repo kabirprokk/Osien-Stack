@@ -1,0 +1,25 @@
+{
+ "id": "fant-loot-chest-012",
+ "name": "Ancient Loot Chest 012",
+ "category": "fantasy",
+ "prompt": "marble old wooden loot treasure chest stylized",
+ "kit": "treasureChest",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 11364,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "treasureChest",
+  "stylized",
+  "marble",
+  "balanced",
+  "loot"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11364,
+ "seed": 41891
+}

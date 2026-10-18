@@ -1,0 +1,21 @@
+{
+ "id": "hum-warrior-003",
+ "name": "Noble Warrior 003",
+ "category": "human-players",
+ "kit": "warrior",
+ "prompt": "noble calm fierce warrior",
+ "seed": 40033,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "warrior",
+  "fighter",
+  "tribal",
+  "noble",
+  "calm",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

@@ -1,0 +1,26 @@
+{
+ "id": "furn-bookshelf-057",
+ "name": "Cozy Bookshelf 057",
+ "category": "furniture",
+ "prompt": "wooden tall wooden bookshelf shelf with books low poly",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 27079,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "lowpoly",
+  "wood",
+  "balanced",
+  "shelf",
+  "books"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 27079,
+ "seed": 41676
+}

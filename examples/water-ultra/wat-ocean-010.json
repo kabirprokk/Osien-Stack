@@ -1,0 +1,21 @@
+{
+ "id": "wat-ocean-010",
+ "name": "Wild Ocean 010",
+ "category": "water-ultra",
+ "kit": "oceanWave",
+ "prompt": "wild big stormy ocean waves surf",
+ "seed": 40010,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "ocean",
+  "surf",
+  "swell",
+  "wild",
+  "big",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

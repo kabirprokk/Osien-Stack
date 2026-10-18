@@ -1,0 +1,27 @@
+{
+ "id": "sfx-patrol-droid-009",
+ "name": "Solar Patrol Droid 009",
+ "category": "scifi",
+ "prompt": "iron chrome patrol robot droid with engine stylized",
+ "kit": "robot",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 3764,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "robot",
+  "stylized",
+  "iron",
+  "balanced",
+  "patrol"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3764,
+ "seed": 41808
+}

@@ -1,0 +1,28 @@
+{
+ "id": "veh-fighter-jet-057",
+ "name": "Fast Fighter Jet 057",
+ "category": "vehicles",
+ "prompt": "worn rusty gray fighter jet aircraft with engine and wings low poly",
+ "kit": "airplane",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "rust",
+  "poly": 11535,
+  "parts": [
+   "engine",
+   "wings"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "lowpoly",
+  "rust",
+  "worn",
+  "fighter"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11535,
+ "seed": 41416
+}

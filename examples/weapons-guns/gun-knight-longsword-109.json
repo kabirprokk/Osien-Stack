@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-longsword-109",
+ "name": "Oaken Knight Longsword 109",
+ "category": "weapons-guns",
+ "prompt": "wooden knight steel longsword blade low poly",
+ "kit": "sword",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 12230,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "lowpoly",
+  "wood",
+  "balanced",
+  "knight"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12230,
+ "seed": 41228
+}

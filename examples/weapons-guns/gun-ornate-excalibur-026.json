@@ -1,0 +1,26 @@
+{
+ "id": "gun-ornate-excalibur-026",
+ "name": "Oaken Ornate Excalibur 026",
+ "category": "weapons-guns",
+ "prompt": "gold ornate golden enchanted excalibur sword blade fantasy",
+ "kit": "swordV2",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "gold",
+  "poly": 30325,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "swordV2",
+  "fantasy",
+  "gold",
+  "balanced",
+  "sword",
+  "legendary"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30325,
+ "seed": 41145
+}

@@ -1,0 +1,25 @@
+{
+ "id": "intr-court-fountain-014",
+ "name": "Grand Court Fountain 014",
+ "category": "architecture-interior",
+ "prompt": "fabric marble court fountain realistic",
+ "kit": "fountain",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 12461,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "fountain",
+  "realistic",
+  "fabric",
+  "balanced",
+  "court"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12461,
+ "seed": 41733
+}

@@ -1,0 +1,25 @@
+{
+ "id": "nat-quartz-crystal-098",
+ "name": "Wild Quartz Crystal 098",
+ "category": "natural",
+ "prompt": "crystal clear quartz crystal cluster gem realistic",
+ "kit": "crystal",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "crystal",
+  "poly": 28653,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "realistic",
+  "balanced",
+  "quartz",
+  "gem"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 28653,
+ "seed": 41337
+}

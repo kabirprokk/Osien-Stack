@@ -1,0 +1,26 @@
+{
+ "id": "food-orange-fruit-026",
+ "name": "Golden Orange Fruit 026",
+ "category": "food",
+ "prompt": "ancient bone ripe orange sphere fruit low poly",
+ "kit": "sphere",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "bone",
+  "poly": 11505,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "sphere",
+  "lowpoly",
+  "bone",
+  "ancient",
+  "orange",
+  "fruit"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11505,
+ "seed": 41965
+}

@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-longsword-013",
+ "name": "Polished Knight Longsword 013",
+ "category": "weapons-guns",
+ "prompt": "bronze knight steel longsword blade stylized",
+ "kit": "sword",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "bronze",
+  "poly": 3951,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "stylized",
+  "bronze",
+  "balanced",
+  "knight"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3951,
+ "seed": 41132
+}

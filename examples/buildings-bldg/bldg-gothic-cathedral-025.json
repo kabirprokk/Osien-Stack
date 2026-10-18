@@ -1,0 +1,26 @@
+{
+ "id": "bldg-gothic-cathedral-025",
+ "name": "Ruined Gothic Cathedral 025",
+ "category": "buildings-bldg",
+ "prompt": "worn iron gothic stone castle cathedral with towers and gate stylized",
+ "kit": "castle",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 10841,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "castle",
+  "stylized",
+  "iron",
+  "worn",
+  "gothic",
+  "church"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10841,
+ "seed": 41024
+}

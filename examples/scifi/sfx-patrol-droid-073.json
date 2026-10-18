@@ -1,0 +1,26 @@
+{
+ "id": "sfx-patrol-droid-073",
+ "name": "Chrome Patrol Droid 073",
+ "category": "scifi",
+ "prompt": "glass chrome patrol robot droid with engine sci-fi",
+ "kit": "robot",
+ "params": {
+  "quality": "draft",
+  "style": "scifi",
+  "material": "glass",
+  "poly": 4326,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "robot",
+  "glass",
+  "balanced",
+  "patrol"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4326,
+ "seed": 41872
+}

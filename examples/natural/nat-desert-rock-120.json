@@ -1,0 +1,25 @@
+{
+ "id": "nat-desert-rock-120",
+ "name": "Tall Desert Rock 120",
+ "category": "natural",
+ "prompt": "stone weathered sandstone desert rock low poly",
+ "kit": "rock",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 24543,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "lowpoly",
+  "stone",
+  "balanced",
+  "desert"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24543,
+ "seed": 41359
+}

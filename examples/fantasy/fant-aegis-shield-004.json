@@ -1,0 +1,25 @@
+{
+ "id": "fant-aegis-shield-004",
+ "name": "Runic Aegis Shield 004",
+ "category": "fantasy",
+ "prompt": "weathered crystal golden aegis shield realistic",
+ "kit": "shield",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "crystal",
+  "poly": 12704,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "shield",
+  "realistic",
+  "crystal",
+  "worn",
+  "aegis"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12704,
+ "seed": 41883
+}

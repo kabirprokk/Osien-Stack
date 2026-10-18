@@ -1,0 +1,24 @@
+{
+ "id": "gun-war-axe-075",
+ "name": "Rusty War Axe 075",
+ "category": "weapons-guns",
+ "prompt": "polished iron steel war axe hatchet stylized",
+ "kit": "axe",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 22454,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "axe",
+  "stylized",
+  "iron",
+  "pristine"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22454,
+ "seed": 41194
+}

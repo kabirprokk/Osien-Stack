@@ -1,0 +1,26 @@
+{
+ "id": "crea-alien-pet-071",
+ "name": "Swamp Alien Pet 071",
+ "category": "creatures",
+ "prompt": "worn bone small cute alien pet quadruped fantasy",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "bone",
+  "poly": 22388,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "fantasy",
+  "bone",
+  "worn",
+  "alien",
+  "pet"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22388,
+ "seed": 41610
+}

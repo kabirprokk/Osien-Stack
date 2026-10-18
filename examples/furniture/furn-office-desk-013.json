@@ -1,0 +1,26 @@
+{
+ "id": "furn-office-desk-013",
+ "name": "Leather Office Desk 013",
+ "category": "furniture",
+ "prompt": "pristine marble modern office desk table stylized",
+ "kit": "table",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 22237,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "table",
+  "stylized",
+  "marble",
+  "pristine",
+  "desk",
+  "office"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22237,
+ "seed": 41632
+}

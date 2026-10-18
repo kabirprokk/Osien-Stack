@@ -1,0 +1,26 @@
+{
+ "id": "gun-revolver-011",
+ "name": "Golden Revolver 011",
+ "category": "weapons-guns",
+ "prompt": "wooden iron revolver drum cylinder fantasy",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "wood",
+  "poly": 24989,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "fantasy",
+  "wood",
+  "balanced",
+  "gun",
+  "revolver"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24989,
+ "seed": 41130
+}

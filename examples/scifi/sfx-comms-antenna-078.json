@@ -1,0 +1,27 @@
+{
+ "id": "sfx-comms-antenna-078",
+ "name": "Rusty Comms Antenna 078",
+ "category": "scifi",
+ "prompt": "polished steel tall comms antenna tube mast with mast stylized",
+ "kit": "cylinder",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 29249,
+  "parts": [
+   "mast"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "stylized",
+  "steel",
+  "pristine",
+  "antenna"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 29249,
+ "seed": 41877
+}

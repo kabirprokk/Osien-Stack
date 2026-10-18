@@ -1,0 +1,29 @@
+{
+ "id": "veh-race-supercar-033",
+ "name": "Old Race Supercar 033",
+ "category": "vehicles",
+ "prompt": "glass red sports race car supercar with rims and wheels sci-fi",
+ "kit": "carSportsV2",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "glass",
+  "poly": 21945,
+  "parts": [
+   "rims",
+   "wheels"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "carSportsV2",
+  "scifi",
+  "glass",
+  "balanced",
+  "sports",
+  "race"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21945,
+ "seed": 41392
+}

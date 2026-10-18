@@ -1,0 +1,21 @@
+{
+ "id": "veg-wheat-003",
+ "name": "Ripe Wheat 003",
+ "category": "vegetation-ultra",
+ "kit": "wheatField",
+ "prompt": "ripe tall wheat crop field",
+ "seed": 30049,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "wheat",
+  "crop",
+  "farm",
+  "ripe",
+  "tall",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

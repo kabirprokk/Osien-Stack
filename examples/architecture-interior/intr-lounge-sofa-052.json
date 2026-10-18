@@ -1,0 +1,25 @@
+{
+ "id": "intr-lounge-sofa-052",
+ "name": "Modern Lounge Sofa 052",
+ "category": "architecture-interior",
+ "prompt": "fabric modern lounge sofa low poly",
+ "kit": "sofa",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 3912,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "sofa",
+  "lowpoly",
+  "fabric",
+  "balanced",
+  "lounge"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3912,
+ "seed": 41771
+}

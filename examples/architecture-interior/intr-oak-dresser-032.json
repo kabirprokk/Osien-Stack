@@ -1,0 +1,27 @@
+{
+ "id": "intr-oak-dresser-032",
+ "name": "Cozy Oak Dresser 032",
+ "category": "architecture-interior",
+ "prompt": "polished stone oak dresser cupboard drawers with doors realistic",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "stone",
+  "poly": 11754,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "realistic",
+  "stone",
+  "pristine",
+  "dresser"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11754,
+ "seed": 41751
+}

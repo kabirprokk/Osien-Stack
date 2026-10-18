@@ -1,0 +1,25 @@
+{
+ "id": "bldg-clock-tower-041",
+ "name": "Medieval Clock Tower 041",
+ "category": "buildings-bldg",
+ "prompt": "polished iron old clock tower building with windows realistic",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 13087,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "realistic",
+  "iron",
+  "pristine",
+  "tower"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13087,
+ "seed": 41040
+}

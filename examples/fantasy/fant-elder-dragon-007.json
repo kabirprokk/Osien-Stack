@@ -1,0 +1,27 @@
+{
+ "id": "fant-elder-dragon-007",
+ "name": "Ancient Elder Dragon 007",
+ "category": "fantasy",
+ "prompt": "weathered gold ancient elder dragon with tail and wings fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "gold",
+  "poly": 11299,
+  "parts": [
+   "tail",
+   "wings"
+  ]
+ },
+ "tags": [
+  "fantasy",
+  "dragon",
+  "gold",
+  "worn",
+  "elder"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11299,
+ "seed": 41886
+}

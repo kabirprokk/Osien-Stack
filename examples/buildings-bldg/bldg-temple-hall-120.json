@@ -1,0 +1,25 @@
+{
+ "id": "bldg-temple-hall-120",
+ "name": "Ruined Temple Hall 120",
+ "category": "buildings-bldg",
+ "prompt": "iron ancient marble temple hall with columns and steps low poly",
+ "kit": "building",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 3742,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "lowpoly",
+  "iron",
+  "balanced",
+  "temple"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3742,
+ "seed": 41119
+}

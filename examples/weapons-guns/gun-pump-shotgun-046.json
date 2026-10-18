@@ -1,0 +1,26 @@
+{
+ "id": "gun-pump-shotgun-046",
+ "name": "Steel Pump Shotgun 046",
+ "category": "weapons-guns",
+ "prompt": "polished chrome wooden pump shotgun receiver box fantasy",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "chrome",
+  "poly": 13032,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "box",
+  "fantasy",
+  "chrome",
+  "pristine",
+  "gun",
+  "shotgun"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13032,
+ "seed": 41165
+}

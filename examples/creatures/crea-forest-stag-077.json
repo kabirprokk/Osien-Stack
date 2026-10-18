@@ -1,0 +1,27 @@
+{
+ "id": "crea-forest-stag-077",
+ "name": "Dark Forest Stag 077",
+ "category": "creatures",
+ "prompt": "ancient glass brown forest stag animal with horns low poly",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 21772,
+  "parts": [
+   "horns"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "lowpoly",
+  "glass",
+  "ancient",
+  "deer"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21772,
+ "seed": 41616
+}

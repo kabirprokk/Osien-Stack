@@ -1,0 +1,25 @@
+{
+ "id": "intr-study-desk-031",
+ "name": "Modern Study Desk 031",
+ "category": "architecture-interior",
+ "prompt": "ancient fabric oak study desk table stylized",
+ "kit": "table",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "fabric",
+  "poly": 22505,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "table",
+  "stylized",
+  "fabric",
+  "ancient",
+  "study"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22505,
+ "seed": 41750
+}

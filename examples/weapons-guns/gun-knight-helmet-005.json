@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-helmet-005",
+ "name": "Golden Knight Helmet 005",
+ "category": "weapons-guns",
+ "prompt": "weathered obsidian steel knight helmet helm low poly",
+ "kit": "helmet",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "obsidian",
+  "poly": 21671,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "helmet",
+  "lowpoly",
+  "obsidian",
+  "worn",
+  "armor"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21671,
+ "seed": 41124
+}

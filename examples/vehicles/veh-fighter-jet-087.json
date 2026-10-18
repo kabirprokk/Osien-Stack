@@ -1,0 +1,27 @@
+{
+ "id": "veh-fighter-jet-087",
+ "name": "Blue Fighter Jet 087",
+ "category": "vehicles",
+ "prompt": "pristine iron gray fighter jet aircraft with cockpit stylized",
+ "kit": "airplane",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 11359,
+  "parts": [
+   "cockpit"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "stylized",
+  "iron",
+  "pristine",
+  "fighter"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11359,
+ "seed": 41446
+}

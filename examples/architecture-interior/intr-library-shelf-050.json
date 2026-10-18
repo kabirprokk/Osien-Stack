@@ -1,0 +1,25 @@
+{
+ "id": "intr-library-shelf-050",
+ "name": "Grand Library Shelf 050",
+ "category": "architecture-interior",
+ "prompt": "marble dark library bookshelf wall stylized",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 10908,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "stylized",
+  "marble",
+  "balanced",
+  "library"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10908,
+ "seed": 41769
+}

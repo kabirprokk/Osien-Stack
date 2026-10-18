@@ -1,0 +1,21 @@
+{
+ "id": "veg-boxwood-001",
+ "name": "Dense Boxwood 001",
+ "category": "vegetation-ultra",
+ "kit": "boxwoodTopiary",
+ "prompt": "dense round boxwood topiary ball sheared bush",
+ "seed": 30061,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "topiary",
+  "formal",
+  "garden",
+  "dense",
+  "round",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

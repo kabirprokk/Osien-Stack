@@ -1,0 +1,25 @@
+{
+ "id": "gun-war-dagger-031",
+ "name": "Oaken War Dagger 031",
+ "category": "weapons-guns",
+ "prompt": "wooden iron war dagger knife fantasy",
+ "kit": "sword",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "wood",
+  "poly": 11315,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "fantasy",
+  "wood",
+  "balanced",
+  "dagger"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11315,
+ "seed": 41150
+}

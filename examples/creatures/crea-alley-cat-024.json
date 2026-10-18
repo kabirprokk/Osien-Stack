@@ -1,0 +1,27 @@
+{
+ "id": "crea-alley-cat-024",
+ "name": "Young Alley Cat 024",
+ "category": "creatures",
+ "prompt": "glass small orange alley cat with tail stylized",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 11207,
+  "parts": [
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "stylized",
+  "glass",
+  "balanced",
+  "cat"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11207,
+ "seed": 41563
+}

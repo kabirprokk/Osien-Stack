@@ -1,0 +1,25 @@
+{
+ "id": "char-orc-brute-035",
+ "name": "Wise Orc Brute 035",
+ "category": "characters",
+ "prompt": "steel hulking orc warrior low poly",
+ "kit": "warrior",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 24495,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "lowpoly",
+  "steel",
+  "balanced",
+  "orc"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24495,
+ "seed": 41494
+}

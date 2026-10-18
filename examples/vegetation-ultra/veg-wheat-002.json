@@ -1,0 +1,21 @@
+{
+ "id": "veg-wheat-002",
+ "name": "Golden Wheat 002",
+ "category": "vegetation-ultra",
+ "kit": "wheatField",
+ "prompt": "golden ripe wheat crop field",
+ "seed": 30048,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "wheat",
+  "crop",
+  "farm",
+  "golden",
+  "ripe",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

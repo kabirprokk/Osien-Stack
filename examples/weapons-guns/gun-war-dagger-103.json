@@ -1,0 +1,25 @@
+{
+ "id": "gun-war-dagger-103",
+ "name": "Dark War Dagger 103",
+ "category": "weapons-guns",
+ "prompt": "steel iron war dagger knife stylized",
+ "kit": "sword",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 24767,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "stylized",
+  "steel",
+  "balanced",
+  "dagger"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24767,
+ "seed": 41222
+}

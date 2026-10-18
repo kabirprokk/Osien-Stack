@@ -1,0 +1,25 @@
+{
+ "id": "prop-wooden-crate-051",
+ "name": "Big Wooden Crate 051",
+ "category": "everyday-props",
+ "prompt": "worn leather wooden storage crate box low poly",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "leather",
+  "poly": 12425,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "box",
+  "lowpoly",
+  "leather",
+  "worn",
+  "crate"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12425,
+ "seed": 42030
+}

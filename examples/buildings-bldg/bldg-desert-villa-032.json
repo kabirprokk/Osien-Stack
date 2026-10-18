@@ -1,0 +1,29 @@
+{
+ "id": "bldg-desert-villa-032",
+ "name": "Marble Desert Villa 032",
+ "category": "buildings-bldg",
+ "prompt": "weathered iron desert sandstone villa house with doors and windows with doors and windows low poly",
+ "kit": "house",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 12394,
+  "parts": [
+   "doors",
+   "windows"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "lowpoly",
+  "iron",
+  "worn",
+  "villa",
+  "desert"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12394,
+ "seed": 41031
+}

@@ -1,0 +1,25 @@
+{
+ "id": "crea-swamp-monster-022",
+ "name": "Wild Swamp Monster 022",
+ "category": "creatures",
+ "prompt": "weathered glass lumpy swamp monster creature realistic",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 25750,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "realistic",
+  "glass",
+  "worn",
+  "monster"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25750,
+ "seed": 41561
+}

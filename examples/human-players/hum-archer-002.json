@@ -1,0 +1,21 @@
+{
+ "id": "hum-archer-002",
+ "name": "Grand Archer 002",
+ "category": "human-players",
+ "kit": "archer",
+ "prompt": "grand strong swift archer with bow",
+ "seed": 40062,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "archer",
+  "bow",
+  "ranger",
+  "grand",
+  "strong",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

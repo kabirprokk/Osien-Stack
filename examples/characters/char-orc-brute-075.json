@@ -1,0 +1,25 @@
+{
+ "id": "char-orc-brute-075",
+ "name": "Wise Orc Brute 075",
+ "category": "characters",
+ "prompt": "mossy leather hulking orc warrior fantasy",
+ "kit": "warrior",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "leather",
+  "poly": 12460,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "fantasy",
+  "leather",
+  "ancient",
+  "orc"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12460,
+ "seed": 41534
+}

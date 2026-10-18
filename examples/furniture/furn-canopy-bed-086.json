@@ -1,0 +1,25 @@
+{
+ "id": "furn-canopy-bed-086",
+ "name": "Antique Canopy Bed 086",
+ "category": "furniture",
+ "prompt": "leather wooden canopy bed mattress stylized",
+ "kit": "bed",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 29197,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bed",
+  "stylized",
+  "leather",
+  "balanced",
+  "mattress"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 29197,
+ "seed": 41705
+}

@@ -1,0 +1,25 @@
+{
+ "id": "fant-aegis-shield-046",
+ "name": "Ancient Aegis Shield 046",
+ "category": "fantasy",
+ "prompt": "pristine wooden golden aegis shield realistic",
+ "kit": "shield",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 24388,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "shield",
+  "realistic",
+  "wood",
+  "pristine",
+  "aegis"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24388,
+ "seed": 41925
+}

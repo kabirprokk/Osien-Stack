@@ -1,0 +1,25 @@
+{
+ "id": "prop-coffee-mug-053",
+ "name": "Blue Coffee Mug 053",
+ "category": "everyday-props",
+ "prompt": "worn iron white coffee mug cylinder cup stylized",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 22169,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "cylinder",
+  "stylized",
+  "iron",
+  "worn",
+  "mug"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22169,
+ "seed": 42032
+}

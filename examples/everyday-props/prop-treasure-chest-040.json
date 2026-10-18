@@ -1,0 +1,25 @@
+{
+ "id": "prop-treasure-chest-040",
+ "name": "Red Treasure Chest 040",
+ "category": "everyday-props",
+ "prompt": "wooden iron-bound treasure chest coffer realistic",
+ "kit": "treasureChest",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 11580,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "treasureChest",
+  "realistic",
+  "wood",
+  "balanced",
+  "treasure"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11580,
+ "seed": 42019
+}

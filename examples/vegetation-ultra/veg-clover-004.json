@@ -1,0 +1,21 @@
+{
+ "id": "veg-clover-004",
+ "name": "Lush Clover 004",
+ "category": "vegetation-ultra",
+ "kit": "cloverPatch",
+ "prompt": "lush dense clover patch ground",
+ "seed": 30044,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "clover",
+  "lawn-alt",
+  "low",
+  "lush",
+  "dense",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

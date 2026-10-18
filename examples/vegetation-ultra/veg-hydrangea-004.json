@@ -1,0 +1,20 @@
+{
+ "id": "veg-hydrangea-004",
+ "name": "Blooming Hydrangea 004",
+ "category": "vegetation-ultra",
+ "kit": "hydrangea",
+ "prompt": "blooming lush hydrangea flower bush",
+ "seed": 30083,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "flowering",
+  "shrub",
+  "blooming",
+  "lush",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

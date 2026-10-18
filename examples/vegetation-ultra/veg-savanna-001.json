@@ -1,0 +1,21 @@
+{
+ "id": "veg-savanna-001",
+ "name": "Golden Savanna 001",
+ "category": "vegetation-ultra",
+ "kit": "savannaTuft",
+ "prompt": "golden dry savanna dry grass tuft",
+ "seed": 30021,
+ "params": {
+  "quality": "draft",
+  "style": "stylized"
+ },
+ "tags": [
+  "savanna",
+  "dry",
+  "field",
+  "golden",
+  "dry",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

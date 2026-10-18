@@ -1,0 +1,25 @@
+{
+ "id": "fant-aegis-shield-034",
+ "name": "Runic Aegis Shield 034",
+ "category": "fantasy",
+ "prompt": "crystal golden aegis shield stylized",
+ "kit": "shield",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "crystal",
+  "poly": 12530,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "shield",
+  "stylized",
+  "crystal",
+  "balanced",
+  "aegis"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12530,
+ "seed": 41913
+}

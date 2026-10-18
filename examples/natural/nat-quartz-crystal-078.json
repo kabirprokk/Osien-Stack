@@ -1,0 +1,26 @@
+{
+ "id": "nat-quartz-crystal-078",
+ "name": "Old Quartz Crystal 078",
+ "category": "natural",
+ "prompt": "mossy glass clear quartz crystal cluster gem stylized",
+ "kit": "crystal",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 11448,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "stylized",
+  "glass",
+  "ancient",
+  "quartz",
+  "gem"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11448,
+ "seed": 41317
+}

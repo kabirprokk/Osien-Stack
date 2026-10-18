@@ -1,0 +1,25 @@
+{
+ "id": "furn-chester-sofa-025",
+ "name": "Round Chester Sofa 025",
+ "category": "furniture",
+ "prompt": "polished iron leather chesterfield sofa couch realistic",
+ "kit": "sofa",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 12307,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "sofa",
+  "realistic",
+  "iron",
+  "pristine",
+  "couch"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12307,
+ "seed": 41644
+}

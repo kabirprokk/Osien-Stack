@@ -1,0 +1,26 @@
+{
+ "id": "gun-sniper-rifle-069",
+ "name": "Oaken Sniper Rifle 069",
+ "category": "weapons-guns",
+ "prompt": "wooden long steel sniper rifle barrel tube fantasy",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "wood",
+  "poly": 12351,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "fantasy",
+  "wood",
+  "balanced",
+  "gun",
+  "sniper"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12351,
+ "seed": 41188
+}

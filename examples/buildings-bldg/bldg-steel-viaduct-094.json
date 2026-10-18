@@ -1,0 +1,25 @@
+{
+ "id": "bldg-steel-viaduct-094",
+ "name": "Ancient Steel Viaduct 094",
+ "category": "buildings-bldg",
+ "prompt": "polished stone steel viaduct bridge with pillars fantasy",
+ "kit": "bridge",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "stone",
+  "poly": 28692,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "fantasy",
+  "stone",
+  "pristine",
+  "rail"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 28692,
+ "seed": 41093
+}

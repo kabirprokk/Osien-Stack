@@ -1,0 +1,25 @@
+{
+ "id": "fant-mana-crystal-023",
+ "name": "Dark Mana Crystal 023",
+ "category": "fantasy",
+ "prompt": "pristine wooden glowing blue mana crystal stylized",
+ "kit": "crystal",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 11537,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "crystal",
+  "stylized",
+  "wood",
+  "pristine",
+  "mana"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11537,
+ "seed": 41902
+}

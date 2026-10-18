@@ -1,0 +1,25 @@
+{
+ "id": "nat-desert-rock-030",
+ "name": "Amber Desert Rock 030",
+ "category": "natural",
+ "prompt": "ancient glass weathered sandstone desert rock stylized",
+ "kit": "rock",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 22575,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "stylized",
+  "glass",
+  "ancient",
+  "desert"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22575,
+ "seed": 41269
+}

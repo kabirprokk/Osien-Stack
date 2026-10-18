@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-longsword-037",
+ "name": "Oaken Knight Longsword 037",
+ "category": "weapons-guns",
+ "prompt": "mossy iron knight steel longsword blade realistic",
+ "kit": "sword",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 22226,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "realistic",
+  "iron",
+  "ancient",
+  "knight"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22226,
+ "seed": 41156
+}

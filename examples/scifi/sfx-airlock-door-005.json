@@ -1,0 +1,25 @@
+{
+ "id": "sfx-airlock-door-005",
+ "name": "Neon Airlock Door 005",
+ "category": "scifi",
+ "prompt": "ancient copper steel airlock door box panel realistic",
+ "kit": "box",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "copper",
+  "poly": 21956,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "box",
+  "realistic",
+  "copper",
+  "ancient",
+  "airlock"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21956,
+ "seed": 41804
+}

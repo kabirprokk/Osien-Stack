@@ -1,0 +1,25 @@
+{
+ "id": "food-soda-can-005",
+ "name": "Sweet Soda Can 005",
+ "category": "food",
+ "prompt": "bone silver soda can cylinder tin low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "bone",
+  "poly": 11513,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "cylinder",
+  "lowpoly",
+  "bone",
+  "balanced",
+  "soda"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11513,
+ "seed": 41944
+}

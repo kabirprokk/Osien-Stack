@@ -1,0 +1,21 @@
+{
+ "id": "hum-female-006",
+ "name": "Sturdy Female 006",
+ "category": "human-players",
+ "kit": "baseFemale",
+ "prompt": "sturdy strong standing woman",
+ "seed": 40016,
+ "params": {
+  "quality": "draft",
+  "style": "realistic"
+ },
+ "tags": [
+  "woman",
+  "female",
+  "casual",
+  "sturdy",
+  "strong",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

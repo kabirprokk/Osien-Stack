@@ -1,0 +1,27 @@
+{
+ "id": "crea-swamp-monster-078",
+ "name": "Wild Swamp Monster 078",
+ "category": "creatures",
+ "prompt": "wooden lumpy swamp monster creature with tail low poly",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 23660,
+  "parts": [
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "lowpoly",
+  "wood",
+  "balanced",
+  "monster"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23660,
+ "seed": 41617
+}

@@ -1,0 +1,24 @@
+{
+ "id": "fant-rune-blade-039",
+ "name": "Enchanted Rune Blade 039",
+ "category": "fantasy",
+ "prompt": "crystal ornate runed rune blade sword fantasy",
+ "kit": "swordV2",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "crystal",
+  "poly": 27756,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "swordV2",
+  "crystal",
+  "balanced",
+  "rune"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 27756,
+ "seed": 41918
+}

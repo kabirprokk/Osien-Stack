@@ -1,0 +1,26 @@
+{
+ "id": "nat-amethyst-geode-069",
+ "name": "Glowing Amethyst Geode 069",
+ "category": "natural",
+ "prompt": "mossy glass purple amethyst crystal geode stylized",
+ "kit": "crystal",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 25056,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "stylized",
+  "glass",
+  "ancient",
+  "amethyst",
+  "gem"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25056,
+ "seed": 41308
+}

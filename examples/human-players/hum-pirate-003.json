@@ -1,0 +1,21 @@
+{
+ "id": "hum-pirate-003",
+ "name": "Keen Pirate 003",
+ "category": "human-players",
+ "kit": "pirate",
+ "prompt": "keen brave rugged pirate captain",
+ "seed": 40083,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "pirate",
+  "captain",
+  "rogue",
+  "keen",
+  "brave",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

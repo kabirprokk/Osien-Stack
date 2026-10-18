@@ -1,0 +1,21 @@
+{
+ "id": "wat-waterfall-004",
+ "name": "Tall Waterfall 004",
+ "category": "water-ultra",
+ "kit": "waterfall",
+ "prompt": "tall powerful tall waterfall cascade falls",
+ "seed": 40034,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "waterfall",
+  "cascade",
+  "mist",
+  "tall",
+  "powerful",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

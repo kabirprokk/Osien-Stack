@@ -1,0 +1,25 @@
+{
+ "id": "crea-cave-bear-060",
+ "name": "Swamp Cave Bear 060",
+ "category": "creatures",
+ "prompt": "polished bone brown cave bear beast stylized",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "bone",
+  "poly": 24876,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "stylized",
+  "bone",
+  "pristine",
+  "bear"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24876,
+ "seed": 41599
+}

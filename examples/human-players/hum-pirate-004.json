@@ -1,0 +1,21 @@
+{
+ "id": "hum-pirate-004",
+ "name": "Wild Pirate 004",
+ "category": "human-players",
+ "kit": "pirate",
+ "prompt": "wild grand rugged pirate captain",
+ "seed": 40084,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "pirate",
+  "captain",
+  "rogue",
+  "wild",
+  "grand",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

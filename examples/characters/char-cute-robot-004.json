@@ -1,0 +1,26 @@
+{
+ "id": "char-cute-robot-004",
+ "name": "Scarred Cute Robot 004",
+ "category": "characters",
+ "prompt": "chrome cute little robot droid low poly",
+ "kit": "robot",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "chrome",
+  "poly": 24847,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "lowpoly",
+  "chrome",
+  "balanced",
+  "droid",
+  "cute"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24847,
+ "seed": 41463
+}

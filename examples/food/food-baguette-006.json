@@ -1,0 +1,25 @@
+{
+ "id": "food-baguette-006",
+ "name": "Glazed Baguette 006",
+ "category": "food",
+ "prompt": "polished fabric golden baguette capsule loaf stylized",
+ "kit": "capsule",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "fabric",
+  "poly": 11344,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "capsule",
+  "stylized",
+  "fabric",
+  "pristine",
+  "bread"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11344,
+ "seed": 41945
+}

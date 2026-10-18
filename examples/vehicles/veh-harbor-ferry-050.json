@@ -1,0 +1,28 @@
+{
+ "id": "veh-harbor-ferry-050",
+ "name": "Blue Harbor Ferry 050",
+ "category": "vehicles",
+ "prompt": "mossy chrome yellow harbor ferry boat with engine and mast stylized",
+ "kit": "boat",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 32189,
+  "parts": [
+   "engine",
+   "mast"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "stylized",
+  "chrome",
+  "ancient",
+  "ferry"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 32189,
+ "seed": 41409
+}

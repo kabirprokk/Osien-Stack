@@ -1,0 +1,25 @@
+{
+ "id": "bldg-arch-bridge-069",
+ "name": "Ancient Arch Bridge 069",
+ "category": "buildings-bldg",
+ "prompt": "mossy stone stone arch bridge with pillars fantasy",
+ "kit": "bridge",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "stone",
+  "poly": 11372,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "fantasy",
+  "stone",
+  "ancient",
+  "river"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11372,
+ "seed": 41068
+}

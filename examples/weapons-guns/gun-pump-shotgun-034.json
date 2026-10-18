@@ -1,0 +1,26 @@
+{
+ "id": "gun-pump-shotgun-034",
+ "name": "Oaken Pump Shotgun 034",
+ "category": "weapons-guns",
+ "prompt": "iron wooden pump shotgun receiver box stylized",
+ "kit": "box",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 24656,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "box",
+  "stylized",
+  "iron",
+  "balanced",
+  "gun",
+  "shotgun"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24656,
+ "seed": 41153
+}

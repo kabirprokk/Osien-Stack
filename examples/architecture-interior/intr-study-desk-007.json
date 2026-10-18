@@ -1,0 +1,25 @@
+{
+ "id": "intr-study-desk-007",
+ "name": "Modern Study Desk 007",
+ "category": "architecture-interior",
+ "prompt": "fabric oak study desk table fantasy",
+ "kit": "table",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "fabric",
+  "poly": 4353,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "table",
+  "fantasy",
+  "fabric",
+  "balanced",
+  "study"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4353,
+ "seed": 41726
+}

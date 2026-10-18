@@ -1,0 +1,26 @@
+{
+ "id": "nat-quartz-crystal-008",
+ "name": "Amber Quartz Crystal 008",
+ "category": "natural",
+ "prompt": "weathered bone clear quartz crystal cluster gem stylized",
+ "kit": "crystal",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "bone",
+  "poly": 10844,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "stylized",
+  "bone",
+  "worn",
+  "quartz",
+  "gem"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10844,
+ "seed": 41247
+}

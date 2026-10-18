@@ -1,0 +1,26 @@
+{
+ "id": "nat-oak-tree-042",
+ "name": "Wild Oak Tree 042",
+ "category": "natural",
+ "prompt": "bone broad oak tree stylized",
+ "kit": "tree",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "bone",
+  "poly": 4049,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "stylized",
+  "bone",
+  "balanced",
+  "oak",
+  "forest"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4049,
+ "seed": 41281
+}

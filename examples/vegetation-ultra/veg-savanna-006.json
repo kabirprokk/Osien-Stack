@@ -1,0 +1,21 @@
+{
+ "id": "veg-savanna-006",
+ "name": "Dry Savanna 006",
+ "category": "vegetation-ultra",
+ "kit": "savannaTuft",
+ "prompt": "dry withered savanna dry grass tuft",
+ "seed": 30026,
+ "params": {
+  "quality": "draft",
+  "style": "stylized"
+ },
+ "tags": [
+  "savanna",
+  "dry",
+  "field",
+  "dry",
+  "withered",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

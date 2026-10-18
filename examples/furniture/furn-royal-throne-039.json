@@ -1,0 +1,26 @@
+{
+ "id": "furn-royal-throne-039",
+ "name": "Oaken Royal Throne 039",
+ "category": "furniture",
+ "prompt": "mossy wooden golden royal throne seat stylized",
+ "kit": "throne",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 25177,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "throne",
+  "stylized",
+  "wood",
+  "ancient",
+  "royal",
+  "gold"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25177,
+ "seed": 41658
+}

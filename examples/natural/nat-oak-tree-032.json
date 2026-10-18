@@ -1,0 +1,26 @@
+{
+ "id": "nat-oak-tree-032",
+ "name": "Glowing Oak Tree 032",
+ "category": "natural",
+ "prompt": "fabric broad oak tree low poly",
+ "kit": "tree",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 3873,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "lowpoly",
+  "fabric",
+  "balanced",
+  "oak",
+  "forest"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3873,
+ "seed": 41271
+}

@@ -1,0 +1,28 @@
+{
+ "id": "veh-pirate-galley-079",
+ "name": "Midnight Pirate Galley 079",
+ "category": "vehicles",
+ "prompt": "ancient gold old pirate galley ship with sails stylized",
+ "kit": "boat",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "gold",
+  "poly": 31038,
+  "parts": [
+   "sails"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "stylized",
+  "gold",
+  "ancient",
+  "pirate",
+  "ship"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31038,
+ "seed": 41438
+}

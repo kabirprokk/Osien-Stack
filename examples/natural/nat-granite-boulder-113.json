@@ -1,0 +1,25 @@
+{
+ "id": "nat-granite-boulder-113",
+ "name": "Old Granite Boulder 113",
+ "category": "natural",
+ "prompt": "pristine bone gray granite boulder rock realistic",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 13157,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "realistic",
+  "bone",
+  "pristine",
+  "boulder"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13157,
+ "seed": 41352
+}

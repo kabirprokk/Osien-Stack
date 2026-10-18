@@ -1,0 +1,28 @@
+{
+ "id": "veh-race-supercar-083",
+ "name": "Old Race Supercar 083",
+ "category": "vehicles",
+ "prompt": "polished gold red sports race car supercar with spoiler stylized",
+ "kit": "carSportsV2",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "gold",
+  "poly": 21695,
+  "parts": [
+   "spoiler"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "carSportsV2",
+  "stylized",
+  "gold",
+  "pristine",
+  "sports",
+  "race"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21695,
+ "seed": 41442
+}

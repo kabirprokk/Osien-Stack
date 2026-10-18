@@ -1,0 +1,25 @@
+{
+ "id": "crea-swamp-monster-014",
+ "name": "Ancient Swamp Monster 014",
+ "category": "creatures",
+ "prompt": "polished fabric lumpy swamp monster creature realistic",
+ "kit": "creature",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 3873,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "realistic",
+  "fabric",
+  "pristine",
+  "monster"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3873,
+ "seed": 41553
+}

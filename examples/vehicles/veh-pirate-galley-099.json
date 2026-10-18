@@ -1,0 +1,26 @@
+{
+ "id": "veh-pirate-galley-099",
+ "name": "Blue Pirate Galley 099",
+ "category": "vehicles",
+ "prompt": "pristine glass old pirate galley ship stylized",
+ "kit": "boat",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 12692,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "stylized",
+  "glass",
+  "pristine",
+  "pirate",
+  "ship"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12692,
+ "seed": 41458
+}

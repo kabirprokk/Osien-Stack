@@ -1,0 +1,26 @@
+{
+ "id": "crea-fire-dragon-025",
+ "name": "Golden Fire Dragon 025",
+ "category": "creatures",
+ "prompt": "leather huge fire dragon drake fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "leather",
+  "poly": 28417,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "fantasy",
+  "leather",
+  "balanced",
+  "fire",
+  "drake"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 28417,
+ "seed": 41564
+}

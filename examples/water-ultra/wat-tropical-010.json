@@ -1,0 +1,21 @@
+{
+ "id": "wat-tropical-010",
+ "name": "Shallow Tropical 010",
+ "category": "water-ultra",
+ "kit": "tropicalShallows",
+ "prompt": "shallow sandy tropical turquoise shallows lagoon",
+ "seed": 40080,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "tropical",
+  "lagoon",
+  "sand",
+  "shallow",
+  "sandy",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

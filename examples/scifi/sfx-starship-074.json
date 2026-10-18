@@ -1,0 +1,24 @@
+{
+ "id": "sfx-starship-074",
+ "name": "Lunar Starship 074",
+ "category": "scifi",
+ "prompt": "obsidian sleek starship rocket sci-fi",
+ "kit": "spaceship",
+ "params": {
+  "quality": "print",
+  "style": "scifi",
+  "material": "obsidian",
+  "poly": 31753,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "obsidian",
+  "balanced",
+  "starship"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31753,
+ "seed": 41873
+}

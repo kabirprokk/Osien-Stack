@@ -1,0 +1,27 @@
+{
+ "id": "crea-swamp-wyvern-002",
+ "name": "Golden Swamp Wyvern 002",
+ "category": "creatures",
+ "prompt": "bone lean swamp wyvern drake with wings realistic",
+ "kit": "dragon",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 12360,
+  "parts": [
+   "wings"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "realistic",
+  "bone",
+  "balanced",
+  "wyvern"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12360,
+ "seed": 41541
+}

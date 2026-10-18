@@ -1,0 +1,21 @@
+{
+ "id": "hum-runner-002",
+ "name": "Bold Runner 002",
+ "category": "human-players",
+ "kit": "runner",
+ "prompt": "bold silent swift running athlete",
+ "seed": 40112,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "runner",
+  "athlete",
+  "sport",
+  "bold",
+  "silent",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

@@ -1,0 +1,27 @@
+{
+ "id": "veh-chopper-bike-094",
+ "name": "Rusty Chopper Bike 094",
+ "category": "vehicles",
+ "prompt": "polished glass black chopper motorcycle bike with engine sci-fi",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "glass",
+  "poly": 10972,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "scifi",
+  "glass",
+  "pristine",
+  "chopper"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10972,
+ "seed": 41453
+}

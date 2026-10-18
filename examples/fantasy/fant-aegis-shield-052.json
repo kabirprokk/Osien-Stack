@@ -1,0 +1,24 @@
+{
+ "id": "fant-aegis-shield-052",
+ "name": "Enchanted Aegis Shield 052",
+ "category": "fantasy",
+ "prompt": "ancient bronze golden aegis shield fantasy",
+ "kit": "shield",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "bronze",
+  "poly": 12279,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "shield",
+  "bronze",
+  "ancient",
+  "aegis"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12279,
+ "seed": 41931
+}

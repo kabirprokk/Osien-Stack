@@ -1,0 +1,26 @@
+{
+ "id": "food-red-apple-033",
+ "name": "Ripe Red Apple 033",
+ "category": "food",
+ "prompt": "weathered marble shiny red apple sphere fruit stylized",
+ "kit": "sphere",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 22096,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "sphere",
+  "stylized",
+  "marble",
+  "worn",
+  "apple",
+  "fruit"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22096,
+ "seed": 41972
+}

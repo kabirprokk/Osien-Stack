@@ -1,0 +1,26 @@
+{
+ "id": "gun-revolver-047",
+ "name": "Polished Revolver 047",
+ "category": "weapons-guns",
+ "prompt": "ancient obsidian iron revolver drum cylinder low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "obsidian",
+  "poly": 11359,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "lowpoly",
+  "obsidian",
+  "ancient",
+  "gun",
+  "revolver"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11359,
+ "seed": 41166
+}

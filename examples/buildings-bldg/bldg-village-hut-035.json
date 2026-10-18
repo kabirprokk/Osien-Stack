@@ -1,0 +1,26 @@
+{
+ "id": "bldg-village-hut-035",
+ "name": "Ancient Village Hut 035",
+ "category": "buildings-bldg",
+ "prompt": "worn steel village straw hut house with doors fantasy",
+ "kit": "house",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "steel",
+  "poly": 11756,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "fantasy",
+  "steel",
+  "worn",
+  "hut",
+  "village"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11756,
+ "seed": 41034
+}

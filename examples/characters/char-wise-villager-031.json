@@ -1,0 +1,25 @@
+{
+ "id": "char-wise-villager-031",
+ "name": "Dark Wise Villager 031",
+ "category": "characters",
+ "prompt": "gold wise old townsfolk person stylized",
+ "kit": "baseMale",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "gold",
+  "poly": 11073,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "stylized",
+  "gold",
+  "balanced",
+  "villager"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11073,
+ "seed": 41490
+}

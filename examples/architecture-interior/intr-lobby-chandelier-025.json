@@ -1,0 +1,26 @@
+{
+ "id": "intr-lobby-chandelier-025",
+ "name": "Warm Lobby Chandelier 025",
+ "category": "architecture-interior",
+ "prompt": "worn stone grand lobby chandelier lamp fantasy",
+ "kit": "lamp",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "stone",
+  "poly": 29693,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "lamp",
+  "fantasy",
+  "stone",
+  "worn",
+  "chandelier",
+  "lobby"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 29693,
+ "seed": 41744
+}

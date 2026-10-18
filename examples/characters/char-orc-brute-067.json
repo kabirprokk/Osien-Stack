@@ -1,0 +1,25 @@
+{
+ "id": "char-orc-brute-067",
+ "name": "Young Orc Brute 067",
+ "category": "characters",
+ "prompt": "chrome hulking orc warrior realistic",
+ "kit": "warrior",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "chrome",
+  "poly": 11835,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "realistic",
+  "chrome",
+  "balanced",
+  "orc"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11835,
+ "seed": 41526
+}

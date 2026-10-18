@@ -1,0 +1,26 @@
+{
+ "id": "fant-elder-dragon-043",
+ "name": "Golden Elder Dragon 043",
+ "category": "fantasy",
+ "prompt": "pristine marble ancient elder dragon with horns fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 11998,
+  "parts": [
+   "horns"
+  ]
+ },
+ "tags": [
+  "fantasy",
+  "dragon",
+  "marble",
+  "pristine",
+  "elder"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11998,
+ "seed": 41922
+}

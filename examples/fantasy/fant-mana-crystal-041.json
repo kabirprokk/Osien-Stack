@@ -1,0 +1,25 @@
+{
+ "id": "fant-mana-crystal-041",
+ "name": "Runic Mana Crystal 041",
+ "category": "fantasy",
+ "prompt": "wooden glowing blue mana crystal realistic",
+ "kit": "crystal",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 12973,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "crystal",
+  "realistic",
+  "wood",
+  "balanced",
+  "mana"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12973,
+ "seed": 41920
+}

@@ -1,0 +1,14 @@
+{
+  "name": "osien-3d-forge",
+  "version": "2.4.1",
+  "description": "BEST-MODELS-EVER procedural 3D generator \u2014 91 kits incl. humans+vegetation+water, 32 game animations, quality presets, zero deps",
+  "main": "index.js",
+  "bin": {
+    "osien-3d-forge": "cli.js"
+  },
+  "scripts": {
+    "gen": "node cli.js"
+  },
+  "license": "MIT",
+  "dependencies": {}
+}

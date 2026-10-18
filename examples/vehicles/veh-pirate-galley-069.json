@@ -1,0 +1,29 @@
+{
+ "id": "veh-pirate-galley-069",
+ "name": "Chrome Pirate Galley 069",
+ "category": "vehicles",
+ "prompt": "ancient chrome old pirate galley ship with mast and sails low poly",
+ "kit": "boat",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "chrome",
+  "poly": 4206,
+  "parts": [
+   "mast",
+   "sails"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "lowpoly",
+  "chrome",
+  "ancient",
+  "pirate",
+  "ship"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4206,
+ "seed": 41428
+}

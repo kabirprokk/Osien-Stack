@@ -1,0 +1,28 @@
+{
+ "id": "crea-swamp-monster-054",
+ "name": "Young Swamp Monster 054",
+ "category": "creatures",
+ "prompt": "fabric lumpy swamp monster creature with spikes and tail low poly",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 11102,
+  "parts": [
+   "spikes",
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "lowpoly",
+  "fabric",
+  "balanced",
+  "monster"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11102,
+ "seed": 41593
+}

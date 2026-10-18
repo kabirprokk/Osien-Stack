@@ -1,0 +1,25 @@
+{
+ "id": "prop-wooden-crate-041",
+ "name": "Round Wooden Crate 041",
+ "category": "everyday-props",
+ "prompt": "leather wooden storage crate box realistic",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "leather",
+  "poly": 11278,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "box",
+  "realistic",
+  "leather",
+  "balanced",
+  "crate"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11278,
+ "seed": 42020
+}

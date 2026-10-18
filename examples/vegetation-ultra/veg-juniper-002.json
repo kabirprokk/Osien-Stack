@@ -1,0 +1,20 @@
+{
+ "id": "veg-juniper-002",
+ "name": "Dense Juniper 002",
+ "category": "vegetation-ultra",
+ "kit": "juniperConifer",
+ "prompt": "dense needle juniper conifer evergreen bush",
+ "seed": 30088,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "evergreen",
+  "conifer",
+  "dense",
+  "needle",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

@@ -1,0 +1,26 @@
+{
+ "id": "bldg-wooden-cabin-018",
+ "name": "Marble Wooden Cabin 018",
+ "category": "buildings-bldg",
+ "prompt": "glass wooden cabin hut house with chimney low poly",
+ "kit": "house",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 3911,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "lowpoly",
+  "glass",
+  "balanced",
+  "cabin",
+  "forest"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3911,
+ "seed": 41017
+}

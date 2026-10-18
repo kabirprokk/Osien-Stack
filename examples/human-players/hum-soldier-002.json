@@ -1,0 +1,21 @@
+{
+ "id": "hum-soldier-002",
+ "name": "Noble Soldier 002",
+ "category": "human-players",
+ "kit": "soldierModern",
+ "prompt": "noble calm modern soldier",
+ "seed": 40072,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "soldier",
+  "modern",
+  "tactical",
+  "noble",
+  "calm",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

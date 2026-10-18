@@ -1,0 +1,26 @@
+{
+ "id": "crea-fire-dragon-065",
+ "name": "Horned Fire Dragon 065",
+ "category": "creatures",
+ "prompt": "bone huge fire dragon drake fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "bone",
+  "poly": 23401,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "fantasy",
+  "bone",
+  "balanced",
+  "fire",
+  "drake"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23401,
+ "seed": 41604
+}

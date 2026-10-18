@@ -1,0 +1,21 @@
+{
+ "id": "veg-lawn-001",
+ "name": "Lush Lawn 001",
+ "category": "vegetation-ultra",
+ "kit": "lawnGrass",
+ "prompt": "lush manicured manicured lawn grass",
+ "seed": 30001,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "lawn",
+  "turf",
+  "garden",
+  "lush",
+  "manicured",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

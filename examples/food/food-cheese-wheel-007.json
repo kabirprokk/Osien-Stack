@@ -1,0 +1,25 @@
+{
+ "id": "food-cheese-wheel-007",
+ "name": "Fresh Cheese Wheel 007",
+ "category": "food",
+ "prompt": "ancient marble yellow cheese wheel cylinder realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 3651,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "cylinder",
+  "realistic",
+  "marble",
+  "ancient",
+  "cheese"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3651,
+ "seed": 41946
+}

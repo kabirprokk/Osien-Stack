@@ -1,0 +1,25 @@
+{
+ "id": "fant-loot-chest-060",
+ "name": "Enchanted Loot Chest 060",
+ "category": "fantasy",
+ "prompt": "ancient marble old wooden loot treasure chest realistic",
+ "kit": "treasureChest",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 12308,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "treasureChest",
+  "realistic",
+  "marble",
+  "ancient",
+  "loot"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12308,
+ "seed": 41939
+}

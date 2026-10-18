@@ -1,0 +1,25 @@
+{
+ "id": "bldg-temple-hall-036",
+ "name": "Gothic Temple Hall 036",
+ "category": "buildings-bldg",
+ "prompt": "ancient marble ancient marble temple hall with columns and steps realistic",
+ "kit": "building",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 3678,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "realistic",
+  "marble",
+  "ancient",
+  "temple"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3678,
+ "seed": 41035
+}

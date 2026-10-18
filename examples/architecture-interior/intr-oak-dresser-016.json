@@ -1,0 +1,25 @@
+{
+ "id": "intr-oak-dresser-016",
+ "name": "Modern Oak Dresser 016",
+ "category": "architecture-interior",
+ "prompt": "wooden oak dresser cupboard drawers low poly",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 23706,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "lowpoly",
+  "wood",
+  "balanced",
+  "dresser"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23706,
+ "seed": 41735
+}

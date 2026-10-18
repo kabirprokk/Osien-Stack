@@ -1,0 +1,26 @@
+{
+ "id": "gun-scope-sight-012",
+ "name": "Ornate Scope Sight 012",
+ "category": "weapons-guns",
+ "prompt": "worn iron black scope sight ring torus stylized",
+ "kit": "torus",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 4046,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "torus",
+  "stylized",
+  "iron",
+  "worn",
+  "gun",
+  "scope"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4046,
+ "seed": 41131
+}

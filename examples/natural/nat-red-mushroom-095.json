@@ -1,0 +1,25 @@
+{
+ "id": "nat-red-mushroom-095",
+ "name": "Mossy Red Mushroom 095",
+ "category": "natural",
+ "prompt": "pristine wooden red spotted mushroom toadstool realistic",
+ "kit": "mushroom",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 11036,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "realistic",
+  "wood",
+  "pristine",
+  "fungus"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11036,
+ "seed": 41334
+}

@@ -1,0 +1,24 @@
+{
+ "id": "sfx-orbital-shuttle-027",
+ "name": "Deep Orbital Shuttle 027",
+ "category": "scifi",
+ "prompt": "polished steel white orbital shuttle spacecraft sci-fi",
+ "kit": "spaceship",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "steel",
+  "poly": 23958,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "steel",
+  "pristine",
+  "shuttle"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23958,
+ "seed": 41826
+}

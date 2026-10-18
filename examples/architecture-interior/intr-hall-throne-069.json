@@ -1,0 +1,25 @@
+{
+ "id": "intr-hall-throne-069",
+ "name": "Dim Hall Throne 069",
+ "category": "architecture-interior",
+ "prompt": "stone marble hall throne realistic",
+ "kit": "throne",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "stone",
+  "poly": 3665,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "throne",
+  "realistic",
+  "stone",
+  "balanced",
+  "hall"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3665,
+ "seed": 41788
+}

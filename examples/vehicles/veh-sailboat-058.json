@@ -1,0 +1,28 @@
+{
+ "id": "veh-sailboat-058",
+ "name": "Fast Sailboat 058",
+ "category": "vehicles",
+ "prompt": "gold wooden sailboat yacht with sails and mast stylized",
+ "kit": "boat",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "gold",
+  "poly": 24127,
+  "parts": [
+   "sails",
+   "mast"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "stylized",
+  "gold",
+  "balanced",
+  "sailboat"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24127,
+ "seed": 41417
+}

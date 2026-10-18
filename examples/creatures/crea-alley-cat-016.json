@@ -1,0 +1,27 @@
+{
+ "id": "crea-alley-cat-016",
+ "name": "Ancient Alley Cat 016",
+ "category": "creatures",
+ "prompt": "weathered glass small orange alley cat with tail fantasy",
+ "kit": "creature",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "glass",
+  "poly": 30736,
+  "parts": [
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "fantasy",
+  "glass",
+  "worn",
+  "cat"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30736,
+ "seed": 41555
+}

@@ -1,0 +1,27 @@
+{
+ "id": "crea-swamp-wyvern-018",
+ "name": "Swamp Swamp Wyvern 018",
+ "category": "creatures",
+ "prompt": "worn bone lean swamp wyvern drake with horns fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "bone",
+  "poly": 11930,
+  "parts": [
+   "horns"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "fantasy",
+  "bone",
+  "worn",
+  "wyvern"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11930,
+ "seed": 41557
+}

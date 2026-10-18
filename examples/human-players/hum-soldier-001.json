@@ -1,0 +1,21 @@
+{
+ "id": "hum-soldier-001",
+ "name": "Keen Soldier 001",
+ "category": "human-players",
+ "kit": "soldierModern",
+ "prompt": "keen rugged modern soldier",
+ "seed": 40071,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "soldier",
+  "modern",
+  "tactical",
+  "keen",
+  "rugged",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

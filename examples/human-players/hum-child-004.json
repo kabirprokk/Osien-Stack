@@ -1,0 +1,21 @@
+{
+ "id": "hum-child-004",
+ "name": "Grand Child 004",
+ "category": "human-players",
+ "kit": "baseChild",
+ "prompt": "grand noble young child",
+ "seed": 40024,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "child",
+  "kid",
+  "young",
+  "grand",
+  "noble",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

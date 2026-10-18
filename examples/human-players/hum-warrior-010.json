@@ -1,0 +1,21 @@
+{
+ "id": "hum-warrior-010",
+ "name": "Tall Warrior 010",
+ "category": "human-players",
+ "kit": "warrior",
+ "prompt": "tall brave fierce warrior",
+ "seed": 40040,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "warrior",
+  "fighter",
+  "tribal",
+  "tall",
+  "brave",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

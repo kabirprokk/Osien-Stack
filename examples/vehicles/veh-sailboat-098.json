@@ -1,0 +1,27 @@
+{
+ "id": "veh-sailboat-098",
+ "name": "Red Sailboat 098",
+ "category": "vehicles",
+ "prompt": "iron wooden sailboat yacht with mast sci-fi",
+ "kit": "boat",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "iron",
+  "poly": 12514,
+  "parts": [
+   "mast"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "scifi",
+  "iron",
+  "balanced",
+  "sailboat"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12514,
+ "seed": 41457
+}

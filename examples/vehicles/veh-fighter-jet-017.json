@@ -1,0 +1,27 @@
+{
+ "id": "veh-fighter-jet-017",
+ "name": "Old Fighter Jet 017",
+ "category": "vehicles",
+ "prompt": "rusty gray fighter jet aircraft with engine low poly",
+ "kit": "airplane",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "rust",
+  "poly": 3985,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "lowpoly",
+  "rust",
+  "balanced",
+  "fighter"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3985,
+ "seed": 41376
+}

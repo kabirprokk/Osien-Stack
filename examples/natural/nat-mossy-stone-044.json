@@ -1,0 +1,25 @@
+{
+ "id": "nat-mossy-stone-044",
+ "name": "Wild Mossy Stone 044",
+ "category": "natural",
+ "prompt": "polished glass mossy ancient stone rock stylized",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 12760,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "stylized",
+  "glass",
+  "pristine",
+  "moss"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12760,
+ "seed": 41283
+}

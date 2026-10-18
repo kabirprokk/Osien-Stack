@@ -1,0 +1,24 @@
+{
+ "id": "gun-round-shield-052",
+ "name": "Golden Round Shield 052",
+ "category": "weapons-guns",
+ "prompt": "polished obsidian round iron shield buckler fantasy",
+ "kit": "shield",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "obsidian",
+  "poly": 23217,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "shield",
+  "fantasy",
+  "obsidian",
+  "pristine"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23217,
+ "seed": 41171
+}

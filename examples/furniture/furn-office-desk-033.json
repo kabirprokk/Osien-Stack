@@ -1,0 +1,26 @@
+{
+ "id": "furn-office-desk-033",
+ "name": "Oaken Office Desk 033",
+ "category": "furniture",
+ "prompt": "leather modern office desk table low poly",
+ "kit": "table",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "leather",
+  "poly": 11368,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "table",
+  "lowpoly",
+  "leather",
+  "balanced",
+  "desk",
+  "office"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11368,
+ "seed": 41652
+}

@@ -1,0 +1,21 @@
+{
+ "id": "hum-astronaut-005",
+ "name": "Proud Astronaut 005",
+ "category": "human-players",
+ "kit": "astronaut",
+ "prompt": "proud keen brave astronaut",
+ "seed": 40105,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "astronaut",
+  "space",
+  "suit",
+  "proud",
+  "keen",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

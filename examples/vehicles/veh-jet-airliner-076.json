@@ -1,0 +1,25 @@
+{
+ "id": "veh-jet-airliner-076",
+ "name": "Desert Jet Airliner 076",
+ "category": "vehicles",
+ "prompt": "pristine glass white jet airliner airplane stylized",
+ "kit": "airplane",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 11603,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "stylized",
+  "glass",
+  "pristine",
+  "airliner"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11603,
+ "seed": 41435
+}

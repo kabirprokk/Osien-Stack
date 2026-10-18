@@ -1,0 +1,27 @@
+{
+ "id": "bldg-clock-tower-101",
+ "name": "Ruined Clock Tower 101",
+ "category": "buildings-bldg",
+ "prompt": "mossy brass old clock tower building with windows with doors low poly",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 12920,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "lowpoly",
+  "brass",
+  "ancient",
+  "tower"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12920,
+ "seed": 41100
+}

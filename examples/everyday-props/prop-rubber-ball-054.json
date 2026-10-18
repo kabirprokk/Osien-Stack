@@ -1,0 +1,25 @@
+{
+ "id": "prop-rubber-ball-054",
+ "name": "Wooden Rubber Ball 054",
+ "category": "everyday-props",
+ "prompt": "polished fabric red rubber ball sphere realistic",
+ "kit": "sphere",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 3740,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "sphere",
+  "realistic",
+  "fabric",
+  "pristine",
+  "ball"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3740,
+ "seed": 42033
+}

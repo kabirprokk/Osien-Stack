@@ -1,0 +1,25 @@
+{
+ "id": "sfx-orbital-shuttle-003",
+ "name": "Neon Orbital Shuttle 003",
+ "category": "scifi",
+ "prompt": "polished chrome white orbital shuttle spacecraft low poly",
+ "kit": "spaceship",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "chrome",
+  "poly": 4267,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "lowpoly",
+  "chrome",
+  "pristine",
+  "shuttle"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4267,
+ "seed": 41802
+}

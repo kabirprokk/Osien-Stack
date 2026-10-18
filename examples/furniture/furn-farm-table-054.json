@@ -1,0 +1,25 @@
+{
+ "id": "furn-farm-table-054",
+ "name": "Small Farm Table 054",
+ "category": "furniture",
+ "prompt": "brass rustic wooden farm table low poly",
+ "kit": "table",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 24938,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "table",
+  "lowpoly",
+  "brass",
+  "balanced",
+  "farm"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24938,
+ "seed": 41673
+}

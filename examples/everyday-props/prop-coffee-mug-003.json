@@ -1,0 +1,25 @@
+{
+ "id": "prop-coffee-mug-003",
+ "name": "Red Coffee Mug 003",
+ "category": "everyday-props",
+ "prompt": "polished wooden white coffee mug cylinder cup low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 22541,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "cylinder",
+  "lowpoly",
+  "wood",
+  "pristine",
+  "mug"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22541,
+ "seed": 41982
+}

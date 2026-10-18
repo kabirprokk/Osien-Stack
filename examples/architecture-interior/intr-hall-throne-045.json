@@ -1,0 +1,25 @@
+{
+ "id": "intr-hall-throne-045",
+ "name": "Antique Hall Throne 045",
+ "category": "architecture-interior",
+ "prompt": "marble marble hall throne stylized",
+ "kit": "throne",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 22611,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "throne",
+  "stylized",
+  "marble",
+  "balanced",
+  "hall"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22611,
+ "seed": 41764
+}

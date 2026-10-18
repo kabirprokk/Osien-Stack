@@ -1,0 +1,26 @@
+{
+ "id": "food-orange-fruit-018",
+ "name": "Glazed Orange Fruit 018",
+ "category": "food",
+ "prompt": "wooden ripe orange sphere fruit stylized",
+ "kit": "sphere",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 12361,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "sphere",
+  "stylized",
+  "wood",
+  "balanced",
+  "orange",
+  "fruit"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12361,
+ "seed": 41957
+}

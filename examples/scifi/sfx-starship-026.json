@@ -1,0 +1,25 @@
+{
+ "id": "sfx-starship-026",
+ "name": "Quantum Starship 026",
+ "category": "scifi",
+ "prompt": "chrome sleek starship rocket stylized",
+ "kit": "spaceship",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 12213,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "stylized",
+  "chrome",
+  "balanced",
+  "starship"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12213,
+ "seed": 41825
+}

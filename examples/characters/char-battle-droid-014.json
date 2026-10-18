@@ -1,0 +1,25 @@
+{
+ "id": "char-battle-droid-014",
+ "name": "Old Battle Droid 014",
+ "category": "characters",
+ "prompt": "pristine bone tall battle droid mech realistic",
+ "kit": "robot",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 11012,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "realistic",
+  "bone",
+  "pristine",
+  "mech"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11012,
+ "seed": 41473
+}

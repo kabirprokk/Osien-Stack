@@ -1,0 +1,25 @@
+{
+ "id": "intr-library-shelf-042",
+ "name": "Dim Library Shelf 042",
+ "category": "architecture-interior",
+ "prompt": "weathered wooden dark library bookshelf wall low poly",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 3734,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "lowpoly",
+  "wood",
+  "worn",
+  "library"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3734,
+ "seed": 41761
+}

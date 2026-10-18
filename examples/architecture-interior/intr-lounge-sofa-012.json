@@ -1,0 +1,25 @@
+{
+ "id": "intr-lounge-sofa-012",
+ "name": "Warm Lounge Sofa 012",
+ "category": "architecture-interior",
+ "prompt": "leather modern lounge sofa fantasy",
+ "kit": "sofa",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "leather",
+  "poly": 4057,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "sofa",
+  "fantasy",
+  "leather",
+  "balanced",
+  "lounge"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4057,
+ "seed": 41731
+}

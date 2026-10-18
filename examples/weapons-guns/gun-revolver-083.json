@@ -1,0 +1,26 @@
+{
+ "id": "gun-revolver-083",
+ "name": "Dark Revolver 083",
+ "category": "weapons-guns",
+ "prompt": "iron iron revolver drum cylinder low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 12033,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "lowpoly",
+  "iron",
+  "balanced",
+  "gun",
+  "revolver"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12033,
+ "seed": 41202
+}

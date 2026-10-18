@@ -1,0 +1,25 @@
+{
+ "id": "nat-red-mushroom-035",
+ "name": "Amber Red Mushroom 035",
+ "category": "natural",
+ "prompt": "worn stone red spotted mushroom toadstool low poly",
+ "kit": "mushroom",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 11396,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "lowpoly",
+  "stone",
+  "worn",
+  "fungus"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11396,
+ "seed": 41274
+}

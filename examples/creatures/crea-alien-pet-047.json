@@ -1,0 +1,26 @@
+{
+ "id": "crea-alien-pet-047",
+ "name": "Young Alien Pet 047",
+ "category": "creatures",
+ "prompt": "worn glass small cute alien pet quadruped fantasy",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "glass",
+  "poly": 12782,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "fantasy",
+  "glass",
+  "worn",
+  "alien",
+  "pet"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12782,
+ "seed": 41586
+}

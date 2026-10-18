@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-helmet-101",
+ "name": "Golden Knight Helmet 101",
+ "category": "weapons-guns",
+ "prompt": "pristine rusty steel knight helmet helm low poly",
+ "kit": "helmet",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "rust",
+  "poly": 31356,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "helmet",
+  "lowpoly",
+  "rust",
+  "pristine",
+  "armor"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31356,
+ "seed": 41220
+}

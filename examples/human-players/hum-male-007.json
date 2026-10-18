@@ -1,0 +1,21 @@
+{
+ "id": "hum-male-007",
+ "name": "Bold Male 007",
+ "category": "human-players",
+ "kit": "baseMale",
+ "prompt": "bold keen standing man",
+ "seed": 40007,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "man",
+  "male",
+  "casual",
+  "bold",
+  "keen",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

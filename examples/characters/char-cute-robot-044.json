@@ -1,0 +1,26 @@
+{
+ "id": "char-cute-robot-044",
+ "name": "Golden Cute Robot 044",
+ "category": "characters",
+ "prompt": "weathered fabric cute little robot droid sci-fi",
+ "kit": "robot",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "fabric",
+  "poly": 12208,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "scifi",
+  "fabric",
+  "worn",
+  "droid",
+  "cute"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12208,
+ "seed": 41503
+}

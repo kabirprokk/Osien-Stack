@@ -1,0 +1,21 @@
+{
+ "id": "veg-wheat-004",
+ "name": "Golden Wheat 004",
+ "category": "vegetation-ultra",
+ "kit": "wheatField",
+ "prompt": "golden dense wheat crop field",
+ "seed": 30050,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "wheat",
+  "crop",
+  "farm",
+  "golden",
+  "dense",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

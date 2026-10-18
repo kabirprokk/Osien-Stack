@@ -1,0 +1,25 @@
+{
+ "id": "nat-amethyst-geode-039",
+ "name": "Grey Amethyst Geode 039",
+ "category": "natural",
+ "prompt": "crystal purple amethyst crystal geode low poly",
+ "kit": "crystal",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "crystal",
+  "poly": 25921,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "lowpoly",
+  "balanced",
+  "amethyst",
+  "gem"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25921,
+ "seed": 41278
+}

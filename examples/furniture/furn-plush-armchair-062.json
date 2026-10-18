@@ -1,0 +1,25 @@
+{
+ "id": "furn-plush-armchair-062",
+ "name": "Round Plush Armchair 062",
+ "category": "furniture",
+ "prompt": "brass plush fabric armchair seat stylized",
+ "kit": "chair",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "brass",
+  "poly": 13150,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "chair",
+  "stylized",
+  "brass",
+  "balanced",
+  "armchair"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13150,
+ "seed": 41681
+}

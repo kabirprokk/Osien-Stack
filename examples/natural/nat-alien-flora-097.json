@@ -1,0 +1,26 @@
+{
+ "id": "nat-alien-flora-097",
+ "name": "Glowing Alien Flora 097",
+ "category": "natural",
+ "prompt": "bone glowing alien plant tentacle flower realistic",
+ "kit": "alienPlant",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 11735,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "alienPlant",
+  "realistic",
+  "bone",
+  "balanced",
+  "alien",
+  "flora"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11735,
+ "seed": 41336
+}

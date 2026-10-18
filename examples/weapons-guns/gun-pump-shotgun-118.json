@@ -1,0 +1,26 @@
+{
+ "id": "gun-pump-shotgun-118",
+ "name": "Polished Pump Shotgun 118",
+ "category": "weapons-guns",
+ "prompt": "pristine chrome wooden pump shotgun receiver box stylized",
+ "kit": "box",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 4167,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "box",
+  "stylized",
+  "chrome",
+  "pristine",
+  "gun",
+  "shotgun"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4167,
+ "seed": 41237
+}

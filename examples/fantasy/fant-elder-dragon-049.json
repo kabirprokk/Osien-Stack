@@ -1,0 +1,24 @@
+{
+ "id": "fant-elder-dragon-049",
+ "name": "Dark Elder Dragon 049",
+ "category": "fantasy",
+ "prompt": "marble ancient elder dragon fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 3976,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "dragon",
+  "marble",
+  "balanced",
+  "elder"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3976,
+ "seed": 41928
+}

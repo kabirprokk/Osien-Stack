@@ -1,0 +1,25 @@
+{
+ "id": "prop-rubber-ball-014",
+ "name": "Heavy Rubber Ball 014",
+ "category": "everyday-props",
+ "prompt": "glass red rubber ball sphere stylized",
+ "kit": "sphere",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 31891,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "sphere",
+  "stylized",
+  "glass",
+  "balanced",
+  "ball"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31891,
+ "seed": 41993
+}

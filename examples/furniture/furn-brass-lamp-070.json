@@ -1,0 +1,25 @@
+{
+ "id": "furn-brass-lamp-070",
+ "name": "Leather Brass Lamp 070",
+ "category": "furniture",
+ "prompt": "ancient brass brass desk lamp lantern stylized",
+ "kit": "lamp",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "brass",
+  "poly": 26287,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "lamp",
+  "stylized",
+  "brass",
+  "ancient",
+  "lantern"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26287,
+ "seed": 41689
+}

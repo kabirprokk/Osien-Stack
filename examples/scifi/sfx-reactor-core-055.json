@@ -1,0 +1,27 @@
+{
+ "id": "sfx-reactor-core-055",
+ "name": "Rusty Reactor Core 055",
+ "category": "scifi",
+ "prompt": "glass glowing reactor core cylinder column with engine realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 4164,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "cylinder",
+  "realistic",
+  "glass",
+  "balanced",
+  "reactor"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4164,
+ "seed": 41854
+}

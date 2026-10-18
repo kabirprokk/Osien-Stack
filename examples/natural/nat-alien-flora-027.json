@@ -1,0 +1,26 @@
+{
+ "id": "nat-alien-flora-027",
+ "name": "Tall Alien Flora 027",
+ "category": "natural",
+ "prompt": "polished stone glowing alien plant tentacle flower stylized",
+ "kit": "alienPlant",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "stone",
+  "poly": 11916,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "alienPlant",
+  "stylized",
+  "stone",
+  "pristine",
+  "alien",
+  "flora"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11916,
+ "seed": 41266
+}

@@ -1,0 +1,25 @@
+{
+ "id": "bldg-temple-hall-024",
+ "name": "Grand Temple Hall 024",
+ "category": "buildings-bldg",
+ "prompt": "ancient brass ancient marble temple hall with columns and steps low poly",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 12245,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "lowpoly",
+  "brass",
+  "ancient",
+  "temple"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12245,
+ "seed": 41023
+}

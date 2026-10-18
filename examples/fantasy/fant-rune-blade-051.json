@@ -1,0 +1,25 @@
+{
+ "id": "fant-rune-blade-051",
+ "name": "Golden Rune Blade 051",
+ "category": "fantasy",
+ "prompt": "polished obsidian ornate runed rune blade sword realistic",
+ "kit": "swordV2",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "obsidian",
+  "poly": 11519,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "swordV2",
+  "realistic",
+  "obsidian",
+  "pristine",
+  "rune"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11519,
+ "seed": 41930
+}

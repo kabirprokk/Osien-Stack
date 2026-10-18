@@ -1,0 +1,28 @@
+{
+ "id": "furn-wardrobe-088",
+ "name": "Leather Wardrobe 088",
+ "category": "furniture",
+ "prompt": "iron oak wardrobe cupboard with doors with doors low poly",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 12378,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "lowpoly",
+  "iron",
+  "balanced",
+  "cabinet",
+  "wardrobe"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12378,
+ "seed": 41707
+}

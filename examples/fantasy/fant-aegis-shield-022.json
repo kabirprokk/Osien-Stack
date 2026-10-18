@@ -1,0 +1,25 @@
+{
+ "id": "fant-aegis-shield-022",
+ "name": "Ancient Aegis Shield 022",
+ "category": "fantasy",
+ "prompt": "crystal golden aegis shield realistic",
+ "kit": "shield",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "crystal",
+  "poly": 28009,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "shield",
+  "realistic",
+  "crystal",
+  "balanced",
+  "aegis"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 28009,
+ "seed": 41901
+}

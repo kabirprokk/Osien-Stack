@@ -1,0 +1,25 @@
+{
+ "id": "prop-treasure-chest-020",
+ "name": "Wooden Treasure Chest 020",
+ "category": "everyday-props",
+ "prompt": "steel iron-bound treasure chest coffer low poly",
+ "kit": "treasureChest",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 3894,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "treasureChest",
+  "lowpoly",
+  "steel",
+  "balanced",
+  "treasure"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3894,
+ "seed": 41999
+}

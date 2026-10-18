@@ -1,0 +1,21 @@
+{
+ "id": "hum-mage-008",
+ "name": "Keen Mage 008",
+ "category": "human-players",
+ "kit": "mage",
+ "prompt": "keen brave wise mage with staff",
+ "seed": 40058,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "mage",
+  "wizard",
+  "staff",
+  "keen",
+  "brave",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

@@ -1,0 +1,24 @@
+{
+ "id": "gun-round-shield-016",
+ "name": "Oaken Round Shield 016",
+ "category": "weapons-guns",
+ "prompt": "weathered steel round iron shield buckler fantasy",
+ "kit": "shield",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "steel",
+  "poly": 24719,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "shield",
+  "fantasy",
+  "steel",
+  "worn"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24719,
+ "seed": 41135
+}

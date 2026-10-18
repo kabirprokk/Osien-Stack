@@ -1,0 +1,25 @@
+{
+ "id": "furn-farm-table-084",
+ "name": "Oaken Farm Table 084",
+ "category": "furniture",
+ "prompt": "glass rustic wooden farm table low poly",
+ "kit": "table",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 11866,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "table",
+  "lowpoly",
+  "glass",
+  "balanced",
+  "farm"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11866,
+ "seed": 41703
+}

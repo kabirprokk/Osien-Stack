@@ -1,0 +1,29 @@
+{
+ "id": "bldg-castle-keep-050",
+ "name": "Grand Castle Keep 050",
+ "category": "buildings-bldg",
+ "prompt": "weathered marble medieval castle fortress keep with towers and gate with towers and gate fantasy",
+ "kit": "castle",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 11178,
+  "parts": [
+   "towers",
+   "gate"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "castle",
+  "fantasy",
+  "marble",
+  "worn",
+  "medieval",
+  "fortress"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11178,
+ "seed": 41049
+}

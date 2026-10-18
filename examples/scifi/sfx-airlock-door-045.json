@@ -1,0 +1,25 @@
+{
+ "id": "sfx-airlock-door-045",
+ "name": "Deep Airlock Door 045",
+ "category": "scifi",
+ "prompt": "ancient steel steel airlock door box panel low poly",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 11272,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "box",
+  "lowpoly",
+  "steel",
+  "ancient",
+  "airlock"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11272,
+ "seed": 41844
+}

@@ -1,0 +1,26 @@
+{
+ "id": "nat-alien-flora-077",
+ "name": "Amber Alien Flora 077",
+ "category": "natural",
+ "prompt": "pristine crystal glowing alien plant tentacle flower low poly",
+ "kit": "alienPlant",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "crystal",
+  "poly": 12291,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "alienPlant",
+  "lowpoly",
+  "crystal",
+  "pristine",
+  "alien",
+  "flora"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12291,
+ "seed": 41316
+}

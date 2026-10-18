@@ -1,0 +1,26 @@
+{
+ "id": "char-forest-elf-034",
+ "name": "Wise Forest Elf 034",
+ "category": "characters",
+ "prompt": "ancient chrome slender forest elf mage sci-fi",
+ "kit": "mage",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "chrome",
+  "poly": 22856,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "scifi",
+  "chrome",
+  "ancient",
+  "elf",
+  "mage"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22856,
+ "seed": 41493
+}

@@ -1,0 +1,25 @@
+{
+ "id": "char-space-marine-053",
+ "name": "Old Space Marine 053",
+ "category": "characters",
+ "prompt": "mossy leather armored space marine soldier avatar realistic",
+ "kit": "soldierModern",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "leather",
+  "poly": 21680,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "realistic",
+  "leather",
+  "ancient",
+  "soldier"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21680,
+ "seed": 41512
+}

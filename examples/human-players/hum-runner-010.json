@@ -1,0 +1,21 @@
+{
+ "id": "hum-runner-010",
+ "name": "Rugged Runner 010",
+ "category": "human-players",
+ "kit": "runner",
+ "prompt": "rugged tall swift running athlete",
+ "seed": 40120,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "runner",
+  "athlete",
+  "sport",
+  "rugged",
+  "tall",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

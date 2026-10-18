@@ -1,0 +1,24 @@
+{
+ "id": "sfx-starship-018",
+ "name": "Rusty Starship 018",
+ "category": "scifi",
+ "prompt": "weathered obsidian sleek starship rocket sci-fi",
+ "kit": "spaceship",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "obsidian",
+  "poly": 21909,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "obsidian",
+  "worn",
+  "starship"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21909,
+ "seed": 41817
+}

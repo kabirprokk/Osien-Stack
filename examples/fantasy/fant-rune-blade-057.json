@@ -1,0 +1,25 @@
+{
+ "id": "fant-rune-blade-057",
+ "name": "Enchanted Rune Blade 057",
+ "category": "fantasy",
+ "prompt": "polished wooden ornate runed rune blade sword stylized",
+ "kit": "swordV2",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 4082,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "swordV2",
+  "stylized",
+  "wood",
+  "pristine",
+  "rune"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4082,
+ "seed": 41936
+}

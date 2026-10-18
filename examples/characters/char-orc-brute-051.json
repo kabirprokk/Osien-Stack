@@ -1,0 +1,25 @@
+{
+ "id": "char-orc-brute-051",
+ "name": "Old Orc Brute 051",
+ "category": "characters",
+ "prompt": "steel hulking orc warrior stylized",
+ "kit": "warrior",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 11887,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "stylized",
+  "steel",
+  "balanced",
+  "orc"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11887,
+ "seed": 41510
+}

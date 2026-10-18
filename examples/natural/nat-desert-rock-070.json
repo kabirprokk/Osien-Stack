@@ -1,0 +1,25 @@
+{
+ "id": "nat-desert-rock-070",
+ "name": "Amber Desert Rock 070",
+ "category": "natural",
+ "prompt": "ancient wooden weathered sandstone desert rock low poly",
+ "kit": "rock",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 32570,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "lowpoly",
+  "wood",
+  "ancient",
+  "desert"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 32570,
+ "seed": 41309
+}

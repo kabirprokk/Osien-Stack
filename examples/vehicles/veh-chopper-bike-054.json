@@ -1,0 +1,25 @@
+{
+ "id": "veh-chopper-bike-054",
+ "name": "Chrome Chopper Bike 054",
+ "category": "vehicles",
+ "prompt": "steel black chopper motorcycle bike low poly",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 12528,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "lowpoly",
+  "steel",
+  "balanced",
+  "chopper"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12528,
+ "seed": 41413
+}

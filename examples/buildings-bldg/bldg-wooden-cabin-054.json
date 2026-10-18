@@ -1,0 +1,26 @@
+{
+ "id": "bldg-wooden-cabin-054",
+ "name": "Gothic Wooden Cabin 054",
+ "category": "buildings-bldg",
+ "prompt": "weathered wooden wooden cabin hut house with chimney fantasy",
+ "kit": "house",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "wood",
+  "poly": 11674,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "fantasy",
+  "wood",
+  "worn",
+  "cabin",
+  "forest"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11674,
+ "seed": 41053
+}

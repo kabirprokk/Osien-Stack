@@ -1,0 +1,25 @@
+{
+ "id": "nat-mossy-stone-074",
+ "name": "Amber Mossy Stone 074",
+ "category": "natural",
+ "prompt": "glass mossy ancient stone rock stylized",
+ "kit": "rock",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 26389,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "stylized",
+  "glass",
+  "balanced",
+  "moss"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26389,
+ "seed": 41313
+}

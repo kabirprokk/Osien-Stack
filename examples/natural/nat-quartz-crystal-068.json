@@ -1,0 +1,26 @@
+{
+ "id": "nat-quartz-crystal-068",
+ "name": "Old Quartz Crystal 068",
+ "category": "natural",
+ "prompt": "bone clear quartz crystal cluster gem stylized",
+ "kit": "crystal",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "bone",
+  "poly": 26072,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "stylized",
+  "bone",
+  "balanced",
+  "quartz",
+  "gem"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26072,
+ "seed": 41307
+}

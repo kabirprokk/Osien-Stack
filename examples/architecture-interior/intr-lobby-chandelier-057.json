@@ -1,0 +1,26 @@
+{
+ "id": "intr-lobby-chandelier-057",
+ "name": "Small Lobby Chandelier 057",
+ "category": "architecture-interior",
+ "prompt": "leather grand lobby chandelier lamp fantasy",
+ "kit": "lamp",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "leather",
+  "poly": 11509,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "lamp",
+  "fantasy",
+  "leather",
+  "balanced",
+  "chandelier",
+  "lobby"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11509,
+ "seed": 41776
+}

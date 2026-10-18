@@ -1,0 +1,28 @@
+{
+ "id": "veh-vespa-scooter-015",
+ "name": "Desert Vespa Scooter 015",
+ "category": "vehicles",
+ "prompt": "polished chrome mint vespa scooter bike with engine and wheels stylized",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 3727,
+  "parts": [
+   "engine",
+   "wheels"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "stylized",
+  "chrome",
+  "pristine",
+  "scooter"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3727,
+ "seed": 41374
+}

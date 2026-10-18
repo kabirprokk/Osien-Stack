@@ -1,0 +1,24 @@
+{
+ "id": "fant-rune-blade-045",
+ "name": "Ancient Rune Blade 045",
+ "category": "fantasy",
+ "prompt": "obsidian ornate runed rune blade sword fantasy",
+ "kit": "swordV2",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "obsidian",
+  "poly": 12509,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "swordV2",
+  "obsidian",
+  "balanced",
+  "rune"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12509,
+ "seed": 41924
+}

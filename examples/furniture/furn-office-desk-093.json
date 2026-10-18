@@ -1,0 +1,26 @@
+{
+ "id": "furn-office-desk-093",
+ "name": "Small Office Desk 093",
+ "category": "furniture",
+ "prompt": "brass modern office desk table low poly",
+ "kit": "table",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 13083,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "table",
+  "lowpoly",
+  "brass",
+  "balanced",
+  "desk",
+  "office"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13083,
+ "seed": 41712
+}

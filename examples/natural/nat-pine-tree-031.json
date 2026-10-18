@@ -1,0 +1,26 @@
+{
+ "id": "nat-pine-tree-031",
+ "name": "Glowing Pine Tree 031",
+ "category": "natural",
+ "prompt": "weathered stone tall pine tree stylized",
+ "kit": "tree",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "stone",
+  "poly": 3721,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "stylized",
+  "stone",
+  "worn",
+  "pine",
+  "forest"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3721,
+ "seed": 41270
+}

@@ -1,0 +1,25 @@
+{
+ "id": "crea-cave-bear-020",
+ "name": "Golden Cave Bear 020",
+ "category": "creatures",
+ "prompt": "wooden brown cave bear beast stylized",
+ "kit": "creature",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 32350,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "stylized",
+  "wood",
+  "balanced",
+  "bear"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 32350,
+ "seed": 41559
+}

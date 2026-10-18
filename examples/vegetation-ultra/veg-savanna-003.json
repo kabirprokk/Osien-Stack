@@ -1,0 +1,21 @@
+{
+ "id": "veg-savanna-003",
+ "name": "Withered Savanna 003",
+ "category": "vegetation-ultra",
+ "kit": "savannaTuft",
+ "prompt": "withered golden savanna dry grass tuft",
+ "seed": 30023,
+ "params": {
+  "quality": "draft",
+  "style": "stylized"
+ },
+ "tags": [
+  "savanna",
+  "dry",
+  "field",
+  "withered",
+  "golden",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

@@ -1,0 +1,26 @@
+{
+ "id": "intr-lobby-chandelier-033",
+ "name": "Grand Lobby Chandelier 033",
+ "category": "architecture-interior",
+ "prompt": "brass grand lobby chandelier lamp fantasy",
+ "kit": "lamp",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "brass",
+  "poly": 30226,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "lamp",
+  "fantasy",
+  "brass",
+  "balanced",
+  "chandelier",
+  "lobby"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30226,
+ "seed": 41752
+}

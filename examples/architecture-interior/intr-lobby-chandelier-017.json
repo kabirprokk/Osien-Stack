@@ -1,0 +1,26 @@
+{
+ "id": "intr-lobby-chandelier-017",
+ "name": "Marble Lobby Chandelier 017",
+ "category": "architecture-interior",
+ "prompt": "ancient stone grand lobby chandelier lamp stylized",
+ "kit": "lamp",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "stone",
+  "poly": 12081,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "lamp",
+  "stylized",
+  "stone",
+  "ancient",
+  "chandelier",
+  "lobby"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12081,
+ "seed": 41736
+}

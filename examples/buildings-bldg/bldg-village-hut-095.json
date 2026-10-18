@@ -1,0 +1,26 @@
+{
+ "id": "bldg-village-hut-095",
+ "name": "Grand Village Hut 095",
+ "category": "buildings-bldg",
+ "prompt": "worn iron village straw hut house with doors low poly",
+ "kit": "house",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 28341,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "lowpoly",
+  "iron",
+  "worn",
+  "hut",
+  "village"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 28341,
+ "seed": 41094
+}

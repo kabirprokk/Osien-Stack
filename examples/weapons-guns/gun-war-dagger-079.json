@@ -1,0 +1,25 @@
+{
+ "id": "gun-war-dagger-079",
+ "name": "Oaken War Dagger 079",
+ "category": "weapons-guns",
+ "prompt": "iron iron war dagger knife realistic",
+ "kit": "sword",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 26030,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "realistic",
+  "iron",
+  "balanced",
+  "dagger"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26030,
+ "seed": 41198
+}

@@ -1,0 +1,25 @@
+{
+ "id": "furn-plush-armchair-022",
+ "name": "Antique Plush Armchair 022",
+ "category": "furniture",
+ "prompt": "worn brass plush fabric armchair seat stylized",
+ "kit": "chair",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "brass",
+  "poly": 23499,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "chair",
+  "stylized",
+  "brass",
+  "worn",
+  "armchair"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23499,
+ "seed": 41641
+}

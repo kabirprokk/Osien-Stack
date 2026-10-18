@@ -1,0 +1,25 @@
+{
+ "id": "food-donut-003",
+ "name": "Golden Donut 003",
+ "category": "food",
+ "prompt": "ancient fabric glazed pink donut torus ring stylized",
+ "kit": "torus",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "fabric",
+  "poly": 4043,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "torus",
+  "stylized",
+  "fabric",
+  "ancient",
+  "donut"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4043,
+ "seed": 41942
+}

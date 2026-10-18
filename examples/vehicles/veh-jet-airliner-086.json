@@ -1,0 +1,25 @@
+{
+ "id": "veh-jet-airliner-086",
+ "name": "Desert Jet Airliner 086",
+ "category": "vehicles",
+ "prompt": "worn glass white jet airliner airplane sci-fi",
+ "kit": "airplane",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "glass",
+  "poly": 11354,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "scifi",
+  "glass",
+  "worn",
+  "airliner"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11354,
+ "seed": 41445
+}

@@ -1,0 +1,26 @@
+{
+ "id": "gun-ak-47-rifle-080",
+ "name": "Rusty AK-47 Rifle 080",
+ "category": "weapons-guns",
+ "prompt": "weathered gold rusty ak-47 assault rifle tube barrel realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "gold",
+  "poly": 12807,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "realistic",
+  "gold",
+  "worn",
+  "gun",
+  "rifle"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12807,
+ "seed": 41199
+}

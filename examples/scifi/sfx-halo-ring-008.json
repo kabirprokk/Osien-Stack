@@ -1,0 +1,24 @@
+{
+ "id": "sfx-halo-ring-008",
+ "name": "Lunar Halo Ring 008",
+ "category": "scifi",
+ "prompt": "worn steel spinning halo ring torus station sci-fi",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "steel",
+  "poly": 12289,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "torus",
+  "steel",
+  "worn",
+  "station"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12289,
+ "seed": 41807
+}

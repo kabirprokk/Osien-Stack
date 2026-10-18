@@ -1,0 +1,25 @@
+{
+ "id": "intr-lounge-sofa-020",
+ "name": "Cozy Lounge Sofa 020",
+ "category": "architecture-interior",
+ "prompt": "leather modern lounge sofa stylized",
+ "kit": "sofa",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 10857,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "sofa",
+  "stylized",
+  "leather",
+  "balanced",
+  "lounge"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10857,
+ "seed": 41739
+}

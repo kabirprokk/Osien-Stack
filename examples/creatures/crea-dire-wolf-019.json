@@ -1,0 +1,27 @@
+{
+ "id": "crea-dire-wolf-019",
+ "name": "Horned Dire Wolf 019",
+ "category": "creatures",
+ "prompt": "polished fabric gray dire wolf beast with tail realistic",
+ "kit": "creature",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 3690,
+  "parts": [
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "realistic",
+  "fabric",
+  "pristine",
+  "wolf"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3690,
+ "seed": 41558
+}

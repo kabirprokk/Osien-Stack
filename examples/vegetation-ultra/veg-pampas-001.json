@@ -1,0 +1,21 @@
+{
+ "id": "veg-pampas-001",
+ "name": "Feathery Pampas 001",
+ "category": "vegetation-ultra",
+ "kit": "pampasPlume",
+ "prompt": "feathery tall pampas plume ornamental grass",
+ "seed": 30028,
+ "params": {
+  "quality": "cinema",
+  "style": "stylized"
+ },
+ "tags": [
+  "ornamental",
+  "plume",
+  "garden",
+  "feathery",
+  "tall",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

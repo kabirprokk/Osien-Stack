@@ -1,0 +1,26 @@
+{
+ "id": "gun-ak-47-rifle-020",
+ "name": "Ancient AK-47 Rifle 020",
+ "category": "weapons-guns",
+ "prompt": "weathered wooden rusty ak-47 assault rifle tube barrel fantasy",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "wood",
+  "poly": 12519,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "fantasy",
+  "wood",
+  "worn",
+  "gun",
+  "rifle"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12519,
+ "seed": 41139
+}

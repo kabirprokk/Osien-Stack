@@ -1,0 +1,27 @@
+{
+ "id": "char-cyber-cyborg-064",
+ "name": "Old Cyber Cyborg 064",
+ "category": "characters",
+ "prompt": "pristine gold chrome cyber cyborg android with engine realistic",
+ "kit": "cyborg",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "gold",
+  "poly": 29808,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "realistic",
+  "gold",
+  "pristine",
+  "cyborg"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 29808,
+ "seed": 41523
+}

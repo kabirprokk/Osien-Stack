@@ -1,0 +1,27 @@
+{
+ "id": "crea-dire-wolf-051",
+ "name": "Wild Dire Wolf 051",
+ "category": "creatures",
+ "prompt": "wooden gray dire wolf beast with tail realistic",
+ "kit": "creature",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 4249,
+  "parts": [
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "realistic",
+  "wood",
+  "balanced",
+  "wolf"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4249,
+ "seed": 41590
+}

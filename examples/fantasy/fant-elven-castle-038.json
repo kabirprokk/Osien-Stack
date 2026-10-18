@@ -1,0 +1,27 @@
+{
+ "id": "fant-elven-castle-038",
+ "name": "Runic Elven Castle 038",
+ "category": "fantasy",
+ "prompt": "polished obsidian slender elven castle fortress with towers stylized",
+ "kit": "castle",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "obsidian",
+  "poly": 22401,
+  "parts": [
+   "towers"
+  ]
+ },
+ "tags": [
+  "fantasy",
+  "castle",
+  "stylized",
+  "obsidian",
+  "pristine",
+  "elven"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22401,
+ "seed": 41917
+}

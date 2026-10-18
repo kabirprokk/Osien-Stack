@@ -1,0 +1,25 @@
+{
+ "id": "char-space-marine-037",
+ "name": "Dark Space Marine 037",
+ "category": "characters",
+ "prompt": "worn fabric armored space marine soldier avatar realistic",
+ "kit": "soldierModern",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 12537,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "realistic",
+  "fabric",
+  "worn",
+  "soldier"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12537,
+ "seed": 41496
+}

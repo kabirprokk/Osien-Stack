@@ -1,0 +1,24 @@
+{
+ "id": "sfx-recon-rover-020",
+ "name": "Chrome Recon Rover 020",
+ "category": "scifi",
+ "prompt": "weathered copper lunar recon rover car vehicle sci-fi",
+ "kit": "car",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "copper",
+  "poly": 23482,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "car",
+  "copper",
+  "worn",
+  "rover"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23482,
+ "seed": 41819
+}

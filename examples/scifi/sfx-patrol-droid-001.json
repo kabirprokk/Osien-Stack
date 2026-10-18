@@ -1,0 +1,27 @@
+{
+ "id": "sfx-patrol-droid-001",
+ "name": "Chrome Patrol Droid 001",
+ "category": "scifi",
+ "prompt": "obsidian chrome patrol robot droid with engine low poly",
+ "kit": "robot",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "obsidian",
+  "poly": 24245,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "robot",
+  "lowpoly",
+  "obsidian",
+  "balanced",
+  "patrol"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24245,
+ "seed": 41800
+}

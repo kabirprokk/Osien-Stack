@@ -1,0 +1,26 @@
+{
+ "id": "nat-oak-tree-012",
+ "name": "Wild Oak Tree 012",
+ "category": "natural",
+ "prompt": "worn glass broad oak tree stylized",
+ "kit": "tree",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 12635,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "stylized",
+  "glass",
+  "worn",
+  "oak",
+  "forest"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12635,
+ "seed": 41251
+}

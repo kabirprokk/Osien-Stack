@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-helmet-053",
+ "name": "Ornate Knight Helmet 053",
+ "category": "weapons-guns",
+ "prompt": "worn iron steel knight helmet helm realistic",
+ "kit": "helmet",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 23103,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "helmet",
+  "realistic",
+  "iron",
+  "worn",
+  "armor"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23103,
+ "seed": 41172
+}

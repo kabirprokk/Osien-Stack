@@ -1,0 +1,28 @@
+{
+ "id": "bldg-desert-villa-080",
+ "name": "Old Desert Villa 080",
+ "category": "buildings-bldg",
+ "prompt": "polished marble desert sandstone villa house with doors and windows with doors stylized",
+ "kit": "house",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 3820,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "stylized",
+  "marble",
+  "pristine",
+  "villa",
+  "desert"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3820,
+ "seed": 41079
+}

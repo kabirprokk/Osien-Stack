@@ -1,0 +1,26 @@
+{
+ "id": "veh-city-sedan-051",
+ "name": "Chrome City Sedan 051",
+ "category": "vehicles",
+ "prompt": "glass red city sedan car vehicle stylized",
+ "kit": "car",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 23874,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "stylized",
+  "glass",
+  "balanced",
+  "sedan",
+  "city"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23874,
+ "seed": 41410
+}

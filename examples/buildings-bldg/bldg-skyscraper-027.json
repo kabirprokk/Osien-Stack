@@ -1,0 +1,28 @@
+{
+ "id": "bldg-skyscraper-027",
+ "name": "Medieval Skyscraper 027",
+ "category": "buildings-bldg",
+ "prompt": "ancient iron modern glass skyscraper tower with windows with doors stylized",
+ "kit": "building",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 22142,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "stylized",
+  "iron",
+  "ancient",
+  "modern",
+  "city"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22142,
+ "seed": 41026
+}

@@ -1,0 +1,25 @@
+{
+ "id": "bldg-clock-tower-113",
+ "name": "Towering Clock Tower 113",
+ "category": "buildings-bldg",
+ "prompt": "worn wooden old clock tower building with windows fantasy",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "wood",
+  "poly": 12372,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "fantasy",
+  "wood",
+  "worn",
+  "tower"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12372,
+ "seed": 41112
+}

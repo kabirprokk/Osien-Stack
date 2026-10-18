@@ -1,0 +1,26 @@
+{
+ "id": "furn-royal-throne-019",
+ "name": "Antique Royal Throne 019",
+ "category": "furniture",
+ "prompt": "pristine leather golden royal throne seat stylized",
+ "kit": "throne",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 13093,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "throne",
+  "stylized",
+  "leather",
+  "pristine",
+  "royal",
+  "gold"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13093,
+ "seed": 41638
+}

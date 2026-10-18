@@ -1,0 +1,26 @@
+{
+ "id": "nat-pine-tree-061",
+ "name": "Glowing Pine Tree 061",
+ "category": "natural",
+ "prompt": "weathered stone tall pine tree low poly",
+ "kit": "tree",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 12367,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "lowpoly",
+  "stone",
+  "worn",
+  "pine",
+  "forest"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12367,
+ "seed": 41300
+}

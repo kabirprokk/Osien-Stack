@@ -1,0 +1,25 @@
+{
+ "id": "nat-desert-rock-060",
+ "name": "Old Desert Rock 060",
+ "category": "natural",
+ "prompt": "weathered bone weathered sandstone desert rock realistic",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 12691,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "realistic",
+  "bone",
+  "worn",
+  "desert"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12691,
+ "seed": 41299
+}

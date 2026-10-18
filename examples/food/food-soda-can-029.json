@@ -1,0 +1,25 @@
+{
+ "id": "food-soda-can-029",
+ "name": "Small Soda Can 029",
+ "category": "food",
+ "prompt": "weathered fabric silver soda can cylinder tin low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 11420,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "cylinder",
+  "lowpoly",
+  "fabric",
+  "worn",
+  "soda"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11420,
+ "seed": 41968
+}

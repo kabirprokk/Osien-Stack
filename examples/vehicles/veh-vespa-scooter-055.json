@@ -1,0 +1,28 @@
+{
+ "id": "veh-vespa-scooter-055",
+ "name": "Midnight Vespa Scooter 055",
+ "category": "vehicles",
+ "prompt": "polished chrome mint vespa scooter bike with wheels and engine realistic",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "chrome",
+  "poly": 11865,
+  "parts": [
+   "wheels",
+   "engine"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "realistic",
+  "chrome",
+  "pristine",
+  "scooter"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11865,
+ "seed": 41414
+}

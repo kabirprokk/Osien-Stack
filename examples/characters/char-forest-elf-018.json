@@ -1,0 +1,26 @@
+{
+ "id": "char-forest-elf-018",
+ "name": "Wise Forest Elf 018",
+ "category": "characters",
+ "prompt": "weathered fabric slender forest elf mage fantasy",
+ "kit": "mage",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "fabric",
+  "poly": 3832,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "fantasy",
+  "fabric",
+  "worn",
+  "elf",
+  "mage"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3832,
+ "seed": 41477
+}

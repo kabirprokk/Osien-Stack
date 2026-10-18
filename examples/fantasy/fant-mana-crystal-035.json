@@ -1,0 +1,24 @@
+{
+ "id": "fant-mana-crystal-035",
+ "name": "Ancient Mana Crystal 035",
+ "category": "fantasy",
+ "prompt": "ancient gold glowing blue mana crystal fantasy",
+ "kit": "crystal",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "gold",
+  "poly": 10813,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "crystal",
+  "gold",
+  "ancient",
+  "mana"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10813,
+ "seed": 41914
+}

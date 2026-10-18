@@ -1,0 +1,26 @@
+{
+ "id": "nat-pine-tree-101",
+ "name": "Red Pine Tree 101",
+ "category": "natural",
+ "prompt": "stone tall pine tree realistic",
+ "kit": "tree",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "stone",
+  "poly": 28147,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "realistic",
+  "stone",
+  "balanced",
+  "pine",
+  "forest"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 28147,
+ "seed": 41340
+}

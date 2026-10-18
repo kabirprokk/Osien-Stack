@@ -1,0 +1,25 @@
+{
+ "id": "veh-jet-airliner-046",
+ "name": "Rusty Jet Airliner 046",
+ "category": "vehicles",
+ "prompt": "polished gold white jet airliner airplane low poly",
+ "kit": "airplane",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "gold",
+  "poly": 21732,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "lowpoly",
+  "gold",
+  "pristine",
+  "airliner"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21732,
+ "seed": 41405
+}

@@ -1,0 +1,25 @@
+{
+ "id": "nat-granite-boulder-083",
+ "name": "Wild Granite Boulder 083",
+ "category": "natural",
+ "prompt": "stone gray granite boulder rock realistic",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "stone",
+  "poly": 13136,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "realistic",
+  "stone",
+  "balanced",
+  "boulder"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13136,
+ "seed": 41322
+}

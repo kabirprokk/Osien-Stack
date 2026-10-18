@@ -1,0 +1,26 @@
+{
+ "id": "gun-sniper-rifle-105",
+ "name": "Steel Sniper Rifle 105",
+ "category": "weapons-guns",
+ "prompt": "polished obsidian long steel sniper rifle barrel tube low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "obsidian",
+  "poly": 26234,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "lowpoly",
+  "obsidian",
+  "pristine",
+  "gun",
+  "sniper"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26234,
+ "seed": 41224
+}

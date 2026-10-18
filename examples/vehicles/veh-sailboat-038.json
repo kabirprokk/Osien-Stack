@@ -1,0 +1,25 @@
+{
+ "id": "veh-sailboat-038",
+ "name": "Desert Sailboat 038",
+ "category": "vehicles",
+ "prompt": "weathered chrome wooden sailboat yacht sci-fi",
+ "kit": "boat",
+ "params": {
+  "quality": "draft",
+  "style": "scifi",
+  "material": "chrome",
+  "poly": 3971,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "scifi",
+  "chrome",
+  "worn",
+  "sailboat"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3971,
+ "seed": 41397
+}

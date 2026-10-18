@@ -1,0 +1,25 @@
+{
+ "id": "intr-library-shelf-026",
+ "name": "Grand Library Shelf 026",
+ "category": "architecture-interior",
+ "prompt": "fabric dark library bookshelf wall stylized",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "fabric",
+  "poly": 21783,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "stylized",
+  "fabric",
+  "balanced",
+  "library"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21783,
+ "seed": 41745
+}

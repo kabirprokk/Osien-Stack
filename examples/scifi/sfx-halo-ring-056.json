@@ -1,0 +1,24 @@
+{
+ "id": "sfx-halo-ring-056",
+ "name": "Lunar Halo Ring 056",
+ "category": "scifi",
+ "prompt": "steel spinning halo ring torus station sci-fi",
+ "kit": "torus",
+ "params": {
+  "quality": "draft",
+  "style": "scifi",
+  "material": "steel",
+  "poly": 3724,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "torus",
+  "steel",
+  "balanced",
+  "station"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3724,
+ "seed": 41855
+}

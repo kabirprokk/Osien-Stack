@@ -1,0 +1,26 @@
+{
+ "id": "veh-city-sedan-071",
+ "name": "Desert City Sedan 071",
+ "category": "vehicles",
+ "prompt": "chrome red city sedan car vehicle stylized",
+ "kit": "car",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 30696,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "stylized",
+  "chrome",
+  "balanced",
+  "sedan",
+  "city"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30696,
+ "seed": 41430
+}

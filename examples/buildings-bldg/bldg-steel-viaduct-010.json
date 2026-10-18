@@ -1,0 +1,25 @@
+{
+ "id": "bldg-steel-viaduct-010",
+ "name": "Ancient Steel Viaduct 010",
+ "category": "buildings-bldg",
+ "prompt": "worn iron steel viaduct bridge with pillars realistic",
+ "kit": "bridge",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 23346,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "realistic",
+  "iron",
+  "worn",
+  "rail"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23346,
+ "seed": 41009
+}

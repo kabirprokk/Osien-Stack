@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-helmet-017",
+ "name": "Steel Knight Helmet 017",
+ "category": "weapons-guns",
+ "prompt": "obsidian steel knight helmet helm fantasy",
+ "kit": "helmet",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "obsidian",
+  "poly": 3875,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "helmet",
+  "fantasy",
+  "obsidian",
+  "balanced",
+  "armor"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3875,
+ "seed": 41136
+}

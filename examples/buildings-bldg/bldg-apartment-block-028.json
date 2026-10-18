@@ -1,0 +1,28 @@
+{
+ "id": "bldg-apartment-block-028",
+ "name": "Gothic Apartment Block 028",
+ "category": "buildings-bldg",
+ "prompt": "steel brick apartment building block with windows and doors with windows stylized",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 11568,
+  "parts": [
+   "windows"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "stylized",
+  "steel",
+  "balanced",
+  "city",
+  "housing"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11568,
+ "seed": 41027
+}

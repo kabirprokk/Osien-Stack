@@ -1,0 +1,21 @@
+{
+ "id": "veg-reed-006",
+ "name": "Dense Reed 006",
+ "category": "vegetation-ultra",
+ "kit": "reedMarsh",
+ "prompt": "dense wet reed marsh pond grass",
+ "seed": 30059,
+ "params": {
+  "quality": "draft",
+  "style": "stylized"
+ },
+ "tags": [
+  "marsh",
+  "pond",
+  "wetland",
+  "dense",
+  "wet",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

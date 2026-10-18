@@ -1,0 +1,27 @@
+{
+ "id": "sfx-patrol-droid-041",
+ "name": "Lunar Patrol Droid 041",
+ "category": "scifi",
+ "prompt": "ancient iron chrome patrol robot droid with engine stylized",
+ "kit": "robot",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 30006,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "robot",
+  "stylized",
+  "iron",
+  "ancient",
+  "patrol"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30006,
+ "seed": 41840
+}

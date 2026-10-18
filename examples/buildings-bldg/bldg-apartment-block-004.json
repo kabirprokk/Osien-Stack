@@ -1,0 +1,28 @@
+{
+ "id": "bldg-apartment-block-004",
+ "name": "Old Apartment Block 004",
+ "category": "buildings-bldg",
+ "prompt": "marble brick apartment building block with windows and doors with doors stylized",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 12248,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "stylized",
+  "marble",
+  "balanced",
+  "city",
+  "housing"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12248,
+ "seed": 41003
+}

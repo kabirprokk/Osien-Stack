@@ -1,0 +1,21 @@
+{
+ "id": "veg-boxwood-010",
+ "name": "Round Boxwood 010",
+ "category": "vegetation-ultra",
+ "kit": "boxwoodTopiary",
+ "prompt": "round trimmed boxwood topiary ball sheared bush",
+ "seed": 30070,
+ "params": {
+  "quality": "cinema",
+  "style": "stylized"
+ },
+ "tags": [
+  "topiary",
+  "formal",
+  "garden",
+  "round",
+  "trimmed",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

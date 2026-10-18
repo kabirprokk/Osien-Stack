@@ -1,0 +1,26 @@
+{
+ "id": "bldg-castle-keep-014",
+ "name": "Medieval Castle Keep 014",
+ "category": "buildings-bldg",
+ "prompt": "wooden medieval castle fortress keep with towers and gate stylized",
+ "kit": "castle",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 11416,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "castle",
+  "stylized",
+  "wood",
+  "balanced",
+  "medieval",
+  "fortress"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11416,
+ "seed": 41013
+}

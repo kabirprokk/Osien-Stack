@@ -1,0 +1,25 @@
+{
+ "id": "nat-desert-rock-080",
+ "name": "Grey Desert Rock 080",
+ "category": "natural",
+ "prompt": "marble weathered sandstone desert rock stylized",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 12889,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "stylized",
+  "marble",
+  "balanced",
+  "desert"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12889,
+ "seed": 41319
+}

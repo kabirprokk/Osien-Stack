@@ -1,0 +1,25 @@
+{
+ "id": "intr-library-shelf-074",
+ "name": "Cozy Library Shelf 074",
+ "category": "architecture-interior",
+ "prompt": "pristine stone dark library bookshelf wall fantasy",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "stone",
+  "poly": 31057,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "fantasy",
+  "stone",
+  "pristine",
+  "library"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31057,
+ "seed": 41793
+}

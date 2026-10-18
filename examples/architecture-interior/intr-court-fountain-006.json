@@ -1,0 +1,25 @@
+{
+ "id": "intr-court-fountain-006",
+ "name": "Small Court Fountain 006",
+ "category": "architecture-interior",
+ "prompt": "worn glass marble court fountain realistic",
+ "kit": "fountain",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 12157,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "fountain",
+  "realistic",
+  "glass",
+  "worn",
+  "court"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12157,
+ "seed": 41725
+}

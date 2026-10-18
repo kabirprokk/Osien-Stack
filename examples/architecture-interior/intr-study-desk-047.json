@@ -1,0 +1,25 @@
+{
+ "id": "intr-study-desk-047",
+ "name": "Grand Study Desk 047",
+ "category": "architecture-interior",
+ "prompt": "ancient marble oak study desk table fantasy",
+ "kit": "table",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "marble",
+  "poly": 25268,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "table",
+  "fantasy",
+  "marble",
+  "ancient",
+  "study"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25268,
+ "seed": 41766
+}

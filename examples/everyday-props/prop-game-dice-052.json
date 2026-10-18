@@ -1,0 +1,25 @@
+{
+ "id": "prop-game-dice-052",
+ "name": "Red Game Dice 052",
+ "category": "everyday-props",
+ "prompt": "weathered leather white game dice cube stylized",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 12544,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "box",
+  "stylized",
+  "leather",
+  "worn",
+  "dice"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12544,
+ "seed": 42031
+}

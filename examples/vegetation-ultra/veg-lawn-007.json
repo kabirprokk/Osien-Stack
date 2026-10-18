@@ -1,0 +1,21 @@
+{
+ "id": "veg-lawn-007",
+ "name": "Dense Lawn 007",
+ "category": "vegetation-ultra",
+ "kit": "lawnGrass",
+ "prompt": "dense manicured manicured lawn grass",
+ "seed": 30007,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "lawn",
+  "turf",
+  "garden",
+  "dense",
+  "manicured",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

@@ -1,0 +1,26 @@
+{
+ "id": "bldg-gothic-cathedral-097",
+ "name": "Medieval Gothic Cathedral 097",
+ "category": "buildings-bldg",
+ "prompt": "worn iron gothic stone castle cathedral with towers and gate realistic",
+ "kit": "castle",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 25450,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "castle",
+  "realistic",
+  "iron",
+  "worn",
+  "gothic",
+  "church"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25450,
+ "seed": 41096
+}

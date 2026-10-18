@@ -1,0 +1,25 @@
+{
+ "id": "furn-plush-armchair-042",
+ "name": "Leather Plush Armchair 042",
+ "category": "furniture",
+ "prompt": "leather plush fabric armchair seat realistic",
+ "kit": "chair",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "leather",
+  "poly": 3646,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "chair",
+  "realistic",
+  "leather",
+  "balanced",
+  "armchair"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3646,
+ "seed": 41661
+}

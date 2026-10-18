@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-longsword-049",
+ "name": "Ancient Knight Longsword 049",
+ "category": "weapons-guns",
+ "prompt": "mossy bronze knight steel longsword blade low poly",
+ "kit": "sword",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "bronze",
+  "poly": 11345,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "lowpoly",
+  "bronze",
+  "ancient",
+  "knight"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11345,
+ "seed": 41168
+}

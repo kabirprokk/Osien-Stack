@@ -1,0 +1,25 @@
+{
+ "id": "veh-chopper-bike-004",
+ "name": "Fast Chopper Bike 004",
+ "category": "vehicles",
+ "prompt": "glass black chopper motorcycle bike realistic",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 11674,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "realistic",
+  "glass",
+  "balanced",
+  "chopper"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11674,
+ "seed": 41363
+}

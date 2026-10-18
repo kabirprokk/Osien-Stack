@@ -1,0 +1,26 @@
+{
+ "id": "gun-sniper-rifle-033",
+ "name": "Dark Sniper Rifle 033",
+ "category": "weapons-guns",
+ "prompt": "ancient steel long steel sniper rifle barrel tube realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "steel",
+  "poly": 11357,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "realistic",
+  "steel",
+  "ancient",
+  "gun",
+  "sniper"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11357,
+ "seed": 41152
+}

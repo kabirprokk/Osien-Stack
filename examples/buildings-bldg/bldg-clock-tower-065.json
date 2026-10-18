@@ -1,0 +1,25 @@
+{
+ "id": "bldg-clock-tower-065",
+ "name": "Grand Clock Tower 065",
+ "category": "buildings-bldg",
+ "prompt": "weathered iron old clock tower building with windows low poly",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 13171,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "lowpoly",
+  "iron",
+  "worn",
+  "tower"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13171,
+ "seed": 41064
+}

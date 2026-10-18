@@ -1,0 +1,28 @@
+{
+ "id": "crea-swamp-wyvern-066",
+ "name": "Young Swamp Wyvern 066",
+ "category": "creatures",
+ "prompt": "weathered crystal lean swamp wyvern drake with wings and tail realistic",
+ "kit": "dragon",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "crystal",
+  "poly": 13194,
+  "parts": [
+   "wings",
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "realistic",
+  "crystal",
+  "worn",
+  "wyvern"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13194,
+ "seed": 41605
+}

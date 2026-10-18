@@ -1,0 +1,28 @@
+{
+ "id": "veh-fighter-jet-037",
+ "name": "Red Fighter Jet 037",
+ "category": "vehicles",
+ "prompt": "worn steel gray fighter jet aircraft with engine and cockpit stylized",
+ "kit": "airplane",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 13032,
+  "parts": [
+   "engine",
+   "cockpit"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "stylized",
+  "steel",
+  "worn",
+  "fighter"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13032,
+ "seed": 41396
+}

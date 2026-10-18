@@ -1,0 +1,21 @@
+{
+ "id": "hum-runner-006",
+ "name": "Strong Runner 006",
+ "category": "human-players",
+ "kit": "runner",
+ "prompt": "strong grand swift running athlete",
+ "seed": 40116,
+ "params": {
+  "quality": "draft",
+  "style": "realistic"
+ },
+ "tags": [
+  "runner",
+  "athlete",
+  "sport",
+  "strong",
+  "grand",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

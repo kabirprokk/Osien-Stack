@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-longsword-061",
+ "name": "Steel Knight Longsword 061",
+ "category": "weapons-guns",
+ "prompt": "iron knight steel longsword blade fantasy",
+ "kit": "sword",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "iron",
+  "poly": 24033,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "fantasy",
+  "iron",
+  "balanced",
+  "knight"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24033,
+ "seed": 41180
+}

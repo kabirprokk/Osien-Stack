@@ -1,0 +1,21 @@
+{
+ "id": "hum-mage-007",
+ "name": "Rugged Mage 007",
+ "category": "human-players",
+ "kit": "mage",
+ "prompt": "rugged calm wise mage with staff",
+ "seed": 40057,
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy"
+ },
+ "tags": [
+  "mage",
+  "wizard",
+  "staff",
+  "rugged",
+  "calm",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

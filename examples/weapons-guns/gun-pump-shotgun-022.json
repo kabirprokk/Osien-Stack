@@ -1,0 +1,26 @@
+{
+ "id": "gun-pump-shotgun-022",
+ "name": "Oaken Pump Shotgun 022",
+ "category": "weapons-guns",
+ "prompt": "polished gold wooden pump shotgun receiver box fantasy",
+ "kit": "box",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "gold",
+  "poly": 21605,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "box",
+  "fantasy",
+  "gold",
+  "pristine",
+  "gun",
+  "shotgun"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21605,
+ "seed": 41141
+}

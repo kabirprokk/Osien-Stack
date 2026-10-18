@@ -1,0 +1,26 @@
+{
+ "id": "nat-oak-tree-112",
+ "name": "Old Oak Tree 112",
+ "category": "natural",
+ "prompt": "polished bone broad oak tree realistic",
+ "kit": "tree",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 24203,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "realistic",
+  "bone",
+  "pristine",
+  "oak",
+  "forest"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24203,
+ "seed": 41351
+}

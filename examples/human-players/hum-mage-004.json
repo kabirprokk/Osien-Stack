@@ -1,0 +1,21 @@
+{
+ "id": "hum-mage-004",
+ "name": "Rugged Mage 004",
+ "category": "human-players",
+ "kit": "mage",
+ "prompt": "rugged brave wise mage with staff",
+ "seed": 40054,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "mage",
+  "wizard",
+  "staff",
+  "rugged",
+  "brave",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

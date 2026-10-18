@@ -1,0 +1,21 @@
+{
+ "id": "hum-astronaut-006",
+ "name": "Proud Astronaut 006",
+ "category": "human-players",
+ "kit": "astronaut",
+ "prompt": "proud silent brave astronaut",
+ "seed": 40106,
+ "params": {
+  "quality": "draft",
+  "style": "realistic"
+ },
+ "tags": [
+  "astronaut",
+  "space",
+  "suit",
+  "proud",
+  "silent",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

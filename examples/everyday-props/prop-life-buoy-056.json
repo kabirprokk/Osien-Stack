@@ -1,0 +1,25 @@
+{
+ "id": "prop-life-buoy-056",
+ "name": "Blue Life Buoy 056",
+ "category": "everyday-props",
+ "prompt": "leather red life buoy ring torus low poly",
+ "kit": "torus",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "leather",
+  "poly": 11357,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "torus",
+  "lowpoly",
+  "leather",
+  "balanced",
+  "buoy"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11357,
+ "seed": 42035
+}

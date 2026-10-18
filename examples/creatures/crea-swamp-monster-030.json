@@ -1,0 +1,28 @@
+{
+ "id": "crea-swamp-monster-030",
+ "name": "Dark Swamp Monster 030",
+ "category": "creatures",
+ "prompt": "polished bone lumpy swamp monster creature with tail and spikes fantasy",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "bone",
+  "poly": 10869,
+  "parts": [
+   "tail",
+   "spikes"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "fantasy",
+  "bone",
+  "pristine",
+  "monster"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10869,
+ "seed": 41569
+}

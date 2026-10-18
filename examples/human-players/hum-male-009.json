@@ -1,0 +1,21 @@
+{
+ "id": "hum-male-009",
+ "name": "Bold Male 009",
+ "category": "human-players",
+ "kit": "baseMale",
+ "prompt": "bold keen standing man",
+ "seed": 40009,
+ "params": {
+  "quality": "draft",
+  "style": "realistic"
+ },
+ "tags": [
+  "man",
+  "male",
+  "casual",
+  "bold",
+  "keen",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

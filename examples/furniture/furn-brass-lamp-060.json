@@ -1,0 +1,25 @@
+{
+ "id": "furn-brass-lamp-060",
+ "name": "Small Brass Lamp 060",
+ "category": "furniture",
+ "prompt": "ancient marble brass desk lamp lantern realistic",
+ "kit": "lamp",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 3718,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "lamp",
+  "realistic",
+  "marble",
+  "ancient",
+  "lantern"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3718,
+ "seed": 41679
+}

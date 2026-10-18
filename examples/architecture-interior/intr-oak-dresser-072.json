@@ -1,0 +1,27 @@
+{
+ "id": "intr-oak-dresser-072",
+ "name": "Marble Oak Dresser 072",
+ "category": "architecture-interior",
+ "prompt": "worn leather oak dresser cupboard drawers with doors stylized",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 22239,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "stylized",
+  "leather",
+  "worn",
+  "dresser"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22239,
+ "seed": 41791
+}

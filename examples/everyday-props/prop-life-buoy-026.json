@@ -1,0 +1,25 @@
+{
+ "id": "prop-life-buoy-026",
+ "name": "Small Life Buoy 026",
+ "category": "everyday-props",
+ "prompt": "weathered glass red life buoy ring torus low poly",
+ "kit": "torus",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 21641,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "torus",
+  "lowpoly",
+  "glass",
+  "worn",
+  "buoy"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21641,
+ "seed": 42005
+}

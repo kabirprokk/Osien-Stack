@@ -1,0 +1,26 @@
+{
+ "id": "nat-amethyst-geode-109",
+ "name": "Old Amethyst Geode 109",
+ "category": "natural",
+ "prompt": "pristine stone purple amethyst crystal geode stylized",
+ "kit": "crystal",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "stone",
+  "poly": 12337,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "stylized",
+  "stone",
+  "pristine",
+  "amethyst",
+  "gem"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12337,
+ "seed": 41348
+}

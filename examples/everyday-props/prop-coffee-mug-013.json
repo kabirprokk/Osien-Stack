@@ -1,0 +1,25 @@
+{
+ "id": "prop-coffee-mug-013",
+ "name": "Small Coffee Mug 013",
+ "category": "everyday-props",
+ "prompt": "weathered brass white coffee mug cylinder cup low poly",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 13112,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "cylinder",
+  "lowpoly",
+  "brass",
+  "worn",
+  "mug"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13112,
+ "seed": 41992
+}

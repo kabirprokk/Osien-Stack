@@ -1,0 +1,21 @@
+{
+ "id": "hum-pirate-002",
+ "name": "Proud Pirate 002",
+ "category": "human-players",
+ "kit": "pirate",
+ "prompt": "proud steady rugged pirate captain",
+ "seed": 40082,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "pirate",
+  "captain",
+  "rogue",
+  "proud",
+  "steady",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

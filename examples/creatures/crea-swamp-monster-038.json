@@ -1,0 +1,25 @@
+{
+ "id": "crea-swamp-monster-038",
+ "name": "Swamp Swamp Monster 038",
+ "category": "creatures",
+ "prompt": "fabric lumpy swamp monster creature fantasy",
+ "kit": "creature",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "fabric",
+  "poly": 3815,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "fantasy",
+  "fabric",
+  "balanced",
+  "monster"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3815,
+ "seed": 41577
+}

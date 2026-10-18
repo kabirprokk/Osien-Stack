@@ -1,0 +1,25 @@
+{
+ "id": "intr-four-poster-bed-003",
+ "name": "Modern Four-Poster Bed 003",
+ "category": "architecture-interior",
+ "prompt": "polished fabric fabric four-poster bed realistic",
+ "kit": "bed",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 11033,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bed",
+  "realistic",
+  "fabric",
+  "pristine",
+  "bedroom"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11033,
+ "seed": 41722
+}

@@ -1,0 +1,25 @@
+{
+ "id": "nat-desert-rock-100",
+ "name": "Wild Desert Rock 100",
+ "category": "natural",
+ "prompt": "marble weathered sandstone desert rock stylized",
+ "kit": "rock",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 24761,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "stylized",
+  "marble",
+  "balanced",
+  "desert"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24761,
+ "seed": 41339
+}

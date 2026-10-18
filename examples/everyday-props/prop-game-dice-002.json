@@ -1,0 +1,25 @@
+{
+ "id": "prop-game-dice-002",
+ "name": "Heavy Game Dice 002",
+ "category": "everyday-props",
+ "prompt": "polished brass white game dice cube realistic",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "brass",
+  "poly": 11853,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "box",
+  "realistic",
+  "brass",
+  "pristine",
+  "dice"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11853,
+ "seed": 41981
+}

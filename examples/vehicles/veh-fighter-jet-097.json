@@ -1,0 +1,25 @@
+{
+ "id": "veh-fighter-jet-097",
+ "name": "Fast Fighter Jet 097",
+ "category": "vehicles",
+ "prompt": "ancient chrome gray fighter jet aircraft stylized",
+ "kit": "airplane",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 24952,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "stylized",
+  "chrome",
+  "ancient",
+  "fighter"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24952,
+ "seed": 41456
+}

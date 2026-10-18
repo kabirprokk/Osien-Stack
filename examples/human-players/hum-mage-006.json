@@ -1,0 +1,21 @@
+{
+ "id": "hum-mage-006",
+ "name": "Tall Mage 006",
+ "category": "human-players",
+ "kit": "mage",
+ "prompt": "tall keen wise mage with staff",
+ "seed": 40056,
+ "params": {
+  "quality": "draft",
+  "style": "fantasy"
+ },
+ "tags": [
+  "mage",
+  "wizard",
+  "staff",
+  "tall",
+  "keen",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

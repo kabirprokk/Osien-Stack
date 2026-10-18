@@ -1,0 +1,21 @@
+{
+ "id": "veg-meadow-001",
+ "name": "Wild Meadow 001",
+ "category": "vegetation-ultra",
+ "kit": "wildMeadow",
+ "prompt": "wild natural wild meadow tall grass with flowers",
+ "seed": 30011,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "meadow",
+  "wildflowers",
+  "prairie",
+  "wild",
+  "natural",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

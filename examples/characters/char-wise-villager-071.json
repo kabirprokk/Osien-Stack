@@ -1,0 +1,25 @@
+{
+ "id": "char-wise-villager-071",
+ "name": "Scarred Wise Villager 071",
+ "category": "characters",
+ "prompt": "leather wise old townsfolk person realistic",
+ "kit": "baseMale",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "leather",
+  "poly": 22204,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "realistic",
+  "leather",
+  "balanced",
+  "villager"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22204,
+ "seed": 41530
+}

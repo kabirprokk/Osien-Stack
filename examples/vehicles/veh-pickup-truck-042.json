@@ -1,0 +1,27 @@
+{
+ "id": "veh-pickup-truck-042",
+ "name": "Rusty Pickup Truck 042",
+ "category": "vehicles",
+ "prompt": "iron blue pickup truck vehicle with doors realistic",
+ "kit": "car",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 25052,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "realistic",
+  "iron",
+  "balanced",
+  "truck"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25052,
+ "seed": 41401
+}

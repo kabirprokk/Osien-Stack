@@ -1,0 +1,25 @@
+{
+ "id": "fant-rune-blade-009",
+ "name": "Dark Rune Blade 009",
+ "category": "fantasy",
+ "prompt": "polished crystal ornate runed rune blade sword stylized",
+ "kit": "swordV2",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "crystal",
+  "poly": 21788,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "swordV2",
+  "stylized",
+  "crystal",
+  "pristine",
+  "rune"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21788,
+ "seed": 41888
+}

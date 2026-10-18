@@ -1,0 +1,25 @@
+{
+ "id": "fant-loot-chest-024",
+ "name": "Dark Loot Chest 024",
+ "category": "fantasy",
+ "prompt": "wooden old wooden loot treasure chest stylized",
+ "kit": "treasureChest",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 21774,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "treasureChest",
+  "stylized",
+  "wood",
+  "balanced",
+  "loot"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21774,
+ "seed": 41903
+}

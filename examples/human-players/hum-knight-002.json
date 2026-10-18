@@ -1,0 +1,21 @@
+{
+ "id": "hum-knight-002",
+ "name": "Silent Knight 002",
+ "category": "human-players",
+ "kit": "knight",
+ "prompt": "silent swift noble knight in armor",
+ "seed": 40042,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "knight",
+  "armor",
+  "plate",
+  "silent",
+  "swift",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

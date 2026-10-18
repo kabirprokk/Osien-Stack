@@ -1,0 +1,28 @@
+{
+ "id": "bldg-country-cottage-103",
+ "name": "Medieval Country Cottage 103",
+ "category": "buildings-bldg",
+ "prompt": "pristine glass country stone cottage house with chimney and windows with chimney and windows low poly",
+ "kit": "house",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 12007,
+  "parts": [
+   "chimney",
+   "windows"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "lowpoly",
+  "glass",
+  "pristine",
+  "cottage"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12007,
+ "seed": 41102
+}

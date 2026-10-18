@@ -1,0 +1,25 @@
+{
+ "id": "nat-quartz-crystal-088",
+ "name": "Old Quartz Crystal 088",
+ "category": "natural",
+ "prompt": "crystal clear quartz crystal cluster gem low poly",
+ "kit": "crystal",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "crystal",
+  "poly": 32625,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "lowpoly",
+  "balanced",
+  "quartz",
+  "gem"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 32625,
+ "seed": 41327
+}

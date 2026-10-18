@@ -1,0 +1,26 @@
+{
+ "id": "gun-ak-47-rifle-032",
+ "name": "Oaken AK-47 Rifle 032",
+ "category": "weapons-guns",
+ "prompt": "iron rusty ak-47 assault rifle tube barrel fantasy",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "iron",
+  "poly": 26162,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "fantasy",
+  "iron",
+  "balanced",
+  "gun",
+  "rifle"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26162,
+ "seed": 41151
+}

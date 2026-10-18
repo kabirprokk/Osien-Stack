@@ -1,0 +1,25 @@
+{
+ "id": "prop-floor-rug-049",
+ "name": "Small Floor Rug 049",
+ "category": "everyday-props",
+ "prompt": "polished iron patterned floor rug plane realistic",
+ "kit": "plane",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 11928,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "plane",
+  "realistic",
+  "iron",
+  "pristine",
+  "rug"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11928,
+ "seed": 42028
+}

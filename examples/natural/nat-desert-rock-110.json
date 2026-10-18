@@ -1,0 +1,25 @@
+{
+ "id": "nat-desert-rock-110",
+ "name": "Old Desert Rock 110",
+ "category": "natural",
+ "prompt": "weathered bone weathered sandstone desert rock low poly",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "bone",
+  "poly": 11172,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "lowpoly",
+  "bone",
+  "worn",
+  "desert"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11172,
+ "seed": 41349
+}

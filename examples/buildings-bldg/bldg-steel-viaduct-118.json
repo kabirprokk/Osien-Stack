@@ -1,0 +1,25 @@
+{
+ "id": "bldg-steel-viaduct-118",
+ "name": "Grand Steel Viaduct 118",
+ "category": "buildings-bldg",
+ "prompt": "steel steel viaduct bridge with pillars low poly",
+ "kit": "bridge",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "steel",
+  "poly": 11451,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "lowpoly",
+  "steel",
+  "balanced",
+  "rail"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11451,
+ "seed": 41117
+}

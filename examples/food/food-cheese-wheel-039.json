@@ -1,0 +1,25 @@
+{
+ "id": "food-cheese-wheel-039",
+ "name": "Sweet Cheese Wheel 039",
+ "category": "food",
+ "prompt": "polished bone yellow cheese wheel cylinder realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 12136,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "cylinder",
+  "realistic",
+  "bone",
+  "pristine",
+  "cheese"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12136,
+ "seed": 41978
+}

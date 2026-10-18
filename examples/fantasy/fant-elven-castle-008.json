@@ -1,0 +1,24 @@
+{
+ "id": "fant-elven-castle-008",
+ "name": "Mystic Elven Castle 008",
+ "category": "fantasy",
+ "prompt": "bronze slender elven castle fortress fantasy",
+ "kit": "castle",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "bronze",
+  "poly": 26143,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "castle",
+  "bronze",
+  "balanced",
+  "elven"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26143,
+ "seed": 41887
+}

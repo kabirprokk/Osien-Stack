@@ -1,0 +1,28 @@
+{
+ "id": "bldg-temple-hall-012",
+ "name": "Medieval Temple Hall 012",
+ "category": "buildings-bldg",
+ "prompt": "marble ancient marble temple hall with columns and steps with windows and doors realistic",
+ "kit": "building",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 32583,
+  "parts": [
+   "windows",
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "realistic",
+  "marble",
+  "balanced",
+  "temple"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 32583,
+ "seed": 41011
+}

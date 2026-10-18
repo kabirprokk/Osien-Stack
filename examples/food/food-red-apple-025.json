@@ -1,0 +1,26 @@
+{
+ "id": "food-red-apple-025",
+ "name": "Big Red Apple 025",
+ "category": "food",
+ "prompt": "bone shiny red apple sphere fruit stylized",
+ "kit": "sphere",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "bone",
+  "poly": 21634,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "sphere",
+  "stylized",
+  "bone",
+  "balanced",
+  "apple",
+  "fruit"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21634,
+ "seed": 41964
+}

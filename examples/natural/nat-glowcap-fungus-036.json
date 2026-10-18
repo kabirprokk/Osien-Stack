@@ -1,0 +1,26 @@
+{
+ "id": "nat-glowcap-fungus-036",
+ "name": "Glowing Glowcap Fungus 036",
+ "category": "natural",
+ "prompt": "stone glowing blue glowcap mushroom stylized",
+ "kit": "mushroom",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "stone",
+  "poly": 13030,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "stylized",
+  "stone",
+  "balanced",
+  "glow",
+  "fungus"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13030,
+ "seed": 41275
+}

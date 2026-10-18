@@ -1,0 +1,27 @@
+{
+ "id": "crea-dire-wolf-011",
+ "name": "Fire Dire Wolf 011",
+ "category": "creatures",
+ "prompt": "mossy fabric gray dire wolf beast with tail low poly",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 12385,
+  "parts": [
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "lowpoly",
+  "fabric",
+  "ancient",
+  "wolf"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12385,
+ "seed": 41550
+}

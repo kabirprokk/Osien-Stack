@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-longsword-085",
+ "name": "Polished Knight Longsword 085",
+ "category": "weapons-guns",
+ "prompt": "obsidian knight steel longsword blade fantasy",
+ "kit": "sword",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "obsidian",
+  "poly": 12351,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "fantasy",
+  "obsidian",
+  "balanced",
+  "knight"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12351,
+ "seed": 41204
+}

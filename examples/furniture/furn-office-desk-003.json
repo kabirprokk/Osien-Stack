@@ -1,0 +1,26 @@
+{
+ "id": "furn-office-desk-003",
+ "name": "Modern Office Desk 003",
+ "category": "furniture",
+ "prompt": "worn fabric modern office desk table low poly",
+ "kit": "table",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 4298,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "table",
+  "lowpoly",
+  "fabric",
+  "worn",
+  "desk",
+  "office"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4298,
+ "seed": 41622
+}

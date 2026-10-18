@@ -1,0 +1,25 @@
+{
+ "id": "prop-game-dice-022",
+ "name": "Round Game Dice 022",
+ "category": "everyday-props",
+ "prompt": "ancient leather white game dice cube low poly",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "leather",
+  "poly": 12736,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "box",
+  "lowpoly",
+  "leather",
+  "ancient",
+  "dice"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12736,
+ "seed": 42001
+}

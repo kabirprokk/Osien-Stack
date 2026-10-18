@@ -1,0 +1,21 @@
+{
+ "id": "hum-archer-005",
+ "name": "Wild Archer 005",
+ "category": "human-players",
+ "kit": "archer",
+ "prompt": "wild bold swift archer with bow",
+ "seed": 40065,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "archer",
+  "bow",
+  "ranger",
+  "wild",
+  "bold",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

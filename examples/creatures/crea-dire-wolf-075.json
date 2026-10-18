@@ -1,0 +1,25 @@
+{
+ "id": "crea-dire-wolf-075",
+ "name": "Young Dire Wolf 075",
+ "category": "creatures",
+ "prompt": "polished fabric gray dire wolf beast low poly",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 25923,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "lowpoly",
+  "fabric",
+  "pristine",
+  "wolf"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25923,
+ "seed": 41614
+}

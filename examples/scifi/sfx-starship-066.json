@@ -1,0 +1,25 @@
+{
+ "id": "sfx-starship-066",
+ "name": "Chrome Starship 066",
+ "category": "scifi",
+ "prompt": "copper sleek starship rocket low poly",
+ "kit": "spaceship",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "copper",
+  "poly": 12975,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "lowpoly",
+  "copper",
+  "balanced",
+  "starship"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12975,
+ "seed": 41865
+}

@@ -1,0 +1,26 @@
+{
+ "id": "furn-bookshelf-007",
+ "name": "Grand Bookshelf 007",
+ "category": "furniture",
+ "prompt": "polished marble tall wooden bookshelf shelf with books low poly",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 11470,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "lowpoly",
+  "marble",
+  "pristine",
+  "shelf",
+  "books"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11470,
+ "seed": 41626
+}

@@ -1,0 +1,26 @@
+{
+ "id": "crea-fire-dragon-001",
+ "name": "Golden Fire Dragon 001",
+ "category": "creatures",
+ "prompt": "obsidian huge fire dragon drake stylized",
+ "kit": "dragon",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "obsidian",
+  "poly": 24899,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "stylized",
+  "obsidian",
+  "balanced",
+  "fire",
+  "drake"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24899,
+ "seed": 41540
+}

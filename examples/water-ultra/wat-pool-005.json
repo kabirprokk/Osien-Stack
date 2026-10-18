@@ -1,0 +1,21 @@
+{
+ "id": "wat-pool-005",
+ "name": "Blue Pool 005",
+ "category": "water-ultra",
+ "kit": "poolWater",
+ "prompt": "blue clear swimming pool clear water",
+ "seed": 40045,
+ "params": {
+  "quality": "draft",
+  "style": "realistic"
+ },
+ "tags": [
+  "pool",
+  "tiled",
+  "clean",
+  "blue",
+  "clear",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

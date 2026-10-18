@@ -1,0 +1,25 @@
+{
+ "id": "prop-rubber-ball-004",
+ "name": "Wooden Rubber Ball 004",
+ "category": "everyday-props",
+ "prompt": "brass red rubber ball sphere low poly",
+ "kit": "sphere",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 31996,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "sphere",
+  "lowpoly",
+  "brass",
+  "balanced",
+  "ball"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31996,
+ "seed": 41983
+}

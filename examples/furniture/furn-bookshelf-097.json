@@ -1,0 +1,26 @@
+{
+ "id": "furn-bookshelf-097",
+ "name": "Leather Bookshelf 097",
+ "category": "furniture",
+ "prompt": "fabric tall wooden bookshelf shelf with books low poly",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 3794,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "lowpoly",
+  "fabric",
+  "balanced",
+  "shelf",
+  "books"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3794,
+ "seed": 41716
+}

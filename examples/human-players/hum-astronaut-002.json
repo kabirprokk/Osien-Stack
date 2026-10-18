@@ -1,0 +1,21 @@
+{
+ "id": "hum-astronaut-002",
+ "name": "Noble Astronaut 002",
+ "category": "human-players",
+ "kit": "astronaut",
+ "prompt": "noble strong brave astronaut",
+ "seed": 40102,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "astronaut",
+  "space",
+  "suit",
+  "noble",
+  "strong",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

@@ -1,0 +1,25 @@
+{
+ "id": "veh-vespa-scooter-065",
+ "name": "Chrome Vespa Scooter 065",
+ "category": "vehicles",
+ "prompt": "mossy gold mint vespa scooter bike stylized",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "gold",
+  "poly": 12507,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "stylized",
+  "gold",
+  "ancient",
+  "scooter"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12507,
+ "seed": 41424
+}

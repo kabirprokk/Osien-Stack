@@ -1,0 +1,27 @@
+{
+ "id": "intr-oak-dresser-008",
+ "name": "Warm Oak Dresser 008",
+ "category": "architecture-interior",
+ "prompt": "ancient marble oak dresser cupboard drawers with doors stylized",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 26327,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "stylized",
+  "marble",
+  "ancient",
+  "dresser"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26327,
+ "seed": 41727
+}

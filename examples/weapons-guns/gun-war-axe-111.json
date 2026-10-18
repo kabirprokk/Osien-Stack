@@ -1,0 +1,24 @@
+{
+ "id": "gun-war-axe-111",
+ "name": "Rusty War Axe 111",
+ "category": "weapons-guns",
+ "prompt": "weathered steel steel war axe hatchet fantasy",
+ "kit": "axe",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "steel",
+  "poly": 22358,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "axe",
+  "fantasy",
+  "steel",
+  "worn"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22358,
+ "seed": 41230
+}

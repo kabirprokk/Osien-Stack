@@ -1,0 +1,25 @@
+{
+ "id": "nat-red-mushroom-015",
+ "name": "Amber Red Mushroom 015",
+ "category": "natural",
+ "prompt": "worn bone red spotted mushroom toadstool stylized",
+ "kit": "mushroom",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "bone",
+  "poly": 11282,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "stylized",
+  "bone",
+  "worn",
+  "fungus"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11282,
+ "seed": 41254
+}

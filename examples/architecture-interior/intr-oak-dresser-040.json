@@ -1,0 +1,25 @@
+{
+ "id": "intr-oak-dresser-040",
+ "name": "Cozy Oak Dresser 040",
+ "category": "architecture-interior",
+ "prompt": "weathered brass oak dresser cupboard drawers fantasy",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "brass",
+  "poly": 28527,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bookshelf",
+  "fantasy",
+  "brass",
+  "worn",
+  "dresser"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 28527,
+ "seed": 41759
+}

@@ -1,0 +1,27 @@
+{
+ "id": "crea-forest-stag-053",
+ "name": "Young Forest Stag 053",
+ "category": "creatures",
+ "prompt": "ancient marble brown forest stag animal with tail low poly",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 12510,
+  "parts": [
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "lowpoly",
+  "marble",
+  "ancient",
+  "deer"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12510,
+ "seed": 41592
+}

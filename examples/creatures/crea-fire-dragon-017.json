@@ -1,0 +1,29 @@
+{
+ "id": "crea-fire-dragon-017",
+ "name": "Dark Fire Dragon 017",
+ "category": "creatures",
+ "prompt": "ancient crystal huge fire dragon drake with wings and horns fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "crystal",
+  "poly": 3974,
+  "parts": [
+   "wings",
+   "horns"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "fantasy",
+  "crystal",
+  "ancient",
+  "fire",
+  "drake"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3974,
+ "seed": 41556
+}

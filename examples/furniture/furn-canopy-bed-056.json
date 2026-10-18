@@ -1,0 +1,25 @@
+{
+ "id": "furn-canopy-bed-056",
+ "name": "Modern Canopy Bed 056",
+ "category": "furniture",
+ "prompt": "marble wooden canopy bed mattress realistic",
+ "kit": "bed",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 3859,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bed",
+  "realistic",
+  "marble",
+  "balanced",
+  "mattress"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3859,
+ "seed": 41675
+}

@@ -1,0 +1,21 @@
+{
+ "id": "hum-runner-001",
+ "name": "Steady Runner 001",
+ "category": "human-players",
+ "kit": "runner",
+ "prompt": "steady grand swift running athlete",
+ "seed": 40111,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "runner",
+  "athlete",
+  "sport",
+  "steady",
+  "grand",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

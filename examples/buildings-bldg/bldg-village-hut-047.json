@@ -1,0 +1,26 @@
+{
+ "id": "bldg-village-hut-047",
+ "name": "Grand Village Hut 047",
+ "category": "buildings-bldg",
+ "prompt": "polished wooden village straw hut house with doors fantasy",
+ "kit": "house",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "wood",
+  "poly": 12168,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "fantasy",
+  "wood",
+  "pristine",
+  "hut",
+  "village"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12168,
+ "seed": 41046
+}

@@ -1,0 +1,21 @@
+{
+ "id": "veg-lawn-009",
+ "name": "Fresh Lawn 009",
+ "category": "vegetation-ultra",
+ "kit": "lawnGrass",
+ "prompt": "fresh manicured manicured lawn grass",
+ "seed": 30009,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "lawn",
+  "turf",
+  "garden",
+  "fresh",
+  "manicured",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

@@ -1,0 +1,25 @@
+{
+ "id": "crea-cave-bear-012",
+ "name": "Young Cave Bear 012",
+ "category": "creatures",
+ "prompt": "weathered glass brown cave bear beast stylized",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 12588,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "stylized",
+  "glass",
+  "worn",
+  "bear"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12588,
+ "seed": 41551
+}

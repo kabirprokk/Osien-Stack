@@ -1,0 +1,28 @@
+{
+ "id": "veh-vespa-scooter-095",
+ "name": "Desert Vespa Scooter 095",
+ "category": "vehicles",
+ "prompt": "steel mint vespa scooter bike with wheels and engine sci-fi",
+ "kit": "motorcycle",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "steel",
+  "poly": 23821,
+  "parts": [
+   "wheels",
+   "engine"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "motorcycle",
+  "scifi",
+  "steel",
+  "balanced",
+  "scooter"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23821,
+ "seed": 41454
+}

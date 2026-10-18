@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-helmet-077",
+ "name": "Ornate Knight Helmet 077",
+ "category": "weapons-guns",
+ "prompt": "wooden steel knight helmet helm stylized",
+ "kit": "helmet",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 4000,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "helmet",
+  "stylized",
+  "wood",
+  "balanced",
+  "armor"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4000,
+ "seed": 41196
+}

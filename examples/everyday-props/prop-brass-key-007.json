@@ -1,0 +1,25 @@
+{
+ "id": "prop-brass-key-007",
+ "name": "Red Brass Key 007",
+ "category": "everyday-props",
+ "prompt": "mossy steel small brass key box teeth realistic",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "steel",
+  "poly": 11037,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "box",
+  "realistic",
+  "steel",
+  "ancient",
+  "key"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11037,
+ "seed": 41986
+}

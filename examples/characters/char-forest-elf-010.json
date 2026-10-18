@@ -1,0 +1,26 @@
+{
+ "id": "char-forest-elf-010",
+ "name": "Cute Forest Elf 010",
+ "category": "characters",
+ "prompt": "fabric slender forest elf mage sci-fi",
+ "kit": "mage",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "fabric",
+  "poly": 10938,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "scifi",
+  "fabric",
+  "balanced",
+  "elf",
+  "mage"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10938,
+ "seed": 41469
+}

@@ -1,0 +1,27 @@
+{
+ "id": "bldg-country-cottage-019",
+ "name": "Gothic Country Cottage 019",
+ "category": "buildings-bldg",
+ "prompt": "ancient glass country stone cottage house with chimney and windows with doors fantasy",
+ "kit": "house",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "glass",
+  "poly": 10899,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "fantasy",
+  "glass",
+  "ancient",
+  "cottage"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10899,
+ "seed": 41018
+}

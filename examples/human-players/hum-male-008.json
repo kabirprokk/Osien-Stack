@@ -1,0 +1,21 @@
+{
+ "id": "hum-male-008",
+ "name": "Silent Male 008",
+ "category": "human-players",
+ "kit": "baseMale",
+ "prompt": "silent brave standing man",
+ "seed": 40008,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "man",
+  "male",
+  "casual",
+  "silent",
+  "brave",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

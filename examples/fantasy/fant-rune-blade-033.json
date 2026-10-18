@@ -1,0 +1,25 @@
+{
+ "id": "fant-rune-blade-033",
+ "name": "Dark Rune Blade 033",
+ "category": "fantasy",
+ "prompt": "worn crystal ornate runed rune blade sword realistic",
+ "kit": "swordV2",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "crystal",
+  "poly": 12857,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "swordV2",
+  "realistic",
+  "crystal",
+  "worn",
+  "rune"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12857,
+ "seed": 41912
+}

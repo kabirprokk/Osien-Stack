@@ -1,0 +1,28 @@
+{
+ "id": "furn-wardrobe-018",
+ "name": "Modern Wardrobe 018",
+ "category": "furniture",
+ "prompt": "worn leather oak wardrobe cupboard with doors with doors realistic",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "leather",
+  "poly": 22961,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "realistic",
+  "leather",
+  "worn",
+  "cabinet",
+  "wardrobe"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22961,
+ "seed": 41637
+}

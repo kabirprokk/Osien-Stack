@@ -1,0 +1,26 @@
+{
+ "id": "furn-wardrobe-048",
+ "name": "Modern Wardrobe 048",
+ "category": "furniture",
+ "prompt": "ancient glass oak wardrobe cupboard with doors low poly",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 4375,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "lowpoly",
+  "glass",
+  "ancient",
+  "cabinet",
+  "wardrobe"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4375,
+ "seed": 41667
+}

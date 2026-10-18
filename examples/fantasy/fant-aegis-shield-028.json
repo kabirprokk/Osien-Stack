@@ -1,0 +1,24 @@
+{
+ "id": "fant-aegis-shield-028",
+ "name": "Ancient Aegis Shield 028",
+ "category": "fantasy",
+ "prompt": "gold golden aegis shield fantasy",
+ "kit": "shield",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "gold",
+  "poly": 25576,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "shield",
+  "gold",
+  "balanced",
+  "aegis"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25576,
+ "seed": 41907
+}

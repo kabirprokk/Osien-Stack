@@ -1,0 +1,29 @@
+{
+ "id": "veh-city-sedan-081",
+ "name": "Midnight City Sedan 081",
+ "category": "vehicles",
+ "prompt": "steel red city sedan car vehicle with doors and wheels sci-fi",
+ "kit": "car",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "steel",
+  "poly": 24469,
+  "parts": [
+   "doors",
+   "wheels"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "scifi",
+  "steel",
+  "balanced",
+  "sedan",
+  "city"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24469,
+ "seed": 41440
+}

@@ -1,0 +1,26 @@
+{
+ "id": "nat-oak-tree-082",
+ "name": "Mossy Oak Tree 082",
+ "category": "natural",
+ "prompt": "fabric broad oak tree realistic",
+ "kit": "tree",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 26256,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "realistic",
+  "fabric",
+  "balanced",
+  "oak",
+  "forest"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26256,
+ "seed": 41321
+}

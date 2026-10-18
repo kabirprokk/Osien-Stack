@@ -1,0 +1,26 @@
+{
+ "id": "nat-glowcap-fungus-006",
+ "name": "Grey Glowcap Fungus 006",
+ "category": "natural",
+ "prompt": "polished stone glowing blue glowcap mushroom low poly",
+ "kit": "mushroom",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 12063,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "lowpoly",
+  "stone",
+  "pristine",
+  "glow",
+  "fungus"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12063,
+ "seed": 41245
+}

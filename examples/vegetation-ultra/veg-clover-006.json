@@ -1,0 +1,21 @@
+{
+ "id": "veg-clover-006",
+ "name": "Lush Clover 006",
+ "category": "vegetation-ultra",
+ "kit": "cloverPatch",
+ "prompt": "lush low clover patch ground",
+ "seed": 30046,
+ "params": {
+  "quality": "cinema",
+  "style": "stylized"
+ },
+ "tags": [
+  "clover",
+  "lawn-alt",
+  "low",
+  "lush",
+  "low",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

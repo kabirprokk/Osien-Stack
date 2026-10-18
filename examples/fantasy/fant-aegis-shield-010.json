@@ -1,0 +1,24 @@
+{
+ "id": "fant-aegis-shield-010",
+ "name": "Enchanted Aegis Shield 010",
+ "category": "fantasy",
+ "prompt": "worn obsidian golden aegis shield fantasy",
+ "kit": "shield",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "obsidian",
+  "poly": 11714,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "shield",
+  "obsidian",
+  "worn",
+  "aegis"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11714,
+ "seed": 41889
+}

@@ -1,0 +1,28 @@
+{
+ "id": "veh-city-sedan-041",
+ "name": "Old City Sedan 041",
+ "category": "vehicles",
+ "prompt": "ancient gold red city sedan car vehicle with doors low poly",
+ "kit": "car",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "gold",
+  "poly": 25212,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "lowpoly",
+  "gold",
+  "ancient",
+  "sedan",
+  "city"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25212,
+ "seed": 41400
+}

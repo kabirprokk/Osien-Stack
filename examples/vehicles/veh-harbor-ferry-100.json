@@ -1,0 +1,27 @@
+{
+ "id": "veh-harbor-ferry-100",
+ "name": "Midnight Harbor Ferry 100",
+ "category": "vehicles",
+ "prompt": "polished glass yellow harbor ferry boat with engine sci-fi",
+ "kit": "boat",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "glass",
+  "poly": 22995,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "boat",
+  "scifi",
+  "glass",
+  "pristine",
+  "ferry"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22995,
+ "seed": 41459
+}

@@ -1,0 +1,24 @@
+{
+ "id": "sfx-halo-ring-040",
+ "name": "Rusty Halo Ring 040",
+ "category": "scifi",
+ "prompt": "iron spinning halo ring torus station sci-fi",
+ "kit": "torus",
+ "params": {
+  "quality": "cinema",
+  "style": "scifi",
+  "material": "iron",
+  "poly": 25270,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "torus",
+  "iron",
+  "balanced",
+  "station"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25270,
+ "seed": 41839
+}

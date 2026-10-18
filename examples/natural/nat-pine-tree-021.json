@@ -1,0 +1,26 @@
+{
+ "id": "nat-pine-tree-021",
+ "name": "Amber Pine Tree 021",
+ "category": "natural",
+ "prompt": "mossy fabric tall pine tree low poly",
+ "kit": "tree",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "fabric",
+  "poly": 12310,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "lowpoly",
+  "fabric",
+  "ancient",
+  "pine",
+  "forest"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12310,
+ "seed": 41260
+}

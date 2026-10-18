@@ -1,0 +1,25 @@
+{
+ "id": "prop-brass-key-017",
+ "name": "Big Brass Key 017",
+ "category": "everyday-props",
+ "prompt": "leather small brass key box teeth realistic",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "leather",
+  "poly": 12475,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "box",
+  "realistic",
+  "leather",
+  "balanced",
+  "key"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12475,
+ "seed": 41996
+}

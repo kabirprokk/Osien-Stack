@@ -1,0 +1,25 @@
+{
+ "id": "furn-brass-lamp-080",
+ "name": "Leather Brass Lamp 080",
+ "category": "furniture",
+ "prompt": "marble brass desk lamp lantern low poly",
+ "kit": "lamp",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 10918,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "lamp",
+  "lowpoly",
+  "marble",
+  "balanced",
+  "lantern"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10918,
+ "seed": 41699
+}

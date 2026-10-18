@@ -1,0 +1,25 @@
+{
+ "id": "crea-swamp-monster-006",
+ "name": "Wild Swamp Monster 006",
+ "category": "creatures",
+ "prompt": "worn marble lumpy swamp monster creature realistic",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 21686,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "realistic",
+  "marble",
+  "worn",
+  "monster"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 21686,
+ "seed": 41545
+}

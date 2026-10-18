@@ -1,0 +1,25 @@
+{
+ "id": "crea-cave-bear-036",
+ "name": "Fire Cave Bear 036",
+ "category": "creatures",
+ "prompt": "bone brown cave bear beast fantasy",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "bone",
+  "poly": 12591,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "fantasy",
+  "bone",
+  "balanced",
+  "bear"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12591,
+ "seed": 41575
+}

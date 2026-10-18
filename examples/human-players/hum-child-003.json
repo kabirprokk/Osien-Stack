@@ -1,0 +1,21 @@
+{
+ "id": "hum-child-003",
+ "name": "Tall Child 003",
+ "category": "human-players",
+ "kit": "baseChild",
+ "prompt": "tall noble young child",
+ "seed": 40023,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "child",
+  "kid",
+  "young",
+  "tall",
+  "noble",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

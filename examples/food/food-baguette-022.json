@@ -1,0 +1,25 @@
+{
+ "id": "food-baguette-022",
+ "name": "Golden Baguette 022",
+ "category": "food",
+ "prompt": "glass golden baguette capsule loaf realistic",
+ "kit": "capsule",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 22058,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "capsule",
+  "realistic",
+  "glass",
+  "balanced",
+  "bread"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22058,
+ "seed": 41961
+}

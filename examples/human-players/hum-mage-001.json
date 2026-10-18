@@ -1,0 +1,21 @@
+{
+ "id": "hum-mage-001",
+ "name": "Steady Mage 001",
+ "category": "human-players",
+ "kit": "mage",
+ "prompt": "steady brave wise mage with staff",
+ "seed": 40051,
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy"
+ },
+ "tags": [
+  "mage",
+  "wizard",
+  "staff",
+  "steady",
+  "brave",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

@@ -1,0 +1,21 @@
+{
+ "id": "veg-meadow-008",
+ "name": "Wild Meadow 008",
+ "category": "vegetation-ultra",
+ "kit": "wildMeadow",
+ "prompt": "wild dense wild meadow tall grass with flowers",
+ "seed": 30018,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "meadow",
+  "wildflowers",
+  "prairie",
+  "wild",
+  "dense",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

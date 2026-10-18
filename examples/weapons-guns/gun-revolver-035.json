@@ -1,0 +1,26 @@
+{
+ "id": "gun-revolver-035",
+ "name": "Golden Revolver 035",
+ "category": "weapons-guns",
+ "prompt": "polished obsidian iron revolver drum cylinder fantasy",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "obsidian",
+  "poly": 11168,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "fantasy",
+  "obsidian",
+  "pristine",
+  "gun",
+  "revolver"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11168,
+ "seed": 41154
+}

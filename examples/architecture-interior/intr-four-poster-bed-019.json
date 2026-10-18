@@ -1,0 +1,25 @@
+{
+ "id": "intr-four-poster-bed-019",
+ "name": "Small Four-Poster Bed 019",
+ "category": "architecture-interior",
+ "prompt": "marble fabric four-poster bed low poly",
+ "kit": "bed",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 11736,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bed",
+  "lowpoly",
+  "marble",
+  "balanced",
+  "bedroom"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11736,
+ "seed": 41738
+}

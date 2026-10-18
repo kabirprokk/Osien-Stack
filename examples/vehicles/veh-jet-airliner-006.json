@@ -1,0 +1,27 @@
+{
+ "id": "veh-jet-airliner-006",
+ "name": "Old Jet Airliner 006",
+ "category": "vehicles",
+ "prompt": "worn iron white jet airliner airplane with wings sci-fi",
+ "kit": "airplane",
+ "params": {
+  "quality": "draft",
+  "style": "scifi",
+  "material": "iron",
+  "poly": 4079,
+  "parts": [
+   "wings"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "scifi",
+  "iron",
+  "worn",
+  "airliner"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4079,
+ "seed": 41365
+}

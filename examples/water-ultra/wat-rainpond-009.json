@@ -1,0 +1,21 @@
+{
+ "id": "wat-rainpond-009",
+ "name": "Rainy Rainpond 009",
+ "category": "water-ultra",
+ "kit": "rainPond",
+ "prompt": "rainy rippled rain pond ripples water",
+ "seed": 40069,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "rain",
+  "pond",
+  "ripples",
+  "rainy",
+  "rippled",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

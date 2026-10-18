@@ -1,0 +1,25 @@
+{
+ "id": "nat-granite-boulder-053",
+ "name": "Glowing Granite Boulder 053",
+ "category": "natural",
+ "prompt": "pristine stone gray granite boulder rock realistic",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "stone",
+  "poly": 10909,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "realistic",
+  "stone",
+  "pristine",
+  "boulder"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10909,
+ "seed": 41292
+}

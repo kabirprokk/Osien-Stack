@@ -1,0 +1,25 @@
+{
+ "id": "furn-farm-table-034",
+ "name": "Modern Farm Table 034",
+ "category": "furniture",
+ "prompt": "leather rustic wooden farm table low poly",
+ "kit": "table",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "leather",
+  "poly": 12473,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "table",
+  "lowpoly",
+  "leather",
+  "balanced",
+  "farm"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12473,
+ "seed": 41653
+}

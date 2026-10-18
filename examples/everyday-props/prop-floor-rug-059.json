@@ -1,0 +1,25 @@
+{
+ "id": "prop-floor-rug-059",
+ "name": "Heavy Floor Rug 059",
+ "category": "everyday-props",
+ "prompt": "ancient wooden patterned floor rug plane stylized",
+ "kit": "plane",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 13181,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "plane",
+  "stylized",
+  "wood",
+  "ancient",
+  "rug"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13181,
+ "seed": 42038
+}

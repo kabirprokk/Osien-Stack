@@ -1,0 +1,26 @@
+{
+ "id": "nat-quartz-crystal-108",
+ "name": "Glowing Quartz Crystal 108",
+ "category": "natural",
+ "prompt": "weathered bone clear quartz crystal cluster gem realistic",
+ "kit": "crystal",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "bone",
+  "poly": 22299,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "realistic",
+  "bone",
+  "worn",
+  "quartz",
+  "gem"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22299,
+ "seed": 41347
+}

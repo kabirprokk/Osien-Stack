@@ -1,0 +1,25 @@
+{
+ "id": "prop-floor-rug-019",
+ "name": "Old Floor Rug 019",
+ "category": "everyday-props",
+ "prompt": "polished glass patterned floor rug plane realistic",
+ "kit": "plane",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 29719,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "plane",
+  "realistic",
+  "glass",
+  "pristine",
+  "rug"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 29719,
+ "seed": 41998
+}

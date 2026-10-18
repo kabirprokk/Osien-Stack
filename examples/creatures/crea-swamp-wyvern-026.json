@@ -1,0 +1,25 @@
+{
+ "id": "crea-swamp-wyvern-026",
+ "name": "Fire Swamp Wyvern 026",
+ "category": "creatures",
+ "prompt": "ancient bone lean swamp wyvern drake fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "print",
+  "style": "fantasy",
+  "material": "bone",
+  "poly": 32372,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "fantasy",
+  "bone",
+  "ancient",
+  "wyvern"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 32372,
+ "seed": 41565
+}

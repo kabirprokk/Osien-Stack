@@ -1,0 +1,21 @@
+{
+ "id": "veg-boxwood-006",
+ "name": "Dense Boxwood 006",
+ "category": "vegetation-ultra",
+ "kit": "boxwoodTopiary",
+ "prompt": "dense trimmed boxwood topiary ball sheared bush",
+ "seed": 30066,
+ "params": {
+  "quality": "cinema",
+  "style": "stylized"
+ },
+ "tags": [
+  "topiary",
+  "formal",
+  "garden",
+  "dense",
+  "trimmed",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

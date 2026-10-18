@@ -1,0 +1,21 @@
+{
+ "id": "hum-soldier-006",
+ "name": "Brave Soldier 006",
+ "category": "human-players",
+ "kit": "soldierModern",
+ "prompt": "brave rugged modern soldier",
+ "seed": 40076,
+ "params": {
+  "quality": "draft",
+  "style": "realistic"
+ },
+ "tags": [
+  "soldier",
+  "modern",
+  "tactical",
+  "brave",
+  "rugged",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

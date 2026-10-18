@@ -1,0 +1,25 @@
+{
+ "id": "furn-canopy-bed-036",
+ "name": "Small Canopy Bed 036",
+ "category": "furniture",
+ "prompt": "fabric wooden canopy bed mattress realistic",
+ "kit": "bed",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 31988,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bed",
+  "realistic",
+  "fabric",
+  "balanced",
+  "mattress"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31988,
+ "seed": 41655
+}

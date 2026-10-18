@@ -1,0 +1,25 @@
+{
+ "id": "bldg-steel-viaduct-082",
+ "name": "Marble Steel Viaduct 082",
+ "category": "buildings-bldg",
+ "prompt": "wooden steel viaduct bridge with pillars stylized",
+ "kit": "bridge",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 11878,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "stylized",
+  "wood",
+  "balanced",
+  "rail"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11878,
+ "seed": 41081
+}

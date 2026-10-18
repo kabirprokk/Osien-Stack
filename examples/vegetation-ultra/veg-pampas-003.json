@@ -1,0 +1,21 @@
+{
+ "id": "veg-pampas-003",
+ "name": "Tall Pampas 003",
+ "category": "vegetation-ultra",
+ "kit": "pampasPlume",
+ "prompt": "tall feathery pampas plume ornamental grass",
+ "seed": 30030,
+ "params": {
+  "quality": "draft",
+  "style": "stylized"
+ },
+ "tags": [
+  "ornamental",
+  "plume",
+  "garden",
+  "tall",
+  "feathery",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

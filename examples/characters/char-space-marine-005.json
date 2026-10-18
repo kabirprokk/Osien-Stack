@@ -1,0 +1,25 @@
+{
+ "id": "char-space-marine-005",
+ "name": "Brave Space Marine 005",
+ "category": "characters",
+ "prompt": "iron armored space marine soldier avatar sci-fi",
+ "kit": "soldierModern",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "iron",
+  "poly": 11845,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "scifi",
+  "iron",
+  "balanced",
+  "soldier"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11845,
+ "seed": 41464
+}

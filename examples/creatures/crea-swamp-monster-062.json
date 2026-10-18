@@ -1,0 +1,25 @@
+{
+ "id": "crea-swamp-monster-062",
+ "name": "Dark Swamp Monster 062",
+ "category": "creatures",
+ "prompt": "bone lumpy swamp monster creature stylized",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "bone",
+  "poly": 12201,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "stylized",
+  "bone",
+  "balanced",
+  "monster"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12201,
+ "seed": 41601
+}

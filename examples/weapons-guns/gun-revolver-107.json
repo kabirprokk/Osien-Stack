@@ -1,0 +1,26 @@
+{
+ "id": "gun-revolver-107",
+ "name": "Oaken Revolver 107",
+ "category": "weapons-guns",
+ "prompt": "polished chrome iron revolver drum cylinder stylized",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "chrome",
+  "poly": 11104,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "stylized",
+  "chrome",
+  "pristine",
+  "gun",
+  "revolver"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11104,
+ "seed": 41226
+}

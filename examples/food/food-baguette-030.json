@@ -1,0 +1,25 @@
+{
+ "id": "food-baguette-030",
+ "name": "Red Baguette 030",
+ "category": "food",
+ "prompt": "bone golden baguette capsule loaf stylized",
+ "kit": "capsule",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "bone",
+  "poly": 4280,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "capsule",
+  "stylized",
+  "bone",
+  "balanced",
+  "bread"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4280,
+ "seed": 41969
+}

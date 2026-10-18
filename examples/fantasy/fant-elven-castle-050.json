@@ -1,0 +1,28 @@
+{
+ "id": "fant-elven-castle-050",
+ "name": "Runic Elven Castle 050",
+ "category": "fantasy",
+ "prompt": "ancient marble slender elven castle fortress with towers and gate stylized",
+ "kit": "castle",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 3893,
+  "parts": [
+   "towers",
+   "gate"
+  ]
+ },
+ "tags": [
+  "fantasy",
+  "castle",
+  "stylized",
+  "marble",
+  "ancient",
+  "elven"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3893,
+ "seed": 41929
+}

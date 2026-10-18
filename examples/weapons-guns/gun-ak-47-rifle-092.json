@@ -1,0 +1,26 @@
+{
+ "id": "gun-ak-47-rifle-092",
+ "name": "Ancient AK-47 Rifle 092",
+ "category": "weapons-guns",
+ "prompt": "polished gold rusty ak-47 assault rifle tube barrel realistic",
+ "kit": "cylinder",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "gold",
+  "poly": 24718,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "realistic",
+  "gold",
+  "pristine",
+  "gun",
+  "rifle"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24718,
+ "seed": 41211
+}

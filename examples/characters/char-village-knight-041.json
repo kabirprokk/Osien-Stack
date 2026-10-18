@@ -1,0 +1,26 @@
+{
+ "id": "char-village-knight-041",
+ "name": "Scarred Village Knight 041",
+ "category": "characters",
+ "prompt": "worn iron brave kingdom knight warrior in armor low poly",
+ "kit": "knight",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "iron",
+  "poly": 27575,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "lowpoly",
+  "iron",
+  "worn",
+  "knight",
+  "warrior"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 27575,
+ "seed": 41500
+}

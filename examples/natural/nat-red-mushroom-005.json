@@ -1,0 +1,25 @@
+{
+ "id": "nat-red-mushroom-005",
+ "name": "Glowing Red Mushroom 005",
+ "category": "natural",
+ "prompt": "wooden red spotted mushroom toadstool low poly",
+ "kit": "mushroom",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 11424,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "mushroom",
+  "lowpoly",
+  "wood",
+  "balanced",
+  "fungus"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11424,
+ "seed": 41244
+}

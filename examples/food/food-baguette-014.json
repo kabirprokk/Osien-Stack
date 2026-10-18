@@ -1,0 +1,25 @@
+{
+ "id": "food-baguette-014",
+ "name": "Big Baguette 014",
+ "category": "food",
+ "prompt": "worn bone golden baguette capsule loaf stylized",
+ "kit": "capsule",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "bone",
+  "poly": 24694,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "capsule",
+  "stylized",
+  "bone",
+  "worn",
+  "bread"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24694,
+ "seed": 41953
+}

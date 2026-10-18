@@ -1,0 +1,26 @@
+{
+ "id": "gun-ornate-excalibur-110",
+ "name": "Dark Ornate Excalibur 110",
+ "category": "weapons-guns",
+ "prompt": "obsidian ornate golden enchanted excalibur sword blade low poly",
+ "kit": "swordV2",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "obsidian",
+  "poly": 10841,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "swordV2",
+  "lowpoly",
+  "obsidian",
+  "balanced",
+  "sword",
+  "legendary"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10841,
+ "seed": 41229
+}

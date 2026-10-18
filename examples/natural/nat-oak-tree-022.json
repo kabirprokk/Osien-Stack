@@ -1,0 +1,26 @@
+{
+ "id": "nat-oak-tree-022",
+ "name": "Tall Oak Tree 022",
+ "category": "natural",
+ "prompt": "ancient glass broad oak tree realistic",
+ "kit": "tree",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 4038,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "realistic",
+  "glass",
+  "ancient",
+  "oak",
+  "forest"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4038,
+ "seed": 41261
+}

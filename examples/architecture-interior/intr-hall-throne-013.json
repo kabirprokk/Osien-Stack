@@ -1,0 +1,25 @@
+{
+ "id": "intr-hall-throne-013",
+ "name": "Modern Hall Throne 013",
+ "category": "architecture-interior",
+ "prompt": "fabric marble hall throne stylized",
+ "kit": "throne",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "fabric",
+  "poly": 12692,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "throne",
+  "stylized",
+  "fabric",
+  "balanced",
+  "hall"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12692,
+ "seed": 41732
+}

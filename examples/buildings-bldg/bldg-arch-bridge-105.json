@@ -1,0 +1,25 @@
+{
+ "id": "bldg-arch-bridge-105",
+ "name": "Marble Arch Bridge 105",
+ "category": "buildings-bldg",
+ "prompt": "mossy glass stone arch bridge with pillars low poly",
+ "kit": "bridge",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 4341,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "lowpoly",
+  "glass",
+  "ancient",
+  "river"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4341,
+ "seed": 41104
+}

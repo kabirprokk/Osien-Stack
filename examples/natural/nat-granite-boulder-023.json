@@ -1,0 +1,25 @@
+{
+ "id": "nat-granite-boulder-023",
+ "name": "Amber Granite Boulder 023",
+ "category": "natural",
+ "prompt": "weathered marble gray granite boulder rock realistic",
+ "kit": "rock",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "marble",
+  "poly": 11071,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "rock",
+  "realistic",
+  "marble",
+  "worn",
+  "boulder"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11071,
+ "seed": 41262
+}

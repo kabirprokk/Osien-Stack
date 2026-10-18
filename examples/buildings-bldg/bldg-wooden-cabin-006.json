@@ -1,0 +1,29 @@
+{
+ "id": "bldg-wooden-cabin-006",
+ "name": "Medieval Wooden Cabin 006",
+ "category": "buildings-bldg",
+ "prompt": "steel wooden cabin hut house with chimney with chimney and doors fantasy",
+ "kit": "house",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "steel",
+  "poly": 4329,
+  "parts": [
+   "chimney",
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "fantasy",
+  "steel",
+  "balanced",
+  "cabin",
+  "forest"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4329,
+ "seed": 41005
+}

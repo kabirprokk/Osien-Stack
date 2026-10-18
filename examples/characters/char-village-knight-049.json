@@ -1,0 +1,26 @@
+{
+ "id": "char-village-knight-049",
+ "name": "Young Village Knight 049",
+ "category": "characters",
+ "prompt": "polished gold brave kingdom knight warrior in armor low poly",
+ "kit": "knight",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "gold",
+  "poly": 13081,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "lowpoly",
+  "gold",
+  "pristine",
+  "knight",
+  "warrior"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13081,
+ "seed": 41508
+}

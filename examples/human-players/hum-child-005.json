@@ -1,0 +1,21 @@
+{
+ "id": "hum-child-005",
+ "name": "Proud Child 005",
+ "category": "human-players",
+ "kit": "baseChild",
+ "prompt": "proud silent young child",
+ "seed": 40025,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "child",
+  "kid",
+  "young",
+  "proud",
+  "silent",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

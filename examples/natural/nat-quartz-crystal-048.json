@@ -1,0 +1,26 @@
+{
+ "id": "nat-quartz-crystal-048",
+ "name": "Tall Quartz Crystal 048",
+ "category": "natural",
+ "prompt": "glass clear quartz crystal cluster gem stylized",
+ "kit": "crystal",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 3613,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "stylized",
+  "glass",
+  "balanced",
+  "quartz",
+  "gem"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3613,
+ "seed": 41287
+}

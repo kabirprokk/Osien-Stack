@@ -1,0 +1,21 @@
+{
+ "id": "hum-archer-008",
+ "name": "Steady Archer 008",
+ "category": "human-players",
+ "kit": "archer",
+ "prompt": "steady rugged swift archer with bow",
+ "seed": 40068,
+ "params": {
+  "quality": "game",
+  "style": "fantasy"
+ },
+ "tags": [
+  "archer",
+  "bow",
+  "ranger",
+  "steady",
+  "rugged",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

@@ -1,0 +1,26 @@
+{
+ "id": "gun-pump-shotgun-010",
+ "name": "Dark Pump Shotgun 010",
+ "category": "weapons-guns",
+ "prompt": "mossy wooden wooden pump shotgun receiver box realistic",
+ "kit": "box",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 12291,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "box",
+  "realistic",
+  "wood",
+  "ancient",
+  "gun",
+  "shotgun"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12291,
+ "seed": 41129
+}

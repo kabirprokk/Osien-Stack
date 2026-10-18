@@ -1,0 +1,25 @@
+{
+ "id": "veh-jet-airliner-016",
+ "name": "Chrome Jet Airliner 016",
+ "category": "vehicles",
+ "prompt": "ancient chrome white jet airliner airplane realistic",
+ "kit": "airplane",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "chrome",
+  "poly": 12868,
+  "parts": []
+ },
+ "tags": [
+  "vehicles",
+  "airplane",
+  "realistic",
+  "chrome",
+  "ancient",
+  "airliner"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12868,
+ "seed": 41375
+}

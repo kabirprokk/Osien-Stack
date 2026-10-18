@@ -1,0 +1,21 @@
+{
+ "id": "hum-pirate-009",
+ "name": "Wild Pirate 009",
+ "category": "human-players",
+ "kit": "pirate",
+ "prompt": "wild swift rugged pirate captain",
+ "seed": 40089,
+ "params": {
+  "quality": "draft",
+  "style": "fantasy"
+ },
+ "tags": [
+  "pirate",
+  "captain",
+  "rogue",
+  "wild",
+  "swift",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

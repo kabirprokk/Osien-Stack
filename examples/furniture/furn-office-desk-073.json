@@ -1,0 +1,26 @@
+{
+ "id": "furn-office-desk-073",
+ "name": "Modern Office Desk 073",
+ "category": "furniture",
+ "prompt": "mossy wooden modern office desk table low poly",
+ "kit": "table",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 12559,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "table",
+  "lowpoly",
+  "wood",
+  "ancient",
+  "desk",
+  "office"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12559,
+ "seed": 41692
+}

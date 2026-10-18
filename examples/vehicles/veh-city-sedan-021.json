@@ -1,0 +1,29 @@
+{
+ "id": "veh-city-sedan-021",
+ "name": "Old City Sedan 021",
+ "category": "vehicles",
+ "prompt": "worn steel red city sedan car vehicle with wheels and doors realistic",
+ "kit": "car",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "steel",
+  "poly": 10858,
+  "parts": [
+   "wheels",
+   "doors"
+  ]
+ },
+ "tags": [
+  "vehicles",
+  "car",
+  "realistic",
+  "steel",
+  "worn",
+  "sedan",
+  "city"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10858,
+ "seed": 41380
+}

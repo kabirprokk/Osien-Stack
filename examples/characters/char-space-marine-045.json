@@ -1,0 +1,25 @@
+{
+ "id": "char-space-marine-045",
+ "name": "Brave Space Marine 045",
+ "category": "characters",
+ "prompt": "worn fabric armored space marine soldier avatar stylized",
+ "kit": "soldierModern",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "fabric",
+  "poly": 23465,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "stylized",
+  "fabric",
+  "worn",
+  "soldier"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23465,
+ "seed": 41504
+}

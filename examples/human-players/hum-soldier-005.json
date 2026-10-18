@@ -1,0 +1,21 @@
+{
+ "id": "hum-soldier-005",
+ "name": "Silent Soldier 005",
+ "category": "human-players",
+ "kit": "soldierModern",
+ "prompt": "silent wild modern soldier",
+ "seed": 40075,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "soldier",
+  "modern",
+  "tactical",
+  "silent",
+  "wild",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

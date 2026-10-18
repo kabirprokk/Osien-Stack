@@ -1,0 +1,25 @@
+{
+ "id": "sfx-patrol-droid-017",
+ "name": "Neon Patrol Droid 017",
+ "category": "scifi",
+ "prompt": "ancient copper chrome patrol robot droid low poly",
+ "kit": "robot",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "copper",
+  "poly": 24316,
+  "parts": []
+ },
+ "tags": [
+  "scifi",
+  "robot",
+  "lowpoly",
+  "copper",
+  "ancient",
+  "patrol"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 24316,
+ "seed": 41816
+}

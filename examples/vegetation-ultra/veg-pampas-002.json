@@ -1,0 +1,21 @@
+{
+ "id": "veg-pampas-002",
+ "name": "Tall Pampas 002",
+ "category": "vegetation-ultra",
+ "kit": "pampasPlume",
+ "prompt": "tall dense pampas plume ornamental grass",
+ "seed": 30029,
+ "params": {
+  "quality": "cinema",
+  "style": "stylized"
+ },
+ "tags": [
+  "ornamental",
+  "plume",
+  "garden",
+  "tall",
+  "dense",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

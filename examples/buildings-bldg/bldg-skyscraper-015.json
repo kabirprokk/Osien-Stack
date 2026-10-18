@@ -1,0 +1,28 @@
+{
+ "id": "bldg-skyscraper-015",
+ "name": "Grand Skyscraper 015",
+ "category": "buildings-bldg",
+ "prompt": "worn brass modern glass skyscraper tower with windows with windows stylized",
+ "kit": "building",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "brass",
+  "poly": 12944,
+  "parts": [
+   "windows"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "building",
+  "stylized",
+  "brass",
+  "worn",
+  "modern",
+  "city"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12944,
+ "seed": 41014
+}

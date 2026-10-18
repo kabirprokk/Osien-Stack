@@ -1,0 +1,25 @@
+{
+ "id": "prop-coffee-mug-023",
+ "name": "Small Coffee Mug 023",
+ "category": "everyday-props",
+ "prompt": "polished wooden white coffee mug cylinder cup stylized",
+ "kit": "cylinder",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 11582,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "cylinder",
+  "stylized",
+  "wood",
+  "pristine",
+  "mug"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11582,
+ "seed": 42002
+}

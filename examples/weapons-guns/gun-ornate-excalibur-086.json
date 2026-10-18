@@ -1,0 +1,26 @@
+{
+ "id": "gun-ornate-excalibur-086",
+ "name": "Polished Ornate Excalibur 086",
+ "category": "weapons-guns",
+ "prompt": "rusty ornate golden enchanted excalibur sword blade realistic",
+ "kit": "swordV2",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "rust",
+  "poly": 3642,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "swordV2",
+  "realistic",
+  "rust",
+  "balanced",
+  "sword",
+  "legendary"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3642,
+ "seed": 41205
+}

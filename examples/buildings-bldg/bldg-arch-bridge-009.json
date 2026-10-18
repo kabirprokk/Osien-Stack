@@ -1,0 +1,25 @@
+{
+ "id": "bldg-arch-bridge-009",
+ "name": "Old Arch Bridge 009",
+ "category": "buildings-bldg",
+ "prompt": "mossy glass stone arch bridge with pillars fantasy",
+ "kit": "bridge",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "glass",
+  "poly": 23605,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "fantasy",
+  "glass",
+  "ancient",
+  "river"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23605,
+ "seed": 41008
+}

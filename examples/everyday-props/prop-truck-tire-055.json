@@ -1,0 +1,25 @@
+{
+ "id": "prop-truck-tire-055",
+ "name": "Blue Truck Tire 055",
+ "category": "everyday-props",
+ "prompt": "leather black rubber tire torus ring realistic",
+ "kit": "torus",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "leather",
+  "poly": 23878,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "torus",
+  "realistic",
+  "leather",
+  "balanced",
+  "tire"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23878,
+ "seed": 42034
+}

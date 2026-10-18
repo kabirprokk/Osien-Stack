@@ -1,0 +1,27 @@
+{
+ "id": "crea-swamp-wyvern-050",
+ "name": "Swamp Swamp Wyvern 050",
+ "category": "creatures",
+ "prompt": "weathered stone lean swamp wyvern drake with wings fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "stone",
+  "poly": 11620,
+  "parts": [
+   "wings"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "fantasy",
+  "stone",
+  "worn",
+  "wyvern"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11620,
+ "seed": 41589
+}

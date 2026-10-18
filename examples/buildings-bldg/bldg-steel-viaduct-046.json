@@ -1,0 +1,25 @@
+{
+ "id": "bldg-steel-viaduct-046",
+ "name": "Marble Steel Viaduct 046",
+ "category": "buildings-bldg",
+ "prompt": "weathered stone steel viaduct bridge with pillars low poly",
+ "kit": "bridge",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "stone",
+  "poly": 12128,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "bridge",
+  "lowpoly",
+  "stone",
+  "worn",
+  "rail"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12128,
+ "seed": 41045
+}

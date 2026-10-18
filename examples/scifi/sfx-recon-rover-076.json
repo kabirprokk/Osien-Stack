@@ -1,0 +1,28 @@
+{
+ "id": "sfx-recon-rover-076",
+ "name": "Deep Recon Rover 076",
+ "category": "scifi",
+ "prompt": "obsidian lunar recon rover car vehicle with wheels and engine realistic",
+ "kit": "car",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "obsidian",
+  "poly": 11061,
+  "parts": [
+   "wheels",
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "car",
+  "realistic",
+  "obsidian",
+  "balanced",
+  "rover"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11061,
+ "seed": 41875
+}

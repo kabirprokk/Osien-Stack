@@ -1,0 +1,26 @@
+{
+ "id": "nat-amethyst-geode-099",
+ "name": "Red Amethyst Geode 099",
+ "category": "natural",
+ "prompt": "glass purple amethyst crystal geode low poly",
+ "kit": "crystal",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 25395,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "crystal",
+  "lowpoly",
+  "glass",
+  "balanced",
+  "amethyst",
+  "gem"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25395,
+ "seed": 41338
+}

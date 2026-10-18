@@ -1,0 +1,25 @@
+{
+ "id": "intr-four-poster-bed-035",
+ "name": "Cozy Four-Poster Bed 035",
+ "category": "architecture-interior",
+ "prompt": "leather fabric four-poster bed stylized",
+ "kit": "bed",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "leather",
+  "poly": 11263,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bed",
+  "stylized",
+  "leather",
+  "balanced",
+  "bedroom"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11263,
+ "seed": 41754
+}

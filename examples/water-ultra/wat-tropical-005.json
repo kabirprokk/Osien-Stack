@@ -1,0 +1,21 @@
+{
+ "id": "wat-tropical-005",
+ "name": "Sandy Tropical 005",
+ "category": "water-ultra",
+ "kit": "tropicalShallows",
+ "prompt": "sandy turquoise tropical turquoise shallows lagoon",
+ "seed": 40075,
+ "params": {
+  "quality": "draft",
+  "style": "realistic"
+ },
+ "tags": [
+  "tropical",
+  "lagoon",
+  "sand",
+  "sandy",
+  "turquoise",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

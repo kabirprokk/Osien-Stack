@@ -1,0 +1,26 @@
+{
+ "id": "nat-pine-tree-071",
+ "name": "Tall Pine Tree 071",
+ "category": "natural",
+ "prompt": "weathered wooden tall pine tree low poly",
+ "kit": "tree",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 3917,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "tree",
+  "lowpoly",
+  "wood",
+  "worn",
+  "pine",
+  "forest"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 3917,
+ "seed": 41310
+}

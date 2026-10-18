@@ -1,0 +1,25 @@
+{
+ "id": "char-space-marine-077",
+ "name": "Golden Space Marine 077",
+ "category": "characters",
+ "prompt": "weathered leather armored space marine soldier avatar realistic",
+ "kit": "soldierModern",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "leather",
+  "poly": 22781,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "realistic",
+  "leather",
+  "worn",
+  "soldier"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22781,
+ "seed": 41536
+}

@@ -1,0 +1,26 @@
+{
+ "id": "furn-office-desk-083",
+ "name": "Modern Office Desk 083",
+ "category": "furniture",
+ "prompt": "pristine brass modern office desk table low poly",
+ "kit": "table",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 11983,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "table",
+  "lowpoly",
+  "brass",
+  "pristine",
+  "desk",
+  "office"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11983,
+ "seed": 41702
+}

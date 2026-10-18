@@ -1,0 +1,21 @@
+{
+ "id": "veg-lawn-010",
+ "name": "Fresh Lawn 010",
+ "category": "vegetation-ultra",
+ "kit": "lawnGrass",
+ "prompt": "fresh dense manicured lawn grass",
+ "seed": 30010,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "lawn",
+  "turf",
+  "garden",
+  "fresh",
+  "dense",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

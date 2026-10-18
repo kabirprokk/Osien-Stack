@@ -1,0 +1,25 @@
+{
+ "id": "intr-lounge-sofa-044",
+ "name": "Grand Lounge Sofa 044",
+ "category": "architecture-interior",
+ "prompt": "stone modern lounge sofa stylized",
+ "kit": "sofa",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "stone",
+  "poly": 4241,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "sofa",
+  "stylized",
+  "stone",
+  "balanced",
+  "lounge"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4241,
+ "seed": 41763
+}

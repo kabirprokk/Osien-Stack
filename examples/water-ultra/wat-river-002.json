@@ -1,0 +1,21 @@
+{
+ "id": "wat-river-002",
+ "name": "Foamy River 002",
+ "category": "water-ultra",
+ "kit": "riverRapids",
+ "prompt": "foamy fast rushing river rapids stream",
+ "seed": 40022,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "river",
+  "rapids",
+  "whitewater",
+  "foamy",
+  "fast",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

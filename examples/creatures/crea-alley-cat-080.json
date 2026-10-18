@@ -1,0 +1,27 @@
+{
+ "id": "crea-alley-cat-080",
+ "name": "Dark Alley Cat 080",
+ "category": "creatures",
+ "prompt": "ancient wooden small orange alley cat with tail stylized",
+ "kit": "creature",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 11253,
+  "parts": [
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "stylized",
+  "wood",
+  "ancient",
+  "cat"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11253,
+ "seed": 41619
+}

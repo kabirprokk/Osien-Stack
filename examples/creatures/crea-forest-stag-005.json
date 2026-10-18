@@ -1,0 +1,25 @@
+{
+ "id": "crea-forest-stag-005",
+ "name": "Swamp Forest Stag 005",
+ "category": "creatures",
+ "prompt": "ancient bone brown forest stag animal low poly",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "bone",
+  "poly": 23923,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "lowpoly",
+  "bone",
+  "ancient",
+  "deer"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23923,
+ "seed": 41544
+}

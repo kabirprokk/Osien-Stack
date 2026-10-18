@@ -1,0 +1,27 @@
+{
+ "id": "fant-elder-dragon-013",
+ "name": "Mystic Elder Dragon 013",
+ "category": "fantasy",
+ "prompt": "crystal ancient elder dragon with horns realistic",
+ "kit": "dragon",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "crystal",
+  "poly": 22833,
+  "parts": [
+   "horns"
+  ]
+ },
+ "tags": [
+  "fantasy",
+  "dragon",
+  "realistic",
+  "crystal",
+  "balanced",
+  "elder"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22833,
+ "seed": 41892
+}

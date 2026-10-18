@@ -1,0 +1,25 @@
+{
+ "id": "gun-knight-longsword-025",
+ "name": "Ancient Knight Longsword 025",
+ "category": "weapons-guns",
+ "prompt": "ancient steel knight steel longsword blade realistic",
+ "kit": "sword",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "steel",
+  "poly": 10932,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "realistic",
+  "steel",
+  "ancient",
+  "knight"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10932,
+ "seed": 41144
+}

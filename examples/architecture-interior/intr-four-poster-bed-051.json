@@ -1,0 +1,25 @@
+{
+ "id": "intr-four-poster-bed-051",
+ "name": "Small Four-Poster Bed 051",
+ "category": "architecture-interior",
+ "prompt": "weathered stone fabric four-poster bed fantasy",
+ "kit": "bed",
+ "params": {
+  "quality": "draft",
+  "style": "fantasy",
+  "material": "stone",
+  "poly": 4125,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bed",
+  "fantasy",
+  "stone",
+  "worn",
+  "bedroom"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4125,
+ "seed": 41770
+}

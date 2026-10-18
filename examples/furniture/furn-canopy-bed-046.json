@@ -1,0 +1,25 @@
+{
+ "id": "furn-canopy-bed-046",
+ "name": "Leather Canopy Bed 046",
+ "category": "furniture",
+ "prompt": "glass wooden canopy bed mattress realistic",
+ "kit": "bed",
+ "params": {
+  "quality": "cinema",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 23129,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bed",
+  "realistic",
+  "glass",
+  "balanced",
+  "mattress"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23129,
+ "seed": 41665
+}

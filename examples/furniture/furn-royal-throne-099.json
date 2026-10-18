@@ -1,0 +1,26 @@
+{
+ "id": "furn-royal-throne-099",
+ "name": "Leather Royal Throne 099",
+ "category": "furniture",
+ "prompt": "iron golden royal throne seat realistic",
+ "kit": "throne",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 12592,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "throne",
+  "realistic",
+  "iron",
+  "balanced",
+  "royal",
+  "gold"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12592,
+ "seed": 41718
+}

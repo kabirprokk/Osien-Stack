@@ -1,0 +1,26 @@
+{
+ "id": "gun-sniper-rifle-021",
+ "name": "Dark Sniper Rifle 021",
+ "category": "weapons-guns",
+ "prompt": "iron long steel sniper rifle barrel tube stylized",
+ "kit": "cylinder",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "iron",
+  "poly": 31907,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "cylinder",
+  "stylized",
+  "iron",
+  "balanced",
+  "gun",
+  "sniper"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31907,
+ "seed": 41140
+}

@@ -1,0 +1,26 @@
+{
+ "id": "furn-royal-throne-069",
+ "name": "Grand Royal Throne 069",
+ "category": "furniture",
+ "prompt": "fabric golden royal throne seat realistic",
+ "kit": "throne",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "fabric",
+  "poly": 4248,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "throne",
+  "realistic",
+  "fabric",
+  "balanced",
+  "royal",
+  "gold"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4248,
+ "seed": 41688
+}

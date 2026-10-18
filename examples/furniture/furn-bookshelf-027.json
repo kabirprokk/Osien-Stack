@@ -1,0 +1,26 @@
+{
+ "id": "furn-bookshelf-027",
+ "name": "Grand Bookshelf 027",
+ "category": "furniture",
+ "prompt": "iron tall wooden bookshelf shelf with books realistic",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 11175,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "realistic",
+  "iron",
+  "balanced",
+  "shelf",
+  "books"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11175,
+ "seed": 41646
+}

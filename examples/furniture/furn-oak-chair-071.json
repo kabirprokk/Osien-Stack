@@ -1,0 +1,26 @@
+{
+ "id": "furn-oak-chair-071",
+ "name": "Oaken Oak Chair 071",
+ "category": "furniture",
+ "prompt": "marble wooden oak chair stylized",
+ "kit": "chair",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "marble",
+  "poly": 32834,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "chair",
+  "stylized",
+  "marble",
+  "balanced",
+  "oak",
+  "seat"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 32834,
+ "seed": 41690
+}

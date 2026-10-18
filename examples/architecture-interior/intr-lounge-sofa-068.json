@@ -1,0 +1,25 @@
+{
+ "id": "intr-lounge-sofa-068",
+ "name": "Grand Lounge Sofa 068",
+ "category": "architecture-interior",
+ "prompt": "marble modern lounge sofa low poly",
+ "kit": "sofa",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 11682,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "sofa",
+  "lowpoly",
+  "marble",
+  "balanced",
+  "lounge"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11682,
+ "seed": 41787
+}

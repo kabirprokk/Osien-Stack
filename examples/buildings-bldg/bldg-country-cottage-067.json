@@ -1,0 +1,25 @@
+{
+ "id": "bldg-country-cottage-067",
+ "name": "Ancient Country Cottage 067",
+ "category": "buildings-bldg",
+ "prompt": "ancient iron country stone cottage house with chimney and windows fantasy",
+ "kit": "house",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "iron",
+  "poly": 13168,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "fantasy",
+  "iron",
+  "ancient",
+  "cottage"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13168,
+ "seed": 41066
+}

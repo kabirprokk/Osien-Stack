@@ -1,0 +1,29 @@
+{
+ "id": "bldg-desert-villa-056",
+ "name": "Ruined Desert Villa 056",
+ "category": "buildings-bldg",
+ "prompt": "ancient wooden desert sandstone villa house with doors and windows with windows and doors realistic",
+ "kit": "house",
+ "params": {
+  "quality": "draft",
+  "style": "realistic",
+  "material": "wood",
+  "poly": 4290,
+  "parts": [
+   "windows",
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "realistic",
+  "wood",
+  "ancient",
+  "villa",
+  "desert"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4290,
+ "seed": 41055
+}

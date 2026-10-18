@@ -1,0 +1,26 @@
+{
+ "id": "nat-alien-flora-057",
+ "name": "Old Alien Flora 057",
+ "category": "natural",
+ "prompt": "polished glass glowing alien plant tentacle flower stylized",
+ "kit": "alienPlant",
+ "params": {
+  "quality": "draft",
+  "style": "stylized",
+  "material": "glass",
+  "poly": 4200,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "alienPlant",
+  "stylized",
+  "glass",
+  "pristine",
+  "alien",
+  "flora"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4200,
+ "seed": 41296
+}

@@ -1,0 +1,27 @@
+{
+ "id": "char-cyber-cyborg-024",
+ "name": "Young Cyber Cyborg 024",
+ "category": "characters",
+ "prompt": "weathered steel chrome cyber cyborg android with engine realistic",
+ "kit": "cyborg",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "steel",
+  "poly": 12420,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "characters",
+  "robot",
+  "realistic",
+  "steel",
+  "worn",
+  "cyborg"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12420,
+ "seed": 41483
+}

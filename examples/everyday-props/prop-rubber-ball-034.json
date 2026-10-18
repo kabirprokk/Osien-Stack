@@ -1,0 +1,25 @@
+{
+ "id": "prop-rubber-ball-034",
+ "name": "Heavy Rubber Ball 034",
+ "category": "everyday-props",
+ "prompt": "steel red rubber ball sphere stylized",
+ "kit": "sphere",
+ "params": {
+  "quality": "game",
+  "style": "stylized",
+  "material": "steel",
+  "poly": 12597,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "sphere",
+  "stylized",
+  "steel",
+  "balanced",
+  "ball"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12597,
+ "seed": 42013
+}

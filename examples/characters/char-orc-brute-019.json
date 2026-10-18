@@ -1,0 +1,25 @@
+{
+ "id": "char-orc-brute-019",
+ "name": "Wise Orc Brute 019",
+ "category": "characters",
+ "prompt": "ancient gold hulking orc warrior sci-fi",
+ "kit": "warrior",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "gold",
+  "poly": 11327,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "scifi",
+  "gold",
+  "ancient",
+  "orc"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11327,
+ "seed": 41478
+}

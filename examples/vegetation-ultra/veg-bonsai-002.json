@@ -1,0 +1,21 @@
+{
+ "id": "veg-bonsai-002",
+ "name": "Artful Bonsai 002",
+ "category": "vegetation-ultra",
+ "kit": "bonsai",
+ "prompt": "artful miniature bonsai miniature tree",
+ "seed": 30115,
+ "params": {
+  "quality": "draft",
+  "style": "stylized"
+ },
+ "tags": [
+  "miniature",
+  "zen",
+  "pot",
+  "artful",
+  "miniature",
+  "draft"
+ ],
+ "difficulty": "beginner"
+}

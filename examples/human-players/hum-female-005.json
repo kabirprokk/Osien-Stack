@@ -1,0 +1,21 @@
+{
+ "id": "hum-female-005",
+ "name": "Noble Female 005",
+ "category": "human-players",
+ "kit": "baseFemale",
+ "prompt": "noble brave standing woman",
+ "seed": 40015,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "woman",
+  "female",
+  "casual",
+  "noble",
+  "brave",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

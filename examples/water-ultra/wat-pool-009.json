@@ -1,0 +1,21 @@
+{
+ "id": "wat-pool-009",
+ "name": "Clean Pool 009",
+ "category": "water-ultra",
+ "kit": "poolWater",
+ "prompt": "clean still swimming pool clear water",
+ "seed": 40049,
+ "params": {
+  "quality": "game",
+  "style": "realistic"
+ },
+ "tags": [
+  "pool",
+  "tiled",
+  "clean",
+  "clean",
+  "still",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

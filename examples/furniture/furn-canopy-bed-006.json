@@ -1,0 +1,25 @@
+{
+ "id": "furn-canopy-bed-006",
+ "name": "Modern Canopy Bed 006",
+ "category": "furniture",
+ "prompt": "weathered glass wooden canopy bed mattress realistic",
+ "kit": "bed",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "glass",
+  "poly": 12238,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bed",
+  "realistic",
+  "glass",
+  "worn",
+  "mattress"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12238,
+ "seed": 41625
+}

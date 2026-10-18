@@ -1,0 +1,25 @@
+{
+ "id": "intr-four-poster-bed-011",
+ "name": "Modern Four-Poster Bed 011",
+ "category": "architecture-interior",
+ "prompt": "ancient marble fabric four-poster bed low poly",
+ "kit": "bed",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "marble",
+  "poly": 23144,
+  "parts": []
+ },
+ "tags": [
+  "interior",
+  "bed",
+  "lowpoly",
+  "marble",
+  "ancient",
+  "bedroom"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23144,
+ "seed": 41730
+}

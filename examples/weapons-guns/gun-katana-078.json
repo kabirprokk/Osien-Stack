@@ -1,0 +1,26 @@
+{
+ "id": "gun-katana-078",
+ "name": "Steel Katana 078",
+ "category": "weapons-guns",
+ "prompt": "rusty polished steel katana blade fantasy",
+ "kit": "sword",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "rust",
+  "poly": 26046,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "sword",
+  "fantasy",
+  "rust",
+  "balanced",
+  "katana",
+  "samurai"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26046,
+ "seed": 41197
+}

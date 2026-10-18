@@ -1,0 +1,21 @@
+{
+ "id": "veg-clover-001",
+ "name": "Dense Clover 001",
+ "category": "vegetation-ultra",
+ "kit": "cloverPatch",
+ "prompt": "dense low clover patch ground",
+ "seed": 30041,
+ "params": {
+  "quality": "game",
+  "style": "stylized"
+ },
+ "tags": [
+  "clover",
+  "lawn-alt",
+  "low",
+  "dense",
+  "low",
+  "game"
+ ],
+ "difficulty": "intermediate"
+}

@@ -1,0 +1,26 @@
+{
+ "id": "furn-bookshelf-047",
+ "name": "Small Bookshelf 047",
+ "category": "furniture",
+ "prompt": "polished fabric tall wooden bookshelf shelf with books stylized",
+ "kit": "bookshelf",
+ "params": {
+  "quality": "print",
+  "style": "stylized",
+  "material": "fabric",
+  "poly": 31277,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "bookshelf",
+  "stylized",
+  "fabric",
+  "pristine",
+  "shelf",
+  "books"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 31277,
+ "seed": 41666
+}

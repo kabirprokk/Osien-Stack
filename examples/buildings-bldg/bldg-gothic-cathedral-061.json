@@ -1,0 +1,26 @@
+{
+ "id": "bldg-gothic-cathedral-061",
+ "name": "Towering Gothic Cathedral 061",
+ "category": "buildings-bldg",
+ "prompt": "pristine iron gothic stone castle cathedral with towers and gate realistic",
+ "kit": "castle",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 12555,
+  "parts": []
+ },
+ "tags": [
+  "bldg",
+  "castle",
+  "realistic",
+  "iron",
+  "pristine",
+  "gothic",
+  "church"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12555,
+ "seed": 41060
+}

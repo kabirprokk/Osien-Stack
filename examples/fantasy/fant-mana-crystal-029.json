@@ -1,0 +1,25 @@
+{
+ "id": "fant-mana-crystal-029",
+ "name": "Ancient Mana Crystal 029",
+ "category": "fantasy",
+ "prompt": "weathered wooden glowing blue mana crystal stylized",
+ "kit": "crystal",
+ "params": {
+  "quality": "cinema",
+  "style": "stylized",
+  "material": "wood",
+  "poly": 23509,
+  "parts": []
+ },
+ "tags": [
+  "fantasy",
+  "crystal",
+  "stylized",
+  "wood",
+  "worn",
+  "mana"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23509,
+ "seed": 41908
+}

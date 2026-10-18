@@ -1,0 +1,25 @@
+{
+ "id": "prop-brass-key-057",
+ "name": "Wooden Brass Key 057",
+ "category": "everyday-props",
+ "prompt": "weathered glass small brass key box teeth low poly",
+ "kit": "box",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "glass",
+  "poly": 23080,
+  "parts": []
+ },
+ "tags": [
+  "props",
+  "box",
+  "lowpoly",
+  "glass",
+  "worn",
+  "key"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23080,
+ "seed": 42036
+}

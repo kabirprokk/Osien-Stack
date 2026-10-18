@@ -1,0 +1,26 @@
+{
+ "id": "nat-alien-flora-087",
+ "name": "Grey Alien Flora 087",
+ "category": "natural",
+ "prompt": "ancient stone glowing alien plant tentacle flower realistic",
+ "kit": "alienPlant",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "stone",
+  "poly": 10824,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "alienPlant",
+  "realistic",
+  "stone",
+  "ancient",
+  "alien",
+  "flora"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 10824,
+ "seed": 41326
+}

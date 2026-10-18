@@ -1,0 +1,25 @@
+{
+ "id": "char-wise-villager-079",
+ "name": "Cute Wise Villager 079",
+ "category": "characters",
+ "prompt": "pristine gold wise old townsfolk person fantasy",
+ "kit": "baseMale",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "gold",
+  "poly": 23257,
+  "parts": []
+ },
+ "tags": [
+  "characters",
+  "humanoid",
+  "fantasy",
+  "gold",
+  "pristine",
+  "villager"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23257,
+ "seed": 41538
+}

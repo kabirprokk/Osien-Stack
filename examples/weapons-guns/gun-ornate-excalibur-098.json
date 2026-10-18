@@ -1,0 +1,26 @@
+{
+ "id": "gun-ornate-excalibur-098",
+ "name": "Golden Ornate Excalibur 098",
+ "category": "weapons-guns",
+ "prompt": "pristine bronze ornate golden enchanted excalibur sword blade realistic",
+ "kit": "swordV2",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "bronze",
+  "poly": 30593,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "swordV2",
+  "realistic",
+  "bronze",
+  "pristine",
+  "sword",
+  "legendary"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 30593,
+ "seed": 41217
+}

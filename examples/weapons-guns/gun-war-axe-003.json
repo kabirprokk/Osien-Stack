@@ -1,0 +1,24 @@
+{
+ "id": "gun-war-axe-003",
+ "name": "Polished War Axe 003",
+ "category": "weapons-guns",
+ "prompt": "polished bronze steel war axe hatchet fantasy",
+ "kit": "axe",
+ "params": {
+  "quality": "game",
+  "style": "fantasy",
+  "material": "bronze",
+  "poly": 11268,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "axe",
+  "fantasy",
+  "bronze",
+  "pristine"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 11268,
+ "seed": 41122
+}

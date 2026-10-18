@@ -1,0 +1,24 @@
+{
+ "id": "gun-war-axe-099",
+ "name": "Dark War Axe 099",
+ "category": "weapons-guns",
+ "prompt": "wooden steel war axe hatchet low poly",
+ "kit": "axe",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 22998,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "axe",
+  "lowpoly",
+  "wood",
+  "balanced"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 22998,
+ "seed": 41218
+}

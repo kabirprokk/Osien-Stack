@@ -1,0 +1,26 @@
+{
+ "id": "sfx-orbital-shuttle-067",
+ "name": "Solar Orbital Shuttle 067",
+ "category": "scifi",
+ "prompt": "mossy obsidian white orbital shuttle spacecraft with engine sci-fi",
+ "kit": "spaceship",
+ "params": {
+  "quality": "game",
+  "style": "scifi",
+  "material": "obsidian",
+  "poly": 12172,
+  "parts": [
+   "engine"
+  ]
+ },
+ "tags": [
+  "scifi",
+  "spaceship",
+  "obsidian",
+  "ancient",
+  "shuttle"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12172,
+ "seed": 41866
+}

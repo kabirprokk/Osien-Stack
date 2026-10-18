@@ -1,0 +1,28 @@
+{
+ "id": "bldg-village-hut-119",
+ "name": "Towering Village Hut 119",
+ "category": "buildings-bldg",
+ "prompt": "polished iron village straw hut house with doors with doors realistic",
+ "kit": "house",
+ "params": {
+  "quality": "print",
+  "style": "realistic",
+  "material": "iron",
+  "poly": 29292,
+  "parts": [
+   "doors"
+  ]
+ },
+ "tags": [
+  "bldg",
+  "house",
+  "realistic",
+  "iron",
+  "pristine",
+  "hut",
+  "village"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 29292,
+ "seed": 41118
+}

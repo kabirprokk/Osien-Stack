@@ -1,0 +1,29 @@
+{
+ "id": "crea-fire-dragon-033",
+ "name": "Golden Fire Dragon 033",
+ "category": "creatures",
+ "prompt": "worn bone huge fire dragon drake with tail and horns fantasy",
+ "kit": "dragon",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "bone",
+  "poly": 23602,
+  "parts": [
+   "tail",
+   "horns"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "dragon",
+  "fantasy",
+  "bone",
+  "worn",
+  "fire",
+  "drake"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 23602,
+ "seed": 41572
+}

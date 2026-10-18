@@ -1,0 +1,27 @@
+{
+ "id": "crea-forest-stag-045",
+ "name": "Ancient Forest Stag 045",
+ "category": "creatures",
+ "prompt": "fabric brown forest stag animal with tail fantasy",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "fantasy",
+  "material": "fabric",
+  "poly": 26150,
+  "parts": [
+   "tail"
+  ]
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "fantasy",
+  "fabric",
+  "balanced",
+  "deer"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 26150,
+ "seed": 41584
+}

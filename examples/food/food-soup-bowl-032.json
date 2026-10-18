@@ -1,0 +1,25 @@
+{
+ "id": "food-soup-bowl-032",
+ "name": "Golden Soup Bowl 032",
+ "category": "food",
+ "prompt": "wooden white soup bowl sphere dish low poly",
+ "kit": "sphere",
+ "params": {
+  "quality": "draft",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 4298,
+  "parts": []
+ },
+ "tags": [
+  "food",
+  "sphere",
+  "lowpoly",
+  "wood",
+  "balanced",
+  "soup"
+ ],
+ "difficulty": "beginner",
+ "polyTarget": 4298,
+ "seed": 41971
+}

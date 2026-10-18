@@ -1,0 +1,26 @@
+{
+ "id": "nat-alien-flora-067",
+ "name": "Old Alien Flora 067",
+ "category": "natural",
+ "prompt": "worn crystal glowing alien plant tentacle flower low poly",
+ "kit": "alienPlant",
+ "params": {
+  "quality": "print",
+  "style": "lowpoly",
+  "material": "crystal",
+  "poly": 28306,
+  "parts": []
+ },
+ "tags": [
+  "nature",
+  "alienPlant",
+  "lowpoly",
+  "crystal",
+  "worn",
+  "alien",
+  "flora"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 28306,
+ "seed": 41306
+}

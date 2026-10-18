@@ -1,0 +1,25 @@
+{
+ "id": "furn-brass-lamp-010",
+ "name": "Round Brass Lamp 010",
+ "category": "furniture",
+ "prompt": "weathered brass brass desk lamp lantern low poly",
+ "kit": "lamp",
+ "params": {
+  "quality": "game",
+  "style": "lowpoly",
+  "material": "brass",
+  "poly": 13157,
+  "parts": []
+ },
+ "tags": [
+  "furniture",
+  "lamp",
+  "lowpoly",
+  "brass",
+  "worn",
+  "lantern"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 13157,
+ "seed": 41629
+}

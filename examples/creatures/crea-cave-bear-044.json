@@ -1,0 +1,25 @@
+{
+ "id": "crea-cave-bear-044",
+ "name": "Horned Cave Bear 044",
+ "category": "creatures",
+ "prompt": "wooden brown cave bear beast low poly",
+ "kit": "creature",
+ "params": {
+  "quality": "cinema",
+  "style": "lowpoly",
+  "material": "wood",
+  "poly": 25585,
+  "parts": []
+ },
+ "tags": [
+  "creatures",
+  "creature",
+  "lowpoly",
+  "wood",
+  "balanced",
+  "bear"
+ ],
+ "difficulty": "advanced",
+ "polyTarget": 25585,
+ "seed": 41583
+}

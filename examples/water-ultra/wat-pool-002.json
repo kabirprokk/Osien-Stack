@@ -1,0 +1,21 @@
+{
+ "id": "wat-pool-002",
+ "name": "Clear Pool 002",
+ "category": "water-ultra",
+ "kit": "poolWater",
+ "prompt": "clear still swimming pool clear water",
+ "seed": 40042,
+ "params": {
+  "quality": "cinema",
+  "style": "realistic"
+ },
+ "tags": [
+  "pool",
+  "tiled",
+  "clean",
+  "clear",
+  "still",
+  "cinema"
+ ],
+ "difficulty": "advanced"
+}

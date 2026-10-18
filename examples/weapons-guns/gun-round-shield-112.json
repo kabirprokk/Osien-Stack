@@ -1,0 +1,24 @@
+{
+ "id": "gun-round-shield-112",
+ "name": "Golden Round Shield 112",
+ "category": "weapons-guns",
+ "prompt": "polished bronze round iron shield buckler realistic",
+ "kit": "shield",
+ "params": {
+  "quality": "game",
+  "style": "realistic",
+  "material": "bronze",
+  "poly": 12071,
+  "parts": []
+ },
+ "tags": [
+  "guns",
+  "shield",
+  "realistic",
+  "bronze",
+  "pristine"
+ ],
+ "difficulty": "intermediate",
+ "polyTarget": 12071,
+ "seed": 41231
+}
