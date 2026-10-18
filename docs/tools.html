@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Osien-Stack · Tool Explorer</title>
+<meta name="description" content="Browse all 45 osien-stack MCP tools with descriptions, categories and search.">
+<style>
+  :root { --hue: 200; --sat: 75%; --light: 55%; --bg: hsl(var(--hue), 28%, 7%); --fg: hsl(var(--hue), 10%, 92%); --muted: hsl(var(--hue), 15%, 62%); --accent: hsl(var(--hue), var(--sat), var(--light)); --accent2: hsl(calc(var(--hue)+50), var(--sat), 60%); --card: hsla(var(--hue), 25%, 13%, .55); --border: hsla(var(--hue), 40%, 50%, .22); --glow: hsla(var(--hue), 80%, 60%, .3); }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--fg); min-height: 100vh; }
+  body::before { content:""; position:fixed; inset:0; z-index:-2; background: radial-gradient(1000px 500px at 15% 10%, hsla(var(--hue),80%,50%,.22), transparent 60%), radial-gradient(900px 500px at 85% 40%, hsla(calc(var(--hue)+60),80%,50%,.18), transparent 60%); transition: background 1s ease; }
+  nav { position: sticky; top:0; z-index:50; display:flex; align-items:center; justify-content:space-between; padding:16px 28px; backdrop-filter: blur(14px); background: hsla(var(--hue),25%,8%,.55); border-bottom:1px solid var(--border); }
+  nav .logo { font-weight:800; font-size:1.2rem; } nav .logo span { color: var(--accent); }
+  nav a { color: var(--fg); text-decoration:none; margin-left:20px; opacity:.8; font-size:.9rem; } nav a:hover { opacity:1; color: var(--accent); }
+  .wrap { max-width: 1280px; margin: 0 auto; padding: 40px 24px 80px; }
+  h1 { font-size: clamp(2rem,5vw,3.4rem); font-weight:900; letter-spacing:-1.5px; margin-bottom: 8px; background: linear-gradient(120deg, var(--fg), var(--accent), var(--accent2)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .sub { color: var(--muted); margin-bottom: 28px; font-size:1.05rem; }
+  .toolbar { display:flex; gap:12px; flex-wrap:wrap; align-items:center; margin-bottom: 24px; }
+  .search { flex:1; min-width: 220px; padding: 12px 16px; border-radius: 12px; border:1px solid var(--border); background: var(--card); color: var(--fg); font-size:.95rem; outline:none; transition: border-color .2s, box-shadow .2s; }
+  .search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--glow); }
+  .filters { display:flex; gap:8px; flex-wrap:wrap; }
+  .chip { padding: 8px 14px; border-radius:999px; border:1px solid var(--border); background: var(--card); color: var(--muted); font-size:.85rem; cursor:pointer; transition: all .2s; user-select:none; }
+  .chip:hover { color: var(--fg); border-color: var(--accent); }
+  .chip.active { background: var(--accent); color:#0a0a0f; border-color:transparent; font-weight:600; }
+  .meta { display:flex; gap:16px; margin-bottom: 20px; color: var(--muted); font-size:.9rem; }
+  .meta strong { color: var(--accent); }
+  .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
+  .tool { background: var(--card); border:1px solid var(--border); border-radius:14px; padding:18px; transition: transform .25s, box-shadow .25s, border-color .25s; position:relative; overflow:hidden; opacity:0; transform: translateY(16px); }
+  .tool.in { opacity:1; transform: translateY(0); }
+  .tool:hover { transform: translateY(-4px); box-shadow: 0 16px 40px var(--glow); border-color: var(--accent); }
+  .tool .name { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; font-size:.95rem; color: var(--accent); font-weight:600; margin-bottom:6px; display:flex; align-items:center; justify-content:space-between; gap:8px; }
+  .tool .name .copy { font-size:.7rem; padding:3px 8px; border-radius:6px; border:1px solid var(--border); background:transparent; color: var(--muted); cursor:pointer; font-family:inherit; transition: all .2s; }
+  .tool .name .copy:hover { color: var(--fg); border-color: var(--accent); }
+  .tool .desc { color: var(--muted); font-size:.88rem; line-height:1.5; }
+  .tool .cat { position:absolute; top:12px; right:12px; font-size:.65rem; padding:3px 8px; border-radius:999px; background: hsla(var(--hue),40%,25%,.5); color: var(--muted); text-transform:uppercase; letter-spacing:.5px; }
+  .empty { text-align:center; padding:60px 20px; color: var(--muted); }
+  .back { display:inline-flex; align-items:center; gap:6px; color: var(--accent); text-decoration:none; font-size:.9rem; margin-bottom:20px; }
+  .back:hover { text-decoration:underline; }
+  footer { text-align:center; padding:40px 24px; color: var(--muted); border-top:1px solid var(--border); font-size:.85rem; }
+  footer a { color: var(--accent); text-decoration:none; }
+  @media (max-width:600px){ .grid { grid-template-columns:1fr; } }
+</style>
+</head>
+<body>
+  <nav>
+    <div class="logo">osien<span>-stack</span> · tools</div>
+    <div>
+      <a href="index.html">Home</a>
+      <a href="https://github.com/kabirprokk/Osien-Stack" target="_blank">GitHub</a>
+    </div>
+  </nav>
+  <div class="wrap">
+    <a class="back" href="index.html">← Back to home</a>
+    <h1>Tool Explorer</h1>
+    <p class="sub">All 45 osien-stack MCP tools. Search, filter, copy the name. Your AI calls them by name.</p>
+    <div class="toolbar">
+      <input class="search" id="search" type="search" placeholder="Search tools or descriptions…" autocomplete="off">
+      <div class="filters" id="filters"></div>
+    </div>
+    <div class="meta" id="meta"></div>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" style="display:none">No tools match your search.</div>
+  </div>
+  <footer>Osien-Stack · MIT licensed · <a href="https://github.com/kabirprokk/Osien-Stack">GitHub</a></footer>
+
+<script>
+  // tool data (embedded)
+  const tools = [
+    {"name":"ctx_recall","desc":"Load project memory by role/part/grep.","cat":"Memory"},
+    {"name":"ctx_save","desc":"Persist memory: architecture/decisions/failures/state/performance.","cat":"Memory"},
+    {"name":"soul_read","desc":"Read SOUL one-line notes.","cat":"Memory"},
+    {"name":"soul_write","desc":"Append a SOUL flowchart line.","cat":"Memory"},
+    {"name":"fast_note","desc":"Append a timestamped note.","cat":"Memory"},
+    {"name":"task_state","desc":"Read/write task state.","cat":"Memory"},
+    {"name":"state_reset","desc":"Clear task state.","cat":"Memory"},
+    {"name":"smart_grep","desc":"Grep with file:line output, bounded.","cat":"Search"},
+    {"name":"read_slice","desc":"Read file lines [start,end].","cat":"Search"},
+    {"name":"impact_analyze","desc":"Find references to a symbol.","cat":"Search"},
+    {"name":"machine_state","desc":"OS/CPU/mem/cwd snapshot.","cat":"State"},
+    {"name":"repo_health","desc":"Git status + errors + memory.","cat":"State"},
+    {"name":"project_map","desc":"Dirs, git, scripts, agents overview.","cat":"State"},
+    {"name":"loop_status","desc":"Repeated actions/errors status.","cat":"State"},
+    {"name":"checkpoint_create","desc":"Snapshot files for rollback.","cat":"State"},
+    {"name":"verify_chain","desc":"Run format/typecheck/test/build.","cat":"Verify"},
+    {"name":"security_scan","desc":"Scan for secrets/vulns.","cat":"Verify"},
+    {"name":"test_gap","desc":"Find untested functions.","cat":"Verify"},
+    {"name":"repro_capsule","desc":"Capture failing cmd + env.","cat":"Verify"},
+    {"name":"context_budget","desc":"Token budget per file.","cat":"Verify"},
+    {"name":"consensus","desc":"Multi-model consensus guidance.","cat":"Verify"},
+    {"name":"auto_heal","desc":"Self-heal loop: detect/fix/verify.","cat":"Verify"},
+    {"name":"rollback_on_failure","desc":"Rollback if verify fails.","cat":"Verify"},
+    {"name":"perf_regression","desc":"Benchmark before/after.","cat":"Quality"},
+    {"name":"test_synthesizer","desc":"Generate test stubs.","cat":"Quality"},
+    {"name":"memory_compactor","desc":"Compress memory files.","cat":"Quality"},
+    {"name":"dead_code_detector","desc":"Find unused exports.","cat":"Quality"},
+    {"name":"dependency_graph","desc":"Mermaid dep graph.","cat":"Quality"},
+    {"name":"changelog_generator","desc":"Generate changelog.","cat":"Quality"},
+    {"name":"token_budget_enforcer","desc":"Enforce token budget.","cat":"Quality"},
+    {"name":"architecture_drift","desc":"Compare docs vs code.","cat":"Quality"},
+    {"name":"session_replay","desc":"Replay session timeline.","cat":"Quality"},
+    {"name":"auto_document","desc":"Auto-generate docs.","cat":"Quality"},
+    {"name":"feature_flag_manager","desc":"List feature flags.","cat":"Quality"},
+    {"name":"license_checker","desc":"Check dep licenses.","cat":"Quality"},
+    {"name":"schema_validator","desc":"Validate JSON files.","cat":"Quality"},
+    {"name":"cost_estimator","desc":"Estimate token cost.","cat":"Quality"},
+    {"name":"self_critique_loop","desc":"Self-critique guidance.","cat":"Quality"},
+    {"name":"city_status","desc":"City agent status.","cat":"City"},
+    {"name":"city_post","desc":"Post message between agents.","cat":"City"},
+    {"name":"city_read","desc":"Read agent inbox.","cat":"City"},
+    {"name":"city_broadcast","desc":"Broadcast to all agents.","cat":"City"},
+    {"name":"city_mode","desc":"Activate city mode.","cat":"City"},
+    {"name":"city_clear","desc":"Clear city mailbox.","cat":"City"},
+    {"name":"batch","desc":"Run multiple ops in parallel in ONE call.","cat":"Parallel"}
+  ];
+
+  const cats = ["All", ...Array.from(new Set(tools.map(t=>t.cat)))];
+  const filters = document.getElementById('filters');
+  let activeCat = "All";
+  cats.forEach(c => {
+    const ch = document.createElement('div');
+    ch.className = 'chip' + (c==='All'?' active':'');
+    ch.textContent = c;
+    ch.onclick = () => { activeCat = c; document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active')); ch.classList.add('active'); render(); };
+    filters.appendChild(ch);
+  });
+
+  const grid = document.getElementById('grid');
+  const search = document.getElementById('search');
+  const meta = document.getElementById('meta');
+  const empty = document.getElementById('empty');
+
+  function render() {
+    const q = search.value.trim().toLowerCase();
+    const filtered = tools.filter(t => (activeCat==='All' || t.cat===activeCat) && (q==='' || t.name.toLowerCase().includes(q) || t.desc.toLowerCase().includes(q)));
+    grid.innerHTML = '';
+    filtered.forEach((t, i) => {
+      const card = document.createElement('div');
+      card.className = 'tool';
+      card.innerHTML = `<div class="cat">${t.cat}</div><div class="name">${t.name}<button class="copy" data-name="${t.name}">copy</button></div><div class="desc">${t.desc}</div>`;
+      grid.appendChild(card);
+      setTimeout(() => card.classList.add('in'), 30 + i*25);
+    });
+    empty.style.display = filtered.length ? 'none' : 'block';
+    meta.innerHTML = `Showing <strong>${filtered.length}</strong> of ${tools.length} tools`;
+    grid.querySelectorAll('.copy').forEach(b => b.onclick = (e) => {
+      e.stopPropagation();
+      navigator.clipboard.writeText(b.dataset.name);
+      b.textContent = 'copied';
+      setTimeout(() => b.textContent = 'copy', 1200);
+    });
+  }
+  search.addEventListener('input', render);
+  render();
+
+  // scroll color change
+  const hues = [200, 260, 320, 140, 35, 200];
+  window.addEventListener('scroll', () => requestAnimationFrame(() => {
+    const y = window.scrollY; const max = document.body.scrollHeight - window.innerHeight;
+    const progress = Math.min(1, Math.max(0, y/max));
+    const idx = Math.min(hues.length-2, Math.floor(progress*(hues.length-1)));
+    const local = progress*(hues.length-1) - idx;
+    document.documentElement.style.setProperty('--hue', hues[idx] + (hues[idx+1]-hues[idx])*local);
+  }), { passive:true });
+</script>
+</body>
+</html>
