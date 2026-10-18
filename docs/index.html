@@ -530,7 +530,7 @@
 <div class="kbdhelp" id="kbdhelp">
   <div class="kbdhelp-box">
     <h3>Keyboard shortcuts</h3>
-    <div class="row"><span class="k">1-6</span><span class="d">Jump to section</span></div>
+    <div class="row"><span class="k">1-7</span><span class="d">Jump to section</span></div>
     <div class="row"><span class="k">?</span><span class="d">This help</span></div>
     <div class="row"><span class="k">T</span><span class="d">Back to top</span></div>
     <div class="row"><span class="k">Esc</span><span class="d">Close overlays</span></div>
@@ -540,13 +540,13 @@
 
 <div class="section-indicator" id="sectionIndicator">
   <i data-i="0" title="home"></i><i data-i="1" title="why"></i><i data-i="2" title="what"></i>
-  <i data-i="3" title="pipeline"></i><i data-i="4" title="how"></i><i data-i="5" title="install"></i>
+  <i data-i="3" title="scale"></i><i data-i="4" title="pipeline"></i><i data-i="5" title="how"></i><i data-i="6" title="install"></i>
 </div>
 
 <nav class="topbar">
   <div class="logo"><img src="logo-play.png" width="512" height="512" alt="Osien-Stack" class="logo-img logo-play"><img src="logo-cyber.png" width="512" height="512" alt="Osien-Stack" class="logo-img logo-cyb"><span>osien_stack</span></div>
   <nav>
-    <a href="#why">why</a><a href="#what">what</a><a href="#pipeline">pipeline</a>
+    <a href="#why">why</a><a href="#what">what</a><a href="#scale">scale</a><a href="#pipeline">pipeline</a>
     <a href="#how">how</a><a href="#install">install</a><a href="tools.html">tools</a>
     <button id="worldBtn" title="Switch world">world</button>
     <button id="paletteBtn">search <span class="kbd">Ctrl K</span></button>
@@ -627,6 +627,18 @@
     <div class="cell"><div class="tag">city &middot; 6</div><h3>city_mode</h3><p>city_status, city_post, city_read, city_broadcast, city_clear.</p></div>
     <div class="cell span3"><div class="tag">parallel &middot; 1</div><h3>batch</h3><p>Run multiple read / grep / ctx ops in one call, in parallel. The powerhouse.</p></div>
     <div class="cell span3"><div class="tag">quality &middot; 2</div><h3>cost_estimator, self_critique_loop</h3><p>Token cost estimates and self-review loops before you ship.</p></div>
+  </div>
+</section>
+
+<section id="scale">
+  <h2 class="reveal">121 tasks. One command.</h2>
+  <p class="lead reveal">A manifest goes in, finished work comes out. The batch runner handles the boring parts &mdash; concurrency, retries, duplicates, resume &mdash; so you just list the work.</p>
+  <div class="bento">
+    <div class="cell"><div class="tag">verified</div><h3>121 tasks &middot; 2.0s</h3><p>A real run at full scale. 118 passed, 3 intentional failures, every one reported.</p></div>
+    <div class="cell"><div class="tag">bounded</div><h3>16 workers, hard cap 64</h3><p>Concurrency is a ceiling, not a suggestion. 100+ tasks never become 100+ live processes.</p></div>
+    <div class="cell"><div class="tag">free</div><h3>--mock costs zero tokens</h3><p>Prove the whole plan at full scale before spending a single token.</p></div>
+    <div class="cell span3"><div class="tag">short version</div><h3>What it actually does</h3><p>It works through your task list in parallel, skips anything already done, retries whatever breaks, remembers exactly where it stopped, and hands you a pass/fail report at the end. Point it at 100+ jobs and it grinds through them while you get on with something else.</p></div>
+    <div class="cell span3"><div class="tag">safety</div><h3>Tasks are inert, the binary is explicit</h3><p>Task text is handed over as a single argument with <code>shell=False</code>, so metacharacters stay text and can never become commands. The AI binary is required through <code>--bin</code> and is never auto-guessed &mdash; a wrong guess silently runs the wrong program.</p></div>
   </div>
 </section>
 
@@ -791,14 +803,15 @@
 
   /* ---------- keyboard + palette ---------- */
   var kbd = $('#kbdhelp'), pal = $('#palette'), palInput = $('#paletteInput'), palList = $('#paletteList');
-  var sections = ['', 'why', 'what', 'pipeline', 'how', 'install'];
+  var sections = ['', 'why', 'what', 'scale', 'pipeline', 'how', 'install'];
   var items = [
     { n: 'home', k: '#', go: function () { scrollTo({ top: 0, behavior: 'smooth' }); } },
     { n: 'why', k: '#why', go: function () { go(1); } },
     { n: 'what', k: '#what', go: function () { go(2); } },
-    { n: 'pipeline', k: '#pipeline', go: function () { go(3); } },
-    { n: 'how', k: '#how', go: function () { go(4); } },
-    { n: 'install', k: '#install', go: function () { go(5); } },
+    { n: 'scale (100+ tasks)', k: '#scale', go: function () { go(3); } },
+    { n: 'pipeline', k: '#pipeline', go: function () { go(4); } },
+    { n: 'how', k: '#how', go: function () { go(5); } },
+    { n: 'install', k: '#install', go: function () { go(6); } },
     { n: 'tools explorer', k: 'tools.html', go: function () { location.href = 'tools.html'; } },
     { n: 'github', k: 'github.com', go: function () { window.open('https://github.com/kabirprokk/Osien-Stack', '_blank', 'noopener'); } }
   ];
@@ -827,7 +840,7 @@
     if (e.key === '?') { kbd.classList.toggle('open'); }
     else if (e.key === 'Escape') { kbd.classList.remove('open'); closePal(); }
     else if (e.key === 't' || e.key === 'T') { scrollTo({ top: 0, behavior: 'smooth' }); }
-    else if (/^[1-6]$/.test(e.key)) { go(parseInt(e.key, 10) - 1); }
+    else if (/^[1-7]$/.test(e.key)) { go(parseInt(e.key, 10) - 1); }
   });
   kbd.addEventListener('click', function (e) { if (e.target === kbd) kbd.classList.remove('open'); });
 
