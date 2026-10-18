@@ -100,8 +100,65 @@
     content: ""; position: fixed; inset: 0; z-index: 90; pointer-events: none; opacity: var(--scan);
     background: repeating-linear-gradient(180deg, rgba(0,0,0,.22) 0 1px, transparent 1px 3px);
   }
-  /* the ONE canvas: a real interactive OSIEN World instrument, not a spinner */
-  canvas#three3d { position: fixed; inset: 0; z-index: 0; pointer-events: none; opacity: .92; }
+/* the signal field: pure CSS/DOM 2D motion. no canvas, no GPU, no library. */
+  .field { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; opacity: .92; }
+  .field-grid { position: absolute; inset: -80px; will-change: transform;
+    background-image:
+      linear-gradient(hsla(185,90%,55%,.055) 1px, transparent 1px),
+      linear-gradient(90deg, hsla(185,90%,55%,.055) 1px, transparent 1px);
+    background-size: 58px 58px;
+    animation: fieldDrift 26s linear infinite; }
+  @keyframes fieldDrift { from { transform: translate3d(0,0,0); } to { transform: translate3d(58px,58px,0); } }
+  .field-glow { position: absolute; inset: -25%; will-change: transform;
+    background:
+      radial-gradient(520px 380px at 30% 28%, hsla(330,100%,56%,.20), transparent 60%),
+      radial-gradient(600px 420px at 72% 70%, hsla(185,100%,50%,.16), transparent 62%);
+    animation: fieldFloat 24s ease-in-out infinite alternate; }
+  @keyframes fieldFloat {
+    from { transform: translate3d(-3%,-2%,0) scale(1); }
+    to   { transform: translate3d(4%,3%,0) scale(1.12); }
+  }
+  .field-core { position: absolute; inset: 0; --cx: 72%; --cy: 42%; --fx: 0px; --fy: 0px;
+    transform: translate3d(var(--fx), var(--fy), 0); }
+
+  /* orbiting rings - the ring spins, the dot rides the rim. transform only. */
+  .orbit { position: absolute; left: var(--cx); top: var(--cy); border-radius: 50%;
+    border: 1px solid hsla(185,90%,60%,.15);
+    animation: fieldSpin var(--dur) linear infinite; will-change: transform; }
+  .orbit > i { position: absolute; top: 50%; left: 0; width: 7px; height: 7px; margin: -3.5px 0 0 -3.5px;
+    border-radius: 50%; background: var(--dot); box-shadow: 0 0 14px var(--dot); }
+  .orbit > i::after { content: ""; position: absolute; inset: -4px; border-radius: 50%;
+    border: 1px solid var(--dot); opacity: .3; }
+  .orbit.o1 { width: 320px; height: 320px; --dur: 26s; --a: 0deg;   --dot: hsl(185,100%,58%); }
+  .orbit.o2 { width: 510px; height: 510px; --dur: 38s; --a: 140deg; --dot: hsl(330,100%,64%); }
+  .orbit.o3 { width: 700px; height: 700px; --dur: 52s; --a: 250deg; --dot: hsl(276,90%,72%); }
+  @keyframes fieldSpin {
+    from { transform: translate(-50%,-50%) rotate(var(--a)); }
+    to   { transform: translate(-50%,-50%) rotate(calc(var(--a) + 360deg)); }
+  }
+
+  /* signal lines sweeping across the field */
+  .signal { position: absolute; left: 0; right: 0; height: 1px;
+    top: calc(6% + var(--i) * 15%);
+    background: linear-gradient(90deg, transparent, hsla(330,100%,72%,.55) 18%, hsla(185,100%,64%,.5) 52%, transparent);
+    animation: signalSweep calc(9s + var(--i) * 1.6s) calc(var(--i) * -2.4s) linear infinite;
+    will-change: transform, opacity; }
+  @keyframes signalSweep {
+    0%   { transform: translate3d(-30%,0,0); opacity: 0; }
+    12%  { opacity: 1; }
+    88%  { opacity: 1; }
+    100% { transform: translate3d(30%,0,0); opacity: 0; }
+  }
+
+  /* hover glow: opacity/box-shadow on ONE element at a time, never a full-page pass */
+  .btn.magnet, .bento .cell.magnet, .spotlight.magnet, .gcard.magnet {
+    box-shadow: 0 0 0 1px var(--glow), var(--shadow); }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+
+  /* PLAYFUL world: same field, softened so neon dots never fight the clay look */
+  html[data-theme="playful"] .field { opacity: .5; }
+  html[data-theme="playful"] .orbit > i { box-shadow: 0 0 10px hsla(320,70%,70%,.5); }
+
   .topbar, .stage, section, .marquee, .section-indicator, .top-orb { position: relative; z-index: 1; }
 
 
@@ -406,9 +463,13 @@
     .topbar nav { display: none; }
     .section-indicator { display: none; }
   }
+  @media (max-width: 900px) {
+    .field-core { --cx: 50%; --cy: 32%; }
+    .orbit.o3 { display: none; }
+  }
   @media (prefers-reduced-motion: reduce) {
     * { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
-    canvas#three3d, .cursor { display: none !important; }
+    .field, .cursor { display: none !important; }
   }
 </style>
 </head>
@@ -436,7 +497,7 @@
         <div class="prev"><img src="logo-cyber.png" width="512" height="512" class="watermark" alt=""><div class="mock"><i></i><i></i><i></i><i></i><i></i></div></div>
         <div class="body">
           <div class="name">OSIEN World</div>
-          <div class="tag2">Cyberpunk. Neon magenta on black, clipped corners, scanlines, live 3D. Sharp and electric.</div>
+          <div class="tag2">Cyberpunk. Neon magenta on black, clipped corners, scanlines, animated signal field. Sharp and electric.</div>
           <span class="go">Enter OSIEN World</span>
         </div>
       </button>
@@ -447,7 +508,21 @@
   </div>
 </div>
 
-<canvas id="three3d"></canvas>
+<div class="field" id="field" aria-hidden="true">
+  <div class="field-grid"></div>
+  <div class="field-glow"></div>
+  <div class="field-core" id="fieldCore">
+    <div class="orbit o1"><i></i></div>
+    <div class="orbit o2"><i></i></div>
+    <div class="orbit o3"><i></i></div>
+    <div class="signal" style="--i:0"></div>
+    <div class="signal" style="--i:1"></div>
+    <div class="signal" style="--i:2"></div>
+    <div class="signal" style="--i:3"></div>
+    <div class="signal" style="--i:4"></div>
+    <div class="signal" style="--i:5"></div>
+  </div>
+</div>
 <div class="cursor" id="cursor"></div>
 <div class="scrollbar" id="scrollbar"></div>
 <button class="top-orb" id="topOrb" aria-label="Back to top">&uarr;</button>
@@ -620,23 +695,9 @@
   var $ = function (s) { return document.querySelector(s); };
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* ================= WORLD GATE ================= */
+/* ================= WORLD GATE ================= */
   var gate = $('#gate');
   var root = document.documentElement;
-  var threeDone = false, threeWaiting = false;
-  function ensure3D() {
-    var cv = document.getElementById('three3d');
-    if (cv) cv.style.display = '';                 // always un-hide for cyber
-    if (threeDone || threeWaiting) return;
-    if (typeof THREE !== 'undefined') { threeDone = true; init3D(); return; }
-    // Load the 3D library only after the visitor chooses OSIEN World.
-    threeWaiting = true;
-    var tag = document.createElement('script');
-    tag.src = 'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js';
-    tag.onload = function () { threeWaiting = false; threeDone = true; init3D(); };
-    tag.onerror = function () { threeWaiting = false; };
-    document.head.appendChild(tag);
-  }
 
   function setWorld(w) {
     root.dataset.theme = w;
@@ -644,9 +705,6 @@
     var apl = document.getElementById('appleIcon');
     if (fav) fav.href = (w === 'cyber') ? 'favicon-cyber.png' : 'favicon-play.png';
     if (apl) apl.href = (w === 'cyber') ? 'apple-cyber.png' : 'apple-play.png';
-    // the 3D scene belongs to OSIEN World only
-    if (w === 'cyber') { ensure3D(); }
-    else { var c2 = document.getElementById('three3d'); if (c2) c2.style.display = 'none'; }
     var wb = $('#worldBtn');
     if (wb) wb.textContent = (w === 'cyber') ? 'world: cyber' : 'world: playful';
   }
@@ -654,7 +712,6 @@
 
   if (gate) {
     // always ask - the gate shows on every load
-    var cv0 = document.getElementById('three3d'); if (cv0) cv0.style.display = 'none';
     gate.querySelectorAll('[data-world]').forEach(function (card) {
       card.addEventListener('click', function () {
         setWorld(card.dataset.world);
@@ -719,7 +776,13 @@
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
     }, { threshold: 0.08, rootMargin: '0px 0px -5% 0px' });
-    revealEls.forEach(function (el) { io.observe(el); });
+    revealEls.forEach(function (el) {
+      /* stagger within each parent so sections cascade instead of popping */
+      var n = 0, p = el.parentElement, sibs = p && p.querySelectorAll('.reveal, .bento .cell');
+      if (sibs) for (var j = 0; j < sibs.length; j++) { if (sibs[j] === el) { n = j; break; } }
+      el.style.transitionDelay = (Math.min(n, 7) * 60) + 'ms';
+      io.observe(el);
+    });
     // failsafe: never leave content invisible
     setTimeout(function () { revealEls.forEach(function (el) { el.classList.add('in'); }); }, 2500);
   } else {
@@ -879,145 +942,51 @@
     co.observe(el);
   });
 
-  /* ---------- 3D (single canvas, single shared loop, no per-frame allocs) ---------- */
-  var scene3d = null;
-  function init3D() {
-    var canvas = document.getElementById('three3d');
-    if (!canvas || typeof THREE === 'undefined') { if (canvas) canvas.style.display = 'none'; return; }
-    var renderer;
-    try { renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true }); }
-    catch (err) { canvas.style.display = 'none'; return; }
-    if (!renderer || !renderer.getContext()) { canvas.style.display = 'none'; return; }
 
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
-    renderer.setSize(innerWidth, innerHeight);
+  /* ---------- 2D motion system: field parallax + magnetic + tilt ----------
+     Everything here is transform/opacity only and is driven by the ONE rAF
+     at the bottom of this file. No library, no canvas, no per-frame allocs. */
+  var fieldCore = $('#fieldCore');
+  var fx = 0, fy = 0, ftx = 0, fty = 0;
+  var mags = [];
 
-    var scene = new THREE.Scene();
-    var camera = new THREE.PerspectiveCamera(55, innerWidth / innerHeight, 0.1, 500);
-    camera.position.z = 9;
-
-    var group = new THREE.Group();
-    scene.add(group);
-
-    var coreMat = new THREE.MeshStandardMaterial({ color: 0x4466ff, roughness: 0.24, metalness: 0.78, transparent: true, opacity: 0.5, flatShading: true });
-    var core = new THREE.Mesh(new THREE.IcosahedronGeometry(1.65, 2), coreMat);
-    group.add(core);
-
-    var wireMat = new THREE.MeshStandardMaterial({ color: 0x88aaff, wireframe: true, transparent: true, opacity: 0.42, roughness: 0.2, metalness: 0.8 });
-    group.add(new THREE.Mesh(new THREE.IcosahedronGeometry(2.15, 2), wireMat));
-
-    /* Three counter-rotating rings represent recall -> verify -> ship. */
-    var ringMats = [
-      new THREE.MeshStandardMaterial({ color: 0xff2b9a, emissive: 0x4a0732, emissiveIntensity: 1.3, metalness: 0.8, roughness: 0.22 }),
-      new THREE.MeshStandardMaterial({ color: 0x55eaff, emissive: 0x063d4a, emissiveIntensity: 1.4, metalness: 0.8, roughness: 0.2 }),
-      new THREE.MeshStandardMaterial({ color: 0xb880ff, emissive: 0x26064a, emissiveIntensity: 1.2, metalness: 0.75, roughness: 0.25 })
-    ];
-    var rings = [];
-    [2.55, 3.2, 3.82].forEach(function (radius, ri) {
-      var r = new THREE.Mesh(new THREE.TorusGeometry(radius, ri === 1 ? 0.055 : 0.04, 12, 96), ringMats[ri]);
-      r.rotation.set(ri * 0.42 + 0.25, ri * 0.34, ri * 0.7);
-      rings.push(r); group.add(r);
-    });
-
-    /* 45 tools become 45 usable nodes on the instrument. One draw call. */
-    var nodeMat = new THREE.MeshStandardMaterial({ color: 0xff4db5, emissive: 0x6d0b46, emissiveIntensity: 1.1, metalness: 0.65, roughness: 0.28 });
-    var nodeMesh = new THREE.InstancedMesh(new THREE.BoxGeometry(0.16, 0.16, 0.16), nodeMat, names.length);
-    var nodeDummy = new THREE.Object3D(), nodePositions = [], nodeBase = [];
-    for (var ni = 0; ni < names.length; ni++) {
-      var na = (ni / names.length) * Math.PI * 2;
-      var nr = 3.18 + ((ni % 3) - 1) * 0.12;
-      nodePositions.push(new THREE.Vector3(Math.cos(na) * nr, Math.sin(na) * nr, (ni % 5 - 2) * 0.07));
-      nodeBase.push(nr);
-      nodeDummy.position.copy(nodePositions[ni]); nodeDummy.rotation.set(na, na * 0.7, na * 0.3); nodeDummy.updateMatrix();
-      nodeMesh.setMatrixAt(ni, nodeDummy.matrix);
-    }
-    nodeMesh.instanceMatrix.needsUpdate = true;
-    group.add(nodeMesh);
-
-    var starCount = innerWidth < 700 ? 260 : 700;
-    var sp = new Float32Array(starCount * 3);
-    for (var i = 0; i < starCount; i++) {
-      sp[i * 3] = (Math.random() - 0.5) * 80;
-      sp[i * 3 + 1] = (Math.random() - 0.5) * 80;
-      sp[i * 3 + 2] = (Math.random() - 0.5) * 80 - 10;
-    }
-    var sg = new THREE.BufferGeometry();
-    sg.setAttribute('position', new THREE.BufferAttribute(sp, 3));
-    var starMat = new THREE.PointsMaterial({ color: 0xaaccff, size: 0.12, transparent: true, opacity: 0.7 });
-    var stars = new THREE.Points(sg, starMat);
-    scene.add(stars);
-
-    scene.add(new THREE.AmbientLight(0x4466aa, 0.9));
-    var key = new THREE.DirectionalLight(0xffffff, 1.4); key.position.set(5, 6, 7); scene.add(key);
-    var rim = new THREE.PointLight(0x66ddff, 1.4, 40); rim.position.set(-6, -3, 5); scene.add(rim);
-
-    var px = 0, py = 0, pointer = new THREE.Vector2(9, 9), ray = new THREE.Raycaster(), hovered = -1;
+  if (!reduce) {
+    /* field parallax: pointer only. scroll offset is added in the loop. */
     window.addEventListener('mousemove', function (e) {
-      px = (e.clientX / innerWidth - 0.5) * 2;
-      py = (e.clientY / innerHeight - 0.5) * 2;
-      pointer.x = (e.clientX / innerWidth) * 2 - 1; pointer.y = -(e.clientY / innerHeight) * 2 + 1;
+      ftx = (e.clientX / innerWidth - .5) * -26;
+      fty = (e.clientY / innerHeight - .5) * -18;
     }, { passive: true });
-    window.addEventListener('click', function () {
-      if (hovered >= 0 && root.dataset.theme === 'cyber') window.location.href = 'tools.html?tool=' + encodeURIComponent(names[hovered]);
+
+    /* magnetic buttons + cards.
+       The rect is cached on enter and invalidated on scroll/resize, so the
+       pointer handler never forces a synchronous reflow mid-gesture. */
+    document.querySelectorAll('.btn, .bento .cell, .spotlight, .gcard').forEach(function (el) {
+      var isCell = el.classList.contains('cell') || el.classList.contains('spotlight');
+      var m = { el: el, x: 0, y: 0, tx: 0, ty: 0, on: false, rect: null,
+                tilt: isCell, lift: isCell ? -4 : -2, pull: 6 };
+      mags.push(m);
+      el.addEventListener('mouseenter', function () {
+        m.rect = el.getBoundingClientRect();
+        m.pull = Math.min(11, Math.max(3, m.rect.width * 0.05));
+        m.on = true;
+        el.classList.add('magnet');
+      }, { passive: true });
+      el.addEventListener('mouseleave', function () {
+        m.on = false; m.tx = 0; m.ty = 0;
+        el.classList.remove('magnet');
+      }, { passive: true });
+      el.addEventListener('mousemove', function (e) {
+        if (!m.rect) m.rect = el.getBoundingClientRect();
+        m.tx = ((e.clientX - m.rect.left) / m.rect.width - .5) * m.pull * 2;
+        m.ty = ((e.clientY - m.rect.top) / m.rect.height - .5) * m.pull * 2;
+      }, { passive: true });
     });
-
-    var tmpColor = new THREE.Color();      // reused - no per-frame allocation
-    var t0 = performance.now();
-    var paused = false;
-    document.addEventListener('visibilitychange', function () {
-      paused = document.hidden;
-      if (!paused && !scene3d.raf) render();
-    });
-    window.addEventListener('resize', function () {
-      camera.aspect = innerWidth / innerHeight; camera.updateProjectionMatrix();
-      renderer.setSize(innerWidth, innerHeight);
-    });
-
-    function render() {
-      if (paused || reduce) { scene3d.raf = null; return; }
-      scene3d.raf = requestAnimationFrame(render);
-      var t = (performance.now() - t0) / 1000;
-
-      coreMat.color.setHSL((hue % 360) / 360, 0.8, 0.6);
-      wireMat.color.setHSL(((hue + 40) % 360) / 360, 0.75, 0.72);
-
-      group.position.x += ((innerWidth > 900 ? 3.25 : 0) - group.position.x) * 0.06;
-      group.rotation.y = t * 0.11;
-      group.rotation.x = Math.sin(t * 0.3) * 0.16;
-      var orbit = 0.7 + scrollPct * 0.7;
-      rings[0].rotation.z = t * 0.34 + orbit;
-      rings[1].rotation.x = t * -0.22 - orbit * 0.6;
-      rings[2].rotation.y = t * 0.28 + orbit * 0.35;
-      stars.rotation.y = t * 0.012;
-
-      ray.setFromCamera(pointer, camera);
-      var hit = ray.intersectObject(nodeMesh, false), nextHover = hit.length ? hit[0].instanceId : -1;
-      if (nextHover !== hovered) {
-        hovered = nextHover;
-        nodeMesh.material.emissiveIntensity = hovered >= 0 ? 2.1 : 1.1;
-        var sn = document.getElementById('spotName'), sd = document.getElementById('spotDesc');
-        if (hovered >= 0 && sn) { sn.textContent = names[hovered]; if (sd) sd.textContent = '45-tool node — click to explore this capability.'; }
-      }
-      for (var ni2 = 0; ni2 < nodePositions.length; ni2++) {
-        var np = nodePositions[ni2], lift = ni2 === hovered ? 0.18 : 0;
-        nodeDummy.position.set(np.x * (1 + lift), np.y * (1 + lift), np.z + lift);
-        nodeDummy.rotation.set(t * 0.8 + ni2, t * 0.6, ni2 * 0.2); nodeDummy.updateMatrix(); nodeMesh.setMatrixAt(ni2, nodeDummy.matrix);
-      }
-      nodeMesh.instanceMatrix.needsUpdate = true;
-
-      camera.position.x += (px * 1.9 - camera.position.x) * 0.05;
-      camera.position.y += (-py * 1.4 - camera.position.y) * 0.05;
-      camera.lookAt(group.position.x * 0.55, 0, 0);
-
-      renderer.render(scene, camera);
-    }
-    scene3d = { raf: null, render: render };
-    window.__threeUp = true;
-    render();
+    var dropRects = function () { for (var i = 0; i < mags.length; i++) mags[i].rect = null; };
+    window.addEventListener('scroll', dropRects, { passive: true });
+    window.addEventListener('resize', dropRects, { passive: true });
   }
-  if (!reduce && root.dataset.theme === 'cyber') { ensure3D(); }
 
-  /* ---------- THE single rAF loop: cursor + hue + 3D ---------- */
+  /* ---------- THE single rAF loop: hue + cursor + magnetic + field ---------- */
   measure(); readScroll();
   (function loop() {
     requestAnimationFrame(loop);
@@ -1025,6 +994,26 @@
     if (cursor && !reduce) {
       cx += (tx - cx) * 0.22; cy += (ty - cy) * 0.22;
       cursor.style.transform = 'translate3d(' + cx.toFixed(1) + 'px,' + cy.toFixed(1) + 'px,0) translate(-50%,-50%)';
+    }
+    if (reduce) return;
+
+    /* field parallax: pointer + scroll, eased, two custom-prop writes only */
+    fx += (ftx - fx) * 0.06; fy += (fty - fy) * 0.06;
+    if (fieldCore) {
+      fieldCore.style.setProperty('--fx', (fx - scrollPct * 70).toFixed(2) + 'px');
+      fieldCore.style.setProperty('--fy', (fy - scrollPct * 40).toFixed(2) + 'px');
+    }
+
+    /* magnetic + tilt. settled elements are skipped, so an idle page does
+       zero DOM writes and the loop stays a single composited pass. */
+    for (var i = 0; i < mags.length; i++) {
+      var m = mags[i];
+      if (!m.on && Math.abs(m.x) < .05 && Math.abs(m.y) < .05) continue;
+      m.x += (m.tx - m.x) * 0.18; m.y += (m.ty - m.y) * 0.18;
+      var lift = m.on ? m.lift : 0;
+      var t = 'translate3d(' + m.x.toFixed(2) + 'px,' + (m.y + lift).toFixed(2) + 'px,0)';
+      if (m.tilt) t = 'perspective(900px) rotateX(' + (-m.y * .34).toFixed(2) + 'deg) rotateY(' + (m.x * .34).toFixed(2) + 'deg) ' + t;
+      m.el.style.transform = t;
     }
   })();
 })();

@@ -34,7 +34,7 @@
   .meta { display:flex; gap:16px; margin-bottom: 20px; color: var(--muted); font-size:.9rem; }
   .meta strong { color: var(--accent); }
   .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
-  .tool { background: var(--card); border:1px solid var(--border); border-radius:14px; padding:18px; transition: transform .25s, box-shadow .25s, border-color .25s; position:relative; overflow:hidden; opacity:0; transform: translateY(16px); }
+  .tool { background: var(--card); border:1px solid var(--border); border-radius:14px; padding:18px; transition: transform .42s cubic-bezier(.22,1,.36,1), box-shadow .3s ease, border-color .3s ease, opacity .42s ease-out; position:relative; overflow:hidden; opacity:0; transform: translateY(16px); }
   .tool.in { opacity:1; transform: translateY(0); }
   .tool:hover { transform: translateY(-4px); box-shadow: 0 16px 40px var(--glow); border-color: var(--accent); }
   .tool .name { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; font-size:.95rem; color: var(--accent); font-weight:600; margin-bottom:6px; display:flex; align-items:center; justify-content:space-between; gap:8px; }
@@ -57,9 +57,10 @@
   .modal-box .mclose:hover { color: var(--fg); border-color: var(--accent); }
   .modal-box .mcat { display: inline-block; font-size: .68rem; padding: 3px 9px; border-radius: 999px; background: hsla(var(--hue),40%,25%,.5); color: var(--muted); text-transform: uppercase; letter-spacing: .5px; margin-bottom: 12px; }
 
-  @media (prefers-reduced-motion: reduce) {
-    * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+@media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; animation-duration: .01ms !important; transition-duration: .01ms !important; transition-delay: 0s !important; }
     .cursor, .glow { display: none !important; }
+    nav::after, nav a::after, .tool::before, .tool::after, .chip::after, .modal.open .modal-box::after { display: none !important; }
   }
   /* OSIEN World tool explorer: same sharp cyber language as the home page. */
   html[data-theme="cyber"] { --hue: 318; --sat: 100%; --light: 60%; }
@@ -79,7 +80,66 @@
   html[data-theme="cyber"] .tool:hover { box-shadow: 0 0 28px hsla(330,100%,60%,.22), inset 0 0 24px hsla(185,100%,55%,.05); }
   html[data-theme="cyber"] .chip.active { color: #07030e; box-shadow: 0 0 18px hsla(330,100%,60%,.35); }
   html[data-theme="cyber"] .back { text-transform: uppercase; letter-spacing: 1px; font-family: 'JetBrains Mono', monospace; font-size: .75rem; }
-  html[data-theme="cyber"] .modal-box { background: rgba(10,4,20,.97); box-shadow: 0 0 70px hsla(330,100%,60%,.18); }
+html[data-theme="cyber"] .modal-box { background: rgba(10,4,20,.97); box-shadow: 0 0 70px hsla(330,100%,60%,.18); }
+
+  /* ===== minimalist high-motion layer: CSS only, no canvas / no deps ===== */
+  @keyframes os-drift { from { transform: translate3d(0,0,0); } to { transform: translate3d(46px,46px,0); } }
+  @keyframes os-breathe { 0%,100% { opacity: .7; } 50% { opacity: 1; } }
+  @keyframes os-flicker { 0%,100% { opacity: .2; } 50% { opacity: .34; } }
+  @keyframes os-sheen { 0%,70% { background-position: 230% 0; } 90%,100% { background-position: -130% 0; } }
+  @keyframes os-line { from { transform: translateX(-115%); } to { transform: translateX(330%); } }
+  @keyframes os-scan { from { transform: translateY(-110%); } to { transform: translateY(320%); } }
+  @keyframes os-rise { from { opacity: 0; transform: translateY(20px) scale(.97); } to { opacity: 1; transform: none; } }
+  @keyframes os-fade { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes os-pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(0,0,0,0); } 50% { box-shadow: 0 0 18px 2px hsla(330,100%,60%,.28); } }
+  @keyframes os-focus { 0%,100% { box-shadow: 0 0 0 3px hsla(185,100%,55%,.16); } 50% { box-shadow: 0 0 0 6px hsla(330,100%,60%,.26); } }
+
+  /* background: slow grid drift + breathing glow (transform/opacity only -> cheap) */
+  html[data-theme="cyber"] body::before { inset: -60px; animation: os-drift 26s ease-in-out infinite alternate, os-breathe 11s ease-in-out infinite; }
+  html[data-theme="cyber"] body::after { animation: os-flicker 8s ease-in-out infinite; }
+  .glow { animation: os-breathe 6s ease-in-out infinite; }
+
+  /* nav shimmer */
+  nav::after { content: ""; position: absolute; left: 0; bottom: -1px; height: 1px; width: 32%; pointer-events: none;
+    background: linear-gradient(90deg, transparent, var(--accent), hsla(185,100%,55%,.9), transparent);
+    animation: os-line 6s cubic-bezier(.4,0,.2,1) infinite; }
+  nav a { position: relative; }
+  nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -5px; height: 1px; background: var(--accent);
+    transform: scaleX(0); transform-origin: left; transition: transform .32s cubic-bezier(.22,1,.36,1); }
+  nav a:hover::after, nav a:focus-visible::after { transform: scaleX(1); }
+
+  /* card: animated sheen accent + hover edge, per-card stagger via nth-child */
+  .tool::after { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(112deg, transparent 38%, hsla(185,100%,55%,.10) 46%, hsla(330,100%,60%,.16) 50%, hsla(185,100%,55%,.10) 54%, transparent 62%);
+    background-size: 260% 100%; background-position: 230% 0; animation: os-sheen 11s ease-in-out infinite; }
+  .tool:nth-child(3n+1)::after { animation-delay: -2.5s; }
+  .tool:nth-child(3n+2)::after { animation-delay: -6s; }
+  .tool:nth-child(3n)::after { animation-delay: -9s; }
+  .tool::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 2px; z-index: 1; pointer-events: none;
+    background: linear-gradient(180deg, var(--accent), var(--accent2));
+    transform: scaleY(0); transform-origin: top; transition: transform .38s cubic-bezier(.22,1,.36,1); }
+  .tool:hover::before, .tool:focus-within::before { transform: scaleY(1); }
+  .tool:hover .desc { color: var(--fg); }
+  .tool .name .copy:active { transform: scale(.94); }
+
+  /* chips + search microinteractions */
+  .chip { position: relative; overflow: hidden; }
+  .chip::after { content: ""; position: absolute; inset: 0; pointer-events: none; opacity: 0; transition: opacity .25s;
+    background: linear-gradient(100deg, transparent 40%, hsla(330,100%,70%,.22) 50%, transparent 60%);
+    background-size: 250% 100%; background-position: 230% 0; }
+  .chip:hover::after { opacity: 1; animation: os-sheen 1.4s ease-out forwards; }
+  .chip:hover { transform: translateY(-1px); }
+  .chip:active { transform: translateY(0) scale(.96); }
+  .chip.active { animation: os-pulse 2.6s ease-in-out infinite; }
+  .search:focus { animation: os-focus 1.7s ease-in-out infinite; }
+
+  /* modal entrance: fade + rise + single scan pass */
+  .modal-box { position: relative; overflow: hidden; }
+  .modal.open { animation: os-fade .22s ease-out both; }
+  .modal.open .modal-box { animation: os-rise .38s cubic-bezier(.22,1,.36,1) both; }
+  .modal.open .modal-box::after { content: ""; position: absolute; left: 0; right: 0; top: 0; height: 40%; pointer-events: none;
+    background: linear-gradient(180deg, transparent, hsla(185,100%,55%,.10), transparent);
+    animation: os-scan .7s cubic-bezier(.4,0,.2,1) both; }
 </style>
 </head>
 <body>
