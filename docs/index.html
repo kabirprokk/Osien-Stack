@@ -124,6 +124,7 @@
 </style>
 </head>
 <body>
+  <div class="scrollbar" id="scrollbar"></div>
   <canvas id="field"></canvas>
   <div class="cursor" id="cursor"></div>
   <div class="glow" id="glow"></div>
@@ -201,6 +202,36 @@
     </div>
   </section>
 
+
+  <section class="block" id="compare">
+    <h2>Before vs. After</h2>
+    <p class="lead">Same AI. Same model. Different toolchain.</p>
+    <div class="compare">
+      <div class="col before">
+        <h3>Without Osien-Stack</h3>
+        <ul>
+          <li>Re-reads entire files every task</li>
+          <li>Hand-rolls one-off scripts</li>
+          <li>No memory between sessions</li>
+          <li>Ships unverified code</li>
+          <li>Context balloons to 80%+ before rotating</li>
+          <li>One tool call at a time</li>
+        </ul>
+      </div>
+      <div class="col after">
+        <h3>With Osien-Stack</h3>
+        <ul>
+          <li>read_slice feeds 5 lines, not 500</li>
+          <li>Forge once, reuse forever</li>
+          <li>ctx_recall loads prior decisions</li>
+          <li>verify_chain before "done"</li>
+          <li>Rotate at 30%, stay fast</li>
+          <li>batch runs ops in parallel</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <section class="block" id="what">
     <h2>What it does</h2>
     <p class="lead">45 forged tools. Short names, sharp descriptions — the model spends tokens on work, not on choosing. <a href="tools.html" style="color:var(--accent)">Browse all 45 →</a></p>
@@ -237,6 +268,19 @@
     </div>
   </section>
 
+
+  <section class="block" id="faq">
+    <h2>FAQ</h2>
+    <p class="lead">The questions every AI asks before installing.</p>
+    <div class="faq">
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Does it work with my AI? <span class="plus">+</span></div><div class="faq-a">Yes. Any MCP-compatible client: opencode, Claude Code, Cursor, Cline, Windsurf. It degrades gracefully elsewhere.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Is it free? <span class="plus">+</span></div><div class="faq-a">MIT licensed. Free forever. No API keys required for the core 45 tools.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">How long to install? <span class="plus">+</span></div><div class="faq-a">One prompt. The AI clones, installs, wires, and runs the smoke test. About 60 seconds.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Does it slow my AI down? <span class="plus">+</span></div><div class="faq-a">No. Cached reads are 0.49ms. Prompts are 50% shorter. It makes your AI faster, not slower.</div></div>
+      <div class="faq-item"><div class="faq-q" onclick="this.parentElement.classList.toggle('open')">Can I use just some tools? <span class="plus">+</span></div><div class="faq-a">Yes. The MCP server exposes all 45, but your AI picks what it needs. Unused tools cost nothing.</div></div>
+    </div>
+  </section>
+
   <section class="block" id="install">
     <h2>Install in one prompt</h2>
     <p class="lead">Paste this into any AI. It does the rest. <strong>Any</strong> AI.</p>
@@ -262,6 +306,10 @@
   let W, H;
   function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
   resize(); window.addEventListener('resize', resize);
+  const scrollbar = document.getElementById('scrollbar');
+  window.addEventListener('scroll', () => { const max = document.body.scrollHeight - window.innerHeight; scrollbar.style.width = (window.scrollY / Math.max(1,max) * 100) + '%'; }, { passive: true });
+  const copyBtn = document.getElementById('copyInstall');
+  if (copyBtn) copyBtn.onclick = () => { navigator.clipboard.writeText('Install osien-stack: clone https://github.com/kabirprokk/Osien-Stack, run npm install in mcp-server, wire it as an MCP server named osien-tools, copy skills/commands/agents into your config, then confirm with the smoke test (npm test).'); const t = document.getElementById('toast'); t.classList.add('show'); setTimeout(() => t.classList.remove('show'), 2000); };
   const particles = [];
   const N = 120;
   for (let i = 0; i < N; i++) particles.push({ x: Math.random()*W, y: Math.random()*H, vx: 0, vy: 0, life: Math.random() });
