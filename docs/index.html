@@ -2,6 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<script>
+/* Resolve the theme BEFORE first paint so there is no flash of the wrong
+   mode. Kept inline and tiny on purpose. */
+(function () {
+  var m = null;
+  try { m = localStorage.getItem('osien-mode'); } catch (e) {}
+  if (m !== 'light' && m !== 'dark') {
+    m = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+  document.documentElement.dataset.mode = m;
+})();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Osien-Stack - A Living Toolchain for Any AI</title>
 <meta name="description" content="45 MCP tools that install themselves into any AI. Memory, verification, parallel work, context discipline. One prompt.">
@@ -20,7 +32,7 @@
     --muted: #5B6E93;
     --accent: #2240DC;
     --accent2: #2FAFD0;
-    --card: rgba(255,255,255,.92);
+    --card: #FFFFFF;
     --card2: #F5FAFE;
     --border: hsla(224, 72%, 52%, .16);
     --glow: hsla(190, 78%, 55%, .38);
@@ -74,13 +86,47 @@
     content: ""; position: fixed; inset: 0; z-index: 90; pointer-events: none; opacity: var(--scan);
     background-image: var(--scan-img, none);
   }
-/* ============ OCEAN: layered 2D waves. Pure CSS, no canvas, no library. ============
-   Each band tiles its background every 1200px and is translated by exactly
-   -1200px, so the loop is seamless at ANY viewport width. Only `transform`
-   animates, which keeps every band on the compositor: no paint, no layout,
-   no main-thread work per frame. */
+/* ---------- dark mode: same ocean, deep water ----------
+   data-mode is set before first paint by the inline script in <head>, so there
+   is never a flash of the wrong theme. The accent stays recognisably osien
+   blue but is lifted for contrast on a dark ground. */
+  :root[data-mode="dark"] {
+    --bg: #070E1F;
+    --fg: #DCEAFC;
+    --muted: #8397BD;
+    --accent: #4C7DFF;
+    --accent2: #4FD1E5;
+    /* Opaque on purpose: a translucent card over a moving background is not
+       a contrast target WCAG can measure, and at .07 the text sat at 2.66:1.
+       These are solid equivalents of the intended tint. */
+    --card: #101C36;
+    --card2: #172545;
+    --border: hsla(210, 70%, 70%, .18);
+    --glow: hsla(214, 90%, 60%, .26);
+    --on-accent: #04102B;
+    --panel: #0B1428;
+    --nav: hsla(222, 55%, 6%, .88);
+    --wash3: hsla(214, 50%, 12%, .55);
+    --code-bg: #0C1730;
+    --code-fg: #CFE2FB;
+    --shadow: 0 18px 44px -26px hsla(214, 90%, 30%, .70);
+    --shadow-sm: 0 10px 26px -18px hsla(222, 70%, 4%, .80);
+    --bgimg:
+      radial-gradient(900px 620px at 100% 100%, hsla(214, 90%, 40%, .16), transparent 62%),
+      radial-gradient(760px 540px at 0% 0%,   hsla(196, 80%, 45%, .10), transparent 62%);
+    --scan: .03;
+  }
+
+  /* ============ OCEAN: layered 2D waves. Pure CSS, no canvas, no library. ============
+   Each band tiles a wave SVG every 1200px and is translated by exactly
+   -1200px per loop, so it is seamless at ANY viewport width. The vertical
+   component is the swell: the band rises and falls twice per lap, and each
+   band is phase-shifted with a negative animation-delay so they roll through
+   each other instead of pulsing in unison. Only `transform` animates, so all
+   of it stays on the compositor - no paint, no layout, no main-thread work
+   per frame. */
   .ocean {
-    position: fixed; left: 0; right: 0; bottom: 0; height: 52vh; z-index: 0;
+    position: fixed; left: 0; right: 0; bottom: 0; height: 56vh; z-index: 0;
     pointer-events: none; overflow: hidden; contain: strict;
   }
   .ocean .wv {
@@ -92,26 +138,35 @@
     animation-iteration-count: infinite;
   }
   @keyframes os-drift {
-    from { transform: translate3d(0, 0, 0); }
-    to   { transform: translate3d(-1200px, 0, 0); }
+    0%   { transform: translate3d(0, 0, 0); }
+    25%  { transform: translate3d(-300px, -10px, 0); }
+    50%  { transform: translate3d(-600px, 0, 0); }
+    75%  { transform: translate3d(-900px, 10px, 0); }
+    100% { transform: translate3d(-1200px, 0, 0); }
   }
 
-  /* back to front: pale and slow at the horizon, deep and quick up close */
+  /* back to front: pale and slow at the horizon, deep and quick up close.
+     Each wave SVG carries a second stroked path along its crest - that is the
+     glint, and because it lives inside the tile it travels with the swell. */
   .ocean .wv1 {
-    height: 88%; opacity: .40; animation-duration: 46s;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'%3E%3Cpath d='M0,130 C150,84 300,176 450,130 C600,84 750,176 900,130 C1050,84 1200,176 1200,130 L1200,200 L0,200 Z' fill='%236FC3F2'/%3E%3C/svg%3E");
+    height: 92%; opacity: .38; animation-duration: 32s; animation-delay: 0s;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'%3E%3Cpath d='M0,132 C150,74 300,190 450,132 C600,74 750,190 900,132 C1050,74 1200,190 1200,132 L1200,200 L0,200 Z' fill='%236FC3F2'/%3E%3Cpath d='M0,132 C150,74 300,190 450,132 C600,74 750,190 900,132 C1050,74 1200,190 1200,132' fill='none' stroke='%23ffffff' stroke-opacity='.30' stroke-width='4'/%3E%3C/svg%3E");
   }
   .ocean .wv2 {
-    height: 74%; opacity: .46; animation-duration: 34s;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'%3E%3Cpath d='M0,140 C170,92 280,188 430,140 C580,92 740,188 890,140 C1040,92 1140,170 1200,140 L1200,200 L0,200 Z' fill='%234A86E8'/%3E%3C/svg%3E");
+    height: 78%; opacity: .44; animation-duration: 25s; animation-delay: -7s;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'%3E%3Cpath d='M0,142 C170,80 280,202 430,142 C580,80 740,202 890,142 C1040,80 1140,182 1200,142 L1200,200 L0,200 Z' fill='%234A86E8'/%3E%3Cpath d='M0,142 C170,80 280,202 430,142 C580,80 740,202 890,142 C1040,80 1140,182 1200,142' fill='none' stroke='%23ffffff' stroke-opacity='.28' stroke-width='4'/%3E%3C/svg%3E");
   }
   .ocean .wv3 {
-    height: 58%; opacity: .50; animation-duration: 25s;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'%3E%3Cpath d='M0,150 C140,110 320,196 470,150 C620,110 700,180 850,150 C1000,120 1120,186 1200,150 L1200,200 L0,200 Z' fill='%232F6BE0'/%3E%3C/svg%3E");
+    height: 62%; opacity: .48; animation-duration: 19s; animation-delay: -13s;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'%3E%3Cpath d='M0,152 C140,96 320,208 470,152 C620,96 700,196 850,152 C1000,108 1120,198 1200,152 L1200,200 L0,200 Z' fill='%232F6BE0'/%3E%3Cpath d='M0,152 C140,96 320,208 470,152 C620,96 700,196 850,152 C1000,108 1120,198 1200,152' fill='none' stroke='%23ffffff' stroke-opacity='.26' stroke-width='5'/%3E%3C/svg%3E");
   }
   .ocean .wv4 {
-    height: 40%; opacity: .55; animation-duration: 18s;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'%3E%3Cpath d='M0,162 C180,132 300,192 460,162 C620,132 760,196 920,162 C1060,132 1150,180 1200,162 L1200,200 L0,200 Z' fill='%232240DC'/%3E%3C/svg%3E");
+    height: 46%; opacity: .52; animation-duration: 14s; animation-delay: -4s;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'%3E%3Cpath d='M0,164 C180,118 300,206 460,164 C620,118 760,210 920,164 C1060,118 1150,190 1200,164 L1200,200 L0,200 Z' fill='%232240DC'/%3E%3Cpath d='M0,164 C180,118 300,206 460,164 C620,118 760,210 920,164 C1060,118 1150,190 1200,164' fill='none' stroke='%23ffffff' stroke-opacity='.24' stroke-width='5'/%3E%3C/svg%3E");
+  }
+  .ocean .wv5 {
+    height: 32%; opacity: .56; animation-duration: 10s; animation-delay: -9s;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 200' preserveAspectRatio='none'%3E%3Cpath d='M0,172 C160,140 340,202 480,172 C620,140 700,200 860,172 C1020,142 1140,198 1200,172 L1200,200 L0,200 Z' fill='%231C35C4'/%3E%3Cpath d='M0,172 C160,140 340,202 480,172 C620,140 700,200 860,172 C1020,142 1140,198 1200,172' fill='none' stroke='%23ffffff' stroke-opacity='.22' stroke-width='6'/%3E%3C/svg%3E");
   }
 
   /* calm for people who asked for calm */
@@ -145,7 +200,7 @@
     transform: translate(-50%, -50%); transition: width .18s, height .18s, background .18s, border-color .18s;
     will-change: transform;
   }
-  .cursor.is-hover { width: 46px; height: 46px; background: hsla(var(--hue), 85%, 62%, .18); }
+  .cursor.is-hover { width: 46px; height: 46px; background: hsla(var(--accent), 85%, 62%, .18); }
   .cursor.is-text  { width: 4px; height: 26px; border-radius: 3px; background: var(--accent); border-color: transparent; }
 
   .scrollbar { position: fixed; top: 0; left: 0; height: 3px; width: 0; z-index: 100;
@@ -156,7 +211,9 @@
     background: var(--nav); border-bottom: 1px solid var(--border);
   }
   .topbar .logo { display: flex; align-items: center; gap: 10px; font-family: var(--mono);
-    font-weight: 700; font-size: 1.05rem; }
+    font-weight: 700; font-size: 1.05rem; color: var(--fg); text-decoration: none; }
+  .topbar .logo:hover { opacity: .78; }
+  .topbar .logo:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: var(--radius-sm); }
   .topbar .logo-img { height: 30px; width: auto; border-radius: 6px; }
   .topbar nav { display: flex; gap: 2px; align-items: center; }
   .topbar nav a, .topbar nav button { color: var(--fg); text-decoration: none; padding: 8px 13px;
@@ -333,6 +390,7 @@
   <div class="wv wv2"></div>
   <div class="wv wv3"></div>
   <div class="wv wv4"></div>
+<div class="wv wv5"></div>
 </div>
 
 <div class="cursor" id="cursor"></div>
@@ -356,11 +414,12 @@
 </div>
 
 <nav class="topbar">
-  <div class="logo"><img src="logo.png" width="512" height="512" alt="Osien-Stack" class="logo-img"><span>osien_stack</span></div>
+  <a class="logo" href="#top" aria-label="osien - back to top"><img src="logo.png" width="512" height="512" alt="" class="logo-img"><span>osien_stack</span></a>
   <nav>
     <a href="#why">why</a><a href="#what">what</a><a href="#scale">scale</a><a href="#pipeline">pipeline</a>
     <a href="#how">how</a><a href="#install">install</a><a href="tools.html">tools</a>
     <button id="paletteBtn">search <span class="kbd">Ctrl K</span></button>
+    <button id="modeBtn" aria-label="Toggle dark mode" title="Toggle dark mode">theme</button>
     <a href="https://github.com/kabirprokk/Osien-Stack" target="_blank" rel="noopener">github</a>
   </nav>
 </nav>
@@ -372,7 +431,7 @@
   </div>
 </div>
 
-<section class="stage">
+<section class="stage" id="top">
   <div class="eyebrow" id="eyebrow"></div>
   <h1>Give your AI <em>the whole ocean.</em></h1>
   <p class="sub"><strong>osien</strong> is a portable toolchain that installs itself into any AI. Forty-five tools for memory, verification, parallel work and context discipline &mdash; wired in one prompt. Small model or big, known or unknown: it works.</p>
@@ -519,7 +578,8 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /* ---------- scroll hue: one cached value, one rAF (NOT per-scroll-listener) ---------- */
-  var hues = [250, 190, 35, 140, 320, 250];
+  // stays inside the ocean range so the brand never drifts off-palette
+  var hues = [212, 196, 224, 204, 218, 212];
   var hue = 250, scrollPct = 0, scrollY = 0;
   var docH = 1, winH = 1;
   function measure() { docH = document.body.scrollHeight; winH = window.innerHeight; }
@@ -601,6 +661,22 @@
   function openPal() { pal.classList.add('open'); palInput.value = ''; renderPal(''); palInput.focus(); }
   function closePal() { pal.classList.remove('open'); }
   var pb = $('#paletteBtn'); if (pb) pb.onclick = openPal;
+
+  /* ---------- dark mode toggle ----------
+     Reads whatever the inline head script already resolved, flips it, and
+     persists. localStorage can throw in private modes, so every access is
+     guarded and the toggle still works for the session if it does. */
+  (function themeToggle() {
+    var btn = $('#modeBtn'), root = document.documentElement;
+    if (!btn) return;
+    function label() { btn.textContent = root.dataset.mode === 'dark' ? 'light' : 'dark'; }
+    label();
+    btn.addEventListener('click', function () {
+      root.dataset.mode = root.dataset.mode === 'dark' ? 'light' : 'dark';
+      try { localStorage.setItem('osien-mode', root.dataset.mode); } catch (e) {}
+      label();
+    });
+  })();
   palInput.addEventListener('input', function (e) { renderPal(e.target.value); });
   pal.addEventListener('click', function (e) { if (e.target === pal) closePal(); });
 
