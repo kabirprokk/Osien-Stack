@@ -1,3 +1,8 @@
+---
+name: stop-slop
+description: Removes AI writing tells from prose the agent generates (docs, READMEs, messages).
+---
+
 # stop-slop
 
 Remove AI writing tells from any prose the agent generates (docs, READMEs, messages).
