@@ -1,0 +1,1 @@
+{ "name": "opentui-demo", "version": "1.0.0", "description": "OpenTUI demo for Osien-Stack - shows flexbox, inputs, select, scrollbox", "type": "module", "scripts": { "start": "node index.mjs" }, "dependencies": { "@opentui/core": "^0.6.0" } }

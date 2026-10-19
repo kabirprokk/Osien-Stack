@@ -1,0 +1,182 @@
+[
+  {
+    "name": "ctx_recall",
+    "desc": "Load project memory by role/part/grep."
+  },
+  {
+    "name": "ctx_save",
+    "desc": "Persist memory: architecture/decisions/failures/state/performance."
+  },
+  {
+    "name": "soul_read",
+    "desc": "Read SOUL one-line notes."
+  },
+  {
+    "name": "soul_write",
+    "desc": "Append a SOUL flowchart line."
+  },
+  {
+    "name": "fast_note",
+    "desc": "Append a timestamped note."
+  },
+  {
+    "name": "task_state",
+    "desc": "Read/write task state."
+  },
+  {
+    "name": "state_reset",
+    "desc": "Clear task state."
+  },
+  {
+    "name": "smart_grep",
+    "desc": "Grep with file:line output, bounded."
+  },
+  {
+    "name": "read_slice",
+    "desc": "Read file lines [start,end]."
+  },
+  {
+    "name": "machine_state",
+    "desc": "OS/CPU/mem/cwd snapshot."
+  },
+  {
+    "name": "repo_health",
+    "desc": "Git status + errors + memory."
+  },
+  {
+    "name": "project_map",
+    "desc": "Dirs, git, scripts, agents overview."
+  },
+  {
+    "name": "verify_chain",
+    "desc": "Run format/typecheck/test/build."
+  },
+  {
+    "name": "loop_status",
+    "desc": "Repeated actions/errors status."
+  },
+  {
+    "name": "checkpoint_create",
+    "desc": "Snapshot files for rollback."
+  },
+  {
+    "name": "impact_analyze",
+    "desc": "Find references to a symbol."
+  },
+  {
+    "name": "security_scan",
+    "desc": "Scan for secrets/vulns."
+  },
+  {
+    "name": "test_gap",
+    "desc": "Find untested functions."
+  },
+  {
+    "name": "repro_capsule",
+    "desc": "Capture failing cmd + env."
+  },
+  {
+    "name": "context_budget",
+    "desc": "Token budget per file."
+  },
+  {
+    "name": "consensus",
+    "desc": "Multi-model consensus guidance."
+  },
+  {
+    "name": "auto_heal",
+    "desc": "Self-heal loop: detect/fix/verify."
+  },
+  {
+    "name": "rollback_on_failure",
+    "desc": "Rollback if verify fails."
+  },
+  {
+    "name": "perf_regression",
+    "desc": "Benchmark before/after."
+  },
+  {
+    "name": "test_synthesizer",
+    "desc": "Generate test stubs."
+  },
+  {
+    "name": "memory_compactor",
+    "desc": "Compress memory files."
+  },
+  {
+    "name": "dead_code_detector",
+    "desc": "Find unused exports."
+  },
+  {
+    "name": "dependency_graph",
+    "desc": "Mermaid dep graph."
+  },
+  {
+    "name": "changelog_generator",
+    "desc": "Generate changelog."
+  },
+  {
+    "name": "token_budget_enforcer",
+    "desc": "Enforce token budget."
+  },
+  {
+    "name": "architecture_drift",
+    "desc": "Compare docs vs code."
+  },
+  {
+    "name": "session_replay",
+    "desc": "Replay session timeline."
+  },
+  {
+    "name": "auto_document",
+    "desc": "Auto-generate docs."
+  },
+  {
+    "name": "feature_flag_manager",
+    "desc": "List feature flags."
+  },
+  {
+    "name": "license_checker",
+    "desc": "Check dep licenses."
+  },
+  {
+    "name": "schema_validator",
+    "desc": "Validate JSON files."
+  },
+  {
+    "name": "cost_estimator",
+    "desc": "Estimate token cost."
+  },
+  {
+    "name": "self_critique_loop",
+    "desc": "Self-critique guidance."
+  },
+  {
+    "name": "city_status",
+    "desc": "City agent status."
+  },
+  {
+    "name": "city_post",
+    "desc": "Post message between agents."
+  },
+  {
+    "name": "city_read",
+    "desc": "Read agent inbox."
+  },
+  {
+    "name": "city_broadcast",
+    "desc": "Broadcast to all agents."
+  },
+  {
+    "name": "city_mode",
+    "desc": "Activate city mode."
+  },
+  {
+    "name": "city_clear",
+    "desc": "Clear city mailbox."
+  },
+  {
+    "name": "batch",
+    "desc": "Run multiple ops in parallel in ONE call: read (file,start,end), grep (pattern,path), ctx (role). Returns combined results. Fastest way to do parallel tool work."
+  }
+]

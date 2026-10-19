@@ -22,13 +22,16 @@ Verify: `node server.js` should print "osien-tools MCP server running" to stderr
 ## Step 3: Configure the MCP server in the target CLI
 
 ### opencode
-Add to `~/.config/opencode/opencode.json` under `mcp`:
+Add to `~/.config/opencode/opencode.json` under `mcp` (opencode uses its own
+shape - `type: local` with a command array, not the `mcpServers` key other
+clients use):
 ```json
 {
-  "mcpServers": {
+  "mcp": {
     "osien-tools": {
-      "command": "node",
-      "args": ["<STACK_DIR>/mcp-server/server.js"]
+      "type": "local",
+      "command": ["node", "<STACK_DIR>/mcp-server/server.js"],
+      "enabled": true
     }
   }
 }
@@ -96,7 +99,14 @@ Command: `cp -r "$STACK_DIR/agents/"* <target_agents_dir>/`
 4. Call `soul_read` — should return soul file or "NO SOUL FILE".
 5. Call `city_mode` with task "test" — should show 14 agents with personalities.
 6. Call `city_post` from mayor to builder — should confirm message posted.
-5. Verify skills are loaded: ask the CLI to list available skills; `osien-3d-forge`, `logic`, `caveman`, `stop-slop`, `ai-manager` should appear.
+7. Verify skills are loaded: ask the CLI to list available skills; `osien-3d-forge`, `logic`, `caveman`, `stop-slop`, `ai-manager` should appear.
+
+Run the two automated checks:
+```bash
+cd "$STACK_DIR/mcp-server" && npm install && npm test && npm run bench
+```
+`npm test` must print `SMOKE OK: 45 tools`. `npm run bench` prints the
+token-reduction table; a healthy install stays in the high-90% range.
 
 ## Step 9: Configure memory location (optional)
 Set environment variable `OSIEN_MEMORY_ROOT` to customize where memory is stored.

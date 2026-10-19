@@ -9,7 +9,8 @@
             },
     "scripts":  {
                     "start":  "node server.js",
-                    "test":  "node test/smoke.js"
+                    "test":  "node test/smoke.js",
+                    "bench":  "node bench.js"
                 },
     "dependencies":  {
                          "@modelcontextprotocol/sdk":  "^1.0.0"

@@ -179,7 +179,8 @@ server.tool("smart_grep", "Grep with file:line output, bounded.", {
   directory: z.string().optional(),
 }, async (args) => {
   const d = args.directory || process.cwd();
-  const root = args.path ? path.join(d, args.path) : d;
+  // path.join() destroys absolute inputs on Windows ("cwd\C:\..."), so resolve instead.
+  const root = args.path ? (path.isAbsolute(args.path) ? args.path : path.resolve(d, args.path)) : d;
   const max = Math.min(args.max || 40, 200);
   const exts = /\.(ts|tsx|js|jsx|py|md|json|go|rs|gd|c|cpp|h|java|rb|sh|yaml|yml|toml|css|html|vue|svelte)$/i;
   function walk(dir) {
@@ -200,7 +201,7 @@ server.tool("smart_grep", "Grep with file:line output, bounded.", {
     files = files.filter(f => f.endsWith(g));
   }
   let re;
-  try { re = new RegExp(args.pattern, args.ignorecase ? "gi" : "g"); }
+  try { re = new RegExp(args.pattern, args.ignorecase ? "i" : ""); }
   catch (e) { return { content: [{ type: "text", text: `bad regex: ${e.message}` }] }; }
   const hits = [];
   for (const f of files) {
@@ -215,7 +216,6 @@ server.tool("smart_grep", "Grep with file:line output, bounded.", {
     for (let i = 0; i < lines.length && hits.length < max; i++) {
       if (re.test(lines[i])) {
         hits.push(`${path.relative(d, f)}:${i+1}: ${lines[i].trim().slice(0, 200)}`);
-        re.lastIndex = 0;
       }
     }
   }
@@ -995,7 +995,7 @@ server.tool("schema_validator", "Validate JSON files.", {
   path: z.string().optional(),
 }, async ({ directory, path: subpath }) => {
   const d = directory || process.cwd();
-  const root = subpath ? path.join(d, subpath) : d;
+  const root = subpath ? (path.isAbsolute(subpath) ? subpath : path.resolve(d, subpath)) : d;
   function walk(dir, acc) {
     try {
       for (const e of fs.readdirSync(dir, { withFileTypes: true })) {

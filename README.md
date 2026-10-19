@@ -70,6 +70,28 @@ Add to your MCP client config:
 ```
 Environment: `OSIEN_MEMORY_ROOT` (default `~/.config/opencode/memory`) controls where memory is stored.
 
+Verify and measure:
+```bash
+cd mcp-server
+npm test    # smoke test - 45 tools registered, core calls pass
+npm run bench   # token-reduction benchmark (see below)
+```
+
+### Token reduction (morph)
+`npm run bench` measures the same work done two ways - whole-file reads vs the
+bounded tools. Latest run on this repo:
+
+| Scenario | naive | morph | less |
+|---|---|---|---|
+| S1 read 20 lines | 1,984 tok | 306 tok | 85% |
+| S2 find `MCP` in README | 1,984 tok | 189 tok | 90% |
+| S3 find a symbol across 6 files | 19,981 tok | 97 tok | 100% |
+| S4 cost of a file | 1,984 tok | 23 tok | 99% |
+| **total** | **25,932 tok** | **615 tok** | **98%** |
+
+The tools cut context because they return bounded slices and matches instead of
+whole files.
+
 ### 2. Skills
 Copy `skills/*` into your CLI's skills directory:
 - opencode: `~/.config/opencode/skills/`
@@ -135,6 +157,36 @@ Read `instructions/` and paste into your CLI's system prompt / CLAUDE.md / .curs
 - `opencode.json` config (opencode schema) — convert to target CLI's format manually.
 - `plugin/*.ts` (opencode plugin API) — superseded by the MCP server.
 - `auto-perfect.ps1` (PowerShell) — superseded by `runner/auto-perfect.py`.
+
+
+## 7. TUI Upgrade (OpenTUI)
+Upgrade your terminal experience with OpenTUI � the same TUI engine OpenCode uses in production.
+
+### What you get
+- Flexbox layout (boxes, text, padding, margins)
+- Interactive widgets: selects, inputs, scroll boxes with keyboard + mouse
+- Sounds, images, and 3D graphics in the terminal
+- React & Solid renderers available
+- Keymap library for command routing
+
+### Quick start
+\\\ash
+# Install the skill (gives your AI assistant full OpenTUI docs)
+npx skills add https://opentui.com --skill opentui -g
+
+# Add to your project
+npm install @opentui/core
+\\\
+
+### Demo
+See \examples/tui-demo/\ for a working example with flexbox layout, scrollable file list, input, and select widgets.
+
+### Resources
+- Website: https://opentui.com
+- Docs: https://opentui.com/docs
+- Packages: https://opentui.com/packages
+- GitHub: https://github.com/anomalyco/opentui
+- License: MIT
 
 ## License
 MIT (or your choice).

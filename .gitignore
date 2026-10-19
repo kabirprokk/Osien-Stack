@@ -13,4 +13,6 @@ dist/
 __pycache__/
 *.pyc
 .smoke-mem/
+.bench-mem/
 .vercel
+README.md.tmp

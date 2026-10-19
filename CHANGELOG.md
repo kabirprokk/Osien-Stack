@@ -1,5 +1,21 @@
 # Changelog
 
+## [Unreleased]
+### Added
+- `mcp-server/bench.js` + `npm run bench` - morph token-reduction benchmark
+  (4 scenarios, measured 98% fewer chars vs whole-file reads).
+- OpenTUI skill and TUI demo example.
+- TUI section to README.
+
+### Fixed
+- `smart_grep`: a `/g`-flagged regex reused `lastIndex` across lines, so matches
+  after the first hit in each file were silently skipped.
+- `smart_grep` + `schema_validator`: `path.join()` mangled absolute paths on
+  Windows; now resolved with `path.isAbsolute` + `path.resolve`.
+
+### Changed
+- Upgraded opencode to v2.0.32.
+
 ## 1.1.0 (2026-10-18)
 ### Added
 - `test/smoke.js` + `npm test` (44-tool smoke test).

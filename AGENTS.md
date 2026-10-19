@@ -73,3 +73,8 @@ Only serialize when B is genuinely dependent on A's *result*.
 
 - Name: **Kabir** (self-declared, corrected from directory-derived name)
 - Address him as Kabir.
+
+## TUI (OpenTUI)
+- OpenCode uses OpenTUI in production. For TUI enhancements, use @opentui/core.
+- Skill: npx skills add https://opentui.com --skill opentui
+- Docs: https://opentui.com/docs
