@@ -139,8 +139,3 @@ Read `instructions/` and paste into your CLI's system prompt / CLAUDE.md / .curs
 ## License
 MIT (or your choice).
 
-## Windows App (no terminal needed)
-`app/` - A simple, interactive web-based control center. No terminal required.
-- Run: `start.bat` (Windows) or `node server.js` then open http://localhost:4096
-- Features: chat interface, quick action buttons, 14-agent city panel, memory viewer, city mode visualization, 44 tools listed.
-- Works on any OS with Node.js. Perfect for non-technical users.
