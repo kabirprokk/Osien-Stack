@@ -1,0 +1,56 @@
+{
+  "name": "osien-tui",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "OSIEN workspace dashboard + session navigation redesign for the OpenCode V2 TUI, built on official @opencode/plugin/tui APIs.",
+  "exports": {
+    ".": "./src/index.ts",
+    "./tui": "./src/tui.tsx"
+  },
+  "files": [
+    "src"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "build:test": "tsc -p tsconfig.test.json",
+    "test": "npm run build:test && node --test \".build-test/test/*.test.js\"",
+    "test:render": "node scripts/with-bun.mjs test test/render/render.test.tsx",
+    "bun:install": "node scripts/install-bun.mjs",
+    "check": "npm run typecheck && npm run test && npm run test:render",
+    "enable": "node scripts/enable-cli.mjs",
+    "disable": "node scripts/disable-cli.mjs"
+  },
+  "dependencies": {
+    "@opencode/plugin": "2.0.32"
+  },
+  "peerDependencies": {
+    "@opencode/theme": ">=2.0.32",
+    "@opentui/core": ">=0.5.17",
+    "@opentui/solid": ">=0.5.17",
+    "solid-js": ">=1.9.0"
+  },
+  "peerDependenciesMeta": {
+    "@opencode/theme": {
+      "optional": true
+    },
+    "@opentui/core": {
+      "optional": true
+    },
+    "@opentui/solid": {
+      "optional": true
+    },
+    "solid-js": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@opencode/theme": "^2.0.32",
+    "@opentui/core": "0.5.17",
+    "@opentui/solid": "0.5.17",
+    "@types/node": "24.12.2",
+    "bun": "^1.4.3",
+    "solid-js": "1.9.12",
+    "typescript": "5.8.2"
+  }
+}

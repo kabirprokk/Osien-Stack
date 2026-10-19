@@ -1,0 +1,4 @@
+[test]
+# Applies the official @opentui/solid Solid transform (and the
+# solid-js server -> client rewrite) to every test file.
+preload = ["./test/preload.ts"]
