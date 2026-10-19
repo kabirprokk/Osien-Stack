@@ -10,11 +10,16 @@
     "scripts":  {
                     "start":  "node server.js",
                     "test":  "node test/smoke.js",
+                    "test:compat":  "node test/compat.js",
                     "bench":  "node bench.js"
                 },
     "dependencies":  {
-                         "@modelcontextprotocol/sdk":  "^1.0.0"
+                         "@modelcontextprotocol/sdk":  "^1.0.0",
+                         "zod":  "^3.25.0 || ^4.0.0"
                      },
+    "engines":  {
+                    "node":  ">=18"
+                },
     "keywords":  [
                      "mcp",
                      "opencode",

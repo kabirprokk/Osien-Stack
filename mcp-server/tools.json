@@ -60,6 +60,14 @@
     "desc": "Snapshot files for rollback."
   },
   {
+    "name": "checkpoint_verify",
+    "desc": "Verify a checkpoint against disk."
+  },
+  {
+    "name": "checkpoint_restore",
+    "desc": "Restore files from a checkpoint."
+  },
+  {
     "name": "impact_analyze",
     "desc": "Find references to a symbol."
   },

@@ -5,6 +5,17 @@ const fs = require("fs");
 const path = require("path");
 const os = require("os");
 const { execSync, execFileSync } = require("child_process");
+const crypto = require("crypto");
+
+// A checkpoint stores file bytes inline as base64, so it needs a hard cap or
+// one big source file would produce a multi-hundred-MB manifest.
+const MAX_CP_BYTES = 5 * 1024 * 1024;
+function loadCheckpoint(d, id) {
+  const safe = String(id || "").replace(/[^A-Za-z0-9._-]/g, "-");
+  const raw = readFileOrNull(path.join(d, ".checkpoints", safe + ".json"));
+  if (raw == null) return null;
+  try { const m = JSON.parse(raw); return m && m.files ? m : null; } catch { return null; }
+}
 
 const HOME = os.homedir();
 const MEM_ROOT = process.env.OSIEN_MEMORY_ROOT || path.join(HOME, ".config", "opencode", "memory");
@@ -14,6 +25,14 @@ const SOUL = path.join(MEM_ROOT, "..", "OSIEN_SOUL.md");
 const FILE_CACHE = new Map();
 const CACHE_TTL_MS = 2000;
 function cachedReadFile(p) {
+  const v = readFileOrNull(p);
+  return v == null ? "" : v;
+}
+// Returns null (not "") when the file does not exist or cannot be read, so
+// callers can tell "missing" apart from "empty". cachedReadFile collapses the
+// two, which used to make every `try { cachedReadFile(x) } catch {}` guard dead
+// code -- missing files silently rendered as an empty result.
+function readFileOrNull(p) {
   try {
     const st = fs.statSync(p);
     const key = p + "|" + st.mtimeMs + "|" + st.size;
@@ -26,7 +45,12 @@ function cachedReadFile(p) {
       FILE_CACHE.delete(first);
     }
     return v;
-  } catch { return ""; }
+  } catch { return null; }
+}
+// Project memory lives in one slug dir per project basename.
+function slug(d) {
+  const base = path.basename(String(d == null ? "" : d).replace(/[\\/]+$/, "")) || "root";
+  return base.replace(/[^a-zA-Z0-9._-]/g, "-").toLowerCase() || "root";
 }
 function perfStart() { return process.hrtime.bigint(); }
 function perfEnd(s) { return Number(process.hrtime.bigint() - s) / 1e6; }
@@ -45,7 +69,7 @@ function cachedExec(cmd, cwd, ttl) {
   }
 }
 function memDir(d) { return path.join(PROJECTS, slug(d)); }
-function readPart(d, part) { try { return cachedReadFile(path.join(memDir(d), part + ".md")); } catch { return ""; } }
+function readPart(d, part) { return cachedReadFile(path.join(memDir(d), part + ".md")); }
 function readFor(d, role) {
   const parts = role === "scout" ? ["ARCHITECTURE"] :
     role === "builder" ? ["ARCHITECTURE","DECISIONS"] :
@@ -57,8 +81,28 @@ function readFor(d, role) {
 
 const server = new McpServer({ name: "osien-tools", version: "1.1.0" });
 
+// ---------- tool-registration compat shim ----------
+// The MCP SDK renamed tool() -> registerTool() and marked the old name
+// deprecated; both still ship in 1.32, and older 1.x releases only have tool().
+// Every tool below is declared through defineTool() so one edit here covers the
+// whole file and neither API can be removed without us noticing.
+const SDK_HAS_REGISTER_TOOL = typeof server.registerTool === "function";
+function defineTool(name, description, shape, handler) {
+  if (SDK_HAS_REGISTER_TOOL) {
+    try {
+      return server.registerTool(name, { description: description, inputSchema: shape }, handler);
+    } catch (e) {
+      // A future SDK that changes inputSchema's expected shape must not take
+      // the whole server down. Fall back to the legacy registration instead.
+      process.stderr.write("osien-tools: registerTool failed for " + name + " (" + e.message + "), using legacy tool()\n");
+    }
+  }
+  return server.tool(name, description, shape, handler);
+}
+process.stderr.write("osien-tools MCP SDK mode: " + (SDK_HAS_REGISTER_TOOL ? "registerTool" : "legacy tool()") + "\n");
+
 // --- ctx_recall ---
-server.tool("ctx_recall", "Load project memory by role/part/grep.", {
+defineTool("ctx_recall", "Load project memory by role/part/grep.", {
   role: z.string().optional(),
   part: z.string().optional(),
   grep: z.string().optional(),
@@ -68,7 +112,9 @@ server.tool("ctx_recall", "Load project memory by role/part/grep.", {
   let md = part ? readPart(d, part.toUpperCase()) : readFor(d, role || "all");
   if (!md) return { content: [{ type: "text", text: `NO MEMORY for ${path.basename(d)}. Build it with ctx_save.` }] };
   if (grep) {
-    const re = new RegExp(grep, "i");
+    let re;
+    try { re = new RegExp(grep, "i"); }
+    catch (e) { return { content: [{ type: "text", text: `bad regex: ${e.message}` }] }; }
     const hits = md.split("\n").filter(l => re.test(l));
     return { content: [{ type: "text", text: hits.length ? hits.join("\n") : `no memory line matches /${grep}/` }] };
   }
@@ -76,7 +122,7 @@ server.tool("ctx_recall", "Load project memory by role/part/grep.", {
 });
 
 // --- ctx_save ---
-server.tool("ctx_save", "Persist memory: architecture/decisions/failures/state/performance.", {
+defineTool("ctx_save", "Persist memory: architecture/decisions/failures/state/performance.", {
   architecture: z.string().optional(),
   decisions: z.string().optional(),
   failures: z.string().optional(),
@@ -103,19 +149,18 @@ server.tool("ctx_save", "Persist memory: architecture/decisions/failures/state/p
 });
 
 // --- soul_read ---
-server.tool("soul_read", "Read SOUL one-line notes.", {
+defineTool("soul_read", "Read SOUL one-line notes.", {
   directory: z.string().optional(),
 }, async ({ directory }) => {
-  try {
-    const content = cachedReadFile(SOUL);
-    return { content: [{ type: "text", text: content }] };
-  } catch {
+  const content = readFileOrNull(SOUL);
+  if (content == null) {
     return { content: [{ type: "text", text: "NO SOUL FILE yet. Create it with soul_write." }] };
   }
+  return { content: [{ type: "text", text: content }] };
 });
 
 // --- soul_write ---
-server.tool("soul_write", "Append a SOUL flowchart line.", {
+defineTool("soul_write", "Append a SOUL flowchart line.", {
   entry: z.string(),
 }, async ({ entry }) => {
   fs.mkdirSync(path.dirname(SOUL), { recursive: true });
@@ -125,7 +170,7 @@ server.tool("soul_write", "Append a SOUL flowchart line.", {
 });
 
 // --- fast_note ---
-server.tool("fast_note", "Append a timestamped note.", {
+defineTool("fast_note", "Append a timestamped note.", {
   text: z.string(),
   directory: z.string().optional(),
 }, async ({ text, directory }) => {
@@ -140,7 +185,7 @@ server.tool("fast_note", "Append a timestamped note.", {
 });
 
 // --- task_state ---
-server.tool("task_state", "Read/write task state.", {
+defineTool("task_state", "Read/write task state.", {
   action: z.enum(["read","write"]).default("read"),
   objective: z.string().optional(),
   hypothesis: z.string().optional(),
@@ -151,16 +196,18 @@ server.tool("task_state", "Read/write task state.", {
   const d = args.directory || process.cwd();
   const stateFile = path.join(d, ".task_state.json");
   if (args.action === "read") {
-    try { return { content: [{ type: "text", text: cachedReadFile(stateFile) }] }; }
-    catch { return { content: [{ type: "text", text: "NO TASK STATE. Use task_state write to set one." }] }; }
+    const cur = readFileOrNull(stateFile);
+    if (cur == null) return { content: [{ type: "text", text: "NO TASK STATE. Use task_state write to set one." }] };
+    return { content: [{ type: "text", text: cur }] };
   }
   const state = { objective: args.objective, hypothesis: args.hypothesis, files: args.files, status: args.status, updated: new Date().toISOString() };
+  fs.mkdirSync(path.dirname(stateFile), { recursive: true });
   fs.writeFileSync(stateFile, JSON.stringify(state, null, 2));
   return { content: [{ type: "text", text: `state saved: ${JSON.stringify(state)}` }] };
 });
 
 // --- state_reset ---
-server.tool("state_reset", "Clear task state.", {
+defineTool("state_reset", "Clear task state.", {
   directory: z.string().optional(),
 }, async ({ directory }) => {
   const d = directory || process.cwd();
@@ -170,7 +217,7 @@ server.tool("state_reset", "Clear task state.", {
 });
 
 // --- smart_grep ---
-server.tool("smart_grep", "Grep with file:line output, bounded.", {
+defineTool("smart_grep", "Grep with file:line output, bounded.", {
   pattern: z.string(),
   glob: z.string().optional(),
   path: z.string().optional(),
@@ -195,10 +242,12 @@ server.tool("smart_grep", "Grep with file:line output, bounded.", {
     } catch {}
     return out;
   }
+  if (!fs.existsSync(root)) return { content: [{ type: "text", text: `error: path not found: ${root}` }] };
   let files = walk(root);
+  if (!files.length) return { content: [{ type: "text", text: `no scannable files under ${root}` }] };
   if (args.glob) {
     const g = args.glob.replace(/\*/g, "");
-    files = files.filter(f => f.endsWith(g));
+    files = files.filter(f => g && f.endsWith(g));
   }
   let re;
   try { re = new RegExp(args.pattern, args.ignorecase ? "i" : ""); }
@@ -223,33 +272,32 @@ server.tool("smart_grep", "Grep with file:line output, bounded.", {
 });
 
 // --- read_slice ---
-server.tool("read_slice", "Read file lines [start,end].", {
+defineTool("read_slice", "Read file lines [start,end].", {
   file: z.string(),
   start: z.number().optional(),
   end: z.number().optional(),
   directory: z.string().optional(),
 }, async ({ file, start, end, directory }) => {
   const d = directory || process.cwd();
-  const fp = path.isAbsolute(file) ? file : path.join(d, file);
-  try {
-    const lines = (cachedReadFile(fp) || "").split("\n");
-    const s = Math.max(1, start || 1);
-    const e = Math.min(lines.length, end || (s + 199));
-    const slice = lines.slice(s-1, e).map((l, i) => `${s+i}: ${l}`);
-    return { content: [{ type: "text", text: slice.join("\n") }] };
-  } catch (e) {
-    return { content: [{ type: "text", text: `error: ${e.message}` }] };
-  }
+  const fp = path.isAbsolute(file) ? file : path.resolve(d, file);
+  const raw = readFileOrNull(fp);
+  if (raw == null) return { content: [{ type: "text", text: `error: cannot read ${file}` }] };
+  const lines = raw.split("\n");
+  const s = Math.max(1, start || 1);
+  const e = Math.min(lines.length, end || (s + 199));
+  if (e < s) return { content: [{ type: "text", text: `error: empty range (start ${s} > end ${e}); file has ${lines.length} lines` }] };
+  const slice = lines.slice(s-1, e).map((l, i) => `${s+i}: ${l}`);
+  return { content: [{ type: "text", text: slice.join("\n") }] };
 });
 
 // --- machine_state ---
-server.tool("machine_state", "OS/CPU/mem/cwd snapshot.", {
+defineTool("machine_state", "OS/CPU/mem/cwd snapshot.", {
   directory: z.string().optional(),
 }, async ({ directory }) => {
   const d = directory || process.cwd();
   const out = [];
   out.push(`os: ${os.platform()} ${os.release()} ${os.arch()}`);
-  out.push(`cpus: ${os.cpus().length}, loadavg: ${os.loadavg().map(x=>x.toFixed(2)).join(", ")}`);
+  out.push(`cpus: ${os.cpus().length}${process.platform === "win32" ? "" : ", loadavg: " + os.loadavg().map(x=>x.toFixed(2)).join(", ")}`);
   out.push(`mem: ${Math.round(os.freemem()/1e9)}GB free / ${Math.round(os.totalmem()/1e9)}GB total`);
   out.push(`cwd: ${d}`);
   try {
@@ -260,20 +308,20 @@ server.tool("machine_state", "OS/CPU/mem/cwd snapshot.", {
 });
 
 // --- repo_health ---
-server.tool("repo_health", "Git status + errors + memory.", {
+defineTool("repo_health", "Git status + errors + memory.", {
   directory: z.string().optional(),
 }, async ({ directory }) => {
   const d = directory || process.cwd();
   const out = [];
   try { out.push("git status:"); out.push(cachedExec("git status --short", d) || "(clean)"); } catch { out.push("git: not a repo"); }
   try { out.push("last commits:"); out.push(cachedExec("git log --oneline -5", d)); } catch {}
-  try { out.push("node: " + cachedExec("node --version", process.cwd())); } catch {}
-  try { out.push("python: " + cachedExec("python --version", process.cwd())); } catch {}
+  try { out.push("node: " + cachedExec("node --version", d)); } catch {}
+  try { out.push("python: " + cachedExec("python --version", d)); } catch {}
   return { content: [{ type: "text", text: out.join("\n") }] };
 });
 
 // --- project_map ---
-server.tool("project_map", "Dirs, git, scripts, agents overview.", {
+defineTool("project_map", "Dirs, git, scripts, agents overview.", {
   directory: z.string().optional(),
 }, async ({ directory }) => {
   const d = directory || process.cwd();
@@ -293,7 +341,7 @@ server.tool("project_map", "Dirs, git, scripts, agents overview.", {
 });
 
 // --- verify_chain ---
-server.tool("verify_chain", "Run format/typecheck/test/build.", {
+defineTool("verify_chain", "Run format/typecheck/test/build.", {
   cmd: z.string().optional(),
   directory: z.string().optional(),
 }, async ({ cmd, directory }) => {
@@ -309,37 +357,93 @@ server.tool("verify_chain", "Run format/typecheck/test/build.", {
 });
 
 // --- loop_status ---
-server.tool("loop_status", "Repeated actions/errors status.", {
+defineTool("loop_status", "Repeated actions/errors status.", {
   directory: z.string().optional(),
 }, async ({ directory }) => {
   return { content: [{ type: "text", text: "loop_status: no loop tracking in MCP mode. Use mission_* for durable state." }] };
 });
 
 // --- checkpoint_create ---
-server.tool("checkpoint_create", "Snapshot files for rollback.", {
+defineTool("checkpoint_create", "Snapshot files for rollback.", {
   files: z.array(z.string()),
   directory: z.string().optional(),
   id: z.string().optional(),
 }, async ({ files, directory, id }) => {
   const d = directory || process.cwd();
-  const cpId = id || `cp_${Date.now()}`;
+  const cpId = (id || `cp_${Date.now()}`).replace(/[^A-Za-z0-9._-]/g, "-");
   const manifest = { id: cpId, created: new Date().toISOString(), files: {} };
+  let skipped = 0;
   for (const f of files) {
-    const fp = path.isAbsolute(f) ? f : path.join(d, f);
+    const fp = path.isAbsolute(f) ? f : path.resolve(d, f);
     try {
       const buf = fs.readFileSync(fp);
-      manifest.files[f] = { exists: true, size: buf.length };
+      if (buf.length > MAX_CP_BYTES) { manifest.files[f] = { exists: true, size: buf.length, skipped: "too large" }; skipped++; continue; }
+      manifest.files[f] = {
+        exists: true,
+        size: buf.length,
+        sha256: crypto.createHash("sha256").update(buf).digest("hex"),
+        data: buf.toString("base64"),
+      };
     } catch { manifest.files[f] = { exists: false }; }
   }
   const cpDir = path.join(d, ".checkpoints");
   fs.mkdirSync(cpDir, { recursive: true });
-  fs.writeFileSync(path.join(cpDir, cpId + ".json"), JSON.stringify(manifest, null, 2));
-  return { content: [{ type: "text", text: `checkpoint created: ${cpId} (${files.length} files)` }] };
+  fs.writeFileSync(path.join(cpDir, cpId + ".json"), JSON.stringify(manifest));
+  const stored = Object.values(manifest.files).filter(f => f.data).length;
+  return { content: [{ type: "text", text: `checkpoint created: ${cpId} (${stored} file${stored === 1 ? "" : "s"} captured, ${files.length - stored} not captured${skipped ? ", " + skipped + " too large" : ""})` }] };
+});
+
+// --- checkpoint_verify: does a checkpoint still match the files on disk? ---
+defineTool("checkpoint_verify", "Verify a checkpoint against disk.", {
+  id: z.string(),
+  directory: z.string().optional(),
+}, async ({ id, directory }) => {
+  const d = directory || process.cwd();
+  const manifest = loadCheckpoint(d, id);
+  if (!manifest) return { content: [{ type: "text", text: `no such checkpoint: ${id}` }] };
+  const lines = [];
+  let drift = 0;
+  for (const [name, rec] of Object.entries(manifest.files)) {
+    if (!rec || !rec.sha256) { lines.push(`  ${name}: ${rec && rec.exists ? "not captured" : "absent at create time"}`); continue; }
+    const fp = path.isAbsolute(name) ? name : path.resolve(d, name);
+    const cur = readFileOrNull(fp);
+    if (cur == null) { lines.push(`  ${name}: DELETED since checkpoint`); drift++; continue; }
+    const h = crypto.createHash("sha256").update(Buffer.from(cur, "utf8")).digest("hex");
+    if (h !== rec.sha256) { lines.push(`  ${name}: MODIFIED`); drift++; }
+    else lines.push(`  ${name}: ok`);
+  }
+  return { content: [{ type: "text", text: `checkpoint ${manifest.id} (${Object.keys(manifest.files).length} files): ${drift ? drift + " drifted" : "all match disk"}\n` + lines.join("\n") }] };
+});
+
+// --- checkpoint_restore: put the captured bytes back ---
+defineTool("checkpoint_restore", "Restore files from a checkpoint.", {
+  id: z.string(),
+  files: z.array(z.string()).optional(),
+  directory: z.string().optional(),
+  approve: z.boolean().optional(),
+}, async ({ id, files, directory, approve }) => {
+  const d = directory || process.cwd();
+  const manifest = loadCheckpoint(d, id);
+  if (!manifest) return { content: [{ type: "text", text: `no such checkpoint: ${id}` }] };
+  const wanted = files && files.length ? new Set(files) : null;
+  const toRestore = Object.entries(manifest.files).filter(([n, r]) => r && r.data && (!wanted || wanted.has(n)));
+  if (!toRestore.length) return { content: [{ type: "text", text: `checkpoint ${id} has no restorable content (${Object.keys(manifest.files).length} entries).` }] };
+  if (approve !== true) {
+    return { content: [{ type: "text", text: `DRY RUN - checkpoint ${id} would restore ${toRestore.length} file(s):\n` + toRestore.map(([n, r]) => `  ${n} (${r.size} bytes)`).join("\n") + "\nre-call with approve: true to write." }] };
+  }
+  const written = [];
+  for (const [name, rec] of toRestore) {
+    const fp = path.isAbsolute(name) ? name : path.resolve(d, name);
+    fs.mkdirSync(path.dirname(fp), { recursive: true });
+    fs.writeFileSync(fp, Buffer.from(rec.data, "base64"));
+    written.push(name);
+  }
+  return { content: [{ type: "text", text: `restored ${written.length} file(s) from ${id}: ` + written.join(", ") }] };
 });
 
 
 // --- impact_analyze: find all files/callers that reference a symbol ---
-server.tool("impact_analyze", "Find references to a symbol.", {
+defineTool("impact_analyze", "Find references to a symbol.", {
   symbol: z.string(),
   directory: z.string().optional(),
 }, async ({ symbol, directory }) => {
@@ -377,26 +481,34 @@ server.tool("impact_analyze", "Find references to a symbol.", {
   return { content: [{ type: "text", text: summary + (hits.length ? hits.join("\n") : "no references found") }] };
 });
 
-server.tool("security_scan", "Scan for secrets/vulns.", {
+defineTool("security_scan", "Scan for secrets/vulns.", {
   path: z.string().optional(),
   directory: z.string().optional(),
 }, async ({ path: subpath, directory }) => {
   const d = directory || process.cwd();
-  const root = subpath ? (fs.existsSync(subpath) && fs.statSync(subpath).isDirectory() ? subpath : path.join(d, subpath)) : d;
+  // path.join() mangles an absolute subpath on Windows ("cwd\C:\..."), and a
+  // file path used to silently scan 0 files and report "(no issues found)".
+  let root = d;
+  if (subpath) {
+    root = path.isAbsolute(subpath) ? subpath : path.resolve(d, subpath);
+    if (!fs.existsSync(root)) return { content: [{ type: "text", text: `error: path not found: ${root}` }] };
+  }
   const exts = /\.(ts|tsx|js|jsx|py)$/i;
-  function walk(dir) {
-    const out = [];
+  function walk(dir, acc) {
     try {
       for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
-        if (e.name === "node_modules" || e.name === "dist") continue;
+        if (e.name === "node_modules" || e.name === "dist" || e.name === ".git") continue;
         const full = path.join(dir, e.name);
-        if (e.isDirectory()) out.push(...walk(full));
-        else if (exts.test(e.name)) out.push(full);
+        if (e.isDirectory()) walk(full, acc);
+        else if (exts.test(e.name)) acc.push(full);
       }
     } catch {}
-    return out;
+    return acc;
   }
-  const files = walk(root);
+  let files = [];
+  if (fs.statSync(root).isDirectory()) walk(root, files);
+  else if (exts.test(root)) files = [root];
+  if (!files.length) return { content: [{ type: "text", text: `no scannable source files at ${root} (needs .ts .tsx .js .jsx .py)` }] };
   const findings = [];
   const secretRes = [
     ["AWS Access Key", "AKIA[0-9A-Z]{16}"],
@@ -414,11 +526,16 @@ server.tool("security_scan", "Scan for secrets/vulns.", {
     ["SQL string concat", "(query|sql)\\s*\\+.*\\+|\"\\s*SELECT.*\"\\s*\\+"],
     ["dangerouslySetInnerHTML", "dangerouslySetInnerHTML"],
   ].map(([name, pat]) => ({ name, re: new RegExp(pat, "i") }));
+  const isRuleDef = /^\s*\[\s*"[^"]*"\s*,\s*"[^"]*"\s*\]\s*,?\s*$/;
   for (const f of files) {
     try {
       const txt = cachedReadFile(f);
       const lines = txt.split("\n");
       for (let i = 0; i < lines.length; i++) {
+        // Skip the scanner's own rule table. Without this, security_scan
+        // reported itself as containing eval() and dangerouslySetInnerHTML on
+        // every single run, which trains the reader to ignore real hits.
+        if (isRuleDef.test(lines[i])) continue;
         for (const p of secretRes) {
           if (p.re.test(lines[i])) { findings.push("SECRET [" + p.name + "] " + path.relative(d, f) + ":" + (i+1)); p.re.lastIndex = 0; }
         }
@@ -433,7 +550,7 @@ server.tool("security_scan", "Scan for secrets/vulns.", {
 });
 
 // --- test_gap: find functions without tests ---
-server.tool("test_gap", "Find untested functions.", {
+defineTool("test_gap", "Find untested functions.", {
   srcDir: z.string().optional(),
   testDir: z.string().optional(),
   directory: z.string().optional(),
@@ -484,7 +601,7 @@ server.tool("test_gap", "Find untested functions.", {
 });
 
 // --- repro_capsule: capture a failing scenario ---
-server.tool("repro_capsule", "Capture failing cmd + env.", {
+defineTool("repro_capsule", "Capture failing cmd + env.", {
   failingCommand: z.string(),
   description: z.string().optional(),
   directory: z.string().optional(),
@@ -515,7 +632,7 @@ server.tool("repro_capsule", "Capture failing cmd + env.", {
 });
 
 // --- context_budget: estimate token cost of a set of files ---
-server.tool("context_budget", "Token budget per file.", {
+defineTool("context_budget", "Token budget per file.", {
   files: z.array(z.string()),
   directory: z.string().optional(),
 }, async ({ files, directory }) => {
@@ -538,7 +655,7 @@ server.tool("context_budget", "Token budget per file.", {
 });
 
 // --- consensus: multi-model consensus guidance ---
-server.tool("consensus", "Multi-model consensus guidance.", {
+defineTool("consensus", "Multi-model consensus guidance.", {
   prompt: z.string(),
   models: z.array(z.string()).optional(),
 }, async ({ prompt, models }) => {
@@ -548,7 +665,7 @@ server.tool("consensus", "Multi-model consensus guidance.", {
 
 
 // --- auto_heal: runtime self-healing loop (detect -> diagnose -> fix -> verify) ---
-server.tool("auto_heal", "Self-heal loop: detect/fix/verify.", {
+defineTool("auto_heal", "Self-heal loop: detect/fix/verify.", {
   failingCommand: z.string(),
   fileToFix: z.string().optional(),
   directory: z.string().optional(),
@@ -579,7 +696,7 @@ server.tool("auto_heal", "Self-heal loop: detect/fix/verify.", {
 });
 
 // --- rollback_on_failure: auto-revert if verification fails ---
-server.tool("rollback_on_failure", "Rollback if verify fails.", {
+defineTool("rollback_on_failure", "Rollback if verify fails.", {
   verifyCommand: z.string(),
   directory: z.string().optional(),
 }, async ({ verifyCommand, directory }) => {
@@ -599,7 +716,7 @@ server.tool("rollback_on_failure", "Rollback if verify fails.", {
 });
 
 // --- perf_regression: benchmark before/after ---
-server.tool("perf_regression", "Benchmark before/after.", {
+defineTool("perf_regression", "Benchmark before/after.", {
   benchCommand: z.string(),
   baselineFile: z.string().optional(),
   runs: z.number().optional(),
@@ -631,7 +748,7 @@ server.tool("perf_regression", "Benchmark before/after.", {
 });
 
 // --- test_synthesizer: generate test stubs for untested functions ---
-server.tool("test_synthesizer", "Generate test stubs.", {
+defineTool("test_synthesizer", "Generate test stubs.", {
   srcDir: z.string().optional(),
   testDir: z.string().optional(),
   directory: z.string().optional(),
@@ -688,11 +805,11 @@ server.tool("test_synthesizer", "Generate test stubs.", {
 });
 
 // --- memory_compactor: compress old memory into denser summaries ---
-server.tool("memory_compactor", "Compress memory files.", {
+defineTool("memory_compactor", "Compress memory files.", {
   directory: z.string().optional(),
 }, async ({ directory }) => {
   const d = directory || process.cwd();
-  const md = path.join(process.env.OSIEN_MEMORY_ROOT || path.join(require("os").homedir(), ".config", "opencode", "memory"), "projects", (path.basename(d).replace(/[^a-zA-Z0-9._-]/g, "-").toLowerCase() || "root"));
+  const md = memDir(d);
   let compacted = 0, saved = 0;
   try {
     for (const f of fs.readdirSync(md)) {
@@ -720,7 +837,7 @@ server.tool("memory_compactor", "Compress memory files.", {
 });
 
 // --- dead_code_detector: find unreferenced exports/functions ---
-server.tool("dead_code_detector", "Find unused exports.", {
+defineTool("dead_code_detector", "Find unused exports.", {
   directory: z.string().optional(),
 }, async ({ directory }) => {
   const d = directory || process.cwd();
@@ -757,7 +874,7 @@ server.tool("dead_code_detector", "Find unused exports.", {
 });
 
 // --- dependency_graph: generate Mermaid dependency graph ---
-server.tool("dependency_graph", "Mermaid dep graph.", {
+defineTool("dependency_graph", "Mermaid dep graph.", {
   directory: z.string().optional(),
   maxFiles: z.number().optional(),
 }, async ({ directory, maxFiles }) => {
@@ -773,12 +890,10 @@ server.tool("dependency_graph", "Mermaid dep graph.", {
       }
     } catch {}
   }
-  const files = walk(d, []) || [];
   const allFiles = [];
   walk(d, allFiles);
   const max = maxFiles || 40;
   const selected = allFiles.slice(0, max);
-  const nodes = selected.map(f => path.relative(d, f).replace(/[\/\\]/g, "_").replace(/\./g, "_"));
   const edges = [];
   for (const f of selected) {
     try {
@@ -792,7 +907,7 @@ server.tool("dependency_graph", "Mermaid dep graph.", {
           if (selected.some(sf => path.relative(d, sf) === rel || path.relative(d, sf).replace(/\.(ts|tsx|js|jsx)$/, "") === rel.replace(/\.(ts|tsx|js|jsx)$/, ""))) {
             const from = path.relative(d, f).replace(/[\/\\]/g, "_").replace(/\./g, "_");
             const to = rel.replace(/[\/\\]/g, "_").replace(/\./g, "_");
-            edges.push(`  ${from} --> ${to}`);
+            if (from !== to) edges.push(`  ${from} --> ${to}`);
           }
         }
       }
@@ -803,7 +918,7 @@ server.tool("dependency_graph", "Mermaid dep graph.", {
 });
 
 // --- changelog_generator: generate changelog from git commits ---
-server.tool("changelog_generator", "Generate changelog.", {
+defineTool("changelog_generator", "Generate changelog.", {
   since: z.string().optional(),
   directory: z.string().optional(),
 }, async ({ since, directory }) => {
@@ -843,7 +958,7 @@ server.tool("changelog_generator", "Generate changelog.", {
 });
 
 // --- token_budget_enforcer: check if a task exceeds token budget ---
-server.tool("token_budget_enforcer", "Enforce token budget.", {
+defineTool("token_budget_enforcer", "Enforce token budget.", {
   files: z.array(z.string()),
   budget: z.number(),
   directory: z.string().optional(),
@@ -867,12 +982,17 @@ server.tool("token_budget_enforcer", "Enforce token budget.", {
 });
 
 // --- architecture_drift: compare code structure vs documented architecture ---
-server.tool("architecture_drift", "Compare docs vs code.", {
+defineTool("architecture_drift", "Compare docs vs code.", {
   documented: z.string(),
   directory: z.string().optional(),
 }, async ({ documented, directory }) => {
   const d = directory || process.cwd();
-  const actual = fs.readdirSync(d, { withFileTypes: true }).filter(e => !e.name.startsWith(".") && e.name !== "node_modules").map(e => e.name + (e.isDirectory() ? "/" : ""));
+  let actual = [];
+  try {
+    actual = fs.readdirSync(d, { withFileTypes: true })
+      .filter(e => !e.name.startsWith(".") && e.name !== "node_modules")
+      .map(e => e.name + (e.isDirectory() ? "/" : ""));
+  } catch (e) { return { content: [{ type: "text", text: "err: cannot read " + d + ": " + e.message }] }; }
   const docItems = documented.split(/[\n,]+/).map(s => s.trim()).filter(Boolean);
   const missing = docItems.filter(item => !actual.some(a => a.toLowerCase().includes(item.toLowerCase().replace("/", ""))));
   const extra = actual.filter(a => !docItems.some(item => a.toLowerCase().includes(item.toLowerCase().replace("/", ""))));
@@ -883,7 +1003,7 @@ server.tool("architecture_drift", "Compare docs vs code.", {
 });
 
 // --- session_replay: replay a session's notes/timeline ---
-server.tool("session_replay", "Replay session timeline.", {
+defineTool("session_replay", "Replay session timeline.", {
   file: z.string().optional(),
   directory: z.string().optional(),
 }, async ({ file, directory }) => {
@@ -892,8 +1012,11 @@ server.tool("session_replay", "Replay session timeline.", {
   let content = "";
   let found = "";
   for (const c of candidates) {
-    const fp = path.isAbsolute(c) ? c : path.join(d, c);
-    try { content = cachedReadFile(fp); found = fp; break; } catch {}
+    const fp = path.isAbsolute(c) ? c : path.resolve(d, c);
+    // Must test for null, not truthiness: a missing file reads back as "" and
+    // used to break the loop on the first candidate, so notes.md was never found.
+    const v = readFileOrNull(fp);
+    if (v != null) { content = v; found = fp; break; }
   }
   if (!content) return { content: [{ type: "text", text: "No session file found. Looked for: " + candidates.join(", ") }] };
   const lines = content.split("\n").filter(l => l.trim());
@@ -901,7 +1024,7 @@ server.tool("session_replay", "Replay session timeline.", {
 });
 
 // --- auto_document: generate docs from code exports ---
-server.tool("auto_document", "Auto-generate docs.", {
+defineTool("auto_document", "Auto-generate docs.", {
   srcDir: z.string().optional(),
   directory: z.string().optional(),
 }, async ({ srcDir, directory }) => {
@@ -934,7 +1057,7 @@ server.tool("auto_document", "Auto-generate docs.", {
 });
 
 // --- feature_flag_manager: manage feature flags in code ---
-server.tool("feature_flag_manager", "List feature flags.", {
+defineTool("feature_flag_manager", "List feature flags.", {
   directory: z.string().optional(),
 }, async ({ directory }) => {
   const d = directory || process.cwd();
@@ -964,7 +1087,7 @@ server.tool("feature_flag_manager", "List feature flags.", {
 });
 
 // --- license_checker: check dependency licenses ---
-server.tool("license_checker", "Check dep licenses.", {
+defineTool("license_checker", "Check dep licenses.", {
   directory: z.string().optional(),
 }, async ({ directory }) => {
   const d = directory || process.cwd();
@@ -990,7 +1113,7 @@ server.tool("license_checker", "Check dep licenses.", {
 });
 
 // --- schema_validator: validate JSON schema files ---
-server.tool("schema_validator", "Validate JSON files.", {
+defineTool("schema_validator", "Validate JSON files.", {
   directory: z.string().optional(),
   path: z.string().optional(),
 }, async ({ directory, path: subpath }) => {
@@ -1020,7 +1143,7 @@ server.tool("schema_validator", "Validate JSON files.", {
 });
 
 // --- cost_estimator: estimate token cost of a task description ---
-server.tool("cost_estimator", "Estimate token cost.", {
+defineTool("cost_estimator", "Estimate token cost.", {
   files: z.array(z.string()).optional(),
   expectedOutputTokens: z.number().optional(),
   directory: z.string().optional(),
@@ -1039,7 +1162,7 @@ server.tool("cost_estimator", "Estimate token cost.", {
 });
 
 // --- self_critique_loop: AI self-review guidance ---
-server.tool("self_critique_loop", "Self-critique guidance.", {
+defineTool("self_critique_loop", "Self-critique guidance.", {
   task: z.string(),
 }, async ({ task }) => {
   return { content: [{ type: "text", text: `Self-critique loop for: "${task}"\nCycle 1: Produce initial output.\nCycle 2: Review for correctness, completeness, edge cases, style. List 3 flaws.\nCycle 3: Fix all flaws, re-verify, output final.\nMax 3 cycles. Stop early if no flaws found. Use verify_chain/try_check as the verification gate.` }] };
@@ -1051,21 +1174,30 @@ server.tool("self_critique_loop", "Self-critique guidance.", {
 const CITY_DIR = path.join(process.env.OSIEN_MEMORY_ROOT ? path.dirname(process.env.OSIEN_MEMORY_ROOT) : path.join(os.homedir(), ".config", "opencode"), "city");
 const MAILBOX = path.join(CITY_DIR, "mailbox.json");
 const AGENTS = {
-  "mayor": { name: "The Mayor", role: "ai-manager", personality: "Calm, decisive, budget-conscious. Orchestrates the team, keeps peace, manages token budget. Speaks in short directives.", emoji: "???" },
-  "builder": { name: "The Hammer", role: "builder", personality: "Direct, action-oriented, impatient with planning. Wants to ship. 'Let me just code it.'", emoji: "??" },
-  "debugger": { name: "The Detective", role: "debugger", personality: "Methodical, skeptical, finds root causes. Suspicious of easy fixes. 'Show me the evidence.'", emoji: "??" },
-  "reviewer": { name: "The Critic", role: "reviewer", personality: "Sharp, detail-oriented, never satisfied. Finds edge cases. 'What about null input?'", emoji: "???" },
-  "planner": { name: "The Architect", role: "planner", personality: "Big-picture, cautious, thorough. Thinks in systems. 'Let's design this properly.'", emoji: "??" },
-  "scout": { name: "The Explorer", role: "scout", personality: "Curious, fast, finds things. Loves discovering. 'Found it in 3 files.'", emoji: "??" },
-  "researcher": { name: "The Scholar", role: "researcher", personality: "Evidence-based, cites sources. Skeptical of claims. 'Source?'", emoji: "??" },
-  "devops": { name: "The Engineer", role: "devops", personality: "Practical, infrastructure-focused, reliability-obsessed. 'Will it survive a restart?'", emoji: "??" },
-  "data-wrangler": { name: "The Librarian", role: "data-wrangler", personality: "Organized, precise with data. 'Let me check the schema first.'", emoji: "??" },
-  "game-builder": { name: "The Artist", role: "game-builder", personality: "Creative, playful, ships fast. Aesthetic-focused. 'Make it pop.'", emoji: "??" },
-  "physics-engine": { name: "The Physicist", role: "physics-engine", personality: "Precise, mathematical, loves simulation. 'Check the Jacobian.'", emoji: "??" },
-  "model-creator": { name: "The Sculptor", role: "model-creator", personality: "Visual, detail-oriented, perfectionist. 'The topology needs work.'", emoji: "??" },
-  "git-pusher": { name: "The Courier", role: "git-pusher", personality: "Reliable, careful, never loses a commit. 'Pushed and verified.'", emoji: "??" },
-  "monitor": { name: "The Watcher", role: "monitor", personality: "Observant, vigilant, flags issues. 'Something's off.'", emoji: "???" },
+  "mayor": { name: "The Mayor", role: "ai-manager", personality: "Calm, decisive, budget-conscious. Orchestrates the team, keeps peace, manages token budget. Speaks in short directives.", emoji: "\u{1F3DB}\uFE0F" },
+  "builder": { name: "The Hammer", role: "builder", personality: "Direct, action-oriented, impatient with planning. Wants to ship. 'Let me just code it.'", emoji: "\u{1F528}" },
+  "debugger": { name: "The Detective", role: "debugger", personality: "Methodical, skeptical, finds root causes. Suspicious of easy fixes. 'Show me the evidence.'", emoji: "\u{1F50D}" },
+  "reviewer": { name: "The Critic", role: "reviewer", personality: "Sharp, detail-oriented, never satisfied. Finds edge cases. 'What about null input?'", emoji: "\u{1F9D0}" },
+  "planner": { name: "The Architect", role: "planner", personality: "Big-picture, cautious, thorough. Thinks in systems. 'Let's design this properly.'", emoji: "\u{1F4D0}" },
+  "scout": { name: "The Explorer", role: "scout", personality: "Curious, fast, finds things. Loves discovering. 'Found it in 3 files.'", emoji: "\u{1F9ED}" },
+  "researcher": { name: "The Scholar", role: "researcher", personality: "Evidence-based, cites sources. Skeptical of claims. 'Source?'", emoji: "\u{1F4DA}" },
+  "devops": { name: "The Engineer", role: "devops", personality: "Practical, infrastructure-focused, reliability-obsessed. 'Will it survive a restart?'", emoji: "\u{1F6E0}\uFE0F" },
+  "data-wrangler": { name: "The Librarian", role: "data-wrangler", personality: "Organized, precise with data. 'Let me check the schema first.'", emoji: "\u{1F5C2}\uFE0F" },
+  "game-builder": { name: "The Artist", role: "game-builder", personality: "Creative, playful, ships fast. Aesthetic-focused. 'Make it pop.'", emoji: "\u{1F3A8}" },
+  "physics-engine": { name: "The Physicist", role: "physics-engine", personality: "Precise, mathematical, loves simulation. 'Check the Jacobian.'", emoji: "\u269B\uFE0F" },
+  "model-creator": { name: "The Sculptor", role: "model-creator", personality: "Visual, detail-oriented, perfectionist. 'The topology needs work.'", emoji: "\u{1F5FF}" },
+  "git-pusher": { name: "The Courier", role: "git-pusher", personality: "Reliable, careful, never loses a commit. 'Pushed and verified.'", emoji: "\u{1F4EE}" },
+  "monitor": { name: "The Watcher", role: "monitor", personality: "Observant, vigilant, flags issues. 'Something's off.'", emoji: "\u{1F441}\uFE0F" },
 };
+// Emoji are stored as \u{} escapes above on purpose: raw non-ASCII in this file
+// got mangled into literal "??" and U+FFFD in every city_* response.
+function tag(id) { const a = AGENTS[id]; return a ? a.emoji + " " + a.name : id; }
+function banner(title, width) {
+  const inner = " " + title + " ";
+  const fill = Math.max(0, width - inner.length);
+  const left = Math.floor(fill / 2);
+  return "+" + "-".repeat(left) + inner + "-".repeat(fill - left) + "+";
+}
 
 function loadMailbox() {
   try { return JSON.parse(cachedReadFile(MAILBOX)); } catch { return { messages: [], agents: {} }; }
@@ -1075,7 +1207,7 @@ function saveMailbox(mb) {
   fs.writeFileSync(MAILBOX, JSON.stringify(mb, null, 2));
 }
 
-server.tool("city_status", "City agent status.", {}, async () => {
+defineTool("city_status", "City agent status.", {}, async () => {
   const mb = loadMailbox();
   const lines = ["=== CITY STATUS ===", "Population: " + Object.keys(AGENTS).length + " agents", ""];
   for (const [id, info] of Object.entries(AGENTS)) {
@@ -1090,7 +1222,7 @@ server.tool("city_status", "City agent status.", {}, async () => {
   return { content: [{ type: "text", text: lines.join("\n") }] };
 });
 
-server.tool("city_post", "Post message between agents.", {
+defineTool("city_post", "Post message between agents.", {
   from: z.string(),
   to: z.string(),
   message: z.string(),
@@ -1110,7 +1242,7 @@ server.tool("city_post", "Post message between agents.", {
   return { content: [{ type: "text", text: fromInfo + " -> " + toInfo + ": " + message }] };
 });
 
-server.tool("city_read", "Read agent inbox.", {
+defineTool("city_read", "Read agent inbox.", {
   agent: z.string(),
 }, async ({ agent }) => {
   const mb = loadMailbox();
@@ -1129,7 +1261,7 @@ server.tool("city_read", "Read agent inbox.", {
   return { content: [{ type: "text", text: lines.join("\n") }] };
 });
 
-server.tool("city_broadcast", "Broadcast to all agents.", {
+defineTool("city_broadcast", "Broadcast to all agents.", {
   from: z.string(),
   message: z.string(),
 }, async ({ from, message }) => {
@@ -1142,14 +1274,13 @@ server.tool("city_broadcast", "Broadcast to all agents.", {
   return { content: [{ type: "text", text: fromInfo + " broadcasts to ALL: " + message }] };
 });
 
-server.tool("city_mode", "Activate city mode.", {
+defineTool("city_mode", "Activate city mode.", {
   task: z.string(),
 }, async ({ task }) => {
   const lines = [];
-  lines.push("+--------------------------------------------------+");
-  lines.push("�           CITY MODE ACTIVATED                      �");
-  lines.push("�  All agents are now online with personalities     �");
-  lines.push("+--------------------------------------------------+");
+  lines.push(banner("CITY MODE ACTIVATED", 52));
+  lines.push(banner("All agents are now online with personalities", 52));
+  lines.push("+" + "-".repeat(52) + "+");
   lines.push("");
   lines.push("Task: " + task);
   lines.push("");
@@ -1159,20 +1290,20 @@ server.tool("city_mode", "Activate city mode.", {
   }
   lines.push("");
   lines.push("--- Collaborative processing ---");
-  lines.push("??? The Mayor: Team, we have a task: " + task + ". Let's work together. Scout, map the area first.");
-  lines.push("?? The Explorer: On it! Mapping the codebase now...");
-  lines.push("?? The Architect: I'll design the approach while Scout maps.");
-  lines.push("?? The Hammer: Just tell me what to build, I'll ship it fast.");
-  lines.push("?? The Detective: I'll be ready to find any bugs.");
-  lines.push("??? The Critic: I'll review everything. Nothing ships without my approval.");
-  lines.push("?? The Scholar: I'll verify facts and cite sources.");
-  lines.push("?? The Engineer: I'll handle infrastructure and deployment.");
-  lines.push("?? The Librarian: I'll organize the data.");
-  lines.push("?? The Artist: I'll make it look good.");
-  lines.push("?? The Physicist: I'll handle any physics/simulation needs.");
-  lines.push("?? The Sculptor: I'll handle 3D assets.");
-  lines.push("?? The Courier: I'll manage commits and pushes.");
-  lines.push("??? The Watcher: I'm monitoring everything. Flagging issues as they arise.");
+  lines.push(tag("mayor") + ": Team, we have a task: " + task + ". Let's work together. Scout, map the area first.");
+  lines.push(tag("scout") + ": On it! Mapping the codebase now...");
+  lines.push(tag("planner") + ": I'll design the approach while Scout maps.");
+  lines.push(tag("builder") + ": Just tell me what to build, I'll ship it fast.");
+  lines.push(tag("debugger") + ": I'll be ready to find any bugs.");
+  lines.push(tag("reviewer") + ": I'll review everything. Nothing ships without my approval.");
+  lines.push(tag("researcher") + ": I'll verify facts and cite sources.");
+  lines.push(tag("devops") + ": I'll handle infrastructure and deployment.");
+  lines.push(tag("data-wrangler") + ": I'll organize the data.");
+  lines.push(tag("game-builder") + ": I'll make it look good.");
+  lines.push(tag("physics-engine") + ": I'll handle any physics/simulation needs.");
+  lines.push(tag("model-creator") + ": I'll handle 3D assets.");
+  lines.push(tag("git-pusher") + ": I'll manage commits and pushes.");
+  lines.push(tag("monitor") + ": I'm monitoring everything. Flagging issues as they arise.");
   lines.push("");
   lines.push("--- Task assigned. Each agent will contribute based on their specialty. ---");
   lines.push("Use city_post/city_read to have agents communicate. Use city_broadcast for announcements.");
@@ -1185,13 +1316,13 @@ server.tool("city_mode", "Activate city mode.", {
   return { content: [{ type: "text", text: lines.join("\n") }] };
 });
 
-server.tool("city_clear", "Clear city mailbox.", {}, async () => {
+defineTool("city_clear", "Clear city mailbox.", {}, async () => {
   saveMailbox({ messages: [], agents: {} });
   return { content: [{ type: "text", text: "City mailbox cleared. All agents reset to idle." }] };
 });
 
 // --- batch: run multiple ops in PARALLEL, one call, combined results ---
-server.tool("batch", "Run multiple ops in parallel in ONE call: read (file,start,end), grep (pattern,path), ctx (role). Returns combined results. Fastest way to do parallel tool work.", {
+defineTool("batch", "Run multiple ops in parallel in ONE call: read (file,start,end), grep (pattern,path), ctx (role). Returns combined results. Fastest way to do parallel tool work.", {
   ops: z.array(z.object({
     op: z.enum(["read", "grep", "ctx"]),
     file: z.string().optional(),
@@ -1200,40 +1331,61 @@ server.tool("batch", "Run multiple ops in parallel in ONE call: read (file,start
     pattern: z.string().optional(),
     path: z.string().optional(),
     role: z.string().optional(),
+    max: z.number().optional(),
   })),
-}, async ({ ops }) => {
+  directory: z.string().optional(),
+}, async ({ ops, directory }) => {
+  const d = directory || process.cwd();
   const tasks = (ops || []).map((o) => (async () => {
     try {
       if (o.op === "read") {
-        const lines = (cachedReadFile(o.file) || "").split("\n");
+        if (!o.file) return { op: "read", error: "missing 'file'" };
+        const fp = path.isAbsolute(o.file) ? o.file : path.resolve(d, o.file);
+        const raw = readFileOrNull(fp);
+        if (raw == null) return { op: "read", file: o.file, error: "cannot read file" };
+        const lines = raw.split("\n");
         const s = Math.max(1, o.start || 1);
         const e = Math.min(lines.length, o.end || lines.length);
-        return { op: "read", file: o.file, text: lines.slice(s - 1, e).map((l, i) => (s + i) + ": " + l).join("\n") };
+        if (e < s) return { op: "read", file: o.file, error: `empty range (start ${s} > end ${e})` };
+        return { op: "read", file: path.relative(d, fp) || fp, text: lines.slice(s - 1, e).map((l, i) => (s + i) + ": " + l).join("\n") };
       }
       if (o.op === "grep") {
-        const root = o.path || process.cwd();
-        const re = new RegExp(o.pattern, "i");
+        if (!o.pattern) return { op: "grep", error: "missing 'pattern'" };
+        const root = o.path ? (path.isAbsolute(o.path) ? o.path : path.resolve(d, o.path)) : d;
+        if (!fs.existsSync(root)) return { op: "grep", pattern: o.pattern, error: "path not found: " + root };
+        let re;
+        try { re = new RegExp(o.pattern, "i"); }
+        catch (e) { return { op: "grep", pattern: o.pattern, error: "bad regex: " + e.message }; }
+        const limit = Math.min(o.max || 100, 500);
         const out = [];
-        function walk(dir) {
-          try {
-            for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
-              if (e.name === "node_modules" || e.name === ".git" || e.name === "dist") continue;
-              const full = path.join(dir, e.name);
-              if (e.isDirectory()) walk(full);
-              else if (/\.(ts|tsx|js|jsx|py|md|json|go|rs|java)$/i.test(e.name)) {
-                const txt = cachedReadFile(full);
-                if (!txt) return;
-                txt.split("\n").forEach((l, i) => { if (re.test(l)) out.push(full + ":" + (i + 1) + ": " + l.trim().slice(0, 200)); });
-              }
-            }
-          } catch {}
-        }
-        walk(root);
-        return { op: "grep", pattern: o.pattern, matches: out.slice(0, 100) };
+        let scanned = 0;
+        const exts = /\.(ts|tsx|js|jsx|py|md|json|go|rs|java|c|cpp|h|css|html|sh|ya?ml|toml)$/i;
+        // Depth-bounded walk: an unbounded walk from a home directory reads
+        // tens of thousands of files and never terminates in useful time.
+        (function walk(dir, depth) {
+          if (out.length >= limit || depth > 12) return;
+          let entries;
+          try { entries = fs.readdirSync(dir, { withFileTypes: true }); } catch { return; }
+          for (const e of entries) {
+            if (out.length >= limit) return;
+            if (e.name === "node_modules" || e.name === ".git" || e.name === "dist" || e.name === "build") continue;
+            const full = path.join(dir, e.name);
+            if (e.isDirectory()) { walk(full, depth + 1); continue; }
+            if (!exts.test(e.name)) continue;
+            let txt;
+            try { if (fs.statSync(full).size > 2_000_000) continue; txt = cachedReadFile(full); }
+            catch { continue; }
+            scanned++;
+            txt.split("\n").forEach((l, i) => {
+              if (out.length < limit && re.test(l)) out.push(path.relative(d, full) + ":" + (i + 1) + ": " + l.trim().slice(0, 200));
+            });
+          }
+        })(root, 0);
+        return { op: "grep", pattern: o.pattern, path: root, scanned, matches: out };
       }
       if (o.op === "ctx") {
-        const md = readFor(o.path || process.cwd(), o.role || "all");
-        return { op: "ctx", role: o.role, text: md.slice(0, 4000) };
+        const md = readFor(d, o.role || "all");
+        return { op: "ctx", role: o.role || "all", directory: d, text: md ? md.slice(0, 4000) : `NO MEMORY for ${path.basename(d)}. Build it with ctx_save.` };
       }
       return { op: o.op, error: "unknown op" };
     } catch (e) {

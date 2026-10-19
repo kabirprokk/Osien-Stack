@@ -19,14 +19,28 @@ cd "$STACK_DIR/mcp-server" && npm install
 ```
 Verify: `node server.js` should print "osien-tools MCP server running" to stderr, then wait for stdin. Kill it after confirming.
 
+`zod` is a **direct dependency**, not just an SDK transitive. Do not remove it:
+`server.js` requires it directly, and on installs that do not hoist transitive
+packages (pnpm, Yarn PnP, `npm install --install-strategy=nested`) an undeclared
+`zod` makes the server fail to start on every MCP client.
+
+On startup the server prints which registration API it picked, so you can tell
+which MCP SDK generation you actually have:
+- `osien-tools MCP SDK mode: registerTool` — SDK 1.16 or newer
+- `osien-tools MCP SDK mode: legacy tool()` — older SDK, still fully supported
+
+Both paths are exercised; the server negotiates any MCP protocol revision the
+installed SDK supports (currently `2024-10-07` through `2025-11-25`).
+
 ## Step 3: Configure the MCP server in the target CLI
 
 ### opencode
 Add to `~/.config/opencode/opencode.json` under `mcp` (opencode uses its own
 shape - `type: local` with a command array, not the `mcpServers` key other
-clients use):
+clients use). This shape is the same on opencode V1 and V2:
 ```json
 {
+  "$schema": "https://opencode.ai/config.json",
   "mcp": {
     "osien-tools": {
       "type": "local",
@@ -36,6 +50,22 @@ clients use):
   }
 }
 ```
+Prefer the CLI, which preserves your other settings:
+```bash
+opencode mcp add osien-tools --global --command node --args "<STACK_DIR>/mcp-server/server.js"
+```
+For a project-local install, drop `--global`.
+
+### opencode project-local layout (V1 and V2)
+Both versions discover the same directories, so Steps 4-6 can target either:
+| What  | Global                              | Project-local              |
+|-------|-------------------------------------|----------------------------|
+| skills   | `~/.config/opencode/skills/`    | `.opencode/skills/`        |
+| commands | `~/.config/opencode/commands/` | `.opencode/commands/`      |
+| agents   | `~/.config/opencode/agents/`   | `.opencode/agents/`        |
+
+`.opencode/` files must be at the source root (e.g. `skills/logic/SKILL.md`
+works; a bare `skills/logic.md` does not).
 
 ### Claude Code
 Add to `~/.claude/settings.json`:
@@ -101,12 +131,14 @@ Command: `cp -r "$STACK_DIR/agents/"* <target_agents_dir>/`
 6. Call `city_post` from mayor to builder — should confirm message posted.
 7. Verify skills are loaded: ask the CLI to list available skills; `osien-3d-forge`, `logic`, `caveman`, `stop-slop`, `ai-manager` should appear.
 
-Run the two automated checks:
+Run the automated checks:
 ```bash
-cd "$STACK_DIR/mcp-server" && npm install && npm test && npm run bench
+cd "$STACK_DIR/mcp-server" && npm install && npm test && npm run test:compat && npm run bench
 ```
-`npm test` must print `SMOKE OK: 45 tools`. `npm run bench` prints the
-token-reduction table; a healthy install stays in the high-90% range.
+`npm test` must print `SMOKE OK: 47 tools`. `npm run test:compat` must print
+`COMPAT OK` (it handshakes every MCP protocol revision the installed SDK
+supports and checks tools.json against the live tool list). `npm run bench`
+prints the token-reduction table; a healthy install stays in the high-90% range.
 
 ## Step 9: Configure memory location (optional)
 Set environment variable `OSIEN_MEMORY_ROOT` to customize where memory is stored.

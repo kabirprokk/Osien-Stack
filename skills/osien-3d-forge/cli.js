@@ -2,7 +2,8 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { UltraForge, QUALITY_PRESETS, ALL_KITS, MATERIAL_PRESETS } = require('./index.js');
+const forge_mod = require('./index.js');
+const { UltraForge, QUALITY_PRESETS, ALL_KITS, MATERIAL_PRESETS } = forge_mod;
 
 const KITS = ALL_KITS || ['box', 'sphere', 'cylinder', 'cone', 'torus', 'plane', 'capsule', 'tubeAlongCurve', 'lathe', 'extrusion', 'humanoid', 'car', 'building', 'chair', 'table', 'tree', 'rock', 'sword', 'creature'];
 
@@ -57,7 +58,9 @@ function main() {
   }
   const get = (k, d) => { const i = argv.indexOf(k); return i >= 0 && argv[i + 1] && !argv[i + 1].startsWith('--') ? argv[i + 1] : d; };
   const has = (k) => argv.includes(k);
-  const catalog = () => require('./examples/catalog.js');
+  // examples/ lives at the repo root; index.js owns the lookup so the CLI and
+  // the library can never disagree about where it is.
+  const catalog = () => forge_mod.loadCatalog();
 
   // ---- v2.1 library browsers (list-only) ----
   if (argv.includes('--category') && !has('--example') && !has('--random') && !has('--search')) {
@@ -109,23 +112,48 @@ function main() {
 
   if (argv.includes('--batch')) {
     const f = get('--batch');
-    const specs = JSON.parse(fs.readFileSync(f, 'utf8'));
-    const forge = new UltraForge();
+    if (!f) { console.error('--batch needs a specs JSON file'); process.exit(1); }
+    let specs;
+    try { specs = JSON.parse(fs.readFileSync(f, 'utf8')); }
+    catch (e) { console.error('cannot read --batch file ' + f + ': ' + e.message); process.exit(1); }
+    if (!Array.isArray(specs)) { console.error('--batch file must contain a JSON array of specs'); process.exit(1); }
+    const forge = new UltraForge({ seed: parseInt(get('--seed', '1337'), 10) || 1337 });
     const outDir = get('--out', './out');
-    const format = (get('--format', 'glb') || 'glb').toLowerCase();
+    const format = (get('--format', 'glb') || 'glb').toLowerCase().replace(/^\./, '');
     const budget = parsePoly(get('--poly'));
+    // Without this the very first spec crashed the whole run on ENOENT.
+    fs.mkdirSync(outDir, { recursive: true });
+    const asciiBatch = argv.includes('--ascii');
+    let okCount = 0;
+    const failed = [];
+    const used = new Map();
     specs.forEach((s, i) => {
-      const prompt = typeof s === 'string' ? s : (s.prompt || s.kind || 'box');
-      const sopts = typeof s === 'object' && s.opts ? s.opts : {};
-      if (budget) sopts.polyBudget = budget;
-      if (!sopts.quality) sopts.quality = quality;
-      if (style && !sopts.style) sopts.style = style;
-      if (material && !sopts.material) sopts.material = material;
-      const r = forge.quick(prompt, sopts);
-      const safe = prompt.toLowerCase().replace(/[^a-z0-9]+/g, '_').slice(0, 40);
-      forge.save(r.mesh, path.join(outDir, safe + '.' + format));
-      console.log(JSON.stringify({ prompt: s, ...r.stats }));
+      try {
+        const prompt = typeof s === 'string' ? s : ((s && (s.prompt || s.kind)) || 'box');
+        const sopts = typeof s === 'object' && s && s.opts ? Object.assign({}, s.opts) : {};
+        if (budget) sopts.polyBudget = budget;
+        if (!sopts.quality) sopts.quality = quality;
+        if (style && !sopts.style) sopts.style = style;
+        if (material && !sopts.material) sopts.material = material;
+        const r = forge.quick(prompt, sopts);
+        let safe = prompt.toLowerCase().replace(/[^a-z0-9]+/g, '_').slice(0, 40) || 'model';
+        // "red car" and "red-car" both slug to red_car; the second silently
+        // overwrote the first. Disambiguate instead of losing the model.
+        if (used.has(safe)) { const n = used.get(safe) + 1; used.set(safe, n); safe = safe + '_' + n; }
+        else used.set(safe, 1);
+        const fp = path.join(outDir, safe + '.' + format);
+        if (format === 'stl' && asciiBatch) fs.writeFileSync(fp, forge.toSTL(r.mesh, true));
+        else forge.save(r.mesh, fp);
+        okCount++;
+        console.log(JSON.stringify({ index: i, prompt: s, ...r.stats, file: fp }));
+      } catch (e) {
+        // One bad spec used to abort the entire batch via an uncaught throw.
+        failed.push(i);
+        console.error('batch item ' + i + ' failed: ' + (e && e.message));
+      }
     });
+    console.log('batch done: ' + okCount + '/' + specs.length + ' built' + (failed.length ? ', failed at ' + failed.join(',') : ''));
+    if (failed.length) process.exit(1);
     return;
   }
   let prompt, safe;
@@ -158,7 +186,7 @@ function main() {
     else forge.save(m, fp);
   };
   let files = [];
-  if (lodN > 1) {
+  if (lodN > 0) {
     const chain = forge.lod(r.mesh, lodN);
     chain.forEach((m, i) => {
       const fp = path.join(outDir, safe + '_lod' + i + ext);

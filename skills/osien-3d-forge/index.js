@@ -1,6 +1,35 @@
 'use strict';
 /* osien-3d-forge — UltraForge procedural 3D engine. Node stdlib only, zero deps. */
 
+const _fs = require('fs');
+const _path = require('path');
+
+// The example library lives at the REPO ROOT (../../examples/catalog.js), not
+// next to this file. A hardcoded './examples/catalog.js' threw MODULE_NOT_FOUND,
+// and because every call site swallowed it, listExamples() returned [] and
+// exampleRecipe() returned null for examples that demonstrably exist.
+// Walk up to find it, and remember a miss so the walk runs at most once.
+let _catalogPath = null;
+let _catalogProbed = false;
+function _findCatalog() {
+  if (_catalogProbed) return _catalogPath;
+  _catalogProbed = true;
+  let dir = __dirname;
+  for (let i = 0; i < 6; i++) {
+    const p = _path.join(dir, 'examples', 'catalog.js');
+    if (_fs.existsSync(p)) { _catalogPath = p; return p; }
+    const up = _path.dirname(dir);
+    if (up === dir) break;
+    dir = up;
+  }
+  return null;
+}
+function _catalog() {
+  const p = _findCatalog();
+  if (!p) throw new Error('example catalog not found (looked for examples/catalog.js up to 6 levels above ' + __dirname + ')');
+  return require(p);
+}
+
 // ---- inlined math (asset-gen style, no imports) ----
 function clamp(v, a, b) { return v < a ? a : v > b ? b : v; }
 function lerp(a, b, t) { return a + (b - a) * t; }
@@ -1796,6 +1825,23 @@ UltraForge.prototype.quick = function (prompt, opts) {
     case 'torus': m = this.torus(1, 0.3, det + 10, det); break;
     case 'capsule': m = this.capsule(0.5, 1.5, det); break;
     case 'plane': m = this.plane(4, 4, 4); break;
+    // These three were listed in ALL_KITS and printed by `cli.js --list`, but
+    // had no case here, so every one of them silently fell through to
+    // default -> box(1,1,1) -- a 12-triangle cube under a kit-specific name.
+    case 'tubeAlongCurve': {
+      const pts = [], N = 24;
+      for (let i = 0; i <= N; i++) { const t = i / N; pts.push([(t - 0.5) * 2.4, Math.sin(t * Math.PI * 1.5) * 0.55, Math.cos(t * Math.PI * 1.5) * 0.2]); }
+      m = this.tubeAlongCurve(pts, 0.12, det + 4); break;
+    }
+    case 'lathe': {
+      const prof = [[0.001, -1.0], [0.34, -1.0], [0.46, -0.72], [0.30, -0.28], [0.26, 0.18], [0.40, 0.56], [0.34, 0.88], [0.22, 1.0], [0.001, 1.0]];
+      m = this.lathe(prof, clamp(det + 6, 6, 64)); break;
+    }
+    case 'extrusion': {
+      const shp = []; const pts = 7;
+      for (let i = 0; i < pts; i++) { const a = i / pts * Math.PI * 2; const r = 0.42 + 0.22 * (i % 2); shp.push([Math.cos(a) * r, Math.sin(a) * r]); }
+      m = this.extrusion(shp, 0.55, presetName !== 'draft'); break;
+    }
     default: m = this.box(1, 1, 1);
   }
   m.name = kind + '_' + (q.colorName || 'default');
@@ -1991,12 +2037,20 @@ UltraForge.prototype.toGLTF = function (m) {
 
 // ---------- V2.1 example library (1040+ recipes; lazy require, fully backward compatible) ----------
 UltraForge.listExamples = function (filter) {
-  try { return require('./examples/catalog.js').search(filter || {}); }
-  catch (e) { return []; }
+  // Only a genuinely missing catalog returns []. Any other error must surface:
+  // swallowing it is what made 1040+ reachable examples look like zero.
+  try { return _catalog().search(filter || {}); }
+  catch (e) {
+    if (/example catalog not found/.test(e.message)) return [];
+    throw e;
+  }
 };
 UltraForge.exampleRecipe = function (idOrPath) {
-  try { return require('./examples/catalog.js').resolve(idOrPath); }
-  catch (e) { return null; }
+  try { return _catalog().resolve(idOrPath); }
+  catch (e) {
+    if (/example catalog not found/.test(e.message)) return null;
+    throw e;
+  }
 };
 UltraForge.fromExample = function (idOrPath, opts) { // -> {mesh, stats, recipe}; builds a library example
   opts = opts || {};
@@ -2022,7 +2076,7 @@ UltraForge.prototype.buildExample = function (idOrPath, opts) { // instance vers
   return r;
 };
 
-Object.assign(module.exports, { UltraForge: UltraForge, QUALITY_PRESETS: QUALITY_PRESETS, MATERIAL_PRESETS: MATERIAL_PRESETS, V2_KITS: V2_KITS, ALL_KITS: ALL_KITS });
+Object.assign(module.exports, { UltraForge: UltraForge, QUALITY_PRESETS: QUALITY_PRESETS, MATERIAL_PRESETS: MATERIAL_PRESETS, V2_KITS: V2_KITS, ALL_KITS: ALL_KITS, loadCatalog: _catalog, catalogPath: _findCatalog });
 // ---------- v2.2 VEGETATION-ULTRA (perfect grass + bush; auto-registers, extends ALL_KITS) ----------
 try {
   const _veg = require('./vegetation.js');
@@ -2056,3 +2110,35 @@ try {
   const _ar = _anm.registerAnimations(UltraForge);
   if (_ar && _ar.ANIM_CLIPS) module.exports.ANIM_CLIPS = _ar.ANIM_CLIPS;
 } catch (e) { /* animations optional — meshes still work without them */ }
+
+// ---------- exact kit-id resolver ----------
+// Installed LAST so it wraps every extension's parser patch, not the other way
+// round. The parsers are keyword cascades, which produced two classes of bug:
+//   quick('baseMale') -> 'box'   because /\bmale\b/ cannot match inside "baseMale"
+//   quick('viking')   -> 'king'  because /king/i matches inside "viking"
+// so 5 of 91 advertised kit ids returned a 12-triangle placeholder cube. An
+// exact id is unambiguous, so it wins before any keyword guessing. Deliberately
+// exact-only: matching a leading token would defeat humans.js's deliberate
+// gear-focus guard ("knight helmet" must build a helmet, not a knight).
+(function () {
+  // lowercased lookup -> CANONICAL kit id. The switch statement and the three
+  // extension dispatchers compare camelCase ids ("tubeAlongCurve", "roseBush"),
+  // so handing them a lowercased kind sends every one of them to default -> box.
+  const ids = new Map();
+  for (const k of ALL_KITS) ids.set(String(k).toLowerCase(), k);
+  for (const list of [module.exports.VEG_KITS, module.exports.WATER_KITS, module.exports.HUMAN_KITS]) {
+    if (list) for (const k of list) ids.set(String(k).toLowerCase(), k);
+  }
+  const _parse = UltraForge.prototype.parsePrompt;
+  UltraForge.prototype.parsePrompt = function (prompt) {
+    const key = String(prompt == null ? '' : prompt).trim().toLowerCase();
+    const canon = ids.get(key);
+    if (canon) {
+      const q = _parse.call(this, key);
+      q.kind = canon;
+      return q;
+    }
+    return _parse.call(this, prompt);
+  };
+  UltraForge.KIT_IDS = ids;
+})();

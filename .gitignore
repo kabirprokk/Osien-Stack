@@ -1,6 +1,5 @@
 # osien-stack
 node_modules/
-.smoke-mem/
 *.log
 .DS_Store
 Thumbs.db
@@ -12,7 +11,17 @@ coverage/
 dist/
 __pycache__/
 *.pyc
+.vercel
 .smoke-mem/
 .bench-mem/
-.vercel
+.probe-mem/
+.x-mem/
+.compat-mem*/
+.checkpoints/
+city/
+.task_state.json
+.perf-baseline.json
+repro-capsule.md
+notes.md
+out/
 README.md.tmp

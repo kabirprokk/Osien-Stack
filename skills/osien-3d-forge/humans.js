@@ -419,7 +419,9 @@ function registerHumans(UltraForge) {
       [/astronaut|cosmonaut|spacesuit/i, 'astronaut'],
       [/runner|running|athlete|jogger|sprinter|marathon|\brun\b/i, 'runner'],
       [/worker|construction|hardhat|hi-?vis|engineer\b|builder\b/i, 'worker'],
-      [/king|queen|monarch|\bcrown\b/i, 'king'],
+      // \b anchors matter: unanchored /king/i matched inside "viking" (row 427)
+      // and returned the king archetype for a viking prompt.
+      [/\bking\b|\bqueen\b|monarch|\bcrown\b/i, 'king'],
       [/zombie|undead|\bwalker\b/i, 'zombie'],
       [/vampire|dracula|nosferatu/i, 'vampire'],
       [/cyborg|bionic/i, 'cyborg'],
