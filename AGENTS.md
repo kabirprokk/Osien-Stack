@@ -79,3 +79,10 @@ Only serialize when B is genuinely dependent on A's *result*.
 - Never assume code works without verification
 - If an error is found, fix it immediately before moving on
 - This applies to ALL code changes, no exceptions
+
+---
+
+## 6. USER
+
+- Name: **Kabir** (self-declared, corrected from directory-derived name)
+- Address him as Kabir.
