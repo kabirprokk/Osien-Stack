@@ -18,7 +18,7 @@
 <title>Osien-Stack - Tool Explorer</title>
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="favicon.png">
-<meta name="description" content="Browse all 45 osien-stack MCP tools with descriptions, categories and search.">
+<meta name="description" content="Browse the current Osien Stack MCP tool catalog with live descriptions, categories, and search.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -90,9 +90,10 @@
   .search { flex:1; min-width: 220px; padding: 12px 16px; border-radius: 12px; border:1px solid var(--border); background: var(--card); color: var(--fg); font-size:.95rem; outline:none; transition: border-color .2s, box-shadow .2s; }
   .search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--glow); }
   .filters { display:flex; gap:8px; flex-wrap:wrap; }
-  .chip { padding: 8px 14px; border-radius:999px; border:1px solid var(--border); background: var(--card); color: var(--muted); font-size:.85rem; cursor:pointer; transition: all .2s; user-select:none; }
+  .chip { padding: 8px 14px; border-radius:999px; border:1px solid var(--border); background: var(--card); color: var(--muted); font: inherit; font-size:.85rem; cursor:pointer; transition: all .2s; user-select:none; }
   .chip:hover { color: var(--fg); border-color: var(--accent); }
   .chip.active { background: var(--accent); color:var(--on-accent); border-color:transparent; font-weight:600; }
+  .chip:focus-visible, .tool .name .copy:focus-visible, .mclose:focus-visible, #mCopy:focus-visible { outline: 3px solid var(--accent2); outline-offset: 3px; }
   .meta { display:flex; gap:16px; margin-bottom: 20px; color: var(--muted); font-size:.9rem; }
   .meta strong { color: var(--accent); }
   .grid { display:grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
@@ -195,12 +196,13 @@
   <div class="wrap">
     <a class="back" href="index.html">Back to home</a>
     <h1>Tool Explorer</h1>
-    <p class="sub">All 45 osien-stack MCP tools. Search, filter, copy the name. Your AI calls them by name.</p>
+    <p class="sub">Browse the current Osien Stack MCP tools. Search, filter, and copy a tool name for your AI.</p>
     <div class="toolbar">
       <input class="search" id="search" type="search" placeholder="Search tools or descriptions..." autocomplete="off">
       <div class="filters" id="filters"></div>
     </div>
     <div class="meta" id="meta"></div>
+    <div class="meta" id="catalogStatus" role="status" aria-live="polite">Showing the built-in catalog snapshot while checking GitHub for updates.</div>
     <div class="grid" id="grid"></div>
     <div class="empty" id="empty" style="display:none">No tools match your search.</div>
   </div>
@@ -216,64 +218,312 @@
   </div>
   <footer>Osien-Stack - MIT licensed - <a href="https://github.com/kabirprokk/Osien-Stack">GitHub</a></footer>
 
+<script src="live-data.js"></script>
 <script>
-  const tools = [
-    {"name":"ctx_recall","desc":"Load project memory by role/part/grep.","cat":"Memory"},
-    {"name":"ctx_save","desc":"Persist memory: architecture/decisions/failures/state/performance.","cat":"Memory"},
-    {"name":"soul_read","desc":"Read SOUL one-line notes.","cat":"Memory"},
-    {"name":"soul_write","desc":"Append a SOUL flowchart line.","cat":"Memory"},
-    {"name":"fast_note","desc":"Append a timestamped note.","cat":"Memory"},
-    {"name":"task_state","desc":"Read/write task state.","cat":"Memory"},
-    {"name":"state_reset","desc":"Clear task state.","cat":"Memory"},
-    {"name":"smart_grep","desc":"Grep with file:line output, bounded.","cat":"Search"},
-    {"name":"read_slice","desc":"Read file lines [start,end].","cat":"Search"},
-    {"name":"impact_analyze","desc":"Find references to a symbol.","cat":"Search"},
-    {"name":"machine_state","desc":"OS/CPU/mem/cwd snapshot.","cat":"State"},
-    {"name":"repo_health","desc":"Git status + errors + memory.","cat":"State"},
-    {"name":"project_map","desc":"Dirs, git, scripts, agents overview.","cat":"State"},
-    {"name":"loop_status","desc":"Repeated actions/errors status.","cat":"State"},
-    {"name":"checkpoint_create","desc":"Snapshot files for rollback.","cat":"State"},
-    {"name":"verify_chain","desc":"Run format/typecheck/test/build.","cat":"Verify"},
-    {"name":"security_scan","desc":"Scan for secrets/vulns.","cat":"Verify"},
-    {"name":"test_gap","desc":"Find untested functions.","cat":"Verify"},
-    {"name":"repro_capsule","desc":"Capture failing cmd + env.","cat":"Verify"},
-    {"name":"context_budget","desc":"Token budget per file.","cat":"Verify"},
-    {"name":"consensus","desc":"Multi-model consensus guidance.","cat":"Verify"},
-    {"name":"auto_heal","desc":"Self-heal loop: detect/fix/verify.","cat":"Verify"},
-    {"name":"rollback_on_failure","desc":"Rollback if verify fails.","cat":"Verify"},
-    {"name":"perf_regression","desc":"Benchmark before/after.","cat":"Quality"},
-    {"name":"test_synthesizer","desc":"Generate test stubs.","cat":"Quality"},
-    {"name":"memory_compactor","desc":"Compress memory files.","cat":"Quality"},
-    {"name":"dead_code_detector","desc":"Find unused exports.","cat":"Quality"},
-    {"name":"dependency_graph","desc":"Mermaid dep graph.","cat":"Quality"},
-    {"name":"changelog_generator","desc":"Generate changelog.","cat":"Quality"},
-    {"name":"token_budget_enforcer","desc":"Enforce token budget.","cat":"Quality"},
-    {"name":"architecture_drift","desc":"Compare docs vs code.","cat":"Quality"},
-    {"name":"session_replay","desc":"Replay session timeline.","cat":"Quality"},
-    {"name":"auto_document","desc":"Auto-generate docs.","cat":"Quality"},
-    {"name":"feature_flag_manager","desc":"List feature flags.","cat":"Quality"},
-    {"name":"license_checker","desc":"Check dep licenses.","cat":"Quality"},
-    {"name":"schema_validator","desc":"Validate JSON files.","cat":"Quality"},
-    {"name":"cost_estimator","desc":"Estimate token cost.","cat":"Quality"},
-    {"name":"self_critique_loop","desc":"Self-critique guidance.","cat":"Quality"},
-    {"name":"city_status","desc":"City agent status.","cat":"City"},
-    {"name":"city_post","desc":"Post message between agents.","cat":"City"},
-    {"name":"city_read","desc":"Read agent inbox.","cat":"City"},
-    {"name":"city_broadcast","desc":"Broadcast to all agents.","cat":"City"},
-    {"name":"city_mode","desc":"Activate city mode.","cat":"City"},
-    {"name":"city_clear","desc":"Clear city mailbox.","cat":"City"},
-    {"name":"batch","desc":"Run multiple ops in parallel in ONE call.","cat":"Parallel"}
+  let tools =   [
+    {
+      "name": "ctx_recall",
+      "desc": "Load project memory by role/part/grep.",
+      "cat": "Memory"
+    },
+    {
+      "name": "ctx_save",
+      "desc": "Persist memory: architecture/decisions/failures/state/performance.",
+      "cat": "Memory"
+    },
+    {
+      "name": "soul_read",
+      "desc": "Read SOUL one-line notes.",
+      "cat": "Memory"
+    },
+    {
+      "name": "soul_write",
+      "desc": "Append a SOUL flowchart line.",
+      "cat": "Memory"
+    },
+    {
+      "name": "fast_note",
+      "desc": "Append a timestamped note.",
+      "cat": "Memory"
+    },
+    {
+      "name": "task_state",
+      "desc": "Read/write task state.",
+      "cat": "Memory"
+    },
+    {
+      "name": "state_reset",
+      "desc": "Clear task state.",
+      "cat": "Memory"
+    },
+    {
+      "name": "smart_grep",
+      "desc": "Grep with file:line output, bounded.",
+      "cat": "Search"
+    },
+    {
+      "name": "read_slice",
+      "desc": "Read file lines [start,end].",
+      "cat": "Search"
+    },
+    {
+      "name": "machine_state",
+      "desc": "OS/CPU/mem/cwd snapshot.",
+      "cat": "State"
+    },
+    {
+      "name": "repo_health",
+      "desc": "Git status + errors + memory.",
+      "cat": "State"
+    },
+    {
+      "name": "project_map",
+      "desc": "Dirs, git, scripts, agents overview.",
+      "cat": "State"
+    },
+    {
+      "name": "verify_chain",
+      "desc": "Run format/typecheck/test/build.",
+      "cat": "Verify"
+    },
+    {
+      "name": "loop_status",
+      "desc": "Repeated actions/errors status.",
+      "cat": "State"
+    },
+    {
+      "name": "checkpoint_create",
+      "desc": "Snapshot files for rollback.",
+      "cat": "State"
+    },
+    {
+      "name": "checkpoint_verify",
+      "desc": "Verify a checkpoint against disk.",
+      "cat": "Other"
+    },
+    {
+      "name": "checkpoint_restore",
+      "desc": "Restore files from a checkpoint.",
+      "cat": "Other"
+    },
+    {
+      "name": "impact_analyze",
+      "desc": "Find references to a symbol.",
+      "cat": "Search"
+    },
+    {
+      "name": "security_scan",
+      "desc": "Scan for secrets/vulns.",
+      "cat": "Verify"
+    },
+    {
+      "name": "test_gap",
+      "desc": "Find untested functions.",
+      "cat": "Verify"
+    },
+    {
+      "name": "repro_capsule",
+      "desc": "Capture failing cmd + env.",
+      "cat": "Verify"
+    },
+    {
+      "name": "context_budget",
+      "desc": "Token budget per file.",
+      "cat": "Verify"
+    },
+    {
+      "name": "consensus",
+      "desc": "Multi-model consensus guidance.",
+      "cat": "Verify"
+    },
+    {
+      "name": "auto_heal",
+      "desc": "Self-heal loop: detect/fix/verify.",
+      "cat": "Verify"
+    },
+    {
+      "name": "rollback_on_failure",
+      "desc": "Rollback if verify fails.",
+      "cat": "Verify"
+    },
+    {
+      "name": "perf_regression",
+      "desc": "Benchmark before/after.",
+      "cat": "Quality"
+    },
+    {
+      "name": "test_synthesizer",
+      "desc": "Generate test stubs.",
+      "cat": "Quality"
+    },
+    {
+      "name": "memory_compactor",
+      "desc": "Compress memory files.",
+      "cat": "Quality"
+    },
+    {
+      "name": "dead_code_detector",
+      "desc": "Find unused exports.",
+      "cat": "Quality"
+    },
+    {
+      "name": "dependency_graph",
+      "desc": "Mermaid dep graph.",
+      "cat": "Quality"
+    },
+    {
+      "name": "changelog_generator",
+      "desc": "Generate changelog.",
+      "cat": "Quality"
+    },
+    {
+      "name": "token_budget_enforcer",
+      "desc": "Enforce token budget.",
+      "cat": "Quality"
+    },
+    {
+      "name": "architecture_drift",
+      "desc": "Compare docs vs code.",
+      "cat": "Quality"
+    },
+    {
+      "name": "session_replay",
+      "desc": "Replay session timeline.",
+      "cat": "Quality"
+    },
+    {
+      "name": "auto_document",
+      "desc": "Auto-generate docs.",
+      "cat": "Quality"
+    },
+    {
+      "name": "feature_flag_manager",
+      "desc": "List feature flags.",
+      "cat": "Quality"
+    },
+    {
+      "name": "license_checker",
+      "desc": "Check dep licenses.",
+      "cat": "Quality"
+    },
+    {
+      "name": "schema_validator",
+      "desc": "Validate JSON files.",
+      "cat": "Quality"
+    },
+    {
+      "name": "cost_estimator",
+      "desc": "Estimate token cost.",
+      "cat": "Quality"
+    },
+    {
+      "name": "self_critique_loop",
+      "desc": "Self-critique guidance.",
+      "cat": "Quality"
+    },
+    {
+      "name": "city_status",
+      "desc": "City agent status.",
+      "cat": "City"
+    },
+    {
+      "name": "city_post",
+      "desc": "Post message between agents.",
+      "cat": "City"
+    },
+    {
+      "name": "city_read",
+      "desc": "Read agent inbox.",
+      "cat": "City"
+    },
+    {
+      "name": "city_broadcast",
+      "desc": "Broadcast to all agents.",
+      "cat": "City"
+    },
+    {
+      "name": "city_mode",
+      "desc": "Activate city mode.",
+      "cat": "City"
+    },
+    {
+      "name": "city_clear",
+      "desc": "Clear city mailbox.",
+      "cat": "City"
+    },
+    {
+      "name": "batch",
+      "desc": "Run multiple ops in parallel in ONE call: read (file,start,end), grep (pattern,path), ctx (role). Returns combined results. Fastest way to do parallel tool work.",
+      "cat": "Parallel"
+    },
+    {
+      "name": "driftpost_connect",
+      "desc": "Start secure browser approval to connect Osien Stack with Driftpost.",
+      "cat": "Publishing"
+    },
+    {
+      "name": "driftpost_finish_connect",
+      "desc": "Complete browser approval and store the scoped local connection.",
+      "cat": "Publishing"
+    },
+    {
+      "name": "driftpost_connect_account",
+      "desc": "Connect a social account using Driftpost provider OAuth.",
+      "cat": "Publishing"
+    },
+    {
+      "name": "driftpost_accounts",
+      "desc": "List connected Driftpost social accounts.",
+      "cat": "Publishing"
+    },
+    {
+      "name": "driftpost_disconnect_account",
+      "desc": "Disconnect one selected social account.",
+      "cat": "Publishing"
+    },
+    {
+      "name": "driftpost_publish_video",
+      "desc": "Stream a video to Driftpost and publish or schedule it across selected platforms.",
+      "cat": "Publishing"
+    },
+    {
+      "name": "driftpost_publish_status",
+      "desc": "Check the status of a Driftpost publishing job.",
+      "cat": "Publishing"
+    },
+    {
+      "name": "driftpost_list_schedules",
+      "desc": "List scheduled and recent Driftpost posts.",
+      "cat": "Publishing"
+    },
+    {
+      "name": "driftpost_cancel_schedule",
+      "desc": "Cancel a scheduled Driftpost post.",
+      "cat": "Publishing"
+    },
+    {
+      "name": "driftpost_disconnect",
+      "desc": "Revoke the Osien Stack Driftpost connection.",
+      "cat": "Publishing"
+    }
   ];
-  const cats = ["All", ...Array.from(new Set(tools.map(t=>t.cat)))];
   const filters = document.getElementById('filters');
   let activeCat = "All";
-  cats.forEach(c => {
-    const ch = document.createElement('div');
-    ch.className = 'chip' + (c==='All'?' active':'');
-    ch.textContent = c;
-    ch.onclick = () => { activeCat = c; document.querySelectorAll('.chip').forEach(x=>x.classList.remove('active')); ch.classList.add('active'); render(); };
-    filters.appendChild(ch);
-  });
+  function renderFilters() {
+    const cats = ["All", ...Array.from(new Set(tools.map(t=>t.cat)))];
+    if (!cats.includes(activeCat)) activeCat = "All";
+    filters.replaceChildren();
+    cats.forEach(c => {
+      const ch = document.createElement('button');
+      ch.type = 'button';
+      ch.className = 'chip' + (c===activeCat?' active':'');
+      ch.textContent = c;
+      ch.setAttribute('aria-pressed', c===activeCat ? 'true' : 'false');
+      ch.onclick = () => { activeCat = c; renderFilters(); render(); };
+      filters.appendChild(ch);
+    });
+  }
+  renderFilters();
   const grid = document.getElementById('grid');
   const search = document.getElementById('search');
   const meta = document.getElementById('meta');
@@ -285,7 +535,22 @@
     filtered.forEach((t, i) => {
       const card = document.createElement('div');
       card.className = 'tool';
-      card.innerHTML = '<div class="cat">' + t.cat + '</div><div class="name">' + t.name + '<button class="copy" data-name="' + t.name + '">copy</button></div><div class="desc">' + t.desc + '</div>';
+      const category = document.createElement('div');
+      category.className = 'cat';
+      category.textContent = t.cat;
+      const name = document.createElement('div');
+      name.className = 'name';
+      name.append(document.createTextNode(t.name));
+      const copy = document.createElement('button');
+      copy.type = 'button';
+      copy.className = 'copy';
+      copy.dataset.name = t.name;
+      copy.textContent = 'copy';
+      name.appendChild(copy);
+      const description = document.createElement('div');
+      description.className = 'desc';
+      description.textContent = t.desc;
+      card.append(category, name, description);
       card.addEventListener('click', e => { if (e.target.classList.contains('copy')) return; openModal(t); });
       grid.appendChild(card);
       setTimeout(() => card.classList.add('in'), 30 + i*25);
@@ -312,10 +577,12 @@
     modal.classList.add('open');
   }
   const deepTool = new URLSearchParams(location.search).get('tool');
-  if (deepTool) {
+  function openDeepTool() {
+    if (!deepTool) return;
     const match = tools.find(t => t.name === deepTool);
     if (match) { search.value = match.name; render(); openModal(match); }
   }
+  openDeepTool();
   document.getElementById('mClose').onclick = () => modal.classList.remove('open');
   modal.addEventListener('click', e => { if (e.target === modal) modal.classList.remove('open'); });
   window.addEventListener('keydown', e => { if (e.key === 'Escape') modal.classList.remove('open'); if (e.key === '/') { e.preventDefault(); document.getElementById('search').focus(); } });
@@ -345,6 +612,26 @@
       label();
     });
   })();
+
+  if (window.OsienLiveData) {
+    window.OsienLiveData.fetchSources().then(source => {
+      const categoryByName = new Map(tools.map(tool => [tool.name, tool.cat]));
+      tools = source.tools.map(tool => ({
+        name: tool.name,
+        desc: tool.desc,
+        cat: categoryByName.get(tool.name) || (tool.name.startsWith('driftpost_') ? 'Publishing' : 'Other'),
+      }));
+      renderFilters();
+      render();
+      openDeepTool();
+      const updatedText = source.updatedAt
+        ? ' · source updated ' + new Intl.DateTimeFormat(undefined, { dateStyle: 'long', timeZone: 'UTC' }).format(new Date(source.updatedAt))
+        : ' · source update date unavailable';
+      document.getElementById('catalogStatus').textContent = 'Live catalog · v' + source.version + ' · ' + tools.length + ' tools' + updatedText;
+    }).catch(() => {
+      document.getElementById('catalogStatus').textContent = 'GitHub is unavailable. Showing the built-in catalog snapshot (' + tools.length + ' tools).';
+    });
+  }
 </script>
 </body>
 </html>

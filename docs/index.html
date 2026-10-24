@@ -16,7 +16,7 @@
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Osien-Stack - A Living Toolchain for Any AI</title>
-<meta name="description" content="45 MCP tools that install themselves into any AI. Memory, verification, parallel work, context discipline. One prompt.">
+<meta name="description" content="A live MCP toolchain for any AI. Check the latest Osien Stack version, browse its current tools, and copy install or update instructions.">
 <link id="favicon" rel="icon" type="image/png" href="favicon.png">
 <link id="appleIcon" rel="apple-touch-icon" href="favicon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -268,9 +268,17 @@
     background: var(--card); color: var(--fg); transition: transform .18s, box-shadow .25s, background .2s; }
   .btn.primary { background: var(--accent); color: var(--on-accent); border-color: transparent; box-shadow: var(--shadow); }
   .btn:hover { transform: translateY(-2px); }
+  .btn:focus-visible { outline: 3px solid var(--accent2); outline-offset: 3px; }
   .stats { display: flex; gap: 34px; flex-wrap: wrap; margin-top: 30px; }
   .stat .n { font-size: 2.1rem; font-weight: 700; color: var(--accent); font-family: var(--mono); }
   .stat .l { color: var(--muted); font-size: .8rem; text-transform: uppercase; letter-spacing: 1px; }
+  .update-card { width: min(760px, 100%); margin: 28px auto 0; padding: 18px 20px; display: grid; grid-template-columns: 1fr auto; gap: 12px 20px; align-items: center; text-align: left; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+  .update-card h2 { font-size: 1rem; margin: 0; }
+  .update-card p { color: var(--muted); font-size: .86rem; margin-top: 5px; }
+  .update-card .update-command { grid-column: 1 / -1; display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .update-card code { flex: 1; min-width: 220px; padding: 10px 12px; overflow-x: auto; border-radius: 8px; background: var(--code-bg); color: var(--code-fg); font: .78rem var(--mono); }
+  .update-card .update-status { grid-column: 1 / -1; min-height: 1.2em; color: var(--muted); font-size: .78rem; }
+  @media (max-width: 560px) { .update-card { grid-template-columns: 1fr; } .update-card .update-command, .update-card .update-status { grid-column: auto; } }
 
   h2 { font-size: clamp(1.9rem, 4.6vw, 3.4rem); font-weight: 700; letter-spacing: -2px; margin-bottom: 14px; line-height: 1.06; }
   .lead { color: var(--muted); font-size: 1.08rem; max-width: 640px; margin-bottom: 42px; }
@@ -434,18 +442,30 @@
 <section class="stage" id="top">
   <div class="eyebrow" id="eyebrow"></div>
   <h1>Give your AI <em>the whole ocean.</em></h1>
-  <p class="sub"><strong>osien</strong> is a portable toolchain that installs itself into any AI. Forty-five tools for memory, verification, parallel work and context discipline &mdash; wired in one prompt. Small model or big, known or unknown: it works.</p>
+  <p class="sub"><strong>osien</strong> is a portable toolchain that installs itself into any AI. A growing set of tools for memory, verification, parallel work and context discipline &mdash; wired in one prompt. Small model or big, known or unknown: it works.</p>
   <div class="actions">
     <a class="btn primary" href="#install">Get the one-liner</a>
-    <a class="btn" href="tools.html">Browse 45 tools</a>
+    <a class="btn" href="tools.html">Browse <span data-live-count>57</span> tools</a>
     <a class="btn" href="https://github.com/kabirprokk/Osien-Stack" target="_blank" rel="noopener">GitHub</a>
   </div>
   <div class="stats">
-    <div class="stat"><div class="n" data-count="45">45</div><div class="l">MCP tools</div></div>
+    <div class="stat"><div class="n" data-live-count>57</div><div class="l">MCP tools</div></div>
     <div class="stat"><div class="n" data-count="14">14</div><div class="l">crew agents</div></div>
     <div class="stat"><div class="n">MIT</div><div class="l">licensed</div></div>
     <div class="stat"><div class="n">1</div><div class="l">prompt to install</div></div>
   </div>
+  <aside class="update-card" aria-labelledby="updateTitle">
+    <div>
+      <h2 id="updateTitle">Latest Osien Stack update</h2>
+      <p><span id="liveVersion">v1.1.0</span> · <span id="liveToolCount">57 tools</span> · source updated <time id="liveUpdated" datetime="2026-10-24">October 24, 2026</time></p>
+    </div>
+    <a class="btn" href="https://github.com/kabirprokk/Osien-Stack" target="_blank" rel="noopener noreferrer">View source</a>
+    <div class="update-command">
+      <code id="updateCommand">git pull &amp;&amp; cd mcp-server &amp;&amp; npm install &amp;&amp; npm test</code>
+      <button class="btn primary" id="copyUpdate" type="button">Copy update steps</button>
+    </div>
+    <p class="update-status" id="updateStatus" role="status" aria-live="polite">Showing the built-in release snapshot. Copy these steps and run them from your Osien Stack repository.</p>
+  </aside>
 </section>
 
 <section id="why">
@@ -487,7 +507,7 @@
 
 <section id="what">
   <h2 class="reveal">What it does</h2>
-  <p class="lead reveal">45 forged tools, short names, sharp descriptions. The model spends tokens on work, not on choosing. <a href="tools.html" style="color:var(--accent)">Browse all 45 &rarr;</a></p>
+  <p class="lead reveal">A current catalog of forged tools, short names, sharp descriptions. The model spends tokens on work, not on choosing. <a href="tools.html" style="color:var(--accent)">Browse all <span data-live-count>57</span> &rarr;</a></p>
   <div class="bento">
     <div class="cell"><div class="tag">memory &middot; 7</div><h3>ctx_recall, ctx_save</h3><p>soul_read, soul_write, fast_note, task_state, state_reset.</p></div>
     <div class="cell"><div class="tag">search &middot; 3</div><h3>smart_grep, read_slice</h3><p>impact_analyze. Locations and lines, never whole files.</p></div>
@@ -527,7 +547,7 @@
   <p class="lead reveal">One MCP server over stdio. Any AI talks to it like a native tool. Your AI keeps its brain; Osien-Stack gives it hands.</p>
   <div class="bento">
     <div class="cell row2"><div class="tag">step 1</div><div class="big">01</div><h3>AI fetches the repo</h3><p>One prompt: "install osien-stack". Clones, npm installs, wires the MCP server, copies the skills. Done.</p></div>
-    <div class="cell row2"><div class="tag">step 2</div><div class="big">02</div><h3>Tools come online</h3><p>45 tools register over stdio. Memory, verify, search, state, city mode, all callable by name.</p></div>
+    <div class="cell row2"><div class="tag">step 2</div><div class="big">02</div><h3>Tools come online</h3><p>The current tools register over stdio. Memory, verify, search, state, city mode, all callable by name.</p></div>
     <div class="cell row2"><div class="tag">step 3</div><div class="big">03</div><h3>AI uses them</h3><p>SITE LAW, TOOL-FIRST and PARALLELISM are auto-loaded. It stops hand-rolling and starts forging.</p></div>
     <div class="cell span6"><div class="tag">step 4</div><div class="big">04</div><h3>You ship faster</h3><p>93% fewer tokens, 0.49ms cached reads, parallel batch ops. Same model, ten times the throughput.</p></div>
   </div>
@@ -544,10 +564,10 @@
   <p class="lead reveal">The questions every AI asks before installing.</p>
   <div class="faq" id="faq">
     <div class="faq-item"><div class="faq-q">Does it work with my AI?<span class="plus">+</span></div><div class="faq-a">Yes. Any MCP-compatible client: opencode, Claude Code, Cursor, Cline, Windsurf. It degrades gracefully elsewhere.</div></div>
-    <div class="faq-item"><div class="faq-q">Is it free?<span class="plus">+</span></div><div class="faq-a">MIT licensed, free forever. No API keys required for the core 45 tools.</div></div>
+    <div class="faq-item"><div class="faq-q">Is it free?<span class="plus">+</span></div><div class="faq-a">MIT licensed, free forever. No API keys required for the core tools.</div></div>
     <div class="faq-item"><div class="faq-q">How long to install?<span class="plus">+</span></div><div class="faq-a">One prompt. The AI clones, installs, wires and runs the smoke test. About 60 seconds.</div></div>
     <div class="faq-item"><div class="faq-q">Does it slow my AI down?<span class="plus">+</span></div><div class="faq-a">No. Cached reads are 0.49ms and prompts are 50% shorter. It makes your AI faster.</div></div>
-    <div class="faq-item"><div class="faq-q">Can I use just some tools?<span class="plus">+</span></div><div class="faq-a">Yes. All 45 are exposed, but your AI only calls what it needs. Unused tools cost nothing.</div></div>
+    <div class="faq-item"><div class="faq-q">Can I use just some tools?<span class="plus">+</span></div><div class="faq-a">Yes. All current tools are exposed, but your AI only calls what it needs. Unused tools cost nothing.</div></div>
   </div>
 </section>
 
@@ -571,6 +591,7 @@
 
 <div class="toast" id="toast">Copied to clipboard</div>
 
+<script src="live-data.js"></script>
 <script>
 (function () {
   'use strict';
@@ -745,9 +766,10 @@
   track.innerHTML = html;
 
   /* ---------- eyebrow typed once ---------- */
-  var eb = $('#eyebrow'), ebText = '// v1.1.0 · 45 tools · MIT · any AI', ei = 0;
+  var eb = $('#eyebrow'), ebText = '// v1.1.0 · 57 tools · MIT · any AI', ei = 0;
   if (eb && !reduce) {
     (function type() {
+      if (eb.dataset.liveApplied === 'true') return;
       if (ei <= ebText.length) { eb.textContent = ebText.slice(0, ei++); setTimeout(type, 42); }
       else { eb.textContent = ebText; }
     })();
@@ -781,6 +803,40 @@
     if (navigator.clipboard) navigator.clipboard.writeText(INSTALL_PROMPT).catch(function () {});
     var t = $('#toast'); t.classList.add('show'); setTimeout(function () { t.classList.remove('show'); }, 1900);
   };
+
+  var copyUpdate = $('#copyUpdate'), updateStatus = $('#updateStatus');
+  if (copyUpdate) copyUpdate.onclick = function () {
+    var command = $('#updateCommand').textContent;
+    function copied() { updateStatus.textContent = 'Update steps copied. Run them from your Osien Stack repository; this website never changes local files.'; }
+    if (!navigator.clipboard) { updateStatus.textContent = 'Clipboard access is unavailable. Select and copy the update steps above.'; return; }
+    navigator.clipboard.writeText(command).then(copied).catch(function () {
+      updateStatus.textContent = 'Copy failed. Select and copy the update steps above.';
+    });
+  };
+
+  if (window.OsienLiveData) {
+    window.OsienLiveData.fetchSources().then(function (source) {
+      var count = source.tools.length;
+      var updated = $('#liveUpdated');
+      $('#liveVersion').textContent = 'v' + source.version;
+      $('#liveToolCount').textContent = count + ' tools';
+      document.querySelectorAll('[data-live-count]').forEach(function (node) { node.textContent = count; });
+      ebText = '// v' + source.version + ' · ' + count + ' tools · MIT · any AI';
+      if (eb) { eb.dataset.liveApplied = 'true'; eb.textContent = ebText; }
+      if (source.updatedAt) {
+        var date = new Date(source.updatedAt);
+        updated.dateTime = date.toISOString();
+        updated.textContent = new Intl.DateTimeFormat(undefined, { dateStyle: 'long', timeZone: 'UTC' }).format(date);
+        updateStatus.textContent = 'Live from the public Osien Stack repository. Update steps are instructions only; run them yourself.';
+      } else {
+        updated.textContent = 'date unavailable';
+        updated.removeAttribute('datetime');
+        updateStatus.textContent = 'Live version and tool count from the public repository; commit date is unavailable. Update steps are instructions only.';
+      }
+    }).catch(function () {
+      updateStatus.textContent = 'GitHub is unavailable. Showing the built-in release snapshot; copy and run the update steps yourself.';
+    });
+  }
 
   /* ---------- counters ---------- */
   document.querySelectorAll('[data-count]').forEach(function (el) {
