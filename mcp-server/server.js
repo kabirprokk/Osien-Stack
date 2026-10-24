@@ -100,6 +100,7 @@ function defineTool(name, description, shape, handler) {
   return server.tool(name, description, shape, handler);
 }
 process.stderr.write("osien-tools MCP SDK mode: " + (SDK_HAS_REGISTER_TOOL ? "registerTool" : "legacy tool()") + "\n");
+require("./driftpost").registerDriftpostTools(server, defineTool);
 
 // --- ctx_recall ---
 defineTool("ctx_recall", "Load project memory by role/part/grep.", {

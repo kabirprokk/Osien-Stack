@@ -8,7 +8,7 @@
   <a href="https://github.com/kabirprokk/Osien-Stack"><img src="https://img.shields.io/github/stars/kabirprokk/Osien-Stack?style=flat-square" alt="stars"></a>
   <a href="https://github.com/kabirprokk/Osien-Stack/blob/main/LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square" alt="license"></a>
   <a href="https://kabirprokk.github.io/Osien-Stack/"><img src="https://img.shields.io/badge/website-live-brightgreen?style=flat-square" alt="website"></a>
-  <img src="https://img.shields.io/badge/tools-45-orange?style=flat-square" alt="tools">
+  <img src="https://img.shields.io/badge/tools-57-orange?style=flat-square" alt="tools">
   <img src="https://img.shields.io/badge/MCP-compatible-purple?style=flat-square" alt="mcp">
 </p>
 
@@ -25,7 +25,7 @@ step fails. Report progress after each major step.
 pm install\ in \mcp-server/\, wire it as an MCP server named \osien-tools\,
 > copy \skills/\, \commands/\, \gents/\ into your config dir, then run
 > \
-pm test\ in \mcp-server/\ to confirm 45 tools pass.
+pm test\ in \mcp-server/\ to confirm 57 tools pass.
 
 Works with: opencode, Claude Code, Cursor, Cline, Windsurf, or any MCP client.
 
@@ -37,7 +37,7 @@ an MCP server. Works with any MCP-compatible CLI (opencode, Claude Code, Cursor,
 Cline, Windsurf) and degrades gracefully elsewhere.
 
 ## Contents
-- `mcp-server/` - Node MCP server exposing 45 forged tools via stdio. Any MCP client can use these:
+- `mcp-server/` - Node MCP server exposing 57 tools via stdio. Any MCP client can use these:
   - Memory: ctx_recall, ctx_save, soul_read, soul_write, fast_note, task_state, state_reset
   - Search/Read: smart_grep, read_slice, impact_analyze
   - Verify: verify_chain, security_scan, test_gap, repro_capsule, context_budget, consensus
@@ -45,6 +45,7 @@ Cline, Windsurf) and degrades gracefully elsewhere.
   - Auto-heal: auto_heal, rollback_on_failure, perf_regression, test_synthesizer, memory_compactor
   - Code quality: dead_code_detector, dependency_graph, changelog_generator, token_budget_enforcer, architecture_drift, session_replay, auto_document, feature_flag_manager, license_checker, schema_validator, cost_estimator, self_critique_loop
   - City Mode (AI-to-AI): city_status, city_post, city_read, city_broadcast, city_mode, city_clear
+  - Driftpost publishing: driftpost_connect, driftpost_finish_connect, driftpost_connect_account, driftpost_accounts, driftpost_disconnect_account, driftpost_publish_video, driftpost_publish_status, driftpost_list_schedules, driftpost_cancel_schedule, driftpost_disconnect
 - `skills/` — portable skills (osien-3d-forge, logic, ai-manager, caveman, stop-slop) as SKILL.md + examples.
 - `commands/` — slash-command templates (flow-perfect, auto-perfect, make-3d-perfect, mind-rotate, etc.).
 - `agents/` — agent definitions (builder, debugger, planner, reviewer, scout, etc.).
@@ -69,6 +70,8 @@ Add to your MCP client config:
 }
 ```
 Environment: `OSIEN_MEMORY_ROOT` (default `~/.config/opencode/memory`) controls where memory is stored.
+
+Driftpost uses its production API by default. Set `DRIFTPOST_API_URL` only for a self-hosted API. Call `driftpost_connect`, approve Osien in the opened browser, then call `driftpost_finish_connect`. The scoped token is stored in `~/.config/osien-stack/` with owner-only permissions. Install `skills/driftpost/` in your AI client for guided account selection and publishing.
 
 Verify and measure:
 ```bash

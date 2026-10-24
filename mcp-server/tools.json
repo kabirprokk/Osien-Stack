@@ -187,4 +187,45 @@
     "name": "batch",
     "desc": "Run multiple ops in parallel in ONE call: read (file,start,end), grep (pattern,path), ctx (role). Returns combined results. Fastest way to do parallel tool work."
   }
+,
+  {
+    "name": "driftpost_connect",
+    "desc": "Start secure browser approval to connect Osien Stack with Driftpost."
+  },
+  {
+    "name": "driftpost_finish_connect",
+    "desc": "Complete browser approval and store the scoped local connection."
+  },
+  {
+    "name": "driftpost_connect_account",
+    "desc": "Connect a social account using Driftpost provider OAuth."
+  },
+  {
+    "name": "driftpost_accounts",
+    "desc": "List connected Driftpost social accounts."
+  },
+  {
+    "name": "driftpost_disconnect_account",
+    "desc": "Disconnect one selected social account."
+  },
+  {
+    "name": "driftpost_publish_video",
+    "desc": "Stream a video to Driftpost and publish or schedule it across selected platforms."
+  },
+  {
+    "name": "driftpost_publish_status",
+    "desc": "Check the status of a Driftpost publishing job."
+  },
+  {
+    "name": "driftpost_list_schedules",
+    "desc": "List scheduled and recent Driftpost posts."
+  },
+  {
+    "name": "driftpost_cancel_schedule",
+    "desc": "Cancel a scheduled Driftpost post."
+  },
+  {
+    "name": "driftpost_disconnect",
+    "desc": "Revoke the Osien Stack Driftpost connection."
+  }
 ]
