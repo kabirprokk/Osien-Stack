@@ -3,8 +3,8 @@
 
   var REPO = 'https://raw.githubusercontent.com/kabirprokk/Osien-Stack/main';
 
-  async function fetchJson(url, signal) {
-    var response = await fetch(url, { signal: signal, cache: 'no-store' });
+  async function fetchJson(url, signal, cacheMode) {
+    var response = await fetch(url, { signal: signal, cache: cacheMode || 'no-store' });
     if (!response.ok) throw new Error('Live source request failed');
     return response.json();
   }
@@ -27,15 +27,19 @@
     var controller = new AbortController();
     var timeout = setTimeout(function () { controller.abort(); }, 8000);
     try {
+      var commits = await fetchJson('https://api.github.com/repos/kabirprokk/Osien-Stack/commits?per_page=1', controller.signal, 'default')
+        .catch(function () { return null; });
+      var latest = Array.isArray(commits) && commits[0] && /^[a-f0-9]{40}$/i.test(commits[0].sha || '')
+        ? commits[0]
+        : null;
+      var revision = latest ? latest.sha : 'main';
       var values = await Promise.all([
-        fetchJson(REPO + '/mcp-server/package.json', controller.signal),
-        fetchJson(REPO + '/mcp-server/tools.json', controller.signal),
-        fetchJson('https://api.github.com/repos/kabirprokk/Osien-Stack/commits?per_page=1', controller.signal)
-          .catch(function () { return null; }),
+        fetchJson(REPO.replace('/main', '/' + revision) + '/mcp-server/package.json', controller.signal),
+        fetchJson(REPO.replace('/main', '/' + revision) + '/mcp-server/tools.json', controller.signal),
       ]);
       var result = validateSources(values[0], values[1]);
-      var date = values[2] && values[2][0] && values[2][0].commit && values[2][0].commit.committer &&
-        values[2][0].commit.committer.date;
+      var date = latest && latest.commit && latest.commit.committer && latest.commit.committer.date;
+      result.revision = latest ? latest.sha : null;
       result.updatedAt = typeof date === 'string' && Number.isFinite(Date.parse(date)) ? date : null;
       return result;
     } finally {

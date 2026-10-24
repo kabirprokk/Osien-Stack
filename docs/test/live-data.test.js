@@ -14,18 +14,20 @@ function loadLiveData(fetchImpl) {
 }
 
 test("loads and validates the current Osien version and tool catalog", async () => {
+  const revision = "f11a82b9ffea0a7565db48f7858d10403af367ca";
   const sources = {
-    "https://raw.githubusercontent.com/kabirprokk/Osien-Stack/main/mcp-server/package.json": {
+    [`https://raw.githubusercontent.com/kabirprokk/Osien-Stack/${revision}/mcp-server/package.json`]: {
       name: "osien-tools",
       version: "2.0.0",
     },
-    "https://raw.githubusercontent.com/kabirprokk/Osien-Stack/main/mcp-server/tools.json": [
+    [`https://raw.githubusercontent.com/kabirprokk/Osien-Stack/${revision}/mcp-server/tools.json`]: [
       { name: "ctx_recall", desc: "Read project memory." },
       { name: "driftpost_publish", desc: "Publish a video." },
     ],
-    "https://api.github.com/repos/kabirprokk/Osien-Stack/commits?per_page=1": [
-      { commit: { committer: { date: "2026-10-24T10:00:00Z" } } },
-    ],
+    "https://api.github.com/repos/kabirprokk/Osien-Stack/commits?per_page=1": [{
+      sha: revision,
+      commit: { committer: { date: "2026-10-24T10:00:00Z" } },
+    }],
   };
   const liveData = loadLiveData(async (url) => ({
     ok: true,
