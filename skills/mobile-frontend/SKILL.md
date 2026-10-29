@@ -1,0 +1,147 @@
+---
+name: mobile-frontend
+description: Composite skill for quality mobile-first frontend — codified rules (spacing, type scale, anchors, safe-area, tap-targets), build, and multi-level verification with per-element menu/nav debugging.
+license: MIT
+metadata:
+  version: 1.0.2
+when_to_use: "Build or audit quality mobile-first frontend: spacing, tap-targets, safe-area, nav/menu debugging, mobile Lighthouse. Triggers: 'mobile-first', 'адаптив под телефон', 'проверь мобилку', 'mobile QA', 'гамбургер не работает', 'mobile lighthouse 100'. Example: 'Make this page work great on phones.'"
+---
+
+# mobile-frontend
+
+Композитный скилл для качественной **мобильной вёрстки и фронтенда**: от правил
+(отступы, шрифты, якоря, токены) через сборку к многоуровневой проверке с
+отладкой каждого элемента — включая меню и навигацию — и финальному аудиту перед
+сдачей. Это «дирижёр»: он держит единый воркфлоу и перенаправляет узкие задачи
+соседним скиллам (`frontend-design-taste`, `frontend-perfection`, `/visual-qa`,
+`/frontend`), а сам владеет мобильными правилами и чек-листом отладки навигации.
+
+## Когда использовать
+
+- «сделай мобильную версию», «mobile-first вёрстка», «адаптив под телефон»
+- «проверь мобилку», «аудит мобильной вёрстки», «mobile QA»
+- «меню/гамбургер не работает на телефоне», «якоря упираются в шапку»
+- «доведи мобильный фронт до идеала», «mobile lighthouse 100»
+
+## Не подменяйте этим скиллом
+
+- Чистая эстетика/палитра без мобильного контекста → `frontend-design-taste`
+- Глубокий a11y-аудит (ARIA, контраст, фокус-ловушки, скринридер) → `frontend-a11y`
+- Глубокий perf-аудит (заголовки, вес бандла, CWV, resource-hints) → `frontend-performance`
+- E2E/визуальные/контрактные тесты → `frontend-testing`
+- Быстрый Lighthouse/контраст/токены/OG на десктопе → `frontend-perfection`
+- Один конкретный баг в меню → см. `references/debug-menu-nav.md`, но воркфлоу
+  всё равно прогоняйте по уровням.
+
+---
+
+## Необходимые мобильные правила (база)
+
+Все числа — в `references/tokens.md`. Кратко:
+
+1. **Tap-target ≥ 44×44px** для любой интерактивной цели (кнопка, ссылка-иконка,
+   пункт меню). Меньше — не прощается.
+2. **Нет горизонтального скролла** (`overflow-x` на `<html>/<body>` недопустим как
+   постоянное состояние; ловите элемент-нарушитель через `scrollWidth > clientWidth`).
+3. **Якоря под фиксированной шапкой**: `:target` и `scroll-margin-top` равны
+   высоте sticky-хедера + отступ (обычно `scroll-margin-top: calc(var(--header-h) + 16px)`).
+4. **Safe-area**: `viewport-fit=cover` + `env(safe-area-inset-*)` для нижней панели
+   (home indicator) и чёлки. Меню/CTA не должны упираться в индикатор.
+5. **Шрифты**: `font-display: swap`, мобильная тип-шкала на `clamp()`,
+   базовый размер ≥ 16px для body (чтобы не зумíло при фокусе поля в iOS).
+6. **Токены, а не магия**: все цвета/отступы/радиусы — через CSS-переменные,
+   вне токенов — только `transparent`/`currentColor`.
+7. **Контраст WCAG AA**: 4.5:1 текст, 3:1 крупный/UI. Проверяется люменесцентно,
+   не «на глаз».
+8. **prefers-reduced-motion**: анимации меню/переходов защищены
+   `@media (prefers-reduced-motion: reduce)`.
+
+---
+
+## Многоуровневый воркфлоу
+
+Каждый уровень — отдельная фаза со своим критерием прохода. Не переходите дальше,
+пока уровень не «зелёный».
+
+### Уровень 0 — Foundations (правила и токены)
+- Заведите `:root` с токенами из `references/tokens.md` (spacing 4/8-сетка,
+  type-scale, breakpoints, `--header-h`, safe-area).
+- Проверьте `viewport` мета: `width=device-width, initial-scale=1, viewport-fit=cover`.
+- Убедитесь, что якорные секции имеют `id` и `scroll-margin-top`.
+
+### Уровень 1 — Build (сборка)
+- Mobile-first: базовые стили = мобильные, расширения — через `min-width`.
+- Картинки: `width:100%`, `height:auto`, `loading="lazy"`, `decoding="async"`,
+  желательно `srcset`/`sizes`.
+- Нет фиксированных ширин в `px` у блоков контента; контейнер — `max-width` + `padding`.
+- Интерактив → минимум 44px по меньшей стороне.
+
+### Уровень 2 — Visual QA (Playwright/Chromium)
+Прогоняйте реальные вьюпорты: **320, 360, 390, 414, 768**. Для каждого:
+- скриншот + проверка `document.documentElement.scrollWidth <= window.innerWidth`
+  (нет горизонтального скролла);
+- замер tap-target: все `<a>/<button>` ≥ 44px (скрипт в `references/mobile-checklist.md`);
+- шрифты загрузились (нет FOIT-прыжка — `document.fonts.ready`);
+- safe-area: нижний CTA/меню не перекрывается индикатором (`env(safe-area-inset-bottom)`);
+- якоря: клик по `#id` → `getBoundingClientRect().top >= headerBottom - 1`.
+
+> Эстетику и «не шаблонный вид» сверяйте через `frontend-design-taste` и `/visual-qa`.
+> Контраст/порядок заголовков — через `frontend-perfection`.
+
+### Уровень 3 — Nav & Menu audit (отладка навигации)
+Самый частый источник багов. Полный проигрыш — в `references/debug-menu-nav.md`.
+Минимум:
+- гамбургер: `aria-expanded` синхронен с видимостью; открытие/закрытие по тапу;
+- пункт меню ведёт на цель **и закрывает меню**;
+- фокус-ловушка в открытом меню (Tab не уходит наружу), `Esc` закрывает;
+- якорные/глубокие ссылки скроллятся под шапку корректно;
+- клавиатурная навигация: видимый `:focus-visible`, логичный `Tab`-порядок;
+- z-index: меню выше контента и шапки, но ниже модалок/тостов.
+
+### Уровень 4 — Perf (mobile Lighthouse)
+Через `frontend-perfection` (`skills/frontend-perfection/scripts/audit.js`, режим mobile):
+- CLS < 0.1, LCP < 2.5s, INP < 200ms на мобильном профиле;
+- нет блокирующего JS/CSS, шрифты не держат CLS.
+
+### Уровень 5 — Fix & re-verify loop
+- Исправляйте находки строго по уровням (2→3→4), не «все сразу».
+- После правок **перепроверяйте затронутые уровни**, пока не станет зелёным.
+- Финал: подпись (sign-off) — см. критерии ниже.
+
+---
+
+## Маршрутизация к соседям
+
+| Подзадача | Скилл/команда |
+|---|---|
+| Палитра, шрифты, «вкус», анти-шаблон | `frontend-design-taste` |
+| Lighthouse, контраст, токены, OG, Security/Privacy/i18n | `frontend-perfection` |
+| Глубокий a11y (ARIA, фокус, скринридер, axe) | `frontend-a11y` |
+| Глубокий perf (заголовки, бандл, CWV, hints) | `frontend-performance` |
+| E2E / визуальная регрессия / контракт API | `frontend-testing` |
+| Скриншот-сверка UI после сборки | `/visual-qa` |
+| Общая оркестрация фронт-задачи | `/frontend` |
+| Баг меню/навигации в одном месте | `references/debug-menu-nav.md` |
+
+## Критерии сдачи (sign-off)
+
+- ✅ Вьюпорты 320–768: нет горизонтального скролла, контент в зоне safe-area.
+- ✅ Все интерактивы ≥ 44px; контраст AA пройден люменесцентно.
+- ✅ Меню: открытие/закрытие, `aria-expanded`, фокус-ловушка, `Esc`, закрытие по пункту.
+- ✅ Якоря приземляются под шапку (scroll-margin-top).
+- ✅ Mobile Lighthouse: CLS/LCP/INP в норме.
+- ✅ Эстетика не «шаблонная» (пройден гейт `frontend-design-taste`).
+
+Если хотя бы один пункт красный — уровень не пройден, возвращаемся к правкам.
+
+## Boundaries
+
+- Do not use for backend/API work or a desktop-only audit.
+
+## Evidence protocol
+
+Before editing, record the target routes, supported viewport matrix, browser/device assumptions, and any existing test command. After editing, run the narrowest available browser checks at 320, 360, 390, 414, and 768 pixels, then repeat the affected checks after each fix. A screenshot alone does not prove keyboard, focus, safe-area, or tap-target behavior.
+
+## Failure handling
+
+Report blocked checks separately from failed checks: missing browser tooling, unavailable pages, and pre-existing application errors must not become a false PASS. Include viewport, selector, measured dimensions, command, exit status, and artifact path for every failure.

@@ -2,7 +2,7 @@
 name: data-wrangler
 description: SQLite, postgres, supabase, mongodb, notion, linear data tasks
 mode: all
-model: opencode/muse-spark-1.3-contributor-free
+model: opencode/beam-free
 permission:
   edit: allow
   bash: allow

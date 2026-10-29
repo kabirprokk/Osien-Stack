@@ -1,0 +1,79 @@
+---
+name: video-script-writer
+description: "Создание структурированного сценария видео из темы: Hook (захват внимания в первые секунды), Body (сцены с тайм-слотами: проблема, основы, разбор, ошибки, совет), CTA (призыв к действию). Скрипт video_script_writer.py генерирует markdown-сценарий с таймкодами, хронометражем (секунды), языком (ru/en), кастомным CTA, выбором полного сценария или outline. Триггеры: 'сценарий видео', 'video script', 'напиши сценарий', 'план видео', 'структура ролика', 'video outline', 'сценарий для youtube', 'план ролика'."
+license: MIT
+metadata:
+  author: best
+  version: 1.0.1
+compatibility: "Requires Python 3 stdlib"
+when_to_use: "Use when you need a structured video script or outline (hook, scenes, CTA) from a topic. Triggers: 'video script', 'сценарий видео', 'план видео', 'video outline', 'структура ролика', 'напиши сценарий'. Examples: 'Write a YouTube script about X' / 'Сделай план ролика'."
+---
+
+# Video Script Writer
+
+> Генерация markdown-сценария видео из одной темы: хук, сцены с таймками,
+> призыв к действию — структура, которую можно сразу отдать монтажёру.
+
+Загружай этот скилл когда нужно **быстро получить структуру видео-ролика**:
+чтение скринкаста, обучалки на YouTube, промо, тик-тока или клипа без
+рукописной раскладки по секциям и таймкодам.
+
+## 🎯 When to use
+
+Use this skill when:
+- Есть тема/идея и нужно сразу видеть структуру ролика (хук, тело, CTA)
+- Нужен хронометраж по секциям (сколько секунд на хук, сцена, призыв)
+- Просят «напиши сценарий видео», «сделай план ролика», «video script»
+- Нужен как первый драфт перед проработкой реплик вручную
+
+Do NOT use when:
+- Нужен готовый озвученный текст от А до Я — скилл даёт структуру и зацепки,
+  реплики/детали пишет автор по сценам
+- Нужна презентация (не видео) — это `presentation-maker`
+
+## 📦 Files
+
+- `SKILL.md` — этот файл
+- `scripts/video_script_writer.py` — генератор сценария (Python 3 stdlib)
+
+## 🧰 Usage
+
+```bash
+# Полный сценарий (по умолч)
+python3 skills/video-script-writer/scripts/video_script_writer.py --topic "Как собрать презентацию за 20 минут"
+
+# Хронометраж 90 секунд, английский язык, свой CTA:
+python3 video_script_writer.py --topic "MCP for agents" --duration 90 --lang en --cta "Try it now"
+
+# Только план (outline) — заголовки секций с таймкодами:
+python3 video_script_writer.py --topic "Отчёт в PDF" --format outline
+
+# В файл:
+python3 video_script_writer.py --topic "Тема" -o script.md
+```
+
+## 🧩 Структура вывода
+
+| Секция | Интервал (пример для 60с) | Назначение |
+|--------|--------------------------|------------|
+| **Hook** | 0:00–0:06 | захват внимания первой фразой |
+| **Body** | 0:06–0:52 | 5 сцен: Проблема → Основы → Разбор → Ошибки → Совет |
+| **CTA** | 0:52–1:00 | призыв к действию (подписка/лайк/ссылка) |
+| Сводка | — | таблица таймкодов для монтажа |
+
+Сцен — от 1 до 5 (`--scene`), хронометраж от 30 секунд (`--duration`),
+язык `ru`/`en` (`--lang`), свой `--cta`.
+
+## 🔬 Проверка результата
+
+- Секции Hook/Body(Хлved scene)/CTA присутствуют, таймкоды не перекрываются,
+  сумма интервалов равна хронометражу.
+- Для `--format outline` вывод — только заголовки секций с интервалами.
+
+## Boundaries
+
+- Do not use to generate presentation decks or edit video files.
+
+## Evidence and completion gate
+
+Run the documented command against the user’s actual input. Report the command, exit status, files changed or produced, and relevant stdout/stderr. Separate blocked or pre-existing failures from failures introduced by the current work. Do not call the result complete when the script was only described or when an artifact was not reopened and checked.

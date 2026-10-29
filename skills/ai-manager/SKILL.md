@@ -54,7 +54,7 @@ At 80% usage: Plugin fires `usage-warning` event → Monitor agent creates summa
 ## IDE Mode
 
 Run `/ide` to launch the AI Manager IDE - a graphical interface with 4 terminal panels:
-- Top Left: ai-manager (muse-spark-1.3-contributor-free) - Orchestrator
+- Top Left: ai-manager (space-bunny-free) - Orchestrator
 - Top Right: git-pusher (ling-3.0-flash-fin-free) - Git Specialist
 - Bottom Left: model-creator (union-alpha) - 3D Model Creator
 - Bottom Right: physics-engine (nemotron-3.5-lightning-free) - Physics Engine

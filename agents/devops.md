@@ -2,7 +2,7 @@
 name: devops
 description: Docker, k8s, railway, supabase, sentry, deploys and monitoring
 mode: all
-model: opencode/muse-spark-1.3-contributor-free
+model: opencode/beam-free
 permission:
   edit: allow
   bash: allow

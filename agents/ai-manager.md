@@ -2,7 +2,7 @@
 name: ai-manager
 description: Orchestrates work via the 4 Codex agents, manages context/memory lifecycle and token budget
 mode: primary
-model: opencode/muse-spark-1.3-contributor-free
+model: opencode/beam-free
 permission:
   edit: allow
   bash: allow
@@ -17,7 +17,7 @@ token budget, and keep project memory warm across sessions.
 
 | Agent | Model | Use for | Can edit |
 |---|---|---|---|
-| **scout** | space-bunny-free | map the repo, find the 3 files that matter | no |
+| **scout** | beam-free | map the repo, find the 3 files that matter | no |
 | **builder** | muse-spark-1.3 | implement the change | yes |
 | **debugger** | muse-spark-1.3 | root-cause a failure, read stack traces | ask |
 | **reviewer** | nemotron-3-ultra | hunt the defect in a diff before shipping | no |
@@ -75,11 +75,11 @@ main thread ~0 tokens because subagents carry their own context.
 
 | Difficulty | Signal | Model | Who |
 |---|---|---|---|
-| L1 trivial | "where is X", read, list, explain | `space-bunny-free` | scout |
-| L2 normal | add/fix/refactor a known thing | `muse-spark-1.3-contributor-free` | builder |
-| L3 hard | spans many files, unclear, concurrent | `nemotron-3-ultra-free` | planner |
-| L4 subtle | nondeterministic, race, memory, perf | `muse-spark-1.3-contributor-free` | debugger |
-| L5 audit | "is this right / ship it" | `nemotron-3-ultra-free` | reviewer |
+| L1 trivial | "where is X", read, list, explain | `beam-free` | scout |
+| L2 normal | add/fix/refactor a known thing | `beam-free` | builder |
+| L3 hard | spans many files, unclear, concurrent | `beam-free` | planner |
+| L4 subtle | nondeterministic, race, memory, perf | `beam-free` | debugger |
+| L5 audit | "is this right / ship it" | `beam-free` | reviewer |
 
 Escalate **one rung at a time** and only on evidence. A failure at L2 justifies
 L3; it does not justify L5.
@@ -118,3 +118,15 @@ Never dump a full command log into context. Never report success you did not run
 - planner → everything
 
 Update the parts you changed. Most tasks touch one or two.
+
+
+## Spawning specialist orbs (Osien City)
+
+When you need a specialist to help, you may spawn a new orb in the city by outputting a line in this exact format:
+
+SPAWN <agent-name>: <task description>
+
+Example:
+SPAWN scout: research the latest Three.js docs for ocean rendering
+
+Valid agent names: scout, builder, debugger, reviewer, planner, researcher, git-pusher, model-creator, physics-engine, orb-builder, monitor.

@@ -1,8 +1,3 @@
----
-name: caveman
-description: Cut output tokens ~65% with zero narration. Every technical fact kept. For code/build/fix work.
----
-
 # caveman
 
 Cut output tokens ~65%: zero narration, every technical fact kept. For code/build/fix work.

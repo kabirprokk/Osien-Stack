@@ -1,0 +1,127 @@
+---
+name: skill-suggester
+description: "Skill recommendation for AI agents from the agent-skills library. Reads the master catalog index.json (default ~/Projects/agent-skills/index.json, override with env AGENT_SKILLS_INDEX or --index), scores triggers and descriptions, returns top-5 with relevance plus up to 3 combos for multi-step tasks. Supports ad-hoc apply: prints SKILL.md paths so the agent can read and apply a skill's instructions directly even if it is not installed. Triggers: 'какой скилл использовать', 'skill suggestion', 'suggest skill', 'рекомендовать скилл', 'recommend a skill', 'which skill', 'подобрать навык'."
+license: MIT
+metadata:
+  author: best
+  version: 1.1.1
+compatibility: "Requires Python3; reads index.json"
+when_to_use: "Use when user doesn't know which skill to use: 'which skill', 'suggest skill', 'recommend a skill', 'какой скилл использовать', 'подобрать навык', 'рекомендовать скилл'. Example: 'What skill should I use for SEO?' / 'Какой скилл взять для репозитория?'."
+---
+
+# Skill Suggester — подбор скиллов по задаче
+
+Помощник, который по свободному описанию задачи/намерения пользователя подсказывает,
+какой скилл из библиотеки `agent-skills` использовать и как их комбинировать.
+
+## When to use
+
+Загружай этот скилл, когда пользователь **не знает, какой скилл применить**:
+
+- «какой скилл использовать для …», «какой skill подойдёт», «что выбрать»
+- «подбери инструмент / команду / навык под задачу»
+- «рекомендуй скилл», «suggest skill», «skill suggestion»
+- задача сформулирована свободным текстом, но без явного указания скилла
+- нужно понять, какие скиллы можно объединить в цепочку для многоэтапной работы
+
+## Do NOT use
+
+- Когда задача уже явно называет скилл («сделай презентацию» → `presentation-maker`,
+  «сгенерируй тестовые картинки» → `test-graphics`) — загружай его напрямую.
+- Когда пользователь просит выполнить работу, а не выбрать инструмент.
+- Для подбора инструментов вне библиотеки (это не каталог внешних утилит).
+
+## What this skill does
+
+**Вход:** описание задачи свободным текстом (одна строка или фраза).
+
+**Выход:**
+1. Список подходящих скиллов с релевантностью (score) и кратким «почему использовать».
+2. Не больше 3 комбо — последовательностей скиллов для многоэтапной задачи
+   (например, `code-review → commit-message-writer → github-repo-hygiene`).
+
+## How to work
+
+1. **Спросить задачу.** Если пользователь не дал описание — уточни, что он хочет
+   сделать (одним вопросом). Если описание есть — переходи к шагу 2.
+2. **Прочитать базу.** Открой `index.json` в корне репозитория и прочитай у каждого
+   скилла поля `name`, `triggers`, `description`, `category`. При необходимости
+   загляни в `skills/<name>/SKILL.md` для деталей.
+3. **Сопоставить.** Сравни запрос с триггерами и описаниями скиллов. Учти синонимы
+   и перефразировки (RU/EN). Определи категорию задачи (repository / media / social /
+   code / data) и отметь скиллы этой категории.
+4. **Выдать рекомендацию.** Отсортируй по релевантности, выведи топ-3–5:
+   `rank. skill-name (score) — почему использовать`. Если задача многоэтапная —
+   предложи до 3 комбо-цепочек.
+
+Можно автоматизировать шаги 2–4 скриптом:
+
+```bash
+python3 scripts/skill_suggest.py "нужно описать репозиторий"
+python3 scripts/skill_suggest.py "сгенерируй презентацию" --combo
+```
+
+
+## On-demand loading (ad-hoc apply)
+
+Скилл — это просто набор инструкций в `SKILL.md`. Если нужного скилла нет в системе,
+его можно применить **ad-hoc**: прочитать его `SKILL.md` из мастер-каталога и выполнить
+инструкции напрямую — формальная установка не требуется.
+
+**Мастер-каталог:** `~/Projects/agent-skills` (локальный клон) или
+`https://github.com/bestdeejay-design/agent-skills` (GitHub raw).
+
+Скрипт `skill_suggest.py` после выдачи топа печатает путь к `SKILL.md` каждого
+подходящего скилла. Если скилл не установлен:
+
+1. Прочитай `skills/<name>/SKILL.md` из мастер-каталога.
+2. Проверь триггеры и «Do NOT use» — убедись, что скилл действительно подходит.
+3. Выполни инструкции скилла в текущей сессии.
+
+Если мастер-каталог в другом месте — задай его через env `AGENT_SKILLS_INDEX`
+или флаг `--index`.
+
+## Scoring
+
+Взвешивание релевантности (по убыванию приоритета):
+
+1. **Keyword match (вес 3)** — точное совпадение триггера скилла с запросом
+   (фраза или слово). Самый сильный сигнал.
+2. **Category match (вес 2)** — задача попадает в категорию скилла
+   (code / media / repository / social / data).
+3. **Description match (вес 1)** — совпадение отдельных слов запроса со словами
+   описания скилла. Слабый, но полезный сигнал для перефразировок.
+
+Скрипт `skill_suggest.py` реализует keyword (3) и description (1); категорийный
+бонус агент добавляет вручную при анализе.
+
+## Examples
+
+**Пример 1.** Запрос: «нужно описать репозиторий, чтобы его можно было публиковать»
+→ `github-repo-hygiene` (триггер «описание репозитория», категория repository).
+Обоснование: скилл проверяет README, LICENSE, CONTRIBUTING, topics и GitHub Pages.
+
+**Пример 2.** Запрос: «сделай доклад по итогам квартала» → `presentation-maker`
+(триггер «сделай доклад», категория media). Обоснование: генератор презентаций
+с авто-лейаутами и .pptx.
+
+**Пример 3.** Запрос: «проверь код, оформи коммит и подготовь репозиторий к релизу»
+→ комбо: `code-review → commit-message-writer → github-repo-hygiene`.
+Обоснование: три этапа — анализ кода, осмысленный коммит, публикационная гигиена.
+
+## Constraints
+
+- **Не выдумывай несуществующие скиллы.** Рекомендуй только те, что есть в
+  `index.json` / папке `skills/` репозитория.
+- База скиллов — только этот репозиторий (`agent-skills`), не внешние каталоги.
+- Не больше 3 комбо в ответе; каждое комбо — 2–3 скилла в логичном порядке.
+- Если ни один скилл не подходит — честно скажи об этом и предложи переформулировать
+  задачу, а не подгоняй нерелевантный скилл.
+
+## Boundaries
+
+- Do not use when the user has already selected a skill and given clear instructions.
+
+## Evidence and completion gate
+
+Run the documented command against the user’s actual input. Report the command, exit status, files changed or produced, and relevant stdout/stderr. Separate blocked or pre-existing failures from failures introduced by the current work. Do not call the result complete when the script was only described or when an artifact was not reopened and checked.

@@ -2,7 +2,7 @@
 name: game-builder
 description: Ultra-fast perfect website games - scaffold, features, audit, playtest, publish
 mode: all
-model: opencode/muse-spark-1.3-contributor-free
+model: opencode/beam-free
 permission:
   edit: allow
   bash: allow

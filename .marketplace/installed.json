@@ -1,0 +1,615 @@
+{
+  "caveman": [
+    "skills\\caveman"
+  ],
+  "osien-3d-forge": [
+    "skills\\osien-3d-forge"
+  ],
+  "stop-slop": [
+    "skills\\stop-slop"
+  ],
+  "logic": [
+    "skills\\logic"
+  ],
+  "ai-manager": [
+    "agents\\ai-manager.md"
+  ],
+  "brainstorming": [
+    "skills\\brainstorming"
+  ],
+  "systematic-debugging": [
+    "skills\\systematic-debugging"
+  ],
+  "test-driven-development": [
+    "skills\\test-driven-development"
+  ],
+  "code-review": [
+    "skills\\code-review"
+  ],
+  "grill-with-docs": [
+    "skills\\grill-with-docs"
+  ],
+  "grill-me": [
+    "skills\\grill-me"
+  ],
+  "supabase-postgres-best-practices": [
+    "skills\\supabase-postgres-best-practices"
+  ],
+  "supabase": [
+    "skills\\supabase"
+  ],
+  "hyperframes-cli": [
+    "skills\\hyperframes-cli"
+  ],
+  "writing-plans": [
+    "skills\\writing-plans"
+  ],
+  "verification-before-completion": [
+    "skills\\verification-before-completion"
+  ],
+  "receiving-code-review": [
+    "skills\\receiving-code-review"
+  ],
+  "diagnosing-bugs": [
+    "skills\\diagnosing-bugs"
+  ],
+  "implement-spec": [
+    "skills\\implement-spec"
+  ],
+  "improve-codebase-architecture": [
+    "skills\\improve-codebase-architecture"
+  ],
+  "hyperframes-slideshow": [
+    "skills\\hyperframes-slideshow"
+  ],
+  "hyperframes-media-use": [
+    "skills\\hyperframes-media-use"
+  ],
+  "remotion-to-hyperframes": [
+    "skills\\remotion-to-hyperframes"
+  ],
+  "dispatching-parallel-agents": [
+    "skills\\dispatching-parallel-agents"
+  ],
+  "executing-plans": [
+    "skills\\executing-plans"
+  ],
+  "using-git-worktrees": [
+    "skills\\using-git-worktrees"
+  ],
+  "writing-skills": [
+    "skills\\writing-skills"
+  ],
+  "domain-modeling": [
+    "skills\\domain-modeling"
+  ],
+  "implement": [
+    "skills\\implement"
+  ],
+  "research": [
+    "skills\\research"
+  ],
+  "prisma-client-api": [
+    "skills\\prisma-client-api"
+  ],
+  "prisma-orm-setup": [
+    "skills\\prisma-orm-setup"
+  ],
+  "google-agents-cli-adk-code": [
+    "skills\\google-agents-cli-adk-code"
+  ],
+  "subagent-driven-development": [
+    "skills\\subagent-driven-development"
+  ],
+  "finishing-a-development-branch": [
+    "skills\\finishing-a-development-branch"
+  ],
+  "diagnosing-superpowers": [
+    "skills\\diagnosing-superpowers"
+  ],
+  "codebase-design": [
+    "skills\\codebase-design"
+  ],
+  "to-spec": [
+    "skills\\to-spec"
+  ],
+  "to-tickets": [
+    "skills\\to-tickets"
+  ],
+  "prisma-postgres-setup": [
+    "skills\\prisma-postgres-setup"
+  ],
+  "prisma-upgrade-v7": [
+    "skills\\prisma-upgrade-v7"
+  ],
+  "prisma-compute": [
+    "skills\\prisma-compute"
+  ],
+  "prisma-driver-adapter-implementation": [
+    "skills\\prisma-driver-adapter-implementation"
+  ],
+  "microsoft-foundry": [
+    "skills\\microsoft-foundry"
+  ],
+  "azure-compute": [
+    "skills\\azure-compute"
+  ],
+  "azure-cloud-migrate": [
+    "skills\\azure-cloud-migrate"
+  ],
+  "azure-quotas": [
+    "skills\\azure-quotas"
+  ],
+  "azure-upgrade": [
+    "skills\\azure-upgrade"
+  ],
+  "azure-enterprise-infra-planner": [
+    "skills\\azure-enterprise-infra-planner"
+  ],
+  "azure-kubernetes": [
+    "skills\\azure-kubernetes"
+  ],
+  "azure-reliability": [
+    "skills\\azure-reliability"
+  ],
+  "python-appservice-deploy": [
+    "skills\\python-appservice-deploy"
+  ],
+  "entra-agent-id": [
+    "skills\\entra-agent-id"
+  ],
+  "hyperframes": [
+    "skills\\hyperframes"
+  ],
+  "figma-to-hyperframes": [
+    "skills\\figma-to-hyperframes"
+  ],
+  "hyperframes-registry": [
+    "skills\\hyperframes-registry"
+  ],
+  "prototype": [
+    "skills\\prototype"
+  ],
+  "triage": [
+    "skills\\triage"
+  ],
+  "pr": [
+    "skills\\pr"
+  ],
+  "writing-for-agents": [
+    "skills\\writing-for-agents"
+  ],
+  "retro": [
+    "skills\\retro"
+  ],
+  "handoff": [
+    "skills\\handoff"
+  ],
+  "teach": [
+    "skills\\teach"
+  ],
+  "ask-matt": [
+    "skills\\ask-matt"
+  ],
+  "wizard": [
+    "skills\\wizard"
+  ],
+  "setup-matt-pocock-skills": [
+    "skills\\setup-matt-pocock-skills"
+  ],
+  "to-questionnaire": [
+    "skills\\to-questionnaire"
+  ],
+  "wait-what": [
+    "skills\\wait-what"
+  ],
+  "git-guardrails-claude-code": [
+    "skills\\git-guardrails-claude-code"
+  ],
+  "setup-pre-commit": [
+    "skills\\setup-pre-commit"
+  ],
+  "agent-browser": [
+    "skills\\agent-browser"
+  ],
+  "reddit-automation": [
+    "skills\\reddit-automation"
+  ],
+  "design-mobile-apps": [
+    "skills\\design-mobile-apps"
+  ],
+  "ai-video-generation": [
+    "skills\\ai-video-generation"
+  ],
+  "image-to-video": [
+    "skills\\image-to-video"
+  ],
+  "kling-3-0": [
+    "skills\\kling-3-0"
+  ],
+  "ai-image-generation": [
+    "skills\\ai-image-generation"
+  ],
+  "ai-avatar-video": [
+    "skills\\ai-avatar-video"
+  ],
+  "runcomfy-cli": [
+    "skills\\runcomfy-cli"
+  ],
+  "flux-2-klein": [
+    "skills\\flux-2-klein"
+  ],
+  "gpt-image-2": [
+    "skills\\gpt-image-2"
+  ],
+  "nano-banana-2": [
+    "skills\\nano-banana-2"
+  ],
+  "seedance-v2": [
+    "skills\\seedance-v2"
+  ],
+  "ai-music": [
+    "skills\\ai-music"
+  ],
+  "controlnet-pose": [
+    "skills\\controlnet-pose"
+  ],
+  "face-swap": [
+    "skills\\face-swap"
+  ],
+  "flux-kontext": [
+    "skills\\flux-kontext"
+  ],
+  "gpt-image-edit": [
+    "skills\\gpt-image-edit"
+  ],
+  "happyhorse-1-0": [
+    "skills\\happyhorse-1-0"
+  ],
+  "image-edit": [
+    "skills\\image-edit"
+  ],
+  "image-inpainting": [
+    "skills\\image-inpainting"
+  ],
+  "image-outpainting": [
+    "skills\\image-outpainting"
+  ],
+  "lipsync": [
+    "skills\\lipsync"
+  ],
+  "video-edit": [
+    "skills\\video-edit"
+  ],
+  "video-extend": [
+    "skills\\video-extend"
+  ],
+  "video-inpainting": [
+    "skills\\video-inpainting"
+  ],
+  "video-outpainting": [
+    "skills\\video-outpainting"
+  ],
+  "wan-2-7": [
+    "skills\\wan-2-7"
+  ],
+  "ace-step": [
+    "skills\\ace-step"
+  ],
+  "lark-doc": [
+    "skills\\lark-doc"
+  ],
+  "lark-calendar": [
+    "skills\\lark-calendar"
+  ],
+  "lark-task": [
+    "skills\\lark-task"
+  ],
+  "lark-sheets": [
+    "skills\\lark-sheets"
+  ],
+  "lark-base": [
+    "skills\\lark-base"
+  ],
+  "lark-drive": [
+    "skills\\lark-drive"
+  ],
+  "lark-im": [
+    "skills\\lark-im"
+  ],
+  "lark-mail": [
+    "skills\\lark-mail"
+  ],
+  "lark-meeting": [
+    "skills\\lark-meeting"
+  ],
+  "lark-slides": [
+    "skills\\lark-slides"
+  ],
+  "lark-shared": [
+    "skills\\lark-shared"
+  ],
+  "lark-approval": [
+    "skills\\lark-approval"
+  ],
+  "lark-contact": [
+    "skills\\lark-contact"
+  ],
+  "lark-event": [
+    "skills\\lark-event"
+  ],
+  "lark-openapi-explorer": [
+    "skills\\lark-openapi-explorer"
+  ],
+  "lark-wiki": [
+    "skills\\lark-wiki"
+  ],
+  "lark-whiteboard": [
+    "skills\\lark-whiteboard"
+  ],
+  "lark-workflow-standup-report": [
+    "skills\\lark-workflow-standup-report"
+  ],
+  "lark-workflow-meeting-summary": [
+    "skills\\lark-workflow-meeting-summary"
+  ],
+  "lark-markdown": [
+    "skills\\lark-markdown"
+  ],
+  "lark-apps": [
+    "skills\\lark-apps"
+  ],
+  "lark-okr": [
+    "skills\\lark-okr"
+  ],
+  "lark-attendance": [
+    "skills\\lark-attendance"
+  ],
+  "lark-skill-maker": [
+    "skills\\lark-skill-maker"
+  ],
+  "find-skills": [
+    "skills\\find-skills"
+  ],
+  "emil-design-eng": [
+    "skills\\emil-design-eng"
+  ],
+  "neon": [
+    "skills\\neon"
+  ],
+  "neon-auth": [
+    "skills\\neon-auth"
+  ],
+  "neon-functions": [
+    "skills\\neon-functions"
+  ],
+  "neon-object-storage": [
+    "skills\\neon-object-storage"
+  ],
+  "neon-postgres-branches": [
+    "skills\\neon-postgres-branches"
+  ],
+  "neon-realtime": [
+    "skills\\neon-realtime"
+  ],
+  "agents-sdk": [
+    "skills\\agents-sdk"
+  ],
+  "cf-cli": [
+    "skills\\cf-cli"
+  ],
+  "durable-objects": [
+    "skills\\durable-objects"
+  ],
+  "nextjs-on-cloudflare": [
+    "skills\\nextjs-on-cloudflare"
+  ],
+  "workers-best-practices": [
+    "skills\\workers-best-practices"
+  ],
+  "wrangler": [
+    "skills\\wrangler"
+  ],
+  "web-perf": [
+    "skills\\web-perf"
+  ],
+  "workers-profiling": [
+    "skills\\workers-profiling"
+  ],
+  "cloudflare-email-service": [
+    "skills\\cloudflare-email-service"
+  ],
+  "cloudflare-one": [
+    "skills\\cloudflare-one"
+  ],
+  "turnstile-spin": [
+    "skills\\turnstile-spin"
+  ],
+  "cloudflare": [
+    "skills\\cloudflare"
+  ],
+  "basin": [
+    "skills\\basin"
+  ],
+  "neon-postgres": [
+    "skills\\neon-postgres"
+  ],
+  "neon-ai-gateway": [
+    "skills\\neon-ai-gateway"
+  ],
+  "neon-postgres-egress-optimizer": [
+    "skills\\neon-postgres-egress-optimizer"
+  ],
+  "playwright-cli": [
+    "skills\\playwright-cli"
+  ],
+  "browser-use": [
+    "skills\\browser-use"
+  ],
+  "browser-use-cloud": [
+    "skills\\browser-use-cloud"
+  ],
+  "browser-use-qa": [
+    "skills\\browser-use-qa"
+  ],
+  "cn-check": [
+    "skills\\cn-check"
+  ],
+  "adk-agent-builder": [
+    "skills\\adk-agent-builder"
+  ],
+  "adk-architecture": [
+    "skills\\adk-architecture"
+  ],
+  "adk-debug": [
+    "skills\\adk-debug"
+  ],
+  "adk-git": [
+    "skills\\adk-git"
+  ],
+  "adk-review": [
+    "skills\\adk-review"
+  ],
+  "adk-setup": [
+    "skills\\adk-setup"
+  ],
+  "adk-style": [
+    "skills\\adk-style"
+  ],
+  "adk-unit-design": [
+    "skills\\adk-unit-design"
+  ],
+  "adk-unit-guide": [
+    "skills\\adk-unit-guide"
+  ],
+  "adk-verify-snippets": [
+    "skills\\adk-verify-snippets"
+  ],
+  "code-change-verification": [
+    "skills\\code-change-verification"
+  ],
+  "docs-sync": [
+    "skills\\docs-sync"
+  ],
+  "examples-run-analysis": [
+    "skills\\examples-run-analysis"
+  ],
+  "final-release-review": [
+    "skills\\final-release-review"
+  ],
+  "implementation-final-review": [
+    "skills\\implementation-final-review"
+  ],
+  "implementation-kickoff": [
+    "skills\\implementation-kickoff"
+  ],
+  "implementation-strategy": [
+    "skills\\implementation-strategy"
+  ],
+  "maintainer-review": [
+    "skills\\maintainer-review"
+  ],
+  "pr-draft-summary": [
+    "skills\\pr-draft-summary"
+  ],
+  "sensitive-logging-audit": [
+    "skills\\sensitive-logging-audit"
+  ],
+  "test-coverage-improver": [
+    "skills\\test-coverage-improver"
+  ],
+  "openai-knowledge": [
+    "skills\\openai-knowledge"
+  ],
+  "runtime-behavior-probe": [
+    "skills\\runtime-behavior-probe"
+  ],
+  "release-candidate-prep": [
+    "skills\\release-candidate-prep"
+  ],
+  "async-pr-review": [
+    "skills\\async-pr-review"
+  ],
+  "behavioral-evals": [
+    "skills\\behavioral-evals"
+  ],
+  "ci": [
+    "skills\\ci"
+  ],
+  "code-reviewer": [
+    "skills\\code-reviewer"
+  ],
+  "docs-changelog": [
+    "skills\\docs-changelog"
+  ],
+  "docs-writer": [
+    "skills\\docs-writer"
+  ],
+  "github-issue-creator": [
+    "skills\\github-issue-creator"
+  ],
+  "pr-address-comments": [
+    "skills\\pr-address-comments"
+  ],
+  "pr-creator": [
+    "skills\\pr-creator"
+  ],
+  "review-duplication": [
+    "skills\\review-duplication"
+  ],
+  "tui-tester": [
+    "skills\\tui-tester"
+  ],
+  "cloudflare-one-migrations": [
+    "skills\\cloudflare-one-migrations"
+  ],
+  "gateway-workers": [
+    "skills\\gateway-workers"
+  ],
+  "k2": [
+    "skills\\k2"
+  ],
+  "sandbox-migrate-to-next": [
+    "skills\\sandbox-migrate-to-next"
+  ],
+  "sandbox-next": [
+    "skills\\sandbox-next"
+  ],
+  "sandbox-stable": [
+    "skills\\sandbox-stable"
+  ],
+  "data-wrangler": [
+    "agents\\data-wrangler.md"
+  ],
+  "devops": [
+    "agents\\devops.md"
+  ],
+  "researcher": [
+    "agents\\researcher.md"
+  ],
+  "test": [
+    "agents\\test.md"
+  ],
+  "flow-test": [
+    "commands\\flow-test.md"
+  ],
+  "make-mcp": [
+    "commands\\make-mcp.md"
+  ],
+  "mind-context": [
+    "commands\\mind-context.md"
+  ],
+  "sys-fast": [
+    "commands\\sys-fast.md"
+  ],
+  "sys-doctor": [
+    "commands\\sys-doctor.md"
+  ],
+  "osien-stack": [],
+  "farmage-opencode-skills": [],
+  "opencode-power-pack": [],
+  "awesome-opencode-skills": [],
+  "garden-skills": [],
+  "addyosmani-agent-skills": [],
+  "bestdeejay-agent-skills": []
+}

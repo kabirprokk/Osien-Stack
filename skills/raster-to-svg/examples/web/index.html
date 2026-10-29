@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PNG → SVG</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <h1>PNG <span>→</span> SVG</h1>
+  <p class="subtitle">Локальная трассировка растровых изображений в вектор без отправки данных наружу.</p>
+  <div class="head-row">
+    <p class="status" id="status">Проверка движка…</p>
+    <div class="head-actions">
+      <a class="imgforge-link" href="https://bestdeejay-design.github.io/imgforge/" target="_blank" rel="noopener" title="Обрезать и оптимизировать изображение прямо в браузере — всё локально, без загрузки на сервер">✂️ ImgForge — обрезать элемент</a>
+      <button type="button" id="stopBtn" class="stop-btn" title="Остановить локальный сервер и закрыть вкладку">⏻ Остановить сервер</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="layout">
+    <section class="controls">
+      <div class="preset-row" id="presetRow">
+        <span class="preset-family">Графика</span>
+        <button type="button" class="preset" data-preset="flat">🧹 Плоский стиль</button>
+        <button type="button" class="preset" data-preset="minimal">Минимал</button>
+        <button type="button" class="preset" data-preset="line_art">Лайн-арт</button>
+        <button type="button" class="preset" data-preset="icon">Иконка</button>
+        <button type="button" class="preset" data-preset="logo">Логотип</button>
+        <span class="preset-family">Фото</span>
+        <button type="button" class="preset" data-preset="photo_flat">Фото-плоский</button>
+        <button type="button" class="preset" data-preset="photo">Фото</button>
+        <button type="button" class="preset" data-preset="duotone">Дуотон</button>
+        <button type="button" class="preset" data-preset="vintage">Винтаж</button>
+        <span class="preset-family">Моно</span>
+        <button type="button" class="preset" data-preset="bw">ЧБ</button>
+        <span class="preset-family">Мозаика</span>
+        <button type="button" class="preset" data-preset="mosaic">Постер</button>
+        <button type="button" class="preset" data-preset="mosaic_circles">Круги</button>
+        <span id="customPresets"></span>
+        <button type="button" class="preset save" id="savePresetBtn">💾 Свой</button>
+        <button type="button" class="preset reset" id="resetBtn">↺ Сброс</button>
+      </div>
+      <div class="preset-hint">Пресеты задают набор настроек под задачу. «💾 Свой» сохраняет текущие настройки; Ctrl+Z / Ctrl+Shift+Z — отмена/возврат. <span class="custom-badge" id="presetCustom" hidden>✎ ручные настройки</span></div>
+
+      <div class="seg" id="uiSeg">
+        <button type="button" data-ui="simple">Просто</button>
+        <button type="button" data-ui="advanced" class="active">Все настройки</button>
+      </div>
+
+      <p class="mode-desc" id="modeDesc">Контур: чёткие границы и заливки — для логотипов, иконок, схем.</p>
+      <div class="seg" id="modeSeg">
+        <button type="button" data-mode="contour" class="active">Контур</button>
+        <button type="button" data-mode="mosaic">Мозаика</button>
+      </div>
+
+      <label>Движок
+        <select id="engine">
+          <option value="auto">auto</option>
+          <option value="native">native</option>
+          <option value="vtracer">vtracer</option>
+        </select>
+        <span class="hint">auto = vtracer (если установлен), иначе native. vtracer — в 2–4× быстрее и детальнее на фото; native — офлайн, без установки.</span>
+      </label>
+
+      <label>Цвета <span class="badge" id="colorsBadge">8</span>
+        <input type="range" id="colors" min="1" max="32" value="8">
+        <span class="hint">Больше = детальнее и точнее, но тяжелее SVG. Для лого и иконок 4–8, для фото 16–32.</span>
+      </label>
+
+      <div class="opt-group" id="vtracerOpts">
+      <label>Пресет vtracer
+        <select id="vtracer_preset">
+          <option value="poster">poster</option>
+          <option value="photo">photo</option>
+          <option value="bw">bw</option>
+        </select>
+        <span class="hint">Только для vtracer: poster — плакат (по умолчанию), photo — мягче и детальнее для фото, bw — чёрно-белое.</span>
+      </label>
+      <label>Режим кривых
+        <select id="vtracer_mode">
+          <option value="spline">spline</option>
+          <option value="polygon">polygon</option>
+        </select>
+        <span class="hint">Только для vtracer: spline — гладкие кривые, polygon — прямые сегменты (минимализм, геометрия).</span>
+      </label>
+      <label>Точность цвета <span class="badge" id="vtracerColorPrecisionBadge">8</span>
+        <input type="range" id="vtracer_color_precision" min="1" max="8" step="1" value="8">
+        <span class="hint">Только для vtracer: бит на RGB-канал, 8 = максимум — самые точные переходы цвета.</span>
+      </label>
+      <label>Фильтр пятен <span class="badge" id="vtracerSpeckleBadge">0</span>
+        <input type="range" id="vtracer_filter_speckle" min="0" max="64" step="1" value="0">
+        <span class="hint">Только для vtracer: отбрасывает пятна мельче N px — убирает пиксельные крошки (0 = выкл, для фото 4–8).</span>
+      </label>
+      </div>
+
+      <div class="opt-group" id="nativeOpts">
+      <label>Сглаживание <span class="badge" id="smoothBadge">0.5</span>
+        <input type="range" id="smooth" min="0" max="2" step="0.1" value="0.5">
+        <span class="hint">Только для native: Сглаживание контуров: больше = глаже и легче SVG, но теряются мелкие детали. 0 = точь-в-точь по пикселям.</span>
+      </label>
+      <label>Угол (град.) <span class="badge" id="cornerBadge">60</span>
+        <input type="range" id="corner" min="0" max="180" step="5" value="60">
+        <span class="hint">Только для native: Порог остроты углов: меньше = сохранять острые углы, больше = сглаживать их в кривые.</span>
+      </label>
+      <label>Шов <span class="badge" id="seamBadge">0.5</span>
+        <input type="range" id="seam" min="0" max="2" step="0.1" value="0.5">
+        <span class="hint">Только для native: Склейка разрывов контуров: больше = меньше разрывов, но разные области могут слиться.</span>
+      </label>
+      </div>
+      <div class="opt-group" id="mosaicOnly" style="display:none">
+        <label>Ячейка (0 = auto)
+          <input type="number" id="cell" min="0" max="64" value="0">
+          <span class="hint">Размер ячейки мозаики в пикселях, 0 = авто. Меньше = мельче и детальнее, больше = грубее и легче.</span>
+        </label>
+        <label>Фигура
+          <select id="shape">
+            <option value="auto">auto</option>
+            <option value="rect">rect</option>
+            <option value="circle">circle</option>
+            <option value="triangle">triangle</option>
+          </select>
+          <span class="hint">Форма ячейки: rect — строгая сетка, circle/triangle — декоративная мозаика.</span>
+        </label>
+        <label>Зазор <span class="badge" id="gapBadge">0.15</span>
+          <input type="range" id="gap" min="0" max="0.45" step="0.05" value="0.15">
+          <span class="hint">Зазор между ячейками: больше = воздушнее, просвечивает фон; 0 = плотно.</span>
+        </label>
+        <label>Сид
+          <input type="number" id="seed" min="0" value="1">
+          <span class="hint">Зерно узора: тот же сид = тот же узор. Поменяй, если раскладка не нравится.</span>
+        </label>
+      </div>
+
+      <div class="prep-group">
+        <p class="prep-title">Подготовка фото</p>
+        <p class="prep-sub">Обрабатывает пиксели прямо в браузере ещё до трассировки — так фото становится «плоским» на уровне исходных данных, а не только за счёт огрубления самого трассировщика.</p>
+        <div class="prep-preview">
+          <img id="prepThumb" alt="предпросмотр обработки">
+          <span class="prep-cap">так фото увидит трассировщик</span>
+        </div>
+        <label>Сглаживание фото <span class="badge" id="preBlurBadge">0</span>
+          <input type="range" id="preBlur" min="0" max="5" step="0.5" value="0">
+          <span class="hint">Размывает шум, текстуру кожи/ткани и JPEG-артефакты до трассировки — без него трассировщик честно обводит каждую пылинку шума отдельным контуром. 0 = выкл, для обычного фото 1.5–3, для очень шумного/сжатого — 4+.</span>
+        </label>
+        <label>Ступени цвета <span class="badge" id="posterizeBadge">выкл</span>
+          <input type="range" id="posterize" min="0" max="8" step="1" value="0">
+          <span class="hint">Режет плавные градиенты (небо, кожа, тени) на чёткие ступени цвета до трассировки — именно это даёт настоящий «плакатный» плоский вид, а не просто уменьшение числа цветов на выходе. 0 = выкл, 3–4 = выраженный постер.</span>
+        </label>
+        <label>Увеличение
+          <select id="upscale">
+            <option value="1">1× (выкл)</option>
+            <option value="2">2×</option>
+            <option value="4">4×</option>
+          </select>
+          <span class="hint">Увеличивает разрешение перед трассировкой: точнее контуры мелких деталей, но дольше и тяжелее файл. Для мелких исходников — 2×–4×.</span>
+        </label>
+      </div>
+
+      <div class="bg-group">
+        <label>Фон
+          <div class="seg" id="bgSeg">
+            <button type="button" data-bg="none" class="active">Прозрачный</button>
+            <button type="button" data-bg="white">Белый</button>
+            <button type="button" data-bg="black">Чёрный</button>
+            <button type="button" data-bg="custom">Цвет…</button>
+          </div>
+          <input type="color" id="bgColor" value="#ffffff" hidden>
+          <input type="text" id="bg" value="none" hidden>
+          <span class="hint">Подложка под контуры. Видна только если в картинке есть прозрачность: «Прозрачный» — без подложки; «Белый»/«Чёрный» — однотонная; «Цвет…» — свой цвет.</span>
+        </label>
+      </div>
+
+      <button id="convertBtn" class="primary" type="button" disabled>Конвертировать</button>
+      <button id="batchToggleBtn" type="button" class="batch-toggle">Пакетная обработка</button>
+      <div class="progress" id="progress" hidden>
+        <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        <p class="progress-text" id="progressText">Конвертация…</p>
+        <button id="cancelBtn" type="button">Отмена</button>
+      </div>
+    </section>
+
+    <section class="preview-col" id="previewCol">
+      <div class="dropzone" id="dropzone">
+        <input type="file" id="fileInput" accept=".png,.jpg,.jpeg,.webp,image/png,image/jpeg,image/webp" hidden>
+        <div class="dz-empty" id="dzEmpty">
+          <svg viewBox="0 0 24 24"><path d="M12 16V4m0 0L7 9m5-5l5 5"/><path d="M4 17v2a1 1 0 001 1h14a1 1 0 001-1v-2"/></svg>
+          <p>Перетащите картинку сюда или нажмите для выбора файла</p>
+          <p class="dz-formats">PNG, JPG, JPEG, WEBP</p>
+        </div>
+        <div class="dz-preview" id="dzPreview" hidden>
+          <div class="dz-stage">
+            <img id="thumb" alt="превью">
+            <button id="removeFile" type="button" class="dz-remove" aria-label="Удалить файл" title="Удалить файл">✕</button>
+          </div>
+          <div class="file-meta">
+            <span id="fileName"></span>
+            <span id="fileDims"></span>
+          </div>
+        </div>
+      </div>
+
+      <div id="zoom" hidden aria-hidden="true">
+        <span id="zoomLabel">×4</span>
+      </div>
+
+      <div class="error-banner" id="errorBanner" hidden></div>
+
+      <section class="batch-panel" id="batchPanel" hidden>
+        <h3>Пакетная обработка</h3>
+        <p class="batch-hint">Выберите несколько PNG — каждый сконвертируется текущими настройками и соберётся в один .zip.</p>
+        <div class="batch-list" id="batchList"></div>
+        <div class="progress" id="batchProgress" hidden>
+          <div class="progress-track"><div class="progress-fill" id="batchProgressFill"></div></div>
+          <p class="progress-text" id="batchProgressText">Конвертация…</p>
+        </div>
+        <div class="batch-actions">
+          <button id="batchPickBtn" type="button" class="primary">Выбрать файлы</button>
+          <button id="batchZipBtn" type="button" disabled>Скачать .zip</button>
+        </div>
+        <input type="file" id="batchInput" accept=".png,image/png" multiple hidden>
+      </section>
+
+      <section class="result" id="result" hidden>
+        <p class="stale" id="staleNote" hidden>Настройки изменены — результат устарел. Нажмите «Конвертировать».</p>
+        <div class="tabs">
+          <button type="button" data-tab="preview" class="active">Превью</button>
+          <button type="button" data-tab="code">Код</button>
+        </div>
+        <div class="tab-panel" id="previewPanel">
+          <div class="checker" id="checker"><img id="svgImg" alt="результат SVG"></div>
+          <div class="compare-panel" id="comparePanel" hidden>
+            <figure class="compare-item"><figcaption>Оригинал</figcaption><img id="origImg" alt="оригинал"></figure>
+            <figure class="compare-item"><figcaption>Результат</figcaption><img id="cmpImg" alt="результат SVG"></figure>
+          </div>
+          <div class="palette-panel" id="palettePanel" hidden>
+            <div class="palette-head">
+              <b>Палитра</b>
+              <button type="button" id="paletteCloseBtn" class="dz-remove" aria-label="Закрыть палитру">✕</button>
+            </div>
+            <p class="palette-hint">Клик по свотчу — перекрасить цвет. Кнопка «→» — слить в другой цвет.</p>
+            <div class="palette-swatches" id="paletteSwatches"></div>
+          </div>
+        </div>
+        <div class="tab-panel" id="codePanel" hidden>
+          <pre id="svgCode"></pre>
+        </div>
+        <div class="actions">
+          <button id="downloadBtn" type="button">Скачать .svg</button>
+          <button id="copyBtn" type="button">Копировать код</button>
+          <button id="compareBtn" type="button" class="ghost" hidden>Сравнить с оригиналом</button>
+          <button id="paletteBtn" type="button" class="ghost" hidden>Палитра</button>
+          <button id="exportBtn" type="button" class="ghost" hidden>Экспорт…</button>
+        </div>
+        <div class="report" id="report"></div>
+        <div class="stats-bar" id="statsBar" hidden>
+          <div class="stat-count"><b id="statCount">0</b><span id="statLabel">элементов</span></div>
+          <div class="stat-px" id="statPx"></div>
+        </div>
+      </section>
+    </section>
+  </div>
+</main>
+
+<div class="modal-backdrop" id="exportModal" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="exportTitle">
+    <div class="modal-head">
+      <b id="exportTitle">Экспорт результата</b>
+      <button type="button" id="exportCloseBtn" class="dz-remove" aria-label="Закрыть">✕</button>
+    </div>
+    <p class="modal-hint">Скачать текущий SVG в другом формате: DXF/EPS — вектор для CAD и печати, PNG — растровая копия.</p>
+    <div class="seg" id="exportFormatSeg">
+      <button type="button" data-fmt="dxf" class="active">DXF</button>
+      <button type="button" data-fmt="eps">EPS</button>
+      <button type="button" data-fmt="png">PNG</button>
+    </div>
+    <label class="opt" id="exportLayersRow">
+      <input type="checkbox" id="exportLayers" checked>
+      <span>Слои DXF по цвету заливки</span>
+      <span class="hint">Выкл. — все контуры на слое «0».</span>
+    </label>
+    <label class="opt" id="exportScaleRow" hidden>
+      <span>Масштаб PNG</span>
+      <select id="exportScale">
+        <option value="1">1×</option>
+        <option value="2">2×</option>
+        <option value="4">4×</option>
+      </select>
+    </label>
+    <div class="modal-actions">
+      <button id="exportGoBtn" type="button" class="primary">Скачать</button>
+      <button id="exportCancelBtn" type="button">Отмена</button>
+    </div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
